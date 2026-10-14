@@ -1,5 +1,6 @@
 import { create } from 'zustand';
-import { AuthConfig, ChecklistData, Finding, ScanHistoryEntry, ScanProgressEvent, ScanResult } from '../types';
+import { runIpiMultiAgentLoop } from '../ai/agents/ipiLoop';
+import { AppTab, AuthConfig, ChecklistData, Finding, IpiLoopEvent, IpiRunState, ScanHistoryEntry, ScanProgressEvent, ScanResult } from '../types';
 import { redactDeep } from '../utils/redact';
 
 const HISTORY_KEY  = 'sentinel_v2_history';
@@ -163,9 +164,18 @@ const ipc = () => {
   throw new Error('Ứng dụng cần chạy trong Electron. Khởi động bằng npm run dev.');
 };
 
+const EMPTY_IPI_RUN: IpiRunState = {
+  status: 'idle',
+  events: [],
+  scanResult: null,
+  lastPatches: [],
+  check: null,
+  error: null,
+};
+
 interface AppState {
-  activeTab: 'url' | 'project' | 'checklist';
-  setActiveTab: (tab: 'url' | 'project' | 'checklist') => void;
+  activeTab: AppTab;
+  setActiveTab: (tab: AppTab) => void;
   isLoading: boolean;
   urlScanResult: ScanResult | null;
   projectScanResult: ScanResult | null;
@@ -213,6 +223,18 @@ interface AppState {
   resetUrlScanResult: () => void;
   resetProjectScanResult: () => void;
   exportReport: (format: 'json' | 'html') => Promise<void>;
+  ipiProviderMode: 'auto' | 'ollama' | 'cloud';
+  setIpiProviderMode: (mode: 'auto' | 'ollama' | 'cloud') => void;
+  ollamaStatus: { checked: boolean; available: boolean; models: string[]; error?: string };
+  checkOllamaStatus: () => Promise<void>;
+  ipiFixModel: string;
+  setIpiFixModel: (model: string) => void;
+  ipiCheckModel: string;
+  setIpiCheckModel: (model: string) => void;
+  ipiRun: IpiRunState;
+  ipiRunning: boolean;
+  runIpiLoop: () => Promise<void>;
+  resetIpiRun: () => void;
 
   // BUG FIX: Phiên bản cũ lưu `cb` (callback người dùng) vào _progressListener.
   // Nhưng `onScanProgress(cb)` trong preload.js tạo ra một inner listener wrapper
@@ -225,7 +247,7 @@ interface AppState {
 }
 
 export const useStore = create<AppState>((set, get) => ({
-  activeTab:  'url',
+  activeTab:  'ipi',
   setActiveTab: (tab) => set({ activeTab: tab }),
   isLoading: false,
   urlScanResult: null,
@@ -441,7 +463,7 @@ export const useStore = create<AppState>((set, get) => ({
       const listenerRef = get()._progressListener;
       window.owaspWorkbench?.offScanProgress?.(listenerRef ?? undefined);
     } catch (_e) { void 0; }
-    set({ isLoading: false, error: 'Scan đã bị hủy bởi người dùng.', _progressListener: null });
+    set({ isLoading: false, ipiRunning: false, error: 'Scan đã bị hủy bởi người dùng.', _progressListener: null });
   },
 
   loadChecklist: async () => {
@@ -461,6 +483,83 @@ export const useStore = create<AppState>((set, get) => ({
 
   resetUrlScanResult: () => set({ urlScanResult: null, urlScanIsLocal: false, error: null }),
   resetProjectScanResult: () => set({ projectScanResult: null, checkedChecklistItems: [], error: null }),
+
+  ipiProviderMode: 'auto',
+  setIpiProviderMode: (mode) => set({ ipiProviderMode: mode }),
+  ollamaStatus: { checked: false, available: false, models: [] },
+  checkOllamaStatus: async () => {
+    try {
+      const res = await window.owaspWorkbench?.checkOllama?.();
+      if (res?.ok) {
+        set({
+          ollamaStatus: {
+            checked: true,
+            available: true,
+            models: res.models || [],
+          },
+        });
+      } else {
+        set({
+          ollamaStatus: {
+            checked: true,
+            available: false,
+            models: [],
+            error: res?.error || 'Ollama offline',
+          },
+        });
+      }
+    } catch (e) {
+      set({
+        ollamaStatus: {
+          checked: true,
+          available: false,
+          models: [],
+          error: (e as Error).message,
+        },
+      });
+    }
+  },
+  ipiFixModel: '',
+  setIpiFixModel: (model) => set({ ipiFixModel: model }),
+  ipiCheckModel: '',
+  setIpiCheckModel: (model) => set({ ipiCheckModel: model }),
+  ipiRun: EMPTY_IPI_RUN,
+  ipiRunning: false,
+  resetIpiRun: () => set({ ipiRun: EMPTY_IPI_RUN, error: null }),
+  runIpiLoop: async () => {
+    const { selectedFolder, ipiProviderMode, ipiFixModel, ipiCheckModel } = get();
+    if (!selectedFolder) { set({ error: 'Vui lòng chọn thư mục project' }); return; }
+    get().clearProgress();
+    set({ ipiRunning: true, error: null, ipiRun: { ...EMPTY_IPI_RUN, status: 'running' } });
+
+    try {
+      const cb = (ev: ScanProgressEvent) => get().appendProgress(ev);
+      const listenerRef = window.owaspWorkbench?.onScanProgress?.(cb);
+      set({ _progressListener: listenerRef ?? null });
+    } catch (_e) { void 0; }
+
+    try {
+      const result = await runIpiMultiAgentLoop({
+        folderPath: selectedFolder,
+        providerMode: ipiProviderMode,
+        fixModel: ipiFixModel || undefined,
+        checkModel: ipiCheckModel || undefined,
+        onEvent: (_ev: IpiLoopEvent, state) => {
+          set({ ipiRun: { ...state, events: [...state.events] } });
+        },
+      });
+      set({ ipiRun: result, error: result.error });
+    } catch (err: Error | unknown) {
+      const message = (err instanceof Error ? err.message : String(err)) || 'IPI loop thất bại';
+      set({ error: message, ipiRun: { ...get().ipiRun, status: 'failed', error: message } });
+    } finally {
+      try {
+        const listenerRef = get()._progressListener;
+        window.owaspWorkbench?.offScanProgress?.(listenerRef ?? undefined);
+      } catch (_e) { void 0; }
+      set({ ipiRunning: false, _progressListener: null });
+    }
+  },
 
   exportReport: async (format) => {
     const { urlScanResult, projectScanResult, activeTab } = get();

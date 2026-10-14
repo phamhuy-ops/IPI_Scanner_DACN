@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAIStore } from '../store/useAIStore';
 import { useStore } from '../store/useStore';
 import { Finding } from '../types';
@@ -120,14 +120,18 @@ const ConfidenceInline: React.FC<{ confidence: Finding['confidence'] }> = ({ con
   );
 };
 
-const CoverageNotes: React.FC<{ notes?: string[]; mode: 'url-scan' | 'project-scan' }> = ({ notes, mode }) => {
+const CoverageNotes: React.FC<{ notes?: string[]; mode: 'url-scan' | 'project-scan' | 'ipi-scan' | 'ipi-doc-scan' }> = ({ notes, mode }) => {
   const visibleNotes = (notes || []).filter(Boolean).slice(0, 4);
   const [open, setOpen] = useState(false);
   if (visibleNotes.length === 0) return null;
   const summary = mode === 'url-scan'
     ? 'Quét Website kiểm tra phần nhìn thấy qua HTTP; chưa thay thế kiểm thử đăng nhập, vai trò và nghiệp vụ.'
-    : 'Quét Mã Nguồn đọc code, cấu hình và dependency; chưa xác minh hành vi runtime hoặc dữ liệu production.';
-  const scopeLabel = mode === 'url-scan' ? 'Quét Website' : 'Quét Mã Nguồn';
+    : mode === 'ipi-scan'
+      ? 'Quét Indirect Prompt Injection tập trung phát hiện nối dữ liệu untrusted vào prompt; kết hợp xác minh bằng Multi-Agent SLM.'
+      : mode === 'ipi-doc-scan'
+        ? 'Quét Indirect Prompt Injection trong tài liệu văn bản (PDF, DOCX, TXT...); trích xuất text và kiểm tra chỉ thị độc hại tiềm ẩn.'
+        : 'Quét Mã Nguồn đọc code, cấu hình và dependency; chưa xác minh hành vi runtime hoặc dữ liệu production.';
+  const scopeLabel = mode === 'url-scan' ? 'Quét Website' : mode === 'ipi-scan' ? 'IPI Multi-Agent' : mode === 'ipi-doc-scan' ? 'IPI Tài Liệu' : 'Quét Mã Nguồn';
 
   return (
     <div className={`coverage-notes ${open ? 'is-open' : 'is-collapsed'}`}>

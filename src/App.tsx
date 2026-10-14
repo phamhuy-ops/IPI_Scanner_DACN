@@ -5,20 +5,21 @@ import { AIChatWidget } from './components/AIChatWidget';
 import { ChecklistPanel } from './components/ChecklistPanel';
 import { ChecklistRightPanel } from './components/ChecklistRightPanel';
 import { HistoryPanel } from './components/HistoryPanel';
+import { IpiAgentForm } from './components/IpiAgentForm';
+import { IpiAgentPanel } from './components/IpiAgentPanel';
 import { ProjectScanForm } from './components/ProjectScanForm';
 import { ResultsPanel } from './components/ResultsPanel';
 import { ScanProgress } from './components/ScanProgress';
 import { UrlScanForm } from './components/UrlScanForm';
 import { useStore } from './store/useStore';
-
-type AppTab = 'url' | 'project' | 'checklist';
+import { AppTab } from './types';
 
 function App() {
   const {
-    activeTab, setActiveTab, isLoading,
+    activeTab, setActiveTab, isLoading, ipiRunning,
     showHistoryDropdown, setShowHistoryDropdown, history,
     themeMode, toggleThemeMode,
-    performUrlScan, performProjectScan, exportReport,
+    performUrlScan, performProjectScan, runIpiLoop, exportReport,
   } = useStore();
   const [showShortcutHelp, setShowShortcutHelp] = useState(false);
 
@@ -53,6 +54,7 @@ function App() {
       if (key === '1') { e.preventDefault(); setActiveTab('url'); return; }
       if (key === '2') { e.preventDefault(); setActiveTab('project'); return; }
       if (key === '3') { e.preventDefault(); setActiveTab('checklist'); return; }
+      if (key === '4') { e.preventDefault(); setActiveTab('ipi'); return; }
       if (key === '6') { e.preventDefault(); setShowHistoryDropdown(!showHistoryDropdown); return; }
       if (key === '7') { e.preventDefault(); exportReport('html'); return; }
       if (key === '8') { e.preventDefault(); toggleThemeMode(); return; }
@@ -60,6 +62,7 @@ function App() {
         e.preventDefault();
         if (activeTab === 'url') void performUrlScan();
         if (activeTab === 'project') void performProjectScan();
+        if (activeTab === 'ipi') void runIpiLoop();
       }
     };
     const onEsc = (e: KeyboardEvent) => {
@@ -71,23 +74,27 @@ function App() {
       window.removeEventListener('keydown', onKeyDown);
       window.removeEventListener('keydown', onEsc);
     };
-  }, [activeTab, exportReport, performProjectScan, performUrlScan, setActiveTab, setShowHistoryDropdown, showHistoryDropdown, toggleThemeMode]);
+  }, [activeTab, exportReport, performProjectScan, performUrlScan, runIpiLoop, setActiveTab, setShowHistoryDropdown, showHistoryDropdown, toggleThemeMode]);
 
   const switchTab = (tab: AppTab) => setActiveTab(tab);
   const isChecklist = activeTab === 'checklist';
   const isUrlScan = activeTab === 'url';
+  const isIpi = activeTab === 'ipi';
 
-  const leftPanelTitle = isChecklist ? 'Checklist' : isUrlScan ? 'Cấu hình quét' : 'Chọn dự án';
+  const leftPanelTitle = isChecklist ? 'Checklist' : isUrlScan ? 'Cấu hình quét' : isIpi ? 'IPI Co-Pilot' : 'Chọn dự án';
   const leftPanelSub = isChecklist
     ? 'Biến kết quả quét thành danh sách việc cần xử lý.'
     : isUrlScan
       ? 'Nhập URL và cấu hình mức độ quét.'
-      : 'Chọn thư mục mã nguồn để phân tích bảo mật.';
+      : isIpi
+        ? 'Tự động check lỗi, giải thích, sửa lỗi và xuất file sạch về máy.'
+        : 'Chọn thư mục mã nguồn để phân tích bảo mật.';
 
-  const rightPanelTitle = isChecklist ? 'Checklist tổng hợp' : 'Kết quả quét';
+  const rightPanelTitle = isChecklist ? 'Checklist tổng hợp' : isIpi ? 'Co-Pilot Workspace' : 'Kết quả quét';
 
   return (
     <div className="app-shell">
+      <div className="liquid-grid-overlay" aria-hidden="true" />
       <header className="app-header">
         <div className="app-logo">
           <img className="logo-icon" src="./app-icon.png" alt="" aria-hidden="true" />
@@ -127,14 +134,23 @@ function App() {
           >
             Checklist
           </button>
+          <button
+            role="tab"
+            aria-selected={activeTab === 'ipi'}
+            className={`nav-tab ${activeTab === 'ipi' ? 'active' : ''}`}
+            onClick={() => switchTab('ipi')}
+            title="Indirect Prompt Injection Security Co-Pilot (Ctrl+4)"
+          >
+            IPI Co-Pilot
+          </button>
         </nav>
 
         <div className="header-gap" />
 
         <div className="header-actions">
-          <div className="status-indicator" title={isLoading ? 'Đang chạy quét...' : 'Sẵn sàng'}>
-            <div className={`status-dot ${isLoading ? 'active' : ''}`} />
-            <span>{isLoading ? 'Đang quét' : 'Sẵn sàng'}</span>
+          <div className="status-indicator" title={isLoading || ipiRunning ? 'Đang chạy...' : 'Sẵn sàng'}>
+            <div className={`status-dot ${isLoading || ipiRunning ? 'active' : ''}`} />
+            <span>{ipiRunning ? 'IPI loop' : isLoading ? 'Đang quét' : 'Sẵn sàng'}</span>
           </div>
 
           <div className="header-actions-divider" />
@@ -196,9 +212,10 @@ function App() {
             </div>
             {activeTab === 'url' && <UrlScanForm />}
             {activeTab === 'project' && <ProjectScanForm />}
+            {activeTab === 'ipi' && <IpiAgentForm />}
           </aside>
           <main className="right-panel scan-results-panel">
-            {isLoading ? <ScanProgress /> : <ResultsPanel />}
+            {isIpi ? <IpiAgentPanel /> : isLoading ? <ScanProgress /> : <ResultsPanel />}
           </main>
         </div>
       )}
@@ -214,6 +231,7 @@ function App() {
               <div className="shortcut-row"><span>Chuyển sang Quét Website</span><kbd>Ctrl + 1</kbd></div>
               <div className="shortcut-row"><span>Chuyển sang Quét Mã Nguồn</span><kbd>Ctrl + 2</kbd></div>
               <div className="shortcut-row"><span>Chuyển sang Checklist</span><kbd>Ctrl + 3</kbd></div>
+              <div className="shortcut-row"><span>Chuyển sang IPI Agent</span><kbd>Ctrl + 4</kbd></div>
               <div className="shortcut-row"><span>Mở / đóng Lịch sử</span><kbd>Ctrl + 6</kbd></div>
               <div className="shortcut-row"><span>Xuất báo cáo HTML</span><kbd>Ctrl + 7</kbd></div>
               <div className="shortcut-row"><span>Đổi giao diện</span><kbd>Ctrl + 8</kbd></div>
