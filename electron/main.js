@@ -3,9 +3,8 @@ const path = require('path');
 const fs = require('fs/promises');
 const { spawn } = require('child_process');
 const { runIpiDocScan, SUPPORTED_DOC_EXTENSIONS } = require('../engine/scanner/ipi-doc-scan');
+const { DOCUMENT_COLLECTION_CONFIG } = require('../engine/config/document-scan-config');
 
-const DOCUMENT_FOLDER_SKIP = new Set(['.git', 'node_modules', 'dist', 'dist-electron']);
-const MAX_DOCUMENTS_PER_SCAN = 300;
 const OLLAMA_TAGS_URL = 'http://127.0.0.1:11434/api/tags';
 let currentScanAbort = null;
 let ollamaLaunchAttempt = null;
@@ -90,13 +89,13 @@ async function collectDocumentFiles(folderPath, abortSignal) {
   const files = [];
   async function walk(currentPath) {
     if (abortSignal.aborted) throw new Error('Scan đã bị hủy.');
-    if (files.length >= MAX_DOCUMENTS_PER_SCAN) return;
+    if (files.length >= DOCUMENT_COLLECTION_CONFIG.maxDocumentsPerScan) return;
     const entries = await fs.readdir(currentPath, { withFileTypes: true });
     for (const entry of entries) {
       if (abortSignal.aborted) throw new Error('Scan đã bị hủy.');
-      if (files.length >= MAX_DOCUMENTS_PER_SCAN) return;
+      if (files.length >= DOCUMENT_COLLECTION_CONFIG.maxDocumentsPerScan) return;
       const entryPath = path.join(currentPath, entry.name);
-      if (entry.isDirectory() && !DOCUMENT_FOLDER_SKIP.has(entry.name)) await walk(entryPath);
+      if (entry.isDirectory() && !DOCUMENT_COLLECTION_CONFIG.skippedFolders.has(entry.name)) await walk(entryPath);
       if (entry.isFile() && SUPPORTED_DOC_EXTENSIONS.has(path.extname(entry.name).toLowerCase())) files.push(entryPath);
     }
   }
@@ -158,7 +157,7 @@ ipcMain.handle('ipi:scanDocFolder', async (event, payload) => {
     const filePaths = await collectDocumentFiles(folderPath, preparation.signal);
     if (!filePaths.length) throw new Error('Không tìm thấy tài liệu được hỗ trợ trong thư mục đã chọn.');
     const result = await runDocumentScan(event, filePaths, folderPath, payload?.scanProfile);
-    return { ...result, metadata: { ...result.metadata, folderPath, documentLimitReached: filePaths.length >= MAX_DOCUMENTS_PER_SCAN } };
+    return { ...result, metadata: { ...result.metadata, folderPath, documentLimitReached: filePaths.length >= DOCUMENT_COLLECTION_CONFIG.maxDocumentsPerScan } };
   } catch (error) {
     return { ok: false, mode: 'ipi-doc-scan', findings: [], error: error?.message || 'Không thể quét thư mục.', metadata: { summary: { total: 0, byCategory: {}, bySeverity: {} } } };
   }

@@ -83,7 +83,7 @@ cao, can mo rong bang tai lieu IPI va benign da duoc gan nhan doc lap.
 ```text
 electron/                    Electron main process va preload bridge local-only
 engine/scanner/ipi-doc-scan  Rule-based IPI document prefilter
-engine/utils/ipi-doc-extract Document text extraction
+engine/document/extractors/document-text-extractor Document text extraction
 src/ai/agents/ipiDocAgent    Detector + Verifier orchestration
 src/ai/agents/slmCatalog     Ollama TinyLLM allowlist
 src/components/              UI quet IPI

@@ -11,7 +11,7 @@ tai lieu hoac mot thu muc tai lieu. Pham vi nay khong con bao gom OWASP Top
 
 - `electron/main.js` va `electron/preload.js`: bridge Electron, IPC, chon
   file/thu muc va ket noi Ollama local-only.
-- `engine/utils/ipi-doc-extract.js`: doc text tu `txt`, `md`, `csv`, `json`,
+- `engine/document/extractors/document-text-extractor.js`: doc text tu `txt`, `md`, `csv`, `json`,
   `xml`, `html`, `pdf`, `doc`, va `docx`.
 - `engine/scanner/ipi-doc-scan.js`: bo loc rule-based cho tai lieu.
 - `src/ai/agents/ipiDocAgent.ts`: Detector va Verifier cho tai lieu.
