@@ -1,7 +1,7 @@
 {
   "name": "sentinel-v2",
   "version": "2.0.0",
-  "description": "OWASP 2025 Security Workbench",
+  "description": "Local TinyLLM scanner for Indirect Prompt Injection in documents",
   "author": "SENTINEL",
   "main": "dist-electron/main.js",
   "packageManager": "npm@11.6.2",
@@ -25,12 +25,14 @@
     "typecheck:node": "tsc --noEmit -p tsconfig.node.json",
     "test": "npm run check:engines && vitest run --config vitest.config.ts",
     "test:watch": "vitest --config vitest.config.ts",
+    "benchmark:ipi": "node scripts/run-ipi-benchmark.js",
     "dist": "npm run build && electron-builder --win portable",
     "clean": "rimraf dist dist-electron"
   },
   "dependencies": {
     "dompurify": "^3.4.2",
     "mammoth": "^1.13.0",
+    "motion": "^14.2.0",
     "pdf-parse": "^2.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -61,7 +63,7 @@
   },
   "build": {
     "appId": "com.sentinel.workbench",
-    "productName": "SENTINEL v2",
+    "productName": "SENTINEL IPI",
     "copyright": "Copyright (c) 2026 SENTINEL",
     "directories": {
       "output": "dist"

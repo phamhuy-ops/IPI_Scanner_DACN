@@ -9,13 +9,17 @@ describe('slmCatalog', () => {
 
   it('rejects large models', () => {
     expect(() => assertSlmModel('llama-3.3-70b-versatile')).toThrow(/không phải SLM/);
-    expect(() => assertSlmModel('gemini-2.0-flash')).toThrow(/không phải SLM/);
+    expect(() => assertSlmModel('llama3.1:70b')).toThrow(/không phải SLM/);
   });
 
   it('gives fix and check distinct preferred models', () => {
     const fix = endpointsForRole('fix')[0];
     const check = endpointsForRole('check')[0];
-    expect(fix.model).toBe('llama-3.1-8b-instant');
-    expect(check.model).toBe('gemma2-9b-it');
+    expect(fix.model).toBe('gemma3:1b');
+    expect(check.model).toBe('qwen2.5-coder:1.5b');
+  });
+
+  it('uses Ollama endpoints only', () => {
+    expect(endpointsForRole('fix').every((ep) => ep.providerId === 'ollama')).toBe(true);
   });
 });

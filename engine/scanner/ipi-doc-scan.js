@@ -16,7 +16,14 @@
 const path = require('path');
 const { extractDocumentText, SUPPORTED_DOC_EXTENSIONS } = require('../utils/ipi-doc-extract');
 const { normalizeFinding } = require('../models/finding');
-const { summarizeFindings } = require('../report/report-engine');
+
+function summarizeFindings(findings) {
+  const bySeverity = {};
+  for (const finding of findings) {
+    bySeverity[finding.severity] = (bySeverity[finding.severity] || 0) + 1;
+  }
+  return { total: findings.length, byCategory: { LLM01: findings.length }, bySeverity };
+}
 
 // ── BỘ QUY TẮC TRI THỨC TOÀN DIỆN VỀ INDIRECT PROMPT INJECTION (OWASP LLM01) ──
 
@@ -325,15 +332,133 @@ function scanTextForIpi(text, filePath, folderPath = '') {
 /**
  * Trích xuất các context chunk đại diện từ tài liệu để phục vụ Semantic Analysis của Agent.
  */
-function extractContextChunks(text, maxChunks = 4, chunkSize = 800) {
-  const clean = text.replace(/\r?\n+/g, '\n').trim();
+const SEMANTIC_CHUNK_SIZE = 900;
+const SEMANTIC_CHUNK_OVERLAP = 120;
+const SEVERITY_SCORE = { critical: 100, high: 60, medium: 25, low: 10 };
+const SEMANTIC_SCAN_PROFILES = {
+  balanced: {
+    maxAiChunks: 12,
+    detectorBatchSize: 3,
+    verifierEvidenceCharacters: 7600,
+  },
+  deep: {
+    maxAiChunks: 24,
+    detectorBatchSize: 3,
+    verifierEvidenceCharacters: 14000,
+  },
+};
+
+function getSemanticScanProfile(profileName) {
+  return profileName === 'deep'
+    ? { name: 'deep', ...SEMANTIC_SCAN_PROFILES.deep }
+    : { name: 'balanced', ...SEMANTIC_SCAN_PROFILES.balanced };
+}
+
+function lineNumberFromLocation(location) {
+  const match = String(location || '').match(/:(\d+)$/);
+  return match ? Number(match[1]) : null;
+}
+
+function lineAt(text, index) {
+  return text.slice(0, index).split('\n').length;
+}
+
+/** Split all extracted text into overlapping chunks while preserving line metadata. */
+function createSemanticChunks(text, filePath, fileName, chunkSize = SEMANTIC_CHUNK_SIZE, overlap = SEMANTIC_CHUNK_OVERLAP) {
+  const clean = text.replace(/\r\n?/g, '\n').trim();
   if (!clean) return [];
 
   const chunks = [];
-  for (let i = 0; i < clean.length && chunks.length < maxChunks; i += chunkSize) {
-    chunks.push(clean.slice(i, i + chunkSize));
+  let start = 0;
+  let index = 0;
+  while (start < clean.length) {
+    let end = Math.min(start + chunkSize, clean.length);
+    if (end < clean.length) {
+      const boundary = clean.lastIndexOf('\n', end);
+      if (boundary > start + Math.floor(chunkSize * 0.55)) end = boundary + 1;
+    }
+    const chunkText = clean.slice(start, end).trim();
+    if (chunkText) {
+      chunks.push({
+        chunkId: `${filePath}-chunk-${index + 1}`,
+        filePath,
+        fileName,
+        index,
+        startLine: lineAt(clean, start),
+        endLine: lineAt(clean, Math.max(start, end - 1)),
+        text: chunkText,
+        riskScore: 0,
+        findingCount: 0,
+        selectionReasons: [],
+      });
+      index += 1;
+    }
+    if (end >= clean.length) break;
+    start = Math.max(end - overlap, start + 1);
   }
   return chunks;
+}
+
+function annotateChunkRisk(chunks, findings) {
+  for (const finding of findings) {
+    const line = lineNumberFromLocation(finding.location);
+    if (!line) continue;
+    const chunk = chunks.find((item) => line >= item.startLine && line <= item.endLine);
+    if (!chunk) continue;
+    const score = SEVERITY_SCORE[finding.severity] || 10;
+    chunk.riskScore += score;
+    chunk.findingCount += 1;
+    if (!chunk.selectionReasons.includes(`rule:${finding.severity}`)) {
+      chunk.selectionReasons.push(`rule:${finding.severity}`);
+    }
+  }
+  return chunks;
+}
+
+function addChunk(selected, chunk, reason) {
+  if (!chunk || selected.has(chunk.chunkId)) return;
+  chunk.selectionReasons.push(reason);
+  selected.set(chunk.chunkId, chunk);
+}
+
+/**
+ * Select chunks for semantic review: all high-risk candidates first, then their
+ * neighbors, positional sentinels and deterministic coverage samples.
+ */
+function selectSemanticChunks(chunks, maxChunks = SEMANTIC_SCAN_PROFILES.balanced.maxAiChunks) {
+  const selected = new Map();
+  const byFile = new Map();
+  for (const chunk of chunks) {
+    const items = byFile.get(chunk.filePath) || [];
+    items.push(chunk);
+    byFile.set(chunk.filePath, items);
+  }
+
+  const ranked = [...chunks].sort((a, b) => b.riskScore - a.riskScore || a.index - b.index);
+  for (const chunk of ranked.filter((item) => item.riskScore >= SEVERITY_SCORE.high)) {
+    addChunk(selected, chunk, 'high-risk');
+  }
+
+  for (const chunk of ranked.filter((item) => item.riskScore >= SEVERITY_SCORE.high)) {
+    const items = byFile.get(chunk.filePath) || [];
+    addChunk(selected, items[chunk.index - 1], 'neighbor-of-high-risk');
+    addChunk(selected, items[chunk.index + 1], 'neighbor-of-high-risk');
+  }
+
+  for (const items of byFile.values()) {
+    addChunk(selected, items[0], 'sentinel-start');
+    addChunk(selected, items[Math.floor(items.length / 2)], 'sentinel-middle');
+    addChunk(selected, items[items.length - 1], 'sentinel-end');
+    addChunk(selected, items[Math.floor(items.length * 0.25)], 'coverage-sample');
+    addChunk(selected, items[Math.floor(items.length * 0.75)], 'coverage-sample');
+  }
+
+  for (const chunk of ranked.filter((item) => item.riskScore > 0)) addChunk(selected, chunk, 'ranked-risk');
+  for (const chunk of ranked) addChunk(selected, chunk, 'coverage-fill');
+
+  // Map insertion order is intentional: it preserves the selection priority above
+  // when the time budget limits the final semantic review set.
+  return [...selected.values()].slice(0, maxChunks);
 }
 
 // ── Main scanner function ──────────────────────────────────────────────────
@@ -345,6 +470,7 @@ function extractContextChunks(text, maxChunks = 4, chunkSize = 800) {
 async function runIpiDocScan(filePaths, options = {}) {
   const onProgress = options.onProgress || (() => {});
   const folderPath = options.folderPath || '';
+  const scanProfile = getSemanticScanProfile(options.scanProfile);
   const startTs = Date.now();
 
   if (!Array.isArray(filePaths) || filePaths.length === 0) {
@@ -356,6 +482,7 @@ async function runIpiDocScan(filePaths, options = {}) {
   const allFindings = [];
   const fileResults = [];
   const extractedSnippets = [];
+  const allSemanticChunks = [];
 
   for (const filePath of filePaths) {
     const ext = path.extname(filePath).toLowerCase();
@@ -381,12 +508,13 @@ async function runIpiDocScan(filePaths, options = {}) {
     allFindings.push(...findings);
     fileResults.push({ filePath, ok: true, findingCount: findings.length, ext: extracted.ext });
 
-    // Lưu lại các đoạn văn bản chính để Multi-Agent SLM đọc và phân tích ngữ nghĩa
-    const chunks = extractContextChunks(extracted.text, 3, 600);
+    // Build complete chunk inventory; semantic selection happens after every file is scanned.
+    const chunks = annotateChunkRisk(createSemanticChunks(extracted.text, filePath, baseName), findings);
+    allSemanticChunks.push(...chunks);
     extractedSnippets.push({
       filePath,
       fileName: baseName,
-      chunks,
+      chunks: chunks.map((chunk) => chunk.text),
       findingsCount: findings.length,
       sampleText: extracted.text.slice(0, 1200),
     });
@@ -400,6 +528,20 @@ async function runIpiDocScan(filePaths, options = {}) {
   }
 
   const summary = summarizeFindings(allFindings);
+  const semanticChunks = selectSemanticChunks(allSemanticChunks, scanProfile.maxAiChunks);
+  const highRiskChunks = allSemanticChunks.filter((chunk) => chunk.riskScore >= SEVERITY_SCORE.high);
+  const coverage = {
+    mode: 'hybrid-priority-sampling',
+    scanProfile: scanProfile.name,
+    totalChunks: allSemanticChunks.length,
+    aiReviewedChunks: semanticChunks.length,
+    highRiskChunks: highRiskChunks.length,
+    highRiskChunksReviewed: semanticChunks.filter((chunk) => chunk.riskScore >= SEVERITY_SCORE.high).length,
+    coverageLimited: semanticChunks.length < allSemanticChunks.length,
+    maxAiChunks: scanProfile.maxAiChunks,
+    detectorBatchSize: scanProfile.detectorBatchSize,
+    verifierEvidenceCharacters: scanProfile.verifierEvidenceCharacters,
+  };
   const elapsed = ((Date.now() - startTs) / 1000).toFixed(1);
 
   onProgress({
@@ -418,6 +560,8 @@ async function runIpiDocScan(filePaths, options = {}) {
       scannedFiles: filePaths.length,
       fileResults,
       extractedSnippets,
+      semanticChunks,
+      coverage,
       summary,
     },
   };
@@ -427,7 +571,10 @@ module.exports = {
   runIpiDocScan,
   scanTextForIpi,
   scanBase64Payloads,
-  extractContextChunks,
+  createSemanticChunks,
+  annotateChunkRisk,
+  selectSemanticChunks,
+  getSemanticScanProfile,
   IPI_DOC_PATTERNS,
   SUPPORTED_DOC_EXTENSIONS,
 };

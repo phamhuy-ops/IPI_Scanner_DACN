@@ -1,167 +1,98 @@
-# SENTINEL v2 - OWASP Security Workbench
+# SENTINEL - Local TinyLLM IPI Scanner
 
-SENTINEL v2 là ứng dụng desktop dùng Electron + React, hỗ trợ rà soát bảo mật website và mã nguồn theo định hướng OWASP. Dự án tập trung vào việc giúp người dùng phát hiện rủi ro phổ biến, quản lý findings, xuất báo cáo và dùng trợ lý AI bảo mật khi cần phân tích thêm.
+SENTINEL la ung dung desktop Electron + React phat hien **Indirect Prompt
+Injection (IPI)** trong tai lieu va thu muc tai lieu. Toan bo phan tich AI
+chay local qua Ollama, khong gui noi dung tai lieu hay API key len cloud.
 
-Ứng dụng phù hợp cho học tập, kiểm tra nội bộ, rà soát dự án trước khi bàn giao hoặc tạo checklist bảo mật nhanh cho đội phát triển.
+## Pipeline
 
-## Tính năng chính
+1. Chon mot hay nhieu tai lieu, hoac mot thu muc tai lieu.
+2. Trich xuat text va quet nhanh bang rule-based prefilter: instruction
+   override, system prompt spoofing, jailbreak, delimiter smuggling, Base64,
+   zero-width characters va data exfiltration.
+3. **Detector Agent** (`gemma3:1b`) phan tich ngu nghia va y do.
+4. **Verifier Agent** (`qwen2.5-coder:1.5b`) phan bien doc lap va ket luan pass/fail.
+5. Hien thi finding, evidence, nhan dinh cua hai agent va ban noi dung da
+   duoc trung hoa de tai ve khi can.
 
-- **URL Scan**: quét website/endpoint online hoặc môi trường nội bộ như `localhost`, `127.0.0.1`, `::1`, `192.168.x.x` để kiểm tra header bảo mật, cookie, CORS, TLS, endpoint nhạy cảm và một số dấu hiệu rủi ro thường gặp.
-- **Project Scan**: đọc source/config/dependency/CI để phát hiện pattern rủi ro như secret bị commit, dependency cũ, thiếu SRI, cấu hình bảo mật yếu.
-- **Bảng findings**: gom nhóm theo OWASP, hiển thị mức độ, độ tin cậy, vị trí, trạng thái xử lý và chi tiết khuyến nghị.
-- **Checklist**: tạo danh sách việc cần làm từ findings để theo dõi quá trình xử lý.
-- **Lịch sử quét**: lưu lại kết quả scan, xem lại hoặc xóa từng mục lịch sử khi không cần nữa.
-- **Xuất báo cáo**: xuất kết quả ra HTML hoặc JSON để chia sẻ/nộp kèm tài liệu.
-- **Trợ lý AI bảo mật**: có knowledge base nội bộ; nếu cấu hình API key thì có thể gọi thêm LLM để trả lời sâu hơn.
+Detector va Verifier deu phai tra loi thanh cong. Neu Ollama khong chay, model
+chua duoc tai, hoac mot agent loi, phien quet that bai ro rang; khong co cloud
+fallback hay ket qua gia lap.
 
-## Yêu cầu môi trường
+## Yeu cau
 
-- Node.js `22.19.0` hoặc mới hơn
-- npm `10` hoặc mới hơn
-- Windows là môi trường đóng gói chính hiện tại
+- Node.js 22.19+ va npm 10+
+- Ollama dang chay tai `http://127.0.0.1:11434`
+- Hai model baseline nhe:
 
-Kiểm tra phiên bản:
-
-```bash
-node -v
-npm -v
+```powershell
+ollama pull gemma3:1b
+ollama pull qwen2.5-coder:1.5b
 ```
 
-## Cài đặt dự án
+Voi RTX 3050 Ti Laptop GPU 4 GB va 24 GB RAM, cau hinh Gemma 3 1B + Qwen Coder
+1.5B la baseline rat nhe de danh gia do chinh xac truoc khi fine-tune. Hai
+agent duoc goi noi tiep, khong tai dong thoi hai model vao VRAM.
 
-Clone repo và cài dependency:
+## Cai dat va chay
 
-```bash
-git clone <repo-url>
-cd sentinel-v2
+```powershell
 npm install
-```
-
-Chạy ở chế độ phát triển:
-
-```bash
 npm run dev
 ```
 
-Lệnh này khởi động Vite cho giao diện React và Electron cho ứng dụng desktop.
+Trong app:
 
-## Cách sử dụng nhanh
+1. Chon **Thu muc tai lieu** hoac **Chon file**.
+2. Bam **Kiem tra Ollama local** de xac nhan hai model da san sang.
+3. Chon Detector va Verifier.
+4. Bam **Quet IPI bang TinyLLM local**.
 
-1. Mở app bằng `npm run dev`.
-2. Vào tab **Quét Website** nếu muốn kiểm tra một URL public.
-3. Vào tab **Quét Mã Nguồn** nếu muốn chọn thư mục dự án local để phân tích source/config/dependency.
-4. Xem findings trong bảng kết quả, bấm **Chi tiết** để đọc mô tả và hướng xử lý.
-5. Cập nhật trạng thái xử lý để theo dõi tiến độ.
-6. Vào **Checklist** để xem danh sách việc cần làm được tạo từ kết quả quét.
-7. Dùng **Xuất HTML** hoặc **Xuất JSON** nếu cần lưu/chia sẻ báo cáo.
-8. Mở **Trợ lý bảo mật** nếu muốn hỏi thêm về OWASP, findings hoặc cách khắc phục.
+Format tai lieu duoc ho tro: `txt`, `md`, `csv`, `log`, `rst`, `json`, `xml`,
+`html`, `htm`, `pdf`, `docx`, va `doc`. Khi quet thu muc, Sentinel duyet de
+quy toi da 300 tai lieu va bo qua `.git`, `node_modules`, `dist`,
+`dist-electron`.
 
-## Cấu hình AI/API key
+## Kiem tra va build
 
-AI là tính năng tùy chọn. Nếu không có API key, trợ lý vẫn dùng knowledge base nội bộ để trả lời các câu hỏi cơ bản. Nếu muốn dùng LLM online, có hai cách cấu hình:
-
-### Cách khuyến nghị: cấu hình trong app
-
-1. Mở nút **Trợ lý bảo mật**.
-2. Vào phần cấu hình API key.
-3. Nhập key cho provider bạn muốn dùng, ví dụ Groq, Gemini, OpenRouter, Together hoặc HuggingFace.
-4. Bấm lưu để app áp dụng ngay.
-
-Key được lưu trong thư mục `userData` của Electron trên máy người dùng, không cần đặt chung thư mục với file `.exe`.
-
-### Cách phụ: dùng file `.env`
-
-Copy `.env.example` thành `.env` rồi điền key:
-
-```bash
-cp .env.example .env
-```
-
-Các biến thường dùng:
-
-```env
-GROQ_API_KEY=
-GEMINI_API_KEY=
-OPENROUTER_API_KEY=
-TOGETHER_API_KEY=
-HF_API_KEY=
-```
-
-Lưu ý: không commit file `.env` thật lên Git. Repo đã cấu hình `.gitignore` để bỏ qua `.env`.
-
-## Các lệnh thường dùng
-
-| Lệnh | Mục đích |
-| --- | --- |
-| `npm run dev` | Chạy app ở chế độ phát triển |
-| `npm run lint` | Kiểm tra quy tắc code cho renderer, Electron và engine |
-| `npm run typecheck` | Kiểm tra TypeScript |
-| `npm test` | Chạy test bằng Vitest |
-| `npm run build` | Build production vào `dist-electron/` |
-| `npm run clean` | Xóa output build cũ trong `dist/` và `dist-electron/` |
-| `npm run dist` | Build và đóng gói bản Windows portable |
-
-## Đóng gói thành file EXE
-
-Khi cần tạo bản portable cho Windows:
-
-```bash
-npm run clean
-npm run dist
-```
-
-File xuất ra nằm trong thư mục `dist/`, theo mẫu:
-
-```text
-SENTINEL-v2-2.0.0-x64-portable.exe
-```
-
-Bản portable có thể gửi cho người khác chạy trực tiếp. Tuy nhiên có vài điểm cần biết:
-
-- Nếu app chưa ký số bằng certificate, Windows SmartScreen có thể hiện cảnh báo khi mở lần đầu.
-- API key AI không được đóng gói sẵn trong file `.exe`. Người nhận cần tự cấu hình trong app hoặc dùng file `.env`.
-- Chỉ nên quét hệ thống/dự án mà bạn sở hữu hoặc được phép kiểm tra.
-
-## Cấu trúc thư mục
-
-```text
-src/        Giao diện React, store, AI assistant, component UI
-electron/   Electron main process và preload bridge
-engine/     Scanner, rule engine, collector, report logic
-public/     Asset tĩnh cho renderer
-build/      Asset phục vụ đóng gói, ví dụ icon ứng dụng
-scripts/    Script hỗ trợ kiểm tra môi trường
-```
-
-## Luồng build
-
-- `npm run dev` chạy Vite và Electron ở chế độ development.
-- `npm run build` chạy kiểm tra engine, typecheck rồi build production.
-- Renderer được build vào `dist-electron/renderer/`.
-- Electron main/preload được build vào `dist-electron/`.
-- `npm run dist` dùng `electron-builder` để tạo bản Windows portable.
-
-## Giới hạn và lưu ý an toàn
-
-SENTINEL v2 hỗ trợ rà soát và gợi ý khắc phục, nhưng không thay thế hoàn toàn pentest thủ công. Kết quả scan nên được xem như tín hiệu ban đầu để ưu tiên kiểm tra, xác minh và xử lý.
-
-Một số giới hạn cần biết:
-
-- URL Scan không thể hiểu hết logic nghiệp vụ hoặc luồng đăng nhập phức tạp nếu không có cấu hình phù hợp.
-- URL Scan mặc định cho phép quét cả target nội bộ và online. Nếu muốn chặn private/reserved target trong môi trường production, đặt `SENTINEL_ALLOW_PRIVATE_TARGETS=false`.
-- Project Scan phát hiện pattern rủi ro trong source/config/dependency, nhưng không luôn chứng minh được exploit thực tế.
-- Findings có độ tin cậy khác nhau, nên cần đọc phần chi tiết trước khi kết luận.
-- Không dùng công cụ để quét hệ thống bạn không có quyền kiểm tra.
-
-## Đóng góp
-
-Trước khi push code hoặc mở pull request, nên chạy:
-
-```bash
-npm run lint
+```powershell
 npm run typecheck
 npm test
 npm run build
+npm run dist
 ```
 
-Quy ước chi tiết nằm trong `CONTRIBUTING.md`.
+`npm run dist` tao ban Windows portable trong `dist/`.
+
+## Benchmark truoc fine-tuning
+
+Chay baseline co nhan bang hai model local:
+
+```powershell
+npm run benchmark:ipi
+```
+
+Script dung `benchmark/ipi-baseline.json`, chay Detector roi Verifier tren tung
+mau, va luu ket qua timestamp vao `benchmark/results/`. Ket qua gom `precision`,
+`recall`, `F1`, `falsePositiveRate`, `agreementRate` va thoi gian xu ly trung
+binh moi tai lieu. Bo mau ban dau chi la smoke benchmark; truoc khi viet bao
+cao, can mo rong bang tai lieu IPI va benign da duoc gan nhan doc lap.
+
+## Thu muc quan trong
+
+```text
+electron/                    Electron main process va preload bridge local-only
+engine/scanner/ipi-doc-scan  Rule-based IPI document prefilter
+engine/utils/ipi-doc-extract Document text extraction
+src/ai/agents/ipiDocAgent    Detector + Verifier orchestration
+src/ai/agents/slmCatalog     Ollama TinyLLM allowlist
+src/components/              UI quet IPI
+```
+
+## Danh gia khoa luan
+
+Truoc fine-tuning, dung mot dataset IPI co nhan va ghi lai cho tung cau hinh
+model: precision, recall, F1, false-positive rate, ty le Detector/Verifier
+dong y, thoi gian xu ly moi tai lieu, RAM va VRAM. Rule-based prefilter chi la
+tang loc; metric cua Detector/Verifier phai duoc bao cao rieng de danh gia gia
+tri cua multi-agent TinyLLM.

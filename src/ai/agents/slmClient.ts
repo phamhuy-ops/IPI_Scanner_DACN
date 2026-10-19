@@ -40,7 +40,7 @@ async function callEndpoint(ep: SlmEndpoint, systemPrompt: string, userPrompt: s
     temperature: 0.1,
     max_tokens: 1400,
   };
-  if (jsonMode && ep.providerId !== 'huggingface') {
+  if (jsonMode) {
     body.response_format = { type: 'json_object' };
   }
 
@@ -70,9 +70,9 @@ export async function generateWithSlm(
   role: SlmRole,
   systemPrompt: string,
   userPrompt: string,
-  options?: { preferModel?: string; providerMode?: 'auto' | 'ollama' | 'cloud' },
+  options?: { preferModel?: string; providerMode?: 'ollama' },
 ): Promise<SlmGenerateResult> {
-  const endpoints = endpointsForRole(role, options?.providerMode || 'auto');
+  const endpoints = endpointsForRole(role, options?.providerMode || 'ollama');
   const ordered = options?.preferModel
     ? [...endpoints].sort((a, b) => Number(b.model === options.preferModel) - Number(a.model === options.preferModel))
     : endpoints;
@@ -88,6 +88,26 @@ export async function generateWithSlm(
   }
 
   throw new Error(
-    `Không gọi được SLM cho vai trò ${role}. Hãy khởi động Ollama (127.0.0.1:11434) hoặc cấu hình API key Groq/OpenRouter. Chi tiết: ${errors.slice(0, 3).join(' | ')}`,
+    `Không gọi được TinyLLM local cho vai trò ${role}. Hãy khởi động Ollama và tải đúng model đã chọn. Chi tiết: ${errors.slice(0, 3).join(' | ')}`,
   );
+}
+
+/** Ask Ollama to release VRAM; failure here must never fail a security scan. */
+export async function releaseSlmModel(model: string): Promise<void> {
+  try {
+    assertSlmModel(model);
+    const bridge = getWorkbenchBridge();
+    if (!bridge?.aiFetch) return;
+
+    await bridge.aiFetch({
+      providerId: 'ollama',
+      url: 'http://127.0.0.1:11434/api/generate',
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model, keep_alive: 0 }),
+      timeoutMs: 10_000,
+    });
+  } catch {
+    // Best-effort cleanup only. The next Ollama request can still evict the model.
+  }
 }
