@@ -54,7 +54,7 @@ export function ThemeReveal({ theme, onCovered, onComplete }: ThemeRevealProps) 
             : { duration: 1.1, ease: 'easeInOut', repeat: Infinity }}
         />
         <div className="theme-reveal-brand">SENTINEL</div>
-        <div className="theme-reveal-status">Đang chuyển sang giao diện {theme === 'light' ? 'sáng' : 'tối'}</div>
+        <div className="theme-reveal-status">Switching to {theme === 'light' ? 'light' : 'dark'} theme</div>
       </motion.div>
     </motion.div>
   );

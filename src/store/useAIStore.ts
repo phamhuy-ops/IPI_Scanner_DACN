@@ -1,8 +1,4 @@
-/**
- * AI Chat Store — tách biệt với useStore chính để tránh bloat.
- * Dùng để truyền pending finding từ FindingCard → AIChatWidget
- * mà không cần prop drilling qua nhiều tầng component.
- */
+/** AI chat store — separate from main useStore to pass pending findings without prop drilling. */
 import { create } from 'zustand';
 import type { Finding } from '../types';
 

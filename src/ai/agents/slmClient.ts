@@ -11,7 +11,7 @@ function extractJsonObject(raw: string): string {
   const body = (fenced?.[1] || raw).trim();
   const start = body.indexOf('{');
   const end = body.lastIndexOf('}');
-  if (start === -1 || end <= start) throw new Error('SLM không trả JSON hợp lệ');
+  if (start === -1 || end <= start) throw new Error('SLM did not return valid JSON');
   return body.slice(start, end + 1);
 }
 
@@ -29,7 +29,7 @@ function getWorkbenchBridge() {
 async function callEndpoint(ep: SlmEndpoint, systemPrompt: string, userPrompt: string, jsonMode: boolean): Promise<string> {
   assertSlmModel(ep.model);
   const bridge = getWorkbenchBridge();
-  if (!bridge?.aiFetch) throw new Error('Cần chạy trong Electron để gọi SLM.');
+  if (!bridge?.aiFetch) throw new Error('Run inside Electron to call the SLM.');
 
   const body: Record<string, unknown> = {
     model: ep.model,
@@ -88,7 +88,7 @@ export async function generateWithSlm(
   }
 
   throw new Error(
-    `Không gọi được TinyLLM local cho vai trò ${role}. Hãy khởi động Ollama và tải đúng model đã chọn. Chi tiết: ${errors.slice(0, 3).join(' | ')}`,
+    `Could not call local TinyLLM for role ${role}. Start Ollama and pull the selected model. Details: ${errors.slice(0, 3).join(' | ')}`,
   );
 }
 

@@ -1,132 +1,116 @@
 /**
- * SENTINEL v2 — Hướng dẫn sử dụng (Redesigned)
- * Slide-in sidebar, dùng đúng design tokens của app
+ * SENTINEL — In-app user guide (IPI document scanner)
  */
 (function () {
   'use strict';
 
-  const TABS = ['Bắt đầu', 'URL Scan', 'Dự án', 'Kết quả', 'OWASP'];
+  const TABS = ['Start', 'Input', 'Agents', 'Results', 'LLM01'];
 
   const DATA = {
-    0: [ // Bắt đầu
+    0: [
       {
-        icon: '🛡️', title: 'SENTINEL là gì?', open: true,
+        icon: '🛡️', title: 'What is SENTINEL?', open: true,
         items: [
-          'Công cụ kiểm thử bảo mật theo chuẩn <strong>OWASP Top 10 — 2025</strong>, chạy trực tiếp trên máy (Electron), không cần server riêng.',
-          'Hỗ trợ <strong>URL Scan</strong> (black-box từ xa) và <strong>Project Scan</strong> (phân tích source code tĩnh).',
+          'Desktop app (Electron) to find <strong>Indirect Prompt Injection (IPI)</strong> in documents before LLM/RAG ingestion.',
+          'Uses a <strong>rule prefilter</strong> plus two local TinyLLMs through <strong>Ollama</strong> — no cloud.',
         ],
-        tip: 'Chạy cả hai chế độ để phát hiện đầy đủ lỗ hổng — URL tìm lỗi runtime, Project tìm lỗi source code.'
+        tip: 'Only scan documents you are allowed to test.'
       },
       {
-        icon: '⚙️', title: 'Quy trình cơ bản', open: false,
+        icon: '⚙️', title: 'Quick workflow', open: false,
         items: [
-          'Chọn tab <strong>Quét Website</strong> hoặc <strong>Quét Mã Nguồn</strong>.',
-          'Điền URL hoặc chọn thư mục dự án.',
-          'Nhấn <strong>Bắt đầu quét</strong> — theo dõi log thời gian thực.',
-          'Xem kết quả ở panel bên phải, xuất báo cáo HTML/JSON.'
+          'Pick a <strong>folder</strong> or <strong>files</strong> on the left.',
+          'Click <strong>Check local Ollama</strong>.',
+          'Choose <strong>Balanced</strong> or <strong>Deep Scan</strong>, then run the scan.',
+          'Review findings and the Verifier verdict on the right.'
         ]
       },
       {
-        icon: '📁', title: 'Lịch sử quét', open: false,
+        icon: '📁', title: 'Supported formats', open: false,
         items: [
-          'Mỗi lần quét thành công lưu vào <strong>Lịch sử</strong> (tối đa 10 mục).',
-          'Nhấn <strong>Lịch sử</strong> ở header để xem và khôi phục kết quả cũ.'
+          'Text: <code>txt</code>, <code>md</code>, <code>csv</code>, <code>json</code>, <code>xml</code>, <code>html</code>.',
+          'Office: <code>pdf</code>, <code>docx</code>, <code>doc</code>.',
+          'Folder scans: up to 300 files; skips <code>.git</code> and <code>node_modules</code>.'
         ]
       }
     ],
-    1: [ // URL Scan
+    1: [
       {
-        icon: '🎯', title: 'Nhập URL mục tiêu', open: true,
+        icon: '📂', title: 'Document input', open: true,
         items: [
-          'Nhập URL đầy đủ: <code>https://example.com</code> hoặc <code>http://localhost:3000</code>.',
-          'Nhấn <strong>Enter</strong> hoặc nút <strong>Bắt đầu quét website</strong> màu vàng.',
+          '<strong>Document folder:</strong> recursive scan of supported files.',
+          '<strong>Pick files:</strong> select one or more documents manually.',
         ],
-        warn: 'Chỉ scan URL bạn có quyền kiểm thử. Không scan hệ thống người khác khi chưa được phép.'
+        warn: 'Document text is processed locally; still avoid uploading real production secrets into test folders.'
       },
       {
-        icon: '🔬', title: 'Phạm vi & Cường độ', open: false,
+        icon: '🔬', title: 'Balanced vs Deep Scan', open: false,
         items: [
-          '<strong>Phạm vi (Depth):</strong> 0 = chỉ URL gốc; 1 = URL + link trực tiếp (khuyến nghị); 2 = sâu hơn.',
-          '<strong>Cường độ (Budget):</strong> Số HTTP request tối đa. Budget cao = kỹ hơn nhưng chậm hơn.',
+          '<strong>Balanced:</strong> up to 12 chunks for TinyLLM review — faster daily use.',
+          '<strong>Deep Scan:</strong> up to 24 chunks and more Verifier evidence — slower, wider coverage.',
         ],
-        tip: 'Depth 1 + Budget 60 là cấu hình cân bằng (~30–60 giây). Budget 200 cho mục tiêu quan trọng.'
+        tip: 'If the prefilter is clean but you still suspect hidden instructions, try Deep Scan.'
       },
       {
-        icon: '🔑', title: 'Xác thực (Authentication)', open: false,
+        icon: '🔑', title: 'Ollama models', open: false,
         items: [
-          '<strong>Cookie:</strong> Dán từ DevTools → Application → Cookies (dạng <code>session=abc; token=xyz</code>).',
-          '<strong>Bearer Token:</strong> JWT, dán giá trị <code>eyJhbGci…</code> (không cần prefix "Bearer").',
-          '<strong>Custom Headers:</strong> JSON, ví dụ <code>{"X-API-Key": "abc123"}</code>.'
+          'Baseline: <code>gemma3:1b</code> (Detector) and <code>qwen2.5-coder:1.5b</code> (Verifier).',
+          'Pull models: <code>ollama pull gemma3:1b</code> and <code>ollama pull qwen2.5-coder:1.5b</code>.',
         ]
       }
     ],
-    2: [ // Project Scan
+    2: [
       {
-        icon: '📂', title: 'Chọn thư mục dự án', open: true,
+        icon: '🤖', title: 'Three pipeline stages', open: true,
         items: [
-          'Nhấn <strong>Chọn thư mục</strong> để mở dialog — chọn thư mục gốc (chứa <code>package.json</code>, <code>.csproj</code>…).',
-          'Hoặc dán đường dẫn tuyệt đối vào ô input.',
-          'Nhấn <strong>Bắt đầu phân tích</strong> — không chạy code, hoàn toàn an toàn.'
+          '<strong>Rule prefilter:</strong> 35+ patterns (English and Vietnamese), Base64, delimiters, steganography.',
+          '<strong>Detector Agent:</strong> semantic intent on selected chunks.',
+          '<strong>Verifier Agent:</strong> independent pass/fail cross-check.',
         ]
       },
       {
-        icon: '🔍', title: 'SENTINEL kiểm tra gì?', open: false,
+        icon: '🔍', title: 'What counts as IPI?', open: false,
         items: [
-          '<strong>Dependencies:</strong> <code>package.json</code>, <code>package-lock.json</code> — CVE và lockfile không an toàn.',
-          '<strong>Secrets:</strong> API key, password, token hardcode trong source code và config.',
-          '<strong>Config files:</strong> <code>.env</code>, <code>appsettings.json</code> — thông tin nhạy cảm bị expose.',
-          '<strong>Logging:</strong> Code thiếu error handling hoặc log sai cách.'
+          'Direct orders to the model inside user documents (e.g. ignore prior instructions).',
+          'System prompt override, jailbreak personas, exfiltration, task diversion.',
+          'Security education text is usually benign; direct commands to the LLM are not.',
         ],
-        tip: 'Project Scan hoạt động tĩnh — không kết nối mạng, không thực thi code của bạn.'
+        tip: 'Teaching about prompt injection is not the same as performing it.'
+      }
+    ],
+    3: [
+      {
+        icon: '📊', title: 'Reading results', open: true,
+        items: [
+          '<strong>Prefilter:</strong> rule ID, title, file location, evidence snippets.',
+          '<strong>Detector:</strong> which chunks were semantically reviewed.',
+          '<strong>Verifier:</strong> final verdict, reasons, remaining risks.',
+        ]
       },
       {
-        icon: '🏗️', title: 'Tech Stack hỗ trợ', open: false,
+        icon: '🔎', title: 'Pipeline log', open: false,
         items: [
-          '<strong>Node.js / React / Next.js:</strong> npm deps, JWT, CORS, secrets.',
-          '<strong>Spring Boot / Java:</strong> Actuator, Maven/Gradle CVE, Spring Data REST.',
-          '<strong>PHP / Laravel:</strong> APP_DEBUG, Debugbar/Telescope, file upload.'
+          'Expand the log on the results panel for step-by-step progress.',
+          'Failed scans usually mean Ollama is down or a model is missing.',
+        ]
+      },
+      {
+        icon: '🔄', title: 'Clear results', open: false,
+        items: [
+          'Use <strong>Clear results</strong> on the left to reset the panel before a new run.',
         ]
       }
     ],
-    3: [ // Kết quả
-      {
-        icon: '📊', title: 'Risk Dashboard', open: true,
-        items: [
-          '<strong>Gauge 0–100:</strong> ≥70 = nghiêm trọng, ≥40 = cao, ≥15 = trung bình, <15 = thấp.',
-          '<strong>Ô severity:</strong> Số lỗi theo mức CRIT / HIGH / MED / LOW.',
-          '<strong>Biểu đồ OWASP:</strong> Phân bổ theo danh mục A01–A10.'
-        ]
-      },
-      {
-        icon: '🔎', title: 'Lọc & Tìm kiếm', open: false,
-        items: [
-          '<strong>Tìm kiếm:</strong> Gõ từ khóa để lọc theo tên lỗi hoặc Rule ID (vd: <code>A05-XSS</code>).',
-          '<strong>Lọc severity:</strong> Chỉ xem Critical, High, Medium hoặc Low.',
-          'Nhấn finding card để xem chi tiết: <strong>Vị trí, Payload, Bằng chứng, Khuyến nghị</strong>.'
-        ]
-      },
-      {
-        icon: '📤', title: 'Export báo cáo', open: false,
-        items: [
-          '<strong>Xuất HTML:</strong> Báo cáo dạng trang web — dễ đọc, gửi cho team.',
-          '<strong>Xuất JSON:</strong> Dữ liệu thô — tích hợp CI/CD hoặc xử lý tự động.'
-        ],
-        tip: 'Tên file được gợi ý tự động theo URL/tên thư mục và ngày scan.'
-      }
-    ],
-    4: 'vulns' // OWASP
+    4: 'vulns'
   };
 
   const VULNS = [
-    { id: 'A01', name: 'Broken Access Control',        sev: 'critical', desc: 'IDOR, bypass, thiếu kiểm tra quyền, JWT/CSRF lỗi.' },
-    { id: 'A02', name: 'Cryptographic Failures',       sev: 'high',     desc: 'Cookie flags, CORS wildcard, HTTP không mã hóa, thiếu CSP/HSTS.' },
-    { id: 'A03', name: 'Injection / Supply Chain',     sev: 'critical', desc: 'SQLi, XSS, Command Injection, SSTI, npm CVE.' },
-    { id: 'A04', name: 'Insecure Design',              sev: 'medium',   desc: 'Thiếu rate limit, sensitive data exposure, threat model.' },
-    { id: 'A05', name: 'Security Misconfiguration',    sev: 'high',     desc: 'Swagger/Actuator public, TRACE method, CORS sai.' },
-    { id: 'A07', name: 'Auth & Session Failures',      sev: 'critical', desc: 'Thiếu rate limiting, account enumeration, session fixation.' },
-    { id: 'A08', name: 'Software Integrity Failures',  sev: 'high',     desc: 'Script ngoài thiếu SRI, config không tin cậy.' },
-    { id: 'A09', name: 'Logging & Monitoring',         sev: 'medium',   desc: 'Thiếu alerting, auth không có audit log.' },
-    { id: 'A10', name: 'SSRF & Exception Handling',    sev: 'medium',   desc: 'Stack trace lộ, SSRF, 5xx với input thông thường.' },
+    { id: 'LLM01', name: 'Prompt Injection', sev: 'critical', desc: 'Direct or indirect instructions in untrusted input that change model behavior.' },
+    { id: 'IPI', name: 'Indirect Prompt Injection', sev: 'critical', desc: 'Hidden instructions in documents loaded into RAG or chat context.' },
+    { id: 'OVERRIDE', name: 'Instruction override', sev: 'critical', desc: '"Ignore previous instructions" and similar cancel-system-directive patterns.' },
+    { id: 'EXFIL', name: 'Prompt / secret exfiltration', sev: 'high', desc: 'Attempts to print system prompt, API keys, or leak data via markdown URLs.' },
+    { id: 'JAIL', name: 'Jailbreak / persona hijack', sev: 'high', desc: 'DAN, dev mode, uncensored role-play embedded in documents.' },
+    { id: 'OBF', name: 'Obfuscation', sev: 'high', desc: 'Base64 payloads, zero-width characters, delimiter smuggling.' },
   ];
 
   let guideOpen = false;
@@ -234,13 +218,13 @@
     `).join('');
 
     return `
-      <aside id="sentinel-guide-panel" class="gd-panel" role="complementary" aria-label="Hướng dẫn sử dụng">
+      <aside id="sentinel-guide-panel" class="gd-panel" role="complementary" aria-label="User guide">
         <div class="gd-header">
           <div class="gd-header-title">
             <span style="font-size:15px;">📖</span>
-            <span>Hướng dẫn</span>
+            <span>Guide</span>
           </div>
-          <button class="gd-close" id="gd-close-btn" title="Đóng hướng dẫn" type="button" aria-label="Đóng hướng dẫn">✕</button>
+          <button class="gd-close" id="gd-close-btn" title="Close guide" type="button" aria-label="Close guide">✕</button>
         </div>
         <div class="gd-tabs" id="gd-tabs" role="tablist">${tabsHtml}</div>
         <div class="gd-body" id="gd-body" role="tabpanel">${renderBody()}</div>
@@ -467,8 +451,8 @@
     if (!btn) return;
     btn.classList.toggle('guide-open', guideOpen);
     btn.innerHTML = guideOpen
-      ? '<span>📖</span> Đóng hướng dẫn'
-      : '<span>📖</span> Hướng dẫn';
+      ? '<span>📖</span> Close guide'
+      : '<span>📖</span> Guide';
   }
 
   function injectBtn() {
@@ -477,8 +461,8 @@
     const btn = document.createElement('button');
     btn.id = 'sentinel-guide-btn';
     btn.type = 'button';
-    btn.innerHTML = '<span>📖</span> Hướng dẫn';
-    btn.title = 'Mở / đóng bảng hướng dẫn sử dụng';
+    btn.innerHTML = '<span>📖</span> Guide';
+    btn.title = 'Open or close the user guide';
     btn.addEventListener('click', () => {
       guideOpen = !guideOpen;
       guideOpen ? mountPanel() : removePanel();

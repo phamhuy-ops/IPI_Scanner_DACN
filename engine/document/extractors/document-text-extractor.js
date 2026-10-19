@@ -1,15 +1,13 @@
 /**
- * ipi-doc-extract.js
- * Trích xuất text từ các loại file tài liệu phổ biến cho IPI scanner.
- * Hỗ trợ: .txt, .md, .pdf, .docx, .doc, .csv, .json, .xml, .html, .htm
+ * Extract plain text from common document types for the IPI scanner.
+ * Supports: .txt, .md, .pdf, .docx, .doc, .csv, .json, .xml, .html, .htm
  */
 
 const fs = require('fs/promises');
 const path = require('path');
 
 /**
- * Trích xuất text thuần từ một file document.
- * @param {string} filePath - Đường dẫn tuyệt đối tới file
+ * @param {string} filePath - Absolute path to the file
  * @returns {Promise<{ok: boolean, text?: string, ext?: string, error?: string}>}
  */
 async function extractDocumentText(filePath) {
@@ -27,7 +25,7 @@ async function extractDocumentText(filePath) {
 
       case '.json': {
         const raw = await fs.readFile(filePath, 'utf8');
-        // Giữ nguyên JSON string — IPI pattern thường ẩn trong value
+        // Keep raw JSON — IPI patterns often hide in values
         return { ok: true, text: raw, ext };
       }
 
@@ -35,7 +33,7 @@ async function extractDocumentText(filePath) {
       case '.html':
       case '.htm': {
         const raw = await fs.readFile(filePath, 'utf8');
-        // Strip tags, giữ text content
+        // Strip tags, keep text content
         const text = raw.replace(/<script[\s\S]*?<\/script>/gi, '')
           .replace(/<style[\s\S]*?<\/style>/gi, '')
           .replace(/<[^>]+>/g, ' ')
@@ -49,12 +47,12 @@ async function extractDocumentText(filePath) {
       }
 
       case '.pdf': {
-        // Lazy require — chỉ load khi cần
+        // Lazy require — load only when needed
         let pdfModule;
         try {
           pdfModule = require('pdf-parse');
         } catch {
-          return { ok: false, error: 'Thiếu thư viện pdf-parse. Chạy: npm install pdf-parse' };
+          return { ok: false, error: 'Missing pdf-parse. Run: npm install pdf-parse' };
         }
         const buffer = await fs.readFile(filePath);
         let extractedText = '';
@@ -67,7 +65,7 @@ async function extractDocumentText(filePath) {
           if (typeof parser.destroy === 'function') await parser.destroy();
           extractedText = res.text || '';
         } else {
-          return { ok: false, error: 'Không thể khởi tạo bộ đọc PDF.' };
+          return { ok: false, error: 'Could not initialize PDF reader.' };
         }
         return { ok: true, text: extractedText, ext };
       }
@@ -78,23 +76,21 @@ async function extractDocumentText(filePath) {
         try {
           mammoth = require('mammoth');
         } catch {
-          return { ok: false, error: 'Thiếu thư viện mammoth. Chạy: npm install mammoth' };
+          return { ok: false, error: 'Missing mammoth. Run: npm install mammoth' };
         }
         const result = await mammoth.extractRawText({ path: filePath });
         return { ok: true, text: result.value || '', ext };
       }
 
       default:
-        return { ok: false, error: `Định dạng file "${ext}" chưa được hỗ trợ. Hỗ trợ: txt, md, pdf, docx, csv, json, xml, html` };
+        return { ok: false, error: `Unsupported file format "${ext}". Supported: txt, md, pdf, docx, csv, json, xml, html` };
     }
   } catch (err) {
-    return { ok: false, error: err?.message || `Không đọc được file: ${filePath}` };
+    return { ok: false, error: err?.message || `Could not read file: ${filePath}` };
   }
 }
 
-/**
- * Danh sách extension được hỗ trợ.
- */
+/** Supported file extensions. */
 const SUPPORTED_DOC_EXTENSIONS = new Set([
   '.txt', '.md', '.csv', '.log', '.rst',
   '.json', '.xml', '.html', '.htm',

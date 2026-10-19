@@ -8,8 +8,8 @@ describe('slmCatalog', () => {
   });
 
   it('rejects large models', () => {
-    expect(() => assertSlmModel('llama-3.3-70b-versatile')).toThrow(/không phải SLM/);
-    expect(() => assertSlmModel('llama3.1:70b')).toThrow(/không phải SLM/);
+    expect(() => assertSlmModel('llama-3.3-70b-versatile')).toThrow(/not an SLM/);
+    expect(() => assertSlmModel('llama3.1:70b')).toThrow(/not an SLM/);
   });
 
   it('gives fix and check distinct preferred models', () => {

@@ -14,7 +14,7 @@ export default defineConfig({
       {
         entry: 'electron/preload.js',
         onstart(options) {
-          // Restart renderer khi preload thay đổi
+          // Reload renderer when preload changes
           options.reload();
         },
       },

@@ -12,11 +12,11 @@ export async function runVerifierAgent(options: {
   model?: string;
 }): Promise<IpiCheckVerdict> {
   const prompt = [
-    `Detector Agent báo cáo rủi ro: ${options.detectorReview.semanticRiskLevel}.`,
-    `Nhận định của Detector: "${options.detectorReview.semanticAnalysis}".`,
-    `Detector đã đánh giá ${options.chunks.length} chunk trong ${options.detectorReview.batchCount} batch; ${options.detectorReview.suspiciousBatchCount} batch báo có IPI.`,
-    `Số lượng Heuristic findings: ${options.initialFindingCount}.`,
-    `Evidence package đã chọn theo risk-aware coverage:\n${formatChunkEvidence(options.chunks).slice(0, options.coverage?.verifierEvidenceCharacters || 7600)}`,
+    `Detector Agent risk level: ${options.detectorReview.semanticRiskLevel}.`,
+    `Detector summary: "${options.detectorReview.semanticAnalysis}".`,
+    `Detector reviewed ${options.chunks.length} chunk(s) in ${options.detectorReview.batchCount} batch(es); ${options.detectorReview.suspiciousBatchCount} batch(es) flagged IPI.`,
+    `Heuristic finding count: ${options.initialFindingCount}.`,
+    `Evidence package (risk-aware coverage):\n${formatChunkEvidence(options.chunks).slice(0, options.coverage?.verifierEvidenceCharacters || 7600)}`,
   ].join('\n\n');
   const response = await generateWithSlm('check', VERIFIER_SYSTEM_PROMPT, prompt, {
     preferModel: options.model,
@@ -29,8 +29,8 @@ export async function runVerifierAgent(options: {
     verdict,
     reasons: parsed.reasons || [
       verdict === 'pass'
-        ? 'Tài liệu không chứa chỉ thị phá vỡ ngữ cảnh hoặc override system prompt.'
-        : `Xác nhận tồn tại ${options.initialFindingCount} chỉ thị độc hại tiềm ẩn trong tài liệu.`,
+        ? 'Document has no context-breaking or system-prompt override instructions.'
+        : `Confirmed ${options.initialFindingCount} potentially harmful instruction(s) in the document.`,
     ],
     residualRisks: parsed.residualRisks || [],
     modelUsed: response.model,

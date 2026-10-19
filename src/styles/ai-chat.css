@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
    AI CHAT WIDGET v2 — Sentinel v2
-   Nâng cấp: animations mượt hơn, design tinh tế hơn
+   Updated with smoother animations and a cleaner design
    ═══════════════════════════════════════════════════════════════ */
 
 /* ── FAB ─────────────────────────────────────────────────────── */
@@ -758,7 +758,7 @@
 .ai-send-btn--ready:active { transform: translateY(0); }
 .ai-send-btn:disabled { opacity: .3; cursor: not-allowed; transform: none; }
 
-/* ── "Hỏi AI" button on Finding cards ───────────────────────── */
+/* ── "Ask AI" button on finding cards ───────────────────────── */
 .btn-ask-ai {
   display: inline-flex; align-items: center; gap: 5px;
   padding: 4px 9px;
@@ -838,7 +838,7 @@
   font-family: inherit;
 }
 
-/* ── Ghost placeholder — rotates với fade in/out ─────────────── */
+/* ── Ghost placeholder — rotates with fade in/out ────────────── */
 .ai-input-ghost {
   position: absolute;
   left: 14px;
@@ -867,7 +867,7 @@
   opacity: 0 !important;
 }
 
-/* ── Layout: đảm bảo ai-panel không bị overflow ─────────────── */
+/* ── Layout: keep the AI panel within its container ──────────── */
 .ai-panel {
   display: flex;
   flex-direction: column;
@@ -1043,7 +1043,7 @@
 
 /* ═══════════════════════════════════════════════════════════════
    AI CHAT v5 — Provider badges & debug panel
-   Sử dụng đúng design tokens của dự án
+   Uses the project's design tokens
    ═══════════════════════════════════════════════════════════════ */
 
 /* ── Provider badge ──────────────────────────────────────── */
@@ -1055,19 +1055,19 @@
   font-weight: 500;
   line-height: 1;
 }
-/* KB (knowledge base) — màu xanh lá */
+/* KB (knowledge base) — green */
 .ai-bubble-provider--kb {
   color: #22c55e;
   border-color: rgba(34,197,94,.25);
   background: rgba(34,197,94,.07);
 }
-/* LLM online — màu vàng accent */
+/* Online LLM — yellow accent */
 .ai-bubble-provider--llm {
   color: var(--accent);
   border-color: var(--accent-border);
   background: var(--accent-dim);
 }
-/* Fallback/offline — màu cam cảnh báo */
+/* Fallback/offline — warning orange */
 .ai-bubble-provider--fallback {
   color: #f97316;
   border-color: rgba(249,115,22,.3);
@@ -1153,19 +1153,19 @@
   border: 1px solid transparent;
   word-break: break-word;
 }
-/* Lỗi thực sự (failed, HTTP error) */
+/* Actual error (failed request or HTTP error) */
 .ai-debug-warn--error {
   color: #ef4444;
   background: rgba(239,68,68,.07);
   border-color: rgba(239,68,68,.2);
 }
-/* Bỏ qua (skipped / missing key) */
+/* Skipped request or missing key */
 .ai-debug-warn--skip {
   color: #f97316;
   background: rgba(249,115,22,.06);
   border-color: rgba(249,115,22,.18);
 }
-/* Thông tin trung lập */
+/* Neutral information */
 .ai-debug-warn--info {
   color: var(--text-3);
   background: var(--bg);

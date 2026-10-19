@@ -1,16 +1,9 @@
 /**
- * ipi-doc-scan.js
- * Quét Indirect Prompt Injection trong nội dung tài liệu (PDF, DOCX, TXT, v.v.)
+ * ipi-doc-scan.js — scan documents for Indirect Prompt Injection (PDF, DOCX, TXT, etc.)
  *
- * Mở rộng:
- * - Tập dữ liệu tri thức toàn diện: Tiếng Anh, Tiếng Việt, Song ngữ.
- * - Phát hiện Jailbreak, Persona hijacking (DAN, Dev Mode, Grandma exploit).
- * - Phát hiện Delimiter smuggling (</system>, [INST], --- END OF INSTRUCTIONS ---).
- * - Giải mã và kiểm tra tự động Base64 payload obfuscation.
- * - Phát hiện Steganography (Zero-width characters \u200B, \u200C, \u200D...).
- * - Phát hiện Data exfiltration (Markdown image/link injection, leak system prompt).
- * - Phát hiện Task diversion / Goal displacement.
- * - Trích xuất các lát cắt ngữ cảnh (context chunks) cho Multi-Agent SLM thẩm định ngữ nghĩa.
+ * Features: English/Vietnamese rule catalog, jailbreak and persona hijacking,
+ * delimiter smuggling, Base64 decoding, steganography, exfiltration, task diversion,
+ * and semantic chunk extraction for multi-agent SLM review.
  */
 
 const path = require('path');
@@ -38,10 +31,7 @@ const { IPI_DOC_PATTERNS } = require('../prefilter/rules/ipi-document-rules');
 
 // ── Main scanner function ──────────────────────────────────────────────────
 
-/**
- * Quét danh sách file document để tìm IPI.
- * Trả về kết quả phân tích cấu trúc, heuristics, obfuscation và các đoạn trích cho SLM Agent.
- */
+/** Scan document files for IPI; returns heuristics, obfuscation hits, and chunks for SLM agents. */
 async function runIpiDocScan(filePaths, options = {}) {
   const onProgress = options.onProgress || (() => {});
   const folderPath = options.folderPath || '';
@@ -49,10 +39,10 @@ async function runIpiDocScan(filePaths, options = {}) {
   const startTs = Date.now();
 
   if (!Array.isArray(filePaths) || filePaths.length === 0) {
-    throw new Error('Chưa chọn file nào để quét.');
+    throw new Error('No files selected for scan.');
   }
 
-  onProgress({ stage: 'analyze', msg: `Bắt đầu phân tích tài liệu: ${filePaths.length} file...`, level: 'info', ts: Date.now() });
+  onProgress({ stage: 'analyze', msg: `Starting document analysis: ${filePaths.length} file(s)...`, level: 'info', ts: Date.now() });
 
   const allFindings = [];
   const fileResults = [];
@@ -64,20 +54,20 @@ async function runIpiDocScan(filePaths, options = {}) {
     const baseName = path.basename(filePath);
 
     if (!SUPPORTED_DOC_EXTENSIONS.has(ext)) {
-      fileResults.push({ filePath, ok: false, error: `Định dạng ${ext} không được hỗ trợ` });
+      fileResults.push({ filePath, ok: false, error: `Unsupported format ${ext}` });
       continue;
     }
 
-    onProgress({ stage: 'analyze', msg: `Trích xuất văn bản từ ${baseName}...`, level: 'info', ts: Date.now() });
+    onProgress({ stage: 'analyze', msg: `Extracting text from ${baseName}...`, level: 'info', ts: Date.now() });
 
     const extracted = await extractDocumentText(filePath);
     if (!extracted.ok) {
       fileResults.push({ filePath, ok: false, error: extracted.error });
-      onProgress({ stage: 'analyze', msg: `Lỗi đọc ${baseName}: ${extracted.error}`, level: 'warn', ts: Date.now() });
+      onProgress({ stage: 'analyze', msg: `Read error ${baseName}: ${extracted.error}`, level: 'warn', ts: Date.now() });
       continue;
     }
 
-    onProgress({ stage: 'analyze', msg: `Rà soát tri thức IPI & giải mã Steganography trên ${baseName}...`, level: 'info', ts: Date.now() });
+    onProgress({ stage: 'analyze', msg: `Running IPI rules and obfuscation checks on ${baseName}...`, level: 'info', ts: Date.now() });
 
     const findings = scanTextForIpi(extracted.text, filePath, folderPath);
     allFindings.push(...findings);
@@ -96,7 +86,7 @@ async function runIpiDocScan(filePaths, options = {}) {
 
     onProgress({
       stage: 'analyze',
-      msg: `${baseName}: phát hiện ${findings.length} dấu hiệu IPI nghi vấn`,
+      msg: `${baseName}: ${findings.length} suspicious IPI signal(s)`,
       level: findings.length ? 'warn' : 'success',
       ts: Date.now(),
     });
@@ -121,7 +111,7 @@ async function runIpiDocScan(filePaths, options = {}) {
 
   onProgress({
     stage: 'done',
-    msg: `Hoàn tất rà soát cấu trúc: ${allFindings.length} findings trong ${filePaths.length} file (${elapsed}s)`,
+    msg: `Prefilter complete: ${allFindings.length} finding(s) in ${filePaths.length} file(s) (${elapsed}s)`,
     level: allFindings.length ? 'warn' : 'success',
     ts: Date.now(),
   });

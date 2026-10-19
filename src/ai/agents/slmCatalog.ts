@@ -32,7 +32,7 @@ export const SLM_ENDPOINTS: SlmEndpoint[] = [
 
 export function assertSlmModel(model: string): void {
   if (BLOCKED_MODEL_RE.test(model) || /[1-9]\d{2,}b/i.test(model)) {
-    throw new Error(`Model "${model}" không phải SLM — pipeline IPI chỉ dùng model nhỏ (<= 9B).`);
+    throw new Error(`Model "${model}" is not an SLM — IPI pipeline only allows small models (<= 9B).`);
   }
 }
 

@@ -47,10 +47,10 @@ export const useStore = create<AppState>((set) => ({
       if (result?.ok) {
         set({ ollamaStatus: { checked: true, available: true, models: result.models || [] } });
       } else {
-        set({ ollamaStatus: { checked: true, available: false, models: [], error: result?.error || 'Ollama chưa sẵn sàng.' } });
+        set({ ollamaStatus: { checked: true, available: false, models: [], error: result?.error || 'Ollama is not ready.' } });
       }
     } catch (error) {
-      set({ ollamaStatus: { checked: true, available: false, models: [], error: error instanceof Error ? error.message : 'Không thể kiểm tra Ollama.' } });
+      set({ ollamaStatus: { checked: true, available: false, models: [], error: error instanceof Error ? error.message : 'Could not check Ollama.' } });
     }
   },
   ipiRun: EMPTY_IPI_RUN,

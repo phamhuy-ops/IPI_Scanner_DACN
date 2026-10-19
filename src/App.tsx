@@ -47,13 +47,13 @@ function App() {
         <div className="header-divider" />
         <div className="header-gap" />
         <div className="header-actions">
-          <div className="status-indicator" title={ipiRunning ? 'Đang phân tích tài liệu' : 'Sẵn sàng'}>
+          <div className="status-indicator" title={ipiRunning ? 'Analyzing documents' : 'Ready'}>
             <div className={`status-dot ${ipiRunning ? 'active' : ''}`} />
-            <span>{ipiRunning ? 'Đang quét IPI' : 'Ollama local'}</span>
+            <span>{ipiRunning ? 'IPI scan running' : 'Ollama local'}</span>
           </div>
           <div className="header-actions-divider" />
-          <button className="btn-header" onClick={requestThemeChange} disabled={Boolean(pendingTheme)} title="Đổi giao diện">
-            {themeMode === 'dark' ? 'Sáng' : 'Tối'}
+          <button className="btn-header" onClick={requestThemeChange} disabled={Boolean(pendingTheme)} title="Switch theme">
+            {themeMode === 'dark' ? 'Light' : 'Dark'}
           </button>
         </div>
       </header>
@@ -61,8 +61,8 @@ function App() {
       <div className="workspace workspace-scan-v2">
         <aside className="left-panel scan-config-panel">
           <div className="layout-panel-head">
-            <div className="layout-panel-title">Tài liệu đầu vào</div>
-            <div className="layout-panel-sub">Chọn tài liệu hoặc thư mục để kiểm tra Indirect Prompt Injection.</div>
+            <div className="layout-panel-title">Input documents</div>
+            <div className="layout-panel-sub">Pick files or a folder to check for Indirect Prompt Injection.</div>
           </div>
           <IpiAgentForm />
         </aside>
