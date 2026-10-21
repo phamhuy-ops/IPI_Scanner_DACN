@@ -5,12 +5,12 @@
 
 | STT | Công việc đã thực hiện | Commit chính | Kết quả (ảnh) | Ghi chú |
 |:---:|---|---|---|---|
-| 1 | Định hướng lại đồ án IPI Scanner và tinh gọn mã nguồn. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385) | ![Cấu trúc dự án mới](./anh/tuan-02-cau-truc-du-an-moi.png) | Loại bỏ cấu trúc sườn cũ từ dự án ban đầu, thay thế bằng cấu trúc mới tinh gọn hơn |
-| 2 | Tách khâu đọc tài liệu, chia đoạn và lọc sơ bộ. | [095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9) | ![Tách các khâu xử lý thành các file riêng biệt](./anh/tuan-02-tach-engine-xu-ly.png) | Tách cấu hình, engine xử lý và rule IPI. |
-| 3 | Tổ chức luồng AI phát hiện, xác minh và quản lý bằng chứng. | [095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9) | ![Kết quả trả về](./anh/tuan-02-ket-qua-test.png) | Sử dụng 2 model SLM để phân tích và kiểm tra kết quả tài liệu có IPI. |
+| 1 | Định hướng lại đồ án IPI Scanner và tinh gọn mã nguồn. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385) | ![Cấu trúc dự án mới](./ảnh/tuan-02-cau-truc-du-an-moi.png) | Loại bỏ cấu trúc sườn cũ từ dự án ban đầu, thay thế bằng cấu trúc mới tinh gọn hơn |
+| 2 | Tách khâu đọc tài liệu, chia đoạn và lọc sơ bộ. | [095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9) | ![Tách các khâu xử lý thành các file riêng biệt](./ảnh/tuan-02-tach-engine-xu-ly.png) | Tách cấu hình, engine xử lý và rule IPI. |
+| 3 | Tổ chức luồng AI phát hiện, xác minh và quản lý bằng chứng. | [095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9) | ![Kết quả trả về](./ảnh/tuan-02-ket-qua-test.png) | Sử dụng 2 model SLM để phân tích và kiểm tra kết quả tài liệu có IPI. |
 | 4 | Đồng bộ lockfile phục vụ CI trên Node 22. | [5d51aca1](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/5d51aca1) | Không có ảnh. | Không có ghi chú |
 | 5 | Cập nhật tài liệu, giao diện và nội dung tiếng Anh. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385)<br>[c6c91f0d](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c6c91f0d) | Không có ảnh. | Cập nhật tài liệu, prompt bằng tiếng anh để các mô hình SLM hiểu rõ ngữ cảnh hơn. |
-| 6 | Tăng độ bao phủ các đoạn tài liệu (chunk) được AI phân tích. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385) | ![Tăng độ bao phủ và lấy mẫu từ nhiều vị trí](./anh/tuan-02-tang-do-bao-phu-chunk.png) | Ưu tiên chunk đáng ngờ, bổ sung các đoạn lân cận và lấy mẫu ở nhiều vị trí; hỗ trợ chế độ balanced và deep. |
+| 6 | Tăng độ bao phủ các đoạn tài liệu (chunk) được AI phân tích. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385) | ![Tăng độ bao phủ và lấy mẫu từ nhiều vị trí](./ảnh/tuan-02-tang-do-bao-phu-chunk.png) | Ưu tiên chunk đáng ngờ, bổ sung các đoạn lân cận và lấy mẫu ở nhiều vị trí; hỗ trợ chế độ balanced và deep. |
 
 ## Chi tiết nội dung công việc
 

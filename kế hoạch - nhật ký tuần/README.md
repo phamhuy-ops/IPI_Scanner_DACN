@@ -17,6 +17,6 @@
 - Cột **Kết quả (ảnh)** để chèn ảnh chụp màn hình, ảnh demo hoặc đường dẫn minh chứng sau khi có.
 - Mỗi hàng bảng nằm trên một dòng trong mã Markdown; dùng `<br>` khi cần xuống dòng trong ô để tránh lệch cột.
 - Dùng `Tuần&nbsp;1`, `Tuần&nbsp;2` để giữ tên tuần trên cùng một dòng; cột tuần được căn giữa.
-- Chèn ảnh bằng `![Mô tả ảnh](./anh/ten-anh.png)` sau khi lưu ảnh vào thư mục `anh` bên cạnh các tệp tuần.
+- Chèn ảnh bằng `![Mô tả ảnh](./ảnh/ten-anh.png)` sau khi lưu ảnh vào thư mục `ảnh` bên cạnh các tệp tuần.
 - Phần **Chi tiết nội dung công việc** giải thích các mục theo đúng số thứ tự trong bảng.
 - Các mã commit được liên kết trực tiếp tới GitHub để thuận tiện kiểm tra lịch sử thay đổi.
