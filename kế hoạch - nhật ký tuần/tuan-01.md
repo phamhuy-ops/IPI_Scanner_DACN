@@ -5,11 +5,11 @@
 
 | STT | Công việc đã thực hiện | Commit chính | Kết quả (ảnh) | Ghi chú |
 |:---:|---|---|---|---|
-| 1 | Bổ sung rule phát hiện IPI. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | ![Các file rule](tuan-01-bo-sung-rule-IPI.png) | Bộ rule kiểm thử hiện tại đang tự build chưa chắc chắn |
-| 2 | Xây dựng chức năng quét và trích xuất tài liệu. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | ![Quét IPI từ tài liệu và thư mục](tuan-01-quet-tai-lieu.png) | Đã test cho bộ quét bằng file docx có IPI cơ bản. |
+| 1 | Bổ sung rule phát hiện IPI. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | ![Các file rule](./anh/tuan-01-bo-sung-rule-IPI.png) | Bộ rule kiểm thử hiện tại đang tự build chưa chắc chắn |
+| 2 | Xây dựng chức năng quét và trích xuất tài liệu. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | ![Quét IPI từ tài liệu và thư mục](./anh/tuan-01-quet-tai-lieu.png) | Đã test cho bộ quét bằng file docx có IPI cơ bản. |
 | 3 | Tích hợp các agent AI hỗ trợ kiểm tra và làm sạch tệp. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | Không có ảnh. | Cài đặt thử API agent AI free để kiểm thử luồng hoạt động |
-| 4 | Tạo giao diện IPI Security, tinh gọn bố cục và hiệu ứng. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | ![Giao diện hiện tại của dự án](tuan-01-giao-dien-tinh-gon.png) | Loại bỏ giao diện cũ |
-| 5 | Kết nối tính năng với Electron và cải tạo thành dự án mới. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87)<br>[673519e2](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/673519e2) | ![File electron mới](tuan-01-hop-nhat-electron.png) | Sử dụng sườn dự án đã tích hợp electron để xây dựng tiếp dự án |
+| 4 | Tạo giao diện IPI Security, tinh gọn bố cục và hiệu ứng. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | ![Giao diện hiện tại của dự án](./anh/tuan-01-giao-dien-tinh-gon.png) | Loại bỏ giao diện cũ |
+| 5 | Kết nối tính năng với Electron và cải tạo thành dự án mới. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87)<br>[673519e2](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/673519e2) | ![File electron mới](./anh/tuan-01-hop-nhat-electron.png) | Sử dụng sườn dự án đã tích hợp electron để xây dựng tiếp dự án |
 
 ## Chi tiết nội dung công việc
 
