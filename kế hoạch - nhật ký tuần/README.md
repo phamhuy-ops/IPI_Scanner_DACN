@@ -4,15 +4,19 @@
 
 ## Danh sách tuần
 
-| Tuần | Thời gian | Nội dung | Trạng thái |
-|---|---|---|---|
-| [Tuần 1](./tuan-01.md) | 14/10/2026 – 18/10/2026 | Tích hợp IPI Security Co-Pilot, bộ quét IPI và tinh gọn giao diện | Hoàn thành |
-| [Tuần 2](./tuan-02.md) | 19/10/2026 – 21/10/2026* | Tái cấu trúc IPI Scanner, tách pipeline quét tài liệu và đồng bộ môi trường Node 22 | Đang thực hiện |
+| Tuần | Công việc đã thực hiện | Commit chính | Kết quả (ảnh) | Ghi chú |
+|:---:|---|---|---|---|
+| [Tuần&nbsp;1](./tuan-01.md) | Tích hợp IPI Security Co-Pilot, bộ quét tài liệu và tinh gọn giao diện. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87)<br>[673519e2](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/673519e2) | Chờ bổ sung ảnh. | 14–18/10/2026.<br>Đã có mã nguồn; xem chi tiết trong tuần. |
+| [Tuần&nbsp;2](./tuan-02.md) | Tái cấu trúc IPI Scanner, tách các bước quét tài liệu, đồng bộ lockfile Node 22 và chuyển nội dung sang tiếng Anh. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385)<br>[095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9)<br>[5d51aca1](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/5d51aca1)<br>[c6c91f0d](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c6c91f0d) | Chờ bổ sung ảnh. | Cập nhật đến 21/10/2026.<br>Đang thực hiện. |
 
 > \* Tuần 2 được ghi nhận đến ngày 21/10/2026, là ngày hiện tại của nhật ký.
 
 ## Quy ước cập nhật
 
 - Mỗi tuần được ghi trong một tệp `.md` riêng.
-- Cột **Ảnh kết quả** để chèn ảnh chụp màn hình, ảnh demo hoặc đường dẫn minh chứng sau khi có.
+- Cột **Kết quả (ảnh)** để chèn ảnh chụp màn hình, ảnh demo hoặc đường dẫn minh chứng sau khi có.
+- Mỗi hàng bảng nằm trên một dòng trong mã Markdown; dùng `<br>` khi cần xuống dòng trong ô để tránh lệch cột.
+- Dùng `Tuần&nbsp;1`, `Tuần&nbsp;2` để giữ tên tuần trên cùng một dòng; cột tuần được căn giữa.
+- Chèn ảnh bằng `![Mô tả ảnh](./anh/ten-anh.png)` sau khi lưu ảnh vào thư mục `anh` bên cạnh các tệp tuần.
+- Phần **Chi tiết nội dung công việc** giải thích các mục theo đúng số thứ tự trong bảng.
 - Các mã commit được liên kết trực tiếp tới GitHub để thuận tiện kiểm tra lịch sử thay đổi.
