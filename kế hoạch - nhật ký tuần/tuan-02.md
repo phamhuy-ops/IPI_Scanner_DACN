@@ -1,15 +1,16 @@
 # Tuần 2 — Tái cấu trúc IPI Scanner
 
-**Thời gian:** 19/10/2026 – 21/10/2026  
+**Thời gian:** 19/10/2026 – 21/10/2026
 **Trạng thái:** Đang thực hiện
 
-| Tuần | Công việc đã thực hiện | Commit chính | Kết quả (ảnh) | Ghi chú |
+| STT | Công việc đã thực hiện | Commit chính | Kết quả (ảnh) | Ghi chú |
 |:---:|---|---|---|---|
-| Tuần&nbsp;2 | **1.** Định hướng lại đồ án IPI Scanner và tinh gọn mã nguồn. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385) | Chờ ảnh giao diện và cấu trúc mới. | Bổ sung baseline benchmark. |
-| Tuần&nbsp;2 | **2.** Tách khâu đọc tài liệu, chia đoạn và lọc sơ bộ. | [095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9) | Chờ ảnh các module xử lý tài liệu. | Tách cấu hình và rule IPI. |
-| Tuần&nbsp;2 | **3.** Tổ chức luồng AI phát hiện, xác minh và quản lý bằng chứng. | [095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9) | Chờ ảnh kết quả phân tích. | Có test cho phần evidence. |
-| Tuần&nbsp;2 | **4.** Đồng bộ lockfile phục vụ CI trên Node 22. | [5d51aca1](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/5d51aca1) | Chờ ảnh chạy CI hoặc cài đặt. | Chưa ghi nhận kết quả chạy trong nhật ký. |
-| Tuần&nbsp;2 | **5.** Cập nhật tài liệu, giao diện và nội dung tiếng Anh. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385)<br>[c6c91f0d](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c6c91f0d) | Chờ ảnh giao diện tiếng Anh. | Cập nhật hướng dẫn và thông báo. |
+| 1 | Định hướng lại đồ án IPI Scanner và tinh gọn mã nguồn. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385) | ![Cấu trúc dự án mới](tuan-02-cau-truc-du-an-moi.png) | Loại bỏ cấu trúc sườn cũ từ dự án ban đầu, thay thế bằng cấu trúc mới tinh gọn hơn |
+| 2 | Tách khâu đọc tài liệu, chia đoạn và lọc sơ bộ. | [095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9) | ![Tách các khâu xử lý thành các file riêng biệt](tuan-02-tach-engine-xu-ly.png) | Tách cấu hình, engine xử lý và rule IPI. |
+| 3 | Tổ chức luồng AI phát hiện, xác minh và quản lý bằng chứng. | [095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9) | ![Kết quả trả về](tuan-02-ket-qua-test.png) | Sử dụng 2 model SLM để phân tích và kiểm tra kết quả tài liệu có IPI. |
+| 4 | Đồng bộ lockfile phục vụ CI trên Node 22. | [5d51aca1](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/5d51aca1) | Không có ảnh. | Không có ghi chú |
+| 5 | Cập nhật tài liệu, giao diện và nội dung tiếng Anh. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385)<br>[c6c91f0d](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c6c91f0d) | Không có ảnh. | Cập nhật tài liệu, prompt bằng tiếng anh để các mô hình SLM hiểu rõ ngữ cảnh hơn. |
+| 6 | Tăng độ bao phủ các đoạn tài liệu (chunk) được AI phân tích. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385) | ![Tăng độ bao phủ và lấy mẫu từ nhiều vị trí](tuan-02-tang-do-bao-phu-chunk.png) | Ưu tiên chunk đáng ngờ, bổ sung các đoạn lân cận và lấy mẫu ở nhiều vị trí; hỗ trợ chế độ balanced và deep. |
 
 ## Chi tiết nội dung công việc
 
@@ -31,10 +32,15 @@ Cập nhật `package-lock.json` trong commit sửa CI để đồng bộ thông
 
 ### 5. Cập nhật tài liệu và nội dung tiếng Anh
 
-Điều chỉnh `README.md`, manifest, giao diện React và phần kết nối Electron theo phạm vi IPI Scanner. Commit `c6c91f0d` chuyển nhiều nội dung giao diện, hướng dẫn, thông báo và prompt sang tiếng Anh để cách diễn đạt trong ứng dụng thống nhất hơn.
+Điều chỉnh `README.md`, manifest, giao diện React và phần kết nối Electron theo phạm vi IPI Scanner. Commit `c6c91f0d` chuyển nhiều nội dung giao diện, hướng dẫn, thông báo và prompt sang tiếng Anh để cách diễn đạt trong ứng dụng thống nhất hơn và cũng đồng thời tạo điều kiện cho mô hình SLM hiểu rõ ngữ cảnh hơn.
+
+### 6. Tăng độ bao phủ các đoạn tài liệu (chunk) được AI phân tích.
+
+Điều chỉnh cơ chế lựa chọn chunk để AI phân tích được nhiều đoạn nội dung hơn trong tài liệu, đồng thời ưu tiên những đoạn có dấu hiệu đáng ngờ. Thay đổi giúp giảm số đoạn chưa được AI kiểm tra và hạn chế bỏ sót nội dung có nguy cơ chứa prompt injection.
 
 ## Kế hoạch tiếp theo
 
-- Chạy và ghi nhận kết quả test/build trên môi trường chuẩn.
-- Bổ sung ảnh minh chứng vào cột **Ảnh kết quả**.
-- Kiểm tra thêm các trường hợp tài liệu có prompt injection phức tạp và hoàn thiện báo cáo đồ án.
+- Bổ sung và xây dựng thêm cho bộ Rule Prefilter của dự án hiện tại khá đơn giản.
+- Tìm hiểu thêm các data chứa môi trường test đa dạng.
+- Thêm vòng lặp phản biện giữa 2 mô hình SLM để nâng cao chất lượng đầu ra.
+

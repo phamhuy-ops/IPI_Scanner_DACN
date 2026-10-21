@@ -1,15 +1,15 @@
 # Tuần 1 — Tích hợp IPI Security Co-Pilot
 
-**Thời gian:** 14/10/2026 – 18/10/2026  
+**Thời gian:** 14/10/2026 – 18/10/2026
 **Trạng thái:** Hoàn thành
 
-| Tuần | Công việc đã thực hiện | Commit chính | Kết quả (ảnh) | Ghi chú |
+| STT | Công việc đã thực hiện | Commit chính | Kết quả (ảnh) | Ghi chú |
 |:---:|---|---|---|---|
-| Tuần&nbsp;1 | **1.** Bổ sung rule phát hiện IPI. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | Chờ ảnh kết quả phát hiện. | Có tệp kiểm thử rule. |
-| Tuần&nbsp;1 | **2.** Xây dựng chức năng quét, trích xuất và vá tài liệu. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | Chờ ảnh quét và vá tài liệu. | Có test cho bộ quét và tiện ích vá. |
-| Tuần&nbsp;1 | **3.** Tích hợp các agent AI hỗ trợ kiểm tra và làm sạch tệp. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | Chờ ảnh luồng xử lý AI. | Bổ sung client và danh mục mô hình. |
-| Tuần&nbsp;1 | **4.** Tạo giao diện IPI Security Co-Pilot, tinh gọn bố cục và hiệu ứng. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | Chờ ảnh giao diện Co-Pilot. | Cập nhật trạng thái và kiểu dữ liệu. |
-| Tuần&nbsp;1 | **5.** Kết nối tính năng với Electron và hợp nhất vào dự án. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87)<br>[673519e2](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/673519e2) | Chờ ảnh chạy ứng dụng. | Commit thứ hai là merge PR #1. |
+| 1 | Bổ sung rule phát hiện IPI. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | ![Các file rule](tuan-01-bo-sung-rule-IPI.png) | Bộ rule kiểm thử hiện tại đang tự build chưa chắc chắn |
+| 2 | Xây dựng chức năng quét và trích xuất tài liệu. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | ![Quét IPI từ tài liệu và thư mục](tuan-01-quet-tai-lieu.png) | Đã test cho bộ quét bằng file docx có IPI cơ bản. |
+| 3 | Tích hợp các agent AI hỗ trợ kiểm tra và làm sạch tệp. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | Không có ảnh. | Cài đặt thử API agent AI free để kiểm thử luồng hoạt động |
+| 4 | Tạo giao diện IPI Security, tinh gọn bố cục và hiệu ứng. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87) | ![Giao diện hiện tại của dự án](tuan-01-giao-dien-tinh-gon.png) | Loại bỏ giao diện cũ |
+| 5 | Kết nối tính năng với Electron và cải tạo thành dự án mới. | [1285bf87](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/1285bf87)<br>[673519e2](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/673519e2) | ![File electron mới](tuan-01-hop-nhat-electron.png) | Sử dụng sườn dự án đã tích hợp electron để xây dựng tiếp dự án |
 
 ## Chi tiết nội dung công việc
 
@@ -17,9 +17,9 @@
 
 IPI là việc cài chỉ dẫn độc hại vào nội dung mà AI đọc, chẳng hạn yêu cầu AI bỏ qua chỉ dẫn ban đầu. Dự án bổ sung rule `indirect-prompt-injection` để nhận diện dấu hiệu này, kèm tệp kiểm thử các tình huống phát hiện. Việc có test trong commit chưa chứng minh toàn bộ test đã chạy thành công.
 
-### 2. Quét, trích xuất và vá tài liệu
+### 2. Quét và trích xuất tài liệu
 
-Bổ sung bộ quét tài liệu và tiện ích lấy văn bản từ tệp để nội dung có thể được phân tích. Tiện ích vá hỗ trợ xử lý nội dung bị đánh dấu. Các tệp test đi kèm phục vụ kiểm tra bộ quét và thao tác vá; cần bổ sung ảnh thực tế để minh họa đầu vào và kết quả xử lý.
+Bổ sung bộ quét tài liệu và tiện ích lấy văn bản từ tệp để nội dung có thể được phân tích. Hiện tại tài liệu đã được trích xuất toàn bộ nhưng nội dung được gửi sang AI đang có giới hạn (sẽ nâng cấp sau)
 
 ### 3. Các agent AI hỗ trợ xử lý tệp
 
