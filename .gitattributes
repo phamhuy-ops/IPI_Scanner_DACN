@@ -1,1 +1,6 @@
+benchmark/data/processed/ipi-clean.jsonl filter=lfs diff=lfs merge=lfs -text
+benchmark/data/processed/ipi-cleaning-report.json filter=lfs diff=lfs merge=lfs -text
+benchmark/data/processed/ipi-conflicts.jsonl filter=lfs diff=lfs merge=lfs -text
+benchmark/data/processed/ipi-data-audit.json filter=lfs diff=lfs merge=lfs -text
+benchmark/data/processed/ipi-normalization-validation.json filter=lfs diff=lfs merge=lfs -text
 benchmark/data/processed/*.jsonl filter=lfs diff=lfs merge=lfs -text
