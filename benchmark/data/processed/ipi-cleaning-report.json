@@ -1,21 +1,3 @@
-{
-  "input": "benchmark\\data\\raw\\dataset_for_huggingface.jsonl",
-  "input_sha256": "d7695c0ab744ffc97c2ff586fc57a21ccc936fa800da784ef81fb4a4166eb3c6",
-  "input_rows": 70000,
-  "clean_rows": 65948,
-  "clean_labels": {
-    "benign": 32040,
-    "malicious": 33908
-  },
-  "duplicate_rows_removed_from_nonconflicting_groups": 4034,
-  "conflict_groups": 9,
-  "quarantined_conflict_rows": 18,
-  "policy": [
-    "Group by SHA-256 of context after trimming leading/trailing whitespace only.",
-    "Quarantine ALL records in groups containing both labels; do not resolve labels automatically.",
-    "For other groups retain the first record, including its user_intent and original text.",
-    "Different user intents in a duplicate group are not retained in this context-only scanner dataset.",
-    "This removes exact trimmed-context duplicates only, not near duplicates or shared attack templates.",
-    "No train/test split has been performed."
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:82b3373206f0466ed482e53d583a087734b0d1bafb0127e925b2010945d52100
+size 947

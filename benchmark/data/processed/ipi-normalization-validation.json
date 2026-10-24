@@ -1,18 +1,3 @@
-{
-  "status": "passed",
-  "checked_records": 65966,
-  "output_counts": {
-    "ipi-clean.jsonl": 65948,
-    "ipi-conflicts.jsonl": 18
-  },
-  "checks": [
-    "All output records parsed as JSON",
-    "Context preserved exactly",
-    "Labels mapped correctly",
-    "Source and user_intent preserved",
-    "IDs unique and traceable to original lines",
-    "Context hashes match",
-    "Original file hash matches preparation report"
-  ],
-  "input_sha256": "d7695c0ab744ffc97c2ff586fc57a21ccc936fa800da784ef81fb4a4166eb3c6"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:308b2af60d5e63e4b34fb9ca8c2dd00d7cc8dc7ca4ab7e045208681c5a4288b4
+size 519
