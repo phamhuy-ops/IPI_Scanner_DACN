@@ -5,10 +5,11 @@
 
 const fs = require('fs/promises');
 const path = require('path');
+const { inspectHtmlSource } = require('./html-source');
 
 /**
  * @param {string} filePath - Absolute path to the file
- * @returns {Promise<{ok: boolean, text?: string, ext?: string, error?: string}>}
+ * @returns {Promise<{ok: boolean, text?: string, ext?: string, error?: string, views?: Array<{id: string, text: string, lineBasis: string}>, extraction?: ReturnType<typeof inspectHtmlSource>['extraction']}>}
  */
 async function extractDocumentText(filePath) {
   const ext = path.extname(filePath).toLowerCase();
@@ -29,9 +30,13 @@ async function extractDocumentText(filePath) {
         return { ok: true, text: raw, ext };
       }
 
-      case '.xml':
       case '.html':
       case '.htm': {
+        const raw = await fs.readFile(filePath, 'utf8');
+        return { ok: true, ...inspectHtmlSource(raw), ext };
+      }
+
+      case '.xml': {
         const raw = await fs.readFile(filePath, 'utf8');
         // Strip tags, keep text content
         const text = raw.replace(/<script[\s\S]*?<\/script>/gi, '')

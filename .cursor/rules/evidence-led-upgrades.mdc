@@ -1,0 +1,9 @@
+---
+description: Project-wide evidence-led upgrades and independent IPI evaluation
+alwaysApply: true
+---
+
+Read and follow the repository-root `AGENTS.md` for all project upgrades.
+It defines the required sequence: demonstrated defect fixes, changes with
+benign controls, independent evaluation and full-pipeline measurement.
+Do not optimize this project solely for one dataset or benchmark score.

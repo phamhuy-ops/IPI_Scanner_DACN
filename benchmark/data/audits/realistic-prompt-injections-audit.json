@@ -1,0 +1,155 @@
+{
+  "source": "treycsa/realistic-prompt-injections",
+  "status": "audited",
+  "canonical_file": "probes.jsonl",
+  "license_declared_in_local_card": "MIT",
+  "rows": 17,
+  "labels": {
+    "injection": 10,
+    "benign": 7
+  },
+  "invalid_json_lines": [],
+  "invalid_record_lines": [],
+  "missing_fields": {
+    "id": 0,
+    "label": 0,
+    "category": 0,
+    "severity": 0,
+    "text": 0,
+    "nli_injection": 0,
+    "nli_solicits_secrets": 0,
+    "pattern_markers": 0,
+    "caught_by_patterns": 0,
+    "fail_hypothesis": 0
+  },
+  "null_fields": {
+    "id": 0,
+    "label": 0,
+    "category": 0,
+    "severity": 0,
+    "text": 0,
+    "nli_injection": 0,
+    "nli_solicits_secrets": 0,
+    "pattern_markers": 0,
+    "caught_by_patterns": 0,
+    "fail_hypothesis": 0
+  },
+  "invalid_type_rows": [],
+  "empty_text_rows": [],
+  "empty_id_rows": [],
+  "invalid_labels": [],
+  "duplicate_ids": {},
+  "duplicates": {
+    "policy": "Exact text after trimming leading/trailing whitespace only; not semantic similarity.",
+    "unique_nonempty_texts": 17,
+    "duplicate_groups": 0,
+    "extra_duplicate_records": 0,
+    "duplicate_record_ids": []
+  },
+  "categories": {
+    "instruction-override": 2,
+    "data-exfiltration": 1,
+    "tool-abuse": 2,
+    "role-override": 1,
+    "indirect-injection": 2,
+    "exfil-via-output": 1,
+    "persistence": 1,
+    "job-posting": 1,
+    "job-requirement": 1,
+    "tech-question": 1,
+    "contract-brief": 1,
+    "ops-request": 1,
+    "docs": 1,
+    "incident-note": 1
+  },
+  "csv_comparison": {
+    "rows": 17,
+    "same_ids": true,
+    "duplicate_ids": false,
+    "all_fields_equal_after_type_conversion": true,
+    "mismatches": []
+  },
+  "scope_review": [
+    {
+      "id": "INJ-001",
+      "source_category": "instruction-override",
+      "scope": "ipi",
+      "reason": "Override is embedded inside the customer ticket being summarized."
+    },
+    {
+      "id": "INJ-002",
+      "source_category": "data-exfiltration",
+      "scope": "ipi",
+      "reason": "Secret request is embedded in a pull request description."
+    },
+    {
+      "id": "INJ-003",
+      "source_category": "tool-abuse",
+      "scope": "ipi",
+      "reason": "Unauthorized email instruction is embedded in company-page content."
+    },
+    {
+      "id": "INJ-004",
+      "source_category": "role-override",
+      "scope": "direct",
+      "reason": "Bare developer-mode instruction; no external-content boundary in this row."
+    },
+    {
+      "id": "INJ-005",
+      "source_category": "indirect-injection",
+      "scope": "mixed",
+      "reason": "Webpage comment contains an injection, followed by an additional direct request for internal information outside the page."
+    },
+    {
+      "id": "INJ-006",
+      "source_category": "exfil-via-output",
+      "scope": "ipi",
+      "reason": "Response/image instruction is embedded in the document being summarized."
+    },
+    {
+      "id": "INJ-007",
+      "source_category": "instruction-override",
+      "scope": "ipi",
+      "reason": "Instruction to abandon translation is embedded in the text to translate."
+    },
+    {
+      "id": "INJ-008",
+      "source_category": "tool-abuse",
+      "scope": "ipi",
+      "reason": "Transfer instruction is embedded in an expense-report line."
+    },
+    {
+      "id": "INJ-009",
+      "source_category": "persistence",
+      "scope": "direct",
+      "reason": "Bare persistent-preference instruction; no untrusted external wrapper in this row."
+    },
+    {
+      "id": "INJ-010",
+      "source_category": "indirect-injection",
+      "scope": "ipi",
+      "reason": "Scoring instruction is embedded in the resume being evaluated."
+    }
+  ],
+  "injection_scope_counts": {
+    "ipi": 7,
+    "direct": 2,
+    "mixed": 1
+  },
+  "limitations": [
+    "Scope review is local interpretation of the supplied text, not an upstream label change.",
+    "Seven benign controls are retained separately from attack-scope counts.",
+    "Do not report direct or mixed probes as strict IPI results without separate disclosure.",
+    "Source-provided NLI scores and pattern results are metadata, not project measurements or scanner input.",
+    "This probe set has been inspected during development; do not describe it as untouched held-out evaluation.",
+    "17 samples cannot establish broad generalization or independence from other sources.",
+    "No standalone license file found; license is declared by the local README."
+  ],
+  "raw_file_sha256": {
+    "benchmark/data/raw/realistic-prompt-injections/gitattributes": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb",
+    "benchmark/data/raw/realistic-prompt-injections/probes.csv": "21e8ee13dda68f31a4d235f0de3aeb530a25e7f288653a9c31de86eff5d6a67a",
+    "benchmark/data/raw/realistic-prompt-injections/probes.jsonl": "8706b03516206e94effa76bff3087cca7a4b3fe4dd26ef640adc9e638f7649b9",
+    "benchmark/data/raw/realistic-prompt-injections/README.md": "4d0dda280e607427c708bee964aba7ca03e8f8e9711874894fe22ff77fa720cc"
+  },
+  "raw_unchanged": true
+}

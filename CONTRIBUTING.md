@@ -2,6 +2,7 @@
 
 ## Development Rules
 
+- Follow the project-wide upgrade and evaluation policy in [AGENTS.md](AGENTS.md).
 - Use Node `22.19.0` or newer and npm `10.x` or newer.
 - Run `npm run typecheck`, `npm run lint`, `npm test`, and `npm run build` before opening a PR.
 - Do not commit local artifacts, generated files, or secrets.

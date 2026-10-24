@@ -1,0 +1,25 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-2",
+      "addressee": "none",
+      "framing": "descriptive",
+      "deviation": "none",
+      "hasDirective": false,
+      "stance": "dismissed",
+      "reason": "Đoạn nghi vấn được cung cấp chỉ nêu thông tin nền, không chứa lệnh điều khiển assistant; cần xem phần nguồn còn lại riêng."
+    }
+  ],
+  "discoveries": [
+    {
+      "spanId": "ref-3",
+      "addressee": "unclear",
+      "framing": "unclear",
+      "deviation": "unclear",
+      "hasDirective": true,
+      "stance": "uncertain",
+      "reason": "Không biết yêu cầu hợp lệ và ranh giới của câu thay nội dung nên chưa đủ bằng chứng xác nhận hoặc bác bỏ IPI."
+    }
+  ]
+}

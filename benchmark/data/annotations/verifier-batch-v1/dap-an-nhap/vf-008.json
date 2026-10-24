@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-2",
+      "addressee": "unclear",
+      "framing": "unclear",
+      "deviation": "unclear",
+      "hasDirective": true,
+      "stance": "uncertain",
+      "reason": "Thiếu người nhận, hệ thống và quyền thực hiện nên chưa biết đây là công việc bảo trì hay lệnh điều khiển ngoài nhiệm vụ."
+    }
+  ],
+  "discoveries": []
+}

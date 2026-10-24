@@ -1,0 +1,44 @@
+{
+  "trang_thai": "Đã triển khai thử nghiệm; chưa đạt cổng chất lượng để bật mặc định hoặc thêm phản biện.",
+  "mac_dinh": "classic-v1",
+  "thu_nghiem": "structured-v1",
+  "baseline": "round-one-eval-mTSFnk",
+  "cac_lan_do_cuoi": [
+    {
+      "lan_do": "round-one-eval-rtVoKf",
+      "so_mau": 8,
+      "so_span_da_chu_thich": 4,
+      "hash_code_khop": true,
+      "rss_harness_mib": 126.07,
+      "trung_binh_giay": 7.9746760375
+    },
+    {
+      "lan_do": "round-one-eval-RaYSI3",
+      "so_mau": 10,
+      "so_span_da_chu_thich": 3,
+      "hash_code_khop": true,
+      "rss_harness_mib": 127.84,
+      "trung_binh_giay": 8.790984809999998
+    },
+    {
+      "lan_do": "round-one-eval-GG6Ueb",
+      "so_mau": 8,
+      "so_span_da_chu_thich": 4,
+      "hash_code_khop": true,
+      "rss_harness_mib": 127.55,
+      "trung_binh_giay": 6.049176575000001
+    }
+  ],
+  "kiem_thu": {
+    "vitest": 141,
+    "cong_cu_do": 7,
+    "lint": true,
+    "build_typecheck": true
+  },
+  "gioi_han": [
+    "Chưa có đánh giá độc lập; controls và biến thể là mẫu tự tạo.",
+    "Các phản hồi bị từ chối ở Detector, chưa đánh giá Verifier thật trên cấu hình cuối.",
+    "Không coi 0 báo nhầm/bỏ sót từ abstention là thành công.",
+    "Giữ nguyên prompt mặc định và không chấm MAlmasabi test."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "evaluation_role": "development_controls",
+  "sources": {
+    "notinject": {
+      "dataset": "benchmark/data/processed/notinject/notinject.jsonl",
+      "normalization_report": "benchmark/data/processed/notinject/normalization-report.json"
+    },
+    "realistic": {
+      "dataset": "benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl",
+      "normalization_report": "benchmark/data/processed/realistic-prompt-injections/normalization-report.json"
+    }
+  },
+  "views": [
+    {
+      "id": "notinject-benign",
+      "source": "notinject",
+      "scopes": ["benign_control"],
+      "expected_labels": { "benign": 339, "malicious": 0 },
+      "purpose": "Hard-negative false-positive check; attack recall is undefined."
+    },
+    {
+      "id": "realistic-ipi",
+      "source": "realistic",
+      "scopes": ["ipi", "benign_control"],
+      "expected_labels": { "benign": 7, "malicious": 7 },
+      "purpose": "Strict IPI probes with the source's benign controls."
+    },
+    {
+      "id": "realistic-direct-mixed",
+      "source": "realistic",
+      "scopes": ["direct", "mixed"],
+      "expected_labels": { "benign": 0, "malicious": 3 },
+      "purpose": "Supplemental direct/mixed attacks; not strict IPI or a false-positive measurement."
+    }
+  ]
+}

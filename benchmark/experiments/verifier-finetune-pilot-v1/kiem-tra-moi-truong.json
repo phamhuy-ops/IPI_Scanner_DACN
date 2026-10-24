@@ -1,0 +1,60 @@
+{
+  "source_run": "benchmark/results/training-readiness-35jqiktd/summary.json",
+  "inventory": {
+    "recorded_at": "2026-10-24T04:34:44.302666+00:00",
+    "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Python314\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "torch": null,
+      "transformers": null,
+      "peft": null,
+      "trl": null,
+      "accelerate": null,
+      "bitsandbytes": null,
+      "datasets": null,
+      "huggingface-hub": null,
+      "safetensors": null
+    },
+    "disk": {
+      "path": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner",
+      "total_bytes": 498952597504,
+      "free_bytes": 7490953216
+    },
+    "system_memory": {
+      "total_bytes": 25521610752,
+      "available_bytes": 10690363392
+    },
+    "gpu_query": {
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Ti Laptop GPU, 4096 MiB, 3825 MiB, 610.62",
+      "stderr": ""
+    },
+    "wsl_inventory": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "scope": "Chỉ Python đang chạy; không tìm toàn bộ venv hoặc import torch để khởi tạo GPU. WSL lỗi/không có output không chứng minh môi trường Linux sẵn sàng."
+  },
+  "assessment": {
+    "missing_packages_in_active_python": [
+      "torch",
+      "transformers",
+      "peft",
+      "trl",
+      "accelerate",
+      "bitsandbytes",
+      "datasets",
+      "huggingface-hub",
+      "safetensors"
+    ],
+    "disk_budget_gib": 12,
+    "disk_budget_met": false,
+    "disk_budget_note": "Ngân sách thực hành do dự án đặt, không phải mức tối thiểu được nhà cung cấp chứng nhận; phải đo lại theo đường lưu cache/checkpoint thực tế.",
+    "cuda_training_compatible": null,
+    "forward_backward_smoke_passed": null,
+    "training_ready": false,
+    "reason": "Đây là inventory, chưa cài môi trường, nạp weights, chạy backward hoặc đo peak bộ nhớ. Không suy khả năng train từ nvidia-smi."
+  }
+}

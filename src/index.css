@@ -43,6 +43,14 @@ button { cursor: pointer; }
 .header-divider, .header-actions-divider { width: 1px; height: 28px; margin-left: 20px; background: #33404d; }
 .header-gap { flex: 1; }
 .header-actions { display: flex; align-items: center; gap: 14px; }
+.locale-toggle { display: flex; border: 1px solid #3a4755; border-radius: 5px; overflow: hidden; }
+.locale-toggle-btn { border: 0; border-radius: 0; background: transparent; color: #cbd6e0; padding: 7px 10px; font-size: 11px; font-weight: 700; letter-spacing: .04em; }
+.locale-toggle-btn + .locale-toggle-btn { border-left: 1px solid #3a4755; }
+.locale-toggle-btn.active { background: #203448; color: #fff; }
+.theme-light .locale-toggle { border-color: #afc1c7; }
+.theme-light .locale-toggle-btn { color: #2d4752; }
+.theme-light .locale-toggle-btn + .locale-toggle-btn { border-left-color: #afc1c7; }
+.theme-light .locale-toggle-btn.active { background: #d7e5e9; color: #152630; }
 .status-indicator { display: flex; gap: 8px; align-items: center; font-size: 12px; color: #b6c4d1; }
 .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #47c985; }
 .status-dot.active { background: #eab34b; box-shadow: 0 0 0 4px rgba(234,179,75,.15); }
@@ -84,6 +92,10 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .ipi-badge { font-size: 12px; font-weight: 800; color: #b6c4d1; }
 .ipi-badge-passed { color: #74e0a5; }
 .ipi-badge-failed { color: #ffabab; }
+.ipi-badge-ipi_detected, .ipi-badge-error { color: var(--critical, #ffabab); }
+.ipi-badge-not_detected { color: var(--low, #74e0a5); }
+.ipi-badge-needs_review, .verdict-badge-review { color: var(--medium, #ffcf7a); }
+.card-review { border-color: var(--medium, #aa803b); }
 .ipi-badge-running { color: #ffda8a; }
 .ipi-meta-tags { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
 .ipi-meta-tag { display: flex; gap: 5px; font-size: 11px; color: #9dafc0; }

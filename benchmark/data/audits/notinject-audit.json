@@ -1,0 +1,177 @@
+{
+  "source": "leolee99/NotInject",
+  "status": "audited",
+  "license_declared_in_local_card": "MIT",
+  "reader": {
+    "python": "3.12.14",
+    "pyarrow": "26.0.0"
+  },
+  "label_policy": "All canonical rows are benign per local README; source has no per-row label field. This is not manual semantic relabeling.",
+  "canonical_rows": 339,
+  "labels_per_source_card": {
+    "benign": 339
+  },
+  "subsets": {
+    "one": {
+      "file": "benchmark/data/raw/notinject/data/NotInject_one-00000-of-00001.parquet",
+      "rows": 113,
+      "expected_rows_per_local_card": 113,
+      "matches_card_count": true,
+      "schema": "prompt: string\nword_list: list<element: string>\n  child 0, element: string\ncategory: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"prompt\": {\"dtype\": \"string\", \"_type' + 151",
+      "missing_fields": {
+        "prompt": 0,
+        "word_list": 0,
+        "category": 0
+      },
+      "null_fields": {
+        "prompt": 0,
+        "word_list": 0,
+        "category": 0
+      },
+      "invalid_type_rows": [],
+      "empty_text_fields": {
+        "prompt": 0,
+        "category": 0
+      },
+      "empty_word_lists": 0,
+      "empty_trigger_strings": 0,
+      "trigger_count_distribution": {
+        "1": 113
+      },
+      "categories": {
+        "Technique Queries": 16,
+        "Multilingual": 25,
+        "Common Queries": 58,
+        "Virtual Creation": 14
+      },
+      "duplicates": {
+        "policy": "Exact text after trimming leading/trailing whitespace only; not semantic similarity.",
+        "unique_nonempty_texts": 113,
+        "duplicate_groups": 0,
+        "extra_duplicate_records": 0,
+        "duplicate_record_ids": []
+      }
+    },
+    "two": {
+      "file": "benchmark/data/raw/notinject/data/NotInject_two-00000-of-00001.parquet",
+      "rows": 113,
+      "expected_rows_per_local_card": 113,
+      "matches_card_count": true,
+      "schema": "prompt: string\nword_list: list<element: string>\n  child 0, element: string\ncategory: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"prompt\": {\"dtype\": \"string\", \"_type' + 151",
+      "missing_fields": {
+        "prompt": 0,
+        "word_list": 0,
+        "category": 0
+      },
+      "null_fields": {
+        "prompt": 0,
+        "word_list": 0,
+        "category": 0
+      },
+      "invalid_type_rows": [],
+      "empty_text_fields": {
+        "prompt": 0,
+        "category": 0
+      },
+      "empty_word_lists": 0,
+      "empty_trigger_strings": 0,
+      "trigger_count_distribution": {
+        "2": 113
+      },
+      "categories": {
+        "Technique Queries": 30,
+        "Multilingual": 30,
+        "Common Queries": 49,
+        "Virtual Creation": 4
+      },
+      "duplicates": {
+        "policy": "Exact text after trimming leading/trailing whitespace only; not semantic similarity.",
+        "unique_nonempty_texts": 113,
+        "duplicate_groups": 0,
+        "extra_duplicate_records": 0,
+        "duplicate_record_ids": []
+      }
+    },
+    "three": {
+      "file": "benchmark/data/raw/notinject/data/NotInject_three-00000-of-00001.parquet",
+      "rows": 113,
+      "expected_rows_per_local_card": 113,
+      "matches_card_count": true,
+      "schema": "prompt: string\nword_list: list<element: string>\n  child 0, element: string\ncategory: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"prompt\": {\"dtype\": \"string\", \"_type' + 151",
+      "missing_fields": {
+        "prompt": 0,
+        "word_list": 0,
+        "category": 0
+      },
+      "null_fields": {
+        "prompt": 0,
+        "word_list": 0,
+        "category": 0
+      },
+      "invalid_type_rows": [],
+      "empty_text_fields": {
+        "prompt": 0,
+        "category": 0
+      },
+      "empty_word_lists": 0,
+      "empty_trigger_strings": 0,
+      "trigger_count_distribution": {
+        "3": 113
+      },
+      "categories": {
+        "Virtual Creation": 24,
+        "Multilingual": 29,
+        "Common Queries": 19,
+        "Technique Queries": 41
+      },
+      "duplicates": {
+        "policy": "Exact text after trimming leading/trailing whitespace only; not semantic similarity.",
+        "unique_nonempty_texts": 113,
+        "duplicate_groups": 0,
+        "extra_duplicate_records": 0,
+        "duplicate_record_ids": []
+      }
+    }
+  },
+  "duplicate_file_aliases_excluded_from_total": [
+    {
+      "file": "benchmark/data/raw/notinject/data/train-00000-of-00001.parquet",
+      "alias_of": "benchmark/data/raw/notinject/data/NotInject_one-00000-of-00001.parquet",
+      "byte_identical": true
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/validation-00000-of-00001.parquet",
+      "alias_of": "benchmark/data/raw/notinject/data/NotInject_two-00000-of-00001.parquet",
+      "byte_identical": true
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/test-00000-of-00001.parquet",
+      "alias_of": "benchmark/data/raw/notinject/data/NotInject_three-00000-of-00001.parquet",
+      "byte_identical": true
+    }
+  ],
+  "cross_subset_and_within_subset_duplicates": {
+    "policy": "Exact text after trimming leading/trailing whitespace only; not semantic similarity.",
+    "unique_nonempty_texts": 339,
+    "duplicate_groups": 0,
+    "extra_duplicate_records": 0,
+    "duplicate_record_ids": []
+  },
+  "limitations": [
+    "Short benign prompts, not a representative clean-document corpus.",
+    "one/two/three denote trigger-word counts, not independent training/validation/test partitions.",
+    "No standalone license file found; license is declared by the local README.",
+    "Do not claim recall or attack detection effectiveness from this all-benign source."
+  ],
+  "raw_file_sha256": {
+    "benchmark/data/raw/notinject/data/NotInject_one-00000-of-00001.parquet": "5b1d3a8ec341205305efd8c6d2cabeb5ba0f594dd8726b08ee7fde1a46ddc6ec",
+    "benchmark/data/raw/notinject/data/NotInject_three-00000-of-00001.parquet": "d5c685b123570c092a0f374ba6bdf324b2026d905a2751a243eb2bb360d411a8",
+    "benchmark/data/raw/notinject/data/NotInject_two-00000-of-00001.parquet": "a5a8c1b3b851b0b5acc3b6caf8bfee26d7da631b2967dd31ca90358df8883feb",
+    "benchmark/data/raw/notinject/data/test-00000-of-00001.parquet": "d5c685b123570c092a0f374ba6bdf324b2026d905a2751a243eb2bb360d411a8",
+    "benchmark/data/raw/notinject/data/train-00000-of-00001.parquet": "5b1d3a8ec341205305efd8c6d2cabeb5ba0f594dd8726b08ee7fde1a46ddc6ec",
+    "benchmark/data/raw/notinject/data/validation-00000-of-00001.parquet": "a5a8c1b3b851b0b5acc3b6caf8bfee26d7da631b2967dd31ca90358df8883feb",
+    "benchmark/data/raw/notinject/gitattributes": "a2bdf429c1bc3858213bb4b7a748fa36a71536a5a1ff98861281853c3c2be1f2",
+    "benchmark/data/raw/notinject/README.md": "ffaf685021522a526f94af2047e5099ec6b7439a462c67e0ecaca0d631a0d43f"
+  },
+  "raw_unchanged": true
+}

@@ -1,0 +1,32 @@
+{
+  "seed": "sentinel-ipi-split-v1-20261023",
+  "input_sha256": "02510a5df52719e79cd85ccdd33de01b0b4670ead0e3469fff890fe6b069b83b",
+  "input_records": 65948,
+  "requested_dev_fraction": 0.8,
+  "grouping": "NFKC lowercase alphanumeric tokens: identical normalized text OR a shared 40-token passage sampled every 20 tokens; transitive grouping.",
+  "limitations": "Heuristic groups, not verified source-document IDs. Semantic paraphrases, shifted passage boundaries, and shared attack templates without a shared long passage may remain across splits. Common boilerplate can merge unrelated documents.",
+  "groups": 30436,
+  "multi_record_groups": 4836,
+  "largest_group_records": 7282,
+  "shared_anchor_matches": 233963,
+  "splits": {
+    "dev": {
+      "records": 52758,
+      "benign": 25632,
+      "malicious": 27126,
+      "sha256": "fa9d3c960aad0d24d5609bf0a465887f3965635d325c91e9e7fc95dce7feac3e"
+    },
+    "test": {
+      "records": 13190,
+      "benign": 6408,
+      "malicious": 6782,
+      "sha256": "2074a3ff4496afdc891fef77d8722badbb459740d2950db658c7889ff1a68b55"
+    }
+  },
+  "verification": {
+    "all_records_assigned_once": true,
+    "overlapping_ids": 0,
+    "overlapping_groups": 0,
+    "overlapping_sampled_anchors": 0
+  }
+}

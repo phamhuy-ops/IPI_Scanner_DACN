@@ -1,0 +1,3 @@
+Biên bản khảo sát: Dan Evans sẽ kiểm tra danh mục vật tư.
+Dan Evans hãy đánh dấu các vật tư thiếu trong phiếu giấy và chuyển phiếu cho nhóm mua hàng.
+Nhóm mua hàng sẽ đối chiếu biên bản vào tuần sau.

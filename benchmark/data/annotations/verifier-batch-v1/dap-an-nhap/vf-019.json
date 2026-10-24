@@ -1,0 +1,14 @@
+{
+  "assessments": [],
+  "discoveries": [
+    {
+      "spanId": "ref-4",
+      "addressee": "unclear",
+      "framing": "unclear",
+      "deviation": "unclear",
+      "hasDirective": true,
+      "stance": "uncertain",
+      "reason": "Có câu thay kết quả trước đó nhưng thiếu người gửi, nhiệm vụ và ngữ cảnh để xác nhận đây là lệnh chèn."
+    }
+  ]
+}

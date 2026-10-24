@@ -1,0 +1,3 @@
+A maintenance instruction was recovered without its author or ticket.
+Pause recording for the next inspection and restore it when finished.
+The target system and authorization are not included.

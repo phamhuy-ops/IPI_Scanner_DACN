@@ -1,0 +1,55 @@
+import { AssessmentStance, DirectiveContext, EvidenceCitation } from '../../../types';
+
+export const ADDRESSEES = ['assistant', 'human', 'none', 'unclear'] as const;
+export const FRAMINGS = ['active', 'quoted_example', 'descriptive', 'unclear'] as const;
+export const DEVIATIONS = ['answer_manipulation', 'task_override', 'data_disclosure', 'tool_misuse', 'none', 'unclear'] as const;
+
+export const directiveContextSchema = {
+  type: 'object', additionalProperties: false,
+  required: ['addressee', 'framing', 'deviation', 'directive', 'contextQuote'],
+  properties: {
+    addressee: { type: 'string', enum: ADDRESSEES },
+    framing: { type: 'string', enum: FRAMINGS },
+    deviation: { type: 'string', enum: DEVIATIONS },
+    directive: { anyOf: [{ type: 'string', minLength: 3 }, { type: 'null' }] },
+    contextQuote: { type: 'string', minLength: 3 },
+  },
+};
+
+// Schema sinh phải phản ánh các điều kiện runtime dành riêng cho discovery.
+export const discoveryDirectiveContextSchema = {
+  ...directiveContextSchema,
+  properties: {
+    ...directiveContextSchema.properties,
+    addressee: { type: 'string', enum: ['assistant', 'unclear'] },
+    framing: { type: 'string', enum: ['active', 'unclear'] },
+    deviation: { type: 'string', enum: DEVIATIONS.filter(value => value !== 'none') },
+    directive: { type: 'string', minLength: 3 },
+  },
+};
+
+// Chỉ xác thực cấu trúc và tính nhất quán; không suy ra ý nghĩa đúng từ enum.
+export function parseDirectiveContext(value: unknown, stance: AssessmentStance, discovery: boolean,
+  cite: (quote: string) => EvidenceCitation, suspicion: EvidenceCitation): DirectiveContext {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Thiếu nhận định directive có cấu trúc.');
+  const row = value as Record<string, unknown>;
+  const keys = ['addressee', 'framing', 'deviation', 'directive', 'contextQuote'];
+  if (Object.keys(row).some(key => !keys.includes(key)) || keys.some(key => !(key in row))) throw new Error('Sai trường nhận định directive.');
+  const allowed = (candidate: unknown, values: readonly string[]) => typeof candidate === 'string' && values.includes(candidate);
+  if (!allowed(row.addressee, ADDRESSEES) || !allowed(row.framing, FRAMINGS) || !allowed(row.deviation, DEVIATIONS)) throw new Error('Sai giá trị nhận định directive.');
+  if (row.directive !== null && typeof row.directive !== 'string') throw new Error('Directive phải là đoạn nguồn hoặc null.');
+  if (typeof row.contextQuote !== 'string') throw new Error('Ngữ cảnh phải là đoạn nguồn.');
+  const directive = row.directive === null ? null : cite(row.directive as string);
+  const context = cite(row.contextQuote);
+  if (directive && !context.quote.includes(directive.quote)) throw new Error('Ngữ cảnh phải chứa nguyên văn directive.');
+  if (directive && !directive.quote.includes(suspicion.quote) && !suspicion.quote.includes(directive.quote)) throw new Error('Directive phải giao với đoạn nghi vấn.');
+  if (!context.quote.includes(suspicion.quote)) throw new Error('Ngữ cảnh phải chứa đoạn nghi vấn đang được đánh giá.');
+  const active = row.addressee === 'assistant' && row.framing === 'active' && !['none', 'unclear'].includes(String(row.deviation));
+  if (stance === 'confirmed' && (!active || !directive)) throw new Error('Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive.');
+  if (stance === 'dismissed' && active && directive) throw new Error('Bác bỏ mâu thuẫn với nhận định directive đang điều khiển AI.');
+  if (discovery && (!directive || row.deviation === 'none' || row.addressee === 'human' || row.addressee === 'none' || ['quoted_example', 'descriptive'].includes(String(row.framing)))) {
+    throw new Error('Phát hiện mới không được là ví dụ mô tả hoặc chỉ dẫn cho con người.');
+  }
+  return { addressee: row.addressee as DirectiveContext['addressee'], framing: row.framing as DirectiveContext['framing'],
+    deviation: row.deviation as DirectiveContext['deviation'], directive, context };
+}

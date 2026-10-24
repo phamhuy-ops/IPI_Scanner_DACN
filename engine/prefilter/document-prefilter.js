@@ -9,7 +9,7 @@ function snippetAround(text, index, radius = 150) {
 }
 
 function lineOf(text, index) {
-  return text.slice(0, index).split(/\r?\n/).length;
+  return text.slice(0, index).split(/\r\n?|\n/).length;
 }
 
 /** Scan for suspicious Base64 strings and decode to find hidden IPI commands. */
@@ -35,6 +35,7 @@ function scanBase64Payloads(text, filePath, folderPath = '') {
               confidence: 'high',
               target: filePath,
               location: `${rel}:${line}`,
+              matchedText: rawMatch,
               evidence: [
                 `Base64 string: "${rawMatch.slice(0, 60)}..."`,
                 `Decoded content: "${decoded.slice(0, 150)}"`,
@@ -82,6 +83,7 @@ function scanTextForIpi(text, filePath, folderPath = '') {
         confidence: 'high',
         target: filePath,
         location: `${rel}:${line}`,
+        matchedText: match[0],
         evidence: [
           `Pattern: ${pattern.label}`,
           `Line ${line} snippet: "${snippet}"`,

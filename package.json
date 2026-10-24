@@ -26,8 +26,22 @@
     "test": "npm run check:engines && vitest run --config vitest.config.ts",
     "test:watch": "vitest --config vitest.config.ts",
     "benchmark:ipi": "node scripts/run-ipi-benchmark.js",
+    "benchmark:prefilter": "node scripts/run-prefilter-benchmark.cjs",
+    "benchmark:controls": "node scripts/run-prefilter-controls.cjs",
+    "benchmark:round-one": "node scripts/run-round-one-eval.cjs",
+    "benchmark:model-context": "node scripts/run-model-context-diagnostics.cjs",
+    "benchmark:stance": "node scripts/run-stance-clarity.cjs",
+    "benchmark:verifier": "node scripts/run-verifier-candidate.cjs",
+    "data:annotations:prepare": "node scripts/prepare-context-annotations.cjs",
+    "data:annotations:check": "node scripts/audit-context-annotations.cjs",
+    "training:verifier:inspect": "python scripts/inspect-verifier-training.py",
+    "training:python": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1",
+    "training:verifier:inspect:e": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/inspect-verifier-training.py",
+    "training:storage:check": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/verify-training-storage.py",
     "dist": "npm run build && electron-builder --win portable",
-    "clean": "rimraf dist dist-electron"
+    "clean": "rimraf dist dist-electron",
+    "data:verifier:prepare": "node scripts/prepare-verifier-batch.cjs",
+    "data:verifier:check": "node scripts/prepare-verifier-batch.cjs --check"
   },
   "dependencies": {
     "dompurify": "^3.4.2",

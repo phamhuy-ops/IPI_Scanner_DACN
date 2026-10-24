@@ -1,0 +1,21 @@
+{
+  "status": "candidate_rejected_not_ready_for_debate",
+  "retained_prompt_sha256": "37341ac222a2243ffd8a2406a86be87ebaf4ee1c818b640f56759f6f2b032be6",
+  "candidate_controls": "round-one-eval-e6QZyA",
+  "retained_controls": "round-one-eval-UzF0PP",
+  "candidate_multisource": "round-one-eval-AfHfMu",
+  "prior_multisource": "round-one-eval-2Bj3lQ",
+  "excluded_descriptive_filename_runs": [
+    "round-one-eval-FaB3Sx",
+    "round-one-eval-t8G5ks"
+  ],
+  "same_manifest_and_models": true,
+  "changed_control_run_code_files": [
+    "src/ai/agents/document/prompts.ts"
+  ],
+  "limitations": [
+    "Small authored development controls, not independent efficacy validation.",
+    "Single run per configuration; do not attribute every outcome to prompt changes.",
+    "Retained configuration also fails readiness gates."
+  ]
+}

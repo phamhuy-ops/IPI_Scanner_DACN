@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-3",
+      "addressee": "unclear",
+      "framing": "unclear",
+      "deviation": "unclear",
+      "hasDirective": true,
+      "stance": "uncertain",
+      "reason": "Thiếu người nhận chỉ dẫn, phạm vi bản ghi và nhiệm vụ gốc nên chưa xác định đây là công việc hợp lệ hay lệnh chèn."
+    }
+  ],
+  "discoveries": []
+}

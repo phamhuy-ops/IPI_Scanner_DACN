@@ -1,0 +1,72 @@
+{
+  "scope": "Structural checks across three normalized sources; no split files read for sample content, no scanner/model calls.",
+  "input_files": {
+    "malmasabi": {
+      "file": "benchmark/data/processed/ipi-clean.jsonl",
+      "sha256": "02510a5df52719e79cd85ccdd33de01b0b4670ead0e3469fff890fe6b069b83b",
+      "rows": 65948
+    },
+    "notinject": {
+      "file": "benchmark/data/processed/notinject/notinject.jsonl",
+      "sha256": "fcbca6f07fe90f1b1ba16f8ba917640f343d7049783a496c914119720799f818",
+      "rows": 339
+    },
+    "realistic": {
+      "file": "benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl",
+      "sha256": "ccb93fc99972ff44f5e2e25317072796f5443ce01660587e3decf72962c7cdf0",
+      "rows": 17
+    }
+  },
+  "methods": {
+    "exact": "Text after trimming only.",
+    "normalized": "Unicode NFKC + casefold + collapsed whitespace.",
+    "token_sequence": "Ordered Unicode alphanumeric tokens; punctuation/underscores ignored.",
+    "near_duplicate": "Set Jaccard of all token trigrams >= 0.8, both texts at least 6 tokens.",
+    "shared_passage": "At least 12 consecutive normalized tokens shared, checking all start positions."
+  },
+  "limitations": [
+    "No embedding-based or manual semantic equivalence assessment.",
+    "Common phrasing and attack instructions can match without common document provenance.",
+    "No matches does not establish independence, safety or real-world generalization.",
+    "Source labels retained; disagreement in a partial match does not prove a labeling error.",
+    "Checks cover canonical normalized data only; quarantined/raw-only records are outside scope.",
+    "New sources remain development probes, not untouched holdouts."
+  ],
+  "pairs": [
+    {
+      "left": "notinject",
+      "right": "malmasabi",
+      "left_rows": 339,
+      "right_rows": 65948,
+      "matched_pairs": 0,
+      "match_counts_nonexclusive": {},
+      "unique_left_records_matched": 0,
+      "unique_right_records_matched": 0,
+      "matches": []
+    },
+    {
+      "left": "realistic",
+      "right": "malmasabi",
+      "left_rows": 17,
+      "right_rows": 65948,
+      "matched_pairs": 0,
+      "match_counts_nonexclusive": {},
+      "unique_left_records_matched": 0,
+      "unique_right_records_matched": 0,
+      "matches": []
+    },
+    {
+      "left": "notinject",
+      "right": "realistic",
+      "left_rows": 339,
+      "right_rows": 17,
+      "matched_pairs": 0,
+      "match_counts_nonexclusive": {},
+      "unique_left_records_matched": 0,
+      "unique_right_records_matched": 0,
+      "matches": []
+    }
+  ],
+  "inputs_unchanged": true,
+  "action": "Record matches for review; do not delete or relabel records automatically."
+}

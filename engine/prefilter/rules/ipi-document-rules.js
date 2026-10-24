@@ -67,16 +67,18 @@ const IPI_DOC_PATTERNS = [
 
   // Group 3: Persona hijacking and jailbreak
   {
-    re: /act\s+as\s+(?:a\s+)?(?:different|new|uncensored|unrestricted|evil|DAN|jailbreak|chaos)/i,
+    re: /act\s+as\s+(?:a\s+)?(?:different|new|uncensored|unrestricted|evil|jailbreak|chaos)/i,
     label: 'Role-jailbreak',
     severity: 'high',
     description: 'Document asks the model to play an unrestricted or uncensored persona',
   },
   {
-    re: /\bDAN\b|\bDo\s+Anything\s+Now\b|\bAIM\s+mode\b|\bMaximum\s+jailbreak\b/i,
+    // A name or a mention of an acronym alone is not a jailbreak directive.
+    // Keep mode activation and explicit persona adoption as prefilter signals.
+    re: /\b(?:activate|enable|enter|use|start|switch\s+to)\s+(?:the\s+)?(?:DAN|AIM|maximum\s+jailbreak)\s+mode\b|\b(?:act|behave|respond)\s+as\s+(?:a\s+)?(?:DAN\b(?=\s*(?:[.!:;,(\r\n]|$))|Do\s+Anything\s+Now\b)|\b(?:you\s+are\s+now|become)\s+DAN\b(?=\s*(?:[.!:;,(\r\n]|$))/i,
     label: 'DAN-jailbreak',
     severity: 'high',
-    description: 'Classic jailbreak markers (DAN / Do Anything Now / AIM mode)',
+    description: 'Directive to activate a jailbreak mode or adopt the DAN / Do Anything Now persona',
   },
   {
     re: /(?:developer|maintenance|sudo|god)\s+mode\s+(?:is\s+)?(?:enabled|activated|on)/i,
@@ -163,7 +165,30 @@ const IPI_DOC_PATTERNS = [
     description: 'Vietnamese task diversion away from the user goal toward harmful behavior',
   },
 
-  // Group 7: Tool and function call injection
+  // Group 7: Response manipulation
+  // Bounded, line-leading directives: a response target plus a concrete
+  // corruption operation or external link. These are review signals, not
+  // proof of malicious intent; quoted instructions still need semantic review.
+  {
+    re: /(?:^|(?<=[\r\n]))[ \t]*(?:please\s+)?(?=(?:use|write|provide|give|render|replace|convert|scramble|reverse|misspell|remove|group|swap|substitute|change)\b)(?=[^\r\n]{0,220}\b(?:your|the)\s+(?:response|answer|reply)\b)(?=[^\r\n]{0,220}(?:\banagrams?\b|\banagrammed\b|\balphanumeric\s+substitution\b|\bROT13\b|\b(?:scramble|reverse|misspell|remove|replace|convert|swap|substitute|group)\b[^\r\n]{0,60}\b(?:vowels?|letters?|spaces?|characters?|words?)\b))[^\r\n]{1,240}/i,
+    label: 'Response-text-corruption',
+    severity: 'high',
+    description: 'Document directs the reader to corrupt the response text or character encoding',
+  },
+  {
+    re: /(?:^|(?<=[\r\n]))[ \t]*(?:please\s+)?(?:append|add|include|insert|embed|integrate)\b(?=[^\r\n]{0,400}\byour\s+(?:response|answer|reply)\b)(?=[^\r\n]{0,400}(?:https?:\/\/|www\.))[^\r\n]{1,420}/i,
+    label: 'Response-link-insertion',
+    severity: 'high',
+    description: 'Document requests inserting an external link into the assistant response',
+  },
+  {
+    re: /(?:^|(?<=[\r\n]))[ \t]*(?:hãy\s+)?(?:đảo\s+(?:thứ\s+tự\s+)?(?:chữ|ký\s+tự)|thay\s+(?:thế\s+)?(?:nguyên\s+âm|chữ\s+cái)|xóa\s+(?:mọi\s+|tất\s+cả\s+)?khoảng\s+trắng)(?=[^\r\n]{0,180}(?:câu\s+trả\s+lời|phản\s+hồi)\s+của\s+bạn)[^\r\n]{1,200}/i,
+    label: 'VN-Response-text-corruption',
+    severity: 'high',
+    description: 'Vietnamese instruction to alter characters or remove spaces from the assistant response',
+  },
+
+  // Group 8: Tool and function call injection
   {
     re: /(?:call|invoke|execute|run)\s+(?:function|tool|plugin|api)\s*[:("']?\s*(?:send_email|delete|drop|exec|shell|system)/i,
     label: 'Tool-call-injection',
@@ -171,7 +196,7 @@ const IPI_DOC_PATTERNS = [
     description: 'Dangerous tool calls embedded in the document (shell, email, database)',
   },
 
-  // Group 8: Steganography and anomalies
+  // Group 9: Steganography and anomalies
   {
     re: /(?:\u200B|\u200C|\u200D|\uFEFF|\u00AD){3,}/,
     label: 'Zero-width-char-steganography',

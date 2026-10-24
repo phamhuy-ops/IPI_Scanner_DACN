@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "records_checked": 17,
+  "output_sha256": "ccb93fc99972ff44f5e2e25317072796f5443ce01660587e3decf72962c7cdf0",
+  "checks": [
+    "Every source text preserved exactly",
+    "All original fields reconstructable from normalized text and metadata",
+    "Labels mapped according to declared source policy",
+    "IDs unique across both sources",
+    "Source file and context hashes match",
+    "All audited raw files unchanged",
+    "Repeated execution produces identical normalized JSONL"
+  ]
+}

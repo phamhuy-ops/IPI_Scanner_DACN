@@ -1,7 +1,11 @@
-import { ScanResult } from '../../../types';
+import { AssessmentStance, EvidenceAssessment, ScanResult } from '../../../types';
 
 export interface SemanticChunk {
   chunkId: string;
+  sourceChunkId?: string;
+  sourceView?: string;
+  lineBasis?: string;
+  filePath?: string;
   fileName: string;
   startLine: number;
   endLine: number;
@@ -13,17 +17,22 @@ export interface SemanticChunk {
 
 export type SemanticCoverage = NonNullable<ScanResult['metadata']['coverage']>;
 
-export interface DetectorBatchResult {
-  hasIndirectInjection?: boolean;
-  confidence?: string;
-  intentAnalysis?: string;
-  riskExplanation?: string;
+export interface ModelAssessment {
+  id: string;
+  stance: AssessmentStance;
+  reason: string;
+  chunkId: string;
+  quote: string;
 }
-
+export interface AgentBatchResult {
+  analysis: string;
+  assessments: Array<{ id: string; assessment: EvidenceAssessment }>;
+  discoveries: EvidenceAssessment[];
+}
 export interface DetectorReview {
   model: string;
   batchCount: number;
   suspiciousBatchCount: number;
   semanticAnalysis: string;
-  semanticRiskLevel: 'high' | 'low';
+  reviewedChunkIds: string[];
 }

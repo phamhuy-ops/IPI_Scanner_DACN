@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'motion/react';
 import { useEffect, useState } from 'react';
-import { ThemeMode } from '../store/useStore';
+import { t } from '../i18n/messages';
+import { ThemeMode, useStore } from '../store/useStore';
 
 interface ThemeRevealProps {
   theme: ThemeMode;
@@ -9,6 +10,7 @@ interface ThemeRevealProps {
 }
 
 export function ThemeReveal({ theme, onCovered, onComplete }: ThemeRevealProps) {
+  const locale = useStore((state) => state.locale);
   const shouldReduceMotion = useReducedMotion();
   const [phase, setPhase] = useState<'reveal' | 'hold' | 'exit'>('reveal');
 
@@ -54,7 +56,7 @@ export function ThemeReveal({ theme, onCovered, onComplete }: ThemeRevealProps) 
             : { duration: 1.1, ease: 'easeInOut', repeat: Infinity }}
         />
         <div className="theme-reveal-brand">SENTINEL</div>
-        <div className="theme-reveal-status">Switching to {theme === 'light' ? 'light' : 'dark'} theme</div>
+        <div className="theme-reveal-status">{t(locale, 'theme.switching', { theme: t(locale, theme === 'light' ? 'theme.light' : 'theme.dark') })}</div>
       </motion.div>
     </motion.div>
   );

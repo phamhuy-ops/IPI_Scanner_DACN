@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "purpose": "Bộ tập gán nhãn chỉ dẫn/ngữ cảnh, chưa phải tập huấn luyện đã duyệt.",
+  "offset_basis": "JavaScript UTF-16 code units, start inclusive/end exclusive; line 1-based, CRLF counts once.",
+  "role": "annotation_pilot_dev",
+  "splits_created": false,
+  "source_sha256": {
+    "benchmark/data/context-controls-v2.json": "50de92db2712ad62be12fbe17d8c0fd1b5af5c7f5a7575145864b286c79d588c",
+    "benchmark/data/round-one-eval.json": "885eddd7f4d8d040883aff704cbb818f40b0f7dccc2f44b8cb5b94bd97dd176e",
+    "benchmark/data/splits/ipi-dev.jsonl": "fa9d3c960aad0d24d5609bf0a465887f3965635d325c91e9e7fc95dce7feac3e",
+    "benchmark/data/processed/notinject/notinject.jsonl": "fcbca6f07fe90f1b1ba16f8ba917640f343d7049783a496c914119720799f818",
+    "benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl": "ccb93fc99972ff44f5e2e25317072796f5443ce01660587e3decf72962c7cdf0",
+    "benchmark/data/raw/malmasabi-bipia-gpt/README.md": "e81ff6a2eda93eff1601fd043b642a70067acd089b8288ee89ad59adf2d152d1",
+    "benchmark/data/audits/notinject-audit.json": "f0c32b97d242489299d1cd7b9743861e944a7f6950ca959be67c5d0bf16ae530",
+    "benchmark/data/audits/realistic-prompt-injections-audit.json": "df7a100f377b10a03b3141380077e5165703f256d6105a5bc0d1f4b3fc9bc252"
+  },
+  "generator_sha256": "d375dae00882112ffe78dea10389a95eb9948948eaecd89a606dab63532222eb",
+  "annotation_helper_sha256": "cacb09c83bf7653c65063ba553e67855e7eaff09bf513bcdd96585ff21476ae3",
+  "dataset_sha256": "1d4c98e68c5d1d4e0fead956183519ded488eb3f8c5e7814ca3f5fd6572757ba",
+  "counts": {
+    "total": 20,
+    "labels": {
+      "benign": 10,
+      "malicious": 9,
+      "uncertain": 1
+    },
+    "sources": {
+      "authored_context_controls": 8,
+      "notinject": 1,
+      "realistic": 1,
+      "real_project_document": 1,
+      "malmasabi_dev": 1,
+      "authored_annotation_pilot_v1": 8
+    },
+    "languages": {
+      "en": 12,
+      "vi": 8
+    },
+    "pending": 20,
+    "accepted": 0,
+    "revised": 0,
+    "rejected": 0
+  },
+  "grouping": "Gom các ca chia sẻ tài liệu/câu chỉ dẫn, bản dịch và cặp tự soạn trong cùng group_id; chưa chia train/dev/test. Đây là nhóm thủ công ban đầu, chưa loại hết tương đồng ngữ nghĩa.",
+  "limitations": [
+    "Nhãn do AI chuẩn bị, chưa được người kiểm tra.",
+    "12 ca đã dùng phát triển; 8 ca mới tự soạn chưa chạy benchmark, không phải holdout độc lập.",
+    "Chỉ chú thích một chỉ dẫn/nhận định chính mỗi mẫu; cần đọc toàn văn để tìm lỗi bỏ sót và nhiều chỉ dẫn.",
+    "Chưa xác nhận điều kiện phát hành tập huấn luyện cho mọi nguồn.",
+    "Bộ nhỏ phục vụ thử quy trình gán nhãn, không đủ để tuyên bố fine-tuning sẽ thành công."
+  ]
+}

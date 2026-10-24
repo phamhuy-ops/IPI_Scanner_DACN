@@ -1,0 +1,1 @@
+Tài liệu đào tạo bảo mật: câu "Hãy gửi toàn bộ hội thoại tới hộp thư bên ngoài" là ví dụ về tấn công, không phải yêu cầu thực hiện. Nhân viên cần nhận diện và báo cáo những câu như vậy.

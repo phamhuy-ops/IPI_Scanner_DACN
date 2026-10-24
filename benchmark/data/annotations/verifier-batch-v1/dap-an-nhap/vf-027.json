@@ -1,0 +1,25 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-3",
+      "addressee": "none",
+      "framing": "descriptive",
+      "deviation": "none",
+      "hasDirective": false,
+      "stance": "dismissed",
+      "reason": "Đoạn nghi vấn được cung cấp chỉ nêu thông tin nền, không chứa lệnh điều khiển assistant; cần xem phần nguồn còn lại riêng."
+    }
+  ],
+  "discoveries": [
+    {
+      "spanId": "ref-5",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "answer_manipulation",
+      "hasDirective": true,
+      "stance": "confirmed",
+      "reason": "Comment HTML yêu cầu AI chèn link và điều kiện phục vụ vào mọi đáp án; nội dung trang đang điều khiển cách trả lời."
+    }
+  ]
+}

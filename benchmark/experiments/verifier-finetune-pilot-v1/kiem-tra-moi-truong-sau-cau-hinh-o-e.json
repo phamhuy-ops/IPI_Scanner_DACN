@@ -1,0 +1,78 @@
+{
+  "inventory": {
+    "recorded_at": "2026-10-24T04:50:08.155272+00:00",
+    "python": "3.12.15 (main, Oct 21 2026, 17:48:33) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "E:\\IPI-Training\\venvs\\verifier\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "torch": null,
+      "transformers": null,
+      "peft": null,
+      "trl": null,
+      "accelerate": null,
+      "bitsandbytes": null,
+      "datasets": null,
+      "huggingface-hub": null,
+      "safetensors": null
+    },
+    "disk": {
+      "path": "E:\\IPI-Training",
+      "total_bytes": 512108785664,
+      "free_bytes": 197148913664
+    },
+    "project_disk": {
+      "path": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner",
+      "total_bytes": 498952597504,
+      "free_bytes": 7472156672
+    },
+    "training_paths": {
+      "IPI_TRAINING_ROOT": "E:\\IPI-Training",
+      "HF_HOME": "E:\\IPI-Training\\cache\\huggingface",
+      "HF_HUB_CACHE": "E:\\IPI-Training\\cache\\huggingface\\hub",
+      "HF_DATASETS_CACHE": "E:\\IPI-Training\\cache\\huggingface\\datasets",
+      "PIP_CACHE_DIR": "E:\\IPI-Training\\cache\\pip",
+      "UV_CACHE_DIR": "E:\\IPI-Training\\cache\\uv",
+      "UV_PYTHON_INSTALL_DIR": "E:\\IPI-Training\\python",
+      "IPI_WEIGHTS_DIR": "E:\\IPI-Training\\weights",
+      "IPI_ADAPTERS_DIR": "E:\\IPI-Training\\adapters",
+      "IPI_CHECKPOINTS_DIR": "E:\\IPI-Training\\checkpoints",
+      "TEMP": "E:\\IPI-Training\\tmp",
+      "TMP": "E:\\IPI-Training\\tmp"
+    },
+    "system_memory": {
+      "total_bytes": 25521610752,
+      "available_bytes": 10026344448
+    },
+    "gpu_query": {
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 3050 Ti Laptop GPU, 4096 MiB, 3769 MiB, 610.62",
+      "stderr": ""
+    },
+    "wsl_inventory": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "scope": "Chỉ Python đang chạy; không tìm toàn bộ venv hoặc import torch để khởi tạo GPU. WSL lỗi/không có output không chứng minh môi trường Linux sẵn sàng."
+  },
+  "assessment": {
+    "missing_packages_in_active_python": [
+      "torch",
+      "transformers",
+      "peft",
+      "trl",
+      "accelerate",
+      "bitsandbytes",
+      "datasets",
+      "huggingface-hub",
+      "safetensors"
+    ],
+    "disk_budget_gib": 12,
+    "disk_budget_met": true,
+    "disk_budget_note": "Ngân sách thực hành do dự án đặt, không phải mức tối thiểu được nhà cung cấp chứng nhận; phải đo lại theo đường lưu cache/checkpoint thực tế.",
+    "cuda_training_compatible": null,
+    "forward_backward_smoke_passed": null,
+    "training_ready": false,
+    "reason": "Đây là inventory, chưa cài môi trường, nạp weights, chạy backward hoặc đo peak bộ nhớ. Không suy khả năng train từ nvidia-smi."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "source": "treycsa/realistic-prompt-injections",
+  "input_audit": {
+    "file": "benchmark/data/audits/realistic-prompt-injections-audit.json",
+    "sha256": "df7a100f377b10a03b3141380077e5165703f256d6105a5bc0d1f4b3fc9bc252"
+  },
+  "raw_file_sha256": {
+    "benchmark/data/raw/realistic-prompt-injections/gitattributes": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb",
+    "benchmark/data/raw/realistic-prompt-injections/probes.csv": "21e8ee13dda68f31a4d235f0de3aeb530a25e7f288653a9c31de86eff5d6a67a",
+    "benchmark/data/raw/realistic-prompt-injections/probes.jsonl": "8706b03516206e94effa76bff3087cca7a4b3fe4dd26ef640adc9e638f7649b9",
+    "benchmark/data/raw/realistic-prompt-injections/README.md": "4d0dda280e607427c708bee964aba7ca03e8f8e9711874894fe22ff77fa720cc"
+  },
+  "output": "benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl",
+  "output_sha256": "ccb93fc99972ff44f5e2e25317072796f5443ce01660587e3decf72962c7cdf0",
+  "rows": 17,
+  "labels": {
+    "malicious": 10,
+    "benign": 7
+  },
+  "attack_scopes": {
+    "ipi": 7,
+    "direct": 2,
+    "mixed": 1,
+    "benign_control": 7
+  },
+  "reader": {
+    "python": "3.12.14",
+    "pyarrow": "26.0.0"
+  },
+  "policy": [
+    "Source text preserved exactly; no trimming or Unicode normalization of output text.",
+    "IDs are source-prefixed and traceable to original file/row; stable for this raw version.",
+    "Keep all canonical records; exclude duplicate file aliases and CSV representation.",
+    "Source fields including source scores are metadata, never model/scanner input.",
+    "All records are development probes; no untouched holdout claim.",
+    "Strict IPI attack metrics should select attack_scope=ipi; report direct/mixed separately.",
+    "For strict IPI binary probes include the seven realistic benign controls too.",
+    "NotInject is all-benign; its missing per-row source label is explicitly documented."
+  ],
+  "validation": {
+    "unique_ids": true,
+    "jsonl_roundtrip_matches": true,
+    "all_audited_raw_hashes_match": true,
+    "no_split_or_benchmark_performed": true
+  }
+}

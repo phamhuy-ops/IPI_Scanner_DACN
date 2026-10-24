@@ -8,12 +8,12 @@ function lineNumberFromLocation(location) {
 }
 
 function lineAt(text, index) {
-  return text.slice(0, index).split('\n').length;
+  return text.slice(0, index).split(/\r\n?|\n/).length;
 }
 
-function createSemanticChunks(text, filePath, fileName, chunkSize = SEMANTIC_CHUNK_CONFIG.size, overlap = SEMANTIC_CHUNK_CONFIG.overlap) {
-  const clean = text.replace(/\r\n?/g, '\n').trim();
-  if (!clean) return [];
+function createSemanticChunks(text, filePath, fileName, chunkSize = SEMANTIC_CHUNK_CONFIG.size, overlap = SEMANTIC_CHUNK_CONFIG.overlap, preserveSource = false) {
+  const clean = preserveSource ? text : text.replace(/\r\n?/g, '\n').trim();
+  if (!clean.trim()) return [];
 
   const chunks = [];
   let start = 0;
@@ -24,8 +24,8 @@ function createSemanticChunks(text, filePath, fileName, chunkSize = SEMANTIC_CHU
       const boundary = clean.lastIndexOf('\n', end);
       if (boundary > start + Math.floor(chunkSize * 0.55)) end = boundary + 1;
     }
-    const chunkText = clean.slice(start, end).trim();
-    if (chunkText) {
+    const chunkText = preserveSource ? clean.slice(start, end) : clean.slice(start, end).trim();
+    if (chunkText.trim()) {
       chunks.push({
         chunkId: `${filePath}-chunk-${index + 1}`,
         filePath,
@@ -49,13 +49,16 @@ function createSemanticChunks(text, filePath, fileName, chunkSize = SEMANTIC_CHU
 function annotateChunkRisk(chunks, findings) {
   for (const finding of findings) {
     const line = lineNumberFromLocation(finding.location);
-    if (!line) continue;
-    const chunk = chunks.find((item) => line >= item.startLine && line <= item.endLine);
-    if (!chunk) continue;
-    const score = SEVERITY_SCORE[finding.severity] || 10;
-    chunk.riskScore += score;
-    chunk.findingCount += 1;
-    if (!chunk.selectionReasons.includes(`rule:${finding.severity}`)) chunk.selectionReasons.push(`rule:${finding.severity}`);
+    // Minified HTML can put every chunk on line 1. Prefer the exact excerpt
+    // instead of attributing every hit to the first chunk on that line.
+    const grounded = finding.matchedText ? chunks.filter(item => item.text.includes(finding.matchedText)) : [];
+    const targets = grounded.length ? grounded : line ? chunks.filter(item => line >= item.startLine && line <= item.endLine).slice(0, 1) : [];
+    for (const chunk of targets) {
+      const score = SEVERITY_SCORE[finding.severity] || 10;
+      chunk.riskScore += score;
+      chunk.findingCount += 1;
+      if (!chunk.selectionReasons.includes(`rule:${finding.severity}`)) chunk.selectionReasons.push(`rule:${finding.severity}`);
+    }
   }
   return chunks;
 }
@@ -73,10 +76,11 @@ function isHighRiskChunk(chunk) {
 function selectSemanticChunks(chunks, maxChunks = SEMANTIC_SCAN_PROFILES.balanced.maxAiChunks) {
   const selected = new Map();
   const byFile = new Map();
+  const groupKey = chunk => `${chunk.filePath}\u0000${chunk.sourceView || 'document-text'}`;
   for (const chunk of chunks) {
-    const items = byFile.get(chunk.filePath) || [];
+    const items = byFile.get(groupKey(chunk)) || [];
     items.push(chunk);
-    byFile.set(chunk.filePath, items);
+    byFile.set(groupKey(chunk), items);
   }
 
   const ranked = [...chunks].sort((a, b) => b.riskScore - a.riskScore || a.index - b.index);
@@ -84,7 +88,7 @@ function selectSemanticChunks(chunks, maxChunks = SEMANTIC_SCAN_PROFILES.balance
   for (const chunk of highRiskChunks) addChunk(selected, chunk, 'high-risk');
 
   for (const chunk of highRiskChunks) {
-    const items = byFile.get(chunk.filePath) || [];
+    const items = byFile.get(groupKey(chunk)) || [];
     addChunk(selected, items[chunk.index - 1], 'neighbor-of-high-risk');
     addChunk(selected, items[chunk.index + 1], 'neighbor-of-high-risk');
   }

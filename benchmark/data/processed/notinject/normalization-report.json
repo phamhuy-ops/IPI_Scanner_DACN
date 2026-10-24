@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "source": "leolee99/NotInject",
+  "input_audit": {
+    "file": "benchmark/data/audits/notinject-audit.json",
+    "sha256": "f0c32b97d242489299d1cd7b9743861e944a7f6950ca959be67c5d0bf16ae530"
+  },
+  "raw_file_sha256": {
+    "benchmark/data/raw/notinject/data/NotInject_one-00000-of-00001.parquet": "5b1d3a8ec341205305efd8c6d2cabeb5ba0f594dd8726b08ee7fde1a46ddc6ec",
+    "benchmark/data/raw/notinject/data/NotInject_three-00000-of-00001.parquet": "d5c685b123570c092a0f374ba6bdf324b2026d905a2751a243eb2bb360d411a8",
+    "benchmark/data/raw/notinject/data/NotInject_two-00000-of-00001.parquet": "a5a8c1b3b851b0b5acc3b6caf8bfee26d7da631b2967dd31ca90358df8883feb",
+    "benchmark/data/raw/notinject/data/test-00000-of-00001.parquet": "d5c685b123570c092a0f374ba6bdf324b2026d905a2751a243eb2bb360d411a8",
+    "benchmark/data/raw/notinject/data/train-00000-of-00001.parquet": "5b1d3a8ec341205305efd8c6d2cabeb5ba0f594dd8726b08ee7fde1a46ddc6ec",
+    "benchmark/data/raw/notinject/data/validation-00000-of-00001.parquet": "a5a8c1b3b851b0b5acc3b6caf8bfee26d7da631b2967dd31ca90358df8883feb",
+    "benchmark/data/raw/notinject/gitattributes": "a2bdf429c1bc3858213bb4b7a748fa36a71536a5a1ff98861281853c3c2be1f2",
+    "benchmark/data/raw/notinject/README.md": "ffaf685021522a526f94af2047e5099ec6b7439a462c67e0ecaca0d631a0d43f"
+  },
+  "output": "benchmark/data/processed/notinject/notinject.jsonl",
+  "output_sha256": "fcbca6f07fe90f1b1ba16f8ba917640f343d7049783a496c914119720799f818",
+  "rows": 339,
+  "labels": {
+    "benign": 339
+  },
+  "attack_scopes": {
+    "benign_control": 339
+  },
+  "reader": {
+    "python": "3.12.14",
+    "pyarrow": "26.0.0"
+  },
+  "policy": [
+    "Source text preserved exactly; no trimming or Unicode normalization of output text.",
+    "IDs are source-prefixed and traceable to original file/row; stable for this raw version.",
+    "Keep all canonical records; exclude duplicate file aliases and CSV representation.",
+    "Source fields including source scores are metadata, never model/scanner input.",
+    "All records are development probes; no untouched holdout claim.",
+    "Strict IPI attack metrics should select attack_scope=ipi; report direct/mixed separately.",
+    "For strict IPI binary probes include the seven realistic benign controls too.",
+    "NotInject is all-benign; its missing per-row source label is explicitly documented."
+  ],
+  "validation": {
+    "unique_ids": true,
+    "jsonl_roundtrip_matches": true,
+    "all_audited_raw_hashes_match": true,
+    "no_split_or_benchmark_performed": true
+  }
+}

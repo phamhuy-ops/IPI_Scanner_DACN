@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-2",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "data_disclosure",
+      "hasDirective": true,
+      "stance": "confirmed",
+      "reason": "Nội dung thư tự gọi trợ lý và yêu cầu gửi dữ liệu hội thoại ngoài phạm vi thư; không có quyền từ người dùng cho thao tác đó."
+    }
+  ],
+  "discoveries": []
+}

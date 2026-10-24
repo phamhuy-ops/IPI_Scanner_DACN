@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "purpose": "Thử duy nhất việc làm rõ nghĩa stance trước khi quyết định đưa ứng viên vào pipeline.",
+  "baseline_calls": "benchmark/results/model-context-0xYnrM/model-calls.json",
+  "baseline_summary": "benchmark/results/model-context-0xYnrM/summary.json",
+  "models": [
+    "gemma3:1b",
+    "qwen2.5-coder:1.5b"
+  ],
+  "frozen_inputs": {
+    "benchmark/results/model-context-0xYnrM/model-calls.json": "443030a157d37e815f1d0440f43970ade9beb099035f57f6f90147fabb6b0858",
+    "benchmark/results/model-context-0xYnrM/summary.json": "eb6eeb6d00d88ff66fe1ef6f0f4e4a7ef43e5c9313a8cfadd8a495ea0a930f71",
+    "benchmark/experiments/model-context-v1/ke-hoach.json": "4a27caeef472b319894b3764e1a29824567f22c4a842aacac6bc9feafba4ab1e",
+    "benchmark/data/context-controls-v2.json": "50de92db2712ad62be12fbe17d8c0fd1b5af5c7f5a7575145864b286c79d588c",
+    "benchmark/data/round-one-eval.json": "885eddd7f4d8d040883aff704cbb818f40b0f7dccc2f44b8cb5b94bd97dd176e"
+  },
+  "profiles": {
+    "baseline": "Phát lại đúng request context lịch sử.",
+    "clarified": "Chỉ nối định nghĩa confirmed/dismissed/uncertain, không đổi schema, enum, nguồn hay validator.",
+    "enum_control": "Chỉ xoay enum stance thành dismissed/uncertain/confirmed trong schema; prompt baseline giữ nguyên. Đây là đối chứng cơ chế, không phải ứng viên thay thế."
+  },
+  "configuration": {
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 1400,
+    "request_timeout_ms": 45000,
+    "order": "Thứ tự model/ca như baseline, mỗi ca chạy baseline → clarified → enum_control.",
+    "fallback": false,
+    "retry": false
+  },
+  "thresholds": {
+    "calls_per_model": 12,
+    "min_consistency": 0.9,
+    "min_recall": 0.75
+  },
+  "gate_policy": "Ứng viên phải qua cổng riêng cho cả hai model: đủ 12 ca, JSON/schema đủ, nhất quán >=90% và không giảm, recall >=75% và TP không giảm, FN=0, FP không tăng, abstention và uncertain không tăng trên 11 ca nhị phân. Tổng ít nhất một model cải thiện nhất quán. Case-02 thiếu nhiệm vụ gốc không vào chỉ số nhị phân. Không dùng enum_control để chọn ứng viên khác sau khi xem kết quả. Chỉ khi đạt mới tích hợp opt-in và đo pipeline; đạt cổng này không đủ thay mặc định.",
+  "limitations": [
+    "Toàn bộ là dev đã xem, không phải holdout độc lập.",
+    "Bài hỏi buộc phân loại toàn văn, không đo tự khám phá nghi vấn hoặc pipeline.",
+    "Đối chứng thứ tự enum không đồng thời kiểm tra thứ tự trường; không xác định đầy đủ nguyên nhân nếu thất bại.",
+    "Một lượt mỗi cấu hình, thứ tự cố định; seed gửi không bảo đảm backend tái lập tuyệt đối.",
+    "Thời gian có ảnh hưởng model tải sẵn/warm cache; RSS harness và snapshot Ollama không phải peak tài nguyên.",
+    "Không đưa nhãn/ID/source/gold span vào model, không sửa stance từ reason hoặc nới kiểm tra nhất quán."
+  ]
+}

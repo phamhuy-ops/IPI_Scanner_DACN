@@ -1,16 +1,9 @@
-import { IpiLoopEvent, IpiRunState, ScanResult, SemanticScanProfile } from '../../../types';
-import { releaseSlmModel } from '../slmClient';
+import { IpiLoopEvent, IpiRunState, ReviewContract, ScanResult, SemanticScanProfile, VerifierOutputFormat } from '../../../types';
+import { releaseSlmModel, withTimeout } from '../slmClient';
 import { runDetectorAgent } from './detectorAgent';
 import { runVerifierAgent } from './verifierAgent';
+import { conclude, coverageIssues, InvalidAgentResponse, ruleSuspicions } from './reviewPolicy';
 import { SemanticChunk } from './types';
-
-function event(partial: Omit<IpiLoopEvent, 'ts'>): IpiLoopEvent {
-  return { ts: Date.now(), ...partial };
-}
-
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
 
 function getWorkbenchBridge() {
   if (typeof window !== 'undefined' && window.owaspWorkbench) return window.owaspWorkbench;
@@ -24,68 +17,81 @@ export interface IpiDocumentPipelineOptions {
   providerMode?: 'ollama';
   fixModel?: string;
   checkModel?: string;
+  analysisTimeoutMs?: number;
+  reviewContract?: ReviewContract;
+  verifierOutput?: VerifierOutputFormat;
   onEvent?: (ev: IpiLoopEvent, state: IpiRunState) => void;
 }
 
+/** One review round. Debate/retries are deliberately not implicit here. */
 export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions): Promise<IpiRunState> {
   const state: IpiRunState = {
-    status: 'running', events: [], scanResult: null, check: null, error: null,
-    fixModel: options.fixModel || 'gemma3:1b',
-    checkModel: options.checkModel || 'qwen2.5-coder:1.5b',
+    reviewContract: options.reviewContract || 'classic-v1',
+    verifierOutput: options.verifierOutput || 'standard',
+    status: 'running', processingStatus: 'running', suspicions: [],
+    events: [], scanResult: null, check: null, error: null,
+    fixModel: options.fixModel || 'gemma3:1b', checkModel: options.checkModel || 'qwen2.5-coder:1.5b',
   };
-  const emit = (ev: IpiLoopEvent) => {
-    state.events = [...state.events, ev];
-    options.onEvent?.(ev, { ...state });
+  const emit = (partial: Omit<IpiLoopEvent, 'ts'>) => {
+    const event = { ...partial, ts: Date.now(), iteration: 1 };
+    state.events = [...state.events, event];
+    options.onEvent?.(event, { ...state, suspicions: state.suspicions.map(row => ({ ...row })) });
   };
-  const bridge = getWorkbenchBridge();
-  if (!bridge?.scanIpiDoc || (options.folderPath && !bridge.scanIpiDocFolder)) {
-    throw new Error('scanIpiDoc bridge is not available in this environment.');
-  }
-
+  const deadline = Date.now() + (options.analysisTimeoutMs ?? 180_000);
+  let stage: 'scan' | 'detector' | 'verifier' = 'scan';
+  let issues: string[] = ['Document review has not completed.'];
   try {
-    emit(event({ phase: 'detect', message: options.folderPath ? 'Finding and extracting documents in folder...' : `Extracting content from ${options.filePaths.length} document(s)...`, findingCount: 0, iteration: 1 }));
-    await delay(600);
-    const scanResult: ScanResult = options.folderPath
-      ? await bridge.scanIpiDocFolder(options.folderPath, options.scanProfile)
-      : await bridge.scanIpiDoc(options.filePaths, options.scanProfile);
-    if (!scanResult.ok) throw new Error(scanResult.error || 'Document scan failed.');
-
+    if (options.verifierOutput && !['standard', 'compact-v1'].includes(options.verifierOutput)) throw new Error('Định dạng Verifier không được hỗ trợ.');
+    if (options.verifierOutput === 'compact-v1' && options.reviewContract !== 'referenced-v1') throw new Error('Verifier rút gọn yêu cầu referenced-v1.');
+    if (options.reviewContract && !['classic-v1', 'structured-v1', 'referenced-v1'].includes(options.reviewContract)) throw new Error('Hợp đồng nhận định không được hỗ trợ.');
+    if (!Number.isFinite(deadline) || deadline <= Date.now()) throw new Error('Analysis timeout: invalid or exhausted time budget');
+    const bridge = getWorkbenchBridge();
+    if (!bridge?.scanIpiDoc || (options.folderPath && !bridge.scanIpiDocFolder)) throw new Error('Document scanning bridge is unavailable.');
+    emit({ phase: 'detect', message: 'Extracting documents and collecting rule suspicions.' });
+    const scanResult: ScanResult = await withTimeout(options.folderPath
+      ? bridge.scanIpiDocFolder(options.folderPath, options.scanProfile)
+      : bridge.scanIpiDoc(options.filePaths, options.scanProfile), Math.min(60_000, deadline - Date.now()));
     state.scanResult = scanResult;
-    const initialFindings = scanResult.findings || [];
-    const semanticChunks = (scanResult.metadata.semanticChunks as SemanticChunk[]) || [];
-    if (!semanticChunks.length) throw new Error('No text chunks extracted for semantic analysis.');
-    const coverage = scanResult.metadata.coverage;
+    if (!scanResult.ok) throw new Error(scanResult.error || 'Document scan failed.');
+    // Compact aliases improve small-model citation fidelity; original chunk IDs
+    // stay in scanResult, and citations retain source filename/line information.
+    const chunks: SemanticChunk[] = (scanResult.metadata.semanticChunks || []).map((chunk, index) => ({ ...chunk, sourceChunkId: chunk.chunkId, chunkId: `chunk-${index + 1}` }));
+    issues = coverageIssues(scanResult, chunks);
+    state.suspicions = ruleSuspicions(scanResult.findings, chunks);
+    if (!chunks.length) throw new Error('No text chunks available for review.');
 
-    emit(event({ phase: 'detect', message: `Knowledge base scan: ${initialFindings.length} IPI risk signal(s) (35+ rules).`, findingCount: initialFindings.length, iteration: 1 }));
-    await delay(800);
-    emit(event({ phase: 'fix', message: `Detector Agent (${state.fixModel}) running semantic intent analysis...`, findingCount: initialFindings.length, iteration: 1 }));
-
-    const plannedBatchCount = Math.ceil(semanticChunks.length / (coverage?.detectorBatchSize || 3));
-    emit(event({ phase: 'fix', message: `${coverage?.scanProfile === 'deep' ? 'Deep Scan' : 'Balanced Scan'}: Detector will read ${semanticChunks.length}/${coverage?.totalChunks || semanticChunks.length} chunk(s) in ${plannedBatchCount} batch(es).`, findingCount: initialFindings.length, iteration: 1 }));
-    const detectorReview = await runDetectorAgent({ chunks: semanticChunks, coverage, initialFindingCount: initialFindings.length, model: state.fixModel });
-    state.fixModel = detectorReview.model;
-    emit(event({ phase: 'fix', message: `Detector Agent (${state.fixModel}): finished ${detectorReview.batchCount} batch(es); ${detectorReview.suspiciousBatchCount} suspicious. ${detectorReview.semanticAnalysis.slice(0, 120)}...`, findingCount: initialFindings.length, iteration: 1 }));
-
-    await releaseSlmModel(state.fixModel || 'gemma3:1b');
-    await delay(800);
-    emit(event({ phase: 'check', message: `Verifier Agent (${state.checkModel}) cross-checking results...`, findingCount: initialFindings.length, iteration: 1 }));
-    const checkVerdict = await runVerifierAgent({ chunks: semanticChunks, coverage, detectorReview, initialFindingCount: initialFindings.length, model: state.checkModel });
-    state.checkModel = checkVerdict.modelUsed;
-    state.check = checkVerdict;
-    state.status = checkVerdict.verdict === 'pass' ? 'passed' : 'failed';
-
-    emit(event({ phase: 'check', message: `Verifier Agent (${checkVerdict.modelUsed || 'SLM'}): review complete — verdict [${checkVerdict.verdict.toUpperCase()}].`, findingCount: initialFindings.length, iteration: 1 }));
-    await delay(500);
-    emit(event({ phase: 'done', message: checkVerdict.verdict === 'pass' ? 'Clean document: Verifier confirms no Indirect Prompt Injection risk.' : `Security warning: ${initialFindings.length} harmful IPI risk(s) in selected document(s).`, findingCount: initialFindings.length, iteration: 1 }));
-    return state;
-  } catch (err: unknown) {
-    const errorMessage = (err instanceof Error ? err.message : String(err)) || 'Multi-agent document scan error';
-    state.status = 'failed';
-    state.error = errorMessage;
-    emit(event({ phase: 'error', message: `Pipeline error: ${errorMessage}` }));
-    return state;
+    stage = 'detector';
+    emit({ phase: 'fix', message: `Detector reviewing ${chunks.length} selected chunks and ${state.suspicions.length} rule suspicions.`, findingCount: state.suspicions.length });
+    const detector = await runDetectorAgent({ chunks, suspicions: state.suspicions, coverage: scanResult.metadata.coverage,
+      model: state.fixModel, deadline, reviewContract: state.reviewContract });
+    state.fixModel = detector.model;
+    await releaseSlmModel(detector.model);
+    stage = 'verifier';
+    emit({ phase: 'check', message: 'Verifier checking every grounded suspicion against complete source chunks.', findingCount: state.suspicions.length });
+    const verifier = await runVerifierAgent({ chunks, suspicions: state.suspicions, coverage: scanResult.metadata.coverage,
+      detectorReview: detector, model: state.checkModel, deadline, reviewContract: state.reviewContract, outputFormat: state.verifierOutput });
+    state.checkModel = verifier.modelUsed;
+    if (detector.model === verifier.modelUsed) issues.push('Both agent roles used the same model; independent model verification is limited.');
+    const expectedIds = new Set(chunks.map(chunk => chunk.chunkId));
+    if (detector.reviewedChunkIds.length !== expectedIds.size || verifier.reviewedChunkIds.length !== expectedIds.size ||
+      [...expectedIds].some(id => !detector.reviewedChunkIds.includes(id) || !verifier.reviewedChunkIds.includes(id))) {
+      issues.push('Some selected chunks were not reviewed by both agents.');
+    }
+    state.check = { ...conclude(state.suspicions, issues), modelUsed: verifier.modelUsed, providerUsed: verifier.providerUsed };
+    state.status = 'completed'; state.processingStatus = 'completed';
+    emit({ phase: 'done', message: `Review complete: ${state.check.verdict}. ${state.check.reasons.join(' ')}`, findingCount: state.suspicions.length });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    state.error = `${stage}: ${message}`;
+    state.processingStatus = error instanceof InvalidAgentResponse ? 'invalid_response'
+      : /timeout|timed out|deadline|abort/i.test(message) ? 'timeout'
+        : stage === 'scan' ? 'scan_error' : 'model_error';
+    state.status = 'error';
+    state.check = conclude(state.suspicions, issues, state.error);
+    emit({ phase: 'error', message: state.error, findingCount: state.suspicions.length });
   } finally {
-    await releaseSlmModel(state.fixModel || 'gemma3:1b');
-    await releaseSlmModel(state.checkModel || 'qwen2.5-coder:1.5b');
+    // Cleanup is bounded separately and never changes a security conclusion.
+    await Promise.all([releaseSlmModel(state.fixModel || 'gemma3:1b'), releaseSlmModel(state.checkModel || 'qwen2.5-coder:1.5b')]);
   }
+  return state;
 }

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "completed_at": "2026-10-24T11:26:04+07:00",
+  "review_method": "Người dùng xác nhận/sửa đề xuất AI trong chat, không gán nhãn độc lập hoặc mù. Một số ca chỉ trình bày đoạn chính và mô tả toàn văn; không mặc định đã rà soát mọi dòng/offset.",
+  "audit_run": "benchmark/results/annotation-audit-5ltMFV/summary.json",
+  "worksheet_sha256": "b17a9c8ae0751b535bd0701803f56f8a1d8bc131ef79ad8465dac962e8d36b08",
+  "draft_dataset_sha256": "1d4c98e68c5d1d4e0fead956183519ded488eb3f8c5e7814ca3f5fd6572757ba",
+  "total": 20,
+  "accepted": 19,
+  "revised": 1,
+  "rejected": 0,
+  "pending": 0,
+  "effective_labels": {
+    "benign": 10,
+    "malicious": 9,
+    "uncertain": 1
+  },
+  "revisions": [
+    {
+      "id": "ann-004",
+      "changes": {
+        "addressee": {
+          "before": "assistant",
+          "after": "unclear"
+        },
+        "uncertainty_notes": {
+          "before": [
+            "Câu trích không nêu rõ assistant; addressee=assistant là cách hiểu đích trong ví dụ, người rà soát có thể sửa thành unclear."
+          ],
+          "after": [
+            "Câu trích không nêu người nhận là AI hay con người; giữ unclear, không tự suy đích nhận. Ngữ cảnh đào tạo xác định đây là ví dụ không thực thi nên vẫn benign/dismissed."
+          ]
+        }
+      }
+    }
+  ],
+  "human_review_complete": true,
+  "fine_tuning_ready": false,
+  "training_started": false,
+  "limitations": [
+    "Bộ nhỏ dùng thống nhất cách gán nhãn, không phải holdout độc lập hoặc toàn bộ corpus huấn luyện.",
+    "Giữ riêng source_label và uncertain của ca thiếu nhiệm vụ gốc.",
+    "Chưa chia tập, chưa xác nhận điều kiện sử dụng của mọi nguồn, chưa xuất dữ liệu train.",
+    "Không có phép đo model mới; hoàn tất rà soát không chứng minh tăng khả năng phát hiện IPI."
+  ]
+}

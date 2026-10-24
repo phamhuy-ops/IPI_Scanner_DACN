@@ -1,0 +1,14 @@
+---
+description: Tài liệu hướng dẫn và ghi chú mới của dự án phải dùng tiếng Việt
+alwaysApply: true
+---
+
+# Ngôn ngữ tài liệu
+
+- Từ yêu cầu ngày 2026-10-24, viết tài liệu hướng dẫn, báo cáo, kế hoạch,
+  ghi chú và chú thích mới bằng tiếng Việt.
+- Không tự dịch hoặc viết lại tài liệu cũ chỉ để đổi ngôn ngữ.
+- Giữ nguyên tên API, biến, đường dẫn, lệnh, enum và trích dẫn nguyên văn khi
+  cần để đối chiếu kỹ thuật. Nội dung dữ liệu thử nghiệm giữ ngôn ngữ gốc.
+- Nếu cần prompt tiếng Anh cho model để thử nghiệm, ghi rõ mục đích trong
+  tài liệu tiếng Việt; không biến prompt thành tài liệu hướng dẫn tiếng Anh.

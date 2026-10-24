@@ -69,20 +69,27 @@ async function runIpiDocScan(filePaths, options = {}) {
 
     onProgress({ stage: 'analyze', msg: `Running IPI rules and obfuscation checks on ${baseName}...`, level: 'info', ts: Date.now() });
 
-    const findings = scanTextForIpi(extracted.text, filePath, folderPath);
+    const findings = [];
+    const rawFindingKeys = new Set();
+    const views = extracted.views || [{ id: undefined, text: extracted.text, lineBasis: 'extracted-text' }];
+    for (const view of views) {
+      const viewFindings = scanTextForIpi(view.text, filePath, folderPath)
+        .filter(finding => view.id !== 'text-projection' || !rawFindingKeys.has(`${finding.ruleId}\u0000${finding.matchedText}`))
+        .map(finding => view.id ? { ...finding, sourceView: view.id,
+          location: finding.location.replace(/:(\d+)$/, ` [${view.id}]:$1`),
+          evidence: [...finding.evidence, `Source view: ${view.id}; line basis: ${view.lineBasis}`] } : finding);
+      if (view.id === 'raw-html') for (const finding of viewFindings) rawFindingKeys.add(`${finding.ruleId}\u0000${finding.matchedText}`);
+      findings.push(...viewFindings);
+      const chunks = createSemanticChunks(view.text, filePath, baseName, undefined, undefined, Boolean(view.id))
+        .map(chunk => view.id ? { ...chunk, chunkId: `${chunk.chunkId}:${view.id}`, sourceView: view.id, lineBasis: view.lineBasis } : chunk);
+      annotateChunkRisk(chunks, viewFindings);
+      allSemanticChunks.push(...chunks);
+      extractedSnippets.push({ filePath, fileName: baseName, sourceView: view.id,
+        chunks: chunks.map(chunk => chunk.text), findingsCount: viewFindings.length, sampleText: view.text.slice(0, 1200) });
+    }
     allFindings.push(...findings);
-    fileResults.push({ filePath, ok: true, findingCount: findings.length, ext: extracted.ext });
-
-    // Build complete chunk inventory; semantic selection happens after every file is scanned.
-    const chunks = annotateChunkRisk(createSemanticChunks(extracted.text, filePath, baseName), findings);
-    allSemanticChunks.push(...chunks);
-    extractedSnippets.push({
-      filePath,
-      fileName: baseName,
-      chunks: chunks.map((chunk) => chunk.text),
-      findingsCount: findings.length,
-      sampleText: extracted.text.slice(0, 1200),
-    });
+    fileResults.push({ filePath, ok: true, findingCount: findings.length, ext: extracted.ext,
+      ...(extracted.extraction ? { extraction: extracted.extraction } : {}) });
 
     onProgress({
       stage: 'analyze',
@@ -94,6 +101,12 @@ async function runIpiDocScan(filePaths, options = {}) {
 
   const summary = summarizeFindings(allFindings);
   const semanticChunks = selectSemanticChunks(allSemanticChunks, scanProfile.maxAiChunks);
+  for (const file of fileResults) if (file.extraction) {
+    const rawChunks = allSemanticChunks.filter(chunk => chunk.filePath === file.filePath && chunk.sourceView === 'raw-html');
+    const selectedRaw = semanticChunks.filter(chunk => chunk.filePath === file.filePath && chunk.sourceView === 'raw-html');
+    file.extraction = { ...file.extraction, rawChunks: rawChunks.length,
+      selectedRawChunks: selectedRaw.length, rawCoverageComplete: rawChunks.length > 0 && rawChunks.length === selectedRaw.length };
+  }
   const highRiskChunks = allSemanticChunks.filter(isHighRiskChunk);
   const coverage = {
     mode: 'hybrid-priority-sampling',

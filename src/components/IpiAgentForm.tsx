@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { runIpiDocMultiAgentLoop } from '../ai/agents/ipiDocAgent';
 import { useStore } from '../store/useStore';
-import { SemanticScanProfile } from '../types';
+import { SecurityVerdict, SemanticScanProfile } from '../types';
+import { verdictLabel } from '../ai/agents/document/presentation';
+import { t } from '../i18n/messages';
+import { conclude } from '../ai/agents/document/reviewPolicy';
 
 type ScanMode = 'folder' | 'files';
 
@@ -15,12 +18,13 @@ export const IpiAgentForm: React.FC = () => {
     selectedFolder, setSelectedFolder, resetIpiRun,
     ollamaStatus, checkOllamaStatus,
     ipiFixModel, setIpiFixModel, ipiCheckModel, setIpiCheckModel,
+    locale,
   } = useStore();
   const [scanMode, setScanMode] = useState<ScanMode>('folder');
   const [scanProfile, setScanProfile] = useState<SemanticScanProfile>('balanced');
   const [selectedFiles, setSelectedFiles] = useState<string[]>([]);
   const [scanning, setScanning] = useState(false);
-  const [result, setResult] = useState<{ findings: number; files: number } | null>(null);
+  const [result, setResult] = useState<{ verdict: SecurityVerdict; review: boolean; files: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const detectorModel = ipiFixModel || DETECTOR_MODEL;
@@ -51,15 +55,19 @@ export const IpiAgentForm: React.FC = () => {
     setScanning(true);
     setResult(null);
     setError(null);
-    useStore.setState({ ipiRunning: true, ipiRun: { ...useStore.getState().ipiRun, status: 'running', error: null } });
+    resetIpiRun();
+    useStore.setState({ ipiRunning: true, ipiRun: { ...useStore.getState().ipiRun, status: 'running', processingStatus: 'running', error: null } });
     try {
       const connection = await window.owaspWorkbench?.checkOllama?.();
-      if (!connection?.ok) throw new Error(connection?.error || 'Cannot connect to local Ollama.');
+      if (!connection?.ok) throw new Error(connection?.error || t(locale, 'form.ollamaFail'));
 
       const installed = connection.models || [];
       const missing = [detectorModel, verifierModel].filter((model) => !installed.includes(model));
       if (missing.length) {
-        throw new Error(`Missing local models: ${missing.join(', ')}. Run: ${missing.map((model) => `ollama pull ${model}`).join(' && ')}`);
+        throw new Error(t(locale, 'form.missingModels', {
+          models: missing.join(', '),
+          command: missing.map((model) => `ollama pull ${model}`).join(' && '),
+        }));
       }
       await checkOllamaStatus();
 
@@ -78,11 +86,17 @@ export const IpiAgentForm: React.FC = () => {
       useStore.setState({ ipiRun: finalState });
       if (finalState.error) throw new Error(finalState.error);
       setResult({
-        findings: finalState.scanResult?.findings.length || 0,
+        verdict: finalState.check?.verdict || 'needs_review',
+        review: finalState.check?.verdict !== 'not_detected',
         files: Number(finalState.scanResult?.metadata?.scannedFiles || selectedFiles.length),
       });
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : 'Unknown error during IPI scan.');
+      const message = cause instanceof Error ? cause.message : t(locale, 'form.scanError');
+      setError(message);
+      if (useStore.getState().ipiRun.status === 'running') {
+        useStore.setState({ ipiRun: { ...useStore.getState().ipiRun, status: 'error', processingStatus: 'model_error', error: message,
+          check: conclude([], [t(locale, 'form.scanIncomplete')], message) } });
+      }
     } finally {
       setScanning(false);
       useStore.setState({ ipiRunning: false });
@@ -95,86 +109,82 @@ export const IpiAgentForm: React.FC = () => {
   return (
     <>
       <div className="onboarding-tip">
-        <strong>Local TinyLLM IPI Scanner:</strong> Find Indirect Prompt Injection in documents using a rule prefilter, Detector Agent, and Verifier Agent — all via Ollama on your machine.
+        <strong>Local TinyLLM IPI Scanner:</strong> {t(locale, 'form.intro')}
       </div>
 
       <div className="section">
-        <div className="section-label">Document source</div>
+        <div className="section-label">{t(locale, 'form.source')}</div>
         <div className="ipi-mode-tabs">
-          <button type="button" className={`ipi-mode-tab ${scanMode === 'folder' ? 'active' : ''}`} onClick={() => setScanMode('folder')} disabled={busy}>Document folder</button>
-          <button type="button" className={`ipi-mode-tab ${scanMode === 'files' ? 'active' : ''}`} onClick={() => setScanMode('files')} disabled={busy}>Pick files</button>
+          <button type="button" className={`ipi-mode-tab ${scanMode === 'folder' ? 'active' : ''}`} onClick={() => setScanMode('folder')} disabled={busy}>{t(locale, 'form.folderTab')}</button>
+          <button type="button" className={`ipi-mode-tab ${scanMode === 'files' ? 'active' : ''}`} onClick={() => setScanMode('files')} disabled={busy}>{t(locale, 'form.filesTab')}</button>
         </div>
 
         {scanMode === 'folder' ? (
           <div className="field" style={{ marginTop: 10 }}>
-            <label className="field-label" htmlFor="ipi-folder-path">Folder to scan</label>
+            <label className="field-label" htmlFor="ipi-folder-path">{t(locale, 'form.folderLabel')}</label>
             <div className="folder-select-row">
-              <input id="ipi-folder-path" type="text" value={selectedFolder || ''} readOnly placeholder="No folder selected" />
-              <button className="btn-browse" onClick={handleBrowseFolder} disabled={busy} type="button">Browse folder</button>
+              <input id="ipi-folder-path" type="text" value={selectedFolder || ''} readOnly placeholder={t(locale, 'form.folderPlaceholder')} />
+              <button className="btn-browse" onClick={handleBrowseFolder} disabled={busy} type="button">{t(locale, 'form.browseFolder')}</button>
             </div>
-            <div className="field-hint">Scans up to 300 documents recursively; skips `.git`, `node_modules`, and build folders.</div>
+            <div className="field-hint">{t(locale, 'form.folderHint')}</div>
           </div>
         ) : (
           <div className="field" style={{ marginTop: 10 }}>
-            <label className="field-label">Selected files ({selectedFiles.length})</label>
+            <label className="field-label">{t(locale, 'form.selectedFiles', { count: selectedFiles.length })}</label>
             {selectedFiles.length ? (
               <div className="ipi-file-list">
                 {selectedFiles.map((filePath) => <div key={filePath} className="ipi-file-item"><span className="ipi-file-name" title={filePath}>{filePath.split(/[/\\]/).pop()}</span></div>)}
               </div>
-            ) : <div className="ipi-file-empty" role="button" tabIndex={0} onClick={handleBrowseFiles}>Click to pick documents</div>}
+            ) : <div className="ipi-file-empty" role="button" tabIndex={0} onClick={handleBrowseFiles}>{t(locale, 'form.pickHint')}</div>}
             <div className="folder-select-row" style={{ marginTop: 8 }}>
-              <button className="btn-browse" onClick={handleBrowseFiles} disabled={busy} type="button">Pick files</button>
-              {selectedFiles.length > 0 && <button className="btn-clear" type="button" disabled={busy} onClick={() => setSelectedFiles([])} title="Clear selected files">X</button>}
+              <button className="btn-browse" onClick={handleBrowseFiles} disabled={busy} type="button">{t(locale, 'form.pickFiles')}</button>
+              {selectedFiles.length > 0 && <button className="btn-clear" type="button" disabled={busy} onClick={() => setSelectedFiles([])} title={t(locale, 'form.clearFiles')}>X</button>}
             </div>
           </div>
         )}
-        <div className="field-hint">Supported: {SUPPORTED_EXTS}</div>
+        <div className="field-hint">{t(locale, 'form.supported', { exts: SUPPORTED_EXTS })}</div>
       </div>
 
       <div className="section">
-        <div className="section-label">Semantic scan scope</div>
-        <div className="ipi-mode-tabs" role="group" aria-label="Semantic scan mode">
-          <button type="button" className={`ipi-mode-tab ${scanProfile === 'balanced' ? 'active' : ''}`} onClick={() => setScanProfile('balanced')} disabled={busy}>Balanced</button>
-          <button type="button" className={`ipi-mode-tab ${scanProfile === 'deep' ? 'active' : ''}`} onClick={() => setScanProfile('deep')} disabled={busy}>Deep Scan</button>
+        <div className="section-label">{t(locale, 'form.scope')}</div>
+        <div className="ipi-mode-tabs" role="group" aria-label={t(locale, 'form.scopeGroup')}>
+          <button type="button" className={`ipi-mode-tab ${scanProfile === 'balanced' ? 'active' : ''}`} onClick={() => setScanProfile('balanced')} disabled={busy}>{t(locale, 'form.balanced')}</button>
+          <button type="button" className={`ipi-mode-tab ${scanProfile === 'deep' ? 'active' : ''}`} onClick={() => setScanProfile('deep')} disabled={busy}>{t(locale, 'form.deepScan')}</button>
         </div>
         <div className="ipi-auto-loop-info" style={{ marginTop: 8 }}>
-          {scanProfile === 'deep'
-            ? 'Deep Scan: TinyLLM reviews up to 24 chunks and the Verifier gets more evidence. Higher coverage, longer runtime.'
-            : 'Balanced: TinyLLM reviews up to 12 chunks by risk priority and document coverage — good for everyday scans.'}
+          {scanProfile === 'deep' ? t(locale, 'form.deepHint') : t(locale, 'form.balancedHint')}
         </div>
       </div>
 
       <div className="section">
-        <div className="section-label">Two local TinyLLMs</div>
+        <div className="section-label">{t(locale, 'form.models')}</div>
         <div className="field">
-          <label className="field-label" htmlFor="ipi-detector-model">Detector Agent</label>
+          <label className="field-label" htmlFor="ipi-detector-model">{t(locale, 'form.detector')}</label>
           <select id="ipi-detector-model" className="input-base" value={detectorModel} disabled={busy} onChange={(event) => setIpiFixModel(event.target.value)}>
             {MODEL_CHOICES.map((model) => <option key={model} value={model}>{model}</option>)}
           </select>
         </div>
         <div className="field">
-          <label className="field-label" htmlFor="ipi-verifier-model">Verifier Agent</label>
+          <label className="field-label" htmlFor="ipi-verifier-model">{t(locale, 'form.verifier')}</label>
           <select id="ipi-verifier-model" className="input-base" value={verifierModel} disabled={busy} onChange={(event) => setIpiCheckModel(event.target.value)}>
             {MODEL_CHOICES.map((model) => <option key={model} value={model}>{model}</option>)}
           </select>
         </div>
-        <div className="ipi-auto-loop-info" style={{ marginTop: 8 }}>
-          Light baseline: `gemma3:1b` for intent, `qwen2.5-coder:1.5b` for independent review. No cloud fallback.
-        </div>
-        <button type="button" className="btn-header" style={{ marginTop: 8 }} onClick={() => void checkOllamaStatus()} disabled={busy}>Check local Ollama</button>
+        <div className="ipi-auto-loop-info" style={{ marginTop: 8 }}>{t(locale, 'form.modelHint')}</div>
+        <button type="button" className="btn-header" style={{ marginTop: 8 }} onClick={() => void checkOllamaStatus()} disabled={busy}>{t(locale, 'form.checkOllama')}</button>
         {ollamaStatus.checked && <div className={ollamaStatus.available ? 'success-bar' : 'error-bar'} style={{ marginTop: 8 }}>
-          {ollamaStatus.available ? `Connected. Installed models: ${ollamaStatus.models.join(', ') || 'none pulled yet'}` : ollamaStatus.error}
+          {ollamaStatus.available ? t(locale, 'form.ollamaOk', { models: ollamaStatus.models.join(', ') || t(locale, 'form.noModels') }) : ollamaStatus.error}
         </div>}
       </div>
 
       {error && <div className="error-bar" role="alert">{error}</div>}
-      {result && <div className={`ipi-doc-result ${result.findings ? 'result-warn' : 'result-ok'}`}>
-        {result.findings ? `Found ${result.findings} IPI signal(s) across ${result.files} document(s).` : `No IPI detected in ${result.files} document(s).`}
+      {result && <div className={`ipi-doc-result ${result.review ? 'result-warn' : 'result-ok'}`}>
+        {t(locale, 'form.resultSummary', { label: verdictLabel(result.verdict, locale), files: result.files })}
       </div>}
 
       <div className="left-panel-cta">
-        <button className="btn-primary" onClick={() => void runScan()} disabled={busy || !hasTarget}>{busy ? 'Analyzing documents...' : scanProfile === 'deep' ? 'Deep Scan IPI with local TinyLLM' : 'Scan IPI with local TinyLLM'}</button>
-        <button className="btn-header" type="button" disabled={busy} onClick={resetIpiRun} style={{ marginTop: 8, width: '100%', justifyContent: 'center' }}>Clear results</button>
+        <button className="btn-primary" onClick={() => void runScan()} disabled={busy || !hasTarget}>{busy ? t(locale, 'form.scanning') : scanProfile === 'deep' ? t(locale, 'form.scanDeep') : t(locale, 'form.scanBalanced')}</button>
+        <button className="btn-header" type="button" disabled={busy} onClick={resetIpiRun} style={{ marginTop: 8, width: '100%', justifyContent: 'center' }}>{t(locale, 'form.clearResults')}</button>
       </div>
     </>
   );

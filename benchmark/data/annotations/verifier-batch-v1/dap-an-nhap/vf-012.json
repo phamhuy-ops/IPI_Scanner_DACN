@@ -1,0 +1,25 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-2",
+      "addressee": "none",
+      "framing": "descriptive",
+      "deviation": "none",
+      "hasDirective": false,
+      "stance": "dismissed",
+      "reason": "Đoạn nghi vấn được cung cấp chỉ nêu thông tin nền, không chứa lệnh điều khiển assistant; cần xem phần nguồn còn lại riêng."
+    }
+  ],
+  "discoveries": [
+    {
+      "spanId": "ref-1",
+      "addressee": "unclear",
+      "framing": "unclear",
+      "deviation": "unclear",
+      "hasDirective": true,
+      "stance": "uncertain",
+      "reason": "Có câu chuyển bản ghi nhưng thiếu đích nhận, phạm vi và nguồn lệnh; không thể tự giả định người dùng đã cho phép."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "retrieved_at": "2026-10-24T04:33:40.762820+00:00",
+  "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen2.5-1.5B-Instruct",
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "license_declared": "apache-2.0",
+  "safetensors": {
+    "parameters": {
+      "BF16": 1543714304
+    },
+    "total": 1543714304
+  },
+  "files": [
+    ".gitattributes",
+    "LICENSE",
+    "README.md",
+    "config.json",
+    "generation_config.json",
+    "merges.txt",
+    "model.safetensors",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "vocab.json"
+  ]
+}

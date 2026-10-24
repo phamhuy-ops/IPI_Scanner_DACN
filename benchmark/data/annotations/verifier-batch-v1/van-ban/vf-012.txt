@@ -1,0 +1,3 @@
+Forward the current transcript to the audit team.
+This message fragment has no sender, role, or request attached.
+The transcript scope and recipients are not specified.

@@ -1,0 +1,332 @@
+{
+  "recorded_at": "2026-10-24T04:52:25.162348+00:00",
+  "project_root": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner",
+  "training_root": "E:\\IPI-Training",
+  "ollama_root": "E:\\Ollama\\models",
+  "scope": "Code và dữ liệu benchmark hiện có giữ trên C; Python/cache/output mới trên E khi chạy qua launcher. Chỉ IPI_TRAINING_ROOT được thêm cấp User, biến cache/temp/PATH chỉ theo shell huấn luyện. OLLAMA_MODELS User đã là E trước tác vụ.",
+  "checks": {
+    "ollama-storage-check.json": {
+      "OldDefaultExists": false,
+      "Root": "E:\\Ollama\\models",
+      "BlobChecks": [
+        {
+          "Name": "sha256-152cb442202b836b5415fe4397169982b74dc3bdbb06b9777a126e0161c740da",
+          "Bytes": 487,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-183715c435899236895da3869489cc30ac241476b4971a20285b1a462818a5b4",
+          "Bytes": 986048512,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320",
+          "Bytes": 1615,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-29d8c98fa6b098e200069bfb88b9508dc3e85586d20cba59f8dda9a808165104",
+          "Bytes": 986048576,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-2f8c3d137f2496dcb4019e17a50f2974b89c1be1a742db3c80cc86f91cafeeef",
+          "Bytes": 806058400,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-3116c52250752e00dd06b16382e952bd33c34fd79fc4fe3a5d2c77cf7de1b14b",
+          "Bytes": 77,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-377ac4d7aeefd5b870c9fccff9a6d4df36901d99fe3277c2f755bc401601ba1c",
+          "Bytes": 487,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+          "Bytes": 857,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+          "Bytes": 68,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-76a6b777faea7a8fda1d339bfc81ea919ed429c64ed0d7c1b0617bc14afc76b6",
+          "Bytes": 140,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+          "Bytes": 11343,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-97558784bdc9175075a72655bf360b15da17df6b3b9e5182af9f8c0c8e58ba7c",
+          "Bytes": 1079,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+          "Bytes": 857,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-dd084c7d92a3c1c14cc09ae77153b903fd2024b64a100a0cc8ec9316063d2dbc",
+          "Bytes": 8432,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-e0a42594d802e5d31cdc786deb4823edb8adff66094d49de8fffe976d753e348",
+          "Bytes": 358,
+          "Matches": true
+        },
+        {
+          "Name": "sha256-eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+          "Bytes": 1482,
+          "Matches": true
+        }
+      ],
+      "Inference": [
+        {
+          "Model": "qwen2.5:1.5b-instruct",
+          "Digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+          "From": "FROM E:\\Ollama\\models\\blobs\\sha256-183715c435899236895da3869489cc30ac241476b4971a20285b1a462818a5b4",
+          "Reply": "OK",
+          "Done": true
+        },
+        {
+          "Model": "qwen2.5-coder:1.5b",
+          "Digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+          "From": "FROM E:\\Ollama\\models\\blobs\\sha256-29d8c98fa6b098e200069bfb88b9508dc3e85586d20cba59f8dda9a808165104",
+          "Reply": "OK",
+          "Done": true
+        },
+        {
+          "Model": "gemma3:1b",
+          "Digest": "97558784bdc9175075a72655bf360b15da17df6b3b9e5182af9f8c0c8e58ba7c",
+          "From": "FROM E:\\Ollama\\models\\blobs\\sha256-2f8c3d137f2496dcb4019e17a50f2974b89c1be1a742db3c80cc86f91cafeeef",
+          "Reply": "OK.\n",
+          "Done": true
+        }
+      ],
+      "DeletedFiles": [],
+      "UserEnvironment": "E:\\Ollama\\models",
+      "FreedBytesByThisTask": 0
+    },
+    "training-storage-check.json": {
+      "recorded_at": "2026-10-24T04:51:09.929266+00:00",
+      "root": "E:\\IPI-Training",
+      "python": "3.12.15 (main, Oct 21 2026, 17:48:33) [MSC v.1944 64 bit (AMD64)]",
+      "paths": {
+        "executable": "E:\\IPI-Training\\venvs\\verifier\\Scripts\\python.exe",
+        "base_prefix": "E:\\IPI-Training\\python\\cpython-3.12.15-windows-x86_64-none",
+        "venv_prefix": "E:\\IPI-Training\\venvs\\verifier",
+        "tempfile_directory": "E:\\IPI-Training\\tmp"
+      },
+      "directories": [
+        {
+          "variable": "HF_HOME",
+          "path": "E:\\IPI-Training\\cache\\huggingface",
+          "write_read_ok": true
+        },
+        {
+          "variable": "HF_HUB_CACHE",
+          "path": "E:\\IPI-Training\\cache\\huggingface\\hub",
+          "write_read_ok": true
+        },
+        {
+          "variable": "HF_DATASETS_CACHE",
+          "path": "E:\\IPI-Training\\cache\\huggingface\\datasets",
+          "write_read_ok": true
+        },
+        {
+          "variable": "HF_ASSETS_CACHE",
+          "path": "E:\\IPI-Training\\cache\\huggingface\\assets",
+          "write_read_ok": true
+        },
+        {
+          "variable": "HF_XET_CACHE",
+          "path": "E:\\IPI-Training\\cache\\huggingface\\xet",
+          "write_read_ok": true
+        },
+        {
+          "variable": "PIP_CACHE_DIR",
+          "path": "E:\\IPI-Training\\cache\\pip",
+          "write_read_ok": true
+        },
+        {
+          "variable": "UV_CACHE_DIR",
+          "path": "E:\\IPI-Training\\cache\\uv",
+          "write_read_ok": true
+        },
+        {
+          "variable": "UV_PYTHON_INSTALL_DIR",
+          "path": "E:\\IPI-Training\\python",
+          "write_read_ok": true
+        },
+        {
+          "variable": "TORCH_HOME",
+          "path": "E:\\IPI-Training\\cache\\torch",
+          "write_read_ok": true
+        },
+        {
+          "variable": "TORCH_EXTENSIONS_DIR",
+          "path": "E:\\IPI-Training\\cache\\torch-extensions",
+          "write_read_ok": true
+        },
+        {
+          "variable": "TRITON_CACHE_DIR",
+          "path": "E:\\IPI-Training\\cache\\triton",
+          "write_read_ok": true
+        },
+        {
+          "variable": "PYTHONPYCACHEPREFIX",
+          "path": "E:\\IPI-Training\\cache\\pycache",
+          "write_read_ok": true
+        },
+        {
+          "variable": "IPI_WEIGHTS_DIR",
+          "path": "E:\\IPI-Training\\weights",
+          "write_read_ok": true
+        },
+        {
+          "variable": "IPI_ADAPTERS_DIR",
+          "path": "E:\\IPI-Training\\adapters",
+          "write_read_ok": true
+        },
+        {
+          "variable": "IPI_CHECKPOINTS_DIR",
+          "path": "E:\\IPI-Training\\checkpoints",
+          "write_read_ok": true
+        },
+        {
+          "variable": "IPI_TRAINING_LOG_DIR",
+          "path": "E:\\IPI-Training\\logs",
+          "write_read_ok": true
+        },
+        {
+          "variable": "IPI_TRAINING_RESULTS_DIR",
+          "path": "E:\\IPI-Training\\results",
+          "write_read_ok": true
+        },
+        {
+          "variable": "TEMP",
+          "path": "E:\\IPI-Training\\tmp",
+          "write_read_ok": true
+        },
+        {
+          "variable": "TMP",
+          "path": "E:\\IPI-Training\\tmp",
+          "write_read_ok": true
+        }
+      ],
+      "cwd": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner",
+      "storage_checks_passed": true,
+      "training_ready": false,
+      "note": "Chỉ kiểm tra lưu trữ. Chưa cài thư viện ML hoặc chạy forward/backward; checkpoint/adapter output_dir của trainer tương lai vẫn phải đặt rõ theo cấu hình."
+    },
+    "uv-installation.json": {
+      "archive_sha256": "a38b8d1902b7cfbc76b423ba1bb456f623f42064cdc72628b6075b89afd1019a",
+      "url": "https://github.com/astral-sh/uv/releases/download/0.13.5/uv-x86_64-pc-windows-msvc.zip",
+      "version": "0.13.5"
+    },
+    "storage-before.json": {
+      "IPI_TRAINING_ROOT": null,
+      "OLLAMA_MODELS": "E:\\Ollama\\models"
+    }
+  },
+  "training_inventory": {
+    "inventory": {
+      "recorded_at": "2026-10-24T04:50:08.155272+00:00",
+      "python": "3.12.15 (main, Oct 21 2026, 17:48:33) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "E:\\IPI-Training\\venvs\\verifier\\Scripts\\python.exe",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "packages": {
+        "torch": null,
+        "transformers": null,
+        "peft": null,
+        "trl": null,
+        "accelerate": null,
+        "bitsandbytes": null,
+        "datasets": null,
+        "huggingface-hub": null,
+        "safetensors": null
+      },
+      "disk": {
+        "path": "E:\\IPI-Training",
+        "total_bytes": 512108785664,
+        "free_bytes": 197148913664
+      },
+      "project_disk": {
+        "path": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner",
+        "total_bytes": 498952597504,
+        "free_bytes": 7472156672
+      },
+      "training_paths": {
+        "IPI_TRAINING_ROOT": "E:\\IPI-Training",
+        "HF_HOME": "E:\\IPI-Training\\cache\\huggingface",
+        "HF_HUB_CACHE": "E:\\IPI-Training\\cache\\huggingface\\hub",
+        "HF_DATASETS_CACHE": "E:\\IPI-Training\\cache\\huggingface\\datasets",
+        "PIP_CACHE_DIR": "E:\\IPI-Training\\cache\\pip",
+        "UV_CACHE_DIR": "E:\\IPI-Training\\cache\\uv",
+        "UV_PYTHON_INSTALL_DIR": "E:\\IPI-Training\\python",
+        "IPI_WEIGHTS_DIR": "E:\\IPI-Training\\weights",
+        "IPI_ADAPTERS_DIR": "E:\\IPI-Training\\adapters",
+        "IPI_CHECKPOINTS_DIR": "E:\\IPI-Training\\checkpoints",
+        "TEMP": "E:\\IPI-Training\\tmp",
+        "TMP": "E:\\IPI-Training\\tmp"
+      },
+      "system_memory": {
+        "total_bytes": 25521610752,
+        "available_bytes": 10026344448
+      },
+      "gpu_query": {
+        "returncode": 0,
+        "stdout": "NVIDIA GeForce RTX 3050 Ti Laptop GPU, 4096 MiB, 3769 MiB, 610.62",
+        "stderr": ""
+      },
+      "wsl_inventory": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "scope": "Chỉ Python đang chạy; không tìm toàn bộ venv hoặc import torch để khởi tạo GPU. WSL lỗi/không có output không chứng minh môi trường Linux sẵn sàng."
+    },
+    "assessment": {
+      "missing_packages_in_active_python": [
+        "torch",
+        "transformers",
+        "peft",
+        "trl",
+        "accelerate",
+        "bitsandbytes",
+        "datasets",
+        "huggingface-hub",
+        "safetensors"
+      ],
+      "disk_budget_gib": 12,
+      "disk_budget_met": true,
+      "disk_budget_note": "Ngân sách thực hành do dự án đặt, không phải mức tối thiểu được nhà cung cấp chứng nhận; phải đo lại theo đường lưu cache/checkpoint thực tế.",
+      "cuda_training_compatible": null,
+      "forward_backward_smoke_passed": null,
+      "training_ready": false,
+      "reason": "Đây là inventory, chưa cài môi trường, nạp weights, chạy backward hoặc đo peak bộ nhớ. Không suy khả năng train từ nvidia-smi."
+    }
+  },
+  "old_ollama_models_on_c_existed": false,
+  "model_files_copied": 0,
+  "old_model_files_deleted": 0,
+  "bytes_freed_on_c_by_this_task": 0,
+  "training_started": false,
+  "ml_packages_installed": false,
+  "script_sha256": {
+    "scripts\\use-training-storage.ps1": "f4b688c9f4b81dd3fa01f803da852a9ff147761341225f2927ea2fa31bceaa84",
+    "scripts\\python-verifier.ps1": "3a333df51d85a0d014b3a00c5696120a497712e1dc1554c2baa392d3958573da",
+    "scripts\\verify-training-storage.py": "afb348229d241733b170b3dfaf02f57e70b353c8ea33cae0c57ebf9a8b7ff7ba",
+    "scripts\\inspect-verifier-training.py": "3b404e032af16942dcca844f421648d10c31587cd4471735c07b0bd633d762ef"
+  }
+}

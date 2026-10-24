@@ -1,10 +1,14 @@
 import { create } from 'zustand';
+import { AppLocale, persistLocale, readStoredLocale } from '../i18n/locale';
 import { IpiRunState } from '../types';
 
 export type ThemeMode = 'dark' | 'light';
+export type { AppLocale };
 
 const EMPTY_IPI_RUN: IpiRunState = {
   status: 'idle',
+  processingStatus: 'idle',
+  suspicions: [],
   events: [],
   scanResult: null,
   check: null,
@@ -17,6 +21,8 @@ interface AppState {
   themeMode: ThemeMode;
   setThemeMode: (themeMode: ThemeMode) => void;
   toggleThemeMode: () => void;
+  locale: AppLocale;
+  setLocale: (locale: AppLocale) => void;
   selectedFolder: string | null;
   setSelectedFolder: (folder: string | null) => void;
   ipiFixModel: string;
@@ -34,6 +40,11 @@ export const useStore = create<AppState>((set) => ({
   themeMode: 'dark',
   setThemeMode: (themeMode) => set({ themeMode }),
   toggleThemeMode: () => set((state) => ({ themeMode: state.themeMode === 'dark' ? 'light' : 'dark' })),
+  locale: readStoredLocale(),
+  setLocale: (locale) => {
+    persistLocale(locale);
+    set({ locale });
+  },
   selectedFolder: null,
   setSelectedFolder: (folder) => set({ selectedFolder: folder || null }),
   ipiFixModel: 'gemma3:1b',

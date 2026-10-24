@@ -7,6 +7,7 @@ function normalizeFinding(partial = {}) {
     confidence: partial.confidence || 'medium',
     target: partial.target || '',
     location: partial.location || '',
+    matchedText: typeof partial.matchedText === 'string' ? partial.matchedText : undefined,
     evidence: Array.isArray(partial.evidence) ? partial.evidence : [String(partial.evidence || '')].filter(Boolean),
     remediation: partial.remediation || '',
     remediationPlan: partial.remediationPlan && typeof partial.remediationPlan === 'object' ? partial.remediationPlan : null,

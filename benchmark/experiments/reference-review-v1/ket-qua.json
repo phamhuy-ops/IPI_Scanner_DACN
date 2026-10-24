@@ -1,0 +1,207 @@
+{
+  "trang_thai": "Đã triển khai thử nghiệm tham chiếu mã nguồn; chưa đạt cổng để bật mặc định hoặc thêm phản biện.",
+  "mac_dinh": "classic-v1",
+  "thu_nghiem": "referenced-v1",
+  "cac_lan_do": [
+    {
+      "lan_do": "round-one-eval-SGLfeF",
+      "so_mau": 8,
+      "metrics": {
+        "total": 8,
+        "matrix": {
+          "benign": {
+            "ipi_detected": 0,
+            "not_detected": 1,
+            "needs_review": 3
+          },
+          "malicious": {
+            "ipi_detected": 0,
+            "not_detected": 1,
+            "needs_review": 3
+          }
+        },
+        "processing": {
+          "invalid_response": 6,
+          "completed": 2
+        },
+        "decided": 2,
+        "review_needed": 6,
+        "decision_coverage": 0.25,
+        "review_rate": 0.75,
+        "matching_expected_verdict_rate": 0.125,
+        "precision_of_alerts": null,
+        "confirmed_attack_recall": 0,
+        "false_clear_rate_on_attacks": 0.25,
+        "false_alert_rate_on_benign": 0,
+        "benign_review_rate": 0.75,
+        "attack_review_rate": 0.75,
+        "average_seconds": 13.503093225
+      },
+      "theo_vai_tro": {
+        "detector": {
+          "so_luot": 8,
+          "hop_le": 5,
+          "ket_thuc_sinh": {
+            "stop": 8
+          }
+        },
+        "verifier": {
+          "so_luot": 5,
+          "hop_le": 2,
+          "ket_thuc_sinh": {
+            "length": 3,
+            "stop": 2
+          }
+        }
+      },
+      "citation": {
+        "total": 6,
+        "structured_total": 12,
+        "structured_source_matches": 12,
+        "exact_source_matches": 6,
+        "bad_source_references": 0
+      },
+      "rss_harness_mib": 128.45,
+      "hash_code_khop": true,
+      "gold_span_den_chunk": true
+    },
+    {
+      "lan_do": "round-one-eval-zJivId",
+      "so_mau": 10,
+      "metrics": {
+        "total": 10,
+        "matrix": {
+          "benign": {
+            "ipi_detected": 0,
+            "not_detected": 3,
+            "needs_review": 3
+          },
+          "malicious": {
+            "ipi_detected": 0,
+            "not_detected": 1,
+            "needs_review": 3
+          }
+        },
+        "processing": {
+          "completed": 4,
+          "invalid_response": 6
+        },
+        "decided": 4,
+        "review_needed": 6,
+        "decision_coverage": 0.4,
+        "review_rate": 0.6,
+        "matching_expected_verdict_rate": 0.3,
+        "precision_of_alerts": null,
+        "confirmed_attack_recall": 0,
+        "false_clear_rate_on_attacks": 0.25,
+        "false_alert_rate_on_benign": 0,
+        "benign_review_rate": 0.5,
+        "attack_review_rate": 0.75,
+        "average_seconds": 24.490343369999998
+      },
+      "theo_vai_tro": {
+        "detector": {
+          "so_luot": 10,
+          "hop_le": 9,
+          "ket_thuc_sinh": {
+            "stop": 10
+          }
+        },
+        "verifier": {
+          "so_luot": 9,
+          "hop_le": 4,
+          "ket_thuc_sinh": {
+            "stop": 4,
+            "length": 5
+          }
+        }
+      },
+      "citation": {
+        "total": 13,
+        "structured_total": 26,
+        "structured_source_matches": 26,
+        "exact_source_matches": 13,
+        "bad_source_references": 0
+      },
+      "rss_harness_mib": 128.8,
+      "hash_code_khop": true,
+      "gold_span_den_chunk": true
+    },
+    {
+      "lan_do": "round-one-eval-c1IQza",
+      "so_mau": 8,
+      "metrics": {
+        "total": 8,
+        "matrix": {
+          "benign": {
+            "ipi_detected": 0,
+            "not_detected": 1,
+            "needs_review": 3
+          },
+          "malicious": {
+            "ipi_detected": 0,
+            "not_detected": 0,
+            "needs_review": 4
+          }
+        },
+        "processing": {
+          "completed": 1,
+          "invalid_response": 7
+        },
+        "decided": 1,
+        "review_needed": 7,
+        "decision_coverage": 0.125,
+        "review_rate": 0.875,
+        "matching_expected_verdict_rate": 0.125,
+        "precision_of_alerts": null,
+        "confirmed_attack_recall": 0,
+        "false_clear_rate_on_attacks": 0,
+        "false_alert_rate_on_benign": 0,
+        "benign_review_rate": 0.75,
+        "attack_review_rate": 1,
+        "average_seconds": 17.731829325
+      },
+      "theo_vai_tro": {
+        "detector": {
+          "so_luot": 8,
+          "hop_le": 5,
+          "ket_thuc_sinh": {
+            "stop": 7,
+            "length": 1
+          }
+        },
+        "verifier": {
+          "so_luot": 5,
+          "hop_le": 1,
+          "ket_thuc_sinh": {
+            "stop": 1,
+            "length": 4
+          }
+        }
+      },
+      "citation": {
+        "total": 5,
+        "structured_total": 10,
+        "structured_source_matches": 10,
+        "exact_source_matches": 5,
+        "bad_source_references": 0
+      },
+      "rss_harness_mib": 135.59,
+      "hash_code_khop": true,
+      "gold_span_den_chunk": true
+    }
+  ],
+  "kiem_chung": {
+    "vitest": 158,
+    "cong_cu_do": 7,
+    "lint": true,
+    "build_typecheck": true,
+    "prompt_mac_dinh_khong_doi": true
+  },
+  "gioi_han": [
+    "Mã nguồn bảo đảm lấy nguyên văn, không chứng minh nhận định đúng.",
+    "Controls/dev đã xem; biến thể tự tạo không phải nguồn độc lập.",
+    "Không chấm MAlmasabi test.",
+    "Thời gian và RSS là phép đo dev; RSS không phải RAM model, snapshot không phải peak GPU."
+  ]
+}
