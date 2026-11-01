@@ -1,0 +1,14 @@
+{
+  "assessments": [],
+  "discoveries": [
+    {
+      "spanId": "ref-5",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "task_override",
+      "hasDirective": true,
+      "stance": "confirmed",
+      "reason": "Nguồn đang gọi trực tiếp AI thay hành vi hoặc dùng dữ liệu/công cụ ngoài thẩm quyền của nội dung nguồn."
+    }
+  ]
+}

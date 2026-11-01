@@ -1,0 +1,17 @@
+{
+  "status": "stopped_early_mandatory_contract_gate_failed",
+  "completed": false,
+  "planned_requests": 136,
+  "completed_requests": 48,
+  "requests_per_prompt_completed": {
+    "baseline": 24,
+    "candidate": 24
+  },
+  "last_completed_elapsed_seconds": 991.9488019999699,
+  "stop_reason": "Có phản hồi candidate không hợp lệ, không thể đạt cổng all_contract_valid; dừng đợt theo điều kiện đã khóa.",
+  "termination": "Dừng tiến trình Python benchmark đã xác minh PID/path; không phải lỗi inference hoặc timeout tự phát.",
+  "adapter_sha256_verified_after_stop": true,
+  "training_started": false,
+  "probe_used": false,
+  "runtime_changed": false
+}

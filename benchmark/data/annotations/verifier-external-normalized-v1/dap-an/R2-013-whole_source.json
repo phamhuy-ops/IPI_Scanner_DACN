@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "human",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Hướng dẫn người vận hành nhấn phím khởi động thiết bị và kiểm tra kết nối, không điều khiển AI hoặc yêu cầu vượt quyền."
+    }
+  ],
+  "discoveries": []
+}

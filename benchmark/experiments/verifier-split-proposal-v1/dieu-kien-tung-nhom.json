@@ -1,0 +1,4526 @@
+{
+  "groups": [
+    {
+      "group_id": "group-8c4450c19a23",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-context-transfer-v1:ct-019",
+        "verifier-context-transfer-v1:ct-020",
+        "verifier-context-transfer-v1:ct-021",
+        "verifier-context-transfer-v1:ct-022",
+        "verifier-context-transfer-v1:ct-023",
+        "verifier-context-transfer-v1:ct-024"
+      ],
+      "records": 6,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 4,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 6
+      },
+      "families": {
+        "project_authored": 6
+      },
+      "sources": {
+        "project_authored_context_transfer": 6
+      },
+      "largest_group": 6,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-7d20905d52c0",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-articles-v1:vi-article-026",
+        "verifier-vietnamese-articles-v1:vi-article-027",
+        "verifier-vietnamese-articles-v1:vi-article-028",
+        "verifier-vietnamese-articles-v1:vi-article-029",
+        "verifier-vietnamese-articles-v1:vi-article-030"
+      ],
+      "records": 5,
+      "groups": 1,
+      "stances": {
+        "dismissed": 3,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 5
+      },
+      "families": {
+        "vi.wikipedia.org": 5
+      },
+      "sources": {
+        "vi.wikipedia.org+authored_variants": 5
+      },
+      "largest_group": 5,
+      "source_evidence_kinds": [
+        "article_attribution_declared_not_article_specific_clearance"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-47dbdbfeebca",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-recipient-contrast-v1:rc-021",
+        "verifier-recipient-contrast-v1:rc-022",
+        "verifier-recipient-contrast-v1:rc-023",
+        "verifier-recipient-contrast-v1:rc-024"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_recipient_contrast": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-9f3ae3e7da67",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-006"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-97990cc6743f",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-recipient-contrast-v1:rc-029",
+        "verifier-recipient-contrast-v1:rc-030",
+        "verifier-recipient-contrast-v1:rc-031",
+        "verifier-recipient-contrast-v1:rc-032"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_recipient_contrast": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-a9fbf12d9e16",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-workflow-v1:vw-001",
+        "verifier-vietnamese-workflow-v1:vw-002",
+        "verifier-vietnamese-workflow-v1:vw-003",
+        "verifier-vietnamese-workflow-v1:vw-004"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_vietnamese_workflow": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-add90d851526",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-gap-v1:gap-010",
+        "verifier-gap-v1:gap-011",
+        "verifier-gap-v1:gap-012"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1,
+        "dismissed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 3
+      },
+      "families": {
+        "project_authored": 3
+      },
+      "sources": {
+        "verifier-gap-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-e72cde67200b",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-003"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-8f54041af829",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-markdown-v1:vm-001",
+        "verifier-vietnamese-markdown-v1:vm-002",
+        "verifier-vietnamese-markdown-v1:vm-003"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "OEVIETNAM/markdown-vietnamese": 3
+      },
+      "sources": {
+        "OEVIETNAM/markdown-vietnamese": 1,
+        "OEVIETNAM/markdown-vietnamese+authored_variants": 2
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "pinned_document_license"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-a3a99a1400d9",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-gap-v1:gap-001",
+        "verifier-gap-v1:gap-002",
+        "verifier-gap-v1:gap-003",
+        "verifier-gap-v1:gap-007",
+        "verifier-gap-v1:gap-008",
+        "verifier-gap-v1:gap-009",
+        "verifier-gap-v1:gap-013",
+        "verifier-gap-v1:gap-014",
+        "verifier-gap-v1:gap-015"
+      ],
+      "records": 9,
+      "groups": 1,
+      "stances": {
+        "confirmed": 3,
+        "dismissed": 3,
+        "uncertain": 3
+      },
+      "languages": {
+        "vi": 9
+      },
+      "families": {
+        "project_authored": 9
+      },
+      "sources": {
+        "verifier-gap-v1": 9
+      },
+      "largest_group": 9,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-7a62c9a28694",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-fp-007"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-1f42c814ea7a",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-fp-004"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-feb360ff317a",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-context-v1:ec-007",
+        "verifier-external-context-v1:ec-008"
+      ],
+      "records": 2,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1,
+        "en-vi": 1
+      },
+      "families": {
+        "python/cpython": 2
+      },
+      "sources": {
+        "python/cpython": 1,
+        "python/cpython+authored_injection": 1
+      },
+      "largest_group": 2,
+      "source_evidence_kinds": [
+        "pinned_external_license_document"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-ece23ea0ba80",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-fp-073"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-a3f01fe1f38f",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-fp-002"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-ffe613a80abf",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-004"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-6ba647441b0b",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-phase2-037"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-f4207cceb1f8",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-phase2-001"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-dec241d54188",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-013",
+        "verifier-external-ai-v1:ext3-014",
+        "verifier-external-ai-v1:ext3-015",
+        "verifier-external-ai-v1:ext3-016",
+        "verifier-external-ai-v1:ext3-017",
+        "verifier-external-ai-v1:ext3-018",
+        "verifier-external-ai-v1:ext3-019",
+        "verifier-external-ai-v1:ext3-020",
+        "verifier-external-ai-v1:ext3-021",
+        "verifier-external-ai-v1:ext3-022",
+        "verifier-external-ai-v1:ext3-023",
+        "verifier-external-ai-v1:ext3-024",
+        "verifier-external-ai-v1:ext3-025",
+        "verifier-external-ai-v1:ext3-026",
+        "verifier-external-ai-v1:ext3-027",
+        "verifier-external-ai-v1:ext3-028",
+        "verifier-external-ai-v1:ext3-029",
+        "verifier-external-ai-v1:ext3-030",
+        "verifier-external-context-v1:ec-013",
+        "verifier-external-context-v1:ec-014",
+        "verifier-external-context-v1:ec-015",
+        "verifier-external-context-v1:ec-016",
+        "verifier-external-context-v1:ec-017",
+        "verifier-external-context-v1:ec-018",
+        "verifier-external-context-v1:ec-019",
+        "verifier-external-context-v1:ec-020",
+        "verifier-external-context-v1:ec-021",
+        "verifier-external-context-v1:ec-022",
+        "verifier-external-context-v1:ec-023",
+        "verifier-external-context-v1:ec-024"
+      ],
+      "records": 30,
+      "groups": 1,
+      "stances": {
+        "uncertain": 12,
+        "confirmed": 18
+      },
+      "languages": {
+        "en": 30
+      },
+      "families": {
+        "uiuc-kang-lab/InjecAgent": 30
+      },
+      "sources": {
+        "uiuc-kang-lab/InjecAgent": 30
+      },
+      "largest_group": 30,
+      "source_evidence_kinds": [
+        "pinned_external_license_document"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-e35a70834dcb",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-context-v1:ec-003",
+        "verifier-external-context-v1:ec-004"
+      ],
+      "records": 2,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1,
+        "en-vi": 1
+      },
+      "families": {
+        "python/cpython": 2
+      },
+      "sources": {
+        "python/cpython": 1,
+        "python/cpython+authored_injection": 1
+      },
+      "largest_group": 2,
+      "source_evidence_kinds": [
+        "pinned_external_license_document"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-9f499dbd6532",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-business-v1:vb-016",
+        "verifier-vietnamese-business-v1:vb-017",
+        "verifier-vietnamese-business-v1:vb-018",
+        "verifier-vietnamese-business-v1:vb-019",
+        "verifier-vietnamese-business-v1:vb-020"
+      ],
+      "records": 5,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 2,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 5
+      },
+      "families": {
+        "project_authored": 5
+      },
+      "sources": {
+        "project_authored_vietnamese_business": 5
+      },
+      "largest_group": 5,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-4123482d8e8c",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-recipient-contrast-v1:rc-025",
+        "verifier-recipient-contrast-v1:rc-026",
+        "verifier-recipient-contrast-v1:rc-027",
+        "verifier-recipient-contrast-v1:rc-028"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_recipient_contrast": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-5db3651c61dd",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-workflow-v1:vw-009",
+        "verifier-vietnamese-workflow-v1:vw-010",
+        "verifier-vietnamese-workflow-v1:vw-011",
+        "verifier-vietnamese-workflow-v1:vw-012"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_vietnamese_workflow": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-ef24976e730c",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-recipient-contrast-v1:rc-017",
+        "verifier-recipient-contrast-v1:rc-018",
+        "verifier-recipient-contrast-v1:rc-019",
+        "verifier-recipient-contrast-v1:rc-020"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_recipient_contrast": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-c41c7c808194",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-fp-003"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-8ec5523cc43e",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-fp-006"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-0531e4c2d607",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-articles-v1:vi-article-001",
+        "verifier-vietnamese-articles-v1:vi-article-002",
+        "verifier-vietnamese-articles-v1:vi-article-003",
+        "verifier-vietnamese-articles-v1:vi-article-004",
+        "verifier-vietnamese-articles-v1:vi-article-005"
+      ],
+      "records": 5,
+      "groups": 1,
+      "stances": {
+        "dismissed": 3,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 5
+      },
+      "families": {
+        "vi.wikipedia.org": 5
+      },
+      "sources": {
+        "vi.wikipedia.org+authored_variants": 5
+      },
+      "largest_group": 5,
+      "source_evidence_kinds": [
+        "article_attribution_declared_not_article_specific_clearance"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-766ecbe06aad",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-fp-077"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-a47b13dde279",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-context-v1:ec-009",
+        "verifier-external-context-v1:ec-010"
+      ],
+      "records": 2,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 2
+      },
+      "families": {
+        "python/cpython": 2
+      },
+      "sources": {
+        "python/cpython": 1,
+        "python/cpython+authored_injection": 1
+      },
+      "largest_group": 2,
+      "source_evidence_kinds": [
+        "pinned_external_license_document"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-b46a50f4c86a",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-workflow-v1:vw-005",
+        "verifier-vietnamese-workflow-v1:vw-006",
+        "verifier-vietnamese-workflow-v1:vw-007",
+        "verifier-vietnamese-workflow-v1:vw-008"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_vietnamese_workflow": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-ee99db607312",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-markdown-v1:vm-007",
+        "verifier-vietnamese-markdown-v1:vm-008",
+        "verifier-vietnamese-markdown-v1:vm-009"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "OEVIETNAM/markdown-vietnamese": 3
+      },
+      "sources": {
+        "OEVIETNAM/markdown-vietnamese": 1,
+        "OEVIETNAM/markdown-vietnamese+authored_variants": 2
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "pinned_document_license"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-8ae3e88107bf",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-007"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-4ed732f4622f",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-phase2-004"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-72737e5bf536",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-fp-005"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-c8e3c3524633",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-gap-v1:gap-004",
+        "verifier-gap-v1:gap-005",
+        "verifier-gap-v1:gap-006"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1,
+        "dismissed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 3
+      },
+      "families": {
+        "project_authored": 3
+      },
+      "sources": {
+        "verifier-gap-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-d235eeefa797",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-markdown-v1:vm-013",
+        "verifier-vietnamese-markdown-v1:vm-014",
+        "verifier-vietnamese-markdown-v1:vm-015"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "OEVIETNAM/markdown-vietnamese": 3
+      },
+      "sources": {
+        "OEVIETNAM/markdown-vietnamese": 1,
+        "OEVIETNAM/markdown-vietnamese+authored_variants": 2
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "pinned_document_license"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-41a48fbc6c60",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-009"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-cf3beca41b96",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-fp-079"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-dd240b64436f",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-articles-v1:vi-article-021",
+        "verifier-vietnamese-articles-v1:vi-article-022",
+        "verifier-vietnamese-articles-v1:vi-article-023",
+        "verifier-vietnamese-articles-v1:vi-article-024",
+        "verifier-vietnamese-articles-v1:vi-article-025"
+      ],
+      "records": 5,
+      "groups": 1,
+      "stances": {
+        "dismissed": 3,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 5
+      },
+      "families": {
+        "vi.wikipedia.org": 5
+      },
+      "sources": {
+        "vi.wikipedia.org+authored_variants": 5
+      },
+      "largest_group": 5,
+      "source_evidence_kinds": [
+        "article_attribution_declared_not_article_specific_clearance"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-4c09831f9700",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-phase2-046"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-7bd50c826220",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-fp-199"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-18f68af02f49",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-markdown-v1:vm-004",
+        "verifier-vietnamese-markdown-v1:vm-005",
+        "verifier-vietnamese-markdown-v1:vm-006"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "OEVIETNAM/markdown-vietnamese": 3
+      },
+      "sources": {
+        "OEVIETNAM/markdown-vietnamese": 1,
+        "OEVIETNAM/markdown-vietnamese+authored_variants": 2
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "pinned_document_license"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-e8de207fcfde",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-011"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-5a19c268a047",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-context-transfer-v1:ct-001",
+        "verifier-context-transfer-v1:ct-002",
+        "verifier-context-transfer-v1:ct-003",
+        "verifier-context-transfer-v1:ct-004",
+        "verifier-context-transfer-v1:ct-005",
+        "verifier-context-transfer-v1:ct-006"
+      ],
+      "records": 6,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 4,
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 6
+      },
+      "families": {
+        "project_authored": 6
+      },
+      "sources": {
+        "project_authored_context_transfer": 6
+      },
+      "largest_group": 6,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-dc773de25d34",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-vietnamese-workflow-v1:vw-013",
+        "verifier-vietnamese-workflow-v1:vw-014",
+        "verifier-vietnamese-workflow-v1:vw-015",
+        "verifier-vietnamese-workflow-v1:vw-016"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_vietnamese_workflow": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-b4b83b2a0288",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-recipient-contrast-v1:rc-013",
+        "verifier-recipient-contrast-v1:rc-014",
+        "verifier-recipient-contrast-v1:rc-015",
+        "verifier-recipient-contrast-v1:rc-016"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_recipient_contrast": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-b2bef154b4da",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-recipient-contrast-v1:rc-005",
+        "verifier-recipient-contrast-v1:rc-006",
+        "verifier-recipient-contrast-v1:rc-007",
+        "verifier-recipient-contrast-v1:rc-008"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_recipient_contrast": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-9e1a2d036963",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-context-transfer-v1:ct-013",
+        "verifier-context-transfer-v1:ct-014",
+        "verifier-context-transfer-v1:ct-015",
+        "verifier-context-transfer-v1:ct-016",
+        "verifier-context-transfer-v1:ct-017",
+        "verifier-context-transfer-v1:ct-018"
+      ],
+      "records": 6,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 4,
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 6
+      },
+      "families": {
+        "project_authored": 6
+      },
+      "sources": {
+        "project_authored_context_transfer": 6
+      },
+      "largest_group": 6,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-9b81a1148f40",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-context-transfer-v1:ct-025",
+        "verifier-context-transfer-v1:ct-026",
+        "verifier-context-transfer-v1:ct-027",
+        "verifier-context-transfer-v1:ct-028",
+        "verifier-context-transfer-v1:ct-029",
+        "verifier-context-transfer-v1:ct-030"
+      ],
+      "records": 6,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 4,
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 6
+      },
+      "families": {
+        "project_authored": 6
+      },
+      "sources": {
+        "project_authored_context_transfer": 6
+      },
+      "largest_group": 6,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-b37717a35c95",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-context-v1:ec-011",
+        "verifier-external-context-v1:ec-012"
+      ],
+      "records": 2,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1,
+        "en-vi": 1
+      },
+      "families": {
+        "python/cpython": 2
+      },
+      "sources": {
+        "python/cpython": 1,
+        "python/cpython+authored_injection": 1
+      },
+      "largest_group": 2,
+      "source_evidence_kinds": [
+        "pinned_external_license_document"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-cc89257697c4",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-context-transfer-v1:ct-007",
+        "verifier-context-transfer-v1:ct-008",
+        "verifier-context-transfer-v1:ct-009",
+        "verifier-context-transfer-v1:ct-010",
+        "verifier-context-transfer-v1:ct-011",
+        "verifier-context-transfer-v1:ct-012"
+      ],
+      "records": 6,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 4,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 6
+      },
+      "families": {
+        "project_authored": 6
+      },
+      "sources": {
+        "project_authored_context_transfer": 6
+      },
+      "largest_group": 6,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-90fa4355f263",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-phase2-002"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-44962e4b05b2",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-fp-008"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-446b3323fcfd",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-context-v1:ec-001",
+        "verifier-external-context-v1:ec-002"
+      ],
+      "records": 2,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 2
+      },
+      "families": {
+        "python/cpython": 2
+      },
+      "sources": {
+        "python/cpython": 1,
+        "python/cpython+authored_injection": 1
+      },
+      "largest_group": 2,
+      "source_evidence_kinds": [
+        "pinned_external_license_document"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-9f5332585547",
+      "proposed_role": "train",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-012"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-033643bd79e2",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0033-463c34f3"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-03ccb899044b",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0056-1d019692"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "zh": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-07d26ec5d37f",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-addressee-context-v1:ac-03",
+        "verifier-addressee-context-v1:ac-04",
+        "verifier-addressee-context-v1:ac-05",
+        "verifier-addressee-context-v1:ac-06",
+        "verifier-addressee-context-v1:ac-07",
+        "verifier-addressee-context-v1:ac-08"
+      ],
+      "records": 6,
+      "groups": 1,
+      "stances": {
+        "confirmed": 2,
+        "dismissed": 4
+      },
+      "languages": {
+        "en": 3,
+        "vi": 3
+      },
+      "families": {
+        "authored_context_controls": 6
+      },
+      "sources": {
+        "authored_context_controls": 6
+      },
+      "largest_group": 6,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-1079873a7aff",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-batch-v1:vf-007",
+        "verifier-batch-v1:vf-018",
+        "verifier-batch-v1:vf-020"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1,
+        "dismissed": 2
+      },
+      "languages": {
+        "en": 3
+      },
+      "families": {
+        "verifier-batch-v1": 3
+      },
+      "sources": {
+        "verifier-batch-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-172d6ffda296",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0046-990e7221"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-2a76a1ec1ee5",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0012-7e24f5e6"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-3207bd7a1429",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-batch-v1:vf-012",
+        "verifier-batch-v1:vf-015",
+        "verifier-batch-v1:vf-023"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "uncertain": 1,
+        "dismissed": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 3
+      },
+      "families": {
+        "verifier-batch-v1": 3
+      },
+      "sources": {
+        "verifier-batch-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-3e2cdfd55d3c",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0016-b1d1ebf9"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-434d1c300ee2",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0004-2c788ef3"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "zh": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-45c0e0d5e284",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-vietnamese-v1:V3-001",
+        "verifier-vietnamese-v1:V3-005",
+        "verifier-vietnamese-v1:V3-014"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1,
+        "uncertain": 1,
+        "dismissed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "verifier-vietnamese-v1": 3
+      },
+      "sources": {
+        "verifier-vietnamese-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-495413a1c599",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0098-0be1a2e0"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-4f155465469f",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0097-394af4ef"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "zh": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-50b69e69dc3e",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0014-220c66f9"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-5a460361055d",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-batch-v1:vf-022",
+        "verifier-batch-v1:vf-024",
+        "verifier-batch-v1:vf-029"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 3
+      },
+      "families": {
+        "verifier-batch-v1": 3
+      },
+      "sources": {
+        "verifier-batch-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-62f19b39c0a3",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0017-c4d2e538"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-638d002da68a",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-batch-v1:vf-002",
+        "verifier-batch-v1:vf-025",
+        "verifier-batch-v1:vf-027"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "uncertain": 1,
+        "dismissed": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "verifier-batch-v1": 3
+      },
+      "sources": {
+        "verifier-batch-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-6a604a3a5029",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-vietnamese-v1:V3-003",
+        "verifier-vietnamese-v1:V3-004",
+        "verifier-vietnamese-v1:V3-006"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "uncertain": 1,
+        "dismissed": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "verifier-vietnamese-v1": 3
+      },
+      "sources": {
+        "verifier-vietnamese-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-718746dc9fa6",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-vietnamese-articles-v1:vi-article-011",
+        "verifier-vietnamese-articles-v1:vi-article-012",
+        "verifier-vietnamese-articles-v1:vi-article-013",
+        "verifier-vietnamese-articles-v1:vi-article-014",
+        "verifier-vietnamese-articles-v1:vi-article-015",
+        "verifier-addressee-context-v1:ac-01"
+      ],
+      "records": 6,
+      "groups": 1,
+      "stances": {
+        "dismissed": 4,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 6
+      },
+      "families": {
+        "vi.wikipedia.org": 5,
+        "captured_energy_excerpt": 1
+      },
+      "sources": {
+        "vi.wikipedia.org+authored_variants": 5,
+        "captured_energy_excerpt": 1
+      },
+      "largest_group": 6,
+      "source_evidence_kinds": [
+        "article_attribution_declared_not_article_specific_clearance",
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-743566b7d9f1",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0072-46f87530"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-7ef9d18b2ccd",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0013-5e68cad3"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-80180f4d72d1",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0015-ce348595"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-836dea35b0ff",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-batch-v1:vf-006",
+        "verifier-batch-v1:vf-017",
+        "verifier-batch-v1:vf-030"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1,
+        "uncertain": 1,
+        "dismissed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "verifier-batch-v1": 3
+      },
+      "sources": {
+        "verifier-batch-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-84b2b27e5207",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0007-6f8eb908"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-8e8edd4fcd66",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-batch-v1:vf-004",
+        "verifier-batch-v1:vf-008",
+        "verifier-batch-v1:vf-026"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "uncertain": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 3
+      },
+      "families": {
+        "verifier-batch-v1": 3
+      },
+      "sources": {
+        "verifier-batch-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-9036e155e2b5",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0060-ac0984af"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-a068538c2885",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0025-f4a0e2c4"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "zh": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-a17b54768512",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0040-003afab6"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-a6e9ebcca086",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0011-b2c71fb6"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-a80808433646",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-vietnamese-v1:V3-002",
+        "verifier-vietnamese-v1:V3-007",
+        "verifier-vietnamese-v1:V3-012"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1,
+        "uncertain": 1,
+        "dismissed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "verifier-vietnamese-v1": 3
+      },
+      "sources": {
+        "verifier-vietnamese-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-acd04e2d1796",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-vietnamese-v1:V3-008",
+        "verifier-vietnamese-v1:V3-009",
+        "verifier-vietnamese-v1:V3-010"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "uncertain": 1,
+        "confirmed": 1,
+        "dismissed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "verifier-vietnamese-v1": 3
+      },
+      "sources": {
+        "verifier-vietnamese-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-b0db58d95951",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0002-f3806686"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-c1ef7e09f8da",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-batch-v1:vf-009",
+        "verifier-batch-v1:vf-010",
+        "verifier-batch-v1:vf-014"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "confirmed": 2,
+        "dismissed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "verifier-batch-v1": 3
+      },
+      "sources": {
+        "verifier-batch-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-c62e17f8720d",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0023-9afd9588"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-ce256043dd38",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-batch-v1:vf-001",
+        "verifier-batch-v1:vf-003",
+        "verifier-batch-v1:vf-021"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1,
+        "dismissed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "verifier-batch-v1": 3
+      },
+      "sources": {
+        "verifier-batch-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-e3e3699730da",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-vietnamese-v1:V3-011",
+        "verifier-vietnamese-v1:V3-013",
+        "verifier-vietnamese-v1:V3-015"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "uncertain": 1,
+        "dismissed": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "verifier-vietnamese-v1": 3
+      },
+      "sources": {
+        "verifier-vietnamese-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-e91ed1792947",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0010-12f63f21"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-ee109dce99fe",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-batch-v1:vf-011",
+        "verifier-batch-v1:vf-013",
+        "verifier-batch-v1:vf-016"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "confirmed": 2,
+        "dismissed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "verifier-batch-v1": 3
+      },
+      "sources": {
+        "verifier-batch-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-ee13a1deb582",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0006-53e0168e"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-f01182bda458",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0051-7ac63a31"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-f23014d2a3d6",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0074-9e918b74"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-f4181dd4477d",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0046-658ac079"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-fa7dd4524152",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-notinject-0059-243abe44"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-fb8888e1263b",
+      "proposed_role": "dev",
+      "member_ids": [
+        "verifier-batch-v1:vf-005",
+        "verifier-batch-v1:vf-019",
+        "verifier-batch-v1:vf-028"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "uncertain": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 3
+      },
+      "families": {
+        "verifier-batch-v1": 3
+      },
+      "sources": {
+        "verifier-batch-v1": 3
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-ff6cff3052d9",
+      "proposed_role": "dev",
+      "member_ids": [
+        "exp-realistic-0008-73df88f2"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "sources": {
+        "treycsa/realistic-prompt-injections": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "source_provenance_review_required"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-930e3a4e1552",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-phase2-041"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-207b2f527b85",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-context-transfer-v1:ct-031",
+        "verifier-context-transfer-v1:ct-032",
+        "verifier-context-transfer-v1:ct-033",
+        "verifier-context-transfer-v1:ct-034",
+        "verifier-context-transfer-v1:ct-035",
+        "verifier-context-transfer-v1:ct-036"
+      ],
+      "records": 6,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 4,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 6
+      },
+      "families": {
+        "project_authored": 6
+      },
+      "sources": {
+        "project_authored_context_transfer": 6
+      },
+      "largest_group": 6,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-544b3b4a5f68",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-phase2-047"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-49f23eba69eb",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-vietnamese-articles-v1:vi-article-006",
+        "verifier-vietnamese-articles-v1:vi-article-007",
+        "verifier-vietnamese-articles-v1:vi-article-008",
+        "verifier-vietnamese-articles-v1:vi-article-009",
+        "verifier-vietnamese-articles-v1:vi-article-010"
+      ],
+      "records": 5,
+      "groups": 1,
+      "stances": {
+        "dismissed": 3,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 5
+      },
+      "families": {
+        "vi.wikipedia.org": 5
+      },
+      "sources": {
+        "vi.wikipedia.org+authored_variants": 5
+      },
+      "largest_group": 5,
+      "source_evidence_kinds": [
+        "article_attribution_declared_not_article_specific_clearance"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-faae230493fc",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-vietnamese-business-v1:vb-001",
+        "verifier-vietnamese-business-v1:vb-002",
+        "verifier-vietnamese-business-v1:vb-003",
+        "verifier-vietnamese-business-v1:vb-004",
+        "verifier-vietnamese-business-v1:vb-005"
+      ],
+      "records": 5,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 2,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 5
+      },
+      "families": {
+        "project_authored": 5
+      },
+      "sources": {
+        "project_authored_vietnamese_business": 5
+      },
+      "largest_group": 5,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-1d7745dbbcc8",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-recipient-contrast-v1:rc-009",
+        "verifier-recipient-contrast-v1:rc-010",
+        "verifier-recipient-contrast-v1:rc-011",
+        "verifier-recipient-contrast-v1:rc-012"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_recipient_contrast": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-68965096a4cf",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-external-context-v1:ec-005",
+        "verifier-external-context-v1:ec-006"
+      ],
+      "records": 2,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1,
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 2
+      },
+      "families": {
+        "python/cpython": 2
+      },
+      "sources": {
+        "python/cpython": 1,
+        "python/cpython+authored_injection": 1
+      },
+      "largest_group": 2,
+      "source_evidence_kinds": [
+        "pinned_external_license_document"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-02f3f6ccd31b",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-vietnamese-business-v1:vb-011",
+        "verifier-vietnamese-business-v1:vb-012",
+        "verifier-vietnamese-business-v1:vb-013",
+        "verifier-vietnamese-business-v1:vb-014",
+        "verifier-vietnamese-business-v1:vb-015"
+      ],
+      "records": 5,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 2,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 5
+      },
+      "families": {
+        "project_authored": 5
+      },
+      "sources": {
+        "project_authored_vietnamese_business": 5
+      },
+      "largest_group": 5,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-aae13ef7cf62",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-recipient-contrast-v1:rc-001",
+        "verifier-recipient-contrast-v1:rc-002",
+        "verifier-recipient-contrast-v1:rc-003",
+        "verifier-recipient-contrast-v1:rc-004"
+      ],
+      "records": 4,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 4
+      },
+      "families": {
+        "project_authored": 4
+      },
+      "sources": {
+        "project_authored_recipient_contrast": 4
+      },
+      "largest_group": 4,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-aae15aa693a9",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-phase2-044"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-35624496617f",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-phase2-003"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "confirmed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-dc80e3be73f8",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-openapi-context-v1:oa-001",
+        "verifier-openapi-context-v1:oa-002",
+        "verifier-openapi-context-v1:oa-003",
+        "verifier-openapi-context-v1:oa-004",
+        "verifier-openapi-context-v1:oa-005",
+        "verifier-openapi-context-v1:oa-006",
+        "verifier-openapi-context-v1:oa-007",
+        "verifier-openapi-context-v1:oa-008",
+        "verifier-openapi-context-v1:oa-009",
+        "verifier-openapi-context-v1:oa-010",
+        "verifier-openapi-context-v1:oa-011",
+        "verifier-openapi-context-v1:oa-012",
+        "verifier-openapi-context-v1:oa-013",
+        "verifier-openapi-context-v1:oa-014",
+        "verifier-openapi-context-v1:oa-015"
+      ],
+      "records": 15,
+      "groups": 1,
+      "stances": {
+        "dismissed": 6,
+        "confirmed": 6,
+        "uncertain": 3
+      },
+      "languages": {
+        "en": 15
+      },
+      "families": {
+        "OAI/OpenAPI-Specification": 15
+      },
+      "sources": {
+        "OAI/OpenAPI-Specification": 3,
+        "OAI/OpenAPI-Specification+authored_variants": 12
+      },
+      "largest_group": 15,
+      "source_evidence_kinds": [
+        "pinned_document_license"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-cffa33600ea0",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-vietnamese-business-v1:vb-006",
+        "verifier-vietnamese-business-v1:vb-007",
+        "verifier-vietnamese-business-v1:vb-008",
+        "verifier-vietnamese-business-v1:vb-009",
+        "verifier-vietnamese-business-v1:vb-010"
+      ],
+      "records": 5,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 2,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 5
+      },
+      "families": {
+        "project_authored": 5
+      },
+      "sources": {
+        "project_authored_vietnamese_business": 5
+      },
+      "largest_group": 5,
+      "source_evidence_kinds": [
+        "project_authored_release_not_declared"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "own_authored_no_external_license_blocker",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-0c09b4c84423",
+      "proposed_role": "probe",
+      "member_ids": [
+        "verifier-vietnamese-articles-v1:vi-article-016",
+        "verifier-vietnamese-articles-v1:vi-article-017",
+        "verifier-vietnamese-articles-v1:vi-article-018",
+        "verifier-vietnamese-articles-v1:vi-article-019",
+        "verifier-vietnamese-articles-v1:vi-article-020"
+      ],
+      "records": 5,
+      "groups": 1,
+      "stances": {
+        "dismissed": 3,
+        "confirmed": 1,
+        "uncertain": 1
+      },
+      "languages": {
+        "vi": 5
+      },
+      "families": {
+        "vi.wikipedia.org": 5
+      },
+      "sources": {
+        "vi.wikipedia.org+authored_variants": 5
+      },
+      "largest_group": 5,
+      "source_evidence_kinds": [
+        "article_attribution_declared_not_article_specific_clearance"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-7370cce3bd64",
+      "proposed_role": "unused_candidates",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-005"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-6cf59c81355d",
+      "proposed_role": "unused_candidates",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-fp-074"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-cd2e9b0c5ee7",
+      "proposed_role": "unused_candidates",
+      "member_ids": [
+        "verifier-llmail-v1:llmail-fp-001"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-2aa7acbfd21f",
+      "proposed_role": "unused_candidates",
+      "member_ids": [
+        "verifier-vietnamese-markdown-v1:vm-010",
+        "verifier-vietnamese-markdown-v1:vm-011",
+        "verifier-vietnamese-markdown-v1:vm-012"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "OEVIETNAM/markdown-vietnamese": 3
+      },
+      "sources": {
+        "OEVIETNAM/markdown-vietnamese": 1,
+        "OEVIETNAM/markdown-vietnamese+authored_variants": 2
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "pinned_document_license"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-54ff8e8c149a",
+      "proposed_role": "unused_candidates",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-010"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-5f3ecf7cdc19",
+      "proposed_role": "unused_candidates",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-001"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-3b267f0f117e",
+      "proposed_role": "unused_candidates",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-002"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-df1d0ee567f5",
+      "proposed_role": "unused_candidates",
+      "member_ids": [
+        "verifier-llmail-expansion-v1:llmail-fp-075"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "sources": {
+        "microsoft/llmail-inject-challenge": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "pinned_dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-bd1904673fe0",
+      "proposed_role": "unused_candidates",
+      "member_ids": [
+        "verifier-external-ai-v1:ext3-008"
+      ],
+      "records": 1,
+      "groups": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "languages": {
+        "en": 1
+      },
+      "families": {
+        "leolee99/NotInject": 1
+      },
+      "sources": {
+        "leolee99/NotInject": 1
+      },
+      "largest_group": 1,
+      "source_evidence_kinds": [
+        "dataset_card_declaration"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "group_id": "group-3b008dcf346b",
+      "proposed_role": "unused_candidates",
+      "member_ids": [
+        "verifier-vietnamese-markdown-v1:vm-016",
+        "verifier-vietnamese-markdown-v1:vm-017",
+        "verifier-vietnamese-markdown-v1:vm-018"
+      ],
+      "records": 3,
+      "groups": 1,
+      "stances": {
+        "dismissed": 2,
+        "confirmed": 1
+      },
+      "languages": {
+        "vi": 3
+      },
+      "families": {
+        "OEVIETNAM/markdown-vietnamese": 3
+      },
+      "sources": {
+        "OEVIETNAM/markdown-vietnamese": 1,
+        "OEVIETNAM/markdown-vietnamese+authored_variants": 2
+      },
+      "largest_group": 3,
+      "source_evidence_kinds": [
+        "pinned_document_license"
+      ],
+      "evidence_hashes_verified": true,
+      "local_preparation_status": "source_evidence_present_conditions_retained",
+      "remaining_before_training_export": [
+        "Đối chiếu ghi công/notice theo nguồn trong bản xuất.",
+        "Chốt phạm vi riêng tư và phiên bản nhãn hiệu lực của từng thành viên.",
+        "Kiểm tra payload/target và token trên đúng bản xuất; không suy từ việc đủ số lượng."
+      ],
+      "training_eligible": false,
+      "final_split": null
+    }
+  ],
+  "training_ready": false
+}

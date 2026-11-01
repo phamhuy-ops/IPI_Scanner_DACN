@@ -1,0 +1,263 @@
+{
+  "changed_records": 12,
+  "reference_rows_with_text": 348,
+  "matches": [
+    {
+      "id": "verifier-recipient-contrast-v1:rc-005",
+      "reference_id": "verifier-recipient-contrast-v1:rc-006",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "trigram_jaccard_0.8",
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-005",
+      "reference_id": "verifier-recipient-contrast-v1:rc-007",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-006",
+      "reference_id": "verifier-recipient-contrast-v1:rc-006",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "trigram_jaccard_0.8",
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-006",
+      "reference_id": "verifier-recipient-contrast-v1:rc-007",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-013",
+      "reference_id": "verifier-recipient-contrast-v1:rc-014",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-013",
+      "reference_id": "verifier-recipient-contrast-v1:rc-015",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-014",
+      "reference_id": "verifier-recipient-contrast-v1:rc-014",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "trigram_jaccard_0.8",
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-014",
+      "reference_id": "verifier-recipient-contrast-v1:rc-015",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-017",
+      "reference_id": "verifier-recipient-contrast-v1:rc-018",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "trigram_jaccard_0.8",
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-017",
+      "reference_id": "verifier-recipient-contrast-v1:rc-019",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-018",
+      "reference_id": "verifier-recipient-contrast-v1:rc-018",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-018",
+      "reference_id": "verifier-recipient-contrast-v1:rc-019",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-021",
+      "reference_id": "verifier-recipient-contrast-v1:rc-022",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-021",
+      "reference_id": "verifier-recipient-contrast-v1:rc-023",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-022",
+      "reference_id": "verifier-recipient-contrast-v1:rc-022",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-022",
+      "reference_id": "verifier-recipient-contrast-v1:rc-023",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-025",
+      "reference_id": "verifier-recipient-contrast-v1:rc-026",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-025",
+      "reference_id": "verifier-recipient-contrast-v1:rc-027",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-026",
+      "reference_id": "verifier-recipient-contrast-v1:rc-026",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "trigram_jaccard_0.8",
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-026",
+      "reference_id": "verifier-recipient-contrast-v1:rc-027",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-029",
+      "reference_id": "verifier-recipient-contrast-v1:rc-030",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-029",
+      "reference_id": "verifier-recipient-contrast-v1:rc-031",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-030",
+      "reference_id": "verifier-recipient-contrast-v1:rc-030",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-030",
+      "reference_id": "verifier-recipient-contrast-v1:rc-031",
+      "reference_file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "same_group": true,
+      "reference_role": "train",
+      "reasons": [
+        "shared_12_token_passage"
+      ]
+    }
+  ],
+  "protected_matches": [],
+  "protected_match_count": 0,
+  "input_sha256": {
+    "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl": "6845aa33164da7ee61ffd45c12a5bf074cbc32c0187f94872748ef733fef69c5",
+    "benchmark/experiments/verifier-eligibility-v12/registry.jsonl": "429200e396ee281768d7af8e2baf74874dd016e9283e80c5e18df992842338b5",
+    "benchmark/data/annotations/verifier-role-authority-controls-v1/mau-cho-duyet.jsonl": "ecaa339382653fabdc1efcee2ef181c8c0466224c0b80a54ef7b5780d133bdf5"
+  },
+  "code_sha256": "195ce23fb4ca57e894d005d1a7d4c626ec0fdb95a22108079752ec50614bee62",
+  "limitations": [
+    "Heuristic từ vựng không bảo đảm độc lập ngữ nghĩa.",
+    "Không đọc đáp án test; registry không có text được bỏ qua, bản split cung cấp đủ 324 nguồn đã chọn."
+  ]
+}

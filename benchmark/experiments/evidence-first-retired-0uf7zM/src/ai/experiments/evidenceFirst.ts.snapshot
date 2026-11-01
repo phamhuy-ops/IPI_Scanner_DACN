@@ -1,0 +1,25 @@
+// Chỉ đổi thứ tự trường trong schema: trích nguồn -> giải thích -> stance.
+// Không thay nội dung prompt, văn bản nguồn hoặc điều kiện hợp lệ.
+export function evidenceFirstRequest(body: Record<string, unknown>): Record<string, unknown> {
+  const result = structuredClone(body);
+  const format = result.response_format as { type?: string; json_schema?: { schema?: unknown } };
+  if (format?.type !== 'json_schema' || !format.json_schema?.schema) throw new Error('Bản thử yêu cầu JSON schema.');
+  let changed = 0;
+  function visit(value: unknown) {
+    if (!value || typeof value !== 'object') return;
+    const row = value as Record<string, unknown>;
+    const fields = row.properties as Record<string, unknown> | undefined;
+    if (fields?.stance) {
+      const order = ['id', 'chunkId', 'quote', 'reason', 'stance'].filter(key => Object.hasOwn(fields, key));
+      if (!['chunkId', 'quote', 'reason'].every(key => Object.hasOwn(fields, key)) || Object.keys(fields).some(key => !order.includes(key))) throw new Error('Không phải shape nhận định classic-v1.');
+      if (!Array.isArray(row.required) || row.required.some(key => typeof key !== 'string' || !order.includes(key))) throw new Error('Thiếu danh sách trường bắt buộc classic-v1.');
+      row.properties = Object.fromEntries(order.map(key => [key, fields[key]]));
+      row.required = order.filter(key => (row.required as string[]).includes(key));
+      changed++;
+    }
+    for (const child of Object.values(row)) visit(child);
+  }
+  visit(format.json_schema.schema);
+  if (!changed) throw new Error('Không có nhận định classic-v1 để đổi thứ tự.');
+  return result;
+}

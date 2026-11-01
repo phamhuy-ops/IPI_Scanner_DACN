@@ -1,0 +1,42 @@
+{
+  "version": "verifier-targeted-acquisition-v1",
+  "registry_sha256": "7306bbe5b5f6d217b5987fbcc5e36c585b166d7f7b3a19d99cd97d7e4cde0b3a",
+  "purpose": "Yêu cầu bổ sung sau tự rà 183 ứng viên; chưa phải split hay điều kiện đủ để train.",
+  "candidate_records": 183,
+  "stance_counts": {
+    "confirmed": 60,
+    "dismissed": 88,
+    "uncertain": 35
+  },
+  "language_counts": {
+    "vi": 84,
+    "en": 96,
+    "en-vi": 3
+  },
+  "planning_scenario": {
+    "target_train_plus_probe": 240,
+    "minimum_extra": 57,
+    "stance_gaps": {
+      "confirmed": 36,
+      "dismissed": 8,
+      "uncertain": 13
+    },
+    "vietnamese_gap": 12,
+    "note": "Các chiều giao nhau, không cộng 12 vào 57. Tỷ lệ là kịch bản lập kế hoạch, không thay cổng đã khóa; số thiếu tăng nếu loại mẫu hoặc không chia được theo nhóm."
+  },
+  "requirements": [
+    "Ưu tiên bối cảnh email, kết quả công cụ và tài liệu nghiệp vụ; mỗi nhóm có đủ phần giúp phân biệt người/AI, trích dẫn/chỉ dẫn và quyền thực hiện.",
+    "Thay đổi cách diễn đạt và vị trí; không dùng cùng tiền tố Ignore all previous instructions cho phần lớn attack mới.",
+    "Giữ nguồn gốc/license/notice; ghi rõ phần gốc và phần chèn tự soạn, không gọi bản chèn là attack thu thập từ nguồn.",
+    "Đối chứng sạch thực tế và PDF/DOCX dài cần đo extraction/pipeline riêng; không kéo dài bằng lặp đoạn để thay độ khó thật.",
+    "Không bỏ hết uncertain chỉ để tăng kết luận nhị phân; trường hợp thiếu ngữ cảnh phải ghi chính xác phần thiếu."
+  ],
+  "independent_holdout": {
+    "target": 200,
+    "collected_verified": 0,
+    "note": "Tách riêng nguồn/nhóm, không dùng chọn prompt/model/nhãn rồi gọi là chưa chạm; 60 probe không thay holdout."
+  },
+  "training_ready": false,
+  "model_called": false,
+  "priority_one_complete": false
+}

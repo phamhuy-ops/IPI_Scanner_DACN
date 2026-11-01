@@ -5,6 +5,7 @@ const { performance } = require('node:perf_hooks');
 const { runIpiDocScan } = require('../engine/scanner/ipi-doc-scan');
 const { extractDocumentText } = require('../engine/document/extractors/document-text-extractor');
 const { summarize, checkCitations } = require('./round-one-metrics.cjs');
+const { makeBenchmarkDirectory } = require('./check-engines.js');
 const ROOT = path.resolve(__dirname, '..');
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const fingerprintFiles = [
@@ -17,7 +18,7 @@ const fingerprintFiles = [
   'engine/prefilter/document-prefilter.js', 'engine/prefilter/rules/ipi-document-rules.js', 'engine/models/finding.js',
   'engine/document/extractors/document-text-extractor.js', 'engine/document/chunking/semantic-chunker.js',
   'engine/document/extractors/html-source.js',
-  'engine/config/document-scan-config.js', 'scripts/run-round-one-eval.cjs', 'scripts/round-one-metrics.cjs',
+  'engine/config/document-scan-config.js', 'scripts/run-round-one-eval.cjs', 'scripts/round-one-metrics.cjs', 'scripts/check-engines.js',
 ];
 const fingerprints = () => Object.fromEntries(fingerprintFiles.map(file => [file, hash(fs.readFileSync(path.join(ROOT, file)))]));
 async function localGet(endpoint) {
@@ -60,7 +61,7 @@ async function main() {
   const { createServer } = await import('vite');
   const server = await createServer({ configFile: false, root: ROOT, server: { middlewareMode: true }, appType: 'custom' });
   fs.mkdirSync(path.join(ROOT, 'benchmark/results'), { recursive: true });
-  const output = fs.mkdtempSync(path.join(ROOT, 'benchmark/results/round-one-eval-'));
+  const output = makeBenchmarkDirectory('round-one-eval-');
   fs.writeFileSync(path.join(output, 'manifest.json'), manifestRaw);
   const records = [], calls = [];
   let currentCase = '', currentRole = 'detector';

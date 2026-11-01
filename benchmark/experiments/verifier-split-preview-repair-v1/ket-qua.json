@@ -1,0 +1,18 @@
+{
+  "demonstrated_failure": "Ba mẫu descriptive/hasDirective=false bị từ chối chỉ vì addressee human/unclear.",
+  "before": {
+    "records": 324,
+    "rendered_examples": 642,
+    "failed_examples": 6
+  },
+  "after": {
+    "records": 324,
+    "rendered_examples": 648,
+    "failed_examples": 0
+  },
+  "previous_payload_targets_unchanged": 642,
+  "scope": "Chỉ renderer chuẩn bị dữ liệu; không sửa schema/prompt/runtime Agent hoặc nhãn.",
+  "node_tests_passed": 2,
+  "vitest_tests_passed": 4,
+  "training_started": false
+}

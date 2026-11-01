@@ -1,0 +1,25 @@
+{
+  "repository": "OAI/OpenAPI-Specification",
+  "tag": "3.0.3",
+  "revision": "c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3",
+  "downloaded_at": "2026-10-26T13:21:42.156Z",
+  "assets": {
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3/LICENSE",
+      "sha256": "4948367c65e1ce06690e2cadc6e86fce1a6a6db55ef874ce4b78c0f472ce5f13",
+      "bytes": 11345
+    },
+    "examples/v3.0/petstore.yaml": {
+      "url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3/examples/v3.0/petstore.yaml",
+      "sha256": "ab60f59da478d4ac312cd9fabcc6cbd06f8f975ab8a1a0c2029b2a41f65fedd5",
+      "bytes": 2573
+    },
+    "examples/v3.0/petstore-expanded.yaml": {
+      "url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3/examples/v3.0/petstore-expanded.yaml",
+      "sha256": "65d1a5f7ea52cbb220d99d6fbe9125b9c1f9c54caf7303eadd82d774661b2a49",
+      "bytes": 5479
+    }
+  },
+  "license_declared": "Apache-2.0",
+  "code_sha256": "032767fdec3b3c1c26b9e30fa7fe02239b2e1c1e85298645f546b15d406fc209"
+}

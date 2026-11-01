@@ -1,0 +1,87 @@
+{
+  "records": 48,
+  "previews": 96,
+  "errors": [],
+  "stance_counts": {
+    "dismissed": 20,
+    "confirmed": 16,
+    "uncertain": 12
+  },
+  "languages": {
+    "en": 24,
+    "vi": 24
+  },
+  "parent_train_groups": 4,
+  "context_cells": {
+    "dismissed|assistant|active|none": 4,
+    "confirmed|assistant|active|answer_manipulation": 5,
+    "dismissed|assistant|quoted_example|answer_manipulation": 5,
+    "confirmed|assistant|active|data_disclosure": 2,
+    "dismissed|assistant|quoted_example|data_disclosure": 2,
+    "uncertain|assistant|active|unclear": 4,
+    "confirmed|assistant|active|tool_misuse": 5,
+    "dismissed|assistant|quoted_example|tool_misuse": 1,
+    "uncertain|assistant|unclear|task_override": 4,
+    "confirmed|assistant|active|task_override": 4,
+    "dismissed|assistant|quoted_example|task_override": 4,
+    "uncertain|unclear|active|tool_misuse": 4,
+    "dismissed|human|active|none": 4
+  },
+  "max_tokens": 1162,
+  "full_inventory_files": 102,
+  "unique_inventory_texts": 68730,
+  "full_corpus_components": [
+    {
+      "size": 16,
+      "drafts": 12,
+      "flags": []
+    },
+    {
+      "size": 16,
+      "drafts": 12,
+      "flags": []
+    },
+    {
+      "size": 16,
+      "drafts": 12,
+      "flags": []
+    },
+    {
+      "size": 16,
+      "drafts": 12,
+      "flags": []
+    }
+  ],
+  "input_sha256": {
+    "benchmark/data/annotations/verifier-supervision-batch-v1/mau-cho-duyet.jsonl": "3a41c64944e04341080b4ec1cdef94749d7b4428c9dc9a66e508d6b577fdac21",
+    "benchmark/data/annotations/verifier-supervision-batch-v1/ban-xem-truoc.json": "24270569a9067b03aa350d0fa5bd6abedc1159536ca86ea78ed239937faa271e",
+    "benchmark/data/annotations/verifier-supervision-batch-v1/danh-gia-ai.json": "bf2baa3c7df71e3a9c498c0ba31a97fcca9307df982908964f7cb9a420226e74",
+    "benchmark/experiments/verifier-supervision-batch-tokenizer-v1/ket-qua.json": "a3398b94c37f8be8d9c1090fb689c42a9e75b6f958f7a5842a969ca5643cfb85",
+    "benchmark/data/annotations/verifier-supervision-batch-v2/mau-cho-duyet.jsonl": "29bbb8749a9ba0328217835de9e172461c9f9578a8edfae90105374f992cfe86",
+    "benchmark/data/annotations/verifier-supervision-batch-v2/ban-xem-truoc.json": "53c766d54741f43b8d4eae6ed42554a9d1b8b1020e7c07352f37bebbd050b750",
+    "benchmark/data/annotations/verifier-supervision-batch-v2/danh-gia-ai.json": "b9decf943bf7ac496ea29467b7f0cd3853bee87cdcb46810bc5e4cbee4a1e7a0",
+    "benchmark/experiments/verifier-supervision-batch-tokenizer-v2/ket-qua.json": "90af6b693b3a108121adfebdc5371e46b05199ee9f1e44a92092d57c69868f67",
+    "benchmark/data/annotations/verifier-supervision-batch-v3/mau-cho-duyet.jsonl": "58e8eca4981c3fb781d8422ef8c22559f5cba6004a462e2982e501bc811788d9",
+    "benchmark/data/annotations/verifier-supervision-batch-v3/ban-xem-truoc.json": "993950f9266ad5a28150197e71be982f34e87b7d507ceeadf91dc8077f048f42",
+    "benchmark/data/annotations/verifier-supervision-batch-v3/danh-gia-ai.json": "476b560f53f8c6d0ceed549caa0039b6fdade2d70694e0b0d98f1b5b26985051",
+    "benchmark/experiments/verifier-supervision-batch-tokenizer-v3/ket-qua.json": "3788ab8ddfb713e8da1e15ddd48d01698213da26c3c945949d7c66982558c1c3",
+    "benchmark/data/annotations/verifier-supervision-batch-v4/mau-cho-duyet.jsonl": "65c351d7e3be307f02316a80db63fdd5657cec8d04e88e97c84216035f425398",
+    "benchmark/data/annotations/verifier-supervision-batch-v4/ban-xem-truoc.json": "1a6198b19ecd15852347d0899530281d0b2bd7f2a10b3cdb39eba17de6d5c1c0",
+    "benchmark/data/annotations/verifier-supervision-batch-v4/danh-gia-ai.json": "8d4a7bf5bdbc558fc9d75638bbad408538d355972fe88e6f0406bd7687a61d20",
+    "benchmark/experiments/verifier-supervision-batch-tokenizer-v4/ket-qua.json": "6cfc49c5f829b16049aa55ef4d41ed07d5ea0a20bd8d155eba35f6a24162778a",
+    "benchmark/experiments/verifier-supervision-review-v1/ma-tran-bo-sung.json": "3fac40c38ab2cfb332beba3d2b100cf93a47bc95ca9c47ca0ceeb4ee6da14ba4",
+    "benchmark/experiments/verifier-corpus-overlap-v21/ket-qua.json": "a86727492516797c33dc799768b3731c09552aed142805e1891d4b2c48055fa8"
+  },
+  "code_sha256": "47734b5282a0924113b2e471d089c304efeb04be24a70b2d486f693526999aae",
+  "technical_checks_passed": true,
+  "training_ready": false,
+  "model_called": false,
+  "training_started": false,
+  "data_release_changed": false,
+  "runtime_changed": false,
+  "limitations": [
+    "Bốn nhóm cha, không phải 48 nguồn độc lập; metadata kế thừa được giữ cả khi từ vựng mới.",
+    "Heuristic toàn kho không loại hết tương đồng ngữ nghĩa; chưa xác minh độc lập nhãn.",
+    "Chưa quyết định thay thế/ghép/upweight trong train 180; không tự nhập dev hoặc mở ngân sách huấn luyện mới."
+  ]
+}

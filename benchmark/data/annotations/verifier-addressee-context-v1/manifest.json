@@ -1,0 +1,32 @@
+{
+  "version": "verifier-addressee-context-v1",
+  "records": 7,
+  "quarantined": 1,
+  "parent_ids": 3,
+  "initial_groups": 2,
+  "preview_examples": 14,
+  "parser_valid": 14,
+  "review_status": "ai_reviewed_not_human_reviewed",
+  "training_ready": false,
+  "final_split_created": false,
+  "independent_holdout": false,
+  "source_file": "benchmark/experiments/citation-context-controls-v1/mau-da-khoa.json",
+  "source_sha256": "ef23c6950aeeafb0eae53da55078b88184b0d8ef5067c43ec291234b7ac7190f",
+  "code_sha256": {
+    "scripts/prepare-verifier-addressee.cjs": "ceb6f1ae225366bb730c67c13a5f3e8d86a358bf6dc3346e1c8830b66bf30fba",
+    "scripts/normalize-reviewed-external.ts": "244b3fc792ff4393195428409f5d30a8c1ff303acbb838c54a4824548571ade0",
+    "scripts/verifier-batch-renderer.ts": "804bc01e9cc4175ab4213794deb11ca35ecac1ff948e42ca8bfff22d243db5a2"
+  },
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "63c889ad5ffd08a8aed52daa86b654a1dea80b9d04732bd01a1e99cd49f8a3e4",
+    "cach-ly.jsonl": "0523781cedc30a63e0f1a9f093269402db1b6d3569a96b49200582460d383885",
+    "ban-xem-truoc.json": "9672071b952bf6d9997ff94e0546abe0423dbbad20eac8d14b14cef891e8d73e",
+    "doi-chieu-nhan-cu.json": "0d1c93ac405a2d91acbfbb9c0766022b64191ce95b8bdda060e83e3887b7b97d",
+    "danh-gia-ai.json": "16e53500d683fd6ece3349810fa98369345631c4be486d4450365c268faf7a06"
+  },
+  "limitations": [
+    "Ba parent ID không phải ba nguồn độc lập mới; một parent là bài cũ, hai parent là cặp ngôn ngữ cùng family.",
+    "Bảy bản ghi đã dùng chẩn đoán dev, chưa được nhập vào tập train hoặc holdout.",
+    "Parser đúng không chứng minh nhãn AI đúng ngoài thực tế."
+  ]
+}

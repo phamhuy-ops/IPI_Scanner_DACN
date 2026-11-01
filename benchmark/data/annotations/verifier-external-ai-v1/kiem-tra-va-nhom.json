@@ -1,0 +1,279 @@
+{
+  "records": 30,
+  "source_parents": 24,
+  "exact_rebuild_valid": 60,
+  "parser_valid": 60,
+  "ai_reviews": 30,
+  "candidate_records": 117,
+  "candidate_source_parents": 111,
+  "candidate_groups": 58,
+  "new_conservative_groups": 13,
+  "largest_new_component": 18,
+  "bipia_test_lexical_overlap_groups": 0,
+  "mapping": [
+    {
+      "id": "ext3-001",
+      "source_parent_id": "exp-notinject-0001-0b4d3c64",
+      "group_id": "cg-5f3ecf7cdc193e83",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-002",
+      "source_parent_id": "exp-notinject-0003-b34c3947",
+      "group_id": "cg-3b267f0f117e3471",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-003",
+      "source_parent_id": "exp-notinject-0006-ed04bb52",
+      "group_id": "cg-e72cde67200b5103",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-004",
+      "source_parent_id": "exp-notinject-0009-4526a3a0",
+      "group_id": "cg-ffe613a80abf800a",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-005",
+      "source_parent_id": "exp-notinject-0010-7964e493",
+      "group_id": "cg-7370cce3bd648e6f",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-006",
+      "source_parent_id": "exp-notinject-0015-58e5b47a",
+      "group_id": "cg-9f3ae3e7da67ee40",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-007",
+      "source_parent_id": "exp-notinject-0018-342d5285",
+      "group_id": "cg-8ae3e88107bf2442",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-008",
+      "source_parent_id": "exp-notinject-0023-d476b735",
+      "group_id": "cg-bd1904673fe080d3",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-009",
+      "source_parent_id": "exp-notinject-0027-657b19eb",
+      "group_id": "cg-41a48fbc6c60a1db",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-010",
+      "source_parent_id": "exp-notinject-0033-e164eb79",
+      "group_id": "cg-54ff8e8c149a9d81",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-011",
+      "source_parent_id": "exp-notinject-0041-7fe5537c",
+      "group_id": "cg-e8de207fcfdeab84",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-012",
+      "source_parent_id": "exp-notinject-0050-da315011",
+      "group_id": "cg-9f5332585547caf4",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-013",
+      "source_parent_id": "injecagent:dh:ab5c6815eb9e74ed:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-014",
+      "source_parent_id": "injecagent:dh:ab5c6815eb9e74ed:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-015",
+      "source_parent_id": "injecagent:dh:9623212792a77442:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-016",
+      "source_parent_id": "injecagent:dh:9623212792a77442:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-017",
+      "source_parent_id": "injecagent:dh:936375a380ed643a:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-018",
+      "source_parent_id": "injecagent:dh:936375a380ed643a:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-019",
+      "source_parent_id": "injecagent:dh:ba2790c3a625cc4c:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-020",
+      "source_parent_id": "injecagent:dh:ba2790c3a625cc4c:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-021",
+      "source_parent_id": "injecagent:dh:05da6375b0b5c74e:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-022",
+      "source_parent_id": "injecagent:dh:05da6375b0b5c74e:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-023",
+      "source_parent_id": "injecagent:dh:b452a53c8ab4a0ae:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-024",
+      "source_parent_id": "injecagent:dh:b452a53c8ab4a0ae:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-025",
+      "source_parent_id": "injecagent:ds:6571e48f0d52c7d8:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-026",
+      "source_parent_id": "injecagent:ds:fc2947184af3df7f:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-027",
+      "source_parent_id": "injecagent:ds:de577b9edc88100e:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-028",
+      "source_parent_id": "injecagent:ds:1954e319a2c12bc3:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-029",
+      "source_parent_id": "injecagent:ds:602ad5404cf4c996:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    },
+    {
+      "id": "ext3-030",
+      "source_parent_id": "injecagent:ds:cb83ccd98ae2d484:WebBrowserNavigateTo",
+      "group_id": "cg-fd4e4716d04b0bdd",
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null,
+      "training_eligible": false
+    }
+  ],
+  "final_split_created": false,
+  "training_ready": false,
+  "independent_holdout_verified": false,
+  "license_evidence": [
+    {
+      "file": "benchmark/data/raw/notinject/README.md",
+      "sha256": "ffaf685021522a526f94af2047e5099ec6b7439a462c67e0ecaca0d631a0d43f",
+      "declaration": "MIT",
+      "rights_independently_verified": false
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/LICENCE",
+      "sha256": "b48589499dbb84caa796b00b4ea652b0443e49660282c44d890fd473b8c0674e",
+      "declaration": "MIT",
+      "rights_independently_verified": false
+    }
+  ],
+  "corpus_sha256": "38215a0dfa54d4f76b0f4f19ca9a7c88ce2da7237cf0403e8e42aa4efe22c1b4",
+  "script_sha256": "3ec1c3f4675a927032cdb3adf6ccc7b4b27ad44b129eb5fbafd3b142bc373d45",
+  "limitations": [
+    "111 parent ID không chứng minh độc lập ngữ nghĩa.",
+    "18 bản InjecAgent phải giữ chung nhóm, không tăng độ phủ bằng biến thể.",
+    "Nhãn AI chưa phải đánh giá độc lập hoặc người dùng duyệt."
+  ]
+}

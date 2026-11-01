@@ -1,0 +1,18 @@
+﻿{
+    "ke-hoach.json":  {
+                          "bytes":  9315,
+                          "sha256":  "95855452605957b2dbdba1bb9816c9f18b3a01737ed0f25f189f19b45a871e3e"
+                      },
+    "candidate-gate.json":  {
+                                "bytes":  2487,
+                                "sha256":  "8b61b18a5890c6e2703d282104a0efc6a6314fb3cd4b6a75dcf6162773bb3385"
+                            },
+    "summary.json":  {
+                         "bytes":  34468,
+                         "sha256":  "a8be806c92db50a5e8d6dd66401a99ec80fedc1a82513920827f9fde9610e6e2"
+                     },
+    "model-calls.json":  {
+                             "bytes":  286933,
+                             "sha256":  "31037769184a3c9d3ffaa6be470d2c6b2502abdb4646e7da452ffd67a83af0c8"
+                         }
+}

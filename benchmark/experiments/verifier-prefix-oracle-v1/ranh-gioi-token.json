@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "id": "verifier-batch-v1:vf-001-whole_source",
+      "prefix_token_aligned_with_gold": false,
+      "quoted_prefix_token_aligned_with_gold": true,
+      "current_prefix_last_token": "\":",
+      "gold_token_at_same_position": "\":\""
+    },
+    {
+      "id": "verifier-batch-v1:vf-002-whole_source",
+      "prefix_token_aligned_with_gold": false,
+      "quoted_prefix_token_aligned_with_gold": true,
+      "current_prefix_last_token": "\":",
+      "gold_token_at_same_position": "\":\""
+    },
+    {
+      "id": "verifier-batch-v1:vf-003-whole_source",
+      "prefix_token_aligned_with_gold": false,
+      "quoted_prefix_token_aligned_with_gold": true,
+      "current_prefix_last_token": "\":",
+      "gold_token_at_same_position": "\":\""
+    },
+    {
+      "id": "verifier-batch-v1:vf-004-whole_source",
+      "prefix_token_aligned_with_gold": false,
+      "quoted_prefix_token_aligned_with_gold": true,
+      "current_prefix_last_token": "\":",
+      "gold_token_at_same_position": "\":\""
+    },
+    {
+      "id": "verifier-batch-v1:vf-007-whole_source",
+      "prefix_token_aligned_with_gold": false,
+      "quoted_prefix_token_aligned_with_gold": true,
+      "current_prefix_last_token": "\":",
+      "gold_token_at_same_position": "\":\""
+    },
+    {
+      "id": "verifier-batch-v1:vf-008-whole_source",
+      "prefix_token_aligned_with_gold": false,
+      "quoted_prefix_token_aligned_with_gold": true,
+      "current_prefix_last_token": "\":",
+      "gold_token_at_same_position": "\":\""
+    }
+  ],
+  "current_aligned": 0,
+  "quoted_aligned": 6,
+  "model_called": false,
+  "limitations": [
+    "Ranh giới token khác gold là confound của phép đo prefix, không chứng minh nguyên nhân duy nhất gây JSON lỗi.",
+    "Không chạy thêm model sau điều kiện dừng 6 ca; biến thể quote chỉ được kiểm tra token."
+  ]
+}

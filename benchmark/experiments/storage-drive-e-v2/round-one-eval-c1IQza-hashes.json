@@ -1,0 +1,54 @@
+﻿{
+    "ref-probe-04.md":  {
+                            "bytes":  250,
+                            "sha256":  "51e2f2da1d1e753eb072e960f8b665f30a89841dd4242794b9d7fa128feceb5f"
+                        },
+    "ref-probe-06.md":  {
+                            "bytes":  282,
+                            "sha256":  "f8d910b8929edd78c6f6f09a41b467203443730ee1482848b62f0e5abefe24ff"
+                        },
+    "model-calls.json":  {
+                             "bytes":  165222,
+                             "sha256":  "6a320a5041e1218b6082e5ae8a404c9c56db0978a23ed520d549ef2dec5180c3"
+                         },
+    "ref-probe-02.md":  {
+                            "bytes":  213,
+                            "sha256":  "3091991056487688e1109f1342c7af0f98f8c3104038d150a7b2232553606142"
+                        },
+    "manifest.json":  {
+                          "bytes":  5943,
+                          "sha256":  "a29124a0c82eedd0c59b90dbd460be02e8a1524641531f8d7104c9acb549d97f"
+                      },
+    "debate-readiness.json":  {
+                                  "bytes":  829,
+                                  "sha256":  "7252f6b2b64f2a6edf5c10f833013cddf7e0b3970ee9577e0fcc72c582127894"
+                              },
+    "cases.json":  {
+                       "bytes":  78710,
+                       "sha256":  "53f38c9ee5608d349237d1a6f2e83d913ec156ab10620f2af8a3c64eb2352b2d"
+                   },
+    "ref-probe-05.txt":  {
+                             "bytes":  227,
+                             "sha256":  "bd6df95b772152331763e71107dfc924e55863381a7df8493f38594491e9366e"
+                         },
+    "ref-probe-03.txt":  {
+                             "bytes":  219,
+                             "sha256":  "e1641ce1c44a27fbdeef328a3f09fc06938f699ef6e8f0ee7ec373bd7e5c1928"
+                         },
+    "summary.json":  {
+                         "bytes":  7367,
+                         "sha256":  "e67f98bedf919a0c3f0c0a7bf610e4d305517451dea188545adcbd68ceb2fcd7"
+                     },
+    "ref-probe-01.txt":  {
+                             "bytes":  190,
+                             "sha256":  "e528bc9c622da8ab01b7c403b2548def832503603c8345c674e72fd50a0ed742"
+                         },
+    "ref-probe-07.html":  {
+                              "bytes":  209,
+                              "sha256":  "0c7166e74aca5f1716283bc840c2cd05e0ec9d7c750449a6fa2745db7044a204"
+                          },
+    "ref-probe-08.txt":  {
+                             "bytes":  258,
+                             "sha256":  "c9a0fea7e2ac71d727d46268c9febfae409e494dc40a6672621e52c1eb23fe3d"
+                         }
+}

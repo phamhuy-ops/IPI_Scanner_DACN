@@ -1,0 +1,5 @@
+{
+  "stage": "before_protocol_and_model_load",
+  "reason": "Windows cp1252 không đọc được JSON tiếng Việt; đã đổi đọc UTF-8 tường minh trước mọi forward.",
+  "model_forward_calls": 0
+}

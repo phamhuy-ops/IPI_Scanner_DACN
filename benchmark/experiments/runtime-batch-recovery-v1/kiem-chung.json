@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-28",
+  "behavior": "Cô lập InvalidAgentResponse theo batch trong pipeline mặc định, giữ bằng chứng hợp lệ, tiếp tục batch khác trong deadline và hiển thị chẩn đoán/hướng xử lý.",
+  "baseline": {
+    "command": "npx vitest run --config vitest.config.ts src/ai/agents/document/ipiPipeline.test.ts src/components/IpiAgentPanel.test.tsx",
+    "existing_tests": 48,
+    "existing_tests_passed": 48,
+    "new_regressions_before_fix": 2,
+    "failures": [
+      "Batch JSON đầu lỗi làm mất phát hiện có thể xác minh ở batch sau.",
+      "Không có batchFailures để xác định phạm vi lỗi dù các phản hồi sau không có finding."
+    ]
+  },
+  "after": {
+    "npm_test": {
+      "files": 21,
+      "tests": 284,
+      "passed": 284
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed_with_existing_vite_warnings_customResolver_and_freeze",
+    "final_targeted_pipeline_tests": {
+      "tests": 44,
+      "passed": 44
+    },
+    "commands": [
+      "npm test",
+      "npm run typecheck",
+      "npm run lint",
+      "npm run build",
+      "npx vitest run --config vitest.config.ts src/ai/agents/document/ipiPipeline.test.ts"
+    ],
+    "scope": "Mocked model/bridge unit checks, React static markup, và ba ca qua engine extraction thật.",
+    "real_extraction_cases": [
+      {
+        "input": "3 TXT + 1 HTML sạch; 5 chunk",
+        "fault": "Detector batch 1 JSON lỗi",
+        "expected": "needs_review",
+        "passed": true
+      },
+      {
+        "input": "3 TXT + 1 HTML, gồm IPI; 5 chunk",
+        "fault": "Detector batch 1 chứa IPI JSON lỗi",
+        "expected": "Verifier xác nhận riêng, suspicion unresolved và needs_review",
+        "passed": true
+      },
+      {
+        "input": "3 TXT + 1 HTML, gồm IPI; 5 chunk",
+        "fault": "Detector batch 2 JSON lỗi",
+        "expected": "Hai vai trò xác nhận IPI ở batch khác, giữ ipi_detected kèm invalid_response",
+        "passed": true
+      }
+    ]
+  },
+  "decision_policy": "Chỉ tiếp tục sau InvalidAgentResponse; lỗi transport hoặc hết deadline dừng. Không retry, không đổi prompt/schema/model, không nới validator; kết luận vẫn dùng chính sách hiện có.",
+  "diagnostics": "role/model/code/message/durationMs/chunk nguồn/file/dòng. Không lưu raw response vào batchFailures; chưa có xuất file chẩn đoán tự động.",
+  "model_calls": 0,
+  "training_runs": 0,
+  "seed": null,
+  "seed_note": "Phản hồi model cố định trong test, không inference ngẫu nhiên.",
+  "detection_metrics": null,
+  "latency_and_resources": null,
+  "limitations": [
+    "Không có dự đoán model thật nên precision/recall/F1/FPR/confusion counts về năng lực nhận diện không được đo.",
+    "Có thể phát thêm request cho batch chưa đọc sau lỗi phản hồi, vẫn bị giới hạn deadline/profile; chưa đo chi phí thực so với dừng sớm.",
+    "Chưa kiểm chứng độc lập, PDF/DOCX dài, UI/native IPC hoặc mọi hợp đồng thí nghiệm bằng model thật.",
+    "UI được kiểm bằng static markup, chưa thao tác Electron đang chạy.",
+    "Lỗi scan hoặc packing xảy ra trước request vẫn dùng xử lý lỗi cấp pipeline hiện có."
+  ],
+  "priority_one_complete": false,
+  "code_sha256": {
+    "engine/scanner/ipi-doc-scan.js": "081de66fbc0b4eabca3d7a612465f1163e5781422b14cb8ab2a849f042586048",
+    "src/ai/agents/document/candidateVerification.ts": "afce5d0929991db15a6d23dfc185669507eae92129225e9a89cabfb4814877ec",
+    "src/ai/agents/document/compactVerifier.test.ts": "bda5497117f8115f8e227dcb6f8b4283cd78a1285b0d793f68d55b691fc15b34",
+    "src/ai/agents/document/compactVerifier.ts": "6e97af31a1502799ecd22f27bfc0c1441a024aa9ba9748552f5e5c56e31c2ce0",
+    "src/ai/agents/document/detectorAgent.ts": "bfb463d1888b9d61223cd7ffc9a69dc2a4bbb661e5bbe3c99e847a740320b69b",
+    "src/ai/agents/document/directiveContext.test.ts": "8127b67f4e646f7f502c4c162997166353a76df5554451885a1f56062ade7997",
+    "src/ai/agents/document/directiveContext.ts": "aee929765916e2f3f13331a9d1ee6dd5459eceb8c586921afba0774392d700ca",
+    "src/ai/agents/document/evidence.test.ts": "aef39dc9e9562c0994c0658a685a28ad7b63875576022c7030e24d60216d0755",
+    "src/ai/agents/document/evidence.ts": "804e027ef7e1d450f2a118e073e9786f269f4b6e3d67d5f960b921ca1dc7b174",
+    "src/ai/agents/document/ipiPipeline.test.ts": "61ae449f4f7bd0a0f85a3b784af9cfb6bed2dcde5addf27a5d57f4daa2b59cf1",
+    "src/ai/agents/document/ipiPipeline.ts": "743bf72869def68e0bec4fd0fe7c3a55ad7b02d34253fd7aceb2479a5fcd6030",
+    "src/ai/agents/document/presentation.ts": "a07753ebb98e6802c22f23fb531a9eae079c21b1992da9939492602ba2928b73",
+    "src/ai/agents/document/prompts.ts": "37341ac222a2243ffd8a2406a86be87ebaf4ee1c818b640f56759f6f2b032be6",
+    "src/ai/agents/document/referencePrompts.ts": "f67eaf708b53030c2bc082d9c4ae6763a66022011c5f4fe7b27be948ea3da070",
+    "src/ai/agents/document/reviewPolicy.test.ts": "7dfbbde4638f939dafa4281d1a951f518d68b23dad8d6f2e75b75e28b4afd679",
+    "src/ai/agents/document/reviewPolicy.ts": "ce1d9beb517862d989925d9a204a38b710e06b1891a28f33494b84ece8500aed",
+    "src/ai/agents/document/reviewProgress.ts": "ba28c00c4fdc703a6a86103ca625937f06078ef76b103f09d96154be4acd6aa0",
+    "src/ai/agents/document/runtimeDiagnostics.ts": "687bf5930acbc497f60a710ec924f856b198b32ef41866250d2aa645d7d5a721",
+    "src/ai/agents/document/runtimeRecovery.integration.test.ts": "18aa3d86074a0f7ca922e9bbbbb1c14a768711ec7baaae48b4277105e20d0d7b",
+    "src/ai/agents/document/sourceReferences.test.ts": "92705162b73729240a5745fb7f5ed0682947d4b5725cd8f3d048dc4259c7f523",
+    "src/ai/agents/document/sourceReferences.ts": "1113816af9d37bba1f75931195a929be5bca36bbe8d76596164e9e7eb8bbcb51",
+    "src/ai/agents/document/structuredPrompts.ts": "18a13ce040d80e1829b19364fe2e2c3d0e569bdc176a6a611a4b9f7c4c520ae8",
+    "src/ai/agents/document/types.ts": "dd89baf33f30c202a527794eb2fea8fbe637d1b25526a1854c09224d2bc7a2d7",
+    "src/ai/agents/document/verifierAgent.ts": "9c65aa56b94a27f175dd7e4ff20c1eafc70669f38cbee2eb6f1559c17b6e10c8",
+    "src/ai/agents/slmClient.ts": "7edf52e61620e19a7152a0ed865751dbf2db92e272bc3bcda68b5fd35a3eec12",
+    "src/components/IpiAgentPanel.test.tsx": "f7541dd788e26a316e4bf9506bab8a68eabf839a25f783af2af8d280d51565da",
+    "src/components/IpiAgentPanel.tsx": "723e25a81af0c2c820091b75e2740a07df5d38c42e3ef3dae0d84b369cfe6d91",
+    "src/types.ts": "6c4eeef54c5932d56bada0671061ffa119d303d8c3e920f90c8a294bae6b2f97",
+    "vitest.config.ts": "e6465a569a4142e8426b54a094ed7d30c3b7cfd65e180ce44c253b3f61dd9c99"
+  },
+  "git_head": "ef8d7db8392bf4a97d8fcf170af91369928c9c7e",
+  "working_tree_has_uncommitted_changes": true,
+  "node_version": "v24.13.0"
+}

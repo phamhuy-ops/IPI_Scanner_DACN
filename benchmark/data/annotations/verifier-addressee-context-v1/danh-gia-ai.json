@@ -1,0 +1,62 @@
+{
+  "reviewer": "Codex (AI)",
+  "human_approved": false,
+  "reviews": [
+    {
+      "id": "ac-01",
+      "input_sha256": "9afdcbae6d64e04ef22bde60c73d8fbecf64743e8f27fe5e3ffc1c3a8c54fbaa",
+      "annotation_sha256": "ebf040d94deeef13d084cc80edb149b82e850cba618becd1ccd672d3d5284c2f",
+      "decision": "accept_visible_fixture_context",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:38:31.008Z"
+    },
+    {
+      "id": "ac-03",
+      "input_sha256": "55c4458c74db10c6ccc50ac651bae1473f7cf3f2b4508d86c7fe77377dbe56bb",
+      "annotation_sha256": "c50df2be6d6909c8415b56e7af32e21046236918da3e73139d59d7a5e10d0f7e",
+      "decision": "accept_visible_fixture_context",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:38:31.009Z"
+    },
+    {
+      "id": "ac-04",
+      "input_sha256": "3770429071be9a7c6925b6173f85bd992e370eae4bfe5b5daeffa469cdfc4c5b",
+      "annotation_sha256": "1196ade42320c9d7642d800743a390ea5f9ccc11feb7375d71aa223a635c83d7",
+      "decision": "accept_visible_fixture_context",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:38:31.009Z"
+    },
+    {
+      "id": "ac-05",
+      "input_sha256": "492dad0f4134978f5441ef34a27cd00e99b927df4443e09cf48bce85364265f7",
+      "annotation_sha256": "213a3d98e625bab9f2ba2d177f44d0be75bc761c9504a13285949028cae46d80",
+      "decision": "accept_visible_fixture_context",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:38:31.009Z"
+    },
+    {
+      "id": "ac-06",
+      "input_sha256": "b59477f6b9bd425175e7645b96743a076b40242161ffb02ec5a8849d24870639",
+      "annotation_sha256": "d33291f43ba2ecaa9ce18fdecd3d49e9a490002e161e77528985ba7c9b4d67ee",
+      "decision": "accept_visible_fixture_context",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:38:31.009Z"
+    },
+    {
+      "id": "ac-07",
+      "input_sha256": "3483e5cb6885fdd02e527d90f1d60b49da77ab61340d7fe335d9b0833dee40ef",
+      "annotation_sha256": "1df8fe758676780b671eda0efbbf208b68f0c195d5c1c85f0f52940418db4711",
+      "decision": "accept_visible_fixture_context",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:38:31.009Z"
+    },
+    {
+      "id": "ac-08",
+      "input_sha256": "707feb8c46d84a804f28f3513b933cf7a353ac114ad37b1d2f30135f16d9a5c4",
+      "annotation_sha256": "cdd8a9eaa11ecc2b64d66553586dc6f909dcc7e6d40411a1a4c8b0fdbf7d93ec",
+      "decision": "accept_visible_fixture_context",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:38:31.009Z"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": "verifier-context-transfer-v1",
+  "records": 36,
+  "source_parent_ids": 6,
+  "initial_groups": 6,
+  "labels": {
+    "confirmed": 24,
+    "dismissed": 6,
+    "uncertain": 6
+  },
+  "languages": {
+    "vi": 18,
+    "en": 18
+  },
+  "parser_valid": 72,
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "4b07deb0011f202dc63a6c7c7bc5554cc8a079c3e3dab43568507d98b1bd0acb",
+    "ban-xem-truoc.json": "05b8507d86ba8defcb5e3d0373e847be1e239826875945be40860766190341ba",
+    "danh-gia-ai.json": "2f7931792036a7bd1bba4701a09498a9f56da5a583e7e5c173c256388aa5d339"
+  },
+  "code_sha256": {
+    "scripts/prepare-verifier-context-transfer.cjs": "7f169bdcefd6bd3e30f46d883e56abd763e29c8acef9856973ec927b2d383f56",
+    "scripts/verifier-batch-renderer.ts": "d66db4a967344570e6541996f2432e42324fd43d72077e065e6c8ec126feafab"
+  },
+  "training_ready": false,
+  "model_called": false,
+  "final_split_created": false,
+  "limitations": [
+    "Sáu bối cảnh tự soạn, không phải sáu nguồn ngoài độc lập.",
+    "AI rà nhãn và dựng mẫu không tương đương người duyệt độc lập.",
+    "Chỉ văn bản ngắn; chưa bổ sung PDF/DOCX hoặc chứng minh hiệu quả nhận diện."
+  ]
+}

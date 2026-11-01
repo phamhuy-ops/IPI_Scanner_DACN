@@ -1,0 +1,44 @@
+[
+  {
+    "id": "p1-007",
+    "gold_in_selected": true,
+    "gold_in_detector_prompt": true,
+    "gold_in_verifier_prompt": true
+  },
+  {
+    "id": "p1-027",
+    "gold_in_selected": true,
+    "gold_in_detector_prompt": true,
+    "gold_in_verifier_prompt": true
+  },
+  {
+    "id": "p1-032",
+    "gold_in_selected": true,
+    "gold_in_detector_prompt": true,
+    "gold_in_verifier_prompt": true
+  },
+  {
+    "id": "p1-039",
+    "gold_in_selected": true,
+    "gold_in_detector_prompt": true,
+    "gold_in_verifier_prompt": true
+  },
+  {
+    "id": "p1-040",
+    "gold_in_selected": true,
+    "gold_in_detector_prompt": true,
+    "gold_in_verifier_prompt": true
+  },
+  {
+    "id": "p1-048",
+    "gold_in_selected": true,
+    "gold_in_detector_prompt": true,
+    "gold_in_verifier_prompt": true
+  },
+  {
+    "id": "p1-068",
+    "gold_in_selected": true,
+    "gold_in_detector_prompt": true,
+    "gold_in_verifier_prompt": true
+  }
+]

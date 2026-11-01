@@ -1,0 +1,46 @@
+{
+  "status": "complete",
+  "demonstrated_defect": {
+    "no_directive_records": 7,
+    "before_render_failures": 14,
+    "after_render_valid": 14
+  },
+  "new_records": 12,
+  "parser_token_mask_collator_valid": 24,
+  "token_max": 1853,
+  "prior_payloads_targets_unchanged": 112,
+  "vitest_tests_passed": 3,
+  "corpus_unit_tests_passed": 5,
+  "registry": {
+    "records": 222,
+    "parents": 151,
+    "groups": 91,
+    "roles": {
+      "development_regression_only": 84,
+      "candidate_pending_source_privacy_and_split_review": 138
+    }
+  },
+  "source_scope": {
+    "full_source_preserved": true,
+    "window_only": 3,
+    "ai_reviewed_not_human": true
+  },
+  "old_code_sha256": "804bc01e9cc4175ab4213794deb11ca35ecac1ff948e42ca8bfff22d243db5a2",
+  "new_code_sha256": "d66db4a967344570e6541996f2432e42324fd43d72077e065e6c8ec126feafab",
+  "runtime_changed": false,
+  "model_called": false,
+  "training_started": false,
+  "priority_one_complete": false,
+  "commands": [
+    "node scripts/prepare-verifier-llmail.cjs",
+    "npx vitest run --config vitest.config.ts scripts/verifier-batch-renderer.test.ts",
+    "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/audit_verifier_preview.py --source verifier-llmail-v1 --output verifier-llmail-tokenizer-v1",
+    "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/audit-verifier-corpus.py verifier-corpus-overlap-v12",
+    "node scripts/register-verifier-batch.cjs --batch verifier-llmail-v1 --base verifier-eligibility-v2 --audit verifier-corpus-overlap-v12 --tokens verifier-llmail-tokenizer-v1 --output verifier-eligibility-v3"
+  ],
+  "limitations": [
+    "Chỉ sửa công cụ chuẩn bị dữ liệu; không chứng minh cải thiện nhận diện Agent.",
+    "Ba nhãn đầu vào áp dụng cửa sổ, không phần tiền tố bị bỏ.",
+    "Còn thiếu nguồn/điều kiện chia tập và kiểm chứng độc lập."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "sources": 15,
+  "exact_rebuild_valid": 30,
+  "windows": 251,
+  "parser_valid": 30,
+  "original_source_and_labels_unchanged": true,
+  "original_to_window_utf16_mapping_valid": true,
+  "whole_line_context_preserved": true,
+  "source_group_preserved": true,
+  "unlabeled_windows_not_assumed_benign": true,
+  "human_window_span_review_complete": false,
+  "training_ready": false,
+  "runtime_changed": false,
+  "audit_script_sha256": "3b8859660702d5a040c2b2804067f7aa2271e1c5502f4e7531065f73ecef5900"
+}

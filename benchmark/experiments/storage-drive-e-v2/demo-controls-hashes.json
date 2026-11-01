@@ -1,0 +1,14 @@
+﻿{
+    "quoted.txt":  {
+                       "bytes":  187,
+                       "sha256":  "369f6f15d45f9f09ed131d41cd6608a9175aa6ea6fad5a0995799a81abccb345"
+                   },
+    "attack.txt":  {
+                       "bytes":  160,
+                       "sha256":  "3aa516432b3ac01bcabb8e16d70bf237b15fdad5d674de99608a8cc8e1165a2d"
+                   },
+    "clean.txt":  {
+                      "bytes":  154,
+                      "sha256":  "8f6597fe64ca1180725aeb4b34909554b7613fd1e625ceb830e3b41a4251fb7a"
+                  }
+}

@@ -1,0 +1,14 @@
+{
+  "model": "meta-llama/Llama-Prompt-Guard-2-86M",
+  "revision": "a8ded8e697ce7c355e395a0df51f94adb4a2fd27",
+  "gated": "manual",
+  "library": "transformers",
+  "task": "text-classification",
+  "status": "metadata_only_no_weights_downloaded",
+  "tokenizerSha256": null,
+  "artifactSha256": null,
+  "download_authorized": false,
+  "training_authorized": false,
+  "source": "https://huggingface.co/api/models/meta-llama/Llama-Prompt-Guard-2-86M",
+  "note": "Chỉ đọc metadata repo, chưa chứng minh quyền tài khoản, chưa tải config/tokenizer/weights. Không tự chấp nhận điều kiện truy cập."
+}

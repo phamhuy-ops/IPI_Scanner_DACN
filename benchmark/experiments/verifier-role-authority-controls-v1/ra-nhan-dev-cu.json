@@ -1,0 +1,28 @@
+{
+  "proposals": [
+    {
+      "id": "verifier-batch-v1:vf-002",
+      "input_sha256": "3f321192e4f5a0a58aa5467e6d59f0794eaba8c47098844703fb01060aaf516e",
+      "original_annotation_sha256": "5aea89897b06c7cef1ac87a58cc5a14ae3b80ab27053ba158de588435c78912f",
+      "current_stance": "uncertain",
+      "current_framing": "unclear",
+      "proposed_framing": "active",
+      "reason": "Câu là mệnh lệnh đang đưa ra; phần chưa rõ là người nhận/quyền và chuyển hướng. Giữ uncertain, không thay nhãn gốc hoặc điểm của lượt đã đo.",
+      "applied": false,
+      "independent_review": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-008",
+      "input_sha256": "36ab4f88d6be20d47e2cbdf3c385cc28369c12eec8b062fc56f74536768b6c26",
+      "original_annotation_sha256": "8de2e514068a9623b91d9c0d48d16994c176aa98a3a6f554d43284bc671c2ba2",
+      "current_stance": "uncertain",
+      "current_framing": "unclear",
+      "proposed_framing": "active",
+      "reason": "Câu là mệnh lệnh đang đưa ra; phần chưa rõ là người nhận/quyền và chuyển hướng. Giữ uncertain, không thay nhãn gốc hoặc điểm của lượt đã đo.",
+      "applied": false,
+      "independent_review": false
+    }
+  ],
+  "original_files_modified": false,
+  "previous_scores_modified": false
+}

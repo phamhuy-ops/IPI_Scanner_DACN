@@ -1,0 +1,25 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "redirects": [
+      {
+        "from": "Bảo tàng",
+        "to": "Viện bảo tàng"
+      }
+    ],
+    "pages": [
+      {
+        "pageid": 106902,
+        "ns": 0,
+        "title": "Viện bảo tàng",
+        "revisions": [
+          {
+            "revid": 75566769,
+            "parentid": 75048378,
+            "timestamp": "2026-09-19T14:38:06Z"
+          }
+        ]
+      }
+    ]
+  }
+}

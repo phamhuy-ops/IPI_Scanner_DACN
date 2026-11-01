@@ -1,0 +1,19 @@
+﻿{
+    "destination":  "E:\\IPI-Training\\data\\verifier-counterfactual-train-v2",
+    "training_started":  false,
+    "originals_preserved":  true,
+    "files":  [
+                  {
+                      "sha256":  "79be6fdee2896bd99ef0d4c22acec10e2c70b5953cd46158bbd5734e0a5d04bb",
+                      "name":  "train.preview.jsonl"
+                  },
+                  {
+                      "sha256":  "2f97849e38319187505c0a9e10e8ef818f6ed6dea7316ee2756d52a671b5b4a9",
+                      "name":  "mau-cho-duyet.jsonl"
+                  },
+                  {
+                      "sha256":  "e81b912ed04e7f0965a063c8e23a5a53527c90cef21a2c4fef2650bdfa9b9cb9",
+                      "name":  "giao-thuc.json"
+                  }
+              ]
+}

@@ -1,0 +1,854 @@
+{
+  "bytes_moved": 405918787,
+  "moved": [
+    {
+      "junction_verified": true,
+      "files": 9,
+      "resumed_existing_junction": true,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\agent-contrast-cb7wWU",
+      "hashes_verified": true,
+      "bytes": 217228,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\agent-contrast-cb7wWU"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\agent-contrast-DKYReQ",
+      "files": 9,
+      "hashes_verified": true,
+      "bytes": 757400,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\agent-contrast-DKYReQ"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-5ltMFV",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1395,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-5ltMFV"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-g15RM6",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-g15RM6"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-HzF5su",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-HzF5su"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-IAo6Sy",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-IAo6Sy"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-JlbupS",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-JlbupS"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-L7SkQi",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-L7SkQi"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-LrUWJB",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-LrUWJB"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-lYzVnG",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1397,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-lYzVnG"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-rAcwOV",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-rAcwOV"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-sy1zJy",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-sy1zJy"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-tn36ys",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-tn36ys"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-VHNnhW",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-VHNnhW"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-xG7Qzb",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-xG7Qzb"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\annotation-audit-XSkMTO",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 1396,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\annotation-audit-XSkMTO"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\audit-python-deps",
+      "files": 867,
+      "hashes_verified": true,
+      "bytes": 92521436,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\audit-python-deps"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\bounded-review-EFqC6B",
+      "files": 7,
+      "hashes_verified": true,
+      "bytes": 860870,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\bounded-review-EFqC6B"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\bounded-review-uDFKfs",
+      "files": 7,
+      "hashes_verified": true,
+      "bytes": 517014,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\bounded-review-uDFKfs"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\citation-context-8ioNd0",
+      "files": 15,
+      "hashes_verified": true,
+      "bytes": 180582,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\citation-context-8ioNd0"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\citation-context-ddjHbQ",
+      "files": 10,
+      "hashes_verified": true,
+      "bytes": 13769,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\citation-context-ddjHbQ"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\demo-controls",
+      "files": 3,
+      "hashes_verified": true,
+      "bytes": 501,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\demo-controls"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-3PiH7G",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 24758,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-3PiH7G"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-5ftx1w",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 11169,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-5ftx1w"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-5V7RE2",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 2630,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-5V7RE2"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-7srbhU",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 2906,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-7srbhU"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-AROj67",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 4318,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-AROj67"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-DUFgDP",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 2907,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-DUFgDP"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-G1v4HO",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 7146,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-G1v4HO"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-hO3MNi",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 3708,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-hO3MNi"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-irA4T3",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 25238,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-irA4T3"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-JpEL5z",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 8687,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-JpEL5z"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-kJRK7k",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 18392,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-kJRK7k"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-nLFBNr",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 9880,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-nLFBNr"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-oO30Jd",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 4289,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-oO30Jd"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-pdzZ9a",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 2494,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-pdzZ9a"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-qh1AA0",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 4945,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-qh1AA0"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-R7OeVe",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 8987,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-R7OeVe"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-SqzAIh",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 33258,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-SqzAIh"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-X1lA4i",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 8917,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-X1lA4i"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-xR8fLo",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 18422,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-xR8fLo"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\document-demo-Yi5L23",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 10070,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\document-demo-Yi5L23"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\ipi-policy-smoke-82Zmkm",
+      "files": 4,
+      "hashes_verified": true,
+      "bytes": 20470,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\ipi-policy-smoke-82Zmkm"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\ipi-policy-smoke-EMX2Bu",
+      "files": 4,
+      "hashes_verified": true,
+      "bytes": 59562,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\ipi-policy-smoke-EMX2Bu"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\ipi-policy-smoke-KNTN7r",
+      "files": 4,
+      "hashes_verified": true,
+      "bytes": 66898,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\ipi-policy-smoke-KNTN7r"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\ipi-policy-smoke-KOoU5W",
+      "files": 4,
+      "hashes_verified": true,
+      "bytes": 54064,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\ipi-policy-smoke-KOoU5W"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\ipi-policy-smoke-oYm5Ft",
+      "files": 4,
+      "hashes_verified": true,
+      "bytes": 19589,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\ipi-policy-smoke-oYm5Ft"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\minimal-context-order-96EmTi",
+      "files": 3,
+      "hashes_verified": true,
+      "bytes": 188075,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\minimal-context-order-96EmTi"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\model-context-0xYnrM",
+      "files": 3,
+      "hashes_verified": true,
+      "bytes": 324192,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\model-context-0xYnrM"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\prefilter-controls-DLWwfC",
+      "files": 16,
+      "hashes_verified": true,
+      "bytes": 401332,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\prefilter-controls-DLWwfC"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\prefilter-controls-FiEUzF",
+      "files": 16,
+      "hashes_verified": true,
+      "bytes": 401299,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\prefilter-controls-FiEUzF"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\prefilter-controls-glGX1C",
+      "files": 16,
+      "hashes_verified": true,
+      "bytes": 401366,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\prefilter-controls-glGX1C"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\prefilter-controls-t623eG",
+      "files": 16,
+      "hashes_verified": true,
+      "bytes": 401371,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\prefilter-controls-t623eG"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\prefilter-dev-247eA5",
+      "files": 6,
+      "hashes_verified": true,
+      "bytes": 82505226,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\prefilter-dev-247eA5"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\prefilter-dev-myd8G7",
+      "files": 5,
+      "hashes_verified": true,
+      "bytes": 67248436,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\prefilter-dev-myd8G7"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\prefilter-dev-mz8K3y",
+      "files": 4,
+      "hashes_verified": true,
+      "bytes": 67255301,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\prefilter-dev-mz8K3y"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\prefilter-dev-ySjIbe",
+      "files": 5,
+      "hashes_verified": true,
+      "bytes": 78730692,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\prefilter-dev-ySjIbe"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\priority-one-baseline-x5KEzd",
+      "files": 76,
+      "hashes_verified": true,
+      "bytes": 1976605,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\priority-one-baseline-x5KEzd"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\priority-one-coverage-Ruz9MN",
+      "files": 5,
+      "hashes_verified": true,
+      "bytes": 252511,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\priority-one-coverage-Ruz9MN"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\production-progress-xp8AuC",
+      "files": 8,
+      "hashes_verified": true,
+      "bytes": 234391,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\production-progress-xp8AuC"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-2Bj3lQ",
+      "files": 15,
+      "hashes_verified": true,
+      "bytes": 298221,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-2Bj3lQ"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-873e6t",
+      "files": 13,
+      "hashes_verified": true,
+      "bytes": 240157,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-873e6t"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-AfHfMu",
+      "files": 14,
+      "hashes_verified": true,
+      "bytes": 354625,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-AfHfMu"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-c1IQza",
+      "files": 13,
+      "hashes_verified": true,
+      "bytes": 259919,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-c1IQza"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-C9SEut",
+      "files": 5,
+      "hashes_verified": true,
+      "bytes": 107858,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-C9SEut"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-e6QZyA",
+      "files": 13,
+      "hashes_verified": true,
+      "bytes": 262940,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-e6QZyA"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-FaB3Sx",
+      "files": 13,
+      "hashes_verified": true,
+      "bytes": 256436,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-FaB3Sx"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-fIX4zi",
+      "files": 5,
+      "hashes_verified": true,
+      "bytes": 119345,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-fIX4zi"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-GG6Ueb",
+      "files": 13,
+      "hashes_verified": true,
+      "bytes": 164542,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-GG6Ueb"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-ir9ebA",
+      "files": 10,
+      "hashes_verified": true,
+      "bytes": 567344,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-ir9ebA"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-JarPHE",
+      "files": 15,
+      "hashes_verified": true,
+      "bytes": 263993,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-JarPHE"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-mTSFnk",
+      "files": 12,
+      "hashes_verified": true,
+      "bytes": 226597,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-mTSFnk"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-mY5ALz",
+      "files": 14,
+      "hashes_verified": true,
+      "bytes": 251383,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-mY5ALz"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-RaYSI3",
+      "files": 14,
+      "hashes_verified": true,
+      "bytes": 246021,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-RaYSI3"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-rtVoKf",
+      "files": 13,
+      "hashes_verified": true,
+      "bytes": 172172,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-rtVoKf"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-SGLfeF",
+      "files": 13,
+      "hashes_verified": true,
+      "bytes": 256702,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-SGLfeF"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-t8G5ks",
+      "files": 12,
+      "hashes_verified": true,
+      "bytes": 264535,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-t8G5ks"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-Taaa37",
+      "files": 14,
+      "hashes_verified": true,
+      "bytes": 430423,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-Taaa37"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-uCkV2E",
+      "files": 6,
+      "hashes_verified": true,
+      "bytes": 47278,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-uCkV2E"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-UzF0PP",
+      "files": 13,
+      "hashes_verified": true,
+      "bytes": 226755,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-UzF0PP"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-wqFIhg",
+      "files": 5,
+      "hashes_verified": true,
+      "bytes": 64952,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-wqFIhg"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-Y4eumi",
+      "files": 13,
+      "hashes_verified": true,
+      "bytes": 202326,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-Y4eumi"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\round-one-eval-zJivId",
+      "files": 14,
+      "hashes_verified": true,
+      "bytes": 458005,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\round-one-eval-zJivId"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\selector-service-v1",
+      "files": 2,
+      "hashes_verified": true,
+      "bytes": 922376,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\selector-service-v1"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\stance-clarity-x1huOw",
+      "files": 3,
+      "hashes_verified": true,
+      "bytes": 549579,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\stance-clarity-x1huOw"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\test-temp",
+      "files": 458,
+      "hashes_verified": true,
+      "bytes": 1223374,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\test-temp"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\training-readiness-35jqiktd",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 2075,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\training-readiness-35jqiktd"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\training-readiness-7frmhg37",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 2932,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\training-readiness-7frmhg37"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\training-readiness-y4aprfuc",
+      "files": 1,
+      "hashes_verified": true,
+      "bytes": 2136,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\training-readiness-y4aprfuc"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\verifier-candidate-FUTQRS",
+      "files": 4,
+      "hashes_verified": true,
+      "bytes": 333203,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\verifier-candidate-FUTQRS"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\verifier-source-first-TN67xa",
+      "files": 4,
+      "hashes_verified": true,
+      "bytes": 142276,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\verifier-source-first-TN67xa"
+    },
+    {
+      "junction_verified": true,
+      "source": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\vietnamese-source-download-v1",
+      "files": 13,
+      "hashes_verified": true,
+      "bytes": 1155462,
+      "old_copy_removed": true,
+      "target": "E:\\IPI-Training\\results\\IPI_Scanner\\vietnamese-source-download-v1"
+    }
+  ],
+  "tracked_root_files_retained": [
+    "benchmark/results/ipi-baseline-1792028001920.json"
+  ],
+  "c_free_after": 14064988160,
+  "status": "completed",
+  "code_remains_on_c": true,
+  "directories": 92,
+  "c_free_before": 13681586176,
+  "verification": {
+    "storage_check_passed": true,
+    "directories_write_read_passed": 19,
+    "python": "E:\\IPI-Training\\venvs\\verifier\\Scripts\\python.exe",
+    "temp": "E:\\IPI-Training\\tmp",
+    "hf_cache": "E:\\IPI-Training\\cache\\huggingface\\hub",
+    "pyarrow_import_after_move": true,
+    "root_c_rejected_before_directory_creation": true,
+    "tracked_result_file_status_unchanged": true,
+    "pagefile_on_c_allocated_mib": 10752,
+    "pagefile_configuration_changed": false
+  }
+}

@@ -1,0 +1,1815 @@
+{
+  "examples": 360,
+  "mask_collator_valid": 360,
+  "token_max": 1735,
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "training_started": false,
+  "model_forward": false,
+  "rows": [
+    {
+      "id": "verifier-gap-v1:gap-001-whole_source",
+      "tokens": 1735,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-gap-v1:gap-001-none",
+      "tokens": 1706,
+      "loss_tokens": 73
+    },
+    {
+      "id": "verifier-gap-v1:gap-002-whole_source",
+      "tokens": 1530,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-gap-v1:gap-002-none",
+      "tokens": 1433,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-gap-v1:gap-003-whole_source",
+      "tokens": 1683,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-gap-v1:gap-003-none",
+      "tokens": 1654,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-gap-v1:gap-004-whole_source",
+      "tokens": 1269,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-gap-v1:gap-004-none",
+      "tokens": 1240,
+      "loss_tokens": 74
+    },
+    {
+      "id": "verifier-gap-v1:gap-005-whole_source",
+      "tokens": 1306,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-gap-v1:gap-005-none",
+      "tokens": 1208,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-gap-v1:gap-006-whole_source",
+      "tokens": 1237,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-gap-v1:gap-006-none",
+      "tokens": 1208,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-gap-v1:gap-007-whole_source",
+      "tokens": 1125,
+      "loss_tokens": 80
+    },
+    {
+      "id": "verifier-gap-v1:gap-007-none",
+      "tokens": 1098,
+      "loss_tokens": 72
+    },
+    {
+      "id": "verifier-gap-v1:gap-008-whole_source",
+      "tokens": 1221,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-gap-v1:gap-008-none",
+      "tokens": 1127,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-gap-v1:gap-009-whole_source",
+      "tokens": 1101,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-gap-v1:gap-009-none",
+      "tokens": 1074,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-gap-v1:gap-010-whole_source",
+      "tokens": 1048,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-gap-v1:gap-010-none",
+      "tokens": 1021,
+      "loss_tokens": 74
+    },
+    {
+      "id": "verifier-gap-v1:gap-011-whole_source",
+      "tokens": 1126,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-gap-v1:gap-011-none",
+      "tokens": 1030,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-gap-v1:gap-012-whole_source",
+      "tokens": 1004,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-gap-v1:gap-012-none",
+      "tokens": 977,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-gap-v1:gap-013-whole_source",
+      "tokens": 1434,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-gap-v1:gap-013-none",
+      "tokens": 1405,
+      "loss_tokens": 73
+    },
+    {
+      "id": "verifier-gap-v1:gap-014-whole_source",
+      "tokens": 1509,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-gap-v1:gap-014-none",
+      "tokens": 1412,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-gap-v1:gap-015-whole_source",
+      "tokens": 1385,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-gap-v1:gap-015-none",
+      "tokens": 1356,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-003-whole_source",
+      "tokens": 753,
+      "loss_tokens": 81
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-003-none",
+      "tokens": 664,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-004-whole_source",
+      "tokens": 745,
+      "loss_tokens": 85
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-004-none",
+      "tokens": 652,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-006-whole_source",
+      "tokens": 785,
+      "loss_tokens": 81
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-006-none",
+      "tokens": 696,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-007-whole_source",
+      "tokens": 754,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-007-none",
+      "tokens": 668,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-009-whole_source",
+      "tokens": 731,
+      "loss_tokens": 77
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-009-none",
+      "tokens": 646,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-011-whole_source",
+      "tokens": 736,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-011-none",
+      "tokens": 640,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-012-whole_source",
+      "tokens": 750,
+      "loss_tokens": 80
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-012-none",
+      "tokens": 662,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-013-whole_source",
+      "tokens": 782,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-013-none",
+      "tokens": 755,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-014-whole_source",
+      "tokens": 891,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-014-none",
+      "tokens": 864,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-015-whole_source",
+      "tokens": 750,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-015-none",
+      "tokens": 723,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-016-whole_source",
+      "tokens": 843,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-016-none",
+      "tokens": 816,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-017-whole_source",
+      "tokens": 847,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-017-none",
+      "tokens": 820,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-018-whole_source",
+      "tokens": 911,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-018-none",
+      "tokens": 884,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-019-whole_source",
+      "tokens": 778,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-019-none",
+      "tokens": 751,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-020-whole_source",
+      "tokens": 885,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-020-none",
+      "tokens": 858,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-021-whole_source",
+      "tokens": 764,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-021-none",
+      "tokens": 737,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-022-whole_source",
+      "tokens": 864,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-022-none",
+      "tokens": 837,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-023-whole_source",
+      "tokens": 780,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-023-none",
+      "tokens": 753,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-024-whole_source",
+      "tokens": 888,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-024-none",
+      "tokens": 861,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-025-whole_source",
+      "tokens": 927,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-025-none",
+      "tokens": 900,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-026-whole_source",
+      "tokens": 924,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-026-none",
+      "tokens": 897,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-027-whole_source",
+      "tokens": 1010,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-027-none",
+      "tokens": 983,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-028-whole_source",
+      "tokens": 1009,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-028-none",
+      "tokens": 982,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-029-whole_source",
+      "tokens": 975,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-029-none",
+      "tokens": 948,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-030-whole_source",
+      "tokens": 915,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-030-none",
+      "tokens": 888,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-001-whole_source",
+      "tokens": 1087,
+      "loss_tokens": 84
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-001-none",
+      "tokens": 995,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-002-whole_source",
+      "tokens": 1268,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-002-none",
+      "tokens": 1241,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-003-whole_source",
+      "tokens": 1375,
+      "loss_tokens": 96
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-003-none",
+      "tokens": 1271,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-004-whole_source",
+      "tokens": 1212,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-004-none",
+      "tokens": 1118,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-005-whole_source",
+      "tokens": 1162,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-005-none",
+      "tokens": 1135,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-021-whole_source",
+      "tokens": 956,
+      "loss_tokens": 84
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-021-none",
+      "tokens": 864,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-022-whole_source",
+      "tokens": 1161,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-022-none",
+      "tokens": 1134,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-023-whole_source",
+      "tokens": 1286,
+      "loss_tokens": 96
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-023-none",
+      "tokens": 1182,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-024-whole_source",
+      "tokens": 1106,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-024-none",
+      "tokens": 1012,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-025-whole_source",
+      "tokens": 1049,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-025-none",
+      "tokens": 1022,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-026-whole_source",
+      "tokens": 1063,
+      "loss_tokens": 84
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-026-none",
+      "tokens": 971,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-027-whole_source",
+      "tokens": 1296,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-027-none",
+      "tokens": 1269,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-028-whole_source",
+      "tokens": 1427,
+      "loss_tokens": 95
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-028-none",
+      "tokens": 1324,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-029-whole_source",
+      "tokens": 1206,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-029-none",
+      "tokens": 1112,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-030-whole_source",
+      "tokens": 1144,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-030-none",
+      "tokens": 1117,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-external-context-v1:ec-001-whole_source",
+      "tokens": 1059,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-external-context-v1:ec-001-none",
+      "tokens": 958,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-context-v1:ec-002-whole_source",
+      "tokens": 1177,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-context-v1:ec-002-none",
+      "tokens": 1150,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-context-v1:ec-003-whole_source",
+      "tokens": 998,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-external-context-v1:ec-003-none",
+      "tokens": 897,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-context-v1:ec-004-whole_source",
+      "tokens": 1159,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-context-v1:ec-004-none",
+      "tokens": 1132,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-context-v1:ec-007-whole_source",
+      "tokens": 1491,
+      "loss_tokens": 94
+    },
+    {
+      "id": "verifier-external-context-v1:ec-007-none",
+      "tokens": 1388,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-context-v1:ec-008-whole_source",
+      "tokens": 1624,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-external-context-v1:ec-008-none",
+      "tokens": 1596,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-external-context-v1:ec-009-whole_source",
+      "tokens": 1299,
+      "loss_tokens": 94
+    },
+    {
+      "id": "verifier-external-context-v1:ec-009-none",
+      "tokens": 1196,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-context-v1:ec-010-whole_source",
+      "tokens": 1434,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-external-context-v1:ec-010-none",
+      "tokens": 1406,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-external-context-v1:ec-011-whole_source",
+      "tokens": 931,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-external-context-v1:ec-011-none",
+      "tokens": 830,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-external-context-v1:ec-012-whole_source",
+      "tokens": 1064,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-context-v1:ec-012-none",
+      "tokens": 1037,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-context-v1:ec-013-whole_source",
+      "tokens": 976,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-context-v1:ec-013-none",
+      "tokens": 949,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-context-v1:ec-014-whole_source",
+      "tokens": 1029,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-external-context-v1:ec-014-none",
+      "tokens": 1002,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-external-context-v1:ec-015-whole_source",
+      "tokens": 790,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-context-v1:ec-015-none",
+      "tokens": 763,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-context-v1:ec-016-whole_source",
+      "tokens": 892,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-external-context-v1:ec-016-none",
+      "tokens": 865,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-external-context-v1:ec-017-whole_source",
+      "tokens": 764,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-context-v1:ec-017-none",
+      "tokens": 737,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-context-v1:ec-018-whole_source",
+      "tokens": 853,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-external-context-v1:ec-018-none",
+      "tokens": 826,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-external-context-v1:ec-019-whole_source",
+      "tokens": 784,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-context-v1:ec-019-none",
+      "tokens": 757,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-context-v1:ec-020-whole_source",
+      "tokens": 883,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-external-context-v1:ec-020-none",
+      "tokens": 856,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-external-context-v1:ec-021-whole_source",
+      "tokens": 860,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-context-v1:ec-021-none",
+      "tokens": 833,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-context-v1:ec-022-whole_source",
+      "tokens": 997,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-external-context-v1:ec-022-none",
+      "tokens": 970,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-external-context-v1:ec-023-whole_source",
+      "tokens": 911,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-external-context-v1:ec-023-none",
+      "tokens": 884,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-external-context-v1:ec-024-whole_source",
+      "tokens": 964,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-external-context-v1:ec-024-none",
+      "tokens": 937,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-005-whole_source",
+      "tokens": 842,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-005-none",
+      "tokens": 752,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-006-whole_source",
+      "tokens": 923,
+      "loss_tokens": 81
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-006-none",
+      "tokens": 896,
+      "loss_tokens": 73
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-007-whole_source",
+      "tokens": 989,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-007-none",
+      "tokens": 888,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-008-whole_source",
+      "tokens": 736,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-008-none",
+      "tokens": 709,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-013-whole_source",
+      "tokens": 847,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-013-none",
+      "tokens": 757,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-014-whole_source",
+      "tokens": 949,
+      "loss_tokens": 81
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-014-none",
+      "tokens": 922,
+      "loss_tokens": 73
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-015-whole_source",
+      "tokens": 990,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-015-none",
+      "tokens": 889,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-016-whole_source",
+      "tokens": 730,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-016-none",
+      "tokens": 703,
+      "loss_tokens": 74
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-017-whole_source",
+      "tokens": 798,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-017-none",
+      "tokens": 708,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-018-whole_source",
+      "tokens": 985,
+      "loss_tokens": 81
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-018-none",
+      "tokens": 958,
+      "loss_tokens": 73
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-019-whole_source",
+      "tokens": 1048,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-019-none",
+      "tokens": 947,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-020-whole_source",
+      "tokens": 742,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-020-none",
+      "tokens": 715,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-021-whole_source",
+      "tokens": 772,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-021-none",
+      "tokens": 682,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-022-whole_source",
+      "tokens": 980,
+      "loss_tokens": 79
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-022-none",
+      "tokens": 953,
+      "loss_tokens": 71
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-023-whole_source",
+      "tokens": 1013,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-023-none",
+      "tokens": 914,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-024-whole_source",
+      "tokens": 748,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-024-none",
+      "tokens": 721,
+      "loss_tokens": 74
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-025-whole_source",
+      "tokens": 796,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-025-none",
+      "tokens": 706,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-026-whole_source",
+      "tokens": 987,
+      "loss_tokens": 80
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-026-none",
+      "tokens": 960,
+      "loss_tokens": 72
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-027-whole_source",
+      "tokens": 1064,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-027-none",
+      "tokens": 964,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-028-whole_source",
+      "tokens": 755,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-028-none",
+      "tokens": 728,
+      "loss_tokens": 81
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-029-whole_source",
+      "tokens": 778,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-029-none",
+      "tokens": 688,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-030-whole_source",
+      "tokens": 994,
+      "loss_tokens": 79
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-030-none",
+      "tokens": 967,
+      "loss_tokens": 71
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-031-whole_source",
+      "tokens": 1024,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-031-none",
+      "tokens": 925,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-032-whole_source",
+      "tokens": 805,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-032-none",
+      "tokens": 778,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-002-whole_source",
+      "tokens": 1015,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-002-none",
+      "tokens": 924,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-003-whole_source",
+      "tokens": 1007,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-003-none",
+      "tokens": 916,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-004-whole_source",
+      "tokens": 976,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-004-none",
+      "tokens": 885,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-005-whole_source",
+      "tokens": 999,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-005-none",
+      "tokens": 908,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-006-whole_source",
+      "tokens": 961,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-006-none",
+      "tokens": 870,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-007-whole_source",
+      "tokens": 981,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-007-none",
+      "tokens": 890,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-008-whole_source",
+      "tokens": 974,
+      "loss_tokens": 81
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-008-none",
+      "tokens": 885,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-001-whole_source",
+      "tokens": 1381,
+      "loss_tokens": 94
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-001-none",
+      "tokens": 1352,
+      "loss_tokens": 85
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-002-whole_source",
+      "tokens": 1604,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-002-none",
+      "tokens": 1366,
+      "loss_tokens": 80
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-004-whole_source",
+      "tokens": 1072,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-004-none",
+      "tokens": 1045,
+      "loss_tokens": 79
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-073-whole_source",
+      "tokens": 1059,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-073-none",
+      "tokens": 968,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-077-whole_source",
+      "tokens": 988,
+      "loss_tokens": 84
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-077-none",
+      "tokens": 896,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-079-whole_source",
+      "tokens": 961,
+      "loss_tokens": 81
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-079-none",
+      "tokens": 872,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-199-whole_source",
+      "tokens": 929,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-199-none",
+      "tokens": 838,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-037-whole_source",
+      "tokens": 1676,
+      "loss_tokens": 95
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-037-none",
+      "tokens": 1648,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-046-whole_source",
+      "tokens": 1241,
+      "loss_tokens": 85
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-046-none",
+      "tokens": 1214,
+      "loss_tokens": 77
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-001-whole_source",
+      "tokens": 989,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-001-none",
+      "tokens": 891,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-002-whole_source",
+      "tokens": 1126,
+      "loss_tokens": 85
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-002-none",
+      "tokens": 1099,
+      "loss_tokens": 77
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-003-whole_source",
+      "tokens": 1198,
+      "loss_tokens": 94
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-003-none",
+      "tokens": 1096,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-004-whole_source",
+      "tokens": 773,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-004-none",
+      "tokens": 675,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-005-whole_source",
+      "tokens": 938,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-005-none",
+      "tokens": 911,
+      "loss_tokens": 79
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-006-whole_source",
+      "tokens": 1008,
+      "loss_tokens": 94
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-006-none",
+      "tokens": 906,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-007-whole_source",
+      "tokens": 839,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-007-none",
+      "tokens": 741,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-008-whole_source",
+      "tokens": 1061,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-008-none",
+      "tokens": 1034,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-009-whole_source",
+      "tokens": 1127,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-009-none",
+      "tokens": 1026,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-013-whole_source",
+      "tokens": 806,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-013-none",
+      "tokens": 708,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-014-whole_source",
+      "tokens": 992,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-014-none",
+      "tokens": 965,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-015-whole_source",
+      "tokens": 1058,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-015-none",
+      "tokens": 957,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-001-whole_source",
+      "tokens": 901,
+      "loss_tokens": 94
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-001-none",
+      "tokens": 799,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-002-whole_source",
+      "tokens": 896,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-002-none",
+      "tokens": 869,
+      "loss_tokens": 84
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-003-whole_source",
+      "tokens": 1038,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-003-none",
+      "tokens": 937,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-004-whole_source",
+      "tokens": 768,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-004-none",
+      "tokens": 741,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-005-whole_source",
+      "tokens": 871,
+      "loss_tokens": 94
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-005-none",
+      "tokens": 769,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-006-whole_source",
+      "tokens": 901,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-006-none",
+      "tokens": 874,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-007-whole_source",
+      "tokens": 1028,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-007-none",
+      "tokens": 928,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-008-whole_source",
+      "tokens": 755,
+      "loss_tokens": 99
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-008-none",
+      "tokens": 728,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-009-whole_source",
+      "tokens": 794,
+      "loss_tokens": 94
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-009-none",
+      "tokens": 692,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-010-whole_source",
+      "tokens": 822,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-010-none",
+      "tokens": 795,
+      "loss_tokens": 84
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-011-whole_source",
+      "tokens": 1034,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-011-none",
+      "tokens": 933,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-012-whole_source",
+      "tokens": 753,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-012-none",
+      "tokens": 726,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-013-whole_source",
+      "tokens": 872,
+      "loss_tokens": 94
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-013-none",
+      "tokens": 770,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-014-whole_source",
+      "tokens": 822,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-014-none",
+      "tokens": 795,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-015-whole_source",
+      "tokens": 903,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-015-none",
+      "tokens": 804,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-016-whole_source",
+      "tokens": 755,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-vietnamese-workflow-v1:vw-016-none",
+      "tokens": 728,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-vietnamese-business-v1:vb-016-whole_source",
+      "tokens": 935,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-vietnamese-business-v1:vb-016-none",
+      "tokens": 839,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-business-v1:vb-017-whole_source",
+      "tokens": 1140,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-vietnamese-business-v1:vb-017-none",
+      "tokens": 1113,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-vietnamese-business-v1:vb-018-whole_source",
+      "tokens": 1086,
+      "loss_tokens": 97
+    },
+    {
+      "id": "verifier-vietnamese-business-v1:vb-018-none",
+      "tokens": 1059,
+      "loss_tokens": 89
+    },
+    {
+      "id": "verifier-vietnamese-business-v1:vb-019-whole_source",
+      "tokens": 1195,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-vietnamese-business-v1:vb-019-none",
+      "tokens": 1095,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-vietnamese-business-v1:vb-020-whole_source",
+      "tokens": 1010,
+      "loss_tokens": 93
+    },
+    {
+      "id": "verifier-vietnamese-business-v1:vb-020-none",
+      "tokens": 983,
+      "loss_tokens": 85
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-001-whole_source",
+      "tokens": 863,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-001-none",
+      "tokens": 767,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-002-whole_source",
+      "tokens": 977,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-002-none",
+      "tokens": 950,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-003-whole_source",
+      "tokens": 964,
+      "loss_tokens": 98
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-003-none",
+      "tokens": 937,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-004-whole_source",
+      "tokens": 953,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-004-none",
+      "tokens": 926,
+      "loss_tokens": 80
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-005-whole_source",
+      "tokens": 949,
+      "loss_tokens": 95
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-005-none",
+      "tokens": 922,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-006-whole_source",
+      "tokens": 910,
+      "loss_tokens": 86
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-006-none",
+      "tokens": 883,
+      "loss_tokens": 78
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-007-whole_source",
+      "tokens": 932,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-007-none",
+      "tokens": 836,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-008-whole_source",
+      "tokens": 1062,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-008-none",
+      "tokens": 1035,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-009-whole_source",
+      "tokens": 1069,
+      "loss_tokens": 98
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-009-none",
+      "tokens": 1042,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-010-whole_source",
+      "tokens": 1076,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-010-none",
+      "tokens": 1049,
+      "loss_tokens": 80
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-011-whole_source",
+      "tokens": 1057,
+      "loss_tokens": 95
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-011-none",
+      "tokens": 1030,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-012-whole_source",
+      "tokens": 990,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-012-none",
+      "tokens": 963,
+      "loss_tokens": 83
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-013-whole_source",
+      "tokens": 843,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-013-none",
+      "tokens": 747,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-014-whole_source",
+      "tokens": 937,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-014-none",
+      "tokens": 910,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-015-whole_source",
+      "tokens": 973,
+      "loss_tokens": 98
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-015-none",
+      "tokens": 946,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-016-whole_source",
+      "tokens": 936,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-016-none",
+      "tokens": 909,
+      "loss_tokens": 80
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-017-whole_source",
+      "tokens": 935,
+      "loss_tokens": 95
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-017-none",
+      "tokens": 908,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-018-whole_source",
+      "tokens": 895,
+      "loss_tokens": 85
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-018-none",
+      "tokens": 868,
+      "loss_tokens": 77
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-019-whole_source",
+      "tokens": 926,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-019-none",
+      "tokens": 830,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-020-whole_source",
+      "tokens": 1068,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-020-none",
+      "tokens": 1041,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-021-whole_source",
+      "tokens": 1069,
+      "loss_tokens": 98
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-021-none",
+      "tokens": 1042,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-022-whole_source",
+      "tokens": 1049,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-022-none",
+      "tokens": 1022,
+      "loss_tokens": 80
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-023-whole_source",
+      "tokens": 1060,
+      "loss_tokens": 95
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-023-none",
+      "tokens": 1033,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-024-whole_source",
+      "tokens": 989,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-024-none",
+      "tokens": 962,
+      "loss_tokens": 82
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-025-whole_source",
+      "tokens": 857,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-025-none",
+      "tokens": 761,
+      "loss_tokens": 11
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-026-whole_source",
+      "tokens": 957,
+      "loss_tokens": 100
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-026-none",
+      "tokens": 930,
+      "loss_tokens": 92
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-027-whole_source",
+      "tokens": 961,
+      "loss_tokens": 98
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-027-none",
+      "tokens": 934,
+      "loss_tokens": 90
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-028-whole_source",
+      "tokens": 953,
+      "loss_tokens": 88
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-028-none",
+      "tokens": 926,
+      "loss_tokens": 80
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-029-whole_source",
+      "tokens": 952,
+      "loss_tokens": 95
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-029-none",
+      "tokens": 925,
+      "loss_tokens": 87
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-030-whole_source",
+      "tokens": 909,
+      "loss_tokens": 91
+    },
+    {
+      "id": "verifier-context-transfer-v1:ct-030-none",
+      "tokens": 882,
+      "loss_tokens": 83
+    }
+  ],
+  "input_sha256": {
+    "mau-cho-duyet.jsonl": "4b1be01e0fc37d3937c83abfdef52ac33b91b5f820ccb30d01f0793911db2703",
+    "train.preview.jsonl": "b11cf6a9c3e8f12e67ba0377de636cb806205169218d92c5ff6d0cfb6f3bc5d1"
+  },
+  "code_sha256": "53e004931c0360ff70c8220b73e402aac3c1601646ac5e96f3a128c0d017cf45"
+}

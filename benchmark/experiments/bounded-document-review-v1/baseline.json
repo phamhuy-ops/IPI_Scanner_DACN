@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-25T13:52:13.562Z",
+  "scope": "Baseline kỹ thuật trước nhánh đọc bổ sung; chưa đo chất lượng model",
+  "tests": {
+    "passed": 77,
+    "files": 2
+  },
+  "sha256": {
+    "engine/scanner/ipi-doc-scan.js": "e98afbbd902b2cd056fce72a25cc7847cfb7a54071c6da13f9a119812b6186e3",
+    "src/types.ts": "9c2ad202af299dcca1b798f9e293e07e87f3b5ff4955f0d6a3cf14c8ab12919c",
+    "src/ai/agents/slmClient.ts": "5208d07eb6526fcad1a2154497e1e150c50835d604fcb74d7db21a4ad96efc54",
+    "src/ai/agents/document/detectorAgent.ts": "d52856c59732773649091cbb3f2cfad716ffba556ce64ee9498ab25e2060bd03",
+    "src/ai/agents/document/verifierAgent.ts": "d42d6b0862b438e8e786ad583921238afed530d6faa91ea3002515cc61f60947",
+    "src/ai/agents/document/ipiPipeline.ts": "efcb28713c04da4e550ed914580aafcc8b3236cdfec5c017a9cfac4ea037ab03"
+  }
+}

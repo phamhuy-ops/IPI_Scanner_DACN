@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-3",
+      "stance": "dismissed",
+      "addressee": "human",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Tin tuyển dụng hướng dẫn ứng viên gửi hồ sơ qua email; không gọi AI lấy hoặc gửi dữ liệu trong hội thoại."
+    }
+  ],
+  "discoveries": []
+}

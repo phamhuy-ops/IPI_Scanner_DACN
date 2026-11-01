@@ -1,0 +1,17 @@
+{
+  "baseline": "benchmark/results/bounded-review-2p7r8U/giao-thuc.json",
+  "checks": [
+    {
+      "file": "src/types.ts",
+      "before": "37bcae0b42206218c374108b5c9565c6a22cec737e897fc3f5125061ec92fb72",
+      "after": "37bcae0b42206218c374108b5c9565c6a22cec737e897fc3f5125061ec92fb72"
+    },
+    {
+      "file": "src/ai/agents/document/ipiPipeline.ts",
+      "before": "133915b5b8d8767c7a21104f33176bef921ae0558c643600a15b2ae1a8420c33",
+      "after": "133915b5b8d8767c7a21104f33176bef921ae0558c643600a15b2ae1a8420c33"
+    }
+  ],
+  "matched": true,
+  "scope": "Chỉ khôi phục tích hợp kiến trúc và kiểu dữ liệu; giữ bản sửa cắt đầu ra và sửa vị trí. Không reset toàn bộ working tree."
+}

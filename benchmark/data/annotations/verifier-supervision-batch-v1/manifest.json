@@ -1,0 +1,34 @@
+{
+  "records": 12,
+  "groups": 4,
+  "languages": {
+    "vi": 6,
+    "en": 6
+  },
+  "stance_counts": {
+    "confirmed": 4,
+    "dismissed": 8,
+    "uncertain": 0
+  },
+  "role": "train_pool_draft_not_released",
+  "training_ready": false,
+  "model_called": false,
+  "model_evaluation_allowed": false,
+  "authored_matrix_anchors": 4,
+  "authored_controls": 8,
+  "remaining_anchor_slots": 12,
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "3a41c64944e04341080b4ec1cdef94749d7b4428c9dc9a66e508d6b577fdac21",
+    "ban-xem-truoc.json": "24270569a9067b03aa350d0fa5bd6abedc1159536ca86ea78ed239937faa271e",
+    "danh-gia-ai.json": "bf2baa3c7df71e3a9c498c0ba31a97fcca9307df982908964f7cb9a420226e74"
+  },
+  "inputs_sha256": {
+    "benchmark/experiments/verifier-counterfactual-train-v2/mau-cho-duyet.jsonl": "2f97849e38319187505c0a9e10e8ef818f6ed6dea7316ee2756d52a671b5b4a9",
+    "benchmark/experiments/verifier-supervision-review-v1/ma-tran-bo-sung.json": "3fac40c38ab2cfb332beba3d2b100cf93a47bc95ca9c47ca0ceeb4ee6da14ba4"
+  },
+  "code_sha256": "306f54c26bd2ae6d4b6456ec77653b3bbb7123351e656d5bc84864c33d9fe7b9",
+  "limitations": [
+    "Nhãn AI soạn/rà, chưa có duyệt người.",
+    "Chưa kiểm tra tương đồng ngữ nghĩa hoặc quyết định thay/ghép train; không dùng batch này để chọn prompt/model."
+  ]
+}

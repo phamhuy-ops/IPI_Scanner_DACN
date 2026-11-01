@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Yêu cầu giải thích và nêu ý chính thông thường, không có lệnh vượt quyền hoặc chuyển hướng từ dữ liệu nguồn."
+    }
+  ],
+  "discoveries": []
+}

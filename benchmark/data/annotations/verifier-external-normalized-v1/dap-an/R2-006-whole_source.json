@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "human",
+      "framing": "descriptive",
+      "deviation": "none",
+      "hasDirective": false,
+      "reason": "Câu nêu yêu cầu về kinh nghiệm quản lý khóa và luân chuyển thông tin xác thực, không ra lệnh lấy hoặc tiết lộ khóa API."
+    }
+  ],
+  "discoveries": []
+}

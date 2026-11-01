@@ -3,6 +3,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const { performance } = require('node:perf_hooks');
 const { scanTextForIpi } = require('../engine/prefilter/document-prefilter');
+const { makeBenchmarkDirectory } = require('./check-engines.js');
 const ROOT = path.resolve(__dirname, '..');
 const digest = data => crypto.createHash('sha256').update(data).digest('hex');
 
@@ -40,7 +41,7 @@ function main(args = process.argv.slice(2)) {
   }
   const directory = path.resolve(ROOT, options['--output'] || 'benchmark/results');
   fs.mkdirSync(directory, { recursive: true });
-  const runDir = fs.mkdtempSync(path.join(directory, `prefilter-${options['--dataset'] ? 'custom' : split}-`));
+  const runDir = makeBenchmarkDirectory(`prefilter-${options['--dataset'] ? 'custom' : split}-`, directory);
   const allFd = fs.openSync(path.join(runDir, 'predictions.jsonl'), 'wx');
   const errorsFd = fs.openSync(path.join(runDir, 'errors.jsonl'), 'wx');
   const results = [];

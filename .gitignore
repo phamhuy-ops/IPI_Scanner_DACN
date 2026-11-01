@@ -8,6 +8,8 @@ dist-ts/
 !.env.example
 
 benchmark/results/
+__pycache__/
+*.pyc
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

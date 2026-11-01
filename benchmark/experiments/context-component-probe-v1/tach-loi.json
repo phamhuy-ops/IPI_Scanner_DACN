@@ -1,0 +1,337 @@
+{
+  "by_task": {
+    "addressee": {
+      "value_only_correct": 3,
+      "full_correct": 3,
+      "enum_valid": 16
+    },
+    "framing": {
+      "value_only_correct": 10,
+      "full_correct": 7,
+      "enum_valid": 16
+    }
+  },
+  "cases": [
+    {
+      "id": "ra-001",
+      "task": "addressee",
+      "expected": "human",
+      "value": "none",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-001",
+      "task": "framing",
+      "expected": "active",
+      "value": "active",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": true,
+      "full_result_correct": true
+    },
+    {
+      "id": "ra-002",
+      "task": "framing",
+      "expected": "active",
+      "value": "active",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": true,
+      "full_result_correct": true
+    },
+    {
+      "id": "ra-002",
+      "task": "addressee",
+      "expected": "assistant",
+      "value": "none",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-003",
+      "task": "addressee",
+      "expected": "unclear",
+      "value": "none",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-003",
+      "task": "framing",
+      "expected": "active",
+      "value": "quoted_example",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-004",
+      "task": "framing",
+      "expected": "quoted_example",
+      "value": "quoted_example",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": false,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-004",
+      "task": "addressee",
+      "expected": "assistant",
+      "value": "none",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-007",
+      "task": "addressee",
+      "expected": "human",
+      "value": "human",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": true,
+      "full_result_correct": true
+    },
+    {
+      "id": "ra-007",
+      "task": "framing",
+      "expected": "active",
+      "value": "active",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": true,
+      "full_result_correct": true
+    },
+    {
+      "id": "ra-008",
+      "task": "framing",
+      "expected": "active",
+      "value": "active",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": true,
+      "full_result_correct": true
+    },
+    {
+      "id": "ra-008",
+      "task": "addressee",
+      "expected": "assistant",
+      "value": "none",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-009",
+      "task": "addressee",
+      "expected": "unclear",
+      "value": "human",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-009",
+      "task": "framing",
+      "expected": "active",
+      "value": "quoted_example",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-010",
+      "task": "framing",
+      "expected": "quoted_example",
+      "value": "quoted_example",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": false,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-010",
+      "task": "addressee",
+      "expected": "assistant",
+      "value": "human",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": false,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-013",
+      "task": "addressee",
+      "expected": "human",
+      "value": "human",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": true,
+      "full_result_correct": true
+    },
+    {
+      "id": "ra-013",
+      "task": "framing",
+      "expected": "active",
+      "value": "quoted_example",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-014",
+      "task": "framing",
+      "expected": "active",
+      "value": "quoted_example",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-014",
+      "task": "addressee",
+      "expected": "assistant",
+      "value": "human",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-015",
+      "task": "addressee",
+      "expected": "unclear",
+      "value": "human",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": false,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-015",
+      "task": "framing",
+      "expected": "active",
+      "value": "quoted_example",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": false,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-016",
+      "task": "framing",
+      "expected": "quoted_example",
+      "value": "quoted_example",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": false,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-016",
+      "task": "addressee",
+      "expected": "assistant",
+      "value": "human",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-019",
+      "task": "addressee",
+      "expected": "human",
+      "value": "human",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": true,
+      "full_result_correct": true
+    },
+    {
+      "id": "ra-019",
+      "task": "framing",
+      "expected": "active",
+      "value": "active",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": true,
+      "full_result_correct": true
+    },
+    {
+      "id": "ra-020",
+      "task": "framing",
+      "expected": "active",
+      "value": "active",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": true,
+      "full_result_correct": true
+    },
+    {
+      "id": "ra-020",
+      "task": "addressee",
+      "expected": "assistant",
+      "value": "human",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-021",
+      "task": "addressee",
+      "expected": "unclear",
+      "value": "human",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-021",
+      "task": "framing",
+      "expected": "active",
+      "value": "quoted_example",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    },
+    {
+      "id": "ra-022",
+      "task": "framing",
+      "expected": "quoted_example",
+      "value": "quoted_example",
+      "enum_valid": true,
+      "value_correct": true,
+      "source_quote_valid": true,
+      "full_result_correct": true
+    },
+    {
+      "id": "ra-022",
+      "task": "addressee",
+      "expected": "assistant",
+      "value": "none",
+      "enum_valid": true,
+      "value_correct": false,
+      "source_quote_valid": true,
+      "full_result_correct": false
+    }
+  ],
+  "interpretation": "Chấm enum riêng để phân biệt lỗi hiểu ngữ cảnh với lỗi trích dẫn; không bỏ điều kiện nguồn trong cổng gốc."
+}

@@ -1,0 +1,23 @@
+{
+  "source_records": 27,
+  "contract_examples": 54,
+  "parser_valid": 54,
+  "exact_rebuild_valid": true,
+  "shared_group_preserved": true,
+  "metadata_excluded_from_input": true,
+  "code_sha256": {
+    "scripts/normalize-reviewed-external.cjs": "09b087dc98075b4ceea2a8252822e45cf353671cd5b6152c92b956c16ac9c897",
+    "scripts/normalize-reviewed-external.ts": "244b3fc792ff4393195428409f5d30a8c1ff303acbb838c54a4824548571ade0",
+    "scripts/verifier-batch-renderer.ts": "804bc01e9cc4175ab4213794deb11ca35ecac1ff948e42ca8bfff22d243db5a2",
+    "scripts/audit-normalized-external.cjs": "567e61084d259489290aea3f49f70ffde8b9275efbf731b30eb10f1e9f031dbf",
+    "scripts/context-annotations.cjs": "cacb09c83bf7653c65063ba553e67855e7eaff09bf513bcdd96585ff21476ae3",
+    "src/ai/agents/document/compactVerifier.ts": "6e97af31a1502799ecd22f27bfc0c1441a024aa9ba9748552f5e5c56e31c2ce0",
+    "src/ai/agents/document/sourceReferences.ts": "1113816af9d37bba1f75931195a929be5bca36bbe8d76596164e9e7eb8bbcb51",
+    "src/ai/agents/document/reviewPolicy.ts": "ce1d9beb517862d989925d9a204a38b710e06b1891a28f33494b84ece8500aed",
+    "src/ai/agents/document/evidence.ts": "804e027ef7e1d450f2a118e073e9786f269f4b6e3d67d5f960b921ca1dc7b174"
+  },
+  "human_span_review_complete": false,
+  "final_split_created": false,
+  "training_ready": false,
+  "independent": false
+}

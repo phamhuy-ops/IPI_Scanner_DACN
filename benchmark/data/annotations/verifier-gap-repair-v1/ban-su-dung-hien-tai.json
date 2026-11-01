@@ -1,0 +1,186 @@
+{
+  "source_parents": 15,
+  "additional_independent_sources": 0,
+  "selected_examples": 30,
+  "token_min": 978,
+  "token_max": 1735,
+  "over_budget": {
+    "1024": 27,
+    "1536": 4,
+    "2048": 0
+  },
+  "all_source_stances_previously_human_reviewed": true,
+  "repaired_text_human_reviewed": false,
+  "ai_repaired_versions": 6,
+  "active_sources": [
+    {
+      "parent_source_id": "verifier-gap-v1:gap-001",
+      "source_record_id": "gap-001",
+      "version_path": "benchmark/data/annotations/verifier-gap-normalized-v1",
+      "version_sha256": "ef361208f8d2d8c0c9a2e664948c20f669a162f1b7aacad7c5b132c7d2a68eec",
+      "global_group_id": "cg-a3a99a1400d9f9c4",
+      "context_review_origin": "human_presented_context",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-002",
+      "source_record_id": "gap-002",
+      "version_path": "benchmark/data/annotations/verifier-gap-normalized-v1",
+      "version_sha256": "4b6eb54d9be6a7c6d310b33c76b464c5e58dd177330331d2a852efda2e7f47b7",
+      "global_group_id": "cg-a3a99a1400d9f9c4",
+      "context_review_origin": "human_presented_context",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-003",
+      "source_record_id": "gap-003",
+      "version_path": "benchmark/data/annotations/verifier-gap-normalized-v1",
+      "version_sha256": "db359fbf9167053f2fdafffcc24fe65bd21a5d87791c18714bcbf7432eb48d78",
+      "global_group_id": "cg-a3a99a1400d9f9c4",
+      "context_review_origin": "human_presented_context",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-004",
+      "source_record_id": "gap-004",
+      "version_path": "benchmark/data/annotations/verifier-gap-repair-v1",
+      "version_sha256": "11c5a5ee871e013ea1987898c0e514b10c3d7c43b342505ca203d4a3ab6de1ac",
+      "global_group_id": "cg-c8e3c3524633ea88",
+      "context_review_origin": "ai",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-005",
+      "source_record_id": "gap-005",
+      "version_path": "benchmark/data/annotations/verifier-gap-repair-v1",
+      "version_sha256": "afa23463674fcce49f0ab8d2c267219b50461e1c1384398ebe285067e243e123",
+      "global_group_id": "cg-c8e3c3524633ea88",
+      "context_review_origin": "ai",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-006",
+      "source_record_id": "gap-006",
+      "version_path": "benchmark/data/annotations/verifier-gap-repair-v1",
+      "version_sha256": "7b2e667dacb82662ed92c1c669f6ed1eebcaa8687fc824b80c28c9ed5ad9f950",
+      "global_group_id": "cg-c8e3c3524633ea88",
+      "context_review_origin": "ai",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-007",
+      "source_record_id": "gap-007",
+      "version_path": "benchmark/data/annotations/verifier-gap-normalized-v1",
+      "version_sha256": "9292619f36f58806e48db5c0d6886b07248e7e5c62fd3957ebdb7bab9f165668",
+      "global_group_id": "cg-a3a99a1400d9f9c4",
+      "context_review_origin": "human_presented_context",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-008",
+      "source_record_id": "gap-008",
+      "version_path": "benchmark/data/annotations/verifier-gap-normalized-v1",
+      "version_sha256": "358773d032ca11b7f5c1da9886d099ee2968bfa1532a7e2fd5bf85bcef48121b",
+      "global_group_id": "cg-a3a99a1400d9f9c4",
+      "context_review_origin": "human_presented_context",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-009",
+      "source_record_id": "gap-009",
+      "version_path": "benchmark/data/annotations/verifier-gap-normalized-v1",
+      "version_sha256": "4616ed5b23922da865e6b3f996c366bcd9059c81e1fd41667a786dcb8395e0ef",
+      "global_group_id": "cg-a3a99a1400d9f9c4",
+      "context_review_origin": "human_presented_context",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-010",
+      "source_record_id": "gap-010",
+      "version_path": "benchmark/data/annotations/verifier-gap-normalized-v1",
+      "version_sha256": "d2e85a58ad0c4b02bcef255de87bed055515a7f851e7ac0bb8f65cba3f612472",
+      "global_group_id": "cg-add90d851526e643",
+      "context_review_origin": "human_presented_context",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-011",
+      "source_record_id": "gap-011",
+      "version_path": "benchmark/data/annotations/verifier-gap-normalized-v1",
+      "version_sha256": "0a79ce579739ec641c745db21c8d6ae62618bbeeafbcd04013d07aa7d36fcd75",
+      "global_group_id": "cg-add90d851526e643",
+      "context_review_origin": "ai",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-012",
+      "source_record_id": "gap-012",
+      "version_path": "benchmark/data/annotations/verifier-gap-normalized-v1",
+      "version_sha256": "7587f37d86d72bf7b76d8aa6f6126fd112ff7070f049eb049b5b4240a883e2fa",
+      "global_group_id": "cg-add90d851526e643",
+      "context_review_origin": "ai",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-013",
+      "source_record_id": "gap-013",
+      "version_path": "benchmark/data/annotations/verifier-gap-repair-v1",
+      "version_sha256": "c460e3d2b21ed05c3cbb75246fa6adc0df027942ca1ab844e500acb46313120b",
+      "global_group_id": "cg-a3a99a1400d9f9c4",
+      "context_review_origin": "ai",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-014",
+      "source_record_id": "gap-014",
+      "version_path": "benchmark/data/annotations/verifier-gap-repair-v1",
+      "version_sha256": "79100bdca1b463dc5e0d09910a522d008eb36259b8a52b1cfc39e1b7102bc943",
+      "global_group_id": "cg-a3a99a1400d9f9c4",
+      "context_review_origin": "ai",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "parent_source_id": "verifier-gap-v1:gap-015",
+      "source_record_id": "gap-015",
+      "version_path": "benchmark/data/annotations/verifier-gap-repair-v1",
+      "version_sha256": "1964a4de6553774baf57377b2503a10f869f8b4bea97d5fb0b3f9b29250b0d63",
+      "global_group_id": "cg-a3a99a1400d9f9c4",
+      "context_review_origin": "ai",
+      "usable_for_dev_preview": true,
+      "training_eligible": false,
+      "final_split": null
+    }
+  ],
+  "training_export": false,
+  "training_ready": false,
+  "raw_defective_versions_remain_quarantined": true,
+  "independent": false
+}

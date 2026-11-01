@@ -1,0 +1,37 @@
+{
+  "status": "offline_adapter_complete",
+  "code_sha256": {
+    "src/ai/classifier/contracts.ts": "a780db406472a74b46a9160c4762889daa2ca189d458313660e2ba52e34f466e",
+    "src/ai/classifier/sourceWindows.ts": "09e7a4df778202f8ae27d5eb2b1d60746a82371a651df1b4ef3302f8ad007e80",
+    "src/ai/classifier/classifierAdapter.ts": "39e7b47379a3d9dab13ce2e0cec5f85b2c23837639d17d62f6f1427160815234",
+    "src/ai/classifier/classifierAdapter.test.ts": "1f8ee6c3538b2e46d24ef05f6dd0936998ea2c03fc450c9076447eacd84e87c3",
+    "src/ai/classifier/stdioSession.test.ts": "bf1961d3efac1ed7e06d6d4730604fda403c02ee32c411fe98302edb23854fd2",
+    "engine/classifier/stdio-session.js": "e5ccea78b8c43403e84b5f57ea1c4903c1ac3174b3a7fc27dad1d3e5b52e7330",
+    "scripts/check-classifier-offline.cjs": "d0ce91e144fc1b02f1aceb7edaa09d6a971d5dcae875b14e8b1ffecd460fb027"
+  },
+  "tests_passed": 267,
+  "new_tests": 27,
+  "transport_stdio_implemented": true,
+  "python_inference_worker_implemented": false,
+  "real_tokenizer_used": false,
+  "real_model_calls": 0,
+  "downloads": 0,
+  "training": false,
+  "default_app_changed": false,
+  "recognition_improvement_demonstrated": false,
+  "integration_artifact": "benchmark/experiments/classifier-adapter-offline-v2/ket-qua.json",
+  "integration": {
+    "extraction": "real_TXT_HTML",
+    "source_buffers": 5,
+    "simulated_windows": 81
+  },
+  "previous_attempt": {
+    "artifact": "benchmark/experiments/classifier-adapter-offline-v1/loi.json",
+    "reason": "Runner chưa bật includeSemanticChunkCatalog; sửa rõ tùy chọn để kiểm toàn catalog, không dùng nhầm tập chunk được chọn."
+  },
+  "remaining": [
+    "Worker Python load model/tokenizer local-only và pin phiên bản thực.",
+    "Manifest dữ liệu/nhóm, cổng số học và budget model chưa khóa.",
+    "Chưa tải, kiểm quyền model hoặc đo nhận diện/pipeline thật."
+  ]
+}

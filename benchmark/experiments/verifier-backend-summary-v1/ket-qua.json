@@ -1,0 +1,98 @@
+{
+  "collator_examples_valid": 174,
+  "collator_examples": 174,
+  "old_and_current_budget_coverage": {
+    "1024": 48,
+    "1536": 4,
+    "2048": 0
+  },
+  "dense_trials": [
+    {
+      "tokens": 1024,
+      "status": "passed_technical_only",
+      "peak_allocated_bytes": 4154220544,
+      "peak_reserved_bytes": 4817158144,
+      "gpu_total_bytes": 4294443008,
+      "free_after_steps": 0,
+      "fits_dedicated_vram_not_inferred_from_success": true
+    },
+    {
+      "tokens": 1536,
+      "status": "passed_technical_only",
+      "peak_allocated_bytes": 5182105600,
+      "peak_reserved_bytes": 6027214848,
+      "gpu_total_bytes": 4294443008,
+      "free_after_steps": 0,
+      "fits_dedicated_vram_not_inferred_from_success": true
+    },
+    {
+      "tokens": 2048,
+      "status": "passed_technical_only",
+      "peak_allocated_bytes": 6207238144,
+      "peak_reserved_bytes": 7449083904,
+      "gpu_total_bytes": 4294443008,
+      "free_after_steps": 0,
+      "fits_dedicated_vram_not_inferred_from_success": true
+    }
+  ],
+  "paired_2048": {
+    "dense_loss": 3.5345582962036133,
+    "completion_loss": 3.5345582962036133,
+    "dense_grad_norm": 23.25708770751953,
+    "completion_grad_norm": 23.386638641357422,
+    "dense_peak_allocated_bytes": 6207238144,
+    "completion_peak_allocated_bytes": 2873040896,
+    "note": "FP32 Qwen2 nhỏ đã đối chiếu mọi gradient; FP16 GPU không khẳng định bitwise tương đương."
+  },
+  "stress": {
+    "completed_steps": 10,
+    "target_tokens": 256,
+    "peak_allocated_bytes": 2954099200,
+    "peak_reserved_bytes": 3246391296,
+    "free_after_steps": 169554740,
+    "seconds_min": 3.960169500031043,
+    "seconds_max": 5.086739599995781,
+    "max_preclip_grad_norm": 244.7914581298828,
+    "process_memory": {
+      "rss": 1870180352,
+      "vms": 7279054848,
+      "num_page_faults": 1320523,
+      "peak_wset": 3961610240,
+      "wset": 1870180352,
+      "peak_paged_pool": 21573936,
+      "paged_pool": 9534144,
+      "peak_nonpaged_pool": 109680,
+      "nonpaged_pool": 109680,
+      "pagefile": 7279054848,
+      "peak_pagefile": 9995087872,
+      "private": 7279054848
+    },
+    "adapter_path": "E:\\IPI-Training\\checkpoints\\technical-only-2048-10-completion-t256-v3",
+    "save_reload_verified": true
+  },
+  "current_max_target_tokens": 164,
+  "technical_complete": true,
+  "memory_within_80_percent_cap": true,
+  "candidate_sequence_tokens": 2048,
+  "candidate_conditions": [
+    "Chỉ backend completion_loss, NF4/LoRA và micro-batch 1 đã đo.",
+    "Giới hạn bộ nhớ tiến trình 80%; FP16 loss scale ban đầu 1024; clipping norm 1.",
+    "Theo dõi lại với dữ liệu train mới, target vượt 256 hoặc cấu hình/thiết bị thay đổi.",
+    "Free GPU sau bước cuối chỉ khoảng 162 MiB, dư địa nhỏ; không gọi là cấu hình train dài ổn định."
+  ],
+  "pilot_training_ready": false,
+  "security_quality_improvement_measured": false,
+  "runtime_changed": false,
+  "initial_failed_run": "benchmark/experiments/verifier-gpu-2048-1-v1/ket-qua.json",
+  "input_sha256": {
+    "benchmark/experiments/verifier-collator-v1/ket-qua.json": "4ba838ab6242586edc5b0d3a873dbe66f60672e30b41b6b32137f02f97d9877b",
+    "benchmark/experiments/verifier-gpu-1024-1-v2/ket-qua.json": "7e66529b2b3ce40653dcb72e22044896b5a7acea60a1db23f6476f297d114c88",
+    "benchmark/experiments/verifier-gpu-1536-1-v2/ket-qua.json": "fcbdb8e75beaa9bb11fb586f4b7c152f0fa50f2095df15f114fbd7cd755d3884",
+    "benchmark/experiments/verifier-gpu-2048-1-v2/ket-qua.json": "fb6f493a6a75a87d895de1b6ea969b6775552eff8b8cf709bb675a61601b8f94",
+    "benchmark/experiments/verifier-gpu-2048-1-completion-v3/ket-qua.json": "5ede66ae1d69f6888582afaf01cd9ca1af5a4b556ba8391fc5b31a25d1f779cf",
+    "benchmark/experiments/verifier-gpu-2048-10-completion-t256-v3/ket-qua.json": "938b852e86c23c6b77d6e870d0244cd516af3490ba8390b7fd2057744cbed8b9",
+    "benchmark/experiments/verifier-tokenizer-v1/ket-qua.json": "dab326aa7929ce68106b26e00f3392cf3ad0829dc6213f30ba9298509760a75b",
+    "benchmark/experiments/verifier-gap-tokenizer-v1/ket-qua.json": "94f0c0a3e802f7e5620396a4f442605487c554f321bfe14e8c757cd915d744a6",
+    "benchmark/experiments/verifier-gap-repair-tokenizer-v1/ket-qua.json": "cf4d342bb7f24da0b4adf4866b0d9a0f6e921adb3122bf008791ad4247cc6b4c"
+  }
+}

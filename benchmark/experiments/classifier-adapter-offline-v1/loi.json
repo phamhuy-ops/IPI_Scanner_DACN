@@ -1,0 +1,4 @@
+{
+  "error": "The expression evaluated to a falsy value:\n\n  assert.ok(catalog?.length)\n",
+  "stack": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(catalog?.length)\n\n    at main (C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\scripts\\check-classifier-offline.cjs:12:295)"
+}

@@ -1,0 +1,66 @@
+﻿{
+    "realistic-ipi.jsonl":  {
+                                "bytes":  16627,
+                                "sha256":  "accd5c06f738c3688ad0ccdc79cb975b02b08990de2c147bd1834591c272ef8b"
+                            },
+    "prefilter-custom-5ntIrW\\summary.json":  {
+                                                  "bytes":  2152,
+                                                  "sha256":  "90f6c02f5981921193b536d85b70ea551f8a73252843d4811175fb66a38fc730"
+                                              },
+    "prefilter-custom-je04zO\\summary.json":  {
+                                                  "bytes":  2153,
+                                                  "sha256":  "0d0f3b80dc41857bd39f6db8ee96bd69b3a5877e7935d653e58afcabd830b7cc"
+                                              },
+    "suite-summary.json":  {
+                               "bytes":  6764,
+                               "sha256":  "37ccfa2afccf3b882fc913268db8c3108b8577f1d8668cbadb5a4f9d7baf5999"
+                           },
+    "notinject-benign.jsonl":  {
+                                   "bytes":  275823,
+                                   "sha256":  "d6e0aa37f2a5a3277a0c153250ccf112b341906915bf2bb7087519750b514669"
+                               },
+    "realistic-direct-mixed.jsonl":  {
+                                         "bytes":  4080,
+                                         "sha256":  "1d597830341887710c303968e86aae5be4ff3bf1a40359182a394ed104dd4469"
+                                     },
+    "prefilter-custom-5ntIrW\\predictions.jsonl":  {
+                                                       "bytes":  806,
+                                                       "sha256":  "9927439a7e673cfe72064b6632fb5f307bed260e220c0c3c8a89ca4653f50f2e"
+                                                   },
+    "prefilter-custom-HhXZLV\\summary.json":  {
+                                                  "bytes":  1930,
+                                                  "sha256":  "38c99643696341a6d49e498c1645c6d3522816155cfe1f34c3b5853374046734"
+                                              },
+    "prefilter-custom-5ntIrW\\by-group.json":  {
+                                                   "bytes":  300,
+                                                   "sha256":  "87f6799eb51659066e74d207ed7c75c19ae6b934578bc1d2abc45e0d83e7ccc3"
+                                               },
+    "prefilter-custom-HhXZLV\\errors.jsonl":  {
+                                                  "bytes":  0,
+                                                  "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                                              },
+    "prefilter-custom-je04zO\\by-group.json":  {
+                                                   "bytes":  302,
+                                                   "sha256":  "2a8d6fe9ab829327624e1fae658e11e78e99d4a077f4288193789107882bfae1"
+                                               },
+    "prefilter-custom-HhXZLV\\by-group.json":  {
+                                                   "bytes":  276,
+                                                   "sha256":  "d67b27cc9b00800b5f6049f46876146636b6cab00d99d89cd22db7b785cce939"
+                                               },
+    "prefilter-custom-5ntIrW\\errors.jsonl":  {
+                                                  "bytes":  2824,
+                                                  "sha256":  "98a4fa1e3dee0caa7f05b00da400ef256ecf9424aebaf6bbbf793f886571c3ac"
+                                              },
+    "prefilter-custom-je04zO\\predictions.jsonl":  {
+                                                       "bytes":  3645,
+                                                       "sha256":  "f74f0d14dcada9666c63902a66e809cf818b030c23273916505a83a3ea0eca63"
+                                                   },
+    "prefilter-custom-HhXZLV\\predictions.jsonl":  {
+                                                       "bytes":  74725,
+                                                       "sha256":  "2238b6ef37fa8e2804f0febd840eb576e789bbe223bc016fa868588d211877b8"
+                                                   },
+    "prefilter-custom-je04zO\\errors.jsonl":  {
+                                                  "bytes":  8959,
+                                                  "sha256":  "4ef6a35be01d6d88268fedaa1ac9d503802aff194a0c25efe272a76a45898a4f"
+                                              }
+}

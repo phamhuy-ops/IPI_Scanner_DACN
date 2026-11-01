@@ -1,0 +1,19 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 48299,
+        "ns": 0,
+        "title": "Giao thông công cộng",
+        "revisions": [
+          {
+            "revid": 75599526,
+            "parentid": 75550323,
+            "timestamp": "2026-09-29T16:54:27Z"
+          }
+        ]
+      }
+    ]
+  }
+}

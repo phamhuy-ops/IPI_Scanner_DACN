@@ -1,0 +1,91 @@
+{
+  "renderer_sha256": "804bc01e9cc4175ab4213794deb11ca35ecac1ff948e42ca8bfff22d243db5a2",
+  "records": [
+    {
+      "id": "llmail-fp-001",
+      "mode": "whole_source",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-001",
+      "mode": "none",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-002",
+      "mode": "whole_source",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-002",
+      "mode": "none",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-003",
+      "mode": "whole_source",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-003",
+      "mode": "none",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-004",
+      "mode": "whole_source",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-004",
+      "mode": "none",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-005",
+      "mode": "whole_source",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-005",
+      "mode": "none",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-006",
+      "mode": "whole_source",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-006",
+      "mode": "none",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-007",
+      "mode": "whole_source",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    },
+    {
+      "id": "llmail-fp-007",
+      "mode": "none",
+      "valid": false,
+      "error": "Thiếu chỉ dẫn được chú thích."
+    }
+  ],
+  "failures": 14,
+  "model_called": false
+}

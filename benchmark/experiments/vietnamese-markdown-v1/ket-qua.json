@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "source": "OEVIETNAM/markdown-vietnamese",
+  "revision": "9dc578935b93ab0de69051d65be837b9e08cb572",
+  "new_records": 18,
+  "original_document_excerpts": 6,
+  "authored_attack_or_quoted_variants": 12,
+  "labels": {
+    "confirmed": 6,
+    "dismissed": 12
+  },
+  "ai_reviewed_not_human": true,
+  "content_license_declared": "CC-BY-SA-4.0",
+  "code_license_not_used_for_text": "MIT",
+  "parser_token_mask_collator_valid": 36,
+  "token_max": 1198,
+  "tests": {
+    "node": 2,
+    "python": 6
+  },
+  "prior_102_groups_not_split": true,
+  "metadata_absent_from_payloads": true,
+  "registry": {
+    "records": 251,
+    "parents": 168,
+    "groups": 108,
+    "roles": {
+      "development_regression_only": 84,
+      "candidate_pending_source_privacy_and_split_review": 167
+    }
+  },
+  "model_called": false,
+  "training_started": false,
+  "runtime_changed": false,
+  "priority_one_complete": false,
+  "commands": [
+    "node scripts/fetch-vietnamese-markdown.cjs",
+    "node --test scripts/prepare-vietnamese-markdown.test.cjs",
+    "node scripts/prepare-vietnamese-markdown.cjs",
+    "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/audit_verifier_preview.py --source verifier-vietnamese-markdown-v1 --output verifier-vietnamese-markdown-tokenizer-v1",
+    "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/audit-verifier-corpus.py verifier-corpus-overlap-v14",
+    "node scripts/register-verifier-batch.cjs --batch verifier-vietnamese-markdown-v1 --base verifier-eligibility-v4 --audit verifier-corpus-overlap-v14 --tokens verifier-vietnamese-markdown-tokenizer-v1 --output verifier-eligibility-v5"
+  ],
+  "limitations": [
+    "Sáu tài liệu thuộc một bản dịch cộng đồng, không phải sáu nguồn độc lập.",
+    "Attack và bao khung quoted tự soạn; nguồn gốc không có các câu chèn này.",
+    "Nhãn chỉ cho đoạn trích/biến thể nhìn thấy, không gán sạch toàn bộ file gốc.",
+    "Giấy phép khai báo và audit từ vựng không tự chốt tính độc lập hoặc toàn bộ điều kiện train."
+  ]
+}

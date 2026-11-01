@@ -1,0 +1,45 @@
+{
+  "new_model_trials_paused_by_user": true,
+  "new_model_downloads_allowed": false,
+  "model_under_diagnosis": "qwen2.5-coder:1.5b",
+  "diagnostic_complete": true,
+  "capability_gate_passed": false,
+  "priority_one_complete": false,
+  "production_changed": false,
+  "training_started_this_round": false,
+  "milestones": [
+    {
+      "id": "P1-A",
+      "name": "Xác định nút thắt trên nhiệm vụ tối giản",
+      "status": "closed_diagnostic_failed_capability_gate",
+      "done": "32/32 request model hiện tại, tách người nhận/bao khung, lưu raw/schema/token/nhóm/ngôn ngữ. Không đồng nghĩa model đủ năng lực.",
+      "artifact": "benchmark/experiments/context-component-probe-v1/tong-hop.json"
+    },
+    {
+      "id": "P1-B",
+      "name": "Sửa riêng khả năng xác định người nhận",
+      "status": "not_complete",
+      "done_when": "Chạy cùng cổng đã khóa: nhận đúng assistant/human/unclear trong ngữ cảnh hoạt động và trích dẫn, quote nguyên văn; có biến thể chưa dùng để chỉnh. Không đổi prompt nhiều lần trên cùng bộ rồi gọi đó là kiểm chứng độc lập."
+    },
+    {
+      "id": "P1-C",
+      "name": "Ghép xác định chỉ dẫn, bao khung và gán stance",
+      "status": "not_complete",
+      "done_when": "Ứng viên tăng nhận diện tấn công, giữ đối chứng sạch, xử lý uncertain, không có hồi quy; đo từng thành phần và lỗi."
+    },
+    {
+      "id": "P1-D",
+      "name": "Kiểm chứng toàn pipeline và độc lập",
+      "status": "not_complete",
+      "done_when": "Khóa ứng viên rồi đo tài liệu hoàn chỉnh dài/đa định dạng/đa nguồn; có độ bao phủ, lỗi, độ trễ, tài nguyên và kiểm chứng độc lập. Đối chiếu cổng Ưu tiên 1 đã khóa."
+    }
+  ],
+  "next_action": "Chỉ tập trung P1-B: người nhận. Đã có bằng chứng enum sai độc lập với lỗi quote; không chuyển lỗi thành sạch, không tiếp tục đổi model, mở rộng dữ liệu hàng loạt hoặc tối ưu JSON. Trước thử sửa tiếp phải chốt một thay đổi có đối chứng và tiêu chí dừng; không tự lặp prompt vô hạn.",
+  "limits": [
+    "Cùng 16 dev tổng hợp đã dùng, không phải holdout hay dữ liệu thực độc lập.",
+    "Nhãn nguồn do AI gán; cần đối chiếu thủ công nếu phát hiện bất đồng hợp lý.",
+    "Hai prompt mới và nhiệm vụ ít hơn; không phải ablation xác định duy nhất yếu tố gây lỗi.",
+    "Không đo deviation, stance, Detector/pipeline hoặc tài liệu dài; quote nguyên văn không tự chứng minh hiểu đúng.",
+    "Bộ so sánh Qwen3/Coder đã có không được dùng để kết luận model mạnh hơn chắc chắn kém; không gọi model mới."
+  ]
+}

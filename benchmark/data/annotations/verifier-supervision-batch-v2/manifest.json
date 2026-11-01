@@ -1,0 +1,34 @@
+{
+  "records": 12,
+  "groups": 4,
+  "languages": {
+    "en": 6,
+    "vi": 6
+  },
+  "stance_counts": {
+    "uncertain": 4,
+    "confirmed": 4,
+    "dismissed": 4
+  },
+  "role": "train_pool_draft_not_released",
+  "training_ready": false,
+  "model_called": false,
+  "model_evaluation_allowed": false,
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "29bbb8749a9ba0328217835de9e172461c9f9578a8edfae90105374f992cfe86",
+    "ban-xem-truoc.json": "53c766d54741f43b8d4eae6ed42554a9d1b8b1020e7c07352f37bebbd050b750",
+    "danh-gia-ai.json": "b9decf943bf7ac496ea29467b7f0cd3853bee87cdcb46810bc5e4cbee4a1e7a0"
+  },
+  "inputs_sha256": {
+    "benchmark/experiments/verifier-counterfactual-train-v2/mau-cho-duyet.jsonl": "2f97849e38319187505c0a9e10e8ef818f6ed6dea7316ee2756d52a671b5b4a9",
+    "benchmark/experiments/verifier-supervision-review-v1/ma-tran-bo-sung.json": "3fac40c38ab2cfb332beba3d2b100cf93a47bc95ca9c47ca0ceeb4ee6da14ba4"
+  },
+  "code_sha256": {
+    "scripts/prepare-verifier-supervision-uncertain.cjs": "c87d2eeb285d8c13880ebefc35963ad5330fdb930963476d88cae49a93c3f683",
+    "scripts/export-verifier-supervision-draft.cjs": "4ed89815e2f27ee60301430ec17ea7e00c531febbe9435a4d15b47a88e832079"
+  },
+  "limitations": [
+    "AI soạn và rà, chưa được duyệt người; không nhập train hoặc dùng chọn model.",
+    "Giữ nhóm train cha, không phải dữ liệu kiểm chứng độc lập; còn kiểm tra trùng/token và rà ngữ nghĩa trước phát hành."
+  ]
+}

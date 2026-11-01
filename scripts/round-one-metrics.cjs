@@ -47,4 +47,31 @@ function checkCitations(state, goldSpans = []) {
   }
   return result;
 }
-module.exports = { summarize, checkCitations };
+// Chẩn đoán sau đo: đáp án/span chỉ dùng ở reporter, tuyệt đối không gửi vào Agent.
+function annotatedCitationAudit(selected, observations) {
+  const rows = selected.filter(item => item.label === 'malicious').map(item => {
+    const spans = (item.annotation?.directive_spans || []).map(span => span.quote).filter(quote => typeof quote === 'string' && quote.length);
+    const actual = observations.find(row => row.id === item.id);
+    const chunks = actual?.state?.scanResult?.metadata?.semanticChunks || [];
+    const available = spans.filter(quote => chunks.some(chunk => chunk.text.includes(quote)));
+    const assessments = (actual?.state?.suspicions || []).flatMap(suspicion => ['detector', 'verifier'].flatMap(role => {
+      const assessment = suspicion[role];
+      if (!assessment || assessment.stance !== 'confirmed') return [];
+      const citation = assessment.citation;
+      const chunk = chunks.find((value, index) => citation?.chunkId === `chunk-${index + 1}` && (!citation.sourceChunkId || citation.sourceChunkId === value.chunkId));
+      const exact = !!chunk && typeof citation.quote === 'string' && chunk.text.includes(citation.quote)
+        && (!citation.filePath || citation.filePath === chunk.filePath);
+      return [{ suspicion_id: suspicion.id, role, quote: citation?.quote ?? null, exact_source: exact,
+        covers_complete_annotated_directive: available.length ? exact && available.some(quote => citation.quote.includes(quote)) : null }];
+    }));
+    return { id: item.id, observed: !!actual, verdict: actual?.verdict ?? null, processing: actual?.processing ?? null,
+      annotated_directives: spans.length, directives_present_in_extracted_chunks: available.length, confirmed_assessments: assessments };
+  });
+  return { malicious_selected: rows.length, annotated_cases: rows.filter(row => row.annotated_directives).length,
+    cases_without_annotations: rows.filter(row => !row.annotated_directives).map(row => row.id),
+    annotations_not_fully_mapped_to_extraction: rows.filter(row => row.annotated_directives > row.directives_present_in_extracted_chunks).map(row => row.id),
+    confirmed_citations_missing_complete_directive: rows.flatMap(row => row.confirmed_assessments
+      .filter(assessment => assessment.covers_complete_annotated_directive === false).map(assessment => ({ id: row.id, ...assessment }))), rows,
+    limitation: 'Đối chiếu nguyên văn toàn span đã gán nhãn; không chấm ngữ nghĩa, không xử lý lặp cùng câu ở vị trí khác, không suy đúng/sai cho nguồn thiếu span hoặc span chưa map được. Quote phủ span cũng chưa chứng minh reason đúng. Không đổi accuracy hoặc chính sách runtime.' };
+}
+module.exports = { summarize, checkCitations, annotatedCitationAudit };

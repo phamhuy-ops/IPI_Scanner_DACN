@@ -1,0 +1,485 @@
+{
+  "status": "complete",
+  "source": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge",
+  "revision": "1063bdf01ec8762b812d5e06ee768a06faa5a6f7",
+  "records_in_intake": 251,
+  "phase2_subset_records": 48,
+  "fp_bank_records": 203,
+  "provisional_groups": 92,
+  "largest_groups": [
+    {
+      "group_id": "llmail-583ae4dff267",
+      "members": [
+        "llmail-phase2-011",
+        "llmail-phase2-012",
+        "llmail-phase2-013",
+        "llmail-phase2-014",
+        "llmail-phase2-015",
+        "llmail-phase2-016",
+        "llmail-phase2-017",
+        "llmail-phase2-018",
+        "llmail-phase2-019",
+        "llmail-phase2-020",
+        "llmail-phase2-021",
+        "llmail-phase2-024",
+        "llmail-phase2-025",
+        "llmail-phase2-026",
+        "llmail-phase2-027",
+        "llmail-phase2-028",
+        "llmail-phase2-029",
+        "llmail-phase2-030",
+        "llmail-phase2-031",
+        "llmail-phase2-032",
+        "llmail-phase2-033",
+        "llmail-phase2-034",
+        "llmail-phase2-035",
+        "llmail-phase2-036",
+        "llmail-phase2-037",
+        "llmail-phase2-038",
+        "llmail-phase2-039",
+        "llmail-phase2-040",
+        "llmail-phase2-042",
+        "llmail-phase2-043",
+        "llmail-phase2-045",
+        "llmail-phase2-048"
+      ],
+      "size": 32,
+      "split": null
+    },
+    {
+      "group_id": "llmail-ae8cc1fdf44b",
+      "members": [
+        "llmail-fp-116",
+        "llmail-fp-126",
+        "llmail-fp-140",
+        "llmail-fp-145",
+        "llmail-fp-155",
+        "llmail-fp-160",
+        "llmail-fp-178",
+        "llmail-fp-183",
+        "llmail-fp-193",
+        "llmail-fp-198"
+      ],
+      "size": 10,
+      "split": null
+    },
+    {
+      "group_id": "llmail-94eacc619002",
+      "members": [
+        "llmail-phase2-003",
+        "llmail-phase2-005",
+        "llmail-phase2-006",
+        "llmail-phase2-007",
+        "llmail-phase2-008",
+        "llmail-phase2-009",
+        "llmail-phase2-010"
+      ],
+      "size": 7,
+      "split": null
+    },
+    {
+      "group_id": "llmail-ba0eb09cf6c7",
+      "members": [
+        "llmail-fp-001",
+        "llmail-fp-013",
+        "llmail-fp-027",
+        "llmail-fp-035",
+        "llmail-fp-047",
+        "llmail-fp-055",
+        "llmail-fp-067"
+      ],
+      "size": 7,
+      "split": null
+    },
+    {
+      "group_id": "llmail-30d4df964d63",
+      "members": [
+        "llmail-fp-081",
+        "llmail-fp-086",
+        "llmail-fp-091",
+        "llmail-fp-095",
+        "llmail-fp-135",
+        "llmail-fp-173"
+      ],
+      "size": 6,
+      "split": null
+    }
+  ],
+  "candidates_with_existing_matches": 0,
+  "candidates_with_existing_test_overlap": 0,
+  "match_types": {},
+  "unique_previous_texts_scanned": 68264,
+  "previous_inventory": [
+    {
+      "file": "benchmark/data/raw/malmasabi-bipia-gpt/dataset_for_huggingface.jsonl",
+      "sha256": "d7695c0ab744ffc97c2ff586fc57a21ccc936fa800da784ef81fb4a4166eb3c6",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/raw/realistic-prompt-injections/probes.jsonl",
+      "sha256": "8706b03516206e94effa76bff3087cca7a4b3fe4dd26ef640adc9e638f7649b9",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/ngu-canh-v1/mau-cho-duyet.jsonl",
+      "sha256": "1d4c98e68c5d1d4e0fead956183519ded488eb3f8c5e7814ca3f5fd6572757ba",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-addressee-context-v1/cach-ly.jsonl",
+      "sha256": "0523781cedc30a63e0f1a9f093269402db1b6d3569a96b49200582460d383885",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-addressee-context-v1/mau-cho-duyet.jsonl",
+      "sha256": "63c889ad5ffd08a8aed52daa86b654a1dea80b9d04732bd01a1e99cd49f8a3e4",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/mau-cho-duyet.jsonl",
+      "sha256": "c2eadfc93b7643b6a91931003c8ab1e8a55e83a0fcfa26cdf894f33d93156eac",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-expansion-v1/hang-cho-gan-nhan.jsonl",
+      "sha256": "1ffa6af90945b596c6495fcc08361481f1571f5a6b8028633b0ce7eb1d7dbc5a",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-ai-v1/mau-cho-duyet.jsonl",
+      "sha256": "90d350b141c6075592950b953ee748083733349ff7d6315da6f70660622d8a96",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-ai-v1/nhan-va-cua-so.jsonl",
+      "sha256": "90d350b141c6075592950b953ee748083733349ff7d6315da6f70660622d8a96",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-context-v1/mau-cho-duyet.jsonl",
+      "sha256": "e140d7eab0c94e7721af9b67ac596e2d7024c594f82e5e4aa9e9464757956396",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/nhan-va-bang-chung.jsonl",
+      "sha256": "c5dc9e3b621e21bf960c7f487c04bbe727728b55a7ce2ffc881086a66ecc46d4",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/nhan-va-cua-so.jsonl",
+      "sha256": "af9d21ece1690c71ffcd85d83b6bfb6d52aa9efd9160579d3ddb2c5cc351e963",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-repair-v1/nhan-va-cua-so.jsonl",
+      "sha256": "0f89a1af84cc76cfe8a2fadc3b05b1ad7db74449646d66371e96f7fb625830ca",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/mau-cho-duyet.jsonl",
+      "sha256": "60766eada7697fd7db6cd6531c1f4433a0dad8ae1e4ca0f66e9eac8b7a3d2862",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-recipient-contrast-v1/mau-cho-duyet.jsonl",
+      "sha256": "b4236607675d268ca5748246c483a5ca43e576a49b8d75f8059d12de1d3778e0",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-articles-v1/mau-cho-duyet.jsonl",
+      "sha256": "59c63de518ba81099608dc260a876853e3aca75bb31c240cb4a3d9db6b6a0d7f",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/mau-cho-duyet.jsonl",
+      "sha256": "630a45deef539dbf5a14b536d4cc12af6fc9b061357e15660f200233e01db5e5",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/processed/ipi-clean.jsonl",
+      "sha256": "02510a5df52719e79cd85ccdd33de01b0b4670ead0e3469fff890fe6b069b83b",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/processed/ipi-conflicts.jsonl",
+      "sha256": "601d1e558fb6b7a63c983991da35d0ddc6a90cc5334c8374fd40b0b11da543f5",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/processed/notinject/notinject.jsonl",
+      "sha256": "fcbca6f07fe90f1b1ba16f8ba917640f343d7049783a496c914119720799f818",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl",
+      "sha256": "ccb93fc99972ff44f5e2e25317072796f5443ce01660587e3decf72962c7cdf0",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/splits/ipi-dev.jsonl",
+      "sha256": "fa9d3c960aad0d24d5609bf0a465887f3965635d325c91e9e7fc95dce7feac3e",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/splits/ipi-test.jsonl",
+      "sha256": "2074a3ff4496afdc891fef77d8722badbb459740d2950db658c7889ff1a68b55",
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_dh_base.json",
+      "sha256": "0a8186468d21389af432e8c7b399ae42264d1b93a07b65c7a489468508604305",
+      "coverage": "Tool Response only; Attacker Instruction hash for grouping only"
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_dh_enhanced.json",
+      "sha256": "885602716b72c18af80695ce6c2e1f242fa03163bc90b0788b0c5e4ab6216d50",
+      "coverage": "Tool Response only; Attacker Instruction hash for grouping only"
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_ds_base.json",
+      "sha256": "4daab35c62a3845e8b9400f4dca58b9c9f37e57cd33b2337552557fbb26282e9",
+      "coverage": "Tool Response only; Attacker Instruction hash for grouping only"
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_ds_enhanced.json",
+      "sha256": "7bc510868df032511053fc40e8470e68a041fb7148d055112093594bf73ab0ce",
+      "coverage": "Tool Response only; Attacker Instruction hash for grouping only"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-01.txt",
+      "sha256": "001045757b4a4fa2a29b8cd3acc8fd68ba641ee41fe9f0bad5aeef072e9ff107",
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-02.txt",
+      "sha256": "a5aada8505accf2ea9b63f81203b280ded21dbca32e349cf21c81ac99dd34fc1",
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-03.txt",
+      "sha256": "6df73c9f52b4a96f334bbd0848e15451a0641aa6257681c554a3f656861b9c8d",
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-04.txt",
+      "sha256": "774da423909e843abb1de4fd367c52463eb505d35755c6f2a556da3a6864ebdc",
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-05.txt",
+      "sha256": "eda076bd556234e810f7f689ee10bdf8c3c7264b8574a6386f0bb9c9b6a74b10",
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-06.txt",
+      "sha256": "00504d9a50e403633b6158b3eeb9d55b784a17956c6e161899fe50f891ed8650",
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/venv.rst",
+      "sha256": "cddbb3a66998a0832d8a5e592f08a37aa465ce34094af942713dae171d480fee",
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/interpreter.rst",
+      "sha256": "aad98b0071949d2b97ca2a93a898c5cb1e64347b67b8c7b16053f6a8f3cd87af",
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/inputoutput.rst",
+      "sha256": "2fb6533d10638f2e16a0d8a0fd3743fa5281450992b44936b9f72d756cd4f194",
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/errors.rst",
+      "sha256": "0c09ca192cd9a88c2d60362f78a51915d8957dd4e8bbc5947dc48d036e96166a",
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/modules.rst",
+      "sha256": "05cae16853afbe75e901f26bfd66a0e2c36a64c2631997cc2bbc33d2f22a4380",
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/stdlib.rst",
+      "sha256": "4f6bc514620c5c6298a699064b94562268eba56486acc5f4360bad4589886021",
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/NotInject_one-00000-of-00001.parquet",
+      "sha256": "5b1d3a8ec341205305efd8c6d2cabeb5ba0f594dd8726b08ee7fde1a46ddc6ec",
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/NotInject_three-00000-of-00001.parquet",
+      "sha256": "d5c685b123570c092a0f374ba6bdf324b2026d905a2751a243eb2bb360d411a8",
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/NotInject_two-00000-of-00001.parquet",
+      "sha256": "a5a8c1b3b851b0b5acc3b6caf8bfee26d7da631b2967dd31ca90358df8883feb",
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/test-00000-of-00001.parquet",
+      "sha256": "d5c685b123570c092a0f374ba6bdf324b2026d905a2751a243eb2bb360d411a8",
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/train-00000-of-00001.parquet",
+      "sha256": "5b1d3a8ec341205305efd8c6d2cabeb5ba0f594dd8726b08ee7fde1a46ddc6ec",
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/validation-00000-of-00001.parquet",
+      "sha256": "a5a8c1b3b851b0b5acc3b6caf8bfee26d7da631b2967dd31ca90358df8883feb",
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/realistic-prompt-injections/probes.csv",
+      "sha256": "21e8ee13dda68f31a4d235f0de3aeb530a25e7f288653a9c31de86eff5d6a67a",
+      "coverage": "text_only"
+    },
+    {
+      "file": "benchmark/data/context-controls-v1.json",
+      "sha256": "132b208eba7878e70562d48a241b0da30177938176e5026268c95fda43eef55d",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/context-controls-v2.json",
+      "sha256": "50de92db2712ad62be12fbe17d8c0fd1b5af5c7f5a7575145864b286c79d588c",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/priority-one-dev-v1.json",
+      "sha256": "64714cf2881ab2c26a9c274741424981ebd16b7e0a452b5ce7a15aad6af5d4df",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/priority-one-dev-v2.json",
+      "sha256": "7c018bde4e4197beaa3f982fcc3172cebdb89347a9eeff0e17f5743f142ee07e",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/reference-transfer-v1.json",
+      "sha256": "a29124a0c82eedd0c59b90dbd460be02e8a1524641531f8d7104c9acb549d97f",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/round-one-eval.json",
+      "sha256": "885eddd7f4d8d040883aff704cbb818f40b0f7dccc2f44b8cb5b94bd97dd176e",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/selector-spread-screen-v1.json",
+      "sha256": "0dcad2907f4b7c34068b065d95caa4b10279de46d41d45db29799c0743867844",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/structured-transfer-v1.json",
+      "sha256": "a0ef8949c6f29d1a10f4010df1616fecf8a33b6b9a312eb94b35d6f1e24318ca",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/agent-contrast-v1/ke-hoach.json",
+      "sha256": "20f730cd6c459662156cd176fe22f79c48c1db615e5f8aebb3a6440dfd621844",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/agent-contrast-v2/ke-hoach.json",
+      "sha256": "e7a865d6c5cb4cea2cc66ba3d80d860b29fa8aa2efddeae4b465f96611f66d48",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/citation-context-controls-v1/mau-da-khoa.json",
+      "sha256": "ef23c6950aeeafb0eae53da55078b88184b0d8ef5067c43ec291234b7ac7190f",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/minimal-context-order-v1/ke-hoach.json",
+      "sha256": "cfe7233dc8e1567daa2d28b0d3d80a3ca7af8ff922a09c367a136bbb0b022439",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/model-context-v1/ke-hoach.json",
+      "sha256": "4a27caeef472b319894b3764e1a29824567f22c4a842aacac6bc9feafba4ab1e",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/verifier-candidate-v1/ke-hoach.json",
+      "sha256": "95855452605957b2dbdba1bb9816c9f18b3a01737ed0f25f189f19b45a871e3e",
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/fixtures/demo-output-v1/attack.txt",
+      "sha256": "3aa516432b3ac01bcabb8e16d70bf237b15fdad5d674de99608a8cc8e1165a2d",
+      "coverage": "raw_text_fixture"
+    },
+    {
+      "file": "benchmark/fixtures/demo-output-v1/clean.txt",
+      "sha256": "8f6597fe64ca1180725aeb4b34909554b7613fd1e625ceb830e3b41a4251fb7a",
+      "coverage": "raw_text_fixture"
+    },
+    {
+      "file": "benchmark/fixtures/demo-output-v1/quoted.txt",
+      "sha256": "369f6f15d45f9f09ed131d41cd6608a9175aa6ea6fad5a0995799a81abccb345",
+      "coverage": "raw_text_fixture"
+    },
+    {
+      "file": "benchmark/fixtures/round-one/hidden-injected.html",
+      "sha256": "de735d4cb191ccc801bbe00fd6524038ac8388e3f8a992ea9c54b23acb5ae010",
+      "coverage": "raw_text_fixture"
+    },
+    {
+      "file": "benchmark/fixtures/round-one/vi-clean.md",
+      "sha256": "a125d89fa070a80a52976d902e379cc9135649696dfa355c430b3d0f41a6ba20",
+      "coverage": "raw_text_fixture"
+    },
+    {
+      "file": "benchmark/fixtures/round-one/vi-injected.md",
+      "sha256": "88fddc28b622f7c93e0dc36cadf8f0689917c57ddf950f7691fbfb16681d15f9",
+      "coverage": "raw_text_fixture"
+    }
+  ],
+  "skipped_metadata_not_model_input": [
+    "benchmark/data/raw/vietnamese-wikipedia-v1/snapshot.json",
+    "benchmark/data/raw/python-context-docs-v1/LICENSE",
+    "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+  ],
+  "annotation_records_added": 0,
+  "model_called": false,
+  "training_started": false,
+  "runtime_changed": false,
+  "inputs_sha256": {
+    "snapshot.json": "ab9f580a8cb3956ed6faa24e3dfded6d8d985e817733884c4e193941c93c2eac",
+    "previous_inventory": "d7442fe1ea674b087705f4f01808362fb2609c2b9e5ead44da4e4ca199f5bc03"
+  },
+  "code_sha256": {
+    "scripts/audit_llmail_intake.py": "c583ca5a648e8fb30bc022684975470a2285075d6d0da151f6dc70332e78fece",
+    "scripts/audit-verifier-corpus.py": "ce7a264d8502afdf000e59f8943b6935b1358a2f0b8f77996a44992de72451c5"
+  },
+  "limitations": [
+    "Nguồn ngoài mới không tự là holdout độc lập; đã xem phần prefix để chọn nguồn.",
+    "Gom exact/NFKC/trigram/shared-12-token chỉ là heuristic; có thể gom boilerplate hoặc bỏ tương đồng ngữ nghĩa.",
+    "Chỉ so text trong inventory v11; chưa so ảnh/PDF/DOCX hoặc toàn file phase2 68 MB.",
+    "Không đọc source_annotation/judge_answer/nhãn cũ để gán stance hoặc chấm model.",
+    "Ngân hàng FP chỉ là provenance của nguồn, không tự gán nhãn sạch."
+  ],
+  "reproduction_commands": [
+    "node --test scripts/fetch-llmail-intake.test.cjs",
+    "node scripts/fetch-llmail-intake.cjs",
+    "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/audit_llmail_intake.py"
+  ],
+  "checks": {
+    "prefix_parser_tests_passed": 3,
+    "source_raw_preserved": true,
+    "source_labels_not_mapped": true
+  },
+  "normalization_queue": {
+    "ai_reviewed_drafts": 12,
+    "confirmed": 4,
+    "dismissed": 8,
+    "no_directive_descriptive": 7,
+    "canonical_annotation_records_added": 0
+  }
+}

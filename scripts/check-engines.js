@@ -75,4 +75,54 @@ function main() {
   process.exit(1);
 }
 
-main();
+function configureProjectStorage() {
+  const configured = process.env.IPI_RUNTIME_ROOT;
+  if (process.platform !== 'win32' && !configured) return null;
+  const root = path.resolve(configured || 'E:\\IPI-Workspace\\IPI_Scanner');
+  if (!configured && !fs.existsSync(root)) return null;
+  if (process.platform === 'win32' && path.parse(root).root.toUpperCase() !== 'E:\\') {
+    throw new Error('IPI_RUNTIME_ROOT phải là thư mục riêng trên ổ E.');
+  }
+  if (root === path.parse(root).root) throw new Error('Không dùng gốc ổ đĩa làm thư mục runtime.');
+  fs.mkdirSync(root, { recursive: true });
+  if (process.platform === 'win32' && path.parse(fs.realpathSync(root)).root.toUpperCase() !== 'E:\\') {
+    throw new Error('Đích runtime thực không nằm trên ổ E.');
+  }
+  const temporary = path.join(root, 'tmp');
+  fs.mkdirSync(temporary, { recursive: true });
+  if (process.platform === 'win32' && path.parse(fs.realpathSync(temporary)).root.toUpperCase() !== 'E:\\') {
+    throw new Error('Thư mục tạm thực không nằm trên E.');
+  }
+  // Chỉ đổi tiến trình dự án và worker con, không đổi TEMP toàn Windows.
+  process.env.TEMP = temporary;
+  process.env.TMP = temporary;
+  process.env.TMPDIR = temporary;
+  return temporary;
+}
+
+configureProjectStorage();
+if (require.main === module) main();
+
+function makeBenchmarkDirectory(prefix, outputRoot = path.resolve(__dirname, '..', 'benchmark', 'results')) {
+  if (!/^[a-zA-Z0-9][a-zA-Z0-9_-]*-$/.test(prefix)) throw new Error('Prefix kết quả không hợp lệ.');
+  const localRoot = path.resolve(outputRoot);
+  const canonicalRoot = path.resolve(__dirname, '..', 'benchmark', 'results');
+  const samePath = (a, b) => process.platform === 'win32' ? a.toLowerCase() === b.toLowerCase() : a === b;
+  const temporary = configureProjectStorage();
+  fs.mkdirSync(localRoot, { recursive: true });
+  // Tôn trọng --output riêng; không di chuyển dữ liệu/kết quả đã tồn tại.
+  if (!temporary || !samePath(localRoot, canonicalRoot)) return fs.mkdtempSync(path.join(localRoot, prefix));
+  const physicalRoot = path.join(path.dirname(temporary), 'benchmark', 'results');
+  fs.mkdirSync(physicalRoot, { recursive: true });
+  if (process.platform === 'win32' && path.parse(fs.realpathSync(physicalRoot)).root.toUpperCase() !== 'E:\\') {
+    throw new Error('Kết quả benchmark thực phải nằm trên E.');
+  }
+  if (samePath(fs.realpathSync(localRoot), fs.realpathSync(physicalRoot))) return fs.mkdtempSync(path.join(localRoot, prefix));
+  const physical = fs.mkdtempSync(path.join(physicalRoot, prefix));
+  const alias = path.join(localRoot, path.basename(physical));
+  // Chỉ tạo junction cho lượt mới; giữ đường dẫn C để raw/baseline vẫn tương thích.
+  fs.symlinkSync(physical, alias, 'junction');
+  return alias;
+}
+
+module.exports = { configureProjectStorage, makeBenchmarkDirectory };

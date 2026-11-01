@@ -2,6 +2,7 @@
 
 $ErrorActionPreference = 'Stop'
 $trainingRoot = [IO.Path]::GetFullPath($Root).TrimEnd('\')
+if ([IO.Path]::GetPathRoot($trainingRoot) -ine 'E:\') { throw 'Môi trường huấn luyện của dự án phải đặt trên ổ E.' }
 if ($trainingRoot -eq [IO.Path]::GetPathRoot($trainingRoot).TrimEnd('\')) {
     throw 'Cần thư mục riêng, không dùng gốc ổ đĩa làm nơi huấn luyện.'
 }

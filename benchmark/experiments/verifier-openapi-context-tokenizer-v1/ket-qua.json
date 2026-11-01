@@ -1,0 +1,367 @@
+{
+  "source": "verifier-openapi-context-v1",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "offline": true,
+  "examples": 30,
+  "source_records": 15,
+  "source_parents": 1,
+  "mask_valid": 30,
+  "collator_valid": 30,
+  "token_min": 733,
+  "token_max": 1187,
+  "target_max": 97,
+  "over_budget": {
+    "1024": 5,
+    "1536": 0,
+    "2048": 0
+  },
+  "rows": [
+    {
+      "id": "oa-001-whole_source",
+      "source_record_id": "oa-001",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 906,
+      "padded_tokens": 912,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-001-none",
+      "source_record_id": "oa-001",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 758,
+      "padded_tokens": 760,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-002-whole_source",
+      "source_record_id": "oa-002",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 1060,
+      "padded_tokens": 1064,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-002-none",
+      "source_record_id": "oa-002",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 958,
+      "padded_tokens": 960,
+      "supervised_tokens": 86,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-003-whole_source",
+      "source_record_id": "oa-003",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 963,
+      "padded_tokens": 968,
+      "supervised_tokens": 93,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-003-none",
+      "source_record_id": "oa-003",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 936,
+      "padded_tokens": 936,
+      "supervised_tokens": 85,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-004-whole_source",
+      "source_record_id": "oa-004",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 1131,
+      "padded_tokens": 1136,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-004-none",
+      "source_record_id": "oa-004",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 934,
+      "padded_tokens": 936,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-005-whole_source",
+      "source_record_id": "oa-005",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 966,
+      "padded_tokens": 968,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-005-none",
+      "source_record_id": "oa-005",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 884,
+      "padded_tokens": 888,
+      "supervised_tokens": 89,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-006-whole_source",
+      "source_record_id": "oa-006",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 970,
+      "padded_tokens": 976,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-006-none",
+      "source_record_id": "oa-006",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 805,
+      "padded_tokens": 808,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-007-whole_source",
+      "source_record_id": "oa-007",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 1116,
+      "padded_tokens": 1120,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-007-none",
+      "source_record_id": "oa-007",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 999,
+      "padded_tokens": 1000,
+      "supervised_tokens": 86,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-008-whole_source",
+      "source_record_id": "oa-008",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 1013,
+      "padded_tokens": 1016,
+      "supervised_tokens": 92,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-008-none",
+      "source_record_id": "oa-008",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 986,
+      "padded_tokens": 992,
+      "supervised_tokens": 84,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-009-whole_source",
+      "source_record_id": "oa-009",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 1187,
+      "padded_tokens": 1192,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-009-none",
+      "source_record_id": "oa-009",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 975,
+      "padded_tokens": 976,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-010-whole_source",
+      "source_record_id": "oa-010",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 1021,
+      "padded_tokens": 1024,
+      "supervised_tokens": 88,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-010-none",
+      "source_record_id": "oa-010",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 922,
+      "padded_tokens": 928,
+      "supervised_tokens": 80,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-011-whole_source",
+      "source_record_id": "oa-011",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 878,
+      "padded_tokens": 880,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-011-none",
+      "source_record_id": "oa-011",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 733,
+      "padded_tokens": 736,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-012-whole_source",
+      "source_record_id": "oa-012",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 1007,
+      "padded_tokens": 1008,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-012-none",
+      "source_record_id": "oa-012",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 910,
+      "padded_tokens": 912,
+      "supervised_tokens": 86,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-013-whole_source",
+      "source_record_id": "oa-013",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 933,
+      "padded_tokens": 936,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-013-none",
+      "source_record_id": "oa-013",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 906,
+      "padded_tokens": 912,
+      "supervised_tokens": 86,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-014-whole_source",
+      "source_record_id": "oa-014",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 1078,
+      "padded_tokens": 1080,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-014-none",
+      "source_record_id": "oa-014",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 886,
+      "padded_tokens": 888,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-015-whole_source",
+      "source_record_id": "oa-015",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "whole_source",
+      "tokens": 930,
+      "padded_tokens": 936,
+      "supervised_tokens": 89,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "oa-015-none",
+      "source_record_id": "oa-015",
+      "source_parent_id": "openapi:c8e90dfa4ccf8054db1539f7a104c5ccfb1913c3:examples/v3.0/petstore-expanded.yaml",
+      "mode": "none",
+      "tokens": 851,
+      "padded_tokens": 856,
+      "supervised_tokens": 81,
+      "mask_valid": true,
+      "collator_valid": true
+    }
+  ],
+  "input_sha256": {
+    "manifest.json": "fbc8227ea92a1864e7e5fd16012554e27104fb08cd064dee6ffa08b3904ef0f6",
+    "ban-xem-truoc.json": "e37e697587f10bba60be7838b225b972889ea9674545a0199067cd0f5ce68244"
+  },
+  "code_sha256": {
+    "audit_verifier_preview.py": "bb0a838c88d64b7ff7088e68f4406a6e742f3a6ab8e9406889e0c659d8c51146",
+    "audit_verifier_tokenizer.py": "90bb22dc2f4cb18ac168abe053f2bf87b1e295269b92a42ee3bd666488b42f9b",
+    "verifier_collator.py": "594bf13412567aef5c9439241de5dbdcdb7fbfd7cd3f1cd40c644aaeaa79b478"
+  },
+  "training_ready": false,
+  "no_model_forward_or_updates": true,
+  "runtime_changed": false,
+  "limitations": [
+    "Token/mask/parser đúng không chứng minh nhãn AI đúng hoặc độc lập ngữ nghĩa.",
+    "Không truncate; bản vượt 2048 bị đánh dấu collator_valid=false, chưa tạo bài học."
+  ]
+}

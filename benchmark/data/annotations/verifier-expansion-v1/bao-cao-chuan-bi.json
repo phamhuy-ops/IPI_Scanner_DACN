@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "seed": 42,
+  "inputs_sha256": {
+    "benchmark/data/annotations/ngu-canh-v1/mau-cho-duyet.jsonl": "1d4c98e68c5d1d4e0fead956183519ded488eb3f8c5e7814ca3f5fd6572757ba",
+    "benchmark/data/annotations/verifier-batch-v1/mau-cho-duyet.jsonl": "c2eadfc93b7643b6a91931003c8ab1e8a55e83a0fcfa26cdf894f33d93156eac",
+    "benchmark/data/audits/cross-source-overlap.json": "975160a1bbf9f8526a9619d6d735c925d1efa2bbd4d3abe3a393a5e0d802a32b",
+    "benchmark/data/processed/notinject/notinject.jsonl": "fcbca6f07fe90f1b1ba16f8ba917640f343d7049783a496c914119720799f818",
+    "benchmark/data/audits/notinject-audit.json": "f0c32b97d242489299d1cd7b9743861e944a7f6950ca959be67c5d0bf16ae530",
+    "benchmark/data/raw/notinject/data/NotInject_one-00000-of-00001.parquet": "5b1d3a8ec341205305efd8c6d2cabeb5ba0f594dd8726b08ee7fde1a46ddc6ec",
+    "benchmark/data/raw/notinject/data/NotInject_two-00000-of-00001.parquet": "a5a8c1b3b851b0b5acc3b6caf8bfee26d7da631b2967dd31ca90358df8883feb",
+    "benchmark/data/raw/notinject/data/NotInject_three-00000-of-00001.parquet": "d5c685b123570c092a0f374ba6bdf324b2026d905a2751a243eb2bb360d411a8",
+    "benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl": "ccb93fc99972ff44f5e2e25317072796f5443ce01660587e3decf72962c7cdf0",
+    "benchmark/data/audits/realistic-prompt-injections-audit.json": "df7a100f377b10a03b3141380077e5165703f256d6105a5bc0d1f4b3fc9bc252",
+    "benchmark/data/raw/realistic-prompt-injections/probes.jsonl": "8706b03516206e94effa76bff3087cca7a4b3fe4dd26ef640adc9e638f7649b9"
+  },
+  "all_records": 406,
+  "new_annotation_candidates": 356,
+  "known_reference_records": 50,
+  "candidate_source_labels": {
+    "benign": 346,
+    "malicious": 10
+  },
+  "groups": 376,
+  "largest_groups": [
+    {
+      "id": "vg-1079873a7affe64f",
+      "members": [
+        "verifier-batch-v1:vf-007",
+        "verifier-batch-v1:vf-018",
+        "verifier-batch-v1:vf-020"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-2f71f6d4ee6dc21b",
+      "members": [
+        "ngu-canh-v1:ann-005",
+        "ngu-canh-v1:ann-010",
+        "exp-realistic-0003-ac5e12d0"
+      ],
+      "size": 3,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3207bd7a1429948e",
+      "members": [
+        "verifier-batch-v1:vf-012",
+        "verifier-batch-v1:vf-015",
+        "verifier-batch-v1:vf-023"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-5a460361055d1d86",
+      "members": [
+        "verifier-batch-v1:vf-022",
+        "verifier-batch-v1:vf-024",
+        "verifier-batch-v1:vf-029"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-638d002da68aaf62",
+      "members": [
+        "verifier-batch-v1:vf-002",
+        "verifier-batch-v1:vf-025",
+        "verifier-batch-v1:vf-027"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-836dea35b0ff539e",
+      "members": [
+        "verifier-batch-v1:vf-006",
+        "verifier-batch-v1:vf-017",
+        "verifier-batch-v1:vf-030"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-8e8edd4fcd66d965",
+      "members": [
+        "verifier-batch-v1:vf-004",
+        "verifier-batch-v1:vf-008",
+        "verifier-batch-v1:vf-026"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-c1ef7e09f8da7ba7",
+      "members": [
+        "verifier-batch-v1:vf-009",
+        "verifier-batch-v1:vf-010",
+        "verifier-batch-v1:vf-014"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-ce256043dd384b88",
+      "members": [
+        "verifier-batch-v1:vf-001",
+        "verifier-batch-v1:vf-003",
+        "verifier-batch-v1:vf-021"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-ee109dce99feb060",
+      "members": [
+        "verifier-batch-v1:vf-011",
+        "verifier-batch-v1:vf-013",
+        "verifier-batch-v1:vf-016"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    }
+  ],
+  "grouping_edges": 33,
+  "duplicate_edges": {
+    "known_family": 28,
+    "trigram_jaccard": 3,
+    "normalized_exact": 2
+  },
+  "proposed_candidate_roles": {
+    "train_candidate": 207,
+    "dev_candidate": 73,
+    "transfer_probe_candidate": 74,
+    "reference_only": 2
+  },
+  "first_review_batch": 30,
+  "final_split_created": false,
+  "training_ready": false,
+  "independent_holdout": {
+    "status": "not_collected",
+    "required_independent_source_families": 2
+  },
+  "limitations": [
+    "Các nguồn bổ sung đã dùng làm dev, không phải dữ liệu độc lập.",
+    "Nhãn nguồn nhị phân không chuyển tự động thành nhãn stance/ngữ cảnh.",
+    "Chưa duyệt nguồn mới; chưa kiểm tra ngôn ngữ, chỉ tiêu tiếng Việt và cân bằng nhãn.",
+    "Gom theo nhóm đã biết, trùng NFKC/casefold/whitespace và trigram Jaccard>=0.8; chưa so ngữ nghĩa/bản dịch mới.",
+    "Chỉ kiểm tra trùng giữa 356 ứng viên và 50 mẫu tham chiếu, chưa rà toàn bộ BIPIA/dev/test/fixture.",
+    "Chia role dự kiến theo hash nhóm 60/20/20, không phải tập train/dev/test được phép dùng.",
+    "Nhóm gần trùng suy ra bằng từ vựng, chưa xác minh đầy đủ provenance tài liệu gốc.",
+    "Dữ liệu mới thiên về nhãn nguồn benign và tiếng Anh; chưa đạt kế hoạch pilot."
+  ],
+  "script_sha256": "2f705f103e3ff32eff9f0b20f00fe33e05a12c17cdb20c4ed68b915e5d16fd21"
+}

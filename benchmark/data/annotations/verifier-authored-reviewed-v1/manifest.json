@@ -1,0 +1,33 @@
+{
+  "version": "verifier-authored-reviewed-v1",
+  "records": 47,
+  "replaced_records": 47,
+  "new_records": 0,
+  "framing_revisions": 13,
+  "stance_changes": 0,
+  "model_inputs_unchanged": true,
+  "parser_valid": 94,
+  "source_texts_unchanged": true,
+  "training_ready": false,
+  "model_called": false,
+  "inputs_sha256": {
+    "benchmark/data/annotations/verifier-gap-normalized-v1/nhan-va-cua-so.jsonl": "af9d21ece1690c71ffcd85d83b6bfb6d52aa9efd9160579d3ddb2c5cc351e963",
+    "benchmark/data/annotations/verifier-gap-repair-v1/nhan-va-cua-so.jsonl": "0f89a1af84cc76cfe8a2fadc3b05b1ad7db74449646d66371e96f7fb625830ca",
+    "benchmark/data/annotations/verifier-recipient-contrast-v1/mau-cho-duyet.jsonl": "b4236607675d268ca5748246c483a5ca43e576a49b8d75f8059d12de1d3778e0",
+    "benchmark/experiments/verifier-eligibility-v7/registry.jsonl": "a9e83d7cfacb0478f0fae82d35621b8787c4d79cf6e2a48ab8d252c245754157"
+  },
+  "code_sha256": {
+    "scripts/review-verifier-authored-pool.cjs": "cd1b13ad83c8c510989af9a245062b1807d4b25a445107dacbbf77b5c599dd30",
+    "scripts/verifier-batch-renderer.ts": "d66db4a967344570e6541996f2432e42324fd43d72077e065e6c8ec126feafab"
+  },
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "53f9d819b2b1a1b7bea276e297210545adaeaa1aabea417013a0af7aceb7b1d8",
+    "danh-gia-ai.json": "2110436b13083616304e782254c25ff37f467d4d124e099af5d03459f08a6c7d",
+    "ban-xem-truoc.json": "5a89d160eb78945f51a620f201d0c0d34ebbfd2f9a266829b772cdb84a9a3ae5"
+  },
+  "limitations": [
+    "15 mẫu gap dùng nền lặp để tạo độ dài: phù hợp kiểm tra vị trí/chunking, không thay tài liệu dài thực tế.",
+    "32 mẫu recipient có câu phân biệt người/AI khá rõ và lý do dùng chung; cần nguồn thật và diễn đạt khó hơn trước kết luận rộng.",
+    "Tự rà AI, không phải gán nhãn mù/độc lập; không chuyển xác nhận người dùng cũ sang trường hiệu chỉnh mới."
+  ]
+}

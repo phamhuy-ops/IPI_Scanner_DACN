@@ -1,0 +1,20 @@
+{
+  "status": "design_complete_not_train_ready",
+  "contract_tests_passed": 7,
+  "model_calls": 0,
+  "training_started": false,
+  "training_authorized": false,
+  "new_downloads": 0,
+  "default_app_changed": false,
+  "reference_examples": 9,
+  "reference_training_eligible": false,
+  "data_inventory": "benchmark/experiments/context-aware-detector-design-v1/kiem-ke-du-lieu.json",
+  "pilot_plan": "benchmark/experiments/context-aware-detector-design-v1/ke-hoach-pilot.json",
+  "document": "docs/planning/ke-hoach-detector-theo-ngu-canh.md",
+  "code_sha256": {
+    "scripts/context-detector-contract.cjs": "5e7d870369bae811a08b7ad176e004e7862d9155579b2ac938beadcedfbfea98",
+    "scripts/context-detector-contract.test.cjs": "91014fee534849cd255d30d792f14b986e4bec32bace844dc1b8181db632734a",
+    "scripts/audit-context-detector-design.cjs": "aaf1f153a8d5d3933c963e81bf9b34cdcd048980cf2e34f7cb11a95c1043e895"
+  },
+  "next_action": "Rà một lô nhỏ paired-context với provenance/nhãn/span, không train hoặc tạo hàng loạt. Chỉ mở pilot sau dữ liệu phase0 và được cho phép train riêng."
+}

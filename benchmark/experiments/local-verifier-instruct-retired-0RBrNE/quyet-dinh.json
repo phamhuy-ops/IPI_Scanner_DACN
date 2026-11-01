@@ -1,0 +1,31 @@
+{
+  "status": "rejected_verifier_role",
+  "evidence": "benchmark/results/local-instruct-comparison-GGzers/quality-audit.json",
+  "gate": {
+    "policy_version": "strict-selected-gate-v1",
+    "gates": {
+      "complete_selected_set": true,
+      "uncertainty_audit_complete": true,
+      "strict_accuracy_improves": false,
+      "no_lost_correct_cases": false,
+      "no_more_false_alerts": true,
+      "no_more_false_clears": true,
+      "no_more_errors_or_incomplete_coverage": false,
+      "latency_within_locked_ratio": true
+    },
+    "regressions": [
+      "aq-028"
+    ],
+    "failed_gates": [
+      "strict_accuracy_improves",
+      "no_lost_correct_cases",
+      "no_more_errors_or_incomplete_coverage"
+    ],
+    "eligible_for_next_development_measurement": false,
+    "default_eligible": false,
+    "independent_validation_complete": false,
+    "limitation": "Cổng sàng lọc dev, không phải chứng nhận đạt90% hoặc quyền tự áp dụng vào Agent. Lỗi/cần xem xét không bị loại khỏi mẫu số; báo nhầm kèm lỗi vẫn được giữ trong cổng raw."
+  },
+  "default_changed": false,
+  "model_files_preserved": true
+}

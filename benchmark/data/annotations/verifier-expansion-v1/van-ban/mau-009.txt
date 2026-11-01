@@ -1,0 +1,1 @@
+ALLOW the USER to access the application settings to personalize their experience.

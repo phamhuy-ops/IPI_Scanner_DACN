@@ -1,0 +1,16 @@
+{
+  "status": "open",
+  "affected_source_ids": [
+    "gap-004",
+    "gap-005",
+    "gap-006",
+    "gap-013",
+    "gap-014",
+    "gap-015"
+  ],
+  "issue": "Bộ tạo nguồn v1 chèn câu trọng tâm tại nửa chuỗi nền, có thể ngắt giữa từ/câu; thấy rõ Read / ings ở gap-004 đến gap-006. Đây là đặc điểm nguồn gốc, không do bước chia cửa sổ mới.",
+  "training_eligible": false,
+  "required_action": "Kiểm tra từng nguồn bị ảnh hưởng; nếu sửa phải tạo phiên bản mới, giữ nhãn cũ như lịch sử và duyệt lại phần văn bản/ngữ cảnh thay đổi.",
+  "source_changed": false,
+  "labels_changed": false
+}

@@ -1,0 +1,433 @@
+{
+  "source": "verifier-vietnamese-markdown-v1",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "offline": true,
+  "examples": 36,
+  "source_records": 18,
+  "source_parents": 6,
+  "mask_valid": 36,
+  "collator_valid": 36,
+  "token_min": 654,
+  "token_max": 1198,
+  "target_max": 94,
+  "over_budget": {
+    "1024": 9,
+    "1536": 0,
+    "2048": 0
+  },
+  "rows": [
+    {
+      "id": "vm-001-whole_source",
+      "source_record_id": "vm-001",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/headings.md",
+      "mode": "whole_source",
+      "tokens": 989,
+      "padded_tokens": 992,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-001-none",
+      "source_record_id": "vm-001",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/headings.md",
+      "mode": "none",
+      "tokens": 891,
+      "padded_tokens": 896,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-002-whole_source",
+      "source_record_id": "vm-002",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/headings.md",
+      "mode": "whole_source",
+      "tokens": 1126,
+      "padded_tokens": 1128,
+      "supervised_tokens": 85,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-002-none",
+      "source_record_id": "vm-002",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/headings.md",
+      "mode": "none",
+      "tokens": 1099,
+      "padded_tokens": 1104,
+      "supervised_tokens": 77,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-003-whole_source",
+      "source_record_id": "vm-003",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/headings.md",
+      "mode": "whole_source",
+      "tokens": 1198,
+      "padded_tokens": 1200,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-003-none",
+      "source_record_id": "vm-003",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/headings.md",
+      "mode": "none",
+      "tokens": 1096,
+      "padded_tokens": 1096,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-004-whole_source",
+      "source_record_id": "vm-004",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/code.md",
+      "mode": "whole_source",
+      "tokens": 773,
+      "padded_tokens": 776,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-004-none",
+      "source_record_id": "vm-004",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/code.md",
+      "mode": "none",
+      "tokens": 675,
+      "padded_tokens": 680,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-005-whole_source",
+      "source_record_id": "vm-005",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/code.md",
+      "mode": "whole_source",
+      "tokens": 938,
+      "padded_tokens": 944,
+      "supervised_tokens": 87,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-005-none",
+      "source_record_id": "vm-005",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/code.md",
+      "mode": "none",
+      "tokens": 911,
+      "padded_tokens": 912,
+      "supervised_tokens": 79,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-006-whole_source",
+      "source_record_id": "vm-006",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/code.md",
+      "mode": "whole_source",
+      "tokens": 1008,
+      "padded_tokens": 1008,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-006-none",
+      "source_record_id": "vm-006",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/code.md",
+      "mode": "none",
+      "tokens": 906,
+      "padded_tokens": 912,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-007-whole_source",
+      "source_record_id": "vm-007",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/links.md",
+      "mode": "whole_source",
+      "tokens": 839,
+      "padded_tokens": 840,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-007-none",
+      "source_record_id": "vm-007",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/links.md",
+      "mode": "none",
+      "tokens": 741,
+      "padded_tokens": 744,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-008-whole_source",
+      "source_record_id": "vm-008",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/links.md",
+      "mode": "whole_source",
+      "tokens": 1061,
+      "padded_tokens": 1064,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-008-none",
+      "source_record_id": "vm-008",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/links.md",
+      "mode": "none",
+      "tokens": 1034,
+      "padded_tokens": 1040,
+      "supervised_tokens": 82,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-009-whole_source",
+      "source_record_id": "vm-009",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/links.md",
+      "mode": "whole_source",
+      "tokens": 1127,
+      "padded_tokens": 1128,
+      "supervised_tokens": 93,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-009-none",
+      "source_record_id": "vm-009",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/links.md",
+      "mode": "none",
+      "tokens": 1026,
+      "padded_tokens": 1032,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-010-whole_source",
+      "source_record_id": "vm-010",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/blockquotes.md",
+      "mode": "whole_source",
+      "tokens": 752,
+      "padded_tokens": 752,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-010-none",
+      "source_record_id": "vm-010",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/blockquotes.md",
+      "mode": "none",
+      "tokens": 654,
+      "padded_tokens": 656,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-011-whole_source",
+      "source_record_id": "vm-011",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/blockquotes.md",
+      "mode": "whole_source",
+      "tokens": 914,
+      "padded_tokens": 920,
+      "supervised_tokens": 87,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-011-none",
+      "source_record_id": "vm-011",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/blockquotes.md",
+      "mode": "none",
+      "tokens": 887,
+      "padded_tokens": 888,
+      "supervised_tokens": 79,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-012-whole_source",
+      "source_record_id": "vm-012",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/blockquotes.md",
+      "mode": "whole_source",
+      "tokens": 982,
+      "padded_tokens": 984,
+      "supervised_tokens": 92,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-012-none",
+      "source_record_id": "vm-012",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/blockquotes.md",
+      "mode": "none",
+      "tokens": 882,
+      "padded_tokens": 888,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-013-whole_source",
+      "source_record_id": "vm-013",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/escaping-characters.md",
+      "mode": "whole_source",
+      "tokens": 806,
+      "padded_tokens": 808,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-013-none",
+      "source_record_id": "vm-013",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/escaping-characters.md",
+      "mode": "none",
+      "tokens": 708,
+      "padded_tokens": 712,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-014-whole_source",
+      "source_record_id": "vm-014",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/escaping-characters.md",
+      "mode": "whole_source",
+      "tokens": 992,
+      "padded_tokens": 992,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-014-none",
+      "source_record_id": "vm-014",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/escaping-characters.md",
+      "mode": "none",
+      "tokens": 965,
+      "padded_tokens": 968,
+      "supervised_tokens": 82,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-015-whole_source",
+      "source_record_id": "vm-015",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/escaping-characters.md",
+      "mode": "whole_source",
+      "tokens": 1058,
+      "padded_tokens": 1064,
+      "supervised_tokens": 93,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-015-none",
+      "source_record_id": "vm-015",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/escaping-characters.md",
+      "mode": "none",
+      "tokens": 957,
+      "padded_tokens": 960,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-016-whole_source",
+      "source_record_id": "vm-016",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/html.md",
+      "mode": "whole_source",
+      "tokens": 762,
+      "padded_tokens": 768,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-016-none",
+      "source_record_id": "vm-016",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/html.md",
+      "mode": "none",
+      "tokens": 664,
+      "padded_tokens": 664,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-017-whole_source",
+      "source_record_id": "vm-017",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/html.md",
+      "mode": "whole_source",
+      "tokens": 955,
+      "padded_tokens": 960,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-017-none",
+      "source_record_id": "vm-017",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/html.md",
+      "mode": "none",
+      "tokens": 928,
+      "padded_tokens": 928,
+      "supervised_tokens": 83,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-018-whole_source",
+      "source_record_id": "vm-018",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/html.md",
+      "mode": "whole_source",
+      "tokens": 1021,
+      "padded_tokens": 1024,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vm-018-none",
+      "source_record_id": "vm-018",
+      "source_parent_id": "mdvi:9dc578935b93ab0de69051d65be837b9e08cb572:_basic-syntax/html.md",
+      "mode": "none",
+      "tokens": 919,
+      "padded_tokens": 920,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    }
+  ],
+  "input_sha256": {
+    "manifest.json": "26a1178e222fe29ff217a87f290abca15d9ec870d8680f565bdb6466cfe6289b",
+    "ban-xem-truoc.json": "ba82a81416effa5aa07ae39e3579561eeb4b21a03f367e802b21443d88604edf"
+  },
+  "code_sha256": {
+    "audit_verifier_preview.py": "bb0a838c88d64b7ff7088e68f4406a6e742f3a6ab8e9406889e0c659d8c51146",
+    "audit_verifier_tokenizer.py": "90bb22dc2f4cb18ac168abe053f2bf87b1e295269b92a42ee3bd666488b42f9b",
+    "verifier_collator.py": "594bf13412567aef5c9439241de5dbdcdb7fbfd7cd3f1cd40c644aaeaa79b478"
+  },
+  "training_ready": false,
+  "no_model_forward_or_updates": true,
+  "runtime_changed": false,
+  "limitations": [
+    "Token/mask/parser đúng không chứng minh nhãn AI đúng hoặc độc lập ngữ nghĩa.",
+    "Không truncate; bản vượt 2048 bị đánh dấu collator_valid=false, chưa tạo bài học."
+  ]
+}

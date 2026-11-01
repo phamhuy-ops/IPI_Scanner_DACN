@@ -1,0 +1,26 @@
+﻿{
+    "dev-diagnostic-tags.jsonl":  {
+                                      "bytes":  3883581,
+                                      "sha256":  "0b58bb8f5da3fa793bffc7d551de8c2cc906c535527b76e7029081e60230c6d1"
+                                  },
+    "predictions.jsonl":  {
+                              "bytes":  12663627,
+                              "sha256":  "355f727b9f4608983995c38905fb59ff433e95b82e4600310657af7f2154a981"
+                          },
+    "dev-miss-analysis.json":  {
+                                   "bytes":  31561,
+                                   "sha256":  "7fd7fc58a002d837e997232f268c13b356ae923c73a47d1fdeb9138720c017e5"
+                               },
+    "by-group.json":  {
+                          "bytes":  8377315,
+                          "sha256":  "b8c30923a0b35c3da465d309e53591de58aa23926a53205503f1c6b370da6cdc"
+                      },
+    "summary.json":  {
+                         "bytes":  2524,
+                         "sha256":  "cf7e7852c4f2e81b58eff4bb84c55b323e221bb778be8f8a4df617006f3d09e3"
+                     },
+    "errors.jsonl":  {
+                         "bytes":  57546618,
+                         "sha256":  "a596079ec2e4e370ec9cf4403c79d91ae1688200c45c8034f47aa2fe62ae3bea"
+                     }
+}

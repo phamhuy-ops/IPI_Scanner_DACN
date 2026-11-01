@@ -1,0 +1,54 @@
+{
+  "status": "closed_rejected",
+  "experiment_complete": true,
+  "implemented_in_source": true,
+  "enabled_in_default_application": false,
+  "exposed_in_ui": false,
+  "architecture": "candidate-only-v1",
+  "promoted": false,
+  "security_improvement_demonstrated": false,
+  "priority_one_complete": false,
+  "technical_checks": {
+    "vitest": 240,
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "warnings": [
+      "Cảnh báo Vite customResolver và tùy chọn freeze có sẵn."
+    ]
+  },
+  "result": {
+    "pipeline_runs": 24,
+    "model_calls": 41,
+    "baseline_tp": 1,
+    "candidate_tp": 0,
+    "regressions": [
+      "ra-008"
+    ],
+    "p95": {
+      "baseline": 31.253588299999944,
+      "candidate": 32.31041490000003,
+      "ratio": 1.0338145684218951
+    }
+  },
+  "analysis": [
+    "Bản thử tách được trách nhiệm và không giả coverage, nhưng không đạt chất lượng nên không đưa vào mặc định. Kết quả loại bản triển khai cụ thể này, không chứng minh mọi thiết kế tách vai trò đều thất bại.",
+    "ra-008: Detector confirmed ở cả hai; Verifier cũ confirmed, Verifier bản thử dismissed dù nguồn nói rõ người nhận AI. Bộ chính sách giữ needs_review, không đổi thành sạch.",
+    "Hai lỗi trên biến thể mới đều phát sinh ở Detector, trước khi Verifier có thể xử lý.",
+    "Mẫu thiếu người nhận ra-003 không được Detector tạo ứng viên ở cả hai; bản thử bỏ gọi Verifier đúng thiết kế nhưng vẫn chưa nhận ra thiếu ngữ cảnh.",
+    "Không có cảnh báo sai trên 6 mẫu sạch nhưng 4/6 phải needs_review; FPR thấp không đồng nghĩa hữu dụng cao."
+  ],
+  "request_counts": {
+    "baseline": 22,
+    "candidate": 19
+  },
+  "remaining": "Chất lượng nhận diện/đọc hiểu của Detector và Verifier chưa đạt; toàn pipeline tài liệu dài/đa định dạng và holdout độc lập chưa hoàn tất.",
+  "next_action": "Đóng đợt, giữ luồng mặc định và xem Agent là công cụ hỗ trợ rà soát. Không tự nối thử prompt/model/train. Muốn mở đợt nâng nhận diện mới phải chốt thay đổi kiến trúc hoặc phương pháp có bằng chứng khác, với phạm vi và điểm dừng riêng; không tiếp tục vá candidate-only-v1.",
+  "limits": [
+    "8 ca dev cũ/2 nhóm và 4 biến thể mới khóa trước đo, nhãn AI; không phải holdout độc lập.",
+    "Chỉ TXT ngắn qua engine thật, không chứng minh UI/native IPC/PDF/DOCX/tài liệu dài.",
+    "Mẫu không có ứng viên không gọi Verifier; ghi riêng required/reviewed IDs, không giả hai model đã đọc toàn bộ.",
+    "Detector và prefilter giữ nguyên nên Verifier không thể cứu tấn công không được tạo ứng viên.",
+    "Không so sánh với những số latency trước có cấu hình nạp/cache khác. Snapshot VRAM không phải peak; RSS là harness."
+  ]
+}

@@ -1,0 +1,2326 @@
+{
+  "version": "verifier-corpus-overlap-v21",
+  "script_sha256": "11042d270df05fdbae3930e2c96fc686c799d330b77b933a12512028c32fab08",
+  "reference_records": 458,
+  "candidate_records": 438,
+  "inventory": [
+    {
+      "file": "benchmark/data/raw/llmail-intake-v1/data/phase2-subset.jsonl",
+      "sha256": "fe02512005cf03a7ea9a39f0e8f357a244b615e63cd7004b7ef48946a21342dc",
+      "rows_read": 48,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/raw/malmasabi-bipia-gpt/dataset_for_huggingface.jsonl",
+      "sha256": "d7695c0ab744ffc97c2ff586fc57a21ccc936fa800da784ef81fb4a4166eb3c6",
+      "rows_read": 70000,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/raw/realistic-prompt-injections/probes.jsonl",
+      "sha256": "8706b03516206e94effa76bff3087cca7a4b3fe4dd26ef640adc9e638f7649b9",
+      "rows_read": 17,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/ngu-canh-v1/mau-cho-duyet.jsonl",
+      "sha256": "1d4c98e68c5d1d4e0fead956183519ded488eb3f8c5e7814ca3f5fd6572757ba",
+      "rows_read": 20,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-addressee-context-v1/cach-ly.jsonl",
+      "sha256": "0523781cedc30a63e0f1a9f093269402db1b6d3569a96b49200582460d383885",
+      "rows_read": 1,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-addressee-context-v1/mau-cho-duyet.jsonl",
+      "sha256": "63c889ad5ffd08a8aed52daa86b654a1dea80b9d04732bd01a1e99cd49f8a3e4",
+      "rows_read": 7,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-authored-reviewed-v1/mau-cho-duyet.jsonl",
+      "sha256": "53f9d819b2b1a1b7bea276e297210545adaeaa1aabea417013a0af7aceb7b1d8",
+      "rows_read": 47,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/mau-cho-duyet.jsonl",
+      "sha256": "c2eadfc93b7643b6a91931003c8ab1e8a55e83a0fcfa26cdf894f33d93156eac",
+      "rows_read": 30,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-consistency-controls-v1/mau-cho-duyet.jsonl",
+      "sha256": "d097145bfba4b2c80dfe69200c9568908ad3ca61aeb98e5288e1259760df546d",
+      "rows_read": 28,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-context-transfer-v1/mau-cho-duyet.jsonl",
+      "sha256": "4b07deb0011f202dc63a6c7c7bc5554cc8a079c3e3dab43568507d98b1bd0acb",
+      "rows_read": 36,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-expansion-v1/hang-cho-gan-nhan.jsonl",
+      "sha256": "1ffa6af90945b596c6495fcc08361481f1571f5a6b8028633b0ce7eb1d7dbc5a",
+      "rows_read": 356,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-ai-v1/mau-cho-duyet.jsonl",
+      "sha256": "90d350b141c6075592950b953ee748083733349ff7d6315da6f70660622d8a96",
+      "rows_read": 30,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-ai-v1/nhan-va-cua-so.jsonl",
+      "sha256": "90d350b141c6075592950b953ee748083733349ff7d6315da6f70660622d8a96",
+      "rows_read": 30,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-context-v1/mau-cho-duyet.jsonl",
+      "sha256": "e140d7eab0c94e7721af9b67ac596e2d7024c594f82e5e4aa9e9464757956396",
+      "rows_read": 24,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/nhan-va-bang-chung.jsonl",
+      "sha256": "c5dc9e3b621e21bf960c7f487c04bbe727728b55a7ce2ffc881086a66ecc46d4",
+      "rows_read": 27,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-uncertain-reviewed-v1/mau-cho-duyet.jsonl",
+      "sha256": "d3511f9a116106e954264289e08e8c1982dfada306574244942c9ae087fdf5f1",
+      "rows_read": 18,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/nhan-va-cua-so.jsonl",
+      "sha256": "af9d21ece1690c71ffcd85d83b6bfb6d52aa9efd9160579d3ddb2c5cc351e963",
+      "rows_read": 15,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-repair-v1/nhan-va-cua-so.jsonl",
+      "sha256": "0f89a1af84cc76cfe8a2fadc3b05b1ad7db74449646d66371e96f7fb625830ca",
+      "rows_read": 6,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/mau-cho-duyet.jsonl",
+      "sha256": "60766eada7697fd7db6cd6531c1f4433a0dad8ae1e4ca0f66e9eac8b7a3d2862",
+      "rows_read": 15,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-llmail-expansion-v1/mau-cho-duyet.jsonl",
+      "sha256": "a99e4b4dd3a2c8731158f786fce078b7c5921ae874c7617c8844a0cd29f8c00e",
+      "rows_read": 11,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-llmail-v1/mau-cho-duyet.jsonl",
+      "sha256": "4b90ad392de09df0f2bc26f98b9ff9a7687e599d5c85bbbabed6861630325585",
+      "rows_read": 12,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-local-release-preview-v1/mau-cho-duyet.jsonl",
+      "sha256": "87a97d919606e8b3564d36818b77e353250ba43c8fdb2465a601363a9ab28cd7",
+      "rows_read": 324,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "sha256": "6845aa33164da7ee61ffd45c12a5bf074cbc32c0187f94872748ef733fef69c5",
+      "rows_read": 324,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-openapi-context-v1/mau-cho-duyet.jsonl",
+      "sha256": "d19c6a3c7b7b613174053195dcfacfa9295d35b1db43f5a591c5b292f20f0903",
+      "rows_read": 15,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-recipient-contrast-v1/mau-cho-duyet.jsonl",
+      "sha256": "b4236607675d268ca5748246c483a5ca43e576a49b8d75f8059d12de1d3778e0",
+      "rows_read": 32,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-role-authority-controls-v1/mau-cho-duyet.jsonl",
+      "sha256": "ecaa339382653fabdc1efcee2ef181c8c0466224c0b80a54ef7b5780d133bdf5",
+      "rows_read": 24,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-split-preview-v1/mau-cho-duyet.jsonl",
+      "sha256": "580bf241476d4d949ba4047d2428ca332066eff995fe395882eb5d8465fd753f",
+      "rows_read": 324,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-split-preview-v2/mau-cho-duyet.jsonl",
+      "sha256": "580bf241476d4d949ba4047d2428ca332066eff995fe395882eb5d8465fd753f",
+      "rows_read": 324,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v1/mau-cho-duyet.jsonl",
+      "sha256": "3a41c64944e04341080b4ec1cdef94749d7b4428c9dc9a66e508d6b577fdac21",
+      "rows_read": 12,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v2/mau-cho-duyet.jsonl",
+      "sha256": "29bbb8749a9ba0328217835de9e172461c9f9578a8edfae90105374f992cfe86",
+      "rows_read": 12,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v3/mau-cho-duyet.jsonl",
+      "sha256": "58e8eca4981c3fb781d8422ef8c22559f5cba6004a462e2982e501bc811788d9",
+      "rows_read": 12,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v4/mau-cho-duyet.jsonl",
+      "sha256": "65c351d7e3be307f02316a80db63fdd5657cec8d04e88e97c84216035f425398",
+      "rows_read": 12,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-articles-v1/mau-cho-duyet.jsonl",
+      "sha256": "59c63de518ba81099608dc260a876853e3aca75bb31c240cb4a3d9db6b6a0d7f",
+      "rows_read": 30,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-business-v1/mau-cho-duyet.jsonl",
+      "sha256": "b4e344f2500178e69f2008391e105e1309f40213c0aa660b34cc3471c01d0287",
+      "rows_read": 20,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-markdown-v1/mau-cho-duyet.jsonl",
+      "sha256": "c95f9741bd74fb915666b1fbbe66f39b180b234af0fd015c055451e643b6336a",
+      "rows_read": 18,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/mau-cho-duyet.jsonl",
+      "sha256": "630a45deef539dbf5a14b536d4cc12af6fc9b061357e15660f200233e01db5e5",
+      "rows_read": 15,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-workflow-reviewed-v1/mau-cho-duyet.jsonl",
+      "sha256": "ec125a7f7aa2ab74fd96c4a43fec3780d65a55a18c1df05ad0b128fdee47c911",
+      "rows_read": 16,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-workflow-v1/mau-cho-duyet.jsonl",
+      "sha256": "e913b829cbf31e8289184356ef7bbe65d5728ae20afdeb94ecd5d3b463ef4cae",
+      "rows_read": 16,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/processed/ipi-clean.jsonl",
+      "sha256": "02510a5df52719e79cd85ccdd33de01b0b4670ead0e3469fff890fe6b069b83b",
+      "rows_read": 65948,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/processed/ipi-conflicts.jsonl",
+      "sha256": "601d1e558fb6b7a63c983991da35d0ddc6a90cc5334c8374fd40b0b11da543f5",
+      "rows_read": 18,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/processed/notinject/notinject.jsonl",
+      "sha256": "fcbca6f07fe90f1b1ba16f8ba917640f343d7049783a496c914119720799f818",
+      "rows_read": 339,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl",
+      "sha256": "ccb93fc99972ff44f5e2e25317072796f5443ce01660587e3decf72962c7cdf0",
+      "rows_read": 17,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/splits/ipi-dev.jsonl",
+      "sha256": "fa9d3c960aad0d24d5609bf0a465887f3965635d325c91e9e7fc95dce7feac3e",
+      "rows_read": 52758,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/splits/ipi-test.jsonl",
+      "sha256": "2074a3ff4496afdc891fef77d8722badbb459740d2950db658c7889ff1a68b55",
+      "rows_read": 13190,
+      "coverage": "text/context/prompt_only_no_gold"
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_dh_base.json",
+      "sha256": "0a8186468d21389af432e8c7b399ae42264d1b93a07b65c7a489468508604305",
+      "rows_read": 510,
+      "coverage": "Tool Response only; Attacker Instruction hash for grouping only"
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_dh_enhanced.json",
+      "sha256": "885602716b72c18af80695ce6c2e1f242fa03163bc90b0788b0c5e4ab6216d50",
+      "rows_read": 510,
+      "coverage": "Tool Response only; Attacker Instruction hash for grouping only"
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_ds_base.json",
+      "sha256": "4daab35c62a3845e8b9400f4dca58b9c9f37e57cd33b2337552557fbb26282e9",
+      "rows_read": 544,
+      "coverage": "Tool Response only; Attacker Instruction hash for grouping only"
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_ds_enhanced.json",
+      "sha256": "7bc510868df032511053fc40e8470e68a041fb7148d055112093594bf73ab0ce",
+      "rows_read": 544,
+      "coverage": "Tool Response only; Attacker Instruction hash for grouping only"
+    },
+    {
+      "file": "benchmark/data/raw/llmail-intake-v1/data/emails_for_fp_tests.json",
+      "sha256": "4ddd950b5dbaa8548f5597c886d8e09a051ba07f80a9291fdcca9c2397d22abe",
+      "rows_read": 203,
+      "coverage": "original_email_text_only_no_labels"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-01.txt",
+      "sha256": "001045757b4a4fa2a29b8cd3acc8fd68ba641ee41fe9f0bad5aeef072e9ff107",
+      "rows_read": 1,
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-02.txt",
+      "sha256": "a5aada8505accf2ea9b63f81203b280ded21dbca32e349cf21c81ac99dd34fc1",
+      "rows_read": 1,
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-03.txt",
+      "sha256": "6df73c9f52b4a96f334bbd0848e15451a0641aa6257681c554a3f656861b9c8d",
+      "rows_read": 1,
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-04.txt",
+      "sha256": "774da423909e843abb1de4fd367c52463eb505d35755c6f2a556da3a6864ebdc",
+      "rows_read": 1,
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-05.txt",
+      "sha256": "eda076bd556234e810f7f689ee10bdf8c3c7264b8574a6386f0bb9c9b6a74b10",
+      "rows_read": 1,
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-06.txt",
+      "sha256": "00504d9a50e403633b6158b3eeb9d55b784a17956c6e161899fe50f891ed8650",
+      "rows_read": 1,
+      "coverage": "extracted_paragraph_text_only_not_full_HTML"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/snapshot.json",
+      "sha256": "ffc5ddd3399fa3e094dddd9f86442d924da1e000ed1942d5d33ae92339854c12",
+      "rows_read": 6,
+      "coverage": "revision/license/grouping_metadata_not_model_input"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "rows_read": 1,
+      "coverage": "license_evidence_not_model_input"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/venv.rst",
+      "sha256": "cddbb3a66998a0832d8a5e592f08a37aa465ce34094af942713dae171d480fee",
+      "rows_read": 1,
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/interpreter.rst",
+      "sha256": "aad98b0071949d2b97ca2a93a898c5cb1e64347b67b8c7b16053f6a8f3cd87af",
+      "rows_read": 1,
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/inputoutput.rst",
+      "sha256": "2fb6533d10638f2e16a0d8a0fd3743fa5281450992b44936b9f72d756cd4f194",
+      "rows_read": 1,
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/errors.rst",
+      "sha256": "0c09ca192cd9a88c2d60362f78a51915d8957dd4e8bbc5947dc48d036e96166a",
+      "rows_read": 1,
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/modules.rst",
+      "sha256": "05cae16853afbe75e901f26bfd66a0e2c36a64c2631997cc2bbc33d2f22a4380",
+      "rows_read": 1,
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/Doc/tutorial/stdlib.rst",
+      "sha256": "4f6bc514620c5c6298a699064b94562268eba56486acc5f4360bad4589886021",
+      "rows_read": 1,
+      "coverage": "raw_RST_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/snapshot.json",
+      "sha256": "9901299ae1a5c22f9277dfff56a767059096d2788183d97e085abf69f93619ab",
+      "rows_read": 7,
+      "coverage": "pinned_source_license_metadata"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/README.md",
+      "sha256": "709e0ce5e5d1048c5ab220e63b9b4f9fe0a44ae3976974e731cc24c41e800ce0",
+      "rows_read": 1,
+      "coverage": "license_and_attribution_metadata_not_model_input"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/LICENSE",
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "rows_read": 1,
+      "coverage": "license_and_attribution_metadata_not_model_input"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/LICENSE-CODE",
+      "sha256": "122e2a8a9d9a99a75bc28ae89091876fe910978dc6177f6cf7afd600fc9700ab",
+      "rows_read": 1,
+      "coverage": "license_and_attribution_metadata_not_model_input"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/TRANSLATION_STATUS.md",
+      "sha256": "4b07996d920e7abe8699ce5f3d3f953337c18364fcb32548b8c3a7862656c0f8",
+      "rows_read": 1,
+      "coverage": "license_and_attribution_metadata_not_model_input"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/_basic-syntax/headings.md",
+      "sha256": "28d9951c3c4a230f4ba156853e52d3cfea127b28f82ff7e5bed9e2e9352f7a06",
+      "rows_read": 1,
+      "coverage": "raw_markdown_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/_basic-syntax/code.md",
+      "sha256": "9f0d9fe71b1be99a4a8827ff4250e112312d0abb3c9ba40635a859ae07f910bb",
+      "rows_read": 1,
+      "coverage": "raw_markdown_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/_basic-syntax/links.md",
+      "sha256": "392ef9cc846cc90a5e45bb4962f365e4e1944d34c9e7ad7460be10821bc35480",
+      "rows_read": 1,
+      "coverage": "raw_markdown_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/_basic-syntax/blockquotes.md",
+      "sha256": "a491f9ceb33a40291f533d13586e3ccdf8757aad3521de64c92981acfdbc2e19",
+      "rows_read": 1,
+      "coverage": "raw_markdown_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/_basic-syntax/escaping-characters.md",
+      "sha256": "f513789ab7082f95fcb3c66912d2bea41f87869fd7c6769b808ecd64cae044a8",
+      "rows_read": 1,
+      "coverage": "raw_markdown_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/_basic-syntax/html.md",
+      "sha256": "0b61982331147757c044d78452932bae34dbee8fd7b4d130d7699098347412a2",
+      "rows_read": 1,
+      "coverage": "raw_markdown_source_text"
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/snapshot.json",
+      "sha256": "a1b514924a8f28497497c8e03352be3bf493b3dfdafa90069224ba3bfc052136",
+      "rows_read": 10,
+      "coverage": "pinned_source_license_metadata"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/NotInject_one-00000-of-00001.parquet",
+      "sha256": "5b1d3a8ec341205305efd8c6d2cabeb5ba0f594dd8726b08ee7fde1a46ddc6ec",
+      "rows_read": 113,
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/NotInject_three-00000-of-00001.parquet",
+      "sha256": "d5c685b123570c092a0f374ba6bdf324b2026d905a2751a243eb2bb360d411a8",
+      "rows_read": 113,
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/NotInject_two-00000-of-00001.parquet",
+      "sha256": "a5a8c1b3b851b0b5acc3b6caf8bfee26d7da631b2967dd31ca90358df8883feb",
+      "rows_read": 113,
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/test-00000-of-00001.parquet",
+      "sha256": "d5c685b123570c092a0f374ba6bdf324b2026d905a2751a243eb2bb360d411a8",
+      "rows_read": 113,
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/train-00000-of-00001.parquet",
+      "sha256": "5b1d3a8ec341205305efd8c6d2cabeb5ba0f594dd8726b08ee7fde1a46ddc6ec",
+      "rows_read": 113,
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/notinject/data/validation-00000-of-00001.parquet",
+      "sha256": "a5a8c1b3b851b0b5acc3b6caf8bfee26d7da631b2967dd31ca90358df8883feb",
+      "rows_read": 113,
+      "coverage": "prompt_only"
+    },
+    {
+      "file": "benchmark/data/raw/realistic-prompt-injections/probes.csv",
+      "sha256": "21e8ee13dda68f31a4d235f0de3aeb530a25e7f288653a9c31de86eff5d6a67a",
+      "rows_read": 17,
+      "coverage": "text_only"
+    },
+    {
+      "file": "benchmark/data/context-controls-v1.json",
+      "sha256": "132b208eba7878e70562d48a241b0da30177938176e5026268c95fda43eef55d",
+      "rows_read": 8,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/context-controls-v2.json",
+      "sha256": "50de92db2712ad62be12fbe17d8c0fd1b5af5c7f5a7575145864b286c79d588c",
+      "rows_read": 8,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/priority-one-dev-v1.json",
+      "sha256": "64714cf2881ab2c26a9c274741424981ebd16b7e0a452b5ce7a15aad6af5d4df",
+      "rows_read": 72,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/priority-one-dev-v2.json",
+      "sha256": "7c018bde4e4197beaa3f982fcc3172cebdb89347a9eeff0e17f5743f142ee07e",
+      "rows_read": 72,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/reference-transfer-v1.json",
+      "sha256": "a29124a0c82eedd0c59b90dbd460be02e8a1524641531f8d7104c9acb549d97f",
+      "rows_read": 8,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/round-one-eval.json",
+      "sha256": "885eddd7f4d8d040883aff704cbb818f40b0f7dccc2f44b8cb5b94bd97dd176e",
+      "rows_read": 10,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/selector-spread-screen-v1.json",
+      "sha256": "0dcad2907f4b7c34068b065d95caa4b10279de46d41d45db29799c0743867844",
+      "rows_read": 6,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/data/structured-transfer-v1.json",
+      "sha256": "a0ef8949c6f29d1a10f4010df1616fecf8a33b6b9a312eb94b35d6f1e24318ca",
+      "rows_read": 8,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/agent-contrast-v1/ke-hoach.json",
+      "sha256": "20f730cd6c459662156cd176fe22f79c48c1db615e5f8aebb3a6440dfd621844",
+      "rows_read": 13,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/agent-contrast-v2/ke-hoach.json",
+      "sha256": "e7a865d6c5cb4cea2cc66ba3d80d860b29fa8aa2efddeae4b465f96611f66d48",
+      "rows_read": 13,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/citation-context-controls-v1/mau-da-khoa.json",
+      "sha256": "ef23c6950aeeafb0eae53da55078b88184b0d8ef5067c43ec291234b7ac7190f",
+      "rows_read": 8,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/minimal-context-order-v1/ke-hoach.json",
+      "sha256": "cfe7233dc8e1567daa2d28b0d3d80a3ca7af8ff922a09c367a136bbb0b022439",
+      "rows_read": 6,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/model-context-v1/ke-hoach.json",
+      "sha256": "4a27caeef472b319894b3764e1a29824567f22c4a842aacac6bc9feafba4ab1e",
+      "rows_read": 12,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/experiments/verifier-candidate-v1/ke-hoach.json",
+      "sha256": "95855452605957b2dbdba1bb9816c9f18b3a01737ed0f25f189f19b45a871e3e",
+      "rows_read": 12,
+      "coverage": "cases.text_and_referenced_files"
+    },
+    {
+      "file": "benchmark/fixtures/demo-output-v1/attack.txt",
+      "sha256": "3aa516432b3ac01bcabb8e16d70bf237b15fdad5d674de99608a8cc8e1165a2d",
+      "rows_read": 1,
+      "coverage": "raw_text_fixture"
+    },
+    {
+      "file": "benchmark/fixtures/demo-output-v1/clean.txt",
+      "sha256": "8f6597fe64ca1180725aeb4b34909554b7613fd1e625ceb830e3b41a4251fb7a",
+      "rows_read": 1,
+      "coverage": "raw_text_fixture"
+    },
+    {
+      "file": "benchmark/fixtures/demo-output-v1/quoted.txt",
+      "sha256": "369f6f15d45f9f09ed131d41cd6608a9175aa6ea6fad5a0995799a81abccb345",
+      "rows_read": 1,
+      "coverage": "raw_text_fixture"
+    },
+    {
+      "file": "benchmark/fixtures/round-one/hidden-injected.html",
+      "sha256": "de735d4cb191ccc801bbe00fd6524038ac8388e3f8a992ea9c54b23acb5ae010",
+      "rows_read": 1,
+      "coverage": "raw_text_fixture"
+    },
+    {
+      "file": "benchmark/fixtures/round-one/vi-clean.md",
+      "sha256": "a125d89fa070a80a52976d902e379cc9135649696dfa355c430b3d0f41a6ba20",
+      "rows_read": 1,
+      "coverage": "raw_text_fixture"
+    },
+    {
+      "file": "benchmark/fixtures/round-one/vi-injected.md",
+      "sha256": "88fddc28b622f7c93e0dc36cadf8f0689917c57ddf950f7691fbfb16681d15f9",
+      "rows_read": 1,
+      "coverage": "raw_text_fixture"
+    }
+  ],
+  "unique_normalized_texts_scanned": 68730,
+  "matched_pairs_including_aliases": 28946,
+  "groups": [
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-013",
+        "verifier-external-ai-v1:ext3-014",
+        "verifier-external-ai-v1:ext3-015",
+        "verifier-external-ai-v1:ext3-016",
+        "verifier-external-ai-v1:ext3-017",
+        "verifier-external-ai-v1:ext3-018",
+        "verifier-external-ai-v1:ext3-019",
+        "verifier-external-ai-v1:ext3-020",
+        "verifier-external-ai-v1:ext3-021",
+        "verifier-external-ai-v1:ext3-022",
+        "verifier-external-ai-v1:ext3-023",
+        "verifier-external-ai-v1:ext3-024",
+        "verifier-external-ai-v1:ext3-025",
+        "verifier-external-ai-v1:ext3-026",
+        "verifier-external-ai-v1:ext3-027",
+        "verifier-external-ai-v1:ext3-028",
+        "verifier-external-ai-v1:ext3-029",
+        "verifier-external-ai-v1:ext3-030",
+        "verifier-external-context-v1:ec-013",
+        "verifier-external-context-v1:ec-014",
+        "verifier-external-context-v1:ec-015",
+        "verifier-external-context-v1:ec-016",
+        "verifier-external-context-v1:ec-017",
+        "verifier-external-context-v1:ec-018",
+        "verifier-external-context-v1:ec-019",
+        "verifier-external-context-v1:ec-020",
+        "verifier-external-context-v1:ec-021",
+        "verifier-external-context-v1:ec-022",
+        "verifier-external-context-v1:ec-023",
+        "verifier-external-context-v1:ec-024"
+      ],
+      "size": 30,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-recipient-contrast-v1:rc-005",
+        "verifier-recipient-contrast-v1:rc-006",
+        "verifier-recipient-contrast-v1:rc-007",
+        "verifier-recipient-contrast-v1:rc-008",
+        "verifier-supervision-batch-v1:sb-001",
+        "verifier-supervision-batch-v1:sb-002",
+        "verifier-supervision-batch-v1:sb-003",
+        "verifier-supervision-batch-v2:su-001",
+        "verifier-supervision-batch-v2:su-002",
+        "verifier-supervision-batch-v2:su-003",
+        "verifier-supervision-batch-v3:sf-001",
+        "verifier-supervision-batch-v3:sf-002",
+        "verifier-supervision-batch-v3:sf-003",
+        "verifier-supervision-batch-v4:sr-001",
+        "verifier-supervision-batch-v4:sr-002",
+        "verifier-supervision-batch-v4:sr-003"
+      ],
+      "size": 16,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-recipient-contrast-v1:rc-013",
+        "verifier-recipient-contrast-v1:rc-014",
+        "verifier-recipient-contrast-v1:rc-015",
+        "verifier-recipient-contrast-v1:rc-016",
+        "verifier-supervision-batch-v1:sb-004",
+        "verifier-supervision-batch-v1:sb-005",
+        "verifier-supervision-batch-v1:sb-006",
+        "verifier-supervision-batch-v2:su-004",
+        "verifier-supervision-batch-v2:su-005",
+        "verifier-supervision-batch-v2:su-006",
+        "verifier-supervision-batch-v3:sf-004",
+        "verifier-supervision-batch-v3:sf-005",
+        "verifier-supervision-batch-v3:sf-006",
+        "verifier-supervision-batch-v4:sr-004",
+        "verifier-supervision-batch-v4:sr-005",
+        "verifier-supervision-batch-v4:sr-006"
+      ],
+      "size": 16,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-recipient-contrast-v1:rc-017",
+        "verifier-recipient-contrast-v1:rc-018",
+        "verifier-recipient-contrast-v1:rc-019",
+        "verifier-recipient-contrast-v1:rc-020",
+        "verifier-supervision-batch-v1:sb-007",
+        "verifier-supervision-batch-v1:sb-008",
+        "verifier-supervision-batch-v1:sb-009",
+        "verifier-supervision-batch-v2:su-007",
+        "verifier-supervision-batch-v2:su-008",
+        "verifier-supervision-batch-v2:su-009",
+        "verifier-supervision-batch-v3:sf-007",
+        "verifier-supervision-batch-v3:sf-008",
+        "verifier-supervision-batch-v3:sf-009",
+        "verifier-supervision-batch-v4:sr-007",
+        "verifier-supervision-batch-v4:sr-008",
+        "verifier-supervision-batch-v4:sr-009"
+      ],
+      "size": 16,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-recipient-contrast-v1:rc-025",
+        "verifier-recipient-contrast-v1:rc-026",
+        "verifier-recipient-contrast-v1:rc-027",
+        "verifier-recipient-contrast-v1:rc-028",
+        "verifier-supervision-batch-v1:sb-010",
+        "verifier-supervision-batch-v1:sb-011",
+        "verifier-supervision-batch-v1:sb-012",
+        "verifier-supervision-batch-v2:su-010",
+        "verifier-supervision-batch-v2:su-011",
+        "verifier-supervision-batch-v2:su-012",
+        "verifier-supervision-batch-v3:sf-010",
+        "verifier-supervision-batch-v3:sf-011",
+        "verifier-supervision-batch-v3:sf-012",
+        "verifier-supervision-batch-v4:sr-010",
+        "verifier-supervision-batch-v4:sr-011",
+        "verifier-supervision-batch-v4:sr-012"
+      ],
+      "size": 16,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-openapi-context-v1:oa-001",
+        "verifier-openapi-context-v1:oa-002",
+        "verifier-openapi-context-v1:oa-003",
+        "verifier-openapi-context-v1:oa-004",
+        "verifier-openapi-context-v1:oa-005",
+        "verifier-openapi-context-v1:oa-006",
+        "verifier-openapi-context-v1:oa-007",
+        "verifier-openapi-context-v1:oa-008",
+        "verifier-openapi-context-v1:oa-009",
+        "verifier-openapi-context-v1:oa-010",
+        "verifier-openapi-context-v1:oa-011",
+        "verifier-openapi-context-v1:oa-012",
+        "verifier-openapi-context-v1:oa-013",
+        "verifier-openapi-context-v1:oa-014",
+        "verifier-openapi-context-v1:oa-015"
+      ],
+      "size": 15,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-consistency-controls-v1:cs-001",
+        "verifier-consistency-controls-v1:cs-002",
+        "verifier-consistency-controls-v1:cs-003",
+        "verifier-consistency-controls-v1:cs-004",
+        "verifier-consistency-controls-v1:cs-005",
+        "verifier-consistency-controls-v1:cs-006",
+        "verifier-consistency-controls-v1:cs-007",
+        "verifier-consistency-controls-v1:cs-008",
+        "verifier-consistency-controls-v1:cs-009",
+        "verifier-consistency-controls-v1:cs-010",
+        "verifier-consistency-controls-v1:cs-011",
+        "verifier-consistency-controls-v1:cs-012",
+        "verifier-consistency-controls-v1:cs-013",
+        "verifier-consistency-controls-v1:cs-014"
+      ],
+      "size": 14,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-consistency-controls-v1:cs-015",
+        "verifier-consistency-controls-v1:cs-016",
+        "verifier-consistency-controls-v1:cs-017",
+        "verifier-consistency-controls-v1:cs-018",
+        "verifier-consistency-controls-v1:cs-019",
+        "verifier-consistency-controls-v1:cs-020",
+        "verifier-consistency-controls-v1:cs-021",
+        "verifier-consistency-controls-v1:cs-022",
+        "verifier-consistency-controls-v1:cs-023",
+        "verifier-consistency-controls-v1:cs-024",
+        "verifier-consistency-controls-v1:cs-025",
+        "verifier-consistency-controls-v1:cs-026",
+        "verifier-consistency-controls-v1:cs-027",
+        "verifier-consistency-controls-v1:cs-028"
+      ],
+      "size": 14,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-gap-v1:gap-001",
+        "verifier-gap-v1:gap-002",
+        "verifier-gap-v1:gap-003",
+        "verifier-gap-v1:gap-007",
+        "verifier-gap-v1:gap-008",
+        "verifier-gap-v1:gap-009",
+        "verifier-gap-v1:gap-013",
+        "verifier-gap-v1:gap-014",
+        "verifier-gap-v1:gap-015"
+      ],
+      "size": 9,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-011",
+        "verifier-vietnamese-articles-v1:vi-article-012",
+        "verifier-vietnamese-articles-v1:vi-article-013",
+        "verifier-vietnamese-articles-v1:vi-article-014",
+        "verifier-vietnamese-articles-v1:vi-article-015",
+        "verifier-addressee-context-v1:ac-01"
+      ],
+      "size": 6,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-addressee-context-v1:ac-03",
+        "verifier-addressee-context-v1:ac-04",
+        "verifier-addressee-context-v1:ac-05",
+        "verifier-addressee-context-v1:ac-06",
+        "verifier-addressee-context-v1:ac-07",
+        "verifier-addressee-context-v1:ac-08"
+      ],
+      "size": 6,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-context-transfer-v1:ct-001",
+        "verifier-context-transfer-v1:ct-002",
+        "verifier-context-transfer-v1:ct-003",
+        "verifier-context-transfer-v1:ct-004",
+        "verifier-context-transfer-v1:ct-005",
+        "verifier-context-transfer-v1:ct-006"
+      ],
+      "size": 6,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-context-transfer-v1:ct-007",
+        "verifier-context-transfer-v1:ct-008",
+        "verifier-context-transfer-v1:ct-009",
+        "verifier-context-transfer-v1:ct-010",
+        "verifier-context-transfer-v1:ct-011",
+        "verifier-context-transfer-v1:ct-012"
+      ],
+      "size": 6,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-context-transfer-v1:ct-013",
+        "verifier-context-transfer-v1:ct-014",
+        "verifier-context-transfer-v1:ct-015",
+        "verifier-context-transfer-v1:ct-016",
+        "verifier-context-transfer-v1:ct-017",
+        "verifier-context-transfer-v1:ct-018"
+      ],
+      "size": 6,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-context-transfer-v1:ct-019",
+        "verifier-context-transfer-v1:ct-020",
+        "verifier-context-transfer-v1:ct-021",
+        "verifier-context-transfer-v1:ct-022",
+        "verifier-context-transfer-v1:ct-023",
+        "verifier-context-transfer-v1:ct-024"
+      ],
+      "size": 6,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-context-transfer-v1:ct-025",
+        "verifier-context-transfer-v1:ct-026",
+        "verifier-context-transfer-v1:ct-027",
+        "verifier-context-transfer-v1:ct-028",
+        "verifier-context-transfer-v1:ct-029",
+        "verifier-context-transfer-v1:ct-030"
+      ],
+      "size": 6,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-context-transfer-v1:ct-031",
+        "verifier-context-transfer-v1:ct-032",
+        "verifier-context-transfer-v1:ct-033",
+        "verifier-context-transfer-v1:ct-034",
+        "verifier-context-transfer-v1:ct-035",
+        "verifier-context-transfer-v1:ct-036"
+      ],
+      "size": 6,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-role-authority-controls-v1:ra-001",
+        "verifier-role-authority-controls-v1:ra-002",
+        "verifier-role-authority-controls-v1:ra-003",
+        "verifier-role-authority-controls-v1:ra-004",
+        "verifier-role-authority-controls-v1:ra-005",
+        "verifier-role-authority-controls-v1:ra-006"
+      ],
+      "size": 6,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-role-authority-controls-v1:ra-007",
+        "verifier-role-authority-controls-v1:ra-008",
+        "verifier-role-authority-controls-v1:ra-009",
+        "verifier-role-authority-controls-v1:ra-010",
+        "verifier-role-authority-controls-v1:ra-011",
+        "verifier-role-authority-controls-v1:ra-012"
+      ],
+      "size": 6,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-role-authority-controls-v1:ra-013",
+        "verifier-role-authority-controls-v1:ra-014",
+        "verifier-role-authority-controls-v1:ra-015",
+        "verifier-role-authority-controls-v1:ra-016",
+        "verifier-role-authority-controls-v1:ra-017",
+        "verifier-role-authority-controls-v1:ra-018"
+      ],
+      "size": 6,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-role-authority-controls-v1:ra-019",
+        "verifier-role-authority-controls-v1:ra-020",
+        "verifier-role-authority-controls-v1:ra-021",
+        "verifier-role-authority-controls-v1:ra-022",
+        "verifier-role-authority-controls-v1:ra-023",
+        "verifier-role-authority-controls-v1:ra-024"
+      ],
+      "size": 6,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-001",
+        "verifier-vietnamese-articles-v1:vi-article-002",
+        "verifier-vietnamese-articles-v1:vi-article-003",
+        "verifier-vietnamese-articles-v1:vi-article-004",
+        "verifier-vietnamese-articles-v1:vi-article-005"
+      ],
+      "size": 5,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-006",
+        "verifier-vietnamese-articles-v1:vi-article-007",
+        "verifier-vietnamese-articles-v1:vi-article-008",
+        "verifier-vietnamese-articles-v1:vi-article-009",
+        "verifier-vietnamese-articles-v1:vi-article-010"
+      ],
+      "size": 5,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-016",
+        "verifier-vietnamese-articles-v1:vi-article-017",
+        "verifier-vietnamese-articles-v1:vi-article-018",
+        "verifier-vietnamese-articles-v1:vi-article-019",
+        "verifier-vietnamese-articles-v1:vi-article-020"
+      ],
+      "size": 5,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-021",
+        "verifier-vietnamese-articles-v1:vi-article-022",
+        "verifier-vietnamese-articles-v1:vi-article-023",
+        "verifier-vietnamese-articles-v1:vi-article-024",
+        "verifier-vietnamese-articles-v1:vi-article-025"
+      ],
+      "size": 5,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-026",
+        "verifier-vietnamese-articles-v1:vi-article-027",
+        "verifier-vietnamese-articles-v1:vi-article-028",
+        "verifier-vietnamese-articles-v1:vi-article-029",
+        "verifier-vietnamese-articles-v1:vi-article-030"
+      ],
+      "size": 5,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-business-v1:vb-001",
+        "verifier-vietnamese-business-v1:vb-002",
+        "verifier-vietnamese-business-v1:vb-003",
+        "verifier-vietnamese-business-v1:vb-004",
+        "verifier-vietnamese-business-v1:vb-005"
+      ],
+      "size": 5,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-business-v1:vb-006",
+        "verifier-vietnamese-business-v1:vb-007",
+        "verifier-vietnamese-business-v1:vb-008",
+        "verifier-vietnamese-business-v1:vb-009",
+        "verifier-vietnamese-business-v1:vb-010"
+      ],
+      "size": 5,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-business-v1:vb-011",
+        "verifier-vietnamese-business-v1:vb-012",
+        "verifier-vietnamese-business-v1:vb-013",
+        "verifier-vietnamese-business-v1:vb-014",
+        "verifier-vietnamese-business-v1:vb-015"
+      ],
+      "size": 5,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-business-v1:vb-016",
+        "verifier-vietnamese-business-v1:vb-017",
+        "verifier-vietnamese-business-v1:vb-018",
+        "verifier-vietnamese-business-v1:vb-019",
+        "verifier-vietnamese-business-v1:vb-020"
+      ],
+      "size": 5,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-recipient-contrast-v1:rc-001",
+        "verifier-recipient-contrast-v1:rc-002",
+        "verifier-recipient-contrast-v1:rc-003",
+        "verifier-recipient-contrast-v1:rc-004"
+      ],
+      "size": 4,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-recipient-contrast-v1:rc-009",
+        "verifier-recipient-contrast-v1:rc-010",
+        "verifier-recipient-contrast-v1:rc-011",
+        "verifier-recipient-contrast-v1:rc-012"
+      ],
+      "size": 4,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-recipient-contrast-v1:rc-021",
+        "verifier-recipient-contrast-v1:rc-022",
+        "verifier-recipient-contrast-v1:rc-023",
+        "verifier-recipient-contrast-v1:rc-024"
+      ],
+      "size": 4,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-recipient-contrast-v1:rc-029",
+        "verifier-recipient-contrast-v1:rc-030",
+        "verifier-recipient-contrast-v1:rc-031",
+        "verifier-recipient-contrast-v1:rc-032"
+      ],
+      "size": 4,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-workflow-v1:vw-001",
+        "verifier-vietnamese-workflow-v1:vw-002",
+        "verifier-vietnamese-workflow-v1:vw-003",
+        "verifier-vietnamese-workflow-v1:vw-004"
+      ],
+      "size": 4,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-workflow-v1:vw-005",
+        "verifier-vietnamese-workflow-v1:vw-006",
+        "verifier-vietnamese-workflow-v1:vw-007",
+        "verifier-vietnamese-workflow-v1:vw-008"
+      ],
+      "size": 4,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-workflow-v1:vw-009",
+        "verifier-vietnamese-workflow-v1:vw-010",
+        "verifier-vietnamese-workflow-v1:vw-011",
+        "verifier-vietnamese-workflow-v1:vw-012"
+      ],
+      "size": 4,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-workflow-v1:vw-013",
+        "verifier-vietnamese-workflow-v1:vw-014",
+        "verifier-vietnamese-workflow-v1:vw-015",
+        "verifier-vietnamese-workflow-v1:vw-016"
+      ],
+      "size": 4,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-batch-v1:vf-001",
+        "verifier-batch-v1:vf-003",
+        "verifier-batch-v1:vf-021"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-batch-v1:vf-002",
+        "verifier-batch-v1:vf-025",
+        "verifier-batch-v1:vf-027"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-batch-v1:vf-004",
+        "verifier-batch-v1:vf-008",
+        "verifier-batch-v1:vf-026"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-batch-v1:vf-005",
+        "verifier-batch-v1:vf-019",
+        "verifier-batch-v1:vf-028"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-batch-v1:vf-006",
+        "verifier-batch-v1:vf-017",
+        "verifier-batch-v1:vf-030"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-batch-v1:vf-007",
+        "verifier-batch-v1:vf-018",
+        "verifier-batch-v1:vf-020"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-batch-v1:vf-009",
+        "verifier-batch-v1:vf-010",
+        "verifier-batch-v1:vf-014"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-batch-v1:vf-011",
+        "verifier-batch-v1:vf-013",
+        "verifier-batch-v1:vf-016"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-batch-v1:vf-012",
+        "verifier-batch-v1:vf-015",
+        "verifier-batch-v1:vf-023"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-batch-v1:vf-022",
+        "verifier-batch-v1:vf-024",
+        "verifier-batch-v1:vf-029"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-v1:V3-001",
+        "verifier-vietnamese-v1:V3-005",
+        "verifier-vietnamese-v1:V3-014"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-v1:V3-002",
+        "verifier-vietnamese-v1:V3-007",
+        "verifier-vietnamese-v1:V3-012"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-v1:V3-003",
+        "verifier-vietnamese-v1:V3-004",
+        "verifier-vietnamese-v1:V3-006"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-v1:V3-008",
+        "verifier-vietnamese-v1:V3-009",
+        "verifier-vietnamese-v1:V3-010"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-v1:V3-011",
+        "verifier-vietnamese-v1:V3-013",
+        "verifier-vietnamese-v1:V3-015"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-gap-v1:gap-004",
+        "verifier-gap-v1:gap-005",
+        "verifier-gap-v1:gap-006"
+      ],
+      "size": 3,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-gap-v1:gap-010",
+        "verifier-gap-v1:gap-011",
+        "verifier-gap-v1:gap-012"
+      ],
+      "size": 3,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-markdown-v1:vm-001",
+        "verifier-vietnamese-markdown-v1:vm-002",
+        "verifier-vietnamese-markdown-v1:vm-003"
+      ],
+      "size": 3,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-markdown-v1:vm-004",
+        "verifier-vietnamese-markdown-v1:vm-005",
+        "verifier-vietnamese-markdown-v1:vm-006"
+      ],
+      "size": 3,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-markdown-v1:vm-007",
+        "verifier-vietnamese-markdown-v1:vm-008",
+        "verifier-vietnamese-markdown-v1:vm-009"
+      ],
+      "size": 3,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-markdown-v1:vm-010",
+        "verifier-vietnamese-markdown-v1:vm-011",
+        "verifier-vietnamese-markdown-v1:vm-012"
+      ],
+      "size": 3,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-markdown-v1:vm-013",
+        "verifier-vietnamese-markdown-v1:vm-014",
+        "verifier-vietnamese-markdown-v1:vm-015"
+      ],
+      "size": 3,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-vietnamese-markdown-v1:vm-016",
+        "verifier-vietnamese-markdown-v1:vm-017",
+        "verifier-vietnamese-markdown-v1:vm-018"
+      ],
+      "size": 3,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-001",
+        "ngu-canh-v1:ann-011"
+      ],
+      "size": 2,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-004",
+        "ngu-canh-v1:ann-006"
+      ],
+      "size": 2,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-005",
+        "ngu-canh-v1:ann-010"
+      ],
+      "size": 2,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-007",
+        "ngu-canh-v1:ann-008"
+      ],
+      "size": 2,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-013",
+        "ngu-canh-v1:ann-014"
+      ],
+      "size": 2,
+      "flags": [],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-015",
+        "ngu-canh-v1:ann-016"
+      ],
+      "size": 2,
+      "flags": [],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-017",
+        "ngu-canh-v1:ann-018"
+      ],
+      "size": 2,
+      "flags": [],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-019",
+        "ngu-canh-v1:ann-020"
+      ],
+      "size": 2,
+      "flags": [],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-context-v1:ec-001",
+        "verifier-external-context-v1:ec-002"
+      ],
+      "size": 2,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-context-v1:ec-003",
+        "verifier-external-context-v1:ec-004"
+      ],
+      "size": 2,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-context-v1:ec-005",
+        "verifier-external-context-v1:ec-006"
+      ],
+      "size": 2,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-context-v1:ec-007",
+        "verifier-external-context-v1:ec-008"
+      ],
+      "size": 2,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-context-v1:ec-009",
+        "verifier-external-context-v1:ec-010"
+      ],
+      "size": 2,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-context-v1:ec-011",
+        "verifier-external-context-v1:ec-012"
+      ],
+      "size": 2,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-002"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-003"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-009"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "ngu-canh-v1:ann-012"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "reference_only",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-001"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-002"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-003"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-004"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-005"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-006"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-007"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-008"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-009"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-010"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-011"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-external-ai-v1:ext3-012"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-fp-001"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-fp-002"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-fp-003"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-fp-004"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-fp-005"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-fp-006"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-fp-007"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-fp-008"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-phase2-001"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-phase2-002"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-phase2-003"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-v1:llmail-phase2-004"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-fp-073"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-fp-074"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-fp-075"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-fp-077"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-fp-079"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-fp-199"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-phase2-037"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-phase2-041"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-phase2-046"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-phase2-047"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "verifier-llmail-expansion-v1:llmail-phase2-044"
+      ],
+      "size": 1,
+      "flags": [],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0025-f4a0e2c4"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0004-2c788ef3"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0008-73df88f2"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0033-463c34f3"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0012-7e24f5e6"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0046-658ac079"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0013-5e68cad3"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0072-46f87530"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0023-9afd9588"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0014-220c66f9"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0097-394af4ef"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0017-c4d2e538"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0040-003afab6"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0015-ce348595"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0074-9e918b74"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0002-f3806686"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0098-0be1a2e0"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0007-6f8eb908"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0046-990e7221"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0011-b2c71fb6"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0059-243abe44"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0006-53e0168e"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0056-1d019692"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0060-ac0984af"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0016-b1d1ebf9"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-notinject-0051-7ac63a31"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    },
+    {
+      "members": [
+        "exp-realistic-0010-12f63f21"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "constraint": "development_exposed_keep_group_together",
+      "final_split": null
+    }
+  ],
+  "missing_coverage": [],
+  "inputs_unchanged": true,
+  "training_ready": false,
+  "final_split_created": false,
+  "independent_holdout_collected": false,
+  "limitations": [
+    "Chỉ kiểm tra từ vựng, không embedding/ngữ nghĩa; shared 12-token có thể là boilerplate và cần rà soát.",
+    "Gom các mẫu tham chiếu qua cùng văn bản/cùng document_group_id khi có match; không tạo split mới.",
+    "Đọc text test chỉ để đối chiếu cấu trúc, không dùng nhãn/gold để chấm hoặc chỉnh detector.",
+    "Không quét câu trả lời model/metadata, lịch sử benchmark/results, code/prompt hoặc file riêng ngoài workspace.",
+    "Phạm vi toàn kho ở đây là các nguồn text benchmark/data + fixture đã liệt kê; xem missing_coverage, không tuyên bố hết rò rỉ."
+  ]
+}

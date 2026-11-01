@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "id": "malmasabi-raw",
+      "canonical_file": "benchmark/data/raw/malmasabi-bipia-gpt/dataset_for_huggingface.jsonl",
+      "rows": 70000,
+      "labels": {
+        "0": 35000,
+        "1": 35000
+      },
+      "attack_scopes": {},
+      "sha256": "d7695c0ab744ffc97c2ff586fc57a21ccc936fa800da784ef81fb4a4166eb3c6",
+      "role": "raw_source",
+      "note": "Nguồn BIPIA derivative; không tự độc lập với BIPIA hoặc các split bên dưới."
+    },
+    {
+      "id": "malmasabi-dev",
+      "canonical_file": "benchmark/data/splits/ipi-dev.jsonl",
+      "rows": 52758,
+      "labels": {
+        "benign": 25632,
+        "malicious": 27126
+      },
+      "attack_scopes": {},
+      "sha256": "fa9d3c960aad0d24d5609bf0a465887f3965635d325c91e9e7fc95dce7feac3e",
+      "role": "development",
+      "note": "Đã chia theo nhóm heuristic; không trộn nhãn/ID vào input."
+    },
+    {
+      "id": "malmasabi-test",
+      "canonical_file": "benchmark/data/splits/ipi-test.jsonl",
+      "rows": 13190,
+      "labels": {
+        "malicious": 6782,
+        "benign": 6408
+      },
+      "attack_scopes": {},
+      "sha256": "2074a3ff4496afdc891fef77d8722badbb459740d2950db658c7889ff1a68b55",
+      "role": "reserved_test_history_requires_audit",
+      "note": "Không chạy lại để chọn sửa; chưa chứng nhận toàn bộ lịch sử chưa chạm hoặc độc lập ngoài nguồn."
+    },
+    {
+      "id": "notinject",
+      "canonical_file": "benchmark/data/processed/notinject/notinject.jsonl",
+      "rows": 339,
+      "labels": {
+        "benign": 339
+      },
+      "attack_scopes": {
+        "benign_control": 339
+      },
+      "sha256": "fcbca6f07fe90f1b1ba16f8ba917640f343d7049783a496c914119720799f818",
+      "role": "benign_controls",
+      "note": "339 mẫu canonical; alias Parquet train/validation/test không là nguồn mới. Nhãn benign theo dataset card."
+    },
+    {
+      "id": "realistic",
+      "canonical_file": "benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl",
+      "rows": 17,
+      "labels": {
+        "malicious": 10,
+        "benign": 7
+      },
+      "attack_scopes": {
+        "ipi": 7,
+        "direct": 2,
+        "mixed": 1,
+        "benign_control": 7
+      },
+      "sha256": "ccb93fc99972ff44f5e2e25317072796f5443ce01660587e3decf72962c7cdf0",
+      "role": "development_probes",
+      "note": "Strict IPI chỉ lấy scope ipi và benign_control; direct/mixed báo riêng. CSV/JSONL raw cùng nội dung."
+    },
+    {
+      "id": "llmail-subset",
+      "canonical_file": "benchmark/data/raw/llmail-intake-v1/data/phase2-subset.jsonl",
+      "rows": 48,
+      "labels": {},
+      "attack_scopes": {},
+      "sha256": "fe02512005cf03a7ea9a39f0e8f357a244b615e63cd7004b7ef48946a21342dc",
+      "role": "intake_not_paired_ready",
+      "note": "Subset đã tải, không phải toàn bộ LLMail. Mapping scenario/task còn cần xác minh."
+    },
+    {
+      "id": "injecagent-dh_base",
+      "canonical_file": "benchmark/data/raw/injecagent/data/test_cases_dh_base.json",
+      "rows": 510,
+      "sha256": "0a8186468d21389af432e8c7b399ae42264d1b93a07b65c7a489468508604305",
+      "role": "raw_source_shared_families",
+      "note": "Base/enhanced và các attack dùng chung nhiệm vụ/template; không cộng số hàng thành nguồn độc lập."
+    },
+    {
+      "id": "injecagent-dh_enhanced",
+      "canonical_file": "benchmark/data/raw/injecagent/data/test_cases_dh_enhanced.json",
+      "rows": 510,
+      "sha256": "885602716b72c18af80695ce6c2e1f242fa03163bc90b0788b0c5e4ab6216d50",
+      "role": "raw_source_shared_families",
+      "note": "Base/enhanced và các attack dùng chung nhiệm vụ/template; không cộng số hàng thành nguồn độc lập."
+    },
+    {
+      "id": "injecagent-ds_base",
+      "canonical_file": "benchmark/data/raw/injecagent/data/test_cases_ds_base.json",
+      "rows": 544,
+      "sha256": "4daab35c62a3845e8b9400f4dca58b9c9f37e57cd33b2337552557fbb26282e9",
+      "role": "raw_source_shared_families",
+      "note": "Base/enhanced và các attack dùng chung nhiệm vụ/template; không cộng số hàng thành nguồn độc lập."
+    },
+    {
+      "id": "injecagent-ds_enhanced",
+      "canonical_file": "benchmark/data/raw/injecagent/data/test_cases_ds_enhanced.json",
+      "rows": 544,
+      "sha256": "7bc510868df032511053fc40e8470e68a041fb7148d055112093594bf73ab0ce",
+      "role": "raw_source_shared_families",
+      "note": "Base/enhanced và các attack dùng chung nhiệm vụ/template; không cộng số hàng thành nguồn độc lập."
+    }
+  ],
+  "note": "Liên kết dữ liệu canonical, không nhân bản tập lớn hoặc tự thay vai trò split."
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "counts": {
+    "total": 30,
+    "accepted": 26,
+    "revised": 4,
+    "pending": 0,
+    "parser_valid": 30,
+    "labels": {
+      "malicious": 12,
+      "uncertain": 6,
+      "benign": 12
+    },
+    "languages": {
+      "vi": 15,
+      "en": 15
+    },
+    "groups": 10
+  },
+  "errors": [],
+  "structurally_valid": true,
+  "human_review_complete": true,
+  "fine_tuning_ready": false,
+  "training_export_created": false,
+  "sha256": {
+    "mau-cho-duyet.jsonl": "c2eadfc93b7643b6a91931003c8ab1e8a55e83a0fcfa26cdf894f33d93156eac",
+    "ket-qua-ra-soat.json": "11fc71038cbc14c63a55d0171be1d34fc3cb25b5da2aa6a6e8af078b2bbdebb8",
+    "phieu-ra-soat.md": "1f8bb730516bbeec8208f33e7128b0dd85146d351766a09a2beae3654705d81a",
+    "manifest.json": "b124511f05cc18a691da7e23451783722e31ae328a186d544703db7f00e8fade"
+  },
+  "review_scope": "Một người dùng rà soát trong cuộc trò chuyện có hướng dẫn của AI, đã trình bày toàn bộ nguồn từng mẫu; chưa đánh giá đa người gán nhãn.",
+  "limitations": [
+    "30 mẫu ngắn tự soạn thuộc 10 nhóm, không phải nguồn độc lập hoặc holdout.",
+    "Nguồn/nháp giữ nguyên; đáp án sửa chỉ lưu tại final_annotation/final_response.",
+    "Manifest gốc và validation trong hàng nháp là snapshot trước duyệt, không phải trạng thái cuối.",
+    "Chưa chia tập, chưa rà gần trùng toàn kho, chưa tokenizer/mask audit và chưa huấn luyện.",
+    "Parser hợp lệ không chứng minh model nhận diện tốt; chưa thay đổi runtime."
+  ]
+}

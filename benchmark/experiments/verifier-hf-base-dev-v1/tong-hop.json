@@ -1,0 +1,29 @@
+{
+  "baseline_complete": true,
+  "source_records": 84,
+  "requests": 168,
+  "parsed": 3,
+  "parse_failures": 165,
+  "false_positive_examples": 3,
+  "correct_stance_examples": 0,
+  "latency_seconds": {
+    "p50": 1.829155899991747,
+    "p95": 10.814032500027679
+  },
+  "seconds_total": 449.5212289999472,
+  "peak_vram_allocated_gib": 1.3421730995178223,
+  "peak_vram_reserved_gib": 1.6484375,
+  "training_started": false,
+  "probe_used_for_model_calls": false,
+  "inputs_sha256": {
+    "benchmark/experiments/verifier-hf-base-dev-v1/ke-hoach-truoc-do.json": "93a48f398ee4ee42cc9238255455c797338c9d63a78e461923d8285d35b05846",
+    "benchmark/experiments/verifier-hf-base-dev-v1/phan-hoi.json": "089559a1bff57b725a3ba7bfad3c963c4a33d894a9b5a8639152f7310c7778c9",
+    "benchmark/experiments/verifier-hf-base-dev-v1/ket-qua.json": "69611c396554c44db69b77aeaf1c4c44ed34e154ea5e0726e3cd5bde61b1dc33",
+    "benchmark/experiments/verifier-hf-base-dev-v1/danh-gia.json": "87abc674a863620f00ea214ecb7c2244382d70195a15bb0574845b1fa03ac1ff"
+  },
+  "limitations": [
+    "168 biểu diễn chỉ có 84 nguồn; không coi các mode là mẫu độc lập.",
+    "Không diễn giải FPR thấp là an toàn khi đa số ca lỗi và coverage gần 0.",
+    "HF base NF4 không có cưỡng chế response_format của Ollama; so adapter cần cùng backend và đối chứng adapter off/on trên cùng model đã chuẩn bị."
+  ]
+}

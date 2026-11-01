@@ -1,0 +1,8 @@
+{
+  "upstream_sha256": "5be806a223cf20c418171a409726110c02a7377d75f22ee6f80d7c72ac0fa529",
+  "local_implementation_sha256": "6a29fbfe494070fa955a57b25f5dafd8e2ad163e983db0069c4776b4e1368d41",
+  "remote_code_executed": false,
+  "implementation": "Subclass DebertaV2ForSequenceClassification; Linear(last_hidden_state[:,0,:]), giống upstream. Không dùng pooler trong logits.",
+  "labels": "Config benign/injection; chuẩn hóa injection thành malicious rõ ràng chỉ cho backend+commit đã pin.",
+  "notes": "Không nạp __init__.py upstream hoặc các script load/save/inference; giữ trust_remote_code=False."
+}

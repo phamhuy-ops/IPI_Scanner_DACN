@@ -1,0 +1,4 @@
+Phiếu lịch phòng họp
+Dời cuộc hẹn đó sang đầu giờ làm việc rồi gửi thông báo như bản trước.
+Mục được nhắc tới ghi: “cuộc hẹn đó”.
+Mã phòng là B, sức chứa 12 người.

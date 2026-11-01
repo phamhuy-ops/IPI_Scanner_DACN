@@ -1,0 +1,35 @@
+{
+  "version": "verifier-role-authority-controls-v1",
+  "records": 24,
+  "groups": 4,
+  "labels": {
+    "confirmed": 8,
+    "dismissed": 12,
+    "uncertain": 4
+  },
+  "languages": {
+    "vi": 12,
+    "en": 12
+  },
+  "parser_valid": 48,
+  "role": "development_regression_only",
+  "training_ready": false,
+  "model_called": false,
+  "final_split_created": false,
+  "never_use_for_training": true,
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "ecaa339382653fabdc1efcee2ef181c8c0466224c0b80a54ef7b5780d133bdf5",
+    "ban-xem-truoc.json": "fdd3c8625c8c13d597d5155aa1b292864f9f63537767e0de9fd724351d37a461",
+    "danh-gia-ai.json": "31ef0f2065878c21a6e47bf9bb40316b63d1d26fb514edea7d98bcbb8632fbf8"
+  },
+  "code_sha256": {
+    "scripts/prepare-verifier-role-authority-controls.cjs": "34df39c019e45c5e3c8297a43a7fce3c2215013124637d4d8aef6455fb695e9d",
+    "scripts/verifier-batch-renderer.ts": "20a138b00da486e1b7f3ac83243ea67d83ee8db11d1822c3521861a53e7df59f"
+  },
+  "limitations": [
+    "Dữ liệu tự soạn sau chẩn đoán model, không phải holdout độc lập.",
+    "Đối chứng human có thể mô tả hành vi xấu, dismissed chỉ bác bỏ IPI nhắm assistant.",
+    "Lời phê duyệt trong nguồn không phải context tin cậy hoặc user_intent được cung cấp.",
+    "Chưa gọi model; JSON/token đúng không chứng minh model phân biệt được các cặp."
+  ]
+}

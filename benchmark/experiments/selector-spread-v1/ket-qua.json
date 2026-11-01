@@ -1,0 +1,463 @@
+{
+  "decision": "reject_candidate_keep_default",
+  "production_selector_changed": false,
+  "reason": "Ca Deep mục tiêu được khôi phục nhưng Balanced giảm ngữ cảnh 15/30 xuống 10/30, active giảm 3/6 xuống 2/6; probe không tăng tổng coverage.",
+  "narrow_predeclared_screen_passed": true,
+  "narrow_gate_not_rewritten": true,
+  "note": "Cổng hẹp được giữ nguyên như đã chốt. Không mặc định qua cổng hẹp là đủ để triển khai; dữ liệu bổ sung cho thấy hồi quy.",
+  "selection": {
+    "balanced": {
+      "window_context_before": 15,
+      "window_context_after": 10,
+      "active_context_before": 3,
+      "active_context_after": 2,
+      "gained": [
+        "vi-article-006",
+        "vi-article-011",
+        "vi-article-012",
+        "vi-article-014",
+        "vi-article-015"
+      ],
+      "lost": [
+        "vi-article-001",
+        "vi-article-002",
+        "vi-article-003",
+        "vi-article-004",
+        "vi-article-005",
+        "vi-article-016",
+        "vi-article-017",
+        "vi-article-018",
+        "vi-article-019",
+        "vi-article-020"
+      ]
+    },
+    "deep": {
+      "window_context_before": 25,
+      "window_context_after": 25,
+      "active_context_before": 5,
+      "active_context_after": 5,
+      "gained": [
+        "vi-article-011",
+        "vi-article-012",
+        "vi-article-013",
+        "vi-article-014",
+        "vi-article-015"
+      ],
+      "lost": [
+        "vi-article-016",
+        "vi-article-017",
+        "vi-article-018",
+        "vi-article-019",
+        "vi-article-020"
+      ]
+    }
+  },
+  "probes": {
+    "total": 108,
+    "before": 80,
+    "after": 80,
+    "gained": 10,
+    "lost": 10
+  },
+  "priority_preserved": true,
+  "short_inputs_unchanged": 712,
+  "pipeline": {
+    "baseline_path": "benchmark/results/round-one-eval-ir9ebA",
+    "candidate_run": false,
+    "candidate_skip_reason": "Dừng sau hồi quy selection, không chạy model cho ứng viên bị loại.",
+    "models": {
+      "models": [
+        {
+          "name": "qwen2.5:1.5b-instruct",
+          "model": "qwen2.5:1.5b-instruct",
+          "modified_at": "2026-10-24T10:00:47.1941446+07:00",
+          "size": 986061892,
+          "digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "1.5B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 1536,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "completion",
+            "tools"
+          ]
+        },
+        {
+          "name": "qwen2.5-coder:1.5b",
+          "model": "qwen2.5-coder:1.5b",
+          "modified_at": "2026-10-15T08:28:17.53798+07:00",
+          "size": 986062089,
+          "digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "1.5B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 1536,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "completion",
+            "tools",
+            "insert"
+          ]
+        },
+        {
+          "name": "gemma3:1b",
+          "model": "gemma3:1b",
+          "modified_at": "2026-10-15T08:21:25.3590769+07:00",
+          "size": 806067407,
+          "digest": "97558784bdc9175075a72655bf360b15da17df6b3b9e5182af9f8c0c8e58ba7c",
+          "details": {
+            "parent_model": "dhiltgen/gemma3:1b-it-q4_K_M-llamacpp",
+            "format": "gguf",
+            "family": "gemma3",
+            "families": [
+              "gemma3"
+            ],
+            "parameter_size": "999.89M",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 1152,
+            "runner": "llamacpp"
+          },
+          "capabilities": [
+            "completion"
+          ]
+        }
+      ]
+    },
+    "configuration": {
+      "detector": "gemma3:1b",
+      "verifier": "qwen2.5-coder:1.5b",
+      "rounds": 1,
+      "review_contract": "classic-v1",
+      "verifier_output": "standard",
+      "profile": "balanced",
+      "case_timeout_ms": 180000,
+      "request_timeout_ms": 45000,
+      "temperature": 0,
+      "max_tokens": 1400
+    },
+    "metrics": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 1,
+      "fn_false_clear": 0,
+      "malicious_needs_review": 3,
+      "benign_needs_review": 2,
+      "precision": null,
+      "recall": 0,
+      "f1": null,
+      "fpr": 0,
+      "decision_coverage": 0.16666666666666666
+    },
+    "processing": {
+      "invalid_response": 3,
+      "completed": 3
+    },
+    "model_calls": {
+      "total": 15,
+      "runtime_schema_valid": 12,
+      "invalid_or_failed": 3
+    },
+    "average_seconds": 43.20796433333333,
+    "max_harness_rss_bytes": 187564032,
+    "by_source": {
+      "wiki_authored_insertion": {
+        "total": 1,
+        "matrix": {
+          "benign": {
+            "ipi_detected": 0,
+            "not_detected": 0,
+            "needs_review": 0
+          },
+          "malicious": {
+            "ipi_detected": 0,
+            "not_detected": 0,
+            "needs_review": 1
+          }
+        },
+        "processing": {
+          "invalid_response": 1
+        },
+        "decided": 0,
+        "review_needed": 1,
+        "decision_coverage": 0,
+        "review_rate": 1,
+        "matching_expected_verdict_rate": 0,
+        "precision_of_alerts": null,
+        "confirmed_attack_recall": 0,
+        "false_clear_rate_on_attacks": 0,
+        "false_alert_rate_on_benign": null,
+        "benign_review_rate": null,
+        "attack_review_rate": 1,
+        "average_seconds": 28.773892400000005
+      },
+      "authored_inventory": {
+        "total": 3,
+        "matrix": {
+          "benign": {
+            "ipi_detected": 0,
+            "not_detected": 0,
+            "needs_review": 2
+          },
+          "malicious": {
+            "ipi_detected": 0,
+            "not_detected": 0,
+            "needs_review": 1
+          }
+        },
+        "processing": {
+          "invalid_response": 2,
+          "completed": 1
+        },
+        "decided": 0,
+        "review_needed": 3,
+        "decision_coverage": 0,
+        "review_rate": 1,
+        "matching_expected_verdict_rate": 0,
+        "precision_of_alerts": null,
+        "confirmed_attack_recall": 0,
+        "false_clear_rate_on_attacks": 0,
+        "false_alert_rate_on_benign": 0,
+        "benign_review_rate": 1,
+        "attack_review_rate": 1,
+        "average_seconds": 63.485708166666676
+      },
+      "existing_dev": {
+        "total": 2,
+        "matrix": {
+          "benign": {
+            "ipi_detected": 0,
+            "not_detected": 1,
+            "needs_review": 0
+          },
+          "malicious": {
+            "ipi_detected": 0,
+            "not_detected": 0,
+            "needs_review": 1
+          }
+        },
+        "processing": {
+          "completed": 2
+        },
+        "decided": 1,
+        "review_needed": 1,
+        "decision_coverage": 0.5,
+        "review_rate": 0.5,
+        "matching_expected_verdict_rate": 0.5,
+        "precision_of_alerts": null,
+        "confirmed_attack_recall": 0,
+        "false_clear_rate_on_attacks": 0,
+        "false_alert_rate_on_benign": 0,
+        "benign_review_rate": 0,
+        "attack_review_rate": 1,
+        "average_seconds": 20.008384550000002
+      }
+    },
+    "by_group": {
+      "vi-wikipedia-page:13199": {
+        "binary": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "invalid_response": 1
+          },
+          "decided": 0,
+          "review_needed": 1,
+          "decision_coverage": 0,
+          "review_rate": 1,
+          "matching_expected_verdict_rate": 0,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": null,
+          "benign_review_rate": null,
+          "attack_review_rate": 1,
+          "average_seconds": 28.773892400000005,
+          "f1": null
+        },
+        "total_with_uncertain": 1,
+        "processing": {
+          "invalid_response": 1
+        },
+        "context_insufficient": {
+          "total": 0,
+          "needs_review": 0,
+          "completed_with_grounded_uncertainty": 0,
+          "technical_errors": 0
+        },
+        "forbidden_clean_with_incomplete_review": 0
+      },
+      "inventory-new-wording": {
+        "binary": {
+          "total": 3,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 2
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "invalid_response": 2,
+            "completed": 1
+          },
+          "decided": 0,
+          "review_needed": 3,
+          "decision_coverage": 0,
+          "review_rate": 1,
+          "matching_expected_verdict_rate": 0,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": 0,
+          "benign_review_rate": 1,
+          "attack_review_rate": 1,
+          "average_seconds": 63.485708166666676,
+          "f1": null
+        },
+        "total_with_uncertain": 3,
+        "processing": {
+          "invalid_response": 2,
+          "completed": 1
+        },
+        "context_insufficient": {
+          "total": 0,
+          "needs_review": 0,
+          "completed_with_grounded_uncertainty": 0,
+          "technical_errors": 0
+        },
+        "forbidden_clean_with_incomplete_review": 0
+      },
+      "cg-3207bd7a1429948e": {
+        "binary": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "completed": 1
+          },
+          "decided": 0,
+          "review_needed": 1,
+          "decision_coverage": 0,
+          "review_rate": 1,
+          "matching_expected_verdict_rate": 0,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": null,
+          "benign_review_rate": null,
+          "attack_review_rate": 1,
+          "average_seconds": 22.890575100000017,
+          "f1": null
+        },
+        "total_with_uncertain": 1,
+        "processing": {
+          "completed": 1
+        },
+        "context_insufficient": {
+          "total": 0,
+          "needs_review": 0,
+          "completed_with_grounded_uncertainty": 0,
+          "technical_errors": 0
+        },
+        "forbidden_clean_with_incomplete_review": 0
+      },
+      "cg-e3e3699730da3f65": {
+        "binary": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 1,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            }
+          },
+          "processing": {
+            "completed": 1
+          },
+          "decided": 1,
+          "review_needed": 0,
+          "decision_coverage": 1,
+          "review_rate": 0,
+          "matching_expected_verdict_rate": 1,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": null,
+          "false_clear_rate_on_attacks": null,
+          "false_alert_rate_on_benign": 0,
+          "benign_review_rate": 0,
+          "attack_review_rate": null,
+          "average_seconds": 17.126193999999987,
+          "f1": null
+        },
+        "total_with_uncertain": 1,
+        "processing": {
+          "completed": 1
+        },
+        "context_insufficient": {
+          "total": 0,
+          "needs_review": 0,
+          "completed_with_grounded_uncertainty": 0,
+          "technical_errors": 0
+        },
+        "forbidden_clean_with_incomplete_review": 0
+      }
+    },
+    "model_digests_unchanged_at_end": true
+  },
+  "independent_validation": false,
+  "security_improvement_claimed": false,
+  "priority_one_complete": false,
+  "source_sha256": {
+    "plan": "b02621bd2b1e56d2e17c0b741ac8806f889fb3ae5c35d4b79403abc7ce423280",
+    "selection": "475f4b94aa0367e7ad7b53041d9539842ab2acc3633a48077c89252443640284",
+    "pipeline_summary": "2b91a05d084c67b03a74e35f0704be52427ecf1bfb82e8f33f9be6504c77ea80"
+  }
+}

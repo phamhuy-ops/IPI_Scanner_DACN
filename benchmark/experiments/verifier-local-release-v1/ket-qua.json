@@ -1,0 +1,22 @@
+{
+  "records": 324,
+  "roles": {
+    "train": 180,
+    "dev": 84,
+    "probe": 60
+  },
+  "examples": 648,
+  "visible_email_changed_records": 18,
+  "unique_groups": 113,
+  "notice_files_verified": 11,
+  "mask_valid": 648,
+  "collator_valid": 648,
+  "token_max": 1929,
+  "tests_passed": 5,
+  "training_ready": false,
+  "training_started": false,
+  "public_release_approved": false,
+  "probe_sealed": false,
+  "scope": "File nội bộ tách vai trò, không phải bản train được bật; email placeholder không phải ẩn danh đầy đủ.",
+  "next": "Rà tác động ngữ nghĩa của 18 bản đổi email, chốt phiên bản dữ liệu nội bộ và khóa phép đo cùng base/backend trước pilot."
+}

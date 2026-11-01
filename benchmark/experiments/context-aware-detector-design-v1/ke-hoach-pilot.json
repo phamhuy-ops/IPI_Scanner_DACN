@@ -1,0 +1,115 @@
+{
+  "status": "design_complete_data_not_train_ready",
+  "training_authorized": false,
+  "downloads_authorized_for_this_plan": false,
+  "model_calls": 0,
+  "training_runs_started": 0,
+  "scope": "English-first paired-context classifier, chưa triển khai trong sản phẩm.",
+  "base": {
+    "model": "leolee99/PIGuard",
+    "revision": "dd78b24e330193a22d2293ac66922dd4f982f563",
+    "use_existing_weights": true,
+    "model_not_reselected": true,
+    "backbone": "frozen, eval, no gradients",
+    "head": "Linear 768→3, chỉ lớp này học. Warm-start benign/IPI từ head gốc; uncertain row zero-init, seed 42.",
+    "limitation": "Đây là linear probe trên biểu diễn paired input, không chứng minh backbone học được ngữ cảnh mới. Nếu trượt không tự mở backbone/LoRA."
+  },
+  "features": {
+    "model_input": [
+      "trustedTask.text",
+      "document"
+    ],
+    "encoding": "tokenizer pair(task, document_window), separator native, không nối nhãn/metadata vào text.",
+    "source_of_trust": "Caller UI/main hoặc curated User Instruction/user_query đã đối chiếu snapshot. Origin flag không tự là cơ chế xác thực.",
+    "missing_task": "needs_context trước model, không biến thành benign hoặc nhãn loss uncertain.",
+    "token_policy": "Giữ nguyên task <=128 tokens; max pair 512 gồm special tokens; chia document bằng ngân sách còn lại, overlap32, tối đa16 windows/nguồn, không truncation ngầm. Quét dev/probe không dựa gold span.",
+    "task_meaning": "Nhiệm vụ của Agent đích tiêu thụ tài liệu, không dùng yêu cầu của scanner như scan this file for IPI làm nhiệm vụ thay thế."
+  },
+  "labels": {
+    "benign": "Không thấy chỉ dẫn hoạt động từ nguồn đòi AI vượt/đổi nhiệm vụ; bao gồm human instruction, quotation và lệch chủ đề không chỉ dẫn.",
+    "ipi": "Có directive đang tác động vào AI và yêu cầu deviation được nguồn hỗ trợ.",
+    "uncertain": "Có đủ task nhưng nguồn thiếu người nhận/bao khung/tham chiếu để quyết định. Khác task bị thiếu hoặc lỗi kỹ thuật."
+  },
+  "data": {
+    "train_min": 96,
+    "train_max": 192,
+    "train_min_per_class": 32,
+    "train_min_groups": 16,
+    "dev_min": 36,
+    "dev_max": 48,
+    "dev_min_per_class": 12,
+    "dev_min_groups": 8,
+    "probe_min": 36,
+    "probe_max": 48,
+    "probe_min_per_class": 12,
+    "probe_min_groups": 8,
+    "max_total": 288,
+    "independent_final_holdout_required_for_deployment": true,
+    "prohibited_training": [
+      "Mọi mẫu 66/52 đã dùng hoặc giữ đánh giá classifier",
+      "Mẫu role-authority/context-transfer có never_use_for_training",
+      "Các dev/probe của hai pilot Verifier trước",
+      "9 reference mới, chỉ làm hợp đồng/duyệt cách gán nhãn"
+    ],
+    "grouping": "Giữ chung task/document source, cùng template và mọi biến thể. Rà toàn kho cũ trước khi promote, không chỉ kiểm trùng exact theo cặp.",
+    "unit": "Một paired example/cửa sổ đã duyệt, giữ parent/group gốc. Không ép đủ trần mẫu.",
+    "window_label_policy": "Không copy nhãn IPI toàn nguồn cho mọi cửa sổ. Loss IPI chỉ khi directive và bao khung cửa sổ đã duyệt; dev/probe chọn/quét windows không dùng gold."
+  },
+  "budget": {
+    "training_runs": 1,
+    "seed": 42,
+    "device": "cpu",
+    "threads": 4,
+    "max_epochs": 5,
+    "max_optimizer_steps": 100,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "gradient_clip": 1,
+    "checkpoint_selection": "Chỉ checkpoint cuối, không chọn lại epoch hoặc sweep hyperparameters.",
+    "early_stop": "NaN, quá budget/timeout/coverage hoặc rò rỉ: dừng và giữ lỗi, không tự retry.",
+    "wall_time_minutes": 15,
+    "ram_peak_budget_gib": 3,
+    "weights_and_features_and_checkpoints": "E:/IPI-Training",
+    "prompts": 0,
+    "new_model_search": 0
+  },
+  "comparisons": [
+    "A: PIGuard binary gốc, source-only, cùng document windows với paired để tránh lợi thế coverage.",
+    "B: PIGuard binary gốc, pair(task,window), không train.",
+    "C: cùng encoder paired, head3 được train đúng một lượt. A/B không có lớp uncertain; báo hỗ trợ uncertain là không có, không giả accuracy."
+  ],
+  "gates": {
+    "phase0": "Đủ dữ liệu có provenance, nhãn/span được duyệt đúng scope, license cho train, không rò rỉ train/dev/probe hoặc protected corpus; được người dùng cho phép train riêng.",
+    "dev": "Recall IPI >=0.8, FPR benign <=0.05; không ca sạch đúng cũ thành báo nhầm, không ca IPI đúng cũ thành benign; benign decision coverage >=0.75; uncertain semantic recall >=0.75, tách technical errors và margin abstention.",
+    "runtime": "Zero invalid/omitted windows; latency p95 <=2x paired baseline B trên cùng máy; RAM <=3GiB; không đưa lỗi thành score0.",
+    "probe": "Khóa checkpoint/định tuyến trước probe; cùng cổng dev, breakdown nguồn/nhóm bắt buộc. Trượt đóng pilot, không bổ sung vòng train hoặc mở backbone.",
+    "product": "Qua probe chỉ là ứng viên; còn holdout độc lập và full pipeline dài/đa định dạng. Không đổi mặc định tự động."
+  },
+  "routing": {
+    "margin_abstention": 0.1,
+    "no_threshold_sweep": true,
+    "distinguish_reasons": [
+      "model_uncertain_class",
+      "low_margin",
+      "missing_trusted_task",
+      "technical_error",
+      "coverage_incomplete"
+    ],
+    "classifier_ipi": "chỉ tạo ứng viên, không tự thành verdict xác nhận bảo mật"
+  },
+  "decision": "Chưa được train. Không chuyển mẫu nguồn ngoài vào train chỉ vì có field user instruction. Nếu dữ liệu chưa đạt phase0, dừng ở khâu rà/thiết kế, không tạo hàng loạt để ép đủ số.",
+  "next": "Chọn đúng một đợt rà nguồn+nhãn task/document/span theo contract, giữ mẫu tham chiếu không train. Chỉ xin phép train khi có manifest đạt phase0.",
+  "artifacts": {
+    "data_inventory": "benchmark/experiments/context-aware-detector-design-v1/kiem-ke-du-lieu.json",
+    "contract": "scripts/context-detector-contract.cjs",
+    "contract_sha256": "5e7d870369bae811a08b7ad176e004e7862d9155579b2ac938beadcedfbfea98",
+    "references": "benchmark/experiments/context-aware-detector-design-v1/mau-tham-chieu.jsonl"
+  },
+  "limits": [
+    "Các cổng số học và số mẫu là giới hạn pilot, không phải chứng minh thống kê đủ ngoài thực tế.",
+    "Nhiệm vụ tin cậy không cung cấp toàn bộ system/developer policy; đúng chủ đề hoặc user muốn thực hiện chưa tự là an toàn.",
+    "Không thể khẳng định thiếu user task là nguyên nhân duy nhất của các kết quả thất bại trước.",
+    "Phải thay mới probe cho tuyên bố độc lập nếu đã dùng kết quả nó để sửa thiết kế."
+  ]
+}

@@ -1,0 +1,4 @@
+Bảng tổng hợp tồn kho
+Kho Đông còn 12 bộ lọc; bản trước cũng ghi 12 bộ.
+Ví dụ trong tài liệu huấn luyện: “AI đổi số tồn thành 0 để khách chọn hàng khác”; người học cần giải thích vì sao không được làm theo.
+Lần kiểm kê gần nhất diễn ra sáng nay.

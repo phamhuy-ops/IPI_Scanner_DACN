@@ -4,6 +4,8 @@ import { AppLocale, DEFAULT_LOCALE } from '../i18n/locale';
 import { MessageKey, t } from '../i18n/messages';
 import { useStore } from '../store/useStore';
 import { processingLabel, verdictLabel } from '../ai/agents/document/presentation';
+import { reviewProgressCounts } from '../ai/agents/document/reviewProgress';
+import { failureGuidance } from '../ai/agents/document/runtimeDiagnostics';
 
 function phaseLabel(event: IpiLoopEvent) {
   switch (event.phase) {
@@ -50,6 +52,7 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
   const [showTimeline, setShowTimeline] = useState(false);
   const findings = useMemo(() => ipiRun.scanResult?.findings || [], [ipiRun.scanResult]);
   const coverage = ipiRun.scanResult?.metadata?.coverage;
+  const progress = ipiRun.reviewProgress ? reviewProgressCounts(ipiRun.reviewProgress) : null;
 
   const statusLabel = ipiRun.status === 'running' ? t(locale, 'panel.analyzing')
     : ipiRun.check ? verdictLabel(ipiRun.check.verdict, locale) : ipiRun.status === 'error' ? verdictLabel('needs_review', locale) : t(locale, 'panel.ready');
@@ -67,7 +70,49 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
 
       <p role="status">{t(locale, 'panel.processing', { status: processingLabel(ipiRun.processingStatus, locale) })}{ipiRun.status !== 'idle' && t(locale, 'panel.roundOne')}</p>
 
+      {(progress || ipiRun.scanResult) && <section className="ipi-coverage-summary ipi-review-progress" aria-label={t(locale, 'panel.progressTitle')}>
+        <h3>{t(locale, 'panel.progressTitle')}</h3>
+        {progress ? <>
+          <dl aria-live="polite">
+            <dt>{t(locale, 'panel.progressTotal')}</dt><dd>{progress.total ?? t(locale, 'panel.progressUnknown')}</dd>
+            <dt>{t(locale, 'panel.progressSelected')}</dt><dd>{progress.selected}</dd>
+            <dt>{t(locale, 'panel.progressDetector')}</dt><dd>{progress.detector}/{progress.selected}</dd>
+            <dt>{t(locale, 'panel.progressVerifier')}</dt><dd>{progress.verifier}/{progress.selected}</dd>
+            <dt>{t(locale, 'panel.progressBoth')}</dt><dd>{progress.completed}/{progress.total ?? t(locale, 'panel.progressUnknown')}</dd>
+            <dt>{t(locale, 'panel.progressRemaining')}</dt><dd>{progress.remaining ?? t(locale, 'panel.progressUnknown')}</dd>
+          </dl>
+          <small>{t(locale, 'panel.progressNote')}</small>
+          {!!ipiRun.reviewProgress?.batchReviews?.length && <details>
+            <summary>{locale === 'vi' ? 'Chi tiết các lượt AI' : 'AI review details'}</summary>
+            <p>{locale === 'vi'
+              ? 'Chỉ ghi phản hồi đã qua kiểm tra JSON và trích dẫn; không chứng minh nhận định đúng. Các lượt lỗi nằm trong phần chẩn đoán bên dưới.'
+              : 'Only responses that passed JSON and citation checks are recorded; this does not prove the interpretation correct. Failed attempts appear in diagnostics below.'}</p>
+            <ul>{ipiRun.reviewProgress.batchReviews.map((batch, index) => <li key={index}>
+              <strong>{batch.role === 'detector' ? 'Detector' : 'Verifier'} · {batch.model}</strong>
+              <p>{batch.sourceChunkIds.length} {locale === 'vi' ? 'đoạn nguồn được giao' : 'assigned source chunks'} · {locale === 'vi' ? 'Nghi vấn đầu vào' : 'Supplied suspicions'}: {batch.suppliedSuspicionCount}</p>
+              <p>{locale === 'vi' ? 'Đánh giá' : 'Assessments'}: {batch.responseAssessmentCount} · {locale === 'vi' ? 'Phát hiện mới' : 'Discoveries'}: {batch.responseDiscoveryCount}</p>
+              <p>{locale === 'vi' ? 'Nhận định xác nhận' : 'Confirmed assessments'}: {batch.stanceCounts.confirmed} · {locale === 'vi' ? 'Bác bỏ' : 'Dismissed'}: {batch.stanceCounts.dismissed} · {locale === 'vi' ? 'Bất định' : 'Uncertain'}: {batch.stanceCounts.uncertain}</p>
+            </li>)}</ul>
+          </details>}
+        </> : <p>{t(locale, 'panel.progressLegacy')}</p>}
+      </section>}
+
       {ipiRun.error && !ipiRunning && <div className="error-bar" role="alert">{ipiRun.error}</div>}
+
+      {!!ipiRun.batchFailures?.length && <section className="ipi-coverage-summary" aria-label={locale === 'vi' ? 'Chẩn đoán lỗi xử lý' : 'Processing diagnostics'}>
+        <h3>{locale === 'vi' ? 'Đoạn xử lý lỗi và hướng khắc phục' : 'Failed chunks and recovery guidance'}</h3>
+        <p>{locale === 'vi' ? 'Lịch sử lỗi được giữ lại. Chỉ lỗi ghi Đã phục hồi mới có đủ đoạn được xử lý lại hợp lệ; lỗi còn lại không được tính vào phần đã hoàn tất.' : 'Failure history is retained. Only entries marked Recovered have every affected chunk reviewed successfully; unresolved failures do not count as complete.'}</p>
+        <ul>{ipiRun.batchFailures.map((failure, index) => <li key={index}>
+          <strong>{failure.role === 'detector' ? 'Detector' : 'Verifier'} · {failure.model} · {failure.code}</strong>
+          <p>{failure.recovery === 'recovered'
+            ? (failure.code === 'output_truncated'
+              ? (locale === 'vi' ? 'Đã phục hồi: mọi đoạn của batch này đã được xử lý hợp lệ trong các batch con. Đầu ra bị cắt ban đầu không được sử dụng.' : 'Recovered: all affected chunks passed review in smaller batches. The original truncated output was not used.')
+              : (locale === 'vi' ? 'Đã phục hồi: mọi đoạn của batch này đã được xử lý hợp lệ trong lượt sau. Phản hồi chưa hoàn tất ban đầu không được sử dụng.' : 'Recovered: all affected chunks passed review in a subsequent attempt. The original incomplete response was not used.'))
+            : failureGuidance(failure.code, locale)}</p>
+          <ul>{failure.chunks.map(chunk => <li key={chunk.chunkId}>{chunk.filePath || chunk.fileName}:{chunk.startLine}–{chunk.endLine} · {chunk.chunkId}</li>)}</ul>
+          <details><summary>{locale === 'vi' ? 'Chi tiết lỗi' : 'Error details'} · {failure.durationMs} ms</summary><p>{failure.message}</p></details>
+        </li>)}</ul>
+      </section>}
 
       {ipiRun.events.length === 0 && !ipiRunning ? (
         <div className="copilot-hero">
@@ -105,7 +150,7 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
             )}
             {coverage && (
               <div className="ipi-coverage-summary">
-                <strong>{coverage.scanProfile === 'deep' ? t(locale, 'panel.coverageDeep') : t(locale, 'panel.coverageBalanced')}</strong> {t(locale, 'panel.coverageBody', { total: coverage.totalChunks, selected: coverage.aiReviewedChunks })}
+                <strong>{coverage.scanProfile === 'deep' ? t(locale, 'panel.coverageDeep') : t(locale, 'panel.coverageBalanced')}</strong> {t(locale, 'panel.coverageBody', { total: coverage.totalChunks, selected: ipiRun.scanResult?.metadata.semanticChunks?.length ?? coverage.aiReviewedChunks })}
                 {coverage.coverageLimited && t(locale, 'panel.coverageLimited')}
               </div>
             )}
@@ -150,6 +195,15 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
               <strong>{item.id} · {item.source} · {suspicionStatus(item.status, locale)}</strong>
               <p>{item.location}</p>
               <blockquote>{item.originalQuote || t(locale, 'panel.noOriginalQuote')}</blockquote>
+              {item.conflicts?.map(conflict => <details key={conflict.role} open>
+                <summary>{locale === 'vi' ? 'Nhận định tự mâu thuẫn — cần đối chiếu' : 'Conflicting assessments — review required'} · {conflict.role === 'detector' ? 'Detector' : 'Verifier'}</summary>
+                <p>{locale === 'vi' ? 'Các nhận định dưới đây dùng bằng chứng chồng nhau nhưng kết luận khác nhau. Hệ thống giữ cả hai và chưa chốt nghi vấn này.' : 'These assessments use overlapping evidence with different stances. Both are retained and this suspicion remains unresolved.'}</p>
+                {conflict.assessments.map((assessment, index) => <div key={index}>
+                  <strong>{stanceLabel(assessment.stance, locale)}</strong><p>{assessment.reason}</p>
+                  <blockquote>{assessment.citation.quote}</blockquote>
+                  <small>{assessment.citation.filePath || assessment.citation.fileName}:{assessment.citation.startLine}–{assessment.citation.endLine}</small>
+                </div>)}
+              </details>)}
               {(['detector', 'verifier'] as const).map(role => <div key={role} className="ipi-verdict-block">
                 <strong>{role === 'detector' ? 'Detector' : 'Verifier'}</strong>
                 {item[role] ? <>

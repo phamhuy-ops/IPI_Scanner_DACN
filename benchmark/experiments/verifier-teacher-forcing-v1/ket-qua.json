@@ -1,0 +1,312 @@
+{
+  "summaries": {
+    "off": {
+      "train": {
+        "all": {
+          "tokens": 26174,
+          "nll_sum": 52829.048733784795,
+          "correct": 17018,
+          "mean_nll": 2.0183788772745777,
+          "gold_prefix_token_accuracy": 0.6501872086803698
+        },
+        "structure_or_eos": {
+          "tokens": 8748,
+          "nll_sum": 4252.838389627146,
+          "correct": 7239,
+          "mean_nll": 0.4861497930529431,
+          "gold_prefix_token_accuracy": 0.8275034293552812
+        },
+        "id": {
+          "tokens": 1260,
+          "nll_sum": 15.654845161222056,
+          "correct": 1260,
+          "mean_nll": 0.012424480286684171,
+          "gold_prefix_token_accuracy": 1.0
+        },
+        "spanId": {
+          "tokens": 1458,
+          "nll_sum": 220.92661037148252,
+          "correct": 1384,
+          "mean_nll": 0.15152716760732685,
+          "gold_prefix_token_accuracy": 0.9492455418381345
+        },
+        "addressee": {
+          "tokens": 938,
+          "nll_sum": 944.6600745917258,
+          "correct": 819,
+          "mean_nll": 1.0071002927417119,
+          "gold_prefix_token_accuracy": 0.8731343283582089
+        },
+        "framing": {
+          "tokens": 902,
+          "nll_sum": 188.67459150775176,
+          "correct": 851,
+          "mean_nll": 0.209173604775778,
+          "gold_prefix_token_accuracy": 0.9434589800443459
+        },
+        "deviation": {
+          "tokens": 1286,
+          "nll_sum": 1216.0284208064477,
+          "correct": 1053,
+          "mean_nll": 0.9455897517935052,
+          "gold_prefix_token_accuracy": 0.8188180404354588
+        },
+        "hasDirective": {
+          "tokens": 288,
+          "nll_sum": 93.4326075296849,
+          "correct": 253,
+          "mean_nll": 0.32441877614473924,
+          "gold_prefix_token_accuracy": 0.8784722222222222
+        },
+        "stance": {
+          "tokens": 1008,
+          "nll_sum": 356.73129936327484,
+          "correct": 864,
+          "mean_nll": 0.3539000985746774,
+          "gold_prefix_token_accuracy": 0.8571428571428571
+        },
+        "reason": {
+          "tokens": 10286,
+          "nll_sum": 45540.10189482606,
+          "correct": 3295,
+          "mean_nll": 4.427386923471326,
+          "gold_prefix_token_accuracy": 0.32033832393544626
+        }
+      },
+      "dev_screen": {
+        "all": {
+          "tokens": 844,
+          "nll_sum": 1418.9633229461,
+          "correct": 581,
+          "mean_nll": 1.6812361646280807,
+          "gold_prefix_token_accuracy": 0.6883886255924171
+        },
+        "structure_or_eos": {
+          "tokens": 298,
+          "nll_sum": 136.05116788059058,
+          "correct": 252,
+          "mean_nll": 0.4565475432234583,
+          "gold_prefix_token_accuracy": 0.8456375838926175
+        },
+        "id": {
+          "tokens": 42,
+          "nll_sum": 0.4066683767714494,
+          "correct": 42,
+          "mean_nll": 0.009682580399320224,
+          "gold_prefix_token_accuracy": 1.0
+        },
+        "spanId": {
+          "tokens": 50,
+          "nll_sum": 9.148311570751503,
+          "correct": 47,
+          "mean_nll": 0.18296623141503005,
+          "gold_prefix_token_accuracy": 0.94
+        },
+        "addressee": {
+          "tokens": 34,
+          "nll_sum": 44.11037098538691,
+          "correct": 28,
+          "mean_nll": 1.2973638525113795,
+          "gold_prefix_token_accuracy": 0.8235294117647058
+        },
+        "framing": {
+          "tokens": 34,
+          "nll_sum": 26.08005178039275,
+          "correct": 29,
+          "mean_nll": 0.7670603464821397,
+          "gold_prefix_token_accuracy": 0.8529411764705882
+        },
+        "deviation": {
+          "tokens": 44,
+          "nll_sum": 41.08978183333464,
+          "correct": 36,
+          "mean_nll": 0.9338586780303327,
+          "gold_prefix_token_accuracy": 0.8181818181818182
+        },
+        "hasDirective": {
+          "tokens": 10,
+          "nll_sum": 4.533007986843586,
+          "correct": 8,
+          "mean_nll": 0.4533007986843586,
+          "gold_prefix_token_accuracy": 0.8
+        },
+        "stance": {
+          "tokens": 36,
+          "nll_sum": 12.509088740109235,
+          "correct": 30,
+          "mean_nll": 0.34747468722525654,
+          "gold_prefix_token_accuracy": 0.8333333333333334
+        },
+        "reason": {
+          "tokens": 296,
+          "nll_sum": 1145.0348737919194,
+          "correct": 109,
+          "mean_nll": 3.8683610601078358,
+          "gold_prefix_token_accuracy": 0.36824324324324326
+        }
+      }
+    },
+    "on": {
+      "train": {
+        "all": {
+          "tokens": 26174,
+          "nll_sum": 37354.52268306229,
+          "correct": 19281,
+          "mean_nll": 1.4271614076206272,
+          "gold_prefix_token_accuracy": 0.7366470543287231
+        },
+        "structure_or_eos": {
+          "tokens": 8748,
+          "nll_sum": 234.52284259223507,
+          "correct": 8676,
+          "mean_nll": 0.026808738293579683,
+          "gold_prefix_token_accuracy": 0.9917695473251029
+        },
+        "id": {
+          "tokens": 1260,
+          "nll_sum": 5.9220761065371335,
+          "correct": 1260,
+          "mean_nll": 0.004700060402013598,
+          "gold_prefix_token_accuracy": 1.0
+        },
+        "spanId": {
+          "tokens": 1458,
+          "nll_sum": 152.05843153066553,
+          "correct": 1394,
+          "mean_nll": 0.10429247704435221,
+          "gold_prefix_token_accuracy": 0.9561042524005487
+        },
+        "addressee": {
+          "tokens": 938,
+          "nll_sum": 306.72138165760225,
+          "correct": 821,
+          "mean_nll": 0.32699507639403225,
+          "gold_prefix_token_accuracy": 0.8752665245202559
+        },
+        "framing": {
+          "tokens": 902,
+          "nll_sum": 153.71425902298688,
+          "correct": 863,
+          "mean_nll": 0.1704149213115154,
+          "gold_prefix_token_accuracy": 0.9567627494456763
+        },
+        "deviation": {
+          "tokens": 1286,
+          "nll_sum": 453.50933984177095,
+          "correct": 1116,
+          "mean_nll": 0.35265111962812673,
+          "gold_prefix_token_accuracy": 0.8678071539657853
+        },
+        "hasDirective": {
+          "tokens": 288,
+          "nll_sum": 40.061640604399145,
+          "correct": 273,
+          "mean_nll": 0.1391029187652748,
+          "gold_prefix_token_accuracy": 0.9479166666666666
+        },
+        "stance": {
+          "tokens": 1008,
+          "nll_sum": 135.45382758917495,
+          "correct": 965,
+          "mean_nll": 0.13437879721148308,
+          "gold_prefix_token_accuracy": 0.9573412698412699
+        },
+        "reason": {
+          "tokens": 10286,
+          "nll_sum": 35872.55888411692,
+          "correct": 3913,
+          "mean_nll": 3.4875130161498076,
+          "gold_prefix_token_accuracy": 0.3804199883336574
+        }
+      },
+      "dev_screen": {
+        "all": {
+          "tokens": 844,
+          "nll_sum": 1024.3718479160787,
+          "correct": 644,
+          "mean_nll": 1.213710720279714,
+          "gold_prefix_token_accuracy": 0.7630331753554502
+        },
+        "structure_or_eos": {
+          "tokens": 298,
+          "nll_sum": 7.676638409255247,
+          "correct": 296,
+          "mean_nll": 0.025760531574682038,
+          "gold_prefix_token_accuracy": 0.9932885906040269
+        },
+        "id": {
+          "tokens": 42,
+          "nll_sum": 0.18397337156966387,
+          "correct": 42,
+          "mean_nll": 0.004380318370706283,
+          "gold_prefix_token_accuracy": 1.0
+        },
+        "spanId": {
+          "tokens": 50,
+          "nll_sum": 6.056327273717216,
+          "correct": 47,
+          "mean_nll": 0.12112654547434432,
+          "gold_prefix_token_accuracy": 0.94
+        },
+        "addressee": {
+          "tokens": 34,
+          "nll_sum": 11.205671644069298,
+          "correct": 28,
+          "mean_nll": 0.32957857776674404,
+          "gold_prefix_token_accuracy": 0.8235294117647058
+        },
+        "framing": {
+          "tokens": 34,
+          "nll_sum": 16.26881862464279,
+          "correct": 29,
+          "mean_nll": 0.4784946654306703,
+          "gold_prefix_token_accuracy": 0.8529411764705882
+        },
+        "deviation": {
+          "tokens": 44,
+          "nll_sum": 13.381346679141814,
+          "correct": 39,
+          "mean_nll": 0.30412151543504123,
+          "gold_prefix_token_accuracy": 0.8863636363636364
+        },
+        "hasDirective": {
+          "tokens": 10,
+          "nll_sum": 1.198769386857748,
+          "correct": 10,
+          "mean_nll": 0.1198769386857748,
+          "gold_prefix_token_accuracy": 1.0
+        },
+        "stance": {
+          "tokens": 36,
+          "nll_sum": 5.1147986734940645,
+          "correct": 35,
+          "mean_nll": 0.1420777409303907,
+          "gold_prefix_token_accuracy": 0.9722222222222222
+        },
+        "reason": {
+          "tokens": 296,
+          "nll_sum": 963.2855038533307,
+          "correct": 118,
+          "mean_nll": 3.2543429184234145,
+          "gold_prefix_token_accuracy": 0.39864864864864863
+        }
+      }
+    }
+  },
+  "examples_per_mode": 372,
+  "seconds": 797.1572535000159,
+  "peak_vram_allocated": 2088032768,
+  "peak_vram_reserved": 2157969408,
+  "trainable_parameters": 0,
+  "training_started": false,
+  "probe_used": false,
+  "adapter_unchanged": true,
+  "runtime_changed": false,
+  "limitations": [
+    "Mỗi token được cho tiền tố gold; độ đúng token không phải độ đúng stance khi tự sinh.",
+    "Train và 6 nguồn dev khác phân bố; không suy overfit chỉ từ chênh lệch loss trung bình.",
+    "Các giá trị enum có nhiều token; đây là điểm token có điều kiện, không phải accuracy phân loại.",
+    "Không dùng teacher-forcing như đường inference sản phẩm; gold không được truyền vào scanner.",
+    "Không gọi probe, không thay gold/parser và không mở lại cổng generation đã trượt."
+  ]
+}

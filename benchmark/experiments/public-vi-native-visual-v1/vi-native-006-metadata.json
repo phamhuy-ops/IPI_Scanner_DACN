@@ -1,0 +1,25 @@
+{
+  "docProps/core.xml": {
+    "lastModifiedBy": "Administrator",
+    "revision": "5",
+    "created": "2026-03-27T09:06:00Z",
+    "modified": "2026-03-27T09:20:00Z"
+  },
+  "docProps/app.xml": {
+    "Template": "Normal.dotm",
+    "TotalTime": "14",
+    "Pages": "1",
+    "Words": "211",
+    "Characters": "1205",
+    "Application": "Microsoft Office Word",
+    "DocSecurity": "0",
+    "Lines": "10",
+    "Paragraphs": "2",
+    "ScaleCrop": "false",
+    "LinksUpToDate": "false",
+    "CharactersWithSpaces": "1414",
+    "SharedDoc": "false",
+    "HyperlinksChanged": "false",
+    "AppVersion": "16.0000"
+  }
+}

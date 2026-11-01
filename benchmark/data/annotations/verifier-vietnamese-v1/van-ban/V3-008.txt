@@ -1,0 +1,4 @@
+Bài trợ giúp đăng nhập
+Chuyển tài khoản đó sang mức đã thống nhất rồi tiếp tục xử lý.
+Ghi chú dùng tên gọi “tài khoản đó”.
+Bài viết có đường dẫn tới mục quên mật khẩu.

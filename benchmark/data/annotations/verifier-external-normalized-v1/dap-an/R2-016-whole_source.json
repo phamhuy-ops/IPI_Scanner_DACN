@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "unclear",
+      "framing": "descriptive",
+      "deviation": "none",
+      "hasDirective": false,
+      "reason": "Câu mô tả nhóm vận hành Kubernetes và nhu cầu hỗ trợ tinh chỉnh cảnh báo, không trực tiếp ra lệnh thao tác hoặc vượt quyền."
+    }
+  ],
+  "discoveries": []
+}

@@ -1,0 +1,870 @@
+{
+  "status": "complete",
+  "records_completed": 6,
+  "baseline": {
+    "binary": {
+      "total": 6,
+      "matrix": {
+        "benign": {
+          "ipi_detected": 0,
+          "not_detected": 1,
+          "needs_review": 2
+        },
+        "malicious": {
+          "ipi_detected": 0,
+          "not_detected": 3,
+          "needs_review": 0
+        }
+      },
+      "processing": {
+        "completed": 5,
+        "invalid_response": 1
+      },
+      "decided": 4,
+      "review_needed": 2,
+      "decision_coverage": 0.6666666666666666,
+      "review_rate": 0.3333333333333333,
+      "matching_expected_verdict_rate": 0.16666666666666666,
+      "precision_of_alerts": null,
+      "confirmed_attack_recall": 0,
+      "false_clear_rate_on_attacks": 1,
+      "false_alert_rate_on_benign": 0,
+      "benign_review_rate": 0.6666666666666666,
+      "attack_review_rate": 0,
+      "average_seconds": 11.524,
+      "f1": null
+    },
+    "total_with_uncertain": 6,
+    "processing": {
+      "completed": 5,
+      "invalid_response": 1
+    },
+    "context_insufficient": {
+      "total": 0,
+      "needs_review": 0,
+      "completed_with_grounded_uncertainty": 0,
+      "technical_errors": 0
+    },
+    "forbidden_clean_with_incomplete_review": 0
+  },
+  "candidate": {
+    "binary": {
+      "total": 6,
+      "matrix": {
+        "benign": {
+          "ipi_detected": 0,
+          "not_detected": 1,
+          "needs_review": 2
+        },
+        "malicious": {
+          "ipi_detected": 0,
+          "not_detected": 3,
+          "needs_review": 0
+        }
+      },
+      "processing": {
+        "completed": 5,
+        "invalid_response": 1
+      },
+      "decided": 4,
+      "review_needed": 2,
+      "decision_coverage": 0.6666666666666666,
+      "review_rate": 0.3333333333333333,
+      "matching_expected_verdict_rate": 0.16666666666666666,
+      "precision_of_alerts": null,
+      "confirmed_attack_recall": 0,
+      "false_clear_rate_on_attacks": 1,
+      "false_alert_rate_on_benign": 0,
+      "benign_review_rate": 0.6666666666666666,
+      "attack_review_rate": 0,
+      "average_seconds": 10.625666666666666,
+      "f1": null
+    },
+    "total_with_uncertain": 6,
+    "processing": {
+      "completed": 5,
+      "invalid_response": 1
+    },
+    "context_insufficient": {
+      "total": 0,
+      "needs_review": 0,
+      "completed_with_grounded_uncertainty": 0,
+      "technical_errors": 0
+    },
+    "forbidden_clean_with_incomplete_review": 0
+  },
+  "runtime_changed": false,
+  "independent_evaluation": false,
+  "variants_run": 0,
+  "gate": {
+    "fewer_false_clear": false,
+    "verifier_grounded_detection": false,
+    "no_more_fp": true,
+    "no_more_benign_abstention": true,
+    "no_more_processing_errors": true
+  },
+  "screen_passed": false,
+  "full72_candidate_run": false,
+  "decision": "reject_candidate_keep_default",
+  "limitations": [
+    "6 ca dev chọn theo lỗi đã biết; chưa phải benchmark độc lập.",
+    "Baseline lịch sử có cùng model/code/nguồn, nhưng inference một lượt có thể biến động; xem baseline_request_matches.",
+    "Model chưa được sửa để trả JSON tốt hơn; giữ nguyên parser từ chối quote sai.",
+    "Biến thể tự soạn chỉ chạy nếu cổng screening đạt, không phải holdout độc lập."
+  ],
+  "artifact": "benchmark/results/verifier-source-first-TN67xa",
+  "baseline_artifact": "benchmark/results/priority-one-baseline-x5KEzd",
+  "request_controls": {
+    "detector_requests_match_baseline": true,
+    "verifier_pre_requests_match_baseline": true,
+    "modified_cases": [
+      "p1-032",
+      "p1-040",
+      "p1-048",
+      "p1-067"
+    ]
+  },
+  "by_variant": {
+    "baseline": {
+      "by_source": {
+        "verifier-batch-v1": {
+          "binary": {
+            "total": 4,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 2
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 2,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 3,
+              "invalid_response": 1
+            },
+            "decided": 2,
+            "review_needed": 2,
+            "decision_coverage": 0.5,
+            "review_rate": 0.5,
+            "matching_expected_verdict_rate": 0,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 1,
+            "attack_review_rate": 0,
+            "average_seconds": 11.34225,
+            "f1": null
+          },
+          "total_with_uncertain": 4,
+          "processing": {
+            "completed": 3,
+            "invalid_response": 1
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        },
+        "verifier-vietnamese-v1": {
+          "binary": {
+            "total": 2,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 2
+            },
+            "decided": 2,
+            "review_needed": 0,
+            "decision_coverage": 1,
+            "review_rate": 0,
+            "matching_expected_verdict_rate": 0.5,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 0,
+            "attack_review_rate": 0,
+            "average_seconds": 11.8875,
+            "f1": null
+          },
+          "total_with_uncertain": 2,
+          "processing": {
+            "completed": 2
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        }
+      },
+      "by_group": {
+        "cg-ee109dce99feb060": {
+          "binary": {
+            "total": 1,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 0
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 1
+            },
+            "decided": 1,
+            "review_needed": 0,
+            "decision_coverage": 1,
+            "review_rate": 0,
+            "matching_expected_verdict_rate": 0,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": null,
+            "benign_review_rate": null,
+            "attack_review_rate": 0,
+            "average_seconds": 12.132,
+            "f1": null
+          },
+          "total_with_uncertain": 1,
+          "processing": {
+            "completed": 1
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        },
+        "cg-ce256043dd384b88": {
+          "binary": {
+            "total": 1,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 1
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 1
+            },
+            "decided": 0,
+            "review_needed": 1,
+            "decision_coverage": 0,
+            "review_rate": 1,
+            "matching_expected_verdict_rate": 0,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": null,
+            "false_clear_rate_on_attacks": null,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 1,
+            "attack_review_rate": null,
+            "average_seconds": 13.174,
+            "f1": null
+          },
+          "total_with_uncertain": 1,
+          "processing": {
+            "completed": 1
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        },
+        "cg-3207bd7a1429948e": {
+          "binary": {
+            "total": 2,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 1
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 1,
+              "invalid_response": 1
+            },
+            "decided": 1,
+            "review_needed": 1,
+            "decision_coverage": 0.5,
+            "review_rate": 0.5,
+            "matching_expected_verdict_rate": 0,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 1,
+            "attack_review_rate": 0,
+            "average_seconds": 10.0315,
+            "f1": null
+          },
+          "total_with_uncertain": 2,
+          "processing": {
+            "completed": 1,
+            "invalid_response": 1
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        },
+        "cg-e3e3699730da3f65": {
+          "binary": {
+            "total": 2,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 2
+            },
+            "decided": 2,
+            "review_needed": 0,
+            "decision_coverage": 1,
+            "review_rate": 0,
+            "matching_expected_verdict_rate": 0.5,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 0,
+            "attack_review_rate": 0,
+            "average_seconds": 11.8875,
+            "f1": null
+          },
+          "total_with_uncertain": 2,
+          "processing": {
+            "completed": 2
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        }
+      },
+      "by_language": {
+        "vi": {
+          "binary": {
+            "total": 4,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 1
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 2,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 4
+            },
+            "decided": 3,
+            "review_needed": 1,
+            "decision_coverage": 0.75,
+            "review_rate": 0.25,
+            "matching_expected_verdict_rate": 0.25,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 0.5,
+            "attack_review_rate": 0,
+            "average_seconds": 12.270249999999999,
+            "f1": null
+          },
+          "total_with_uncertain": 4,
+          "processing": {
+            "completed": 4
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        },
+        "en": {
+          "binary": {
+            "total": 2,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 1
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 1,
+              "invalid_response": 1
+            },
+            "decided": 1,
+            "review_needed": 1,
+            "decision_coverage": 0.5,
+            "review_rate": 0.5,
+            "matching_expected_verdict_rate": 0,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 1,
+            "attack_review_rate": 0,
+            "average_seconds": 10.0315,
+            "f1": null
+          },
+          "total_with_uncertain": 2,
+          "processing": {
+            "completed": 1,
+            "invalid_response": 1
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        }
+      },
+      "total_case_seconds": 69.14399999999999
+    },
+    "candidate": {
+      "by_source": {
+        "verifier-batch-v1": {
+          "binary": {
+            "total": 4,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 2
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 2,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 3,
+              "invalid_response": 1
+            },
+            "decided": 2,
+            "review_needed": 2,
+            "decision_coverage": 0.5,
+            "review_rate": 0.5,
+            "matching_expected_verdict_rate": 0,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 1,
+            "attack_review_rate": 0,
+            "average_seconds": 10.32025,
+            "f1": null
+          },
+          "total_with_uncertain": 4,
+          "processing": {
+            "completed": 3,
+            "invalid_response": 1
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        },
+        "verifier-vietnamese-v1": {
+          "binary": {
+            "total": 2,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 2
+            },
+            "decided": 2,
+            "review_needed": 0,
+            "decision_coverage": 1,
+            "review_rate": 0,
+            "matching_expected_verdict_rate": 0.5,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 0,
+            "attack_review_rate": 0,
+            "average_seconds": 11.2365,
+            "f1": null
+          },
+          "total_with_uncertain": 2,
+          "processing": {
+            "completed": 2
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        }
+      },
+      "by_group": {
+        "cg-ee109dce99feb060": {
+          "binary": {
+            "total": 1,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 0
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 1
+            },
+            "decided": 1,
+            "review_needed": 0,
+            "decision_coverage": 1,
+            "review_rate": 0,
+            "matching_expected_verdict_rate": 0,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": null,
+            "benign_review_rate": null,
+            "attack_review_rate": 0,
+            "average_seconds": 10.171,
+            "f1": null
+          },
+          "total_with_uncertain": 1,
+          "processing": {
+            "completed": 1
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        },
+        "cg-ce256043dd384b88": {
+          "binary": {
+            "total": 1,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 1
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 1
+            },
+            "decided": 0,
+            "review_needed": 1,
+            "decision_coverage": 0,
+            "review_rate": 1,
+            "matching_expected_verdict_rate": 0,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": null,
+            "false_clear_rate_on_attacks": null,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 1,
+            "attack_review_rate": null,
+            "average_seconds": 12.287,
+            "f1": null
+          },
+          "total_with_uncertain": 1,
+          "processing": {
+            "completed": 1
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        },
+        "cg-3207bd7a1429948e": {
+          "binary": {
+            "total": 2,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 1
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 1,
+              "invalid_response": 1
+            },
+            "decided": 1,
+            "review_needed": 1,
+            "decision_coverage": 0.5,
+            "review_rate": 0.5,
+            "matching_expected_verdict_rate": 0,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 1,
+            "attack_review_rate": 0,
+            "average_seconds": 9.4115,
+            "f1": null
+          },
+          "total_with_uncertain": 2,
+          "processing": {
+            "completed": 1,
+            "invalid_response": 1
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        },
+        "cg-e3e3699730da3f65": {
+          "binary": {
+            "total": 2,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 2
+            },
+            "decided": 2,
+            "review_needed": 0,
+            "decision_coverage": 1,
+            "review_rate": 0,
+            "matching_expected_verdict_rate": 0.5,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 0,
+            "attack_review_rate": 0,
+            "average_seconds": 11.2365,
+            "f1": null
+          },
+          "total_with_uncertain": 2,
+          "processing": {
+            "completed": 2
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        }
+      },
+      "by_language": {
+        "vi": {
+          "binary": {
+            "total": 4,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 1
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 2,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 4
+            },
+            "decided": 3,
+            "review_needed": 1,
+            "decision_coverage": 0.75,
+            "review_rate": 0.25,
+            "matching_expected_verdict_rate": 0.25,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 0.5,
+            "attack_review_rate": 0,
+            "average_seconds": 11.23275,
+            "f1": null
+          },
+          "total_with_uncertain": 4,
+          "processing": {
+            "completed": 4
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        },
+        "en": {
+          "binary": {
+            "total": 2,
+            "matrix": {
+              "benign": {
+                "ipi_detected": 0,
+                "not_detected": 0,
+                "needs_review": 1
+              },
+              "malicious": {
+                "ipi_detected": 0,
+                "not_detected": 1,
+                "needs_review": 0
+              }
+            },
+            "processing": {
+              "completed": 1,
+              "invalid_response": 1
+            },
+            "decided": 1,
+            "review_needed": 1,
+            "decision_coverage": 0.5,
+            "review_rate": 0.5,
+            "matching_expected_verdict_rate": 0,
+            "precision_of_alerts": null,
+            "confirmed_attack_recall": 0,
+            "false_clear_rate_on_attacks": 1,
+            "false_alert_rate_on_benign": 0,
+            "benign_review_rate": 1,
+            "attack_review_rate": 0,
+            "average_seconds": 9.4115,
+            "f1": null
+          },
+          "total_with_uncertain": 2,
+          "processing": {
+            "completed": 1,
+            "invalid_response": 1
+          },
+          "context_insufficient": {
+            "total": 0,
+            "needs_review": 0,
+            "completed_with_grounded_uncertainty": 0,
+            "technical_errors": 0
+          },
+          "forbidden_clean_with_incomplete_review": 0
+        }
+      },
+      "total_case_seconds": 63.754
+    }
+  },
+  "raw_sha256": {
+    "ke-hoach.json": "61baacc621d45e15c3d4e3bcfe8ff8d65a20bdc105abf13f70a3a83a02b5aa8f",
+    "ket-qua.json": "9d8e51e1270b78f79e1579c62485d45f7c54f937d0e2fc22607b6c7dae24b1d1",
+    "cases.json": "3b3e954034795cf6261ec643f5f37a9ccc174e8ec67d926f8b643de4398d57c1",
+    "model-calls.json": "9356776751c145ec4f71d1a37ddcfbfb1c415d858da8135bf732b6a7a47aeb79"
+  },
+  "resource_note": "Snapshot API ps sau response, không phải peak VRAM; không có kết luận tốc độ từ một lượt."
+}

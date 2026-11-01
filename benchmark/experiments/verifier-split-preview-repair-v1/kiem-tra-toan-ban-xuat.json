@@ -1,0 +1,42 @@
+{
+  "source": "benchmark/data/annotations/verifier-split-preview-v2",
+  "roles": {
+    "dev": {
+      "examples": 168,
+      "mask_valid": 168,
+      "collator_valid": 168,
+      "max_tokens": 1393
+    },
+    "train": {
+      "examples": 360,
+      "mask_valid": 360,
+      "collator_valid": 360,
+      "max_tokens": 1735
+    },
+    "probe": {
+      "examples": 120,
+      "mask_valid": 120,
+      "collator_valid": 120,
+      "max_tokens": 1853
+    }
+  },
+  "effective_annotations_verified": 324,
+  "source_evidence_counts": {
+    "project_authored_release_not_declared": 171,
+    "dataset_card_declaration": 22,
+    "source_provenance_review_required": 12,
+    "pinned_external_license_document": 42,
+    "article_attribution_declared_not_article_specific_clearance": 30,
+    "pinned_dataset_card_declaration": 20,
+    "pinned_document_license": 27
+  },
+  "records_with_notice_files": 99,
+  "privacy_release_approved": false,
+  "training_ready": false,
+  "training_export_created": false,
+  "independent_holdout_verified": false,
+  "inputs_sha256": {
+    "benchmark/data/annotations/verifier-split-preview-v2/manifest.json": "ec3eeaa9dd6bc655946d6f4301e9e8f9906ccf2e599a6633bacbcd01cebff828",
+    "benchmark/experiments/verifier-split-preview-tokenizer-v2/ket-qua.json": "563ea92a7a9df0cddab1f90f62df1cc1a664d8713838cc6e4d6d82aa97cef1d1"
+  }
+}

@@ -1,0 +1,22 @@
+﻿{
+    "case-10.html":  {
+                         "bytes":  277,
+                         "sha256":  "de735d4cb191ccc801bbe00fd6524038ac8388e3f8a992ea9c54b23acb5ae010"
+                     },
+    "cases.json":  {
+                       "bytes":  22825,
+                       "sha256":  "38ddd5ad6af1c83417c25c563be19be805e955dfbfd6797aa0a428289c66c570"
+                   },
+    "manifest.json":  {
+                          "bytes":  10283,
+                          "sha256":  "885eddd7f4d8d040883aff704cbb818f40b0f7dccc2f44b8cb5b94bd97dd176e"
+                      },
+    "summary.json":  {
+                         "bytes":  6440,
+                         "sha256":  "8bceb8e12281953011172837a885f260edf46d6119d9ddde0c9a0b2a5cae4c14"
+                     },
+    "model-calls.json":  {
+                             "bytes":  25127,
+                             "sha256":  "25168d37dc33c4947c1f8a88244d2eb3f4a115105eae55cbff720078b7e21418"
+                         }
+}

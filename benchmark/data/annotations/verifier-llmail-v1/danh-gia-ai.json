@@ -1,0 +1,126 @@
+{
+  "reviewer": "Codex (AI)",
+  "human_approved": false,
+  "reviews": [
+    {
+      "id": "llmail-fp-001",
+      "input_sha256": "d6139eb2bf4ad313eed9e726ec124f1a90d4fc3f5702dcb164e3b94e5969ab21",
+      "annotation_sha256": "2e6ac5f17c010448d70e060bf07678b43c317a25d53ee33f7bb6523b01259a76",
+      "window_sha256": "d6139eb2bf4ad313eed9e726ec124f1a90d4fc3f5702dcb164e3b94e5969ab21",
+      "window_annotation_sha256": "2e6ac5f17c010448d70e060bf07678b43c317a25d53ee33f7bb6523b01259a76",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.013Z"
+    },
+    {
+      "id": "llmail-fp-002",
+      "input_sha256": "46d469180c1f7e422bf3c1ea6b22be6983835e6ce424eb75640ed93efe9ce6ff",
+      "annotation_sha256": "b2263f36c6f02e4e92cfa18e7193f6b7cf460bca74adf53e3ea02b7f3c04b17a",
+      "window_sha256": "46d469180c1f7e422bf3c1ea6b22be6983835e6ce424eb75640ed93efe9ce6ff",
+      "window_annotation_sha256": "b2263f36c6f02e4e92cfa18e7193f6b7cf460bca74adf53e3ea02b7f3c04b17a",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    },
+    {
+      "id": "llmail-fp-003",
+      "input_sha256": "ffec330fc4b29196800ae42c9f782a2b86d96837b5c6c55358bd5158217b98c3",
+      "annotation_sha256": "5f80399b86a5b7c787d1fa5c12dcb98e0e35275657c63d41746707dc81f888bf",
+      "window_sha256": "ffec330fc4b29196800ae42c9f782a2b86d96837b5c6c55358bd5158217b98c3",
+      "window_annotation_sha256": "5f80399b86a5b7c787d1fa5c12dcb98e0e35275657c63d41746707dc81f888bf",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    },
+    {
+      "id": "llmail-fp-004",
+      "input_sha256": "2e2a5aa76d6d76047f713cabc6b9370ea311ddc83c119ed602391fc07468cca0",
+      "annotation_sha256": "49163a3b56b6c97d1e8a62c6f794ac937fb0773afbe47c0648a368b08078e06e",
+      "window_sha256": "2e2a5aa76d6d76047f713cabc6b9370ea311ddc83c119ed602391fc07468cca0",
+      "window_annotation_sha256": "49163a3b56b6c97d1e8a62c6f794ac937fb0773afbe47c0648a368b08078e06e",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    },
+    {
+      "id": "llmail-fp-005",
+      "input_sha256": "b9df2c97e1b557a2fe7c235f94f51eeb55aab23afccb4135b932e946d205f52d",
+      "annotation_sha256": "4c08308e92c64a5f7304bad69664d9738593a2b795d36f9bfc5e6ea0d31123ba",
+      "window_sha256": "b9df2c97e1b557a2fe7c235f94f51eeb55aab23afccb4135b932e946d205f52d",
+      "window_annotation_sha256": "4c08308e92c64a5f7304bad69664d9738593a2b795d36f9bfc5e6ea0d31123ba",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    },
+    {
+      "id": "llmail-fp-006",
+      "input_sha256": "6d6769c23af00490d7474cd1273aca460516bc48e40929c0674d0e52e9bcd9c5",
+      "annotation_sha256": "0500d94efb8d1a6af651f9b1982441c4badf463ce50329423a5694895827f641",
+      "window_sha256": "6d6769c23af00490d7474cd1273aca460516bc48e40929c0674d0e52e9bcd9c5",
+      "window_annotation_sha256": "0500d94efb8d1a6af651f9b1982441c4badf463ce50329423a5694895827f641",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    },
+    {
+      "id": "llmail-fp-007",
+      "input_sha256": "ad8c1ba10f62424ecfa05c304d9b5e5529ed9c626875ca11c4e6f7450a292b5b",
+      "annotation_sha256": "fcb6ac42f6efc06b091fcc594f24e2b2955528eeb96bddc575aa9289610787ea",
+      "window_sha256": "ad8c1ba10f62424ecfa05c304d9b5e5529ed9c626875ca11c4e6f7450a292b5b",
+      "window_annotation_sha256": "fcb6ac42f6efc06b091fcc594f24e2b2955528eeb96bddc575aa9289610787ea",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    },
+    {
+      "id": "llmail-fp-008",
+      "input_sha256": "16f18aeedd0bc8df81aa3e3358f7bd36c133aa0e7b3df85908520dff3a4deb60",
+      "annotation_sha256": "19d2fba8d1cc9a077f02d4b44aa8fb32025dd8ff829a1200c368ccb66bb8cd5f",
+      "window_sha256": "16f18aeedd0bc8df81aa3e3358f7bd36c133aa0e7b3df85908520dff3a4deb60",
+      "window_annotation_sha256": "19d2fba8d1cc9a077f02d4b44aa8fb32025dd8ff829a1200c368ccb66bb8cd5f",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    },
+    {
+      "id": "llmail-phase2-001",
+      "input_sha256": "6784d8dc1509fcde886403b0a3a62b3efaa3b98465c7c4a3ad3daf59b85506d4",
+      "annotation_sha256": "3a77521100f814fdea268fabd4821848e390bb3f65da32507db42a9879662400",
+      "window_sha256": "ec7062fc16d6e968c9e741ff5383dcd804cbfdd0e30d186512764f01f6376ae3",
+      "window_annotation_sha256": "3ad386cf06cc0b5a3eded76cb048cf21a41852b6694b8634c1da776d037644c2",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    },
+    {
+      "id": "llmail-phase2-002",
+      "input_sha256": "f2bc3d093c9a97584f3ed17c0167f0bef0c786c0043ed274c678b6c26d1b8389",
+      "annotation_sha256": "18032fa24eacf2e1f675026fa24438ad5c537dfacee3161f3fa091ad55c2ef78",
+      "window_sha256": "b7d3ce882d27a53a195f63c7d123a096c2122314f0b93b3433f4a3bd8a65d657",
+      "window_annotation_sha256": "5b8fc0086b3f3f1668207fc96bdd3bf3999747740378cbb102edd9206a5e70ba",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    },
+    {
+      "id": "llmail-phase2-003",
+      "input_sha256": "6615b9d61dfb85a9bf34f8703ed268f83a7173c95f4a6f7eb19a6c0222816638",
+      "annotation_sha256": "c03a438fa3c6103265c12d9deb9b37925830b37c3d969236d61f4abd4982adf6",
+      "window_sha256": "9884628a9f9807ef49b8f355cbb81710859f706666efe557bafd94a4bc4a9853",
+      "window_annotation_sha256": "ad1179aaeba5b94715be34454ad3168f431070a3aba4ef8d989c1588e4a5e79a",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    },
+    {
+      "id": "llmail-phase2-004",
+      "input_sha256": "ce0674a0d9cae89b1e6b7ac12e0545fce6027fcbe388fdea438ac60bfc73fcbc",
+      "annotation_sha256": "adf7191c1a4a6d8bf11571872d89054a92bff720dfa20c6cc65ec8d4b43132f6",
+      "window_sha256": "ce0674a0d9cae89b1e6b7ac12e0545fce6027fcbe388fdea438ac60bfc73fcbc",
+      "window_annotation_sha256": "adf7191c1a4a6d8bf11571872d89054a92bff720dfa20c6cc65ec8d4b43132f6",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T03:46:59.016Z"
+    }
+  ]
+}

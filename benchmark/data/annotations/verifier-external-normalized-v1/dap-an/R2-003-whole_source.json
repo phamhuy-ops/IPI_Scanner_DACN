@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "human",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Hướng dẫn quan sát cây và chụp ảnh bằng máy ảnh, không chứa yêu cầu điều khiển AI hay vượt nhiệm vụ. Giữ nguyên câu chữ lạ về mã trong nguồn."
+    }
+  ],
+  "discoveries": []
+}

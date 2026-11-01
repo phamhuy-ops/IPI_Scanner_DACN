@@ -1,0 +1,529 @@
+{
+  "version": 1,
+  "evidence": [
+    {
+      "id": "direct-recognition-vs-context",
+      "scope": "12 ca dev; không so trực tiếp metric với bộ 72 khác dữ liệu/hợp đồng.",
+      "models": {
+        "gemma3:1b": {
+          "recognition": {
+            "tp": 5,
+            "fp": 3,
+            "tn": 1,
+            "fn": 0,
+            "abstain_benign": 2,
+            "abstain_malicious": 0,
+            "excluded": 1,
+            "precision": 0.625,
+            "recall": 1,
+            "f1": 0.7692307692307693,
+            "false_positive_rate": 0.5,
+            "coverage": 0.8181818181818182,
+            "json_valid": 12,
+            "shape_valid": 12,
+            "consistent": 12,
+            "total": 12
+          },
+          "context": {
+            "tp": 4,
+            "fp": 1,
+            "tn": 0,
+            "fn": 0,
+            "abstain_benign": 5,
+            "abstain_malicious": 1,
+            "excluded": 1,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8000000000000002,
+            "false_positive_rate": 0.16666666666666666,
+            "coverage": 0.45454545454545453,
+            "json_valid": 12,
+            "shape_valid": 12,
+            "consistent": 5,
+            "total": 12
+          }
+        },
+        "qwen2.5-coder:1.5b": {
+          "recognition": {
+            "tp": 1,
+            "fp": 1,
+            "tn": 5,
+            "fn": 4,
+            "abstain_benign": 0,
+            "abstain_malicious": 0,
+            "excluded": 1,
+            "precision": 0.5,
+            "recall": 0.2,
+            "f1": 0.28571428571428575,
+            "false_positive_rate": 0.16666666666666666,
+            "coverage": 1,
+            "json_valid": 12,
+            "shape_valid": 12,
+            "consistent": 12,
+            "total": 12
+          },
+          "context": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 0,
+            "fn": 0,
+            "abstain_benign": 6,
+            "abstain_malicious": 5,
+            "excluded": 1,
+            "precision": null,
+            "recall": 0,
+            "f1": null,
+            "false_positive_rate": 0,
+            "coverage": 0,
+            "json_valid": 12,
+            "shape_valid": 12,
+            "consistent": 0,
+            "total": 12
+          }
+        }
+      },
+      "conclusion": "Nhận diện trực tiếp và gán ngữ cảnh là hai việc khác nhau; JSON hợp lệ không chứng minh ngữ nghĩa đúng."
+    },
+    {
+      "id": "stance-clarification",
+      "decision": "Loại ứng viên trước tích hợp pipeline: Gemma có false clear mới ở case-05 và nhất quán chưa đạt; Qwen không cải thiện. Không đổi mặc định, không thêm phản biện.",
+      "gate": {
+        "gemma3:1b": {
+          "passed": false,
+          "checks": {
+            "complete": true,
+            "consistency": false,
+            "recall": true,
+            "no_false_clear": false,
+            "no_more_false_alerts": true,
+            "no_more_abstention": true,
+            "no_more_explicit_uncertain": true,
+            "json_and_shape": true
+          },
+          "before": {
+            "tp": 4,
+            "fp": 1,
+            "tn": 0,
+            "fn": 0,
+            "abstain_benign": 5,
+            "abstain_malicious": 1,
+            "excluded": 1,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8000000000000002,
+            "false_positive_rate": 0.16666666666666666,
+            "coverage": 0.45454545454545453,
+            "json_valid": 12,
+            "shape_valid": 12,
+            "consistent": 5,
+            "total": 12
+          },
+          "after": {
+            "tp": 4,
+            "fp": 0,
+            "tn": 2,
+            "fn": 1,
+            "abstain_benign": 4,
+            "abstain_malicious": 0,
+            "excluded": 1,
+            "precision": 1,
+            "recall": 0.8,
+            "f1": 0.888888888888889,
+            "false_positive_rate": 0,
+            "coverage": 0.6363636363636364,
+            "json_valid": 12,
+            "shape_valid": 12,
+            "consistent": 7,
+            "total": 12
+          }
+        },
+        "qwen2.5-coder:1.5b": {
+          "passed": false,
+          "checks": {
+            "complete": true,
+            "consistency": false,
+            "recall": false,
+            "no_false_clear": true,
+            "no_more_false_alerts": true,
+            "no_more_abstention": false,
+            "no_more_explicit_uncertain": true,
+            "json_and_shape": true
+          },
+          "before": {
+            "tp": 1,
+            "fp": 0,
+            "tn": 0,
+            "fn": 0,
+            "abstain_benign": 6,
+            "abstain_malicious": 4,
+            "excluded": 1,
+            "precision": 1,
+            "recall": 0.2,
+            "f1": 0.33333333333333337,
+            "false_positive_rate": 0,
+            "coverage": 0.09090909090909091,
+            "json_valid": 12,
+            "shape_valid": 12,
+            "consistent": 1,
+            "total": 12
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 0,
+            "fn": 0,
+            "abstain_benign": 6,
+            "abstain_malicious": 5,
+            "excluded": 1,
+            "precision": null,
+            "recall": 0,
+            "f1": null,
+            "false_positive_rate": 0,
+            "coverage": 0,
+            "json_valid": 12,
+            "shape_valid": 12,
+            "consistent": 0,
+            "total": 12
+          }
+        }
+      }
+    },
+    {
+      "id": "verifier-model-replacement",
+      "decision": "Ứng viên cải thiện bài phân loại trực tiếp nhưng trượt cả hai cổng. Chưa tích hợp hoặc đổi Verifier; không đo pipeline có điều kiện và không thêm phản biện.",
+      "gate": {
+        "by_mode": {
+          "recognition": {
+            "before": {
+              "tp": 1,
+              "fp": 1,
+              "tn": 5,
+              "fn": 4,
+              "abstain_benign": 0,
+              "abstain_malicious": 0,
+              "excluded": 1,
+              "precision": 0.5,
+              "recall": 0.2,
+              "f1": 0.28571428571428575,
+              "false_positive_rate": 0.16666666666666666,
+              "coverage": 1,
+              "json_valid": 12,
+              "shape_valid": 12,
+              "consistent": 12,
+              "total": 12
+            },
+            "after": {
+              "tp": 4,
+              "fp": 1,
+              "tn": 5,
+              "fn": 1,
+              "abstain_benign": 0,
+              "abstain_malicious": 0,
+              "excluded": 1,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002,
+              "false_positive_rate": 0.16666666666666666,
+              "coverage": 1,
+              "json_valid": 12,
+              "shape_valid": 12,
+              "consistent": 12,
+              "total": 12
+            },
+            "checks": {
+              "complete_comparable_requests": true,
+              "json_and_shape": true,
+              "consistency": true,
+              "recall": true,
+              "no_false_clear": false,
+              "no_false_alert": false,
+              "coverage": true
+            },
+            "passed": false
+          },
+          "context": {
+            "before": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 0,
+              "fn": 0,
+              "abstain_benign": 6,
+              "abstain_malicious": 5,
+              "excluded": 1,
+              "precision": null,
+              "recall": 0,
+              "f1": null,
+              "false_positive_rate": 0,
+              "coverage": 0,
+              "json_valid": 12,
+              "shape_valid": 12,
+              "consistent": 0,
+              "total": 12
+            },
+            "after": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 1,
+              "fn": 1,
+              "abstain_benign": 5,
+              "abstain_malicious": 3,
+              "excluded": 1,
+              "precision": 1,
+              "recall": 0.2,
+              "f1": 0.33333333333333337,
+              "false_positive_rate": 0,
+              "coverage": 0.2727272727272727,
+              "json_valid": 12,
+              "shape_valid": 12,
+              "consistent": 4,
+              "total": 12
+            },
+            "checks": {
+              "complete_comparable_requests": true,
+              "json_and_shape": true,
+              "consistency": false,
+              "recall": false,
+              "no_false_clear": false,
+              "no_false_alert": true,
+              "coverage": false
+            },
+            "passed": false
+          }
+        },
+        "pipeline_candidate_eligible": false,
+        "scope": "Chỉ cổng dev cho ứng viên, không phải phê duyệt thay mặc định hoặc chứng minh an toàn."
+      }
+    },
+    {
+      "id": "context-first-field-order",
+      "eligible": false,
+      "models": {
+        "gemma3:1b": {
+          "baseline": {
+            "total": 6,
+            "context_exact": 0,
+            "consistent": 1
+          },
+          "context_first": {
+            "total": 6,
+            "context_exact": 1,
+            "consistent": 4
+          }
+        },
+        "qwen2.5-coder:1.5b": {
+          "baseline": {
+            "total": 6,
+            "context_exact": 0,
+            "consistent": 0
+          },
+          "context_first": {
+            "total": 6,
+            "context_exact": 0,
+            "consistent": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "one-chunk-and-source-reference",
+      "decision": "not_promoted",
+      "document": [
+        {
+          "variant": "single",
+          "processing": "timeout",
+          "elapsed_ms": 76656
+        },
+        {
+          "variant": "reference",
+          "processing": "invalid_response",
+          "elapsed_ms": 39756
+        }
+      ]
+    },
+    {
+      "id": "bounded-output",
+      "decision": "reject_candidate_keep_runtime_unchanged",
+      "scope": "Dev rất nhỏ tự soạn, 3 mẫu thuộc 2 nhóm; không độc lập, không chứng minh chất lượng bảo mật."
+    },
+    {
+      "id": "source-first-empty-suspicions",
+      "decision": "reject_candidate_keep_default",
+      "gate": {
+        "fewer_false_clear": false,
+        "verifier_grounded_detection": false,
+        "no_more_fp": true,
+        "no_more_benign_abstention": true,
+        "no_more_processing_errors": true
+      },
+      "scope": "6 ca dev chọn theo lỗi, 3 tấn công vẫn bị bỏ sót; không chạy biến thể hoặc full72 ứng viên."
+    },
+    {
+      "id": "full-pipeline-reviewed72",
+      "metrics": {
+        "binary": {
+          "total": 61,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 1,
+              "not_detected": 13,
+              "needs_review": 25
+            },
+            "malicious": {
+              "ipi_detected": 3,
+              "not_detected": 7,
+              "needs_review": 12
+            }
+          },
+          "processing": {
+            "completed": 50,
+            "invalid_response": 11
+          },
+          "decided": 24,
+          "review_needed": 37,
+          "decision_coverage": 0.39344262295081966,
+          "review_rate": 0.6065573770491803,
+          "matching_expected_verdict_rate": 0.26229508196721313,
+          "precision_of_alerts": 0.75,
+          "confirmed_attack_recall": 0.13636363636363635,
+          "false_clear_rate_on_attacks": 0.3181818181818182,
+          "false_alert_rate_on_benign": 0.02564102564102564,
+          "benign_review_rate": 0.6410256410256411,
+          "attack_review_rate": 0.5454545454545454,
+          "average_seconds": 11.607590163934425,
+          "f1": 0.23076923076923075
+        },
+        "total_with_uncertain": 72,
+        "processing": {
+          "completed": 57,
+          "invalid_response": 15
+        },
+        "context_insufficient": {
+          "total": 11,
+          "needs_review": 6,
+          "completed_with_grounded_uncertainty": 2,
+          "technical_errors": 4
+        },
+        "forbidden_clean_with_incomplete_review": 0
+      },
+      "gate": {
+        "no_forbidden_clean": true,
+        "runtime_response_rate_98_percent": false,
+        "recall_90_percent": false,
+        "false_alert_rate_5_percent": true,
+        "binary_coverage_80_percent": false,
+        "correct_uncertainty_80_percent": null,
+        "context_accuracy_95_percent": null,
+        "independent_validation_complete": false,
+        "long_document_full_pipeline_and_ui_complete": false
+      }
+    }
+  ],
+  "data_readiness": {
+    "unique_reviewed_sources": 72,
+    "source_groups": 42,
+    "labels": {
+      "malicious": 22,
+      "benign": 39,
+      "uncertain": 11
+    },
+    "languages": {
+      "vi": 30,
+      "zh": 4,
+      "en": 38
+    },
+    "formats": {
+      ".txt": 56,
+      ".html": 6,
+      ".md": 10
+    },
+    "by_source": {
+      "verifier-vietnamese-v1": 15,
+      "notinject": 15,
+      "verifier-batch-v1": 30,
+      "realistic-ipi": 12
+    },
+    "synthetic_sources": 45,
+    "long_sources_at_least_8000_utf16_units": 0,
+    "language_label_cells": {
+      "vi": {
+        "malicious": 12,
+        "uncertain": 8,
+        "benign": 10
+      },
+      "zh": {
+        "benign": 4
+      },
+      "en": {
+        "benign": 25,
+        "uncertain": 3,
+        "malicious": 10
+      }
+    },
+    "numerical_target_only": {
+      "sources": 300,
+      "minimum_groups": 100,
+      "additional_sources_lower_bound": 228,
+      "additional_groups_lower_bound": 58,
+      "desired_labels": {
+        "malicious": 120,
+        "benign": 120,
+        "uncertain": 60
+      },
+      "additional_label_counts": {
+        "malicious": 98,
+        "benign": 81,
+        "uncertain": 49
+      }
+    },
+    "final_train_dev_locked": false,
+    "unused_independent_holdout_sources_verified": 0,
+    "blockers": [
+      "Chưa đủ mục tiêu số nguồn của kế hoạch pilot.",
+      "Chưa đủ nhóm nguồn sau gom, không bù bằng nhân bản biến thể.",
+      "Chưa có bộ kiểm chứng độc lập được thu thập và xác minh.",
+      "Chưa xuất dữ liệu train với vai trò tập đã khóa.",
+      "Chưa kiểm tra backend train/save-reload trên phần cứng.",
+      "Chưa có audit tokenizer/chat template/completion mask thực tế."
+    ],
+    "training_ready": false,
+    "note": "Mục tiêu ngân sách cũ, không phải chứng minh chỉ cần đủ số lượng; mọi nguồn hiện tại đã dùng làm dev."
+  },
+  "inputs_sha256": {
+    "benchmark/data/priority-one-dev-v2.json": "7c018bde4e4197beaa3f982fcc3172cebdb89347a9eeff0e17f5743f142ee07e",
+    "benchmark/experiments/verifier-finetune-pilot-v1/ke-hoach.json": "d36c58d6845ff18e33b00d3dd65a8ef68c19648c7c9b8e784b75b115785e964f",
+    "benchmark/experiments/model-context-v1/ket-qua.json": "644422c97da6bcdcd3fe9cace074d6efc6442f0e4fdcf19d992d30624e1baa55",
+    "benchmark/experiments/stance-clarity-v1/ket-qua.json": "ace0ce377c32070bed69e02967a660fc2cf80b32d21780dc82aff5687e1b21ba",
+    "benchmark/experiments/verifier-candidate-v1/ket-qua.json": "cb89323047c23ee0e3bfbcfe5b189f36d9c9ad9c29a2b317e429fe4a10070b16",
+    "benchmark/experiments/minimal-context-order-v1/ket-qua.json": "3f63e63b7986e3afa87c7ca2769d29f62019e3eeeb487731958cdc7a82675302",
+    "benchmark/experiments/single-chunk-reference-v1/ket-qua.json": "d66df4ba2f42c2a7f466f3076911100889bd31084b0a1e7db846cbcbc2b69852",
+    "benchmark/experiments/document-output-budget-v1/ket-qua.json": "453fbffd80d287523d0bc290371cb8d9098d3c29fc92522e79142dc1a06c7658",
+    "benchmark/experiments/verifier-source-first-v1/ket-qua.json": "c79e74fd9cd0701e2c5fbeed11256a21414d7f43b1e1842c4f41106d23930ebf",
+    "benchmark/experiments/priority-one-baseline-v1/ket-qua.json": "90a526c37bb070765a68734e1174bf04ce4c3967a7f0d930ddab773cd07d8ad9"
+  },
+  "decision": "stop_layout_only_trials_prepare_verifier_learning_prerequisites",
+  "conclusions": [
+    "Chưa có ứng viên qua cổng; không đổi mặc định, không thêm phản biện để che lỗi vòng đầu.",
+    "Đã thấy lỗi nhận diện và lỗi liên kết stance/ngữ cảnh bên cạnh lỗi trích dẫn; chưa chứng minh nguyên nhân duy nhất là thiếu fine-tuning.",
+    "Model thay thế đã thử cũng chưa đạt; không tự suy mọi model lớn hơn sẽ giải quyết được.",
+    "Không cộng số ca/lượt từ các thí nghiệm khác nhau thành accuracy chung.",
+    "Ưu tiên kiểm tra cách biểu diễn dữ liệu/tokenizer/mask cho một Verifier và bổ sung nhóm còn thiếu, chưa bắt đầu train."
+  ],
+  "next_concrete_step": {
+    "task": "Audit tokenizer/chat template/completion mask trên bản preview đã kiểm tra, dùng model base và revision đã chốt.",
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "storage": "E:\\IPI-Training",
+    "install_or_download_performed": false,
+    "weights_required_for_tokenizer_audit": false,
+    "training_allowed_now": false,
+    "requirement": "Phải dùng tokenizer thật; không đoán token từ số ký tự hoặc coi metadata là token audit."
+  },
+  "priority_one_complete": false,
+  "training_started": false,
+  "runtime_changed": false,
+  "limitations": [
+    "Bằng chứng chủ yếu là dev nhỏ lặp lại; chưa có đánh giá độc lập.",
+    "Có tương quan giữa họ model, dữ liệu và các thử nghiệm; không diễn giải đây là ablation nhân quả đầy đủ.",
+    "Readiness là kiểm tra tiền đề, không phải bằng chứng fine-tuning sẽ cải thiện bảo mật."
+  ]
+}

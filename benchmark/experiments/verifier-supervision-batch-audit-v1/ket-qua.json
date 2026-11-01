@@ -1,0 +1,22 @@
+{
+  "records": 12,
+  "reference_records": 376,
+  "parent_group_issues": [],
+  "matches": [],
+  "protected_matches": [],
+  "cross_group_train_matches": [],
+  "normalized_duplicate_count": 0,
+  "input_sha256": {
+    "benchmark\\data\\annotations\\verifier-supervision-batch-v1\\mau-cho-duyet.jsonl": "3a41c64944e04341080b4ec1cdef94749d7b4428c9dc9a66e508d6b577fdac21",
+    "benchmark\\data\\annotations\\verifier-local-release-preview-v2\\mau-cho-duyet.jsonl": "6845aa33164da7ee61ffd45c12a5bf074cbc32c0187f94872748ef733fef69c5",
+    "benchmark\\data\\annotations\\verifier-role-authority-controls-v1\\mau-cho-duyet.jsonl": "ecaa339382653fabdc1efcee2ef181c8c0466224c0b80a54ef7b5780d133bdf5",
+    "benchmark\\data\\annotations\\verifier-consistency-controls-v1\\mau-cho-duyet.jsonl": "d097145bfba4b2c80dfe69200c9568908ad3ca61aeb98e5288e1259760df546d"
+  },
+  "model_called": false,
+  "training_started": false,
+  "training_ready": false,
+  "limitations": [
+    "Chỉ đối chiếu 324 nguồn split và 52 đối chứng dev, chưa thay audit toàn raw hoặc tương đồng ngữ nghĩa.",
+    "Giữ nhóm train cha dù từ vựng mới; không tính là nhóm độc lập hoặc chuyển vai trò vì không match."
+  ]
+}

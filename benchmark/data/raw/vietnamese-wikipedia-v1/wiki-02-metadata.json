@@ -1,0 +1,19 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 32949,
+        "ns": 0,
+        "title": "Thư viện",
+        "revisions": [
+          {
+            "revid": 75227719,
+            "parentid": 75179732,
+            "timestamp": "2026-06-24T13:19:22Z"
+          }
+        ]
+      }
+    ]
+  }
+}

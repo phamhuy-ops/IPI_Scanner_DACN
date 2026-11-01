@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Câu hỏi kiến thức về kích thước lá cây, không có chỉ dẫn chuyển hướng hoặc vượt quyền AI."
+    }
+  ],
+  "discoveries": []
+}

@@ -1,0 +1,2672 @@
+{
+  "records": 167,
+  "excluded_records": 84,
+  "groups": 64,
+  "stances": {
+    "confirmed": 56,
+    "dismissed": 80,
+    "uncertain": 31
+  },
+  "languages": {
+    "vi": 68,
+    "en": 96,
+    "en-vi": 3
+  },
+  "sources": [
+    {
+      "source": "OEVIETNAM/markdown-vietnamese",
+      "records": 6,
+      "groups": 6,
+      "stances": {
+        "dismissed": 6
+      },
+      "languages": {
+        "vi": 6
+      },
+      "evidence_status": {
+        "license_document_present": 6
+      }
+    },
+    {
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "records": 12,
+      "groups": 6,
+      "stances": {
+        "confirmed": 6,
+        "dismissed": 6
+      },
+      "languages": {
+        "vi": 12
+      },
+      "evidence_status": {
+        "license_document_present": 12
+      }
+    },
+    {
+      "source": "leolee99/NotInject",
+      "records": 12,
+      "groups": 12,
+      "stances": {
+        "dismissed": 12
+      },
+      "languages": {
+        "en": 12
+      },
+      "evidence_status": {
+        "dataset_card_declaration_present": 12
+      }
+    },
+    {
+      "source": "microsoft/llmail-inject-challenge",
+      "records": 23,
+      "groups": 23,
+      "stances": {
+        "dismissed": 14,
+        "confirmed": 8,
+        "uncertain": 1
+      },
+      "languages": {
+        "en": 23
+      },
+      "evidence_status": {
+        "dataset_card_declaration_present": 23
+      }
+    },
+    {
+      "source": "project_authored_recipient_contrast",
+      "records": 32,
+      "groups": 8,
+      "stances": {
+        "dismissed": 16,
+        "confirmed": 8,
+        "uncertain": 8
+      },
+      "languages": {
+        "en": 16,
+        "vi": 16
+      },
+      "evidence_status": {
+        "own_authored_local_preparation": 32
+      }
+    },
+    {
+      "source": "python/cpython",
+      "records": 6,
+      "groups": 6,
+      "stances": {
+        "dismissed": 6
+      },
+      "languages": {
+        "en": 6
+      },
+      "evidence_status": {
+        "license_document_present": 6
+      }
+    },
+    {
+      "source": "python/cpython+authored_injection",
+      "records": 6,
+      "groups": 6,
+      "stances": {
+        "confirmed": 6
+      },
+      "languages": {
+        "en": 3,
+        "en-vi": 3
+      },
+      "evidence_status": {
+        "license_document_present": 6
+      }
+    },
+    {
+      "source": "uiuc-kang-lab/InjecAgent",
+      "records": 30,
+      "groups": 1,
+      "stances": {
+        "uncertain": 12,
+        "confirmed": 18
+      },
+      "languages": {
+        "en": 30
+      },
+      "evidence_status": {
+        "license_document_present": 30
+      }
+    },
+    {
+      "source": "verifier-gap-v1",
+      "records": 15,
+      "groups": 3,
+      "stances": {
+        "confirmed": 5,
+        "dismissed": 5,
+        "uncertain": 5
+      },
+      "languages": {
+        "vi": 9,
+        "en": 6
+      },
+      "evidence_status": {
+        "own_authored_local_preparation": 15
+      }
+    },
+    {
+      "source": "vi.wikipedia.org+authored_variants",
+      "records": 25,
+      "groups": 5,
+      "stances": {
+        "dismissed": 15,
+        "confirmed": 5,
+        "uncertain": 5
+      },
+      "languages": {
+        "vi": 25
+      },
+      "evidence_status": {
+        "article_attribution_present": 25
+      }
+    }
+  ],
+  "planning_scenario": {
+    "note": "Kịch bản lập kế hoạch cho 240 bản train/probe, áp tỷ lệ 40/40/20; không đổi cổng đã khóa, không phải split cuối. Ngôn ngữ hỗn hợp không cộng hai lần.",
+    "target": 240,
+    "stance_targets": {
+      "confirmed": 96,
+      "dismissed": 96,
+      "uncertain": 48
+    },
+    "stance_gaps": {
+      "confirmed": 40,
+      "dismissed": 16,
+      "uncertain": 17
+    },
+    "vietnamese_gap": 28,
+    "additional_records_lower_bound": 73,
+    "independent_holdout_target_separate": 200
+  },
+  "source_status_counts": {
+    "own_authored_local_preparation": 47,
+    "dataset_card_declaration_present": 35,
+    "license_document_present": 60,
+    "article_attribution_present": 25
+  },
+  "source_use_ledger": [
+    {
+      "id": "verifier-gap-v1:gap-001",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-002",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-003",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-004",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-005",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-006",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-007",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-008",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-009",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-010",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-011",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-012",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-013",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-014",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-gap-v1:gap-015",
+      "source": "verifier-gap-v1",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-001",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-002",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-003",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-004",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-005",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-006",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-007",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-008",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-009",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-010",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-011",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-012",
+      "source": "leolee99/NotInject",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/notinject/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-013",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-014",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-015",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-016",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-017",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-018",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-019",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-020",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-021",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-022",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-023",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-024",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-025",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-026",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-027",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-028",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-029",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-030",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-001",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-002",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-003",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-004",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-005",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-006",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-007",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-008",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-009",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-010",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-016",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-017",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-018",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-019",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-020",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-021",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-022",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-023",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-024",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-025",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-026",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-027",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-028",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-029",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-030",
+      "source": "vi.wikipedia.org+authored_variants",
+      "status": "article_attribution_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-001",
+      "source": "python/cpython",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-002",
+      "source": "python/cpython+authored_injection",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-003",
+      "source": "python/cpython",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-004",
+      "source": "python/cpython+authored_injection",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-005",
+      "source": "python/cpython",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-006",
+      "source": "python/cpython+authored_injection",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-007",
+      "source": "python/cpython",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-008",
+      "source": "python/cpython+authored_injection",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-009",
+      "source": "python/cpython",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-010",
+      "source": "python/cpython+authored_injection",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-011",
+      "source": "python/cpython",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-012",
+      "source": "python/cpython+authored_injection",
+      "status": "license_document_present",
+      "license_declared": "PSF-2.0 with retained notices",
+      "evidence_files": [
+        "benchmark/data/raw/python-context-docs-v1/LICENSE",
+        "benchmark/data/raw/python-context-docs-v1/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-013",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-014",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-015",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-016",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-017",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-018",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-019",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-020",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-021",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-022",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-023",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-external-context-v1:ec-024",
+      "source": "uiuc-kang-lab/InjecAgent",
+      "status": "license_document_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/injecagent/LICENCE",
+        "benchmark/data/raw/injecagent/snapshot.json"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-001",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-002",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-003",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-004",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-005",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-006",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-007",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-008",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-009",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-010",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-011",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-012",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-013",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-014",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-015",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-016",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-017",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-018",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-019",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-020",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-021",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-022",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-023",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-024",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-025",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-026",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-027",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-028",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-029",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-030",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-031",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-recipient-contrast-v1:rc-032",
+      "source": "project_authored_recipient_contrast",
+      "status": "own_authored_local_preparation",
+      "license_declared": null,
+      "evidence_files": [],
+      "local_preparation_external_license_blocker": false,
+      "remaining_checks": [
+        "Rà riêng tư/ngữ cảnh/nhãn và chia nhóm; license phát hành xử lý riêng nếu công bố."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-001",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-002",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-003",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-004",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-005",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-006",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-007",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-008",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-001",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-002",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-003",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-004",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-073",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-074",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-075",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-077",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-079",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-199",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-037",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-041",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-046",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-047",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-044",
+      "source": "microsoft/llmail-inject-challenge",
+      "status": "dataset_card_declaration_present",
+      "license_declared": "MIT",
+      "evidence_files": [
+        "benchmark/data/raw/llmail-intake-v1/README.md"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-001",
+      "source": "OEVIETNAM/markdown-vietnamese",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-002",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-003",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-004",
+      "source": "OEVIETNAM/markdown-vietnamese",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-005",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-006",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-007",
+      "source": "OEVIETNAM/markdown-vietnamese",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-008",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-009",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-010",
+      "source": "OEVIETNAM/markdown-vietnamese",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-011",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-012",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-013",
+      "source": "OEVIETNAM/markdown-vietnamese",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-014",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-015",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-016",
+      "source": "OEVIETNAM/markdown-vietnamese",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-017",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    },
+    {
+      "id": "verifier-vietnamese-markdown-v1:vm-018",
+      "source": "OEVIETNAM/markdown-vietnamese+authored_variants",
+      "status": "license_document_present",
+      "license_declared": "CC-BY-SA-4.0",
+      "evidence_files": [
+        "benchmark/data/raw/vietnamese-markdown-v1/LICENSE"
+      ],
+      "local_preparation_external_license_blocker": null,
+      "remaining_checks": [
+        "Đối chiếu phạm vi nội dung, ghi công/notice và điều kiện nguồn trước export; rà riêng tư/ngữ cảnh/nhãn và chia nhóm."
+      ],
+      "training_eligible": false,
+      "split": null
+    }
+  ],
+  "acquisition_priorities": [
+    "Ưu tiên confirmed/uncertain tiếng Việt trong email, kết quả công cụ, tài liệu nghiệp vụ; giữ đối chứng gần giống và đủ ngữ cảnh người nhận.",
+    "Mỗi nhóm giữ bản sạch, trích dẫn và chỉ dẫn có hiệu lực cùng phía split; không nhân bản template để bù số.",
+    "Không lấy thêm hàng loạt benign LLMail hoặc coi biến thể tự soạn trên nguồn cũ là nguồn độc lập.",
+    "PDF/DOCX và chữ trong ảnh cần phép đo extraction/pipeline riêng; số mẫu văn bản không giải quyết thiếu độ bao phủ."
+  ],
+  "training_ready": false,
+  "training_started": false,
+  "runtime_changed": false,
+  "priority_one_complete": false,
+  "inputs_sha256": {
+    "benchmark/experiments/verifier-eligibility-v5/registry.jsonl": "6a4f00eaab803ee7f0892630de5577874741763e0b45e8ca33965979ca17b4f5",
+    "scripts/audit-verifier-pool.cjs": "761250cd5972f1960c34db7bec650b86f6fcbb6c11250bf4d1efe44183d91d50",
+    "benchmark/data/raw/notinject/README.md": "ffaf685021522a526f94af2047e5099ec6b7439a462c67e0ecaca0d631a0d43f",
+    "benchmark/data/raw/injecagent/LICENCE": "b48589499dbb84caa796b00b4ea652b0443e49660282c44d890fd473b8c0674e",
+    "benchmark/data/raw/injecagent/snapshot.json": "8cd26914e2b3df095512a7c3b2d81066bf81dc85a27d4c2bba3ab1d34dc88606",
+    "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md": "86c94d3082e93c1d1c40ed53035e09121a58ce61056ef88be299d546d9fa7f46",
+    "benchmark/data/raw/python-context-docs-v1/LICENSE": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "benchmark/data/raw/python-context-docs-v1/snapshot.json": "9901299ae1a5c22f9277dfff56a767059096d2788183d97e085abf69f93619ab",
+    "benchmark/data/raw/llmail-intake-v1/README.md": "d85767e349ab1abbaf43db9390c4e906e34954e5df3a1335c8f1516efa64e812",
+    "benchmark/data/raw/vietnamese-markdown-v1/LICENSE": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+  },
+  "command": "node scripts/audit-verifier-pool.cjs",
+  "evidence_hashes_verified": true
+}

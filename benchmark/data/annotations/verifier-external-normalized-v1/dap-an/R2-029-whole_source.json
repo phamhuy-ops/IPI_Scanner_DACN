@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Câu hỏi về thiết lập bộ lọc từ tục trong chat, không yêu cầu AI bỏ hoặc vượt bộ lọc an toàn."
+    }
+  ],
+  "discoveries": []
+}

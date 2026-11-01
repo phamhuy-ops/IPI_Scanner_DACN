@@ -40,7 +40,7 @@ PowerShell 5.1 đọc đúng tiếng Việt; đã thử bằng launcher thực t
 
 - `E:\IPI-Training\python`: CPython 3.12.15 managed, không đăng ký làm Python
   hệ thống. Bản Python 3.14 trên C được giữ nguyên.
-- `E:\IPI-Training\venvs\verifier`: venv riêng, có pip; chưa cài thư viện ML.
+- `E:\IPI-Training\venvs\verifier`: venv riêng, có pip và các thư viện ML đã khóa phiên bản.
 - `E:\IPI-Training\cache`: Hugging Face hub/datasets/assets/xet, pip, uv,
   torch, torch extensions, triton và pycache.
 - `E:\IPI-Training\weights`: weights riêng/weights sau merge khi triển khai.
@@ -54,7 +54,7 @@ Các biến `IPI_WEIGHTS_DIR`, `IPI_ADAPTERS_DIR`, `IPI_CHECKPOINTS_DIR` là c�
 hình dự án, **không tự thay output_dir của mọi thư viện**. Khi viết trainer/
 exporter phải truyền rõ các đường này. Kế hoạch pilot đã chỉ định
 `E:\IPI-Training\checkpoints\verifier-pilot-v1` cho Trainer và thư mục tương
-ứng dưới adapters cho adapter. Chưa có trainer hoặc adapter được tạo.
+ứng dưới adapters cho adapter. Pilot candidate-01 đã hoàn tất một epoch/45 bước, adapter còn ở trạng thái thử nghiệm chưa triển khai.
 
 Chỉ thêm `IPI_TRAINING_ROOT=E:\IPI-Training` ở biến môi trường cấp User để
 ghi nhớ root. Các biến Hugging Face/pip/uv/torch/TEMP/TMP/PATH được nạp theo
@@ -98,3 +98,23 @@ Việc cấu hình lưu trữ không chứng minh train vừa GPU 4 GB. Venv hi�
 có torch/transformers/PEFT/TRL/bitsandbytes; vẫn phải chuẩn bị dependency và
 thử forward/backward trước pilot. Dữ liệu gốc, model baseline, 20 nhãn đã
 duyệt và cấu hình agent được giữ nguyên.
+
+## Cập nhật chuyển kết quả ngày 2026-10-26
+
+92 thư mục con sinh ra trong `benchmark/results` đã chuyển sang `E:\IPI-Training\results\IPI_Scanner`, đối chiếu SHA256 trước khi bỏ bản C. Mỗi đường cũ là junction tới E; file baseline đã được Git theo dõi vẫn nằm trên C. Dependency PyArrow qua đường cũ đã import lại thành công. Khi sao lưu cần giữ dữ liệu đích trên E, junction không phải bản sao thứ hai.
+
+Launcher chặn root C trước khi tạo thư mục. Dùng `npm run training:python -- <script.py>` để bảo đảm Python/cache/temp trên E. Chạy Python ngoài launcher có thể dùng cấu hình khác. Các lần kiểm tra lưu trữ mới tạo báo cáo theo timestamp trên E để giữ lịch sử.
+
+Windows hiện có pagefile trên C; cấu hình lưu trữ của dự án không thay pagefile hoặc yêu cầu khởi động lại.
+
+## Runtime dự án và cache phát triển —29/10/2026
+
+Phần này không khởi động hoặc cho phép huấn luyện. Đã chuyển bằng sao chép, đối chiếu SHA256 rồi tạo junction và giải phóng bản C: node_modules sang E:\IPI-Workspace\IPI_Scanner\node_modules; cache Electron và electron-builder sang E:\IPI-Workspace\cache; nội dung cache npm (_cacache) sang E:\IPI-Workspace\cache\npm\_cacache. npm cache User nay trỏ E:\IPI-Workspace\cache\npm cho các lượt mới. Đường dẫn C cũ vẫn dùng được; _npx cũ đang được MCP Chrome sử dụng được giữ trên C, không dừng tiến trình khác. Model/weights/training đang ở E không bị đổi.
+
+Tệp tạm của benchmark, Vitest và Vite dùng E:\IPI-Workspace\IPI_Scanner\tmp qua helper trong scripts/check-engines.js. Chỉ đặt TEMP/TMP/TMPDIR của tiến trình dự án và worker, không sửa TEMP/TMP toàn Windows. Trên máy Windows này helper tự dùng gốc E đã tồn tại; IPI_RUNTIME_ROOT là tùy chọn qua môi trường tiến trình và phải trỏ thư mục riêng thực trên E. Trên máy khác chưa có thư mục mặc định và chưa cấu hình, giữ hành vi cũ.
+
+Các runner đang duy trì dùng makeBenchmarkDirectory để tạo thư mục thật dưới E:\IPI-Workspace\IPI_Scanner\benchmark\results và junction mới dưới benchmark/results. Vì vậy lệnh/baseline/citation dùng đường dẫn C cũ vẫn tương thích. Đối chứng mới hoặc script chẩn đoán cũng phải gọi helper này, không tự mkdtemp trực tiếp dưới benchmark/results trên C. --output riêng được tôn trọng; mặc định của dự án đã chuyển sang E. Không sửa đường dẫn trong raw lịch sử.
+
+Chưa chuyển benchmark cũ còn vật lý trên C khoảng0,53 GiB: lệnh gộp dừng Ollama và chuyển benchmark bị bộ xét duyệt tự động chặn với thông báo blocked by policy, không có lý do chi tiết. Không chạy lại bằng cách khác.92 junction kết quả cũ vốn trỏ E được giữ nguyên; các lượt mới dùng helper kể trên.
+
+Manifest di chuyển, SHA256 từng tệp và trạng thái nằm ở E:\IPI-Workspace\migration-20261029. Chỉ các mục có trạng thái moved_verified được tính đã chuyển. Không đụng dữ liệu Windows, ứng dụng Codex đang chạy hoặc thư mục temp của ứng dụng khác.

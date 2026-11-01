@@ -1,0 +1,13 @@
+// Tiếp tục đối chứng model local đã được cho phép; chỉ thay vai trò Detector trong runner.
+if (!process.argv.includes('--approved-local-instruct-comparison')) {
+  console.error('Cần xác nhận đối chứng model local; không gọi model hoặc đổi mặc định.'); process.exitCode = 1;
+} else {
+  const protocol = 'benchmark/experiments/local-detector-comparison-v1/giao-thuc.json';
+  const plan = require('../' + protocol);
+  const { main } = require('./run-semantic-stance-ab.cjs');
+  main({ name: 'local-detector-comparison', module: '/src/ai/agents/slmCatalog.ts', entry: 'scripts/run-local-detector-ab.cjs', protocol,
+    command: plan.command_after_approval, extraModels: [plan.candidate.fixModel], pipelineOptions: plan.candidate,
+    expectedCasesChecksum: plan.cases_checksum, expectedRuntimeVersion: plan.runtime_version, expectedModelDigests: plan.model_digests,
+    change: 'Chỉ đổi Detector Gemma sang Instruct đã có sẵn trong nhánh thử. Giữ Verifier Coder, prompt/schema, nguồn, seed, backend và chính sách. Nhánh candidate cùng họ Qwen; không đổi mặc định, train hoặc tải model.' })
+    .catch(error => { console.error(error); process.exitCode = 1; });
+}

@@ -1,0 +1,11 @@
+{
+  "user_authorized": true,
+  "model": "meta-llama/Llama-Prompt-Guard-2-86M",
+  "revision": "a8ded8e697ce7c355e395a0df51f94adb4a2fd27",
+  "destination_root": "E:/IPI-Training/weights/prompt-guard-2-86m",
+  "scope": "Tải và đo theo cohort 66 mẫu đã khóa; không train, không đổi model dự phòng.",
+  "reason": "Người dùng đã trả lời: Cho phép tải về E và đo, không train.",
+  "needs_reconfirmation": false,
+  "status": "waiting_for_huggingface_login_and_access",
+  "credentials_printed": false
+}

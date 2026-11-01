@@ -1,0 +1,54 @@
+﻿{
+    "probe-08.md":  {
+                        "bytes":  263,
+                        "sha256":  "6e62b432402d933115488283a1f4156fbcde455c994c5ad2ad50751e5235965c"
+                    },
+    "probe-06.txt":  {
+                         "bytes":  299,
+                         "sha256":  "404bbf3a9d17ae4464a5193bcfc6b32d17ed18e7aded040c0d3ee3f28051b69f"
+                     },
+    "model-calls.json":  {
+                             "bytes":  104856,
+                             "sha256":  "f110953357a8469992910c3ce04f6c63771310a88bebf8e9ccd09bb0342b1d8b"
+                         },
+    "manifest.json":  {
+                          "bytes":  6320,
+                          "sha256":  "a0ef8949c6f29d1a10f4010df1616fecf8a33b6b9a312eb94b35d6f1e24318ca"
+                      },
+    "debate-readiness.json":  {
+                                  "bytes":  811,
+                                  "sha256":  "101944a50e540eee0085aa62902dd7aa465c2de4079bcdae7a46a70c24fbaa1b"
+                              },
+    "probe-04.txt":  {
+                         "bytes":  286,
+                         "sha256":  "53ab4829b336769c8fd92402d5d1a213a0098a2a1a54d9ef0b8917d7673c2990"
+                     },
+    "probe-07.html":  {
+                          "bytes":  208,
+                          "sha256":  "3fbbd67d6cea2f9cfc647ab6974580efeb1853a7cf1d809cfb4d32423058b5e6"
+                      },
+    "cases.json":  {
+                       "bytes":  43553,
+                       "sha256":  "a51ad1f3084727a933cee075fb4d5395a8a254cc2dc3230d1df79069f1a23386"
+                   },
+    "probe-01.md":  {
+                        "bytes":  199,
+                        "sha256":  "fe45d537ae0392be58bf3b74fd7abfd4803bf2491ac8e53cc0d21382ec57aaec"
+                    },
+    "summary.json":  {
+                         "bytes":  7028,
+                         "sha256":  "dbe9a8feec88ba51f70f7138f109831c5289e936afb44a85d425e6f14a54b2aa"
+                     },
+    "probe-02.txt":  {
+                         "bytes":  202,
+                         "sha256":  "871958618db54593ddda52e2678464e63fe67a2e7a1fd9497e9b1f9f9b6df3e2"
+                     },
+    "probe-05.md":  {
+                        "bytes":  278,
+                        "sha256":  "74a3e136b5dd1b3b1fd8ccff53d5ad73bafa75facb4b5a557e76b1a1976c1ae7"
+                    },
+    "probe-03.md":  {
+                        "bytes":  239,
+                        "sha256":  "21d28192334494a40296d1d0a488c89d66691ff3c617ea69a617dd9711602c1e"
+                    }
+}

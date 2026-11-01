@@ -9,14 +9,16 @@
 | 2 | Tách khâu đọc tài liệu, chia đoạn và lọc sơ bộ. | [095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9) | ![Tách các khâu xử lý thành các file riêng biệt](./ảnh/tuan-02-tach-engine-xu-ly.png) | Tách cấu hình, engine xử lý và rule IPI. |
 | 3 | Tổ chức luồng AI phát hiện, xác minh và quản lý bằng chứng. | [095a16b9](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/095a16b9) | ![Kết quả trả về](./ảnh/tuan-02-ket-qua-test.png) | Sử dụng 2 model SLM để phân tích và kiểm tra kết quả tài liệu có IPI. |
 | 4 | Đồng bộ lockfile phục vụ CI trên Node 22. | [5d51aca1](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/5d51aca1) | Không có ảnh. | Không có ghi chú |
-| 5 | Cập nhật tài liệu, giao diện và nội dung tiếng Anh. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385)<br>[c6c91f0d](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c6c91f0d) | Không có ảnh. | Cập nhật tài liệu, prompt bằng tiếng anh để các mô hình SLM hiểu rõ ngữ cảnh hơn. |
+| 5 | Cập nhật tài liệu, giao diện và nội dung tiếng Anh. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385)<br>[c6c91f0d](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c6c91f0d) | Không có ảnh. | Chuẩn hóa nội dung và prompt tiếng Anh phục vụ thử nghiệm; chưa xác nhận cải thiện khả năng hiểu ngữ cảnh. |
 | 6 | Tăng độ bao phủ các đoạn tài liệu (chunk) được AI phân tích. | [50232385](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/50232385) | ![Tăng độ bao phủ và lấy mẫu từ nhiều vị trí](./ảnh/tuan-02-tang-do-bao-phu-chunk.png) | Ưu tiên chunk đáng ngờ, bổ sung các đoạn lân cận và lấy mẫu ở nhiều vị trí; hỗ trợ chế độ balanced và deep. |
-| 7 | Mở rộng bộ rule lọc sơ bộ và thêm dữ liệu đối chứng. | Chưa commit | Không có ảnh. | Sửa rule DAN khỏi bắt tên người; thêm rule tiếng Việt và dấu hiệu thao túng câu trả lời. |
-| 8 | Đổi cách kết luận một vòng thành 3 trạng thái rõ ràng. | Chưa commit | Không có ảnh. | Phát hiện IPI / Chưa phát hiện IPI / Cần xem xét. Rule chỉ tạo nghi vấn, không tự kết luận độc hại. |
-| 9 | Sửa đọc file HTML để không mất chỉ dẫn ẩn trong comment. | Chưa commit | Không có ảnh. | Giữ nguyên mã HTML thô, đồng thời có bản text phụ để đọc nội dung. |
-| 10 | Đo luồng quét thật với model local trên bộ mẫu nhỏ. | Chưa commit | Không có ảnh. | 10 ca chẩn đoán; chưa đủ để kết luận độ chính xác chung. |
-| 11 | Thử nhiều cách hỏi model; giữ cấu hình mặc định cũ. | Chưa commit | Không có ảnh. | Prompt/schema mới chưa đạt cổng nên chưa bật mặc định; chưa thêm vòng phản biện. |
-| 12 | Cập nhật giao diện và chuẩn bị dữ liệu fine-tune Verifier. | Chưa commit | Không có ảnh. | Giao diện hiện 3 kết luận và lỗi xử lý riêng. 20 nhãn ngữ cảnh đã rà soát; chưa huấn luyện. |
+| 7 | Mở rộng bộ rule lọc sơ bộ và thêm dữ liệu đối chứng. | [c044185f](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c044185f) | Không có ảnh. | Sửa rule DAN khỏi bắt tên người; thêm rule tiếng Việt và dấu hiệu thao túng câu trả lời. |
+| 8 | Đổi cách kết luận một vòng thành 3 trạng thái rõ ràng. | [c044185f](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c044185f) | Không có ảnh. | Phát hiện IPI / Chưa phát hiện IPI / Cần xem xét. Rule chỉ tạo nghi vấn, không tự kết luận độc hại. |
+| 9 | Sửa đọc file HTML để không mất chỉ dẫn ẩn trong comment. | [c044185f](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c044185f) | Không có ảnh. | Giữ nguyên mã HTML thô, đồng thời có bản text phụ để đọc nội dung. |
+| 10 | Đo luồng quét thật với model local trên bộ mẫu nhỏ. | [c044185f](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c044185f) | Không có ảnh. | 10 ca chẩn đoán; chưa đủ để kết luận độ chính xác chung. |
+| 11 | Thử nhiều cách hỏi model; giữ cấu hình mặc định cũ. | [c044185f](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c044185f) | Không có ảnh. | Prompt/schema mới chưa đạt cổng nên chưa bật mặc định; chưa thêm vòng phản biện. |
+| 12 | Cập nhật giao diện và chuẩn bị dữ liệu fine-tune Verifier. | [c044185f](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/c044185f) | Không có ảnh. | Giao diện hiện 3 kết luận và lỗi xử lý riêng. 20 nhãn ngữ cảnh đã rà soát; thêm 30 mẫu nháp đang chờ duyệt; chưa huấn luyện. |
+| 13 | Chẩn đoán lỗi trích dẫn trên file Word demo. | Chưa commit | Không có ảnh trong nhật ký. | Deep Scan vẫn lỗi; ứng viên rút gọn giải thích chưa đạt nên chưa áp dụng. |
+| 14 | Nâng luồng Agent: prompt, split-batch recovery, NeedsReviewKind. | Chưa commit | Không có ảnh. | 367 test đạt, typecheck/lint sạch. Chưa đo model thực tế, không claim tăng nhận diện. |
 
 ## Chi tiết nội dung công việc
 
@@ -38,11 +40,13 @@ Cập nhật `package-lock.json` trong commit sửa CI để đồng bộ thông
 
 ### 5. Cập nhật tài liệu và nội dung tiếng Anh
 
-Điều chỉnh `README.md`, manifest, giao diện React và phần kết nối Electron theo phạm vi IPI Scanner. Commit `c6c91f0d` chuyển nhiều nội dung giao diện, hướng dẫn, thông báo và prompt sang tiếng Anh để cách diễn đạt trong ứng dụng thống nhất hơn và cũng đồng thời tạo điều kiện cho mô hình SLM hiểu rõ ngữ cảnh hơn.
+Điều chỉnh `README.md`, manifest, giao diện React và phần kết nối Electron theo phạm vi IPI Scanner. Commit `c6c91f0d` chuyển nhiều nội dung giao diện, hướng dẫn, thông báo và prompt sang tiếng Anh để thống nhất cách diễn đạt và phục vụ thử nghiệm; chưa có phép đo chứng minh việc đổi ngôn ngữ giúp SLM hiểu ngữ cảnh tốt hơn.
+
+Từ ngày 24/10/2026, hướng dẫn, báo cáo, kế hoạch, ghi chú và chú thích mới dùng tiếng Việt. Giữ nguyên định danh kỹ thuật, dữ liệu và trích dẫn gốc khi cần đối chiếu; prompt tiếng Anh được giữ cho các thử nghiệm đã ghi rõ mục đích.
 
 ### 6. Tăng độ bao phủ các đoạn tài liệu (chunk) được AI phân tích.
 
-Điều chỉnh cơ chế lựa chọn chunk để AI phân tích được nhiều đoạn nội dung hơn trong tài liệu, đồng thời ưu tiên những đoạn có dấu hiệu đáng ngờ. Thay đổi giúp giảm số đoạn chưa được AI kiểm tra và hạn chế bỏ sót nội dung có nguy cơ chứa prompt injection.
+Điều chỉnh cơ chế lựa chọn chunk để AI phân tích được nhiều đoạn nội dung hơn trong tài liệu, đồng thời ưu tiên những đoạn có dấu hiệu đáng ngờ. Cơ chế lấy mẫu mở rộng các vị trí được xem, nhưng chưa chứng minh giảm bỏ sót IPI. Balanced chọn tối đa 12 chunk và Deep Scan chọn tối đa 24 chunk; tài liệu dài vẫn có thể chưa được AI đọc đầy đủ. Ví dụ file Word demo tạo 112 chunk, Deep Scan chỉ chọn 24/112 chunk.
 
 ### 7. Mở rộng rule lọc sơ bộ và dữ liệu đối chứng
 
@@ -74,12 +78,30 @@ Trước đây bước đọc HTML có thể bỏ comment, nên chỉ dẫn ẩn
 
 ### 12. Giao diện và chuẩn bị fine-tune
 
-Giao diện hiện 3 kết luận trên, tách riêng trạng thái xử lý (xong, lỗi model, hết thời gian, phản hồi sai). Đã soạn 20 mẫu nhãn chỉ dẫn/ngữ cảnh; sau khi rà soát cùng người dùng: 19 chấp nhận, 1 sửa. Có kế hoạch thử fine-tune một Verifier và môi trường lưu trên ổ E, nhưng **chưa huấn luyện** và chưa đổi model mặc định.
+Giao diện hiện 3 kết luận trên, tách riêng trạng thái xử lý (xong, lỗi model, hết thời gian, phản hồi sai). Đã soạn 20 mẫu nhãn chỉ dẫn/ngữ cảnh; sau khi rà soát cùng người dùng: 19 chấp nhận, 1 sửa. Đã chuẩn bị riêng 30 mẫu nháp mới cho Verifier, chưa duyệt hoàn tất và chưa xuất thành tập huấn luyện; bộ 20 mẫu trước giữ làm tham chiếu cách gán nhãn. Có kế hoạch thử fine-tune một Verifier và môi trường lưu trên ổ E, nhưng **chưa huấn luyện** và chưa đổi model mặc định.
+
+### 13. Chẩn đoán lỗi trích dẫn trên file Word demo
+
+File Word đọc được 80.041 ký tự, chia thành 112 chunk. Detector sinh trích dẫn không khớp nguyên văn nguồn nên pipeline dừng trước Verifier và trả **Cần xem xét**. Đã thử giới hạn phần giải thích ở 240 ký tự: một lượt Balanced hoàn thành cả hai model, nhưng Deep Scan vẫn lỗi trích dẫn. Đối chứng còn cho thấy bỏ sót tấn công và báo nhầm ví dụ tấn công được trích dẫn; vì vậy ứng viên chưa được áp dụng vào mặc định.
+
+Đã chạy đạt 46 kiểm thử policy/pipeline liên quan; đây là kiểm tra hành vi của code, không chứng minh chất lượng nhận diện của model. Phần chẩn đoán này đang ở thay đổi cục bộ, chưa commit. Xem [báo cáo chẩn đoán — tổng hợp](../docs/reports/tong-hop-hien-trang.md).
+
+### 14. Nâng luồng Agent (28/10/2026)
+
+**Prompt phân biệt người nhận:** REVIEW_CONTRACT phân biệt rõ 3 loại nội dung: chỉ dẫn cho AI (confirm), nhiệm vụ cho người (dismiss), và câu tấn công trích dẫn làm ví dụ (dismiss). Hướng dẫn rõ khi nào dùng `uncertain`: chỉ khi có bằng chứng ngượng nhưng không xác định được người nhận hoặc chủ đượng, phải nêu cụ thể thiếu gì.
+
+**Split-batch recovery:** Khi Detector chạm giới hạn sinh (`output_truncated`) và batch có ≥2 chunk, tự động chia batch thành 2 nửa nhỏ và thực hiện tiếp. Batch gốc bị ghi vào `batchFailures` để cảnh báo; batch nhỏ nếu thành công không ghi lỗi. Giảm bỏ sót tài liệu do model chạm giới hạn, đặc biệt với file dài.
+
+**NeedsReviewKind và verifierOnlyCount:** Thêm trường phân loại lý do cần xét thủ công: `conflict` (mâu thuẫn nội bộ), `uncertain_evidence` (bất định), `verifier_only` (chỉ Verifier phát hiện), `citation_failure` (bị ảnh hưởng bởi batch lỗi), `coverage_incomplete` (rule không có chunk tương ứng). Đếm riêng `verifierOnlyCount` trong `IpiCheckVerdict`. Lý do `needs_review` trong `conclude` được phân nhóm rõ thành tiếng Việt để UI hiển thị chính xác hơn. Pipeline gán `citation_failure` cho nghi vấn bị ảnh hưởng bởi batch lỗi JSON/citation/truncated sau khi cả hai agent hoàn thành.
+
+367 test đạt (tăng từ 359), typecheck/lint sạch. Chưa đo model thực tế; không claim tăng TP hay giảm FP.
 
 ## Kế hoạch tiếp theo
 
+- **Ưu tiên:** Đo luồng Agent nâng cấp với model thực tế trên bộ mẫu dev cũ (30 ca), giữ baseline cũ làm đối chứng; ghi precision/recall/FP trước–sau.
+- Thử mỗi request ít đoạn hơn và ràng buộc mã tham chiếu nguồn trong một thí nghiệm riêng, có đối chứng sạch/tấn công/ví dụ trích dẫn.
 - Cải thiện chất lượng vòng một (trích dẫn sai, bỏ sót, báo nhầm) trước khi thêm vòng phản biện.
 - Thêm vòng phản biện giữa 2 model khi đạt cổng đã ghi trong tài liệu; hiện chưa đạt.
 - Fine-tune một Verifier sau khi có dữ liệu đủ và bộ kiểm chứng độc lập; chưa train ở tuần này.
-- Giữ tập holdout độc lập; không lấy tập test để chỉnh rule hay prompt.
+- Chuẩn bị tập holdout độc lập (hiện chưa thu thập); khóa cấu hình trước khi kiểm thử, không lấy tập test để chỉnh rule hay prompt.
 

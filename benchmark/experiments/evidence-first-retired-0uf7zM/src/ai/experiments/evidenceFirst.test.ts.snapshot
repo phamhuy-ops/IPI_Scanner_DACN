@@ -1,0 +1,24 @@
+import { expect, it } from 'vitest';
+import { reviewSchema } from '../agents/document/reviewPolicy';
+import { SemanticChunk } from '../agents/document/types';
+import { evidenceFirstRequest } from './evidenceFirst';
+const source: SemanticChunk = { chunkId: 'chunk-1', fileName: 'document.txt', text: 'Dan Evans records a tennis score.', startLine: 1, endLine: 1, riskScore: 0, findingCount: 0, selectionReasons: [] };
+function canonical(value: unknown, key?: string): unknown {
+  if (Array.isArray(value)) return key === 'required' ? [...value].sort() : value.map(item => canonical(item));
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).sort(([a], [b]) => a.localeCompare(b)).map(([key, child]) => [key, canonical(child, key)]));
+  return value;
+}
+it('giữ nguyên mọi ràng buộc, enum và nguồn, chỉ đổi thứ tự giải thích trước stance', () => {
+  const body = { model: 'gemma3:1b', seed: 42, max_tokens: 1400, messages: [{ role: 'system', content: 'Original instructions' }, { role: 'user', content: source.text }],
+    response_format: { type: 'json_schema', json_schema: { schema: reviewSchema([source], []) } } };
+  const after = evidenceFirstRequest(body) as typeof body;
+  expect(canonical(after)).toEqual(canonical(body));
+  const schema = after.response_format.json_schema.schema as { properties: { discoveries: { items: { properties: object } } } };
+  expect(Object.keys(schema.properties.discoveries.items.properties)).toEqual(['chunkId', 'quote', 'reason', 'stance']);
+  expect(body.messages).toEqual(after.messages);
+  const original = body.response_format.json_schema.schema as typeof schema;
+  expect(Object.keys(original.properties.discoveries.items.properties)[0]).toBe('stance');
+});
+it('không đổi shape ngoài hợp đồng đang thử', () => {
+  expect(() => evidenceFirstRequest({ response_format: { type: 'json_object' } })).toThrow();
+});

@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-25",
+  "status": "downloaded_pending_review",
+  "files": [
+    {
+      "id": "vi-native-001",
+      "path": "benchmark\\data\\incoming\\public-vi-documents\\nguon-vi-v1\\huong-dan-cong-thong-tin-truong-hoc-ha-noi.pdf",
+      "source_page": "https://admintruong.hanoi.edu.vn/Tailieuhuongdancongthongtin.pdf",
+      "download_url": "https://admintruong.hanoi.edu.vn/Tailieuhuongdancongthongtin.pdf",
+      "sha256": "6e302b824b22c61cbf8dc5cf7f459e1ee643c7f46c85ac53efec71cfcedbdaf6",
+      "bytes": 4399875,
+      "parent_id": "hanoi-school-portal-guide",
+      "characters_utf16": 68317,
+      "reuse_permission": {
+        "status": "not_verified",
+        "license": null,
+        "note": "Nguồn chính thức/công khai không tự chứng minh quyền dùng lại cho train hoặc phát hành dataset."
+      },
+      "privacy_review": "pending",
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "id": "vi-native-002",
+      "path": "benchmark\\data\\incoming\\public-vi-documents\\nguon-vi-v1\\huong-dan-oms-vien-han-lam.pdf",
+      "source_page": "https://isi.vast.vn/OMS/upload/default/Tailieuhuongdan.pdf",
+      "download_url": "https://isi.vast.vn/OMS/upload/default/Tailieuhuongdan.pdf",
+      "sha256": "a0ef25216c3cd800c4fb2f222e84e601d8f4f1010a9b4e7ff456c413f93aa9fe",
+      "bytes": 1115102,
+      "parent_id": "vast-oms-guide",
+      "characters_utf16": 11456,
+      "reuse_permission": {
+        "status": "not_verified",
+        "license": null,
+        "note": "Nguồn chính thức/công khai không tự chứng minh quyền dùng lại cho train hoặc phát hành dataset."
+      },
+      "privacy_review": "pending",
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "id": "vi-native-003",
+      "path": "benchmark\\data\\incoming\\public-vi-documents\\nguon-vi-v1\\huong-dan-hoi-quy-van-thu-luu-tru-phu-tho.docx",
+      "source_page": "https://sonoivu.phutho.gov.vn/Chuyen-muc-tin/Chi-tiet-tin/tabid/92/title/4835/ctitle/3/language/vi-VN/Default.aspx",
+      "download_url": "https://sonoivu.phutho.gov.vn/portals/0/AttachFiles/2025/10/22/2025_10_22_9_54_30_638967236700145491_Tai%20lieu%20huong%20dan%20nghiep%20vu%20ctac%20Hoi%20Quy%20VTLT%2010.2025.docx",
+      "sha256": "faafd2847ddea591b62d66ff46af10626e7a79b48eff046bf8f47b9d10f2e561",
+      "bytes": 3801927,
+      "parent_id": "phutho-guide-4835",
+      "characters_utf16": 36605,
+      "reuse_permission": {
+        "status": "not_verified",
+        "license": null,
+        "note": "Nguồn chính thức/công khai không tự chứng minh quyền dùng lại cho train hoặc phát hành dataset."
+      },
+      "privacy_review": "pending",
+      "training_eligible": false,
+      "final_split": null
+    },
+    {
+      "id": "vi-native-006",
+      "path": "benchmark\\data\\incoming\\public-vi-documents\\nguon-vi-bo-sung-v1\\mau-xac-nhan-sinh-vien-hnue.docx",
+      "source_page": "https://smcs.hnue.edu.vn/bieu-mau-van-ban/bieu-mau-danh-cho-sinh-vien.html",
+      "download_url": "https://smcs.hnue.edu.vn/vanban_bieumau/sinhvien_bieumau/M%E1%BA%ABu%20X%C3%A1c%20nh%E1%BA%ADn%20SV%20%C4%91ang%20h%E1%BB%8Dc%20t%E1%BA%A1i%20tr%C6%B0%E1%BB%9Dng%20%28D%C3%A0nh%20cho%20SV%20c%C3%A1c%20Khoa%20%C4%91%C3%A0o%20t%E1%BA%A1o%29.docx",
+      "sha256": "9ff6bdcf9d234f603e1371a4958e4b899625ad3e7d8369038099d2189063bfe5",
+      "bytes": 1805320,
+      "parent_id": "hnue-form-current-student-faculties",
+      "characters_utf16": 1447,
+      "reuse_permission": {
+        "status": "not_verified",
+        "license": null,
+        "note": "Mẫu tải công khai chưa chứng minh quyền dùng lại cho train/phát hành dataset."
+      },
+      "privacy_review": "pending",
+      "training_eligible": false,
+      "final_split": null
+    }
+  ],
+  "pdf_files": 2,
+  "docx_files": 2,
+  "original_document_groups": 4,
+  "extraction_ok": 4,
+  "total_bytes": 11122224,
+  "broken_candidates": [
+    {
+      "id": "vi-native-004",
+      "error": "HTTP 404: https://sontaythuong.quangngai.gov.vn/upload/2007044/20250908/vv%20tri%E1%BB%83n%20khai%20h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20v%C3%A0%20d%E1%BA%A1y%20h%E1%BB%8Dc%20t%C3%A0i%20li%E1%BB%87u%20GD%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng%20c%E1%BA%A5p%20THCS.docx"
+    },
+    {
+      "id": "vi-native-005",
+      "error": "HTTP 404: https://sontaythuong.quangngai.gov.vn/upload/2007044/20250908/vv%20tri%E1%BB%83n%20khai%20h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20v%C3%A0%20d%E1%BA%A1y%20h%E1%BB%8Dc%20t%C3%A0i%20li%E1%BB%87u%20GD%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng%20c%E1%BA%A5p%20THCS.pdf"
+    }
+  ],
+  "manual_installation_required": false,
+  "manual_download_required": false,
+  "rights_approved_for_training": 0,
+  "annotation_records_added": 0,
+  "runtime_changed": false,
+  "model_called": false,
+  "priority_one_complete": false
+}

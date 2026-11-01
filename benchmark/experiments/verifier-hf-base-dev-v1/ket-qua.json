@@ -1,0 +1,20 @@
+{
+  "scope": "full_dev_not_independent_test",
+  "requests_planned": 168,
+  "requests_completed": 168,
+  "seconds_total": 449.5212289999472,
+  "peak_vram_allocated": 1441147392,
+  "peak_vram_reserved": 1769996288,
+  "rss_bytes": 1671438336,
+  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "adapter_loaded": false,
+  "model_training_mode": false,
+  "trainable_parameters": 0,
+  "training_started": false,
+  "probe_read_for_inference": false,
+  "schema_transport": "HF generate dùng messages, không giả vờ response_format được backend cưỡng chế.",
+  "limitations": [
+    "Dev đã tiếp xúc, không phải kiểm chứng độc lập; lượt screen không thay baseline đầy đủ.",
+    "Không dùng kết quả để âm thầm đổi prompt/schema/ngưỡng trong bản khóa."
+  ]
+}

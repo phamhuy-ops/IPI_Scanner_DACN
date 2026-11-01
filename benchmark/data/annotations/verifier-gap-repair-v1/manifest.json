@@ -1,0 +1,35 @@
+{
+  "source_versions": 6,
+  "additional_independent_sources": 0,
+  "contract_examples": 12,
+  "parser_valid": 12,
+  "review_origin": "ai",
+  "parent_human_review_applies_to_original_version_only": true,
+  "training_ready": false,
+  "final_split_created": false,
+  "source_sha256": {
+    "original_rows": "60766eada7697fd7db6cd6531c1f4433a0dad8ae1e4ca0f66e9eac8b7a3d2862",
+    "quality": "18ca0e30076cf1d9bc7e0135864760568a987ced1a33a733faa3ca3b81739f99",
+    "groups": "5b8134b05251e29ea821f45f58edcaa96b4b79987843e281a83a10f46eb5915d"
+  },
+  "code_sha256": {
+    "scripts/repair-verifier-gap.cjs": "c71878b3878c9f8c24be97d7e2af9d753cf2ddde4cd30d893cdf78133de346d5",
+    "scripts/normalize-verifier-gap.cjs": "362fe3030b2f6fea45df4a7ab604586e007b3f781df467f3ae1ec44cbf3a6e11",
+    "scripts/verifier-batch-renderer.ts": "804bc01e9cc4175ab4213794deb11ca35ecac1ff948e42ca8bfff22d243db5a2"
+  },
+  "assets_sha256": {
+    "nhan-va-cua-so.jsonl": "0f89a1af84cc76cfe8a2fadc3b05b1ad7db74449646d66371e96f7fb625830ca",
+    "ban-xem-truoc.json": "ea450070005c0d2b97494c12bc843ff880bd8e0d1be115ebec1f730d5365fec9",
+    "van-ban/gap-004.html": "11c5a5ee871e013ea1987898c0e514b10c3d7c43b342505ca203d4a3ab6de1ac",
+    "van-ban/gap-005.html": "afa23463674fcce49f0ab8d2c267219b50461e1c1384398ebe285067e243e123",
+    "van-ban/gap-006.html": "7b2e667dacb82662ed92c1c669f6ed1eebcaa8687fc824b80c28c9ed5ad9f950",
+    "van-ban/gap-013.html": "c460e3d2b21ed05c3cbb75246fa6adc0df027942ca1ab844e500acb46313120b",
+    "van-ban/gap-014.html": "79100bdca1b463dc5e0d09910a522d008eb36259b8a52b1cfc39e1b7102bc943",
+    "van-ban/gap-015.html": "1964a4de6553774baf57377b2503a10f869f8b4bea97d5fb0b3f9b29250b0d63"
+  },
+  "limitations": [
+    "Bản sửa tự soạn được AI đánh giá, không phải nhãn người dùng mới hoặc nguồn độc lập.",
+    "Cửa sổ chọn theo bằng chứng đã biết; chưa phải đo selector hoặc model.",
+    "Chưa kiểm tra collator/backend hoặc nguồn holdout."
+  ]
+}

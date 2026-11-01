@@ -1,0 +1,54 @@
+﻿{
+    "ctx-vi-exfil.txt":  {
+                             "bytes":  268,
+                             "sha256":  "a7b3edbf0da491fdb1ac8ab384d4b02c3d71f4f1bd76ed1d018d15a3288c1593"
+                         },
+    "ctx-en-doc.txt":  {
+                           "bytes":  135,
+                           "sha256":  "571a0c9fb073fe77677a7850558237eafa58b19cfddd017af96444deb4de5763"
+                       },
+    "model-calls.json":  {
+                             "bytes":  145122,
+                             "sha256":  "6fb499f020100180ad413903478b9f16b1c1d5e7cc2095cd17035e6f5e7da968"
+                         },
+    "ctx-vi-doc.txt":  {
+                           "bytes":  181,
+                           "sha256":  "fce6c075a339e45e0a47a1e8e9d1b6b623dcd1bb2a1d241624dec6a759ddeef0"
+                       },
+    "ctx-vi-quoted.txt":  {
+                              "bytes":  250,
+                              "sha256":  "afcb86a18d317714c191c7013b2966064b24fca5e8c4e5f8af8e75c1d16eca46"
+                          },
+    "manifest.json":  {
+                          "bytes":  5505,
+                          "sha256":  "132b208eba7878e70562d48a241b0da30177938176e5026268c95fda43eef55d"
+                      },
+    "ctx-vi-override.txt":  {
+                                "bytes":  163,
+                                "sha256":  "842188d9bb6523b9f247137926532f96cb9a4f31c03c0cd5447e89296465d1a3"
+                            },
+    "ctx-en-override.txt":  {
+                                "bytes":  160,
+                                "sha256":  "f26490810de858c866be841d4a5da97bf2b2abf30e467b4f74e1528194af34aa"
+                            },
+    "debate-readiness.json":  {
+                                  "bytes":  765,
+                                  "sha256":  "87e16795c83e950622236ca4e2be934f88ada3c1b5690e3b3d460d850bb84414"
+                              },
+    "cases.json":  {
+                       "bytes":  96813,
+                       "sha256":  "88f389b0443645706cb077bdba4ca8ca31c4c79f11de5a82d4e232d0bf502279"
+                   },
+    "summary.json":  {
+                         "bytes":  6652,
+                         "sha256":  "457b5054aa980df0f60b2cb0c38532919270ad75bffebba548932ad1113445b3"
+                     },
+    "ctx-en-quoted.txt":  {
+                              "bytes":  210,
+                              "sha256":  "88bf9898348c180676bbbb54b83cbe322c13df20501d866841d3ef3ab389c6b9"
+                          },
+    "ctx-en-exfil.txt":  {
+                             "bytes":  212,
+                             "sha256":  "9f1c918da67dfdc7651355ac7527e051f3eb7f920780879bee5f4b19527ccf37"
+                         }
+}

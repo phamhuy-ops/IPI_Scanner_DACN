@@ -1,0 +1,358 @@
+{
+  "version": "verifier-split-readiness-v1",
+  "status": "complete",
+  "records": 178,
+  "parent_ids": 131,
+  "groups": 71,
+  "stances": {
+    "confirmed": 59,
+    "uncertain": 34,
+    "dismissed": 85
+  },
+  "languages": {
+    "vi": 73,
+    "en": 98,
+    "zh": 4,
+    "en-vi": 3
+  },
+  "formats": {
+    ".txt": 150,
+    ".html": 12,
+    ".md": 16
+  },
+  "reviewer_scopes": {
+    "human_visible_source": 45,
+    "human_stance_mechanical_span": 27,
+    "parent_stance_human_context_human_presented_context": 7,
+    "parent_stance_human_context_ai": 8,
+    "ai_visible_context": 91
+  },
+  "by_source": {
+    "verifier-batch-v1": {
+      "records": 30,
+      "parents": 30,
+      "stances": {
+        "confirmed": 12,
+        "uncertain": 6,
+        "dismissed": 12
+      },
+      "addressees": {
+        "assistant": 16,
+        "unclear": 6,
+        "human": 8
+      },
+      "languages": {
+        "vi": 15,
+        "en": 15
+      }
+    },
+    "verifier-vietnamese-v1": {
+      "records": 15,
+      "parents": 15,
+      "stances": {
+        "confirmed": 5,
+        "uncertain": 5,
+        "dismissed": 5
+      },
+      "addressees": {
+        "assistant": 8,
+        "unclear": 5,
+        "human": 2
+      },
+      "languages": {
+        "vi": 15
+      }
+    },
+    "leolee99/NotInject": {
+      "records": 27,
+      "parents": 27,
+      "stances": {
+        "dismissed": 27
+      },
+      "addressees": {
+        "assistant": 15,
+        "human": 6,
+        "unclear": 6
+      },
+      "languages": {
+        "zh": 4,
+        "en": 23
+      }
+    },
+    "treycsa/realistic-prompt-injections": {
+      "records": 12,
+      "parents": 12,
+      "stances": {
+        "confirmed": 5,
+        "dismissed": 7
+      },
+      "addressees": {
+        "assistant": 6,
+        "human": 4,
+        "none": 1,
+        "unclear": 1
+      },
+      "languages": {
+        "en": 12
+      }
+    },
+    "verifier-gap-v1": {
+      "records": 15,
+      "parents": 15,
+      "stances": {
+        "confirmed": 5,
+        "dismissed": 5,
+        "uncertain": 5
+      },
+      "addressees": {
+        "assistant": 10,
+        "unclear": 5
+      },
+      "languages": {
+        "vi": 9,
+        "en": 6
+      }
+    },
+    "uiuc-kang-lab/InjecAgent": {
+      "records": 30,
+      "parents": 18,
+      "stances": {
+        "uncertain": 12,
+        "confirmed": 18
+      },
+      "addressees": {
+        "unclear": 12,
+        "assistant": 18
+      },
+      "languages": {
+        "en": 30
+      }
+    },
+    "vi.wikipedia.org+authored_variants": {
+      "records": 30,
+      "parents": 6,
+      "stances": {
+        "dismissed": 18,
+        "confirmed": 6,
+        "uncertain": 6
+      },
+      "addressees": {
+        "none": 6,
+        "assistant": 12,
+        "human": 6,
+        "unclear": 6
+      },
+      "languages": {
+        "vi": 30
+      }
+    },
+    "captured_energy_excerpt": {
+      "records": 1,
+      "parents": 1,
+      "stances": {
+        "dismissed": 1
+      },
+      "addressees": {
+        "none": 1
+      },
+      "languages": {
+        "vi": 1
+      }
+    },
+    "authored_context_controls": {
+      "records": 6,
+      "parents": 2,
+      "stances": {
+        "confirmed": 2,
+        "dismissed": 4
+      },
+      "addressees": {
+        "assistant": 4,
+        "human": 2
+      },
+      "languages": {
+        "en": 3,
+        "vi": 3
+      }
+    },
+    "python/cpython": {
+      "records": 6,
+      "parents": 6,
+      "stances": {
+        "dismissed": 6
+      },
+      "addressees": {
+        "human": 6
+      },
+      "languages": {
+        "en": 6
+      }
+    },
+    "python/cpython+authored_injection": {
+      "records": 6,
+      "parents": 6,
+      "stances": {
+        "confirmed": 6
+      },
+      "addressees": {
+        "assistant": 6
+      },
+      "languages": {
+        "en": 3,
+        "en-vi": 3
+      }
+    }
+  },
+  "language_stance_cells": {
+    "vi": {
+      "confirmed": 22,
+      "uncertain": 17,
+      "dismissed": 34
+    },
+    "en": {
+      "dismissed": 47,
+      "confirmed": 34,
+      "uncertain": 17
+    },
+    "zh": {
+      "dismissed": 4
+    },
+    "en-vi": {
+      "confirmed": 3
+    }
+  },
+  "uncertain_by_source": {
+    "verifier-batch-v1": 6,
+    "verifier-vietnamese-v1": 5,
+    "verifier-gap-v1": 5,
+    "uiuc-kang-lab/InjecAgent": 12,
+    "vi.wikipedia.org+authored_variants": 6
+  },
+  "human_by_source": {
+    "verifier-batch-v1": 8,
+    "verifier-vietnamese-v1": 2,
+    "leolee99/NotInject": 6,
+    "treycsa/realistic-prompt-injections": 4,
+    "vi.wikipedia.org+authored_variants": 6,
+    "authored_context_controls": 2,
+    "python/cpython": 6
+  },
+  "long_record_texts_at_least_8000_utf16": 34,
+  "long_labeled_inputs_at_least_8000_utf16": 0,
+  "selected_window_only": 39,
+  "repaired_versions_not_new_parents": 6,
+  "group_constraints": {
+    "unassigned_role_review_required": 27,
+    "retain_development_regression": 44
+  },
+  "largest_groups": [
+    {
+      "id": "group-dec241d54188",
+      "size": 30,
+      "constraint": "unassigned_role_review_required"
+    },
+    {
+      "id": "group-a3a99a1400d9",
+      "size": 9,
+      "constraint": "unassigned_role_review_required"
+    },
+    {
+      "id": "group-718746dc9fa6",
+      "size": 6,
+      "constraint": "retain_development_regression"
+    },
+    {
+      "id": "group-07d26ec5d37f",
+      "size": 6,
+      "constraint": "retain_development_regression"
+    },
+    {
+      "id": "group-0531e4c2d607",
+      "size": 5,
+      "constraint": "unassigned_role_review_required"
+    }
+  ],
+  "numerical_gaps_only": {
+    "additional_records_lower_bound": 122,
+    "additional_groups_lower_bound": 29,
+    "stance_targets": {
+      "confirmed": 120,
+      "dismissed": 120,
+      "uncertain": 60
+    },
+    "additional_stances": {
+      "confirmed": 61,
+      "dismissed": 35,
+      "uncertain": 26
+    },
+    "additional_monolingual_vi_for_300_target": 47,
+    "additional_monolingual_en_for_300_target": 22,
+    "note": "Chỉ khoảng thiếu theo ngân sách cũ; không chứng minh thêm đúng số lượng là đủ. Bản Anh–Việt không đếm hai lần."
+  },
+  "approved_training_records": 0,
+  "can_prepare_group_constraints": true,
+  "can_finalize_train_dev": false,
+  "verified_untouched_holdout_records": 0,
+  "final_split_created": false,
+  "training_ready": false,
+  "native_pdf_docx_doc_files": [],
+  "native_file_scope": [
+    "benchmark/data",
+    "benchmark/fixtures"
+  ],
+  "model_called": false,
+  "runtime_changed": false,
+  "inputs_sha256": {
+    "benchmark/data/annotations/verifier-batch-v1/mau-cho-duyet.jsonl": "c2eadfc93b7643b6a91931003c8ab1e8a55e83a0fcfa26cdf894f33d93156eac",
+    "benchmark/data/annotations/verifier-batch-v1/ket-qua-ra-soat.json": "11fc71038cbc14c63a55d0171be1d34fc3cb25b5da2aa6a6e8af078b2bbdebb8",
+    "benchmark/data/annotations/verifier-vietnamese-v1/mau-cho-duyet.jsonl": "630a45deef539dbf5a14b536d4cc12af6fc9b061357e15660f200233e01db5e5",
+    "benchmark/data/annotations/verifier-vietnamese-v1/ket-qua-ra-soat.json": "e741cff1e27e0b135b3e6ec4e66e5c81a98b099df25a70073a7a5214f362448d",
+    "benchmark/data/annotations/verifier-external-normalized-v1/nhan-va-bang-chung.jsonl": "c5dc9e3b621e21bf960c7f487c04bbe727728b55a7ce2ffc881086a66ecc46d4",
+    "benchmark/data/annotations/verifier-gap-repair-v1/ban-su-dung-hien-tai.json": "57752fd510b1ed5c13866f9184cd1610b66074d68dfc079cc654d29c90a457a3",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/nhan-va-cua-so.jsonl": "af9d21ece1690c71ffcd85d83b6bfb6d52aa9efd9160579d3ddb2c5cc351e963",
+    "benchmark/data/annotations/verifier-gap-repair-v1/nhan-va-cua-so.jsonl": "0f89a1af84cc76cfe8a2fadc3b05b1ad7db74449646d66371e96f7fb625830ca",
+    "benchmark/data/annotations/verifier-external-ai-v1/danh-gia-ai.json": "cfb3aa5316e8596ad6ae23552815d0d2b9e2083ebeaeb46be0eb6d3a7ca1a0c5",
+    "benchmark/data/annotations/verifier-external-ai-v1/mau-cho-duyet.jsonl": "90d350b141c6075592950b953ee748083733349ff7d6315da6f70660622d8a96",
+    "benchmark/data/annotations/verifier-vietnamese-articles-v1/danh-gia-ai.json": "dda5e0fa14f80a7009e36e1654e04c6c7f428a8a72710aa7ff949a3fc63b26cf",
+    "benchmark/data/annotations/verifier-vietnamese-articles-v1/mau-cho-duyet.jsonl": "59c63de518ba81099608dc260a876853e3aca75bb31c240cb4a3d9db6b6a0d7f",
+    "benchmark/data/annotations/verifier-addressee-context-v1/danh-gia-ai.json": "16e53500d683fd6ece3349810fa98369345631c4be486d4450365c268faf7a06",
+    "benchmark/data/annotations/verifier-addressee-context-v1/mau-cho-duyet.jsonl": "63c889ad5ffd08a8aed52daa86b654a1dea80b9d04732bd01a1e99cd49f8a3e4",
+    "benchmark/data/annotations/verifier-external-context-v1/danh-gia-ai.json": "733e56c7a2fd56422192fae39d06584c841a997fe8b76c0800e1ad8da3f3d70a",
+    "benchmark/data/annotations/verifier-external-context-v1/mau-cho-duyet.jsonl": "e140d7eab0c94e7721af9b67ac596e2d7024c594f82e5e4aa9e9464757956396",
+    "benchmark/experiments/verifier-corpus-overlap-v9/ket-qua.json": "dbcabc0cf2a04bbf5a2015348d2bb7cb38dcf9b14419ace072fdf277b350c237",
+    "benchmark/data/priority-one-dev-v2.json": "7c018bde4e4197beaa3f982fcc3172cebdb89347a9eeff0e17f5743f142ee07e",
+    "benchmark/experiments/verifier-finetune-pilot-v1/ke-hoach.json": "16dc9434ede4ecb3c926a2b6c08f5f79f7d15a8d6bb1596b514171b7a1116f92"
+  },
+  "code_sha256": "9942557ac6f70fff63adea10d819e31af47102f57f5ca44895e0ea8e4a7c8b24",
+  "blockers": [
+    "Chưa đủ mục tiêu 300 bản ghi/100 nhóm; số lượng không tự chứng minh chất lượng.",
+    "Nhóm dính baseline/dev phải giữ ràng buộc; không có cờ không đồng nghĩa untouched.",
+    "Chưa có PDF/DOCX thực tế đã kiểm chứng nguồn/quyền sử dụng trong phạm vi kiểm kê.",
+    "Nhãn tài liệu dài mới áp dụng cửa sổ; chưa chứng minh đủ ngữ cảnh toàn nguồn.",
+    "Chưa có holdout độc lập hoặc tập train/dev được duyệt và khóa."
+  ],
+  "limitations": [
+    "Đếm theo phiên bản/cửa sổ đang dùng, không gán nhãn lại hoặc xuất SFT.",
+    "Ràng buộc nhóm dùng heuristic v9, không loại hết rò rỉ ngữ nghĩa.",
+    "Không đọc tài liệu Downloads/private hoặc coi PDF/DOCX tự xuất từ text là nguồn mới."
+  ],
+  "frozen_input_snapshots": {
+    "benchmark/experiments/verifier-finetune-pilot-v1/ke-hoach.json": "benchmark/experiments/verifier-split-readiness-v1/ke-hoach-tai-thoi-diem-ra.json"
+  },
+  "validation": {
+    "node_tests_passed": 3
+  },
+  "native_document_intake": {
+    "path": "benchmark/data/incoming/public-vi-documents",
+    "suggested_initial_documents": 4,
+    "min_pdf": 2,
+    "min_docx": 2,
+    "min_publishers": 2,
+    "accepted_input": "File đủ quyền sử dụng hoặc URL công khai kèm nguồn/license",
+    "manual_software_installation_required": false,
+    "documents_received": 0,
+    "training_eligible": false
+  },
+  "priority_one_complete": false,
+  "next_action": "Thu thập 4–6 tài liệu Việt gốc có quyền sử dụng, gồm PDF/DOCX từ ít nhất hai nguồn; hash/kiểm tra extraction và nhóm trước gán nhãn. Không tạo split hoặc train từ 178 bản ghi hiện tại."
+}

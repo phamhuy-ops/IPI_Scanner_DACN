@@ -1,0 +1,30 @@
+{
+  "scope": "dev_screen_only_not_full_baseline",
+  "selected_source_ids": [
+    "verifier-batch-v1:vf-001",
+    "verifier-batch-v1:vf-003",
+    "verifier-batch-v1:vf-002",
+    "verifier-batch-v1:vf-007",
+    "verifier-batch-v1:vf-004",
+    "verifier-batch-v1:vf-008"
+  ],
+  "request_ids": [
+    "verifier-batch-v1:vf-001-whole_source",
+    "verifier-batch-v1:vf-001-none",
+    "verifier-batch-v1:vf-002-whole_source",
+    "verifier-batch-v1:vf-002-none",
+    "verifier-batch-v1:vf-003-whole_source",
+    "verifier-batch-v1:vf-003-none",
+    "verifier-batch-v1:vf-004-whole_source",
+    "verifier-batch-v1:vf-004-none",
+    "verifier-batch-v1:vf-007-whole_source",
+    "verifier-batch-v1:vf-007-none",
+    "verifier-batch-v1:vf-008-whole_source",
+    "verifier-batch-v1:vf-008-none"
+  ],
+  "seed": 42,
+  "max_new_tokens": 256,
+  "selection": "Mẫu dev đầu tiên của mỗi stance/ngôn ngữ, không chọn theo output.",
+  "lock_sha256": "1c79ab451032e8d5bb4bcb0f1d4be78560b9322c8f85c2397dc2f033432b4672",
+  "script_sha256": "4f436633acccd71914281cf1a472940d05a7f1d641b30335e085509c1d20d873"
+}

@@ -88,6 +88,7 @@ function selectSemanticChunks(chunks, maxChunks = SEMANTIC_SCAN_PROFILES.balance
   for (const chunk of highRiskChunks) addChunk(selected, chunk, 'high-risk');
 
   for (const chunk of highRiskChunks) {
+    if (chunk.selectionReasons.includes('candidate-context')) continue;
     const items = byFile.get(groupKey(chunk)) || [];
     addChunk(selected, items[chunk.index - 1], 'neighbor-of-high-risk');
     addChunk(selected, items[chunk.index + 1], 'neighbor-of-high-risk');

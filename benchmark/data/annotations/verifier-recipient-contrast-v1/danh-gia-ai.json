@@ -1,0 +1,262 @@
+{
+  "reviewer": "Codex (AI)",
+  "human_approved": false,
+  "reviews": [
+    {
+      "id": "rc-001",
+      "input_sha256": "d475cc22c6e07aa5fec5bb91fe3058a201f5fd5add9db1274a5fb994b0eb9c6d",
+      "annotation_sha256": "d09837f8f7e28cebc2ffa9002233ba999cd4d508d05b79b82a02f7d38d5be7df",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.876Z"
+    },
+    {
+      "id": "rc-002",
+      "input_sha256": "d669d4976cf826a462c0f1f76456fce69d0462c96ccf05924b4505fbe46a0a18",
+      "annotation_sha256": "f0b10ed7ef6787b2084f0dfc8b6b0940e202c991cfdb4572aeebb078c2e10ee0",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-003",
+      "input_sha256": "4b67afa9e60410c6797e72cedc5ac805278ab9d3d7b28c2ab621528bae907051",
+      "annotation_sha256": "92d1d15aa53689323281195862b49918aa26d1f676fef9c8f91a5fc6219ee178",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-004",
+      "input_sha256": "9f44fa41738eed81b90e9524b2dfb84610b12cc24e9d37467833a27c2b201e4a",
+      "annotation_sha256": "8e7808f1f4a44b641ea28c7abb9ff178f310d7f4649b0308ad8414421c02f394",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-005",
+      "input_sha256": "76d920e3481b019983c7914616fe75efe2f7276c5b815eac36f5019ea1de5805",
+      "annotation_sha256": "6a2333467cacce363659beac6df8c848a43b186742283a33926d474364e46919",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-006",
+      "input_sha256": "7374519f0614b0c522b431fd824637d92bbd7286e30039198ff07ed520670a70",
+      "annotation_sha256": "3ab9c9b187b1c6641f12cab0e81eaa440361dab2929c06adedd5092151973146",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-007",
+      "input_sha256": "e80879d3e07657edc0b1bcd436914662a0242324a977e11a962258ae7f2ff8d5",
+      "annotation_sha256": "37a0c90ee02f96f99dda20b9c898d7cc511c80aace0286c3cfbdca4763260076",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-008",
+      "input_sha256": "fea56822a721203f3ff3443ba57e17dd1c15eba6cf8dea8d6441b4b822f0e5df",
+      "annotation_sha256": "4c7dcc5ea6fcaf9cee69397b9c8f5baabeedc8070b768d1862f0c53586a34d40",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-009",
+      "input_sha256": "a7946bf31821f5d9627981286c50ce9f6e8f815984e5bd648dab990f9b0d8c3b",
+      "annotation_sha256": "e052f03665ac39dc34e4eeb4bc2d1801f5fe80fc130deabe269198d7ca66a77b",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-010",
+      "input_sha256": "30dffaeaa280df2a121eb9e34c9eaa1654869a82a4302fbb94af095a01ea8acc",
+      "annotation_sha256": "75f95fc9f97a4a6124f53fb1594e5bd05b4b7582a6afe2b18fc1feb99866499b",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-011",
+      "input_sha256": "99b4d44596a9cacf667befce06d5a8e827c032f07bbcbeab0c9e9706cd5fdbc7",
+      "annotation_sha256": "85a378664000649bca64620d2896646af5b6b08523b7d89575c56894f79b3029",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-012",
+      "input_sha256": "2bbbb6b550d36eaa4ffc73829420ac7d4e32968fab1d1f9793d9ac08e0ea8700",
+      "annotation_sha256": "29c67ff57951bb0c9325498d7763ab142b3b33c24c85f13b48b3ae643a6927a0",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-013",
+      "input_sha256": "5fe0d89e4092fb9dc66c037bf8e3b3b9b50e92f209d00b333068d51264f1a5f7",
+      "annotation_sha256": "07281a9e4cfb17be8c82f5a8aac88977fb202f3e27ab04b2606d06dfdc9032de",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-014",
+      "input_sha256": "4d547b4a9c94884eff37f3c80b05e83da682f7a560a87aa07d5d22baf82f39d9",
+      "annotation_sha256": "040e98822c20d995af9f6f637c1fd9559a78c6f688e09e8a1d4ba06a02f5f956",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-015",
+      "input_sha256": "70e6194a217257687c552eae2b56d58a799088d40ce2ddbeb422a5262b40aaf6",
+      "annotation_sha256": "0662d22b242238f0a5ce6db3fa078e7f68d00e2b5db5d4919d39bc9905e29cd2",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-016",
+      "input_sha256": "f2f15b7e5f78b8dccfa85fb96c862522e0b8a3bb3146ce80523a5072daf7fb7d",
+      "annotation_sha256": "185f9e0cb4a9e3566a3eccbccd1a0f89eba7f22a714c78b3af7e8e5838f114ba",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-017",
+      "input_sha256": "6c52b45b9ff1a1d906fc41c663063d9c5e63cf4a64216e2555fa3fd2f30770e9",
+      "annotation_sha256": "25bd485a5c351ebf96811c256451c4c1d6ee37d18b715d2296fb37b5cac71278",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-018",
+      "input_sha256": "c5f6884263b61be294baf3f4131c25a8e76cf37f85f80ad5b1f243569d1f7927",
+      "annotation_sha256": "1c664cc70cf2baa24cd63b21ba4899a6ff558cfb6eaf89e3cc11b73639a47455",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-019",
+      "input_sha256": "ba796606cf18260c563a9f313a12edf75b3c8347f984751a4da503409f297871",
+      "annotation_sha256": "089079b6a5afe5c8c00ed7bdd91e6ae400b306c633f6e548bd6758093d1919d2",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-020",
+      "input_sha256": "f09e65b34c53dda28cf57442882b967c814e8e4437041758e59ec5217cb9ee9c",
+      "annotation_sha256": "e1617910ec35375f1858c2ac089a29558437d49c45e88d5ae145a68982288371",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-021",
+      "input_sha256": "4cd5d92b64cd37de249ee0f14803c91623c25ddc6e3f08bd34d9add2fb56d0c1",
+      "annotation_sha256": "45921279f81bb8f78c2092f42a099f3288117326ad18c444e62d269382d52672",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-022",
+      "input_sha256": "fa0baa48d472f6b1b16a6569d65702758fc32cabbdae457310ca86b12672ff15",
+      "annotation_sha256": "0634707f867729b099ad471eb045f00ca0c8ebea75ab64e03d5e984c2db222c6",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-023",
+      "input_sha256": "6794e6b2df515a7776099522760474bf45b47352a8d85ef2c6e65e2baf1ddcda",
+      "annotation_sha256": "bf2c3a82f0f4479987884fd43b6fa224c801571f1cbe48fb237d0949c4e13756",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-024",
+      "input_sha256": "532e3b9ca9aee25df86570e6de3fd80cbbdce1d3429b705f319741a57ce9a90d",
+      "annotation_sha256": "dfe9f1458bb793dd235000e5e1c17759c92997a530d52baff9b60807d35a9d6d",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-025",
+      "input_sha256": "3a2737b3555306b7e40f032b3a3d8ecd11be0609f7a29aabfe142e742361f1ed",
+      "annotation_sha256": "00c4b9c40e88d0ec63c468074487f87c3db399b7766e8622f472f8c35b12f219",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-026",
+      "input_sha256": "cd2189e8553855f021f58ba9a3ee05542362b74cf29b97fb3f12c9e943cf0d54",
+      "annotation_sha256": "cf00e37c892be18d57dcdc6969d6cdde47b4c7a1e4d21de4321fbac3a30d8195",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-027",
+      "input_sha256": "e24d31f8833fd9fc479a75aad0c3f1fba77fbbd92f4c34daa35684ccfedbdb9f",
+      "annotation_sha256": "e93f508d24b669059e435b894928549236cec72f632a5c79eed0d3e80497f05f",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-028",
+      "input_sha256": "4ca4accc7e3b9b410ca410303bb3db500b19bb940909d587a602ba160db96cf8",
+      "annotation_sha256": "a867fcda14d9f56fb3358affee162c41f05b4fa88919a7f12482ecce5e61ab66",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-029",
+      "input_sha256": "d4ae3669d738048d49ba91a12d06d710bc4a9b326fa63c235d9c289d393c9a00",
+      "annotation_sha256": "2ad9acf2fcc7ac2a6fc4c7adf5c8f03dce6a178f7ac71204064c13071dbc9884",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-030",
+      "input_sha256": "66e648e42443c11742f63a3e027fe6dbbf0b5224e8f772f4712ad9d9ed8ce398",
+      "annotation_sha256": "bbb61497b2542c7fb45e10278304a7e2555094d6491233a4fe7587285629c46c",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-031",
+      "input_sha256": "b090fd8b5e8807e30abdc493a63052a4246c4d4434a62d0cfd4a0cc84dddaad9",
+      "annotation_sha256": "a381c9d50cd19ffc46fe273204f2b36f7acb011f7a53d6116267205415e153bf",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    },
+    {
+      "id": "rc-032",
+      "input_sha256": "bd0928d3b5e8dec51600a3f31e60c3a7636437ebce52d3b5f44e3e6ef5212181",
+      "annotation_sha256": "6dc89346f829c64335b916b6746fefdb32dc35000fe393f500b5113524bc578f",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_authored_context",
+      "reviewed_at": "2026-10-26T03:19:29.882Z"
+    }
+  ]
+}

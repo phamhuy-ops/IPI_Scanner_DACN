@@ -1,0 +1,215 @@
+{
+  "scope": "Engine và policy thật; không phải model/pipeline/UI hoàn chỉnh.",
+  "checks_passed": 9,
+  "results": [
+    {
+      "position": "clean",
+      "profile": "balanced",
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "balanced",
+        "totalChunks": 62,
+        "aiReviewedChunks": 12,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 12,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 7600
+      },
+      "gold_selected": null,
+      "empty_suspicions_policy_verdict": "needs_review",
+      "issues": [
+        "Only 12/62 extracted chunks were selected for AI review."
+      ]
+    },
+    {
+      "position": "clean",
+      "profile": "deep",
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "deep",
+        "totalChunks": 62,
+        "aiReviewedChunks": 24,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 24,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 14000
+      },
+      "gold_selected": null,
+      "empty_suspicions_policy_verdict": "needs_review",
+      "issues": [
+        "Only 24/62 extracted chunks were selected for AI review."
+      ]
+    },
+    {
+      "position": "start",
+      "profile": "balanced",
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "balanced",
+        "totalChunks": 62,
+        "aiReviewedChunks": 12,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 12,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 7600
+      },
+      "gold_selected": true,
+      "empty_suspicions_policy_verdict": "needs_review",
+      "issues": [
+        "Only 12/62 extracted chunks were selected for AI review."
+      ]
+    },
+    {
+      "position": "start",
+      "profile": "deep",
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "deep",
+        "totalChunks": 62,
+        "aiReviewedChunks": 24,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 24,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 14000
+      },
+      "gold_selected": true,
+      "empty_suspicions_policy_verdict": "needs_review",
+      "issues": [
+        "Only 24/62 extracted chunks were selected for AI review."
+      ]
+    },
+    {
+      "position": "middle",
+      "profile": "balanced",
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "balanced",
+        "totalChunks": 62,
+        "aiReviewedChunks": 12,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 12,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 7600
+      },
+      "gold_selected": false,
+      "empty_suspicions_policy_verdict": "needs_review",
+      "issues": [
+        "Only 12/62 extracted chunks were selected for AI review."
+      ]
+    },
+    {
+      "position": "middle",
+      "profile": "deep",
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "deep",
+        "totalChunks": 62,
+        "aiReviewedChunks": 24,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 24,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 14000
+      },
+      "gold_selected": false,
+      "empty_suspicions_policy_verdict": "needs_review",
+      "issues": [
+        "Only 24/62 extracted chunks were selected for AI review."
+      ]
+    },
+    {
+      "position": "end",
+      "profile": "balanced",
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "balanced",
+        "totalChunks": 62,
+        "aiReviewedChunks": 12,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 12,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 7600
+      },
+      "gold_selected": true,
+      "empty_suspicions_policy_verdict": "needs_review",
+      "issues": [
+        "Only 12/62 extracted chunks were selected for AI review."
+      ]
+    },
+    {
+      "position": "end",
+      "profile": "deep",
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "deep",
+        "totalChunks": 62,
+        "aiReviewedChunks": 24,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 24,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 14000
+      },
+      "gold_selected": true,
+      "empty_suspicions_policy_verdict": "needs_review",
+      "issues": [
+        "Only 24/62 extracted chunks were selected for AI review."
+      ]
+    },
+    {
+      "position": "multi-file",
+      "profile": "balanced",
+      "files": 4,
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "balanced",
+        "totalChunks": 248,
+        "aiReviewedChunks": 12,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 12,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 7600
+      },
+      "empty_suspicions_policy_verdict": "needs_review",
+      "issues": [
+        "Only 12/248 extracted chunks were selected for AI review.",
+        "No selected text for document: C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\priority-one-coverage-Ruz9MN\\document-4.txt"
+      ]
+    }
+  ],
+  "limitations": [
+    "Văn bản dài tự soạn TXT, chưa DOCX/PDF/OCR.",
+    "Selected không đồng nghĩa hai model đã xử lý thành công.",
+    "Không chấm khả năng nhận diện IPI, không coi policy test là bằng chứng hiệu quả bảo mật."
+  ],
+  "artifact": "benchmark/results/priority-one-coverage-Ruz9MN",
+  "inputs_sha256": {
+    "document-1.txt": "0e08e640d11be5fe7d9444eb811e80bff4d2c6b7e9eabeabb6a55812128bab1e",
+    "document-2.txt": "c45a4f3b9e8d324082e84ec46d0e6a97642bda84da55d2ced300c48cba723f4d",
+    "document-3.txt": "38b06d15faf0c5d4654acd74380b73073db6fe681ddd17fedfa18db8ab7e949b",
+    "document-4.txt": "c6e408170a310217e1330a6707adc98a03ad98a0b553d9fa52dd21083cdf0a12"
+  },
+  "code_sha256": {
+    "scripts/check-priority-one-coverage.cjs": "7f9efa21cf84f79364bb7d7b64d4d756d0886abf7802b0fffcdb11e5a960515e",
+    "engine/scanner/ipi-doc-scan.js": "e98afbbd902b2cd056fce72a25cc7847cfb7a54071c6da13f9a119812b6186e3",
+    "engine/config/document-scan-config.js": "1baef48fce0a80997085062a8d796720897a1d4d04316f6a8d244cfee8df5214",
+    "engine/document/chunking/semantic-chunker.js": "12f3d701a1af78a1e77f47d035b1804f0b198e56f45d24986b524390c9a154e2",
+    "src/ai/agents/document/reviewPolicy.ts": "ce1d9beb517862d989925d9a204a38b710e06b1891a28f33494b84ece8500aed"
+  }
+}

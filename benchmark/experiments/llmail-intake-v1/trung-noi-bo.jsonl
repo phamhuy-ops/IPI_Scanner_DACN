@@ -1,0 +1,618 @@
+{"left": "llmail-phase2-003", "right": "llmail-phase2-005", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-003", "right": "llmail-phase2-006", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-005", "right": "llmail-phase2-006", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-005", "right": "llmail-phase2-007", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-003", "right": "llmail-phase2-007", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-006", "right": "llmail-phase2-007", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-005", "right": "llmail-phase2-008", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-007", "right": "llmail-phase2-008", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-003", "right": "llmail-phase2-008", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-006", "right": "llmail-phase2-008", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-005", "right": "llmail-phase2-009", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-008", "right": "llmail-phase2-009", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-007", "right": "llmail-phase2-009", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-003", "right": "llmail-phase2-009", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-006", "right": "llmail-phase2-009", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-005", "right": "llmail-phase2-010", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-008", "right": "llmail-phase2-010", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-009", "right": "llmail-phase2-010", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-007", "right": "llmail-phase2-010", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-003", "right": "llmail-phase2-010", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-006", "right": "llmail-phase2-010", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-012", "right": "llmail-phase2-014", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-014", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-015", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-015", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-017", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-017", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-017", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-018", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-018", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-018", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-018", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-019", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-019", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-019", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-019", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-019", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-020", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-020", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-020", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-020", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-020", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-020", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-020", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-021", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-021", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-021", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-021", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-021", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-021", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-021", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-021", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-022", "right": "llmail-phase2-023", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-024", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-012", "right": "llmail-phase2-024", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-024", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-024", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-024", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-024", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-024", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-024", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-024", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-025", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-025", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-025", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-013", "right": "llmail-phase2-025", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-025", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-025", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-025", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-026", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-026", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-026", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-026", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-026", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-026", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-026", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-026", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-026", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-026", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-012", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-013", "right": "llmail-phase2-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-013", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-013", "right": "llmail-phase2-032", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-032", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-032", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-032", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-031", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-031", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-033", "right": "llmail-phase2-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-031", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-033", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-034", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-013", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-032", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-033", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-035", "right": "llmail-phase2-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-034", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-035", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-031", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-033", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-036", "right": "llmail-phase2-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-013", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-032", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-031", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-033", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-034", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-035", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-037", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-036", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-031", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-033", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-034", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-035", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-037", "right": "llmail-phase2-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-031", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-033", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-034", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-035", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-037", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-038", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-039", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-036", "right": "llmail-phase2-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-022", "right": "llmail-phase2-041", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-023", "right": "llmail-phase2-041", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-036", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-012", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-039", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-031", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-035", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-037", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-038", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-040", "right": "llmail-phase2-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-031", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-033", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-039", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-034", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-035", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-037", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-038", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-040", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-036", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-036", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-042", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-033", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-043", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-011", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-017", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-018", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-019", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-031", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-034", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-035", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-037", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-038", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-040", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-039", "right": "llmail-phase2-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-020", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-021", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-045", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-phase2-036", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-042", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-016", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-025", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-028", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-030", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-033", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-043", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-014", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-015", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-024", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-026", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-027", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-029", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-035", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-037", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-038", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-phase2-040", "right": "llmail-phase2-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-001", "right": "llmail-fp-013", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-009", "right": "llmail-fp-021", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-004", "right": "llmail-fp-022", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-005", "right": "llmail-fp-023", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-006", "right": "llmail-fp-024", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-007", "right": "llmail-fp-025", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-008", "right": "llmail-fp-026", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-013", "right": "llmail-fp-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-001", "right": "llmail-fp-027", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-014", "right": "llmail-fp-028", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-015", "right": "llmail-fp-029", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-016", "right": "llmail-fp-030", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-017", "right": "llmail-fp-031", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-018", "right": "llmail-fp-032", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-019", "right": "llmail-fp-033", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-020", "right": "llmail-fp-034", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-001", "right": "llmail-fp-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-027", "right": "llmail-fp-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-013", "right": "llmail-fp-035", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-002", "right": "llmail-fp-036", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-003", "right": "llmail-fp-037", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-010", "right": "llmail-fp-038", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-011", "right": "llmail-fp-039", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-012", "right": "llmail-fp-040", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-009", "right": "llmail-fp-041", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-021", "right": "llmail-fp-041", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-004", "right": "llmail-fp-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-022", "right": "llmail-fp-042", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-005", "right": "llmail-fp-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-023", "right": "llmail-fp-043", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-006", "right": "llmail-fp-044", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-024", "right": "llmail-fp-044", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-025", "right": "llmail-fp-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-007", "right": "llmail-fp-045", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-026", "right": "llmail-fp-046", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-008", "right": "llmail-fp-046", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-027", "right": "llmail-fp-047", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-013", "right": "llmail-fp-047", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-001", "right": "llmail-fp-047", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-035", "right": "llmail-fp-047", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-028", "right": "llmail-fp-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-014", "right": "llmail-fp-048", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-029", "right": "llmail-fp-049", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-015", "right": "llmail-fp-049", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-030", "right": "llmail-fp-050", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-016", "right": "llmail-fp-050", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-017", "right": "llmail-fp-051", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-031", "right": "llmail-fp-051", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-018", "right": "llmail-fp-052", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-032", "right": "llmail-fp-052", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-033", "right": "llmail-fp-053", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-019", "right": "llmail-fp-053", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-034", "right": "llmail-fp-054", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-020", "right": "llmail-fp-054", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-001", "right": "llmail-fp-055", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-035", "right": "llmail-fp-055", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-027", "right": "llmail-fp-055", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-013", "right": "llmail-fp-055", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-047", "right": "llmail-fp-055", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-002", "right": "llmail-fp-056", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-036", "right": "llmail-fp-056", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-003", "right": "llmail-fp-057", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-037", "right": "llmail-fp-057", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-038", "right": "llmail-fp-058", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-010", "right": "llmail-fp-058", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-011", "right": "llmail-fp-059", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-039", "right": "llmail-fp-059", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-012", "right": "llmail-fp-060", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-040", "right": "llmail-fp-060", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-009", "right": "llmail-fp-061", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-041", "right": "llmail-fp-061", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-021", "right": "llmail-fp-061", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-042", "right": "llmail-fp-062", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-004", "right": "llmail-fp-062", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-022", "right": "llmail-fp-062", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-043", "right": "llmail-fp-063", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-005", "right": "llmail-fp-063", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-023", "right": "llmail-fp-063", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-044", "right": "llmail-fp-064", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-006", "right": "llmail-fp-064", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-024", "right": "llmail-fp-064", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-025", "right": "llmail-fp-065", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-045", "right": "llmail-fp-065", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-007", "right": "llmail-fp-065", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-026", "right": "llmail-fp-066", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-046", "right": "llmail-fp-066", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-008", "right": "llmail-fp-066", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-027", "right": "llmail-fp-067", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-013", "right": "llmail-fp-067", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-047", "right": "llmail-fp-067", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-055", "right": "llmail-fp-067", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-001", "right": "llmail-fp-067", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-035", "right": "llmail-fp-067", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-028", "right": "llmail-fp-068", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-014", "right": "llmail-fp-068", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-048", "right": "llmail-fp-068", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-049", "right": "llmail-fp-069", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-029", "right": "llmail-fp-069", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-015", "right": "llmail-fp-069", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-050", "right": "llmail-fp-070", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-030", "right": "llmail-fp-070", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-016", "right": "llmail-fp-070", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-017", "right": "llmail-fp-071", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-051", "right": "llmail-fp-071", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-031", "right": "llmail-fp-071", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-018", "right": "llmail-fp-072", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-052", "right": "llmail-fp-072", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-032", "right": "llmail-fp-072", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-081", "right": "llmail-fp-091", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-086", "right": "llmail-fp-095", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-081", "right": "llmail-fp-095", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-091", "right": "llmail-fp-095", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-116", "right": "llmail-fp-126", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-110", "right": "llmail-fp-132", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-081", "right": "llmail-fp-135", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-091", "right": "llmail-fp-135", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-095", "right": "llmail-fp-135", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-116", "right": "llmail-fp-140", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-123", "right": "llmail-fp-142", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-114", "right": "llmail-fp-143", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-116", "right": "llmail-fp-145", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-126", "right": "llmail-fp-145", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-140", "right": "llmail-fp-145", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-117", "right": "llmail-fp-146", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-118", "right": "llmail-fp-147", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-119", "right": "llmail-fp-148", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-120", "right": "llmail-fp-149", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-121", "right": "llmail-fp-150", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-122", "right": "llmail-fp-151", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-123", "right": "llmail-fp-152", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-142", "right": "llmail-fp-152", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-124", "right": "llmail-fp-153", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-125", "right": "llmail-fp-154", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-145", "right": "llmail-fp-155", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-116", "right": "llmail-fp-155", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-126", "right": "llmail-fp-155", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-127", "right": "llmail-fp-156", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-158", "right": "llmail-fp-159", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-130", "right": "llmail-fp-159", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-145", "right": "llmail-fp-160", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-116", "right": "llmail-fp-160", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-140", "right": "llmail-fp-160", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-099", "right": "llmail-fp-161", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-100", "right": "llmail-fp-162", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-101", "right": "llmail-fp-163", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-102", "right": "llmail-fp-164", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-103", "right": "llmail-fp-165", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-128", "right": "llmail-fp-166", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-129", "right": "llmail-fp-167", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-130", "right": "llmail-fp-168", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-159", "right": "llmail-fp-168", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-131", "right": "llmail-fp-169", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-132", "right": "llmail-fp-170", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-110", "right": "llmail-fp-170", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-133", "right": "llmail-fp-171", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-134", "right": "llmail-fp-172", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-135", "right": "llmail-fp-173", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-081", "right": "llmail-fp-173", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-091", "right": "llmail-fp-173", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-095", "right": "llmail-fp-173", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-136", "right": "llmail-fp-174", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-137", "right": "llmail-fp-175", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-138", "right": "llmail-fp-176", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-139", "right": "llmail-fp-177", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-140", "right": "llmail-fp-178", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-145", "right": "llmail-fp-178", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-116", "right": "llmail-fp-178", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-160", "right": "llmail-fp-178", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-141", "right": "llmail-fp-179", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-142", "right": "llmail-fp-180", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-152", "right": "llmail-fp-180", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-123", "right": "llmail-fp-180", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-143", "right": "llmail-fp-181", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-114", "right": "llmail-fp-181", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-144", "right": "llmail-fp-182", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-145", "right": "llmail-fp-183", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-116", "right": "llmail-fp-183", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-155", "right": "llmail-fp-183", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-126", "right": "llmail-fp-183", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-178", "right": "llmail-fp-183", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-160", "right": "llmail-fp-183", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-140", "right": "llmail-fp-183", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-146", "right": "llmail-fp-184", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-117", "right": "llmail-fp-184", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-147", "right": "llmail-fp-185", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-118", "right": "llmail-fp-185", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-148", "right": "llmail-fp-186", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-119", "right": "llmail-fp-186", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-149", "right": "llmail-fp-187", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-120", "right": "llmail-fp-187", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-150", "right": "llmail-fp-188", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-121", "right": "llmail-fp-188", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-151", "right": "llmail-fp-189", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-122", "right": "llmail-fp-189", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-152", "right": "llmail-fp-190", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-123", "right": "llmail-fp-190", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-180", "right": "llmail-fp-190", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-142", "right": "llmail-fp-190", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-153", "right": "llmail-fp-191", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-124", "right": "llmail-fp-191", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-154", "right": "llmail-fp-192", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-125", "right": "llmail-fp-192", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-155", "right": "llmail-fp-193", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-145", "right": "llmail-fp-193", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-116", "right": "llmail-fp-193", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-183", "right": "llmail-fp-193", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-126", "right": "llmail-fp-193", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-156", "right": "llmail-fp-194", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-127", "right": "llmail-fp-194", "reasons": ["shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-157", "right": "llmail-fp-195", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-158", "right": "llmail-fp-196", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-159", "right": "llmail-fp-196", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-159", "right": "llmail-fp-197", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-196", "right": "llmail-fp-197", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-158", "right": "llmail-fp-197", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-130", "right": "llmail-fp-197", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-168", "right": "llmail-fp-197", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-160", "right": "llmail-fp-198", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-145", "right": "llmail-fp-198", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-178", "right": "llmail-fp-198", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-116", "right": "llmail-fp-198", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-183", "right": "llmail-fp-198", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-140", "right": "llmail-fp-198", "reasons": ["shared_12_token_passage"]}
+{"left": "llmail-fp-161", "right": "llmail-fp-199", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-099", "right": "llmail-fp-199", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-162", "right": "llmail-fp-200", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-100", "right": "llmail-fp-200", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-163", "right": "llmail-fp-201", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-101", "right": "llmail-fp-201", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-164", "right": "llmail-fp-202", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-102", "right": "llmail-fp-202", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-165", "right": "llmail-fp-203", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}
+{"left": "llmail-fp-103", "right": "llmail-fp-203", "reasons": ["normalized_exact", "shared_12_token_passage", "trigram_jaccard_0.8"]}

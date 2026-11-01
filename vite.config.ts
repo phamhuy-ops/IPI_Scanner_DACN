@@ -1,8 +1,11 @@
 import path from 'node:path';
+import { createRequire } from 'node:module';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import electron from 'vite-plugin-electron';
 import renderer from 'vite-plugin-electron-renderer';
+
+createRequire(import.meta.url)('./scripts/check-engines.js');
 
 export default defineConfig({
   plugins: [

@@ -1,0 +1,83 @@
+{
+  "repository": "https://github.com/OEVIETNAM/markdown-vietnamese",
+  "revision": "9dc578935b93ab0de69051d65be837b9e08cb572",
+  "retrieved_at": "2026-10-26T04:34:05.082Z",
+  "upstream": "https://github.com/mattcone/markdown-guide",
+  "community_translation_not_official_endorsement": true,
+  "text_license_declared": "CC-BY-SA-4.0",
+  "code_license_separate": "MIT",
+  "license_evidence": [
+    "README.md",
+    "LICENSE",
+    "LICENSE-CODE"
+  ],
+  "attribution_file": "GHI-CONG.md",
+  "assets": {
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/OEVIETNAM/markdown-vietnamese/9dc578935b93ab0de69051d65be837b9e08cb572/README.md",
+      "bytes": 1616,
+      "sha256": "709e0ce5e5d1048c5ab220e63b9b4f9fe0a44ae3976974e731cc24c41e800ce0",
+      "git_blob_sha": "2fbab61a74bd025162470de075be92d5d6126d4d"
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/OEVIETNAM/markdown-vietnamese/9dc578935b93ab0de69051d65be837b9e08cb572/LICENSE",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "git_blob_sha": "2d58298e6eda10e7204abb52722efbc840db2390"
+    },
+    "LICENSE-CODE": {
+      "url": "https://raw.githubusercontent.com/OEVIETNAM/markdown-vietnamese/9dc578935b93ab0de69051d65be837b9e08cb572/LICENSE-CODE",
+      "bytes": 1071,
+      "sha256": "122e2a8a9d9a99a75bc28ae89091876fe910978dc6177f6cf7afd600fc9700ab",
+      "git_blob_sha": "d355996160e818fbf6deaf762cd23e901d441223"
+    },
+    "TRANSLATION_STATUS.md": {
+      "url": "https://raw.githubusercontent.com/OEVIETNAM/markdown-vietnamese/9dc578935b93ab0de69051d65be837b9e08cb572/TRANSLATION_STATUS.md",
+      "bytes": 3591,
+      "sha256": "4b07996d920e7abe8699ce5f3d3f953337c18364fcb32548b8c3a7862656c0f8",
+      "git_blob_sha": "f3d0c5c369f2e5b14e22e2c11b71f48f69fed2db"
+    },
+    "_basic-syntax/headings.md": {
+      "url": "https://raw.githubusercontent.com/OEVIETNAM/markdown-vietnamese/9dc578935b93ab0de69051d65be837b9e08cb572/_basic-syntax/headings.md",
+      "bytes": 6156,
+      "sha256": "28d9951c3c4a230f4ba156853e52d3cfea127b28f82ff7e5bed9e2e9352f7a06",
+      "git_blob_sha": "c2ae61362092a8aa91de693804223e336c611e1b"
+    },
+    "_basic-syntax/code.md": {
+      "url": "https://raw.githubusercontent.com/OEVIETNAM/markdown-vietnamese/9dc578935b93ab0de69051d65be837b9e08cb572/_basic-syntax/code.md",
+      "bytes": 3084,
+      "sha256": "9f0d9fe71b1be99a4a8827ff4250e112312d0abb3c9ba40635a859ae07f910bb",
+      "git_blob_sha": "80b831a17891ec4a5a7a1fc880a036ba827464be"
+    },
+    "_basic-syntax/links.md": {
+      "url": "https://raw.githubusercontent.com/OEVIETNAM/markdown-vietnamese/9dc578935b93ab0de69051d65be837b9e08cb572/_basic-syntax/links.md",
+      "bytes": 11665,
+      "sha256": "392ef9cc846cc90a5e45bb4962f365e4e1944d34c9e7ad7460be10821bc35480",
+      "git_blob_sha": "0e6ac3dd121db8d657d32e07da250e18e366d856"
+    },
+    "_basic-syntax/blockquotes.md": {
+      "url": "https://raw.githubusercontent.com/OEVIETNAM/markdown-vietnamese/9dc578935b93ab0de69051d65be837b9e08cb572/_basic-syntax/blockquotes.md",
+      "bytes": 5887,
+      "sha256": "a491f9ceb33a40291f533d13586e3ccdf8757aad3521de64c92981acfdbc2e19",
+      "git_blob_sha": "9982465cfaf0c40139cdb44f773679a8d9607d6b"
+    },
+    "_basic-syntax/escaping-characters.md": {
+      "url": "https://raw.githubusercontent.com/OEVIETNAM/markdown-vietnamese/9dc578935b93ab0de69051d65be837b9e08cb572/_basic-syntax/escaping-characters.md",
+      "bytes": 2333,
+      "sha256": "f513789ab7082f95fcb3c66912d2bea41f87869fd7c6769b808ecd64cae044a8",
+      "git_blob_sha": "e4be1e71fb7c860c4d1954ad6a586d2c3f50cf94"
+    },
+    "_basic-syntax/html.md": {
+      "url": "https://raw.githubusercontent.com/OEVIETNAM/markdown-vietnamese/9dc578935b93ab0de69051d65be837b9e08cb572/_basic-syntax/html.md",
+      "bytes": 1721,
+      "sha256": "0b61982331147757c044d78452932bae34dbee8fd7b4d130d7699098347412a2",
+      "git_blob_sha": "9105ba2492e0934974dd6ccab4df3f4f05c8d4dd"
+    }
+  },
+  "bytes_saved": 141476,
+  "training_eligible": false,
+  "independent_holdout_verified": false,
+  "source_code_executed": false,
+  "model_called": false,
+  "code_sha256": "d554cff85be1ef173b5e5817a40b0948e537fb498101e69c6ca70f9a4ab68562"
+}

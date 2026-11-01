@@ -1,0 +1,94 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "sequence_tokens": 2048,
+  "steps_requested": 1,
+  "steps": [
+    {
+      "step": 1,
+      "loss": 3.5345582962036133,
+      "grad_norm": 23.386638641357422,
+      "seconds": 5.328531700011808
+    }
+  ],
+  "fixture": "fresh_synthetic_resource_only",
+  "dev_or_holdout_used_for_updates": false,
+  "pilot_training_started": false,
+  "training_ready": false,
+  "runtime_changed": false,
+  "save_reload_verified": true,
+  "config": {
+    "nf4": true,
+    "double_quant": true,
+    "dtype": "float16",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "micro_batch_size": 1,
+    "gradient_checkpointing": true,
+    "use_reentrant": false,
+    "attention": "sdpa",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "seed": 42,
+    "cpu_offload": false,
+    "loss_mode": "completion",
+    "grad_scaler_initial_scale": 1024
+  },
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "bitsandbytes": "0.48.1",
+    "accelerate": "1.10.1"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "capability": [
+      8,
+      6
+    ],
+    "total_bytes": 4294443008,
+    "free_before_load": 3455791924
+  },
+  "fixture_sha256": "0984f3ba62d74ed2919feb4384a7c781537c7f9e00b46f5c41c34a1abbefaa6c",
+  "load_seconds": 5.418521200015675,
+  "trainable_parameters": 1089536,
+  "device_map": {
+    "": "0"
+  },
+  "supervised_tokens": 11,
+  "last_loss_before_backward": 3.5345582962036133,
+  "peak_torch_allocated_bytes": 2873040896,
+  "peak_torch_reserved_bytes": 3290431488,
+  "free_after_steps": 125514548,
+  "process_memory": {
+    "rss": 1862066176,
+    "vms": 7312662528,
+    "num_page_faults": 1315884,
+    "peak_wset": 3961409536,
+    "wset": 1862066176,
+    "peak_paged_pool": 21573920,
+    "paged_pool": 9534128,
+    "peak_nonpaged_pool": 109408,
+    "nonpaged_pool": 109408,
+    "pagefile": 7312662528,
+    "peak_pagefile": 9995104256,
+    "private": 7312662528
+  },
+  "adapter_path": "E:\\IPI-Training\\checkpoints\\technical-only-2048-1-completion-v3",
+  "status": "passed_technical_only",
+  "code_sha256": {
+    "smoke_verifier_gpu.py": "99efa71e690295e286fc4d04b43543d39d79db1b7182a1b67d8d26c963b6ec82",
+    "verifier_collator.py": "594bf13412567aef5c9439241de5dbdcdb7fbfd7cd3f1cd40c644aaeaa79b478",
+    "audit_verifier_tokenizer.py": "90bb22dc2f4cb18ac168abe053f2bf87b1e295269b92a42ee3bd666488b42f9b",
+    "verifier_supervised_loss.py": "82254f7d8658f7370f86637e1a88d94cc17bdd05370da6713fd5a6a997a03e75"
+  },
+  "limitations": [
+    "Chỉ fixture kỹ thuật, không đo nhận diện IPI hoặc độ ổn định train dài.",
+    "Peak PyTorch không phải peak toàn GPU, không bao gồm mọi ứng dụng/driver."
+  ]
+}

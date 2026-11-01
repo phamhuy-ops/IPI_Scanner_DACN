@@ -1,0 +1,1429 @@
+1
+
+-- 1 of 63 --
+
+2
+MỤC LỤC
+GIỚI THIỆU VÀ BẮT ĐẦU NHANH ............................................................................................... 5
+NHỮNG ĐIỂM MỚI SO VỚI TÀI LIỆU CŨ ..................................................................................... 6
+CHƯƠNG 1. ĐĂNG NHẬP HỆ THỐNG ........................................................................................ 8
+1. Giới thiệu................................................................................................................................. 8
+2. Hướng dẫn đăng nhập.......................................................................................................... 8
+3. Đổi mật khẩu........................................................................................................................10
+4. Thông tin tài khoản MỚI.....................................................................................................10
+5. Đổi Email lấy mật khẩu MỚI...............................................................................................11
+CHƯƠNG 2. KHAI BÁO DANH MỤC ..........................................................................................12
+1. Khai báo chuyên mục (Mục 1.1) .......................................................................................12
+2. Khai báo cơ cấu tổ chức (Mục 1.2) ..................................................................................16
+3. Lịch công tác (Mục 1.3) MỚI .............................................................................................20
+CHƯƠNG 3. QUẢN LÝ TIN BÀI ...................................................................................................22
+1. Quản lý tin tức (Mục 2.1)....................................................................................................22
+2. Tin video (Mục 2.2) .............................................................................................................28
+3. Tin văn bản (Mục 2.3).........................................................................................................29
+4. Tin thư mời, Tin thông báo (Mục 2.4, 2.5) .......................................................................29
+5. Bài giảng Elearning (Mục 2.6) ...........................................................................................30
+6. Thời khóa biểu, Thông tin thi – tuyển sinh (Mục 2.7, 2.8) .............................................30
+7. Thủ tục hành chính (Mục 2.9) ...........................................................................................30
+8. Album kỷ yếu Online (Mục 2.10) .......................................................................................31
+9. Thông tin giới thiệu, Tin Emagazine, Bài giảng điện tử (Mục 2.11, 2.12, 2.14) ..........32
+10. Tin liên kết với đường link ngoài hệ thống (Mục 2.13) MỚI........................................32
+11. Chuyển tin bài giữa các chuyên mục (Mục 2.15) .........................................................33
+12. Quản lý bình luận (Mục 2.16) ..........................................................................................33
+13. Tin bài đã tạo (menu HỆ THỐNG) ..................................................................................34
+CHƯƠNG 4. CÁC KHỐI CHỨC NĂNG TÍCH HỢP .....................................................................35
+1. Thư viện hình ảnh (Mục 3.1)..............................................................................................35
+2. Bản đồ vị trí (Mục 3.2) ........................................................................................................36
+3. Dữ liệu tra cứu Excel (Mục 3.3) .........................................................................................36
+4. Website liên kết (Mục 3.4) .................................................................................................37
+
+-- 2 of 63 --
+
+3
+5. Quảng cáo (Mục 3.5) ..........................................................................................................37
+6. Thăm dò ý kiến (Mục 3.6) ..................................................................................................38
+7. Hỏi đáp (Mục 3.7) ...............................................................................................................39
+8. Bạn đọc liên hệ (Mục 3.8) ..................................................................................................39
+9. Kỷ yếu (Mục 3.9)..................................................................................................................39
+10. Khảo sát (Mục 3.10) MỚI.................................................................................................40
+11. Trang tin tiếng Anh (Mục 3.12) MỚI...............................................................................42
+CHƯƠNG 5. QUẢN LÝ THÔNG TIN ĐƠN VỊ - GIAO DIỆN .......................................................43
+1. Thông tin đơn vị (Mục 4.1).................................................................................................43
+2. Cấu hình giao diện (Mục 4.2) ............................................................................................44
+3. Quản lý Banner (Mục 4.3) ..................................................................................................45
+4. Quản lý vị trí khối chức năng và quảng cáo (Mục 4.4)...................................................47
+5. Ẩn hiện phần mềm tác nghiệp (Mục 4.5) ........................................................................47
+6. Quản lý khẩu hiệu - Chữ chạy (Mục 4.6) ..........................................................................47
+7. Giới thiệu đơn vị (Mục 4.7) MỚI ........................................................................................48
+CHƯƠNG 6. BÁO CÁO THỐNG KÊ WEBSITE ...........................................................................50
+CHƯƠNG 7. QUẢN TRỊ HỆ THỐNG ...........................................................................................51
+1. Nhóm người dùng (Mục 6.1) .............................................................................................51
+2. Phân quyền cho nhóm (Mục 6.2)......................................................................................51
+3. Quản trị người dùng (Mục 6.3) ..........................................................................................52
+4. Phân quyền người dùng – chuyên mục (Mục 6.4) .........................................................53
+5. Lịch sử truy cập (Mục 6.5) .................................................................................................54
+6. Cấu hình mặc định soạn tin bài (Mục 6.6) ......................................................................55
+7. Quản lý file hệ thống (Mục 6.7) MỚI.................................................................................55
+CHƯƠNG 8. TIN NỘI BỘ MỚI .....................................................................................................57
+1. Chuyên mục nội bộ (Mục 7.2) ...........................................................................................57
+2. Phân quyền đăng tin chuyên mục nội bộ (Mục 7.5) ......................................................57
+3. Tin bài nội bộ (Mục 7.3) .....................................................................................................57
+4. Thêm – Sửa tin trên Website vào chuyên mục nội bộ (Mục 7.4).................................58
+5. Các mục khác (Mục 7.1, 7.6, 7.7) .....................................................................................58
+CHƯƠNG 9. THI ĐUA KHEN THƯỞNG MỚI .............................................................................59
+1. Danh sách năm học (Mục 8.1) ..........................................................................................59
+2. Quản lý giải thưởng (Mục 8.2) ...........................................................................................59
+
+-- 3 of 63 --
+
+4
+3. Danh sách cá nhân đoạt giải (Mục 8.3) ...........................................................................59
+4. Quản lý slide ảnh và nội dung giới thiệu (Mục 8.4, 8.5) .................................................60
+PHỤ LỤC .......................................................................................................................................61
+A. Quy định về ảnh, file và dung lượng .................................................................................61
+B. Lấy link SRC trong mã nhúng YouTube / Facebook ......................................................61
+C. Quy định đặt tên ..................................................................................................................61
+D. Câu hỏi thường gặp ............................................................................................................62
+E. Hỗ trợ ....................................................................................................................................62
+
+-- 4 of 63 --
+
+5
+GIỚI THIỆU VÀ BẮT ĐẦU NHANH
+Tài liệu này hướng dẫn từng bước để thầy cô quản trị trang thông tin điện tử của nhà
+trường. Mỗi chức năng được viết theo cùng một khuôn: Dùng để làm gì → Vào ở đâu → Các
+bước làm → Lưu ý. Số mục (ví dụ 2.1) trùng đúng với số trên menu trái của trang quản trị,
+nên thầy cô có thể tra nhanh theo số.
+Ai nên đọc phần nào
+Vai trò Nên đọc
+Giáo viên, cán bộ được giao đăng tin Chương 1, Chương 3 (đặc biệt mục 2.1), Phụ
+lục
+Người phụ trách website của trường (quản trị viên) Toàn bộ tài liệu
+Ban giám hiệu (theo dõi, duyệt tin) Chương 1, mục 2.1 (phần Duyệt), Chương 6
+8 nhóm chức năng trên menu trái
+Nhóm Tên trên menu Dùng để
+1 Danh mục Tạo chuyên mục (khung chứa tin), cơ cấu tổ chức, lịch công tác
+2 Quản lý tin bài Đăng, sửa, duyệt, xoá mọi loại tin bài; quản lý bình luận
+3 Chức năng tích
+hợp
+Thư viện ảnh, bản đồ, tra cứu Excel, liên kết, quảng cáo, hỏi đáp, kỷ yếu,
+khảo sát, trang tiếng Anh
+4 Thông tin đơn vị
+- Giao diện
+Tên trường, logo, liên hệ, mẫu giao diện, banner, vị trí các khối, chữ chạy,
+trang giới thiệu
+5 Thống kê Số tin bài, lượt đọc, lượt truy cập
+6 Quản trị hệ
+thống
+Tạo tài khoản, phân quyền, nhật ký thao tác, cấu hình soạn tin, quản lý
+file
+7 Tin nội bộ Trang tin chỉ người có tài khoản mới đọc được
+8 Thi đua khen
+thưởng
+Năm học, giải thưởng, danh sách cá nhân đoạt giải
+Lộ trình cho trường mới bắt đầu — làm lần lượt theo thứ tự sau, mỗi bước chỉ vài phút:
+1. Đăng nhập lần đầu và đổi mật khẩu (Chương 1).
+2. Nhập thông tin đơn vị: tên trường, logo, địa chỉ, điện thoại (mục 4.1).
+3. Chọn mẫu giao diện và màu chủ đạo (mục 4.2), rồi đặt banner (mục 4.3).
+4. Tạo chuyên mục: Giới thiệu, Tin tức sự kiện, Văn bản, Thông báo… (mục 1.1).
+5. Đăng bài đầu tiên và tích Cho phép tin bài hiển thị (mục 2.1).
+6. Tạo tài khoản cho giáo viên và phân quyền chuyên mục (mục 6.1 → 6.4).
+Quy ước trong tài liệu
+ Chữ trong ngoặc vuông, ví dụ [Lưu tin], là tên nút bấm trên màn hình.
+
+-- 5 of 63 --
+
+6
+ Ô có dấu (*) đỏ là ô bắt buộc nhập.
+ Đường đi menu viết dạng 2. Quản lý tin bài → 2.1 Tin tức chung.
+ Nút màu xanh dương là thao tác chính (Lưu, Thêm mới, Tìm kiếm); đỏ là xoá (luôn có
+hộp hỏi lại); xanh lá là xuất Excel; trắng viền là Trở về, Đóng, Huỷ.
+NHỮNG ĐIỂM MỚI SO VỚI TÀI LIỆU CŨ
+Bản hướng dẫn này bổ sung các tính năng mới và các chức năng tài liệu cũ chưa hướng
+dẫn. Các mục này được đánh dấu — MỚI ở tiêu đề. Người đã quen hệ thống có thể đọc
+riêng các mục dưới đây.
+Chức năng Mục
+menu Điểm mới
+Chọn giao diện cho chuyên mục 1.1 18 mẫu trình bày khối chuyên mục giữa trang chủ, có ảnh
+minh hoạ và tự cảnh báo khi chưa đủ tin có ảnh
+Vị trí hiển thị chuyên mục 1.1 Bật/tắt vị trí bằng công tắc, thêm menu trên điện thoại,
+khoá chuyên mục bằng mật khẩu
+Sơ đồ cơ cấu tổ chức 1.2.4 Gắn ảnh sơ đồ cho từng phòng ban
+Lịch công tác 1.3 Lịch công tác hàng tuần dành cho cán bộ, nhập cùng
+nhóm cơ cấu tổ chức, kèm file
+Thông tin tài khoản HỆ
+THỐNG
+Bật bảo mật 2 lớp khi đăng nhập
+Đổi Email lấy mật khẩu HỆ
+THỐNG
+Xác thực email bằng mã gửi về hộp thư
+Tin liên kết ngoài hệ thống 2.13 Tin bấm vào mở thẳng bài gốc trên trang khác
+Soạn nội dung toàn màn hình 2 (mọi
+loại tin)
+Khung soạn rộng, dùng đúng phông chữ của web; trang
+soạn chia thẻ
+Kiểm tra tiêu đề, tóm tắt 2 (mọi
+loại tin)
+Bộ đếm ký tự, cảnh báo tiêu đề viết HOA, chuyển về chữ
+thường
+Mẫu nền khung bài viết 2 (mọi
+loại tin)
+28 mẫu nền (có ngày lễ), xem thử trên bài mẫu, web hiển
+thị đúng mẫu
+Xem trước bài viết 2 (mọi
+loại tin)
+Xem bài như trên web trước khi lưu, 3 khổ màn hình
+Danh sách tin 2 (mọi
+loại tin)
+Mở lần đầu hiện 30 tin mới nhất, tóm tắt 3 dòng + Xem
+thêm
+Trang soạn tin gọn, dễ nhìn 2 (mọi
+loại tin)
+Ô chọn ảnh đại diện mới, nút tải tệp đính kèm, ô duyệt tin
+đổi màu vàng/xanh, công tắc gửi tin eNetViet
+Nút hỗ trợ ở màn hình đăng
+nhập
+Đăng
+nhập
+Xem tài liệu hướng dẫn, hotline, nút Thông tin liên hệ mở
+trang liên hệ
+Khảo sát 3.10 Tạo phiếu khảo sát hài lòng, xem thống kê, xuất
+Excel/PDF
+Trang tin tiếng Anh 3.12 Chuyên mục và bản tin tiếng Anh riêng
+
+-- 6 of 63 --
+
+7
+Chức năng Mục
+menu Điểm mới
+Cấu hình giao diện 4.2 Kho giao diện mẫu xem trực quan, hướng dẫn nội dung
+cần nhập cho từng mẫu, giao diện quốc tang, kết nối
+EMC
+Quản lý banner 4.3 5 kiểu banner theo thứ tự ưu tiên, nhãn cho biết kiểu
+đang hiển thị
+Vị trí khối chức năng 4.4 Đặt tên hiển thị riêng cho khối, bật/tắt trên điện thoại
+Giới thiệu đơn vị 4.7 Trang giới thiệu: thông tin cơ bản, thành tích, cán bộ và
+học sinh tiêu biểu
+Phân quyền duyệt tin 6.3 Quyền duyệt hiển thị, chọn người duyệt riêng cho từng tài
+khoản
+Quản lý file hệ thống 6.7 Sao lưu, dọn file không dùng để giải phóng dung lượng
+Tin nội bộ 7 Trang tin chỉ người có tài khoản mới đọc được
+Thi đua khen thưởng 8 Trang vinh danh cá nhân đoạt giải theo năm học
+
+-- 7 of 63 --
+
+8
+CHƯƠNG 1. ĐĂNG NHẬP HỆ THỐNG
+1. Giới thiệu
+Trang thông tin điện tử giúp mỗi đơn vị có một website riêng với đầy đủ chức năng: giới
+thiệu, tin tức, văn bản, thư viện ảnh, video, bản đồ… và liên thông thông tin giữa các cấp
+quản lý (Trường – Phòng – Sở). Mỗi đơn vị được cấp một tài khoản quản trị cao nhất
+(admin); từ tài khoản này, đơn vị tự tạo và phân quyền cho nhiều người dùng khác cùng
+quản trị trang tin.
+2. Hướng dẫn đăng nhập
+Bước 1: Mở trình duyệt Google Chrome, Microsoft Edge hoặc Firefox (bản mới).
+Bước 2: Truy cập địa chỉ trang quản trị được cấp cho đơn vị. Màn hình ĐĂNG NHẬP HỆ
+THỐNG hiện ra.
+Các nút hỗ trợ ở đầu màn hình đăng nhập — MỚI: dòng trên có nút [Xem Tài Liệu Hướng
+Dẫn] (đọc tài liệu này ngay trên màn hình, có nút tải về) và [Giới thiệu]; dòng dưới là cụm
+Hotline hỗ trợ 1900 4740 kèm email cskh@qig.vn (bấm để gọi hoặc gửi thư) và nút [Thông
+tin liên hệ] (mở trang liên hệ của đơn vị cung cấp hệ thống ở tab mới).
+Hình 1.1 – Màn hình đăng nhập hệ thống
+Bước 3: Nhập đầy đủ thông tin tại khung đăng nhập:
+ Chọn đơn vị (*): gõ vài chữ tên đơn vị hoặc mã đơn vị, rồi chọn đúng đơn vị trong danh
+sách gợi ý.
+ Tên đăng nhập, Mật khẩu: nhập thông tin được cấp.
+ Mã bảo vệ (*): gõ các ký tự trong ảnh mã bên cạnh, không phân biệt chữ hoa/thường.
+Mã khó đọc thì bấm [Lấy mã khác].
+
+-- 8 of 63 --
+
+9
+ Ghi nhớ tài khoản: chỉ tích trên máy tính cá nhân; máy dùng chung không tích.
+Bước 4: Bấm nút [ĐĂNG NHẬP].
+Bước 5: Đăng nhập thành công, trang chủ quản trị hiển thị như sau:
+Hình 1.2 – Trang chủ quản trị
+Các thành phần trên trang chủ quản trị:
+ Tên đơn vị (góc trái trên): bấm để về trang chủ quản trị.
+ Tài khoản đang đăng nhập và nút [Xem hướng dẫn sử dụng].
+ Nút 9 chấm HỆ THỐNG (góc phải trên): Cập nhật thay đổi trang chủ, Trang nội bộ,
+Thông tin tài khoản, Trang công khai thông tin trường, Tin bài đã tạo, Đổi mật khẩu, Đổi
+Email lấy mật khẩu, Hướng dẫn hệ thống, Cập nhật lại cache trang quản trị, Thoát.
+ Menu chức năng 1 → 8: bấm số nhóm để mở menu con.
+ Các biểu đồ thống kê: số tin đã/chưa hiển thị, số tin theo người tạo, theo chuyên mục,
+dung lượng đã dùng.
+Lưu ý:
+ Lần đầu đăng nhập thành công, đơn vị cần đổi sang mật khẩu mới (mục 3 dưới đây).
+ Dùng xong, bấm HỆ THỐNG → Thoát, nhất là trên máy dùng chung.
+ Quên mật khẩu: tại màn hình đăng nhập bấm Quên mật khẩu hoặc email quản trị? →
+nhập Tên đăng nhập, Email đã đăng ký, Mã bảo vệ → bấm [Lấy mật khẩu]. Hướng dẫn
+sẽ gửi về email đã đăng ký. Tài khoản admin của đơn vị quên mật khẩu thì dùng email
+chính thức của đơn vị gửi đề nghị cấp lại về cskh@qig.vn.
+
+-- 9 of 63 --
+
+10
+3. Đổi mật khẩu
+Mô tả: Đổi mật khẩu đăng nhập của tài khoản đang dùng.
+Các bước thực hiện:
+Bước 1: Bấm nút 9 chấm HỆ THỐNG → chọn Đổi mật khẩu.
+Bước 2: Nhập mật khẩu hiện tại, mật khẩu mới và nhập lại mật khẩu mới.
+Hình 1.3 – Màn hình đổi mật khẩu
+Bước 3: Bấm [Cập nhật mật khẩu mới].
+Lưu ý: Mật khẩu phải dài ít nhất 8 ký tự, gồm chữ hoa, chữ thường, chữ số và ký tự đặc
+biệt, không chứa tên đăng nhập. Không chia sẻ mật khẩu cho người khác.
+4. Thông tin tài khoản MỚI
+Mô tả: Cập nhật thông tin cá nhân và bật bảo mật 2 lớp cho tài khoản.
+Các bước thực hiện:
+Bước 1: Bấm HỆ THỐNG → Thông tin tài khoản.
+Bước 2: Cập nhật Tên người dùng (*), Ngày sinh, Giới tính, Mã định danh cá nhân, Địa chỉ,
+Điện thoại, Ảnh đại diện (tỉ lệ 16:9, rộng tối đa 1000px). Bật Sử dụng bảo mật 2 lớp nếu
+muốn tăng an toàn khi đăng nhập.
+Hình 1.4 – Màn hình thông tin tài khoản
+
+-- 10 of 63 --
+
+11
+Bước 3: Bấm [Lưu].
+5. Đổi Email lấy mật khẩu MỚI
+Mô tả: Khai báo email dùng để lấy lại mật khẩu khi quên.
+Các bước thực hiện:
+Bước 1: Bấm HỆ THỐNG → Đổi Email lấy mật khẩu.
+Bước 2: Nhập email vào ô Email lấy lại mật khẩu → bấm [Lấy mã xác thực qua Email].
+Hình 1.5 – Màn hình đổi email lấy lại mật khẩu
+Bước 3: Mở hộp thư, lấy mã xác thực, nhập vào màn hình để hoàn tất.
+Lưu ý: Không dùng chung email này với người khác.
+
+-- 11 of 63 --
+
+12
+CHƯƠNG 2. KHAI BÁO DANH MỤC
+Đây là nhóm chức năng tạo và quản trị chuyên mục, cơ cấu tổ chức và lịch công tác. Phải
+có chuyên mục trước thì mới đăng được tin bài.
+1. Khai báo chuyên mục (Mục 1.1)
+Mô tả: Chuyên mục là các danh mục dùng để nhóm những bản tin cùng chủ đề, chia nhiều
+cấp. Chuyên mục cấp 1 hiển thị trên menu chính; người dùng chọn được vị trí và kiểu trình
+bày của từng chuyên mục.
+Các bước thực hiện:
+Bước 1: Bấm menu 1. Danh mục → 1.1 Khai báo chuyên mục. Danh sách chuyên mục hiển
+thị dạng cây (chuyên mục con thụt vào trong), kèm số tin bài và các vị trí hiển thị đang bật
+(dấu ✓).
+Hình 2.1 – Danh sách chuyên mục (Mục 1.1)
+Bước 2: Chọn thao tác trên danh sách:
+ Bấm nút tròn (+) ở đầu cột để thêm chuyên mục cấp 1.
+ Bấm dấu + ở đầu một dòng để thêm chuyên mục con của chuyên mục đó.
+ Bấm biểu tượng Sửa để sửa; bấm dấu ✕ ở cột Xóa để xóa.
+Bước 3: Hộp Cập nhật chuyên mục hiện ra. Nhập phần Thông tin chung:
+ Tên chuyên mục (*): ngắn gọn 2–5 từ, không viết in hoa toàn bộ.
+
+-- 12 of 63 --
+
+13
+ Kiểu tin (*): loại tin của chuyên mục (Tin tức, Văn bản, Video, Giới thiệu, Thông báo, Cơ
+cấu tổ chức…).
+ Chuyên mục cha: cấp 1 giữ Là chuyên mục gốc; cấp 2 chọn chuyên mục cấp 1 làm cha.
+ Thứ tự (*): số nhỏ đứng trước, chỉ so giữa các chuyên mục cùng cấp.
+ Link mặc định: chỉ nhập khi chuyên mục liên kết sang trang web bên ngoài.
+Hình 2.2 – Hộp Cập nhật chuyên mục, phần Thông tin chung
+Bước 4: Cuộn xuống phần Vị trí hiển thị, bật/tắt bằng công tắc:
+ Trang chủ: Giữa trang chủ, Bên phải trang chủ, Bên trái trang chủ (giao diện 3 cột).
+ Menu: Menu ngang (nên 5–6 chuyên mục cấp 1), Menu giữa trang chủ, Menu dọc (giao
+diện 3 cột).
+ Khác: Giao diện thiết bị mobile; Cho phép hiển thị (tắt là ẩn chuyên mục khỏi website).
+Hình 2.3 – Phần Vị trí hiển thị (màu xanh = đang bật)
+Bước 5: Chọn giao diện (kiểu hiển thị) cho chuyên mục — tính năng MỚI
+Mỗi chuyên mục hiển thị ở giữa trang chủ có thể chọn một trong 18 mẫu trình bày (Mẫu
+mặc định và Mẫu 1 → Mẫu 17), không phụ thuộc vào mẫu giao diện chung của website.
+Nhờ vậy chuyên mục nhiều ảnh (hoạt động, sự kiện) có thể trình bày dạng lưới ảnh, còn
+chuyên mục chỉ có chữ (thông báo, văn bản) trình bày dạng danh sách gọn.
+
+-- 13 of 63 --
+
+14
+1. Trước hết, ở Bước 4 phải bật Giữa trang chủ. Kiểu hiển thị chỉ có tác dụng với khối ở
+giữa trang chủ.
+2. Cuộn xuống khung KIỂU HIỂN THỊ KHỐI CHUYÊN MỤC Ở GIỮA TRANG CHỦ. Dòng
+Chuyên mục này: x/12 tin mới nhất có ảnh đại diện cho biết chuyên mục đang có bao
+nhiêu tin có ảnh — dùng số này để chọn mẫu phù hợp.
+Hình 2.3a – Khung Kiểu hiển thị khối chuyên mục, đang dùng mẫu mặc định
+3. Bấm vào ô mẫu đang chọn để mở danh sách. Mỗi mẫu có ảnh minh hoạ, tên, mô tả,
+gợi ý chuyên mục phù hợp và nhãn yêu cầu:
+ Nhãn xanh dương Cần ảnh (≥ N tin có ảnh): mẫu cần ít nhất N tin có ảnh đại diện.
+ Nhãn xanh lá Chỉ chữ — không cần ảnh: dùng được cho mọi chuyên mục.
+ Dòng cảnh báo vàng Mới có x tin có ảnh — trang chủ sẽ tạm hiện kiểu mặc định cho
+tới khi đủ ảnh: vẫn chọn được, nhưng website sẽ tự dùng mẫu mặc định cho đến khi
+chuyên mục có đủ tin có ảnh.
+Hình 2.3b – Danh sách mẫu: Mẫu mặc định, Mẫu 1, Mẫu 2 (kèm cảnh báo khi chưa đủ ảnh)
+Hình 2.3c – Mẫu 3 cần ảnh và Mẫu 4 chỉ chữ
+
+-- 14 of 63 --
+
+15
+Hình 2.3d – Mẫu 9 và Mẫu 10
+4. Bấm vào mẫu muốn dùng (thẻ được chọn có nền xanh nhạt).
+5. Nếu đơn vị không muốn tự chọn, giữ Mẫu mặc định theo kiểu giao diện đã chọn —
+khối sẽ trình bày theo mẫu giao diện chung của website (Mục 4.2).
+Bảng chọn nhanh 18 mẫu
+Mẫu Kiểu trình bày Yêu cầu
+ảnh Phù hợp với
+Mặc
+định
+Theo mẫu giao diện chung của website — Mọi chuyên mục
+1 Lưới ảnh 2 cột, tiêu đề đè lên ảnh ≥ 4 tin có
+ảnh
+Gương mặt tiêu biểu, vinh danh
+2 Tin chính nửa trái + 4 tin ảnh nhỏ nửa phải ≥ 2 Tin tức – sự kiện
+3 Hàng thẻ ảnh trượt ngang ≥ 3 Hoạt động, câu lạc bộ
+4 Danh sách tin chữ 2 cột Không
+cần
+Văn bản, thông báo, thư mời
+5 Tin tiêu điểm + 3 thẻ ảnh ≥ 2 Tin tức – sự kiện, hoạt động
+6 Tin tiêu điểm có tóm tắt + 4 thẻ ảnh ≥ 3 Tin nổi bật, nhiều ảnh
+7 Tin tiêu điểm + danh sách chữ ≥ 1 Chuyên mục ít ảnh
+8 Danh sách tin chữ 1 cột Không
+cần
+Thông báo, kế hoạch
+9 Hàng 4 thẻ ảnh ≥ 3 Thư viện ảnh sự kiện
+10 Tin ảnh xen kẽ trái – phải ≥ 2 Gương sáng, câu chuyện
+11 Dải ngang 3 cột: ảnh lớn + danh sách + ảnh
+nhỏ
+≥ 3 Khối rộng hết trang
+12 Danh sách tin tự cuộn Không
+cần
+Thông báo, tin ngắn cập nhật
+liên tục
+13 Truyền thông đa phương tiện (nền màu, tab
+chuyên mục con)
+≥ 2 Video, thư viện ảnh, truyền
+thông
+14 Báo điện tử 3 cột, chuyên mục con trên đầu ≥ 3 Tin tức có nhiều chuyên mục
+con
+15 Tin lớn nửa trái + lưới 4 ảnh ≥ 3 Tin tức, hoạt động nhiều ảnh
+
+-- 15 of 63 --
+
+16
+Mẫu Kiểu trình bày Yêu cầu
+ảnh Phù hợp với
+16 Tin chính + hàng 3 thẻ ảnh + tin chữ ≥ 3 Tin tức tổng hợp
+17 Tin lớn + thẻ danh sách 5 tin nổi ≥ 2 Tin tức tổng hợp
+Lưu ý khi chọn mẫu:
+ Chuyên mục văn bản, thông báo, thư mời (ít hoặc không có ảnh): chọn Mẫu 4, 8 hoặc
+12.
+ Chuyên mục tin tức – hoạt động có nhiều ảnh: chọn Mẫu 2, 5, 6, 15, 16 hoặc 17.
+ Mẫu 13, 14, 15, 16 có sẵn thanh tiêu đề riêng và hiển thị các chuyên mục con — nên
+dùng cho chuyên mục có chuyên mục con.
+ Các chuyên mục có kiểu tin đặc biệt (video, lịch công tác, cơ cấu tổ chức…) có khối
+hiển thị riêng nên không hiện khung chọn mẫu.
+ Muốn đưa tất cả chuyên mục về mẫu mặc định: bấm nút [Kiểu hiển thị về mặc định]
+trên thanh công cụ Mục 1.1.
+ Sau khi lưu, mở trang chủ website (bấm HỆ THỐNG → Cập nhật thay đổi trang chủ nếu
+chưa thấy thay đổi) để kiểm tra; chưa ưng thì mở lại chuyên mục và chọn mẫu khác.
+Bước 6: (Tuỳ chọn) Muốn khoá chuyên mục thì bật Khóa chuyên mục và nhập mật khẩu —
+người xem phải nhập đúng mới đọc được bài.
+Bước 7: Bấm [Lưu] để lưu chuyên mục; bấm [Hủy] để đóng không lưu.
+Lưu ý:
+ Chỉ xóa chuyên mục khi cột Số tin bài = 0. Còn tin thì chuyển tin đi trước (Mục 2.15).
+ Chuyên mục có Link mặc định hoặc kiểu tin Cơ cấu tổ chức sẽ không hiện khi soạn tin
+và khi phân quyền.
+ Tối đa 10 chuyên mục ở mỗi vị trí giữa, bên phải hoặc bên trái trang chủ.
+2. Khai báo cơ cấu tổ chức (Mục 1.2)
+Mô tả: Đưa thông tin phòng ban và cán bộ lên website. Trước tiên cần tạo ở Mục 1.1 một
+chuyên mục tên Cơ cấu tổ chức với kiểu tin Cơ cấu tổ chức (thường là con của chuyên mục
+Giới thiệu).
+2.1 Quản lý phòng ban (Mục 1.2.1)
+Bước 1: Bấm menu 1. Danh mục → 1.2 Cơ cấu tổ chức → 1.2.1 Quản lý phòng ban.
+
+-- 16 of 63 --
+
+17
+Hình 2.4 – Danh sách phòng ban
+Bước 2: Bấm nút tròn (+) trên thanh tiêu đề bảng để thêm mới phòng ban.
+Bước 3: Nhập Tên phòng ban (*), Hòm thư, Điện thoại, Fax, Mô tả, Địa chỉ, Vị trí hiển thị và
+bật Kích hoạt.
+Hình 2.5 – Form thêm mới phòng ban
+Bước 4: Bấm [Lưu].
+2.2 Quản lý chức vụ (Mục 1.2.2)
+Bước 1: Bấm menu 1. Danh mục → 1.2 Cơ cấu tổ chức → 1.2.2 Quản lý chức vụ.
+
+-- 17 of 63 --
+
+18
+Hình 2.6 – Danh sách chức vụ
+Bước 2: Bấm [+ Thêm mới].
+Bước 3: Nhập Tên chức vụ (*), Ghi chú và bật Kích hoạt.
+Hình 2.7 – Form thêm mới chức vụ
+Bước 4: Bấm [Lưu].
+2.3 Quản lý cán bộ (Mục 1.2.3)
+Bước 1: Bấm menu 1. Danh mục → 1.2 Cơ cấu tổ chức → 1.2.3 Quản lý cán bộ.
+
+-- 18 of 63 --
+
+19
+Hình 2.8 – Danh sách cán bộ (họ tên đã làm mờ)
+Bước 2: Chọn Phòng ban và bấm [Thêm mới].
+Bước 3: Nhập Họ tên cán bộ (*), Chức vụ (*), Phòng ban (*), Dân tộc, Thứ tự hiển thị, Địa
+chỉ, Di động, Ảnh đại diện (tỉ lệ 16:9) và bật Hiển thị.
+Hình 2.9 – Hộp Thêm mới cán bộ
+Bước 4: Bấm [Lưu].
+Lưu ý: Bấm [Xem trên web] để xem nhanh danh sách cán bộ trên website; [Xuất Excel] để
+tải danh sách.
+2.4 Sơ đồ cơ cấu tổ chức (Mục 1.2.4) MỚI
+Bước 1: Bấm menu 1.2.4 Sơ đồ cơ cấu tổ chức.
+Bước 2: Ở dòng phòng ban, bấm cột Thêm / Sửa / Xóa, chọn ảnh sơ đồ và lưu.
+Hình 2.10 – Sơ đồ cơ cấu tổ chức
+
+-- 19 of 63 --
+
+20
+3. Lịch công tác (Mục 1.3) MỚI
+3.1 Danh mục năm lịch công tác (Mục 1.3.1)
+Mô tả: Khai báo năm lịch công tác, làm một lần mỗi năm học.
+Bước 1: Bấm menu 1.3 Lịch công tác → 1.3.1 Danh mục năm lịch công tác.
+Bước 2: Bấm [+ Thêm mới], nhập Tên năm lịch công tác (*) và Mã năm (*), ví dụ 2026.
+Hình 2.11 – Thêm năm lịch công tác
+Bước 3: Bấm [Lưu].
+3.2 Lịch công tác hàng tuần (Mục 1.3.2)
+Mô tả: Đây là lịch công tác dành cho cán bộ, được nhập cùng nhóm với cơ cấu tổ chức
+(menu 1. Danh mục), mỗi tuần một lịch, hiển thị trên trang lịch công tác cán bộ của
+website. Khác với các tin đăng trong chuyên mục tin tức tên “Lịch công tác” (soạn ở Mục
+2.1).
+Bước 1: Bấm menu 1.3.2 Lịch công tác hàng tuần. Có thể lọc theo Năm học, Tháng, Tuần
+trong tháng, Tuần năm học.
+Hình 2.12 – Danh sách lịch công tác hàng tuần
+Bước 2: Bấm [+ Thêm mới].
+Bước 3: Nhập Tiêu đề (*), chọn Năm học (*), Tháng (*), Tuần theo tháng, Tuần năm học;
+bật Hiển thị. Bấm [Quản lý File] để đính kèm file lịch (Word, Excel, PDF, tối đa 500MB).
+
+-- 20 of 63 --
+
+21
+Hình 2.13 – Form thêm lịch công tác tuần
+Bước 4: Bấm [Lưu], rồi bấm [Xem trên web] để kiểm tra.
+Lưu ý: Muốn đặt mật khẩu cho trang lịch công tác cán bộ, bật tại Mục 4.1 Thông tin đơn vị.
+
+-- 21 of 63 --
+
+22
+CHƯƠNG 3. QUẢN LÝ TIN BÀI
+Đây là tính năng quan trọng và thường dùng nhất: đăng tin dưới dạng tin tức, video, văn
+bản, thông báo, bài giảng… Mọi loại tin soạn trên cùng một kiểu màn hình, nên chỉ cần nắm
+kỹ Mục 2.1.
+1. Quản lý tin tức (Mục 2.1)
+Mô tả: Tạo mới, sửa, xóa tin bài theo các chuyên mục đã khai báo.
+Các bước thực hiện thêm mới tin bài:
+Bước 1: Bấm menu 2. Quản lý tin bài → 2.1 Tin tức chung. Trên màn hình danh sách, bấm
+[Thêm mới].
+Hình 3.1 – Danh sách tin tức chung
+Bước 2: Màn hình thêm mới tin bài gồm 2 cột, mỗi nhóm thông tin nằm trong một thẻ: cột
+trái là Nội dung bản tin (thẻ Thông tin chung, Ảnh đại diện, Nội dung bài viết), cột phải là
+Khai báo các thuộc tính cho bản tin. Nhập đầy đủ thông tin, đặc biệt các ô có dấu (*).
+
+-- 22 of 63 --
+
+23
+Hình 3.2 – Màn hình thêm mới, chỉnh sửa nội dung tin bài
+❖ Nội dung bản tin
+ Kiểu tin (*): loại tin, ví dụ Tin tức. Danh sách chuyên mục sẽ lọc theo kiểu tin.
+ Chuyên mục (*): chủ đề của tin, đã tạo tại Mục 1.1.
+ Tiêu đề (*): khoảng 15 từ, tối đa 900 ký tự, viết hoa đúng chuẩn tiếng Việt, không viết
+hoa toàn bộ (có bộ đếm ký tự và cảnh báo viết HOA — xem mục 1.2).
+
+-- 23 of 63 --
+
+24
+ Tóm tắt: đoạn ngắn khoảng 50 từ (3–5 câu).
+ Ảnh đại diện — MỚI: ảnh hiển thị trên trang chủ, chuyên mục; tỉ lệ 16:9, rộng tối đa
+1000px. Thẻ ảnh gồm: bên trái là ô Chọn ảnh đại diện (bấm để tải ảnh lên hoặc chọn từ
+thư viện; đã có ảnh thì bấm vào ảnh để đổi); bên phải dòng trên là ô tích Cho phép hiển
+thị ảnh trên đầu bài viết (tích nếu muốn ảnh hiện ở đầu trang chi tiết) và nút [Xóa ảnh
+đại diện] (hỏi xác nhận trước khi xoá), dòng dưới là ô Đường dẫn ảnh (url) để dán sẵn
+đường dẫn ảnh.
+ Nội dung bản tin: toàn bộ nội dung bài. Soạn như Word, hoặc soạn trên Word rồi sao
+chép vào. Bấm [Soạn nội dung] để soạn trong khung toàn màn hình (mục 1.1), có 3 chế
+độ: Thiết kế, HTML, Xem trước; chọn được mẫu nền khung bài (mục 1.3). Chèn được
+ảnh, video, file bằng các nút trên thanh công cụ (xem mục Hướng dẫn chèn ảnh, video
+bên dưới).
+❖ Khai báo các thuộc tính cho bản tin
+ Quản lý đính kèm file (cho phép xem trước file văn bản trên web): bấm [Tải lên / quản
+lý tệp đính kèm] → chọn thư mục → tải file lên → bấm đúp vào file để đính kèm. Có thể
+tích File tài liệu PDF đính kèm có chữ ký số, Không hiển thị xem trước File tài liệu, Không
+cho tải File đính kèm.
+ Tác giả: người viết bài.
+ Nguồn tin: chọn trong danh sách; chưa có thì bấm [Thêm nguồn tin] → [Thêm mới] →
+nhập tên nguồn tin → lưu. Dòng Nguồn đã chọn chỉ hiện khi bài đã có nguồn tin.
+ Ngày đăng: mặc định là ngày hiện tại.
+ Hiển thị trang chi tiết trên khổ rộng: bài hiển thị toàn bộ bề ngang màn hình.
+ Tin tiêu điểm: bài hiển thị tại khối tin tiêu điểm, nổi bật nhất (cần có ảnh đại diện).
+ Hiển thị trang chủ: bài hiển thị trên trang chủ.
+ Hiển thị lượt đọc / ngày đăng / người đăng / tác giả / nguồn tin: bật/tắt các thông tin
+này dưới bài viết.
+ Cho phép bình luận: bạn đọc được bình luận về bài viết.
+ Duyệt hiển thị và chia sẻ tin – Cho phép tin bài hiển thị — MỚI: phải tích thì bài mới
+hiện trên website. Ô này có màu vàng khi bài chưa duyệt và chuyển xanh lá khi đã
+duyệt. Khi tích, ngay bên dưới hiện khối Chia sẻ tin lên ứng dụng eNetViet với 3 công
+tắc: Gửi tin cho ban giám hiệu, Gửi tin cho giáo viên, Gửi tin cho phụ huynh. Công tắc màu
+xanh là gửi, màu xám là không gửi; bấm vào công tắc để bật/tắt từng đối tượng trước
+khi lưu tin.
+ Đề xuất hiển thị tin trên trang web của Sở GD&ĐT: tích để gửi bài lên Sở; bài hiện trên
+trang Sở khi Sở duyệt.
+Bước 3: Bấm [Lưu tin] để lưu dữ liệu, hoặc [Lưu tin và thêm mới] để lưu và soạn ngay bài
+tiếp theo.
+Ghi chú:
+ [Trở về danh sách tin]: hủy thao tác, quay về danh sách (không lưu).
+ Sửa tin: bấm biểu tượng ở cột Chi tiết của bài, sửa xong bấm [Lưu tin].
+
+-- 24 of 63 --
+
+25
+ Xóa tin: tích ô vuông đầu các bài cần xóa → bấm [Xóa].
+ Tin nổi bật, Hiển thị eNetViet, Duyệt hiển thị: tích trực tiếp trên danh sách. Cột Chia sẻ
+gửi bài đã duyệt sang ứng dụng eNetViet cho giáo viên, phụ huynh.
+ Lịch sử: bấm biểu tượng ở cột Lịch sử để xem quá trình tạo, sửa bài.
+ Xem trên web: bấm vào tiêu đề bài (chữ xem trên web). Chỉ có với bài đã duyệt hiển thị.
+ Danh sách tin: mở lần đầu hiện 30 tin mới nhất; muốn tìm bài cũ thì chọn điều kiện rồi
+bấm [Tìm kiếm] (xem mục 1.5).
+Hướng dẫn chèn ảnh vào nội dung bản tin:
+Bước 1: Tại vị trí muốn chèn ảnh, bấm biểu tượng Quản lý ảnh trên thanh công cụ.
+Bước 2: Chọn thư mục chứa ảnh.
+Bước 3: Bấm [Tải lên] để mở cửa sổ chọn ảnh trên máy tính, chọn ảnh rồi bấm [Lựa chọn].
+Bước 4: Bấm đúp vào ảnh vừa tải lên (hoặc chọn ảnh rồi bấm [Open]) để chèn vào bài.
+Định dạng ảnh: jpg, png, gif; tối đa 10MB. Ảnh rộng hơn 1000px sẽ tự thu nhỏ.
+Hướng dẫn chèn video YouTube vào nội dung bản tin:
+Bước 1: Tại vị trí muốn chèn video, bấm biểu tượng chèn video trên thanh công cụ.
+Bước 2: Dán đường dẫn video YouTube hoặc Vimeo (lấy từ nút Chia sẻ → Sao chép trên
+YouTube).
+Bước 3: Chỉnh tỉ lệ, kích thước nếu cần và bấm [Save].
+1.1 Soạn nội dung trong khung toàn màn hình MỚI
+Mô tả: Nội dung bài được soạn trong một khung phủ toàn màn hình, rộng rãi hơn. Vùng
+soạn dùng đúng phông chữ, cỡ chữ của trang web đơn vị (kể cả khi thêm tin mới), nên bài
+soạn thế nào thì lên web gần như vậy.
+Bước 1: Trong thẻ Nội dung bài viết (cột trái), bấm [Soạn nội dung] hoặc bấm vào khung
+xem nhanh. Khung soạn mở ra toàn màn hình.
+Hình 3.2a – Khung soạn nội dung toàn màn hình, thanh Mẫu nền bài viết
+
+-- 25 of 63 --
+
+26
+Bước 2: Soạn bài như bình thường: gõ chữ, dán từ Word, chèn ảnh, video, tệp bằng thanh
+công cụ (xem các hướng dẫn chèn ảnh, video ở trên).
+Bước 3: Bấm [Xong] (hoặc phím Esc) để quay lại form. Khung xem nhanh hiện phần đầu
+bài cùng số chữ, số ảnh và mẫu nền đang dùng. Có thể bấm [Lưu tin] ngay trong khung
+soạn.
+Lưu ý:
+ Ô Font chữ trên thanh công cụ đã xếp nhóm: các phông nên dùng nằm trên cùng, nhãn
+ô hiện sẵn tên phông của web.
+ Tài khoản chỉ có quyền xem thì khung soạn ghi "chỉ xem" và ẩn các nút Xoá, Lưu.
+1.2 Kiểm tra tiêu đề và tóm tắt MỚI
+ Bộ đếm ký tự: dưới ô Tiêu đề hiện "Còn lại … ký tự · … từ"; tiêu đề không gõ quá giới hạn
+được. Dưới ô Tóm tắt hiện số ký tự, số từ và nhắc rút gọn khi dài quá khoảng 50 từ.
+ Cảnh báo viết HOA: gõ tiêu đề toàn chữ in hoa thì trang hiện cảnh báo "Tiêu đề đang
+viết HOA toàn bộ". Bấm [Chuyển về chữ thường (giữ chữ viết tắt)] để đổi tự động: chữ
+đầu câu và các chữ viết tắt (THPT, UBND, GD&ĐT…) được giữ hoa.
+ Sau khi chuyển, đọc lại và viết hoa tay các tên riêng còn thiếu (tên người, địa danh, tên
+trường).
+Bộ đếm và cảnh báo viết HOA xem ở Hình 3.2 (dưới ô Tiêu đề và ô Tóm tắt).
+1.3 Chọn mẫu nền khung bài viết MỚI
+Mô tả: Bài viết có thể đặt trong một khung nền trang trí. Có 28 mẫu chia 4 nhóm: Cơ bản,
+Thiên nhiên, Trường học, Ngày lễ (Khai giảng, 20/10, 20/11, Tết Nguyên đán, Trung thu,
+8/3, 1/6, 2/9…). Mặc định là Khung trắng, như trước đây.
+Bước 1: Mở khung soạn nội dung (mục 1.1). Phía trên vùng soạn có thanh Mẫu nền bài
+viết.
+Bước 2: Bấm tên nhóm để mở danh sách mẫu, rồi bấm một mẫu. Vùng soạn đổi nền ngay
+để xem.
+Bước 3: Muốn xem mẫu trên một bài hoàn chỉnh, bấm [Xem thử trên bài mẫu]. Cửa sổ xem
+thử hiện một bài mẫu dựng như trang chi tiết tin thật; bấm lần lượt các mẫu để so sánh,
+ưng mẫu nào thì bấm [Áp dụng mẫu này cho bài đang soạn].
+
+-- 26 of 63 --
+
+27
+Hình 3.2b – Xem thử mẫu nền trên bài mẫu
+Bước 4: Bấm [Lưu tin]. Mẫu nền được lưu cùng nội dung bài; trang chi tiết tin trên web hiện
+bài trong khung nền đã chọn (cả trên điện thoại).
+Lưu ý:
+ Bỏ mẫu nền: chọn Khung trắng (nhóm Không nền) rồi lưu lại.
+ Mẫu ngày lễ nên dùng cho bài đúng dịp; bài thường nên giữ Khung trắng hoặc mẫu nhẹ
+để dễ đọc.
+1.4 Xem trước bài viết trước khi lưu MỚI
+Mô tả: Xem bài đúng như sẽ hiện trên trang web của đơn vị (màu, phông chữ, mẫu nền,
+ảnh đại diện, tóm tắt) mà chưa cần lưu hay duyệt.
+Bước 1: Bấm [Xem trước] trong thẻ Nội dung bài viết (hoặc trên thanh nút của trang soạn).
+Bước 2: Cửa sổ Xem trước tin bài mở ra. Chọn khổ Máy tính, Máy tính bảng hoặc Điện
+thoại để xem bài hiện ra sao trên từng loại màn hình.
+Hình 3.2c – Xem trước tin bài trước khi lưu
+
+-- 27 of 63 --
+
+28
+Bước 3: Bấm [Đóng], sửa tiếp nếu cần, rồi bấm [Lưu tin].
+Lưu ý: Bản xem trước chỉ dựng phần bài viết, không có đầu trang, menu và cột bên. Tin
+chưa được lưu cho tới khi bấm Lưu tin.
+1.5 Danh sách tin: 30 tin mới nhất và tìm kiếm MỚI
+Mô tả: Mở trang danh sách tin lần đầu sẽ thấy ngay 30 tin mới nhất (không còn giới hạn 2
+tháng gần nhất). Mỗi tin hiện thành một thẻ: ảnh, tiêu đề, nhãn chuyên mục, nhãn trạng
+thái (Đã duyệt / Chờ duyệt), tóm tắt và dòng người đăng, ngày đăng.
+Bước 1: Tóm tắt dài chỉ hiện 3 dòng; bấm Xem thêm để đọc hết, bấm lại để thu gọn.
+Bước 2: Muốn tìm tin cũ hơn: chọn Kiểu tin, Chuyên mục, Trạng thái, khoảng ngày hoặc gõ
+từ khoá, rồi bấm [Tìm kiếm]. Danh sách hiện đúng các tin theo điều kiện, có phân trang.
+Bước 3: Bấm Xem 30 tin mới nhất cạnh dòng kết quả để quay về danh sách mới nhất.
+Lưu ý: Kết quả tìm được giữ nguyên khi mở một tin rồi quay lại danh sách. Xuất Excel vẫn
+như trước.
+2. Tin video (Mục 2.2)
+Mô tả: Đăng video vào chuyên mục có kiểu tin Tin video.
+Các bước thực hiện:
+Bước 1: Bấm menu 2. Quản lý tin bài → 2.2 Tin video → [Thêm mới].
+Bước 2: Chọn Chuyên mục (*), nhập Tiêu đề (*), Tóm tắt. Sau đó chọn một trong các cách
+đưa video lên:
+ Video ≤ 500MB: bấm [Quản lý File] và tải file mp4/mp3 trực tiếp.
+ Video lớn hơn: đưa lên YouTube rồi dán vào ô Link SRC trong mã nhúng youtube (xem
+Phụ lục B).
+ Video trên Facebook: dán vào ô Link Src Facebook.
+
+-- 28 of 63 --
+
+29
+Hình 3.3 – Form thêm mới tin video
+Bước 3: Tích Cho phép tin bài hiển thị và bấm [Lưu tin].
+Lưu ý: Nên chuyển video sang mp4 (âm thanh mp3) trước khi tải lên. Video tải lên không
+phát được thường do sai định dạng.
+3. Tin văn bản (Mục 2.3)
+Mô tả: Đăng văn bản, công văn vào chuyên mục có kiểu tin Văn bản.
+Các bước thực hiện:
+Bước 1: Bấm menu 2. Quản lý tin bài → 2.3 Tin văn bản.
+Bước 2: Bấm [Thêm mới].
+Bước 3: Nhập nội dung bản tin và thuộc tính như Mục 2.1. Riêng tin văn bản có thêm phần
+Khai báo các thuộc tính tin văn bản: Số văn bản, Ngày ban hành… Đính kèm file văn bản tại
+[Quản lý File].
+Hình 3.4 – Form thêm mới tin văn bản
+Bước 4: Tích Cho phép tin bài hiển thị.
+Bước 5: Bấm [Lưu tin].
+4. Tin thư mời, Tin thông báo (Mục 2.4, 2.5)
+Mô tả: Đăng giấy mời, thông báo. Hiển thị tại khối thông báo – thư mời giữa trang (bật tại
+Mục 4.2).
+Bước 1: Bấm menu 2.4 Tin thư mời (hoặc 2.5 Tin thông báo).
+Bước 2: Bấm [Thêm mới] và nhập thông tin như Mục 2.1.
+Bước 3: Tích Cho phép tin bài hiển thị và bấm [Lưu tin].
+
+-- 29 of 63 --
+
+30
+5. Bài giảng Elearning (Mục 2.6)
+Mô tả: Đăng bài giảng E-learning chuẩn SCORM.
+Bước 1: Bấm menu 2.6 Bài giảng Elearning → [Thêm mới].
+Bước 2: Chọn Chuyên mục, nhập Tiêu đề, Tóm tắt. Tại [Quản lý File], tải lên bài giảng đã
+nén thành file .zip (nén từ thư mục gốc của bài giảng).
+Hình 3.5 – Form thêm mới bài giảng Elearning
+Bước 3: Tích Cho phép tin bài hiển thị và bấm [Lưu tin].
+6. Thời khóa biểu, Thông tin thi – tuyển sinh (Mục 2.7, 2.8)
+Mô tả: Đăng thời khóa biểu và thông tin tuyển sinh. Cần tạo trước tại Mục 1.1 chuyên mục
+có kiểu tin Thời khóa biểu hoặc Thi – Kiểm tra.
+Bước 1: Bấm menu 2.7 Thời khóa biểu (hoặc 2.8 Thông tin thi – tuyển sinh) → [Thêm
+mới].
+Bước 2: Nhập thông tin như Mục 2.1; đính kèm file Excel/PDF nếu có.
+Bước 3: Tích Cho phép tin bài hiển thị và bấm [Lưu tin].
+7. Thủ tục hành chính (Mục 2.9)
+Mô tả: Quản lý thủ tục hành chính công của đơn vị.
+Các bước thực hiện:
+Bước 1: Bấm menu 2. Quản lý tin bài → 2.9 Thủ tục hành chính.
+Bước 2: Bấm [Thêm mới].
+Bước 3: Chọn Cấp độ (*), Lĩnh vực (*), Thẩm quyền (*). Chưa có thì bấm [Thêm cấp độ] /
+[Thêm lĩnh vực] / [Thêm thẩm quyền] → [Thêm mới] → nhập tên, thứ tự → lưu.
+
+-- 30 of 63 --
+
+31
+Hình 3.6 – Form thêm mới thủ tục hành chính
+Bước 4: Nhập Số hồ sơ, Tiêu đề (*), Cách thực hiện và các thuộc tính bên phải: Chi phí,
+Mẫu đơn tờ khai, Cơ sở pháp lý, Link web nộp hồ sơ, Thành phần và số lượng; đính kèm file
+hồ sơ.
+Bước 5: Tích Cho phép hiển thị.
+Bước 6: Bấm [Lưu tin].
+Lưu ý: Bấm [Xem trên web] tại Mục 2.9 để xem nhanh thủ tục vừa thêm.
+8. Album kỷ yếu Online (Mục 2.10)
+Mô tả: Thêm album ảnh kỷ yếu online. Cần tạo chuyên mục có kiểu tin Album kỷ yếu tại
+Mục 1.1.
+Bước 1: Bấm menu 2.10 Album kỷ yếu Online → [Thêm mới].
+Bước 2: Chọn Chuyên mục, nhập Tiêu đề, Tóm tắt, Ảnh đại diện. Tại [Quản lý File], tải lên
+file nén .zip chứa ảnh.
+
+-- 31 of 63 --
+
+32
+Hình 3.7 – Form thêm mới album kỷ yếu online
+Bước 3: Tích Cho phép tin bài hiển thị và bấm [Lưu tin].
+9. Thông tin giới thiệu, Tin Emagazine, Bài giảng điện tử (Mục 2.11, 2.12, 2.14)
+Mô tả:
+ 2.11 Thông tin giới thiệu: bài giới thiệu về đơn vị, lịch sử phát triển (chuyên mục kiểu
+Giới thiệu).
+ 2.12 Tin Emagazine: bài dài nhiều ảnh; ảnh chất lượng cao không bị giới hạn kích
+thước.
+ 2.14 Bài giảng điện tử: bài giảng, giáo án của giáo viên (đính kèm ppt, pdf, video).
+Các bước thực hiện: tương tự Mục 2.1 — bấm menu tương ứng → [Thêm mới] → nhập nội
+dung → tích Cho phép tin bài hiển thị → [Lưu tin].
+10. Tin liên kết với đường link ngoài hệ thống (Mục 2.13) MỚI
+Mô tả: Đăng tin mà khi bấm vào sẽ mở thẳng đường link ngoài (báo, trang Sở, Phòng…).
+Bước 1: Bấm menu 2.13 Tin liên kết với đường link ngoài hệ thống → [Thêm mới].
+Bước 2: Chọn Kiểu tin, Chuyên mục, nhập Tiêu đề, Tóm tắt, Ảnh đại diện và đường link của
+bài gốc.
+
+-- 32 of 63 --
+
+33
+Hình 3.8 – Form thêm mới tin liên kết
+Bước 3: Tích Cho phép tin bài hiển thị và bấm [Lưu tin].
+11. Chuyển tin bài giữa các chuyên mục (Mục 2.15)
+Mô tả: Chuyển tin bài của một chuyên mục sang chuyên mục khác (khi gộp, đổi hoặc xóa
+chuyên mục).
+Các bước thực hiện:
+Bước 1: Bấm menu 2. Quản lý tin bài → 2.15 Chuyển tin bài giữa các chuyên mục.
+Bước 2: Chọn Chuyên mục chuyển đi (nơi tin đang nằm).
+Bước 3: Chọn Chuyên mục chuyển đến.
+Bước 4: Chọn tin bài chuyển đi, hoặc tích Tất cả tin của các chuyên mục được chọn.
+Hình 3.9 – Màn hình chuyển tin bài giữa các chuyên mục
+Bước 5: Bấm [Lưu].
+Lưu ý: Kiểu tin của bài sẽ được chuyển theo kiểu tin của chuyên mục mới. Kiểm tra kỹ hai ô
+chuyển đi / chuyển đến trước khi lưu.
+12. Quản lý bình luận (Mục 2.16)
+Mô tả: Duyệt bình luận của bạn đọc trước khi hiển thị dưới bài viết.
+
+-- 33 of 63 --
+
+34
+Các bước thực hiện:
+Bước 1: Bấm menu 2.16 Quản lý bình luận; lọc theo Ngày gửi, Trạng thái bình luận, Trạng
+thái đọc → [Tìm kiếm].
+Hình 3.10 – Màn hình quản lý bình luận
+Bước 2: Bấm biểu tượng ở cột Chi tiết của bình luận muốn cho hiển thị.
+Bước 3: Tích Cho phép hiển thị và Đã đọc, bấm [Lưu].
+Lưu ý: Bình luận không hợp lệ: tích ô vuông đầu dòng và bấm [Xóa].
+13. Tin bài đã tạo (menu HỆ THỐNG)
+Mô tả: Tổng hợp tất cả tin bài do tài khoản đang đăng nhập tạo, gồm số tin đã duyệt và
+chưa duyệt. Mở bằng HỆ THỐNG → Tin bài đã tạo; có lọc, sửa, xóa, [Bỏ duyệt] và xuất
+Excel.
+
+-- 34 of 63 --
+
+35
+CHƯƠNG 4. CÁC KHỐI CHỨC NĂNG TÍCH HỢP
+Ngoài tin bài, hệ thống hỗ trợ đơn vị tạo thư viện ảnh, bản đồ, tra cứu, liên kết, quảng cáo,
+hỏi đáp, kỷ yếu, khảo sát… Đây là các khối chức năng nâng cao đặt trong menu số 3. Mỗi
+khối hiển thị trên trang chủ khi được bật tại Mục 4.4.
+1. Thư viện hình ảnh (Mục 3.1)
+Mô tả: Cập nhật thư viện ảnh lên website.
+Các bước thực hiện:
+Bước 1: Bấm menu 3. Chức năng tích hợp → 3.1 Thư viện hình ảnh.
+Hình 4.1 – Danh sách tập ảnh
+Bước 2: Bấm [Chuyên mục ảnh] → [Thêm mới], nhập tên chuyên mục ảnh, mô tả, thứ tự →
+lưu. (Bỏ qua nếu đã có chuyên mục phù hợp.)
+Bước 3: Quay lại Mục 3.1, bấm [Thêm mới] để tạo tập ảnh.
+Bước 4: Nhập Tên album (*), chọn Chuyên mục ảnh (*), Thứ tự, Mô tả; bật/tắt Hiển thị tên
+ảnh chi tiết trên album.
+Hình 4.2 – Màn hình thêm mới thư viện hình ảnh
+Bước 5: Bấm ô Thêm Ảnh vào thư viện → chọn thư mục → [Tải lên] → chọn nhiều ảnh
+cùng lúc → [Lựa chọn].
+
+-- 35 of 63 --
+
+36
+Bước 6: Tích Là ảnh đại diện tập ảnh trên trang chủ cho một ảnh. Bấm vào dòng ảnh để
+sửa tên ảnh nếu cần.
+Bước 7: Bấm [Lưu].
+Lưu ý: Ảnh hỗ trợ .jpg, .png, .gif; tỉ lệ 16:9, rộng tối đa 1000px.
+2. Bản đồ vị trí (Mục 3.2)
+Mô tả: Định vị đơn vị trên bản đồ của website.
+Các bước thực hiện:
+Bước 1: Bấm menu 3. Chức năng tích hợp → 3.2 Bản đồ vị trí.
+Bước 2: Nhập Link bản đồ (*) và tải Ảnh vị trí (tỉ lệ 16:9, rộng tối đa 1000px).
+Hình 4.3 – Màn hình bản đồ vị trí
+Bước 3: Bấm [Lưu].
+Cách lấy Link bản đồ:
+Bước 1: Truy cập https://www.google.com/maps.
+Bước 2: Nhập địa chỉ đơn vị tại ô tìm kiếm.
+Bước 3: Bấm Chia sẻ → tab Nhúng bản đồ. Sao chép phần link nằm trong src="…" (phần
+bôi vàng trong hình minh họa trên màn hình).
+Bước 4: Dán vào ô Link bản đồ.
+3. Dữ liệu tra cứu Excel (Mục 3.3)
+Mô tả: Tải file Excel lên để người dùng tra cứu trên website (điểm thi, phòng thi, kết quả
+tuyển sinh…).
+Các bước thực hiện:
+Bước 1: Bấm menu 3. Chức năng tích hợp → 3.3 Dữ liệu tra cứu (Excel).
+Bước 2: Bấm [Thêm mới], bấm dòng Tải file Excel mẫu tại đây để tải file mẫu về máy và
+điền dữ liệu (ngày sinh dạng dd/mm/yyyy).
+
+-- 36 of 63 --
+
+37
+Hình 4.4 – Hộp thêm mới dữ liệu từ file Excel
+Bước 3: Bấm [Choose File] để chọn file Excel, rồi bấm [Tải lên]. Nội dung file hiện ra trên
+màn hình; tích các cột dùng làm tiêu chí tra cứu và đặt lại tên hiển thị.
+Bước 4: Bấm [Lưu].
+Lưu ý: Dữ liệu học sinh là thông tin cá nhân — nên bật Tra cứu tuyệt đối, chọn ít nhất 2 tiêu
+chí (ví dụ Số báo danh + Ngày sinh) và tắt Sử dụng khi hết đợt tra cứu.
+4. Website liên kết (Mục 3.4)
+Mô tả: Quản lý các link liên kết tới website khác, hiển thị trong khối Liên kết website.
+Các bước thực hiện:
+Bước 1: Bấm menu 3. Chức năng tích hợp → 3.4 Website liên kết.
+Bước 2: Bấm [+ Thêm mới].
+Bước 3: Nhập Tên liên kết (*), Đường dẫn liên kết (*) (đầy đủ https://…), Ghi chú.
+Hình 4.5 – Thêm mới website liên kết
+Bước 4: Bấm [Thêm mới] để lưu.
+5. Quảng cáo (Mục 3.5)
+Mô tả: Hiển thị banner quảng cáo, logo liên kết trên website. Các quảng cáo được nhóm
+vào khối quảng cáo.
+Tạo khối quảng cáo:
+Bước 1: Tại Mục 3.5 Quảng cáo, bấm [Khối quảng cáo] → [Thêm mới].
+Bước 2: Nhập Mã (không trùng), Tên khối quảng cáo, chọn Khu vực hiển thị; tích Hiển thị,
+Hiển thị tiêu đề → [Lưu].
+
+-- 37 of 63 --
+
+38
+Tạo mới quảng cáo:
+Bước 1: Tại Mục 3.5 Quảng cáo, chọn Khối quảng cáo và bấm [Thêm mới].
+Hình 4.6 – Danh sách quảng cáo
+Bước 2: Nhập Tên quảng cáo (*), Thứ tự, chọn Khối quảng cáo (*), Ngày bắt đầu – Ngày
+kết thúc, Liên kết website, Ảnh đại diện (tỉ lệ 16:9, rộng tối đa 1000px). Tích Hiển thị hoặc
+Kích hoạt mãi mãi.
+Hình 4.7 – Hộp thêm mới quảng cáo
+Bước 3: Bấm [Lưu].
+6. Thăm dò ý kiến (Mục 3.6)
+Mô tả: Tạo phiếu thăm dò ý kiến về một vấn đề.
+Bước 1: Bấm menu 3.6 Thăm dò ý kiến → [Thêm mới].
+Bước 2: Nhập Câu hỏi thăm dò; chọn Khóa câu hỏi thăm dò theo Cookie / Địa chỉ IP /
+Không khóa (chống bình chọn nhiều lần); tích Hiệu lực; nhập các Lựa chọn 1, 2, 3…
+Hình 4.8 – Hộp thêm mới câu hỏi thăm dò
+
+-- 38 of 63 --
+
+39
+Bước 3: Bấm [Lưu].
+7. Hỏi đáp (Mục 3.7)
+Mô tả: Quản lý câu hỏi bạn đọc gửi lên. Quản trị viên duyệt, cho hiển thị và trả lời câu hỏi.
+Bước 1: Bấm menu 3.7 Hỏi đáp.
+Hình 4.9 – Danh sách hỏi đáp
+Bước 2: Bấm Sửa ở câu hỏi → nhập nội dung Trả lời; tích Hiển thị nếu muốn công khai trên
+web → [Lưu].
+8. Bạn đọc liên hệ (Mục 3.8)
+Mô tả: Quản lý thư bạn đọc gửi từ trang Liên hệ của website.
+Bước 1: Bấm menu 3.8 Bạn đọc liên hệ.
+Hình 4.10 – Danh sách bạn đọc liên hệ
+Bước 2: Đọc thư, phản hồi qua email/điện thoại của người gửi, rồi tích Đã đọc.
+9. Kỷ yếu (Mục 3.9)
+9.1 Danh sách kỷ yếu (Mục 3.9.1)
+Bước 1: Bấm menu 3.9.1 Danh sách kỷ yếu.
+Hình 4.11 – Danh sách kỷ yếu
+Bước 2: Bấm [Thêm mới].
+
+-- 39 of 63 --
+
+40
+Bước 3: Nhập Tên kỷ yếu (*), Thời kỳ, Tiêu đề, Giới thiệu, Url Ebook và file đính kèm; bật
+Hiển thị.
+Hình 4.12 – Hộp thêm mới kỷ yếu
+Bước 4: Bấm [Lưu].
+9.2 Hiện vật, Kết nối, Tài liệu tham khảo, Nhân vật, Sự kiện, Album ảnh (Mục 3.9.2 →
+3.9.7)
+Các mục này có cùng cách làm:
+Bước 1: Bấm menu tương ứng (ví dụ 3.9.5 Danh sách nhân vật).
+Hình 4.13 – Danh sách nhân vật kỷ yếu
+Bước 2: Chọn Kỷ yếu ở ô lọc và bấm [Thêm mới].
+Bước 3: Nhập thông tin và bấm [Lưu]:
+ 3.9.2 Hiện vật: tạo [Nhóm hiện vật] trước; sau đó nhập Tên hiện vật, Ảnh, Nhóm, Mô tả.
+ 3.9.3 Kết nối: Tên kết nối, Link kết nối.
+ 3.9.4 Tài liệu tham khảo: Tên tài liệu, Link tài liệu.
+ 3.9.5 Nhân vật: Tên, Ảnh đại diện, Chức danh, Thời gian công tác.
+ 3.9.6 Sự kiện: Tên sự kiện, Ảnh, Tóm tắt; tích Hiển thị.
+ 3.9.7 Album ảnh: Ảnh album, Ghi chú, Thứ tự.
+10. Khảo sát (Mục 3.10) MỚI
+Mô tả: Tạo phiếu khảo sát mức độ hài lòng của phụ huynh, học sinh và xem thống kê.
+Các bước thực hiện:
+Bước 1: Bấm menu 3.10 Khảo sát → 3.10.1 Quản lý khảo sát.
+
+-- 40 of 63 --
+
+41
+Hình 4.14 – Danh sách khảo sát
+Bước 2: Bấm [Thêm mới], nhập Tên khảo sát (*), chọn Loại khảo sát, Ghi chú; bật Cho phép
+hiển thị → [Lưu].
+Hình 4.15 – Hộp thêm mới khảo sát
+Bước 3: Tại 3.10.2 Nhóm nội dung khảo sát, chia phiếu thành các nhóm (ví dụ Cơ sở vật
+chất, Môi trường giáo dục) kèm thứ tự.
+Bước 4: Tại 3.10.3 Mẫu tiêu chí khảo sát, khai báo các mức trả lời dùng chung.
+Bước 5: Tại 3.10.4 Khảo sát chi tiết, thêm từng câu hỏi vào nhóm nội dung; bấm cột Quản
+lý tiêu chí để gắn các mức trả lời.
+Hình 4.16 – Màn hình khảo sát chi tiết
+Bước 6: Xem kết quả tại 3.10.5 → 3.10.11 (ý kiến trả lời, số ý kiến đóng góp, tỉ lệ hài lòng,
+trình độ học vấn, số lượng người tham gia). Mỗi báo cáo có nút [Xuất Excel] và [Xuất file
+PDF].
+
+-- 41 of 63 --
+
+42
+Hình 4.17 – Thống kê ý kiến trả lời
+11. Trang tin tiếng Anh (Mục 3.12) MỚI
+Mô tả: Quản lý chuyên mục và bản tin cho trang tiếng Anh. Cần bật trước tại Mục 4.1 (thẻ
+Thông tin trang tin tiếng Anh).
+Bước 1: Bấm menu 3.12.1 Chuyên mục tiếng anh, bấm nút tròn (+) để tạo chuyên mục
+(giống Mục 1.1).
+Hình 4.18 – Chuyên mục tiếng Anh
+Bước 2: Bấm menu 3.12.2 Bản tin tiếng anh để soạn và duyệt bản tin (giống Mục 2.1).
+Hình 4.19 – Danh sách bản tin tiếng Anh
+
+-- 42 of 63 --
+
+43
+CHƯƠNG 5. QUẢN LÝ THÔNG TIN ĐƠN VỊ - GIAO DIỆN
+Khối chức năng số 4 giúp người dùng làm chủ trang web về mặt giao diện: thông tin đơn vị,
+mẫu giao diện, banner, vị trí các khối, chữ chạy, trang giới thiệu. Sau khi lưu, nếu website
+chưa thay đổi thì bấm HỆ THỐNG → Cập nhật thay đổi trang chủ rồi tải lại trang web (Ctrl
++ F5).
+1. Thông tin đơn vị (Mục 4.1)
+Bước 1: Bấm menu 4. Thông tin đơn vị - Giao diện → 4.1 Thông tin đơn vị.
+Bước 2: Cập nhật thông tin trong các thẻ nhóm (xếp 2 cột). Ô ảnh: bấm ô CHỌN HÌNH để
+chọn ảnh từ thư viện (hoặc dán đường dẫn ảnh); bấm [Bỏ ảnh] để gỡ.
+Hình 5.1 – Trang 4.1 Thông tin đơn vị
+ Thông tin đơn vị: Ảnh Logo, Ảnh Icon (favicon .ico), Ảnh đại diện đơn vị (dùng khi chia
+sẻ lên Zalo, Facebook), Tên đơn vị, Người chịu trách nhiệm nội dung, Tên đơn vị chủ
+quản, liên kết Fanpage Facebook / Page ID chat Facebook / Youtube / Instagram /
+TikTok / LinkedIn / Zalo, Mã kiểm tra Google.
+ Thông tin cấu hình: Số tháng người dùng phải đổi mật khẩu (nhập 0 nếu không bắt
+buộc); Sử dụng trang tin nội bộ.
+ Thông tin chân trang: Chiều cao chân trang; Chân trang chứa ảnh có tất cả thông tin;
+hoặc Ảnh logo chân trang + nội dung soạn trong khung soạn thảo.
+ Thông tin liên hệ: Email nhận liên hệ, Điện thoại, Tỉnh/Thành phố, Xã/Phường, Địa chỉ,
+nội dung trang liên hệ; công tắc Cho phép người dùng gửi liên hệ, Nhận thông tin liên hệ
+qua email.
+ Các cấu hình mở rộng: Trang tin tiếng Anh (logo riêng); Chat Zalo (Zalo OA ID); Cho
+phép người dùng web đăng nhập (Facebook / Google); Đăng tin lên trang Facebook;
+Thông tin tín nhiệm mạng NCSC; Sử dụng mật khẩu trang lịch công tác cán bộ.
+Bước 3: Bấm [Lưu] ở góc phải thanh công cụ.
+
+-- 43 of 63 --
+
+44
+2. Cấu hình giao diện (Mục 4.2)
+Mô tả: Cấu hình giao diện website, gồm 4 thẻ: Thông tin giao diện, Mẫu giao diện máy tính
+/ điện thoại / máy tính bảng, Thông tin nền trang và Thông tin cấu hình giao diện.
+Bước 1: Bấm menu 4. Thông tin đơn vị - Giao diện → 4.2 Cấu hình giao diện.
+Hình 5.2 – Trang 4.2 Cấu hình giao diện
+Bước 2: Chọn và điều chỉnh:
+ Thông tin giao diện: Mã màu chủ đạo, Font chữ của trang web.
+ Mẫu giao diện: chọn giao diện máy tính (40 mẫu). Bấm khung Xem kho giao diện mẫu
+trực quan trên web để xem nhanh toàn bộ mẫu; chọn mẫu rồi bấm [Xem trước và chọn
+giao diện] để xem thật trước khi áp dụng. Khung Cần nhập những gì cho mẫu này? +
+nút [Xem hướng dẫn] liệt kê nội dung mẫu cần có.
+ Sử dụng giao diện Responsive (tự co giãn theo màn hình) hoặc chọn riêng giao diện
+điện thoại, máy tính bảng và bật công tắc sử dụng tương ứng.
+ Thông tin nền trang: Ảnh nền hoặc Mã màu nền trang web.
+ Thông tin cấu hình giao diện (bật/tắt): khối thông báo thư mời giữa trang; khối văn bản
+trên trang chủ; thông tin liên hệ nhanh; giới hạn chiều rộng màn hình; thông tin từ Sở
+GD&ĐT, Bộ GD&ĐT; giao diện đón lễ, tết; giao diện quốc tang 1 phần hoặc toàn bộ
+trang; kết nối Trung tâm giám sát quốc gia về chính phủ số (EMC).
+
+-- 44 of 63 --
+
+45
+Hình 5.3 – Mẫu giao diện điện thoại, máy tính bảng và các công tắc cấu hình
+Bước 3: Bấm [Lưu] ở góc phải thanh công cụ.
+Lưu ý: Thay đổi mẫu giao diện, màu chủ đạo, font chữ có tác dụng ngay sau khi bấm [Lưu].
+Nên dùng [Xem trước và chọn giao diện] để kiểm tra trước. Nhớ tắt giao diện quốc tang khi
+hết thời gian quy định.
+3. Quản lý Banner (Mục 4.3)
+Mô tả: Đưa banner lên website. Trang gồm khung Cấu hình chung và 5 lựa chọn kiểu
+banner theo thứ tự ưu tiên 1 → 5. Website chỉ hiển thị một kiểu banner: lựa chọn đầu tiên
+đủ điều kiện sẽ được dùng.
+Bước 1: Bấm menu 4. Thông tin đơn vị - Giao diện → 4.3 Quản lý banner.
+
+-- 45 of 63 --
+
+46
+Hình 5.4 – Cấu hình chung, khung giải thích và Lựa chọn 1
+Ưu tiên Kiểu banner Điều kiện để được dùng
+1 Banner
+video
+Bật Sử dụng banner video và nhập link SRC mã nhúng YouTube (ưu tiên)
+hoặc Facebook
+2 Banner slide
+ảnh
+Có từ 2 ảnh slide trở lên (nút [Thêm / quản lý ảnh slide]). Bật công tắc thì
+ảnh chạy dạng slide; tắt thì chỉ hiện ảnh đầu tiên
+3 Banner slide
+HTML5
+Bật Sử dụng banner HTML5 và đã tải tệp HTML5 (nút [Quản lý File])
+4 Banner ảnh
+tĩnh
+Có Ảnh banner rộng tối thiểu 1140px (ảnh đã chứa logo, tên đơn vị)
+5 Banner 4
+thành phần
+Dự phòng khi 4 lựa chọn trên không đủ điều kiện: ghép ảnh nền, ảnh tên đơn
+vị, logo, ảnh nhà trường
+Bước 2: Nhập dữ liệu cho lựa chọn muốn dùng. Muốn dùng lựa chọn phía dưới (ví dụ Lựa
+chọn 4) thì tắt hoặc để trống các lựa chọn phía trên. Có thể chỉnh Cấu hình chung: chiều
+cao (≥ 100px), chiều rộng (≥ 1140px), ảnh nền, màu nền, banner rộng toàn màn hình.
+Hình 5.5 – Các lựa chọn banner 2 → 5
+Bước 3: Bấm [Lưu], rồi xem nhãn trên từng thẻ: ✓ ĐANG HIỂN THỊ TRÊN WEBSITE (thẻ
+viền xanh lá); Chưa dùng: … (kèm việc còn thiếu).
+Lưu ý: Ảnh banner đẹp nhất khi rộng khoảng 2000px, cao khoảng 500px.
+
+-- 46 of 63 --
+
+47
+4. Quản lý vị trí khối chức năng và quảng cáo (Mục 4.4)
+Mô tả: Chỉnh khu vực hiển thị, thứ tự, bật/tắt các khối chức năng và quảng cáo, đặt tên
+hiển thị riêng của khối trên website.
+Bước 1: Bấm menu 4.4 Quản lý vị trí khối chức năng và quảng cáo; có thể lọc theo Khu
+vực hiển thị, Loại chức năng, Từ khóa rồi bấm [Tìm kiếm].
+Hình 5.6 – Danh sách khối chức năng và quảng cáo
+Bước 2: Bấm biểu tượng Sửa ở dòng khối cần chỉnh; nhập Tên hiển thị trên web (để trống =
+dùng tên mặc định), chọn Khu vực hiển thị, Thứ tự, bật/tắt Hiển thị, Hiển thị trên điện thoại.
+Bước 3: Bấm [Lưu] (hoặc [Đóng] để thoát không lưu).
+5. Ẩn hiện phần mềm tác nghiệp (Mục 4.5)
+Mô tả: Các nút dẫn sang phần mềm của ngành, được tích hợp sẵn trên website.
+Bước 1: Bấm menu 4.5 Ẩn hiện phần mềm tác nghiệp.
+Bước 2: Bấm biểu tượng Sửa ở dòng phần mềm, bật/tắt Hiển thị.
+Bước 3: Bấm [Lưu].
+6. Quản lý khẩu hiệu - Chữ chạy (Mục 4.6)
+Mô tả: Khẩu hiệu là dòng chữ chạy trên trang chủ website, chạy tự động theo thời gian đã
+đặt.
+Bước 1: Bấm menu 4.6 Quản lý khẩu hiệu - Chữ chạy.
+Bước 2: Bấm [Thêm mới].
+Bước 3: Nhập Nội dung chữ chạy menu ngang và/hoặc Nội dung chữ chạy dọc, Url liên kết
+(nếu có), Ngày bắt đầu, Ngày kết thúc. Cấu hình: Là chữ chạy mặc định, Chữ chạy dọc, Chữ
+chạy ngang, Cho phép chạy chữ mặc định.
+
+-- 47 of 63 --
+
+48
+Hình 5.7 – Hộp thêm mới khẩu hiệu chữ chạy
+Bước 4: Bấm [Lưu].
+7. Giới thiệu đơn vị (Mục 4.7) MỚI
+Mô tả: Nội dung cho trang giới thiệu đơn vị (dùng cho các mẫu giao diện mới).
+Bước 1: Bấm menu 4.7.1 Giới thiệu chung, nhập 5 phần: Thông tin cơ bản (số giáo viên, số
+học sinh, số lớp), Lịch sử hình thành, Bộ máy tổ chức, Tầm nhìn và sứ mệnh, Cơ sở vật chất
+— mỗi phần có Ảnh minh họa + Mô tả. Bấm [Lưu], rồi [Xem trên web].
+Hình 5.8 – Trang 4.7.1 Giới thiệu chung
+Bước 2: Các mục 4.7.2 Thành tích đạt được, 4.7.3 Cán bộ tiêu biểu, 4.7.4 Học sinh tiêu
+biểu, 4.7.5 Sự kiện: bấm [Thêm mới] → nhập tên, Ảnh, Mô tả → tích Hiển thị → [Lưu].
+
+-- 48 of 63 --
+
+49
+Hình 5.9 – Danh sách thành tích đạt được
+Lưu ý: Với ảnh học sinh tiêu biểu, nên có sự đồng ý của phụ huynh trước khi đăng.
+
+-- 49 of 63 --
+
+50
+CHƯƠNG 6. BÁO CÁO THỐNG KÊ WEBSITE
+Khối chức năng số 5 giúp quản trị viên thống kê tin bài theo chuyên mục, người đăng, kiểu
+tin; thống kê lượt đọc và lượt truy cập.
+Các bước thực hiện chung cho mọi màn hình thống kê:
+Bước 1: Bấm menu 5. Thống kê và chọn loại thống kê cần xem.
+Bước 2: Chọn Từ ngày – Đến ngày và các ô lọc (Chuyên mục, Người đăng, Loại tin…) nếu
+có.
+Bước 3: Bấm [Tìm kiếm] để xem kết quả; bấm [Xuất Excel] để tải báo cáo.
+Hình 6.1 – Thống kê số lượng tin bài theo chuyên mục (Mục 5.1.1)
+Mục Trả lời câu hỏi
+5.1.1 Số lượng tin bài theo chuyên mục Mỗi chuyên mục có bao nhiêu bài?
+5.1.2 Chi tiết tin bài theo chuyên mục Danh sách bài của từng chuyên mục (ngày tạo, ngày đăng,
+người đăng)
+5.1.3 Chi tiết tin bài theo người đăng Mỗi người đã đăng những bài nào?
+5.1.4 Chi tiết tin bài Danh sách đầy đủ kèm đường link, tác giả, nguồn tin
+5.1.5 Tổng hợp chi tiết tin bài Như 5.1.4, lọc theo loại tin, chuyên mục, người đăng
+5.1.6 Số lượng tin bài theo người đăng Ai đăng nhiều, ít (dùng cho thi đua)
+5.1.7 Tin bài theo kiểu tin Bao nhiêu tin tức, văn bản, video…
+5.2 Lượt đọc Bài nào được đọc nhiều
+5.3.1 → 5.3.3 Lượt truy cập Lượt truy cập theo ngày, theo tháng, theo năm
+Hình 6.2 – Thống kê lượt truy cập hàng tháng (Mục 5.3.2), có nút chuyển nhanh Theo ngày / Theo năm
+
+-- 50 of 63 --
+
+51
+CHƯƠNG 7. QUẢN TRỊ HỆ THỐNG
+Khối chức năng số 6 giúp quản trị viên tạo tài khoản và phân quyền chặt chẽ cho từng
+người dùng, theo dõi lịch sử thao tác. Đây là thao tác đầu tiên để giáo viên có tài khoản
+đăng tin. Nên làm theo thứ tự 6.1 → 6.2 → 6.3 → 6.4.
+1. Nhóm người dùng (Mục 6.1)
+Mô tả: Quyền chức năng được phân cho nhóm, vì vậy cần tạo nhóm người dùng trước.
+Bước 1: Bấm menu 6. Quản trị hệ thống → 6.1 Khai báo nhóm người dùng.
+Bước 2: Bấm [+ Thêm mới].
+Bước 3: Nhập Tên nhóm (*), ví dụ Giáo viên, Ban biên tập.
+Hình 7.1 – Thêm mới nhóm người dùng
+Bước 4: Bấm [Thêm mới] để lưu.
+2. Phân quyền cho nhóm (Mục 6.2)
+Mô tả: Chọn các chức năng trên menu mà nhóm được sử dụng.
+Bước 1: Bấm menu 6. Quản trị hệ thống → 6.2 Phân quyền cho nhóm.
+Bước 2: Chọn Nhóm người dùng cần phân quyền.
+Bước 3: Tích các chức năng trong cây Chức năng hệ thống mà nhóm được thao tác.
+
+-- 51 of 63 --
+
+52
+Hình 7.2 – Phân quyền chức năng cho nhóm
+Bước 4: Bấm [Lưu]. Nút [Xóa hết phân quyền] bỏ toàn bộ quyền của nhóm.
+Lưu ý: Không giao nhóm chức năng 6. Quản trị hệ thống cho giáo viên thường.
+3. Quản trị người dùng (Mục 6.3)
+Mô tả: Quản lý tài khoản người dùng của đơn vị.
+Bước 1: Bấm menu 6. Quản trị hệ thống → 6.3 Quản lý người dùng.
+Hình 7.3 – Danh sách người dùng (tên người dùng đã làm mờ)
+Bước 2: Bấm [Thêm mới], chọn Nhóm người dùng (*) và nhập Tên người dùng (*), Điện
+thoại, Tên đăng nhập (*), Mật khẩu.
+
+-- 52 of 63 --
+
+53
+Hình 7.4 – Hộp Chi tiết người dùng (mật khẩu đã làm mờ)
+Bước 3: Chọn quyền thao tác tương ứng: Quyền đăng tin, Quyền sửa tin, Quyền xóa tin,
+Quyền duyệt hiển thị, Cho phép hoạt động. Nếu người dùng chỉ được soạn tin, chọn người
+duyệt ở ô Chọn người dùng được phép duyệt hiển thị.
+Hình 7.5 – Các công tắc quyền của người dùng
+Bước 4: Bấm [Lưu] để hoàn thành.
+Lưu ý:
+ Tên đăng nhập viết liền không dấu, không trùng, không trùng từ khóa admin; nên dùng
+số điện thoại cho dễ nhớ.
+ Ô cấp lại mật khẩu có sẵn mật khẩu mặc định của hệ thống: yêu cầu người dùng đổi
+ngay ở lần đăng nhập đầu, không chép mật khẩu mặc định vào tài liệu phát cho nhiều
+người.
+ Giáo viên chuyển công tác: tắt Cho phép hoạt động thay vì xóa, để giữ lịch sử bài đã
+đăng.
+4. Phân quyền người dùng – chuyên mục (Mục 6.4)
+Mô tả: Phân quyền đăng tin trong các chuyên mục nhất định cho những tài khoản có
+quyền đăng tin.
+Bước 1: Bấm menu 6. Quản trị hệ thống → 6.4 Phân quyền người dùng - chuyên mục.
+Bước 2: Chọn Phân quyền theo Nhóm người dùng hoặc Phân quyền theo người dùng, rồi
+chọn nhóm hoặc người dùng.
+Bước 3: Tích các chuyên mục người dùng đó được quyền đăng tin.
+
+-- 53 of 63 --
+
+54
+Hình 7.6 – Phân quyền người dùng theo chuyên mục
+Bước 4: Bấm [Lưu].
+Lưu ý: Giáo viên báo không thấy chuyên mục khi soạn tin thường là do chưa được tích ở
+bước này.
+5. Lịch sử truy cập (Mục 6.5)
+Mô tả:
+ 6.5.1 Lịch sử soạn tin bài: ai đã tạo, sửa, xóa bài nào, lúc nào.
+ 6.5.2 Lịch sử thao tác trên trang quản trị: theo người truy cập, thời gian, IP, trình duyệt,
+thiết bị.
+Bước 1: Bấm menu 6.5.1 hoặc 6.5.2.
+Bước 2: Chọn Người dùng, Từ ngày – Đến ngày và bấm [Tìm kiếm].
+Hình 7.7 – Lịch sử thao tác trên trang quản trị (IP và thiết bị đã làm mờ)
+Lưu ý: Thấy đăng nhập lạ (giờ bất thường, vị trí lạ) thì đổi mật khẩu tài khoản đó ngay và
+báo hotline 1900 4740.
+
+-- 54 of 63 --
+
+55
+6. Cấu hình mặc định soạn tin bài (Mục 6.6)
+Mô tả: Đặt sẵn các lựa chọn mà mỗi bài mới sẽ tự có khi soạn.
+Bước 1: Bấm menu 6. Quản trị hệ thống → 6.6 Cấu hình mặc định soạn tin bài.
+Bước 2: Bật/tắt các công tắc: Mặc định gửi tin eNetViet, hiển thị ảnh đầu bài viết, hiển thị
+trang chi tiết trên khổ rộng, hiển thị tin trên trang chủ, cho phép bình luận, hiển thị lượt đọc,
+ngày đăng, người đăng tin, tác giả, nguồn tin, File tài liệu PDF đính kèm có chữ ký số.
+Hình 7.8 – Cấu hình mặc định soạn tin bài
+Bước 3: Bấm [Lưu] để hoàn thành.
+7. Quản lý file hệ thống (Mục 6.7) MỚI
+Mô tả: Xem, sao lưu và dọn dẹp ảnh, tài liệu đã tải lên để giải phóng dung lượng.
+Bước 1: Bấm menu 6. Quản trị hệ thống → 6.7 Quản lý file hệ thống. Màn hình hiển thị
+tổng số file, tổng dung lượng; cây thư mục bên trái, danh sách file bên phải.
+Hình 7.9 – Quản lý file hệ thống
+Bước 2: Trước khi dọn, bấm [Sao lưu toàn bộ file về máy (<1 GB)] hoặc [Tải thư mục đã
+chọn bên trái].
+Bước 3: Dùng các nút dọn dẹp khi cần: [Tìm và xóa file không dùng], [Tìm và xóa file thuộc
+tin bài đã bị xóa], [Tìm và xóa file thuộc tin bài cũ], [Xóa thư mục rỗng]. Xem lại ở [File đã
+xóa] và [Lịch sử xóa file].
+Lưu ý:
+
+-- 55 of 63 --
+
+56
+ Hệ thống chỉ hỗ trợ xóa file tài liệu có dung lượng lớn hơn 20MB, không cho xóa file ảnh
+(vì có thể làm mất ảnh trong tin bài).
+ File đang được đính kèm trong tin bài sẽ không bị xóa; muốn xóa thì xóa tin bài trước.
+
+-- 56 of 63 --
+
+57
+CHƯƠNG 8. TIN NỘI BỘ MỚI
+Trang tin nội bộ chỉ người có tài khoản mới đọc được (thông báo nội bộ, tài liệu chuyên
+môn, biên bản họp). Cần bật trước tại Mục 4.1 (thẻ Thông tin cấu hình → Sử dụng trang tin
+nội bộ). Mở trang nội bộ bằng HỆ THỐNG → Trang nội bộ.
+1. Chuyên mục nội bộ (Mục 7.2)
+Bước 1: Bấm menu 7. Tin nội bộ → 7.2 Chuyên mục nội bộ.
+Bước 2: Tạo chuyên mục giống Mục 1.1 (Tên, Kiểu tin, Thứ tự menu, Cho phép hiển thị) và
+bấm [Lưu].
+2. Phân quyền đăng tin chuyên mục nội bộ (Mục 7.5)
+Bước 1: Bấm menu 7.5 Phân quyền đăng tin chuyên mục nội bộ.
+Bước 2: Chọn Người dùng hệ thống.
+Bước 3: Tích các chuyên mục ở Danh sách chuyên mục đăng tin → bấm [Lưu đăng tin];
+tích ở Danh sách chuyên mục đọc tin → bấm [Lưu đọc tin].
+Hình 8.1 – Phân quyền đăng tin, đọc tin chuyên mục nội bộ (tên người dùng đã làm mờ)
+3. Tin bài nội bộ (Mục 7.3)
+Bước 1: Bấm menu 7.3 Tin bài nội bộ.
+Hình 8.2 – Danh sách tin bài nội bộ
+Bước 2: Bấm [Thêm mới] và soạn bài giống Mục 2.1; có thêm Ngày ban hành, Ngày hiệu
+lực, Hiển thị trên trang chủ nội bộ.
+Bước 3: Bấm [Lưu tin]. Dùng cột Xem trước để kiểm tra bài.
+
+-- 57 of 63 --
+
+58
+4. Thêm – Sửa tin trên Website vào chuyên mục nội bộ (Mục 7.4)
+Mô tả: Đưa bài đã có trên website công khai sang trang nội bộ mà không phải soạn lại.
+Bước 1: Bấm menu 7.4 Thêm - Sửa tin trên Website vào chuyên mục nội bộ; lọc bài theo
+ngày, chuyên mục, từ khóa.
+Bước 2: Chọn Chuyên mục nội bộ, tích các bài cần đưa vào.
+Hình 8.3 – Thêm tin trên website vào chuyên mục nội bộ
+Bước 3: Bấm [Thêm vào tin nội bộ]. Muốn gỡ thì tích bài và bấm [Xóa khỏi tin nội bộ].
+5. Các mục khác (Mục 7.1, 7.6, 7.7)
+ 7.1 Quản lý người dùng nội bộ đăng ký ngoài: duyệt người tự đăng ký tài khoản đọc tin
+(hoặc [Thêm mới] trực tiếp); bật Trạng thái, tích Phân quyền đọc tin đơn vị / đọc tin
+chung.
+ 7.6 Quản lý bình luận tin nội bộ: duyệt giống Mục 2.16.
+ 7.7 Thống kê tin nội bộ: số lượng và chi tiết tin theo người đăng (7.7.1, 7.7.2 cho tin
+soạn trực tiếp; 7.7.3, 7.7.4 cho tin lấy từ website).
+
+-- 58 of 63 --
+
+59
+CHƯƠNG 9. THI ĐUA KHEN THƯỞNG MỚI
+Trang vinh danh cá nhân đoạt giải theo từng năm học. Khai báo danh mục trước (8.1, 8.2),
+sau đó mới nhập danh sách (8.3).
+1. Danh sách năm học (Mục 8.1)
+Bước 1: Bấm menu 8. Thi đua khen thưởng → 8.1 Danh sách năm học.
+Bước 2: Bấm [+ Thêm mới], nhập Tên năm học, Mã năm học → [Lưu].
+2. Quản lý giải thưởng (Mục 8.2)
+Bước 1: Bấm menu 8.2.1 Danh sách giải thưởng → [+ Thêm mới] → nhập Tên giải thưởng,
+Mã giải thưởng, Mã thứ tự → [Lưu].
+Hình 9.1 – Danh sách giải thưởng
+Bước 2: Bấm menu 8.2.2 Thứ hạng giải thưởng → khai báo các hạng của từng giải (Nhất,
+Nhì, Ba, Khuyến khích) → [Lưu].
+3. Danh sách cá nhân đoạt giải (Mục 8.3)
+Bước 1: Bấm menu 8.3 Danh sách cá nhân đoạt giải.
+Hình 9.2 – Danh sách cá nhân đoạt giải (ảnh, họ tên, ngày sinh, mã định danh đã làm mờ)
+Bước 2: Bấm [Thêm mới].
+Bước 3: Chọn Năm học (*), Giải thưởng (*), Thứ hạng giải thưởng; nhập Ảnh, Họ tên, Ngày
+sinh, Mã định danh, Là học sinh giỏi, Ghi chú.
+
+-- 59 of 63 --
+
+60
+Hình 9.3 – Hộp thêm mới cá nhân đạt giải
+Bước 4: Bấm [Lưu], rồi bấm [Xem trên web] để kiểm tra.
+Lưu ý: Mã định danh, ngày sinh là thông tin cá nhân — chỉ nhập khi thật cần và kiểm tra
+xem có hiện công khai trên web hay không.
+4. Quản lý slide ảnh và nội dung giới thiệu (Mục 8.4, 8.5)
+ 8.4 Quản lý slide ảnh: ảnh chạy đầu trang vinh danh theo Năm học và Giải thưởng; tích
+Là ảnh dùng chung để dùng cho mọi giải.
+ 8.5 Quản lý nội dung giới thiệu: đoạn giới thiệu, Link ebook kỷ yếu; tích Sử dụng và
+Dùng chung cho các giải thưởng nếu cần.
+Cả hai mục: bấm [Thêm mới] → nhập thông tin → [Lưu] → [Xem trên web].
+
+-- 60 of 63 --
+
+61
+PHỤ LỤC
+A. Quy định về ảnh, file và dung lượng
+Loại Quy định
+Ảnh đại diện, ảnh
+trong bài
+Ưu tiên tỉ lệ 16:9; rộng tối đa 1000px (lớn hơn sẽ tự thu nhỏ); jpg, png, gif; tối đa
+10MB
+Ảnh banner, slide
+banner
+Không bắt buộc, đẹp nhất rộng khoảng 2000px, cao khoảng 500px; tối thiểu rộng
+1140px
+Ảnh tin
+Emagazine
+Không giới hạn kích thước
+File đính kèm doc, docx, pdf, xls, xlsx, ppt, pptx, rar, zip, xsn, odf, tiff, jpg, jpeg, gif, png; dung
+lượng tối đa hiện trên form soạn tin
+Video, âm thanh mp4, mp3; tối đa 500MB. Lớn hơn thì đưa lên YouTube rồi nhúng
+Album kỷ yếu, bài
+giảng E-learning
+File .zip (kỷ yếu tối đa 400MB)
+Dung lượng lưu
+trữ
+Mặc định 15GB mỗi đơn vị hoặc theo hợp đồng; xem số đã dùng trên trang chủ
+quản trị. Khi còn dưới 30% hoặc hết dung lượng, hệ thống giới hạn file tài liệu,
+video, file nén (ảnh vẫn tải được)
+B. Lấy link SRC trong mã nhúng YouTube / Facebook
+Dùng cho Tin video (2.2) và Banner video (4.3).
+1. YouTube: dưới video bấm Chia sẻ → Nhúng. Facebook: trên bài video bấm … hoặc
+Chia sẻ → Nhúng.
+2. Trong đoạn mã hiện ra, chỉ sao chép phần nằm giữa src=" và dấu " tiếp theo, không lấy
+dấu ngoặc kép.
+3. Dán vào ô Link SRC trong mã nhúng YouTube (hoặc Facebook).
+Ví dụ, với mã nhúng <iframe width="560" height="315"
+src="https://www.youtube.com/embed/l9zmZwejiEc" …></iframe> thì chỉ dán
+https://www.youtube.com/embed/l9zmZwejiEc.
+C. Quy định đặt tên
+ Tiêu đề tin, tên chuyên mục: viết hoa theo chuẩn tiếng Việt, không viết HOA toàn bộ.
+Tiêu đề khoảng 15 từ; tên chuyên mục 3–5 từ.
+ Tên đăng nhập, mã nhóm: viết liền không dấu, không trùng, không trùng từ khóa admin.
+ Mật khẩu: tối thiểu 8 ký tự, có chữ và số, không chứa tên đăng nhập.
+
+-- 61 of 63 --
+
+62
+D. Câu hỏi thường gặp
+Tình huống Cách xử lý
+Đăng bài rồi nhưng
+không thấy trên
+website
+Kiểm tra bài đã tích Cho phép tin bài hiển thị chưa; chuyên mục có bật Cho
+phép hiển thị không (mục 1.1); muốn lên trang chủ thì tích Hiển thị trang chủ.
+Sau đó bấm Cập nhật thay đổi trang chủ và tải lại trang (Ctrl + F5).
+Ô Chuyên mục trống
+khi soạn tin
+Chưa có chuyên mục đúng kiểu tin (mục 1.1) hoặc tài khoản chưa được phân
+quyền chuyên mục (mục 6.4).
+Không tích được ô
+Duyệt hiển thị
+Tài khoản không có quyền Duyệt tin. Báo người có quyền duyệt hoặc quản trị
+viên cấp quyền (mục 6.3).
+Không thấy bài cũ
+trong danh sách
+Danh sách mặc định chỉ lọc khoảng 2 tháng gần nhất. Lùi Từ ngày xa hơn rồi
+bấm [Tìm kiếm].
+Tin không lên khu tin
+nổi bật
+Bài cần có Ảnh đại diện và được tích Tin tiêu điểm / Tin nổi bật.
+Tiêu đề tự đổi thành
+chữ thường
+Do gõ HOA toàn bộ. Gõ lại theo chuẩn viết hoa.
+Video tải lên không
+phát được
+Sai định dạng. Chuyển sang mp4 (H.264) bằng phần mềm chuyển đổi video rồi
+tải lại, hoặc đưa lên YouTube rồi nhúng.
+Bài dán từ Word bị
+lệch phông, cỡ chữ
+Bôi đen nội dung → bấm nút xoá định dạng trên thanh công cụ → định dạng lại
+đậm/nghiêng nếu cần.
+Banner không đổi
+sau khi tải ảnh mới
+Xem nhãn trên các thẻ ở mục 4.3: có thể một kiểu ưu tiên cao hơn (video, slide)
+đang được dùng. Tắt kiểu đó đi.
+Sửa menu/khối mà
+website chưa đổi
+Bấm HỆ THỐNG → Cập nhật thay đổi trang chủ, rồi tải lại website. Trang quản
+trị hiển thị sai: bấm Cập nhật lại cache trang quản trị.
+Hết dung lượng Dùng mục 6.7 Tìm và xóa file không dùng (sao lưu trước) hoặc liên hệ để nâng
+dung lượng.
+E. Hỗ trợ
+ Hotline: 1900 4740 (giờ hành chính, thứ 2 – thứ 7)
+ Email: cskh@qig.vn
+ Khi gọi, hãy nêu tên trường, tên đăng nhập, mục menu đang làm (ví dụ 2.1) và gửi ảnh
+chụp màn hình lỗi. Không gửi mật khẩu cho bất kỳ ai, kể cả nhân viên hỗ trợ.
+Che thông tin cá nhân trước khi chia sẻ ảnh chụp: khi gửi ảnh cho bộ phận hỗ trợ hoặc
+đưa vào tài liệu, hãy làm mờ email, số điện thoại, tên đăng nhập, mật khẩu (kể cả mật khẩu
+mặc định), mã định danh và thông tin học sinh. Các ảnh minh hoạ trong tài liệu này đã
+được làm mờ những phần đó.
+
+-- 62 of 63 --
+
+
+
+-- 63 of 63 --
+

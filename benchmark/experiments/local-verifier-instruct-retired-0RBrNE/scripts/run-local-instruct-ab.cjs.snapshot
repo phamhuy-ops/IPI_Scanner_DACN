@@ -1,0 +1,14 @@
+// Chỉ chạy sau khi người dùng đồng ý ngoại lệ cho đối chứng model đã có sẵn.
+if (!process.argv.includes('--approved-local-instruct-comparison')) {
+  console.error('Chờ người dùng cho phép đối chứng qwen2.5:1.5b-instruct đã có sẵn. Không gọi model hoặc đổi mặc định.');
+  process.exitCode = 1;
+} else {
+  const protocol = 'benchmark/experiments/local-instruct-comparison-pending/giao-thuc.json';
+  const plan = require('../' + protocol);
+  const { main } = require('./run-semantic-stance-ab.cjs');
+  main({ name: 'local-instruct-comparison', module: '/src/ai/agents/slmCatalog.ts', entry: 'scripts/run-local-instruct-ab.cjs', protocol,
+    extraModels: [plan.candidate.checkModel], pipelineOptions: plan.candidate, expectedCasesChecksum: plan.cases_checksum,
+    expectedRuntimeVersion: plan.runtime_version, expectedModelDigests: plan.model_digests,
+    change: 'Chỉ đối chứng Verifier Coder với Instruct đã có sẵn. Giữ Detector Gemma, prompt/schema, seed, backend, nguồn và chính sách. Không đổi Agent mặc định hoặc train/tải model.' })
+    .catch(error => { console.error(error); process.exitCode = 1; });
+}

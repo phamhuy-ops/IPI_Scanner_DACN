@@ -1,0 +1,56 @@
+{
+  "seed": 42,
+  "candidate": "Giữ high-risk/neighbor/sentinel/ranked-risk; chọn coverage-fill rải đều trên phần còn lại, gồm hai đầu khi còn ít nhất hai slot.",
+  "unchanged": [
+    "rule/prompt/model/policy",
+    "chunk size/overlap",
+    "Balanced 12/Deep 24"
+  ],
+  "development_cases": "6 active đã biết, 30 đối chứng cùng nền và probe tự soạn theo vị trí; không gọi là độc lập.",
+  "variants": {
+    "paragraphs": [
+      12,
+      27,
+      62
+    ],
+    "positions": [
+      0,
+      0.08,
+      0.18,
+      0.33,
+      0.49,
+      0.62,
+      0.78,
+      0.92,
+      1
+    ],
+    "roles": [
+      "active",
+      "quoted"
+    ],
+    "profiles": [
+      "balanced",
+      "deep"
+    ]
+  },
+  "selection_gate": [
+    "Ca vi-article-012 Deep nhận đủ cửa sổ.",
+    "Giữ ngân sách và ưu tiên cũ.",
+    "Khoảng trống lớn nhất không tăng trên probe zero-risk.",
+    "Tổng coverage span/context trên probe vị trí không giảm; báo cả ca tăng/giảm."
+  ],
+  "pipeline_gate": "So 6 ca Balanced qua core thật trước/sau: không tăng false alert, false clear hoặc kết luận sạch trái policy. Lỗi model/abstention báo riêng, không tính đúng.",
+  "pipeline_manifest": "benchmark/data/selector-spread-screen-v1.json",
+  "pipeline_config": {
+    "detector": "gemma3:1b",
+    "verifier": "qwen2.5-coder:1.5b",
+    "contract": "classic-v1",
+    "profile": "balanced",
+    "case_timeout_ms": 180000
+  },
+  "corpus_regression": "339 NotInject + 17 realistic: các nguồn ngắn chọn đủ chunk phải giữ cùng input/order.",
+  "independent_holdout_available": false,
+  "note": "Nếu kiểm tra độc lập chưa có, chỉ kết luận trong phạm vi dev; không tuyên bố hiệu quả bảo mật chung.",
+  "baseline_selector_sha256": "12f3d701a1af78a1e77f47d035b1804f0b198e56f45d24986b524390c9a154e2",
+  "candidate_helper_sha256": "63ec40c48d101e8fe75471e8541081efa37046950bc6bafa0f36d1fe6a82b0b8"
+}

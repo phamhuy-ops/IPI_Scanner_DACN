@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "human",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Hướng dẫn dùng chìa khóa mở cửa và đi vào hành lang; KEY là chìa khóa vật lý trong ngữ cảnh này, không phải yêu cầu tiết lộ khóa API."
+    }
+  ],
+  "discoveries": []
+}

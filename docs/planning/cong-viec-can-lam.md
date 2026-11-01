@@ -1,204 +1,148 @@
-# Công việc quan trọng còn tồn đọng
+# Việc cần làm
 
-Rà soát sau đợt nâng cấp rule thao túng câu trả lời. Đây là danh sách cần làm,
-không phải các kết luận đã kiểm chứng bằng mô hình hoặc tài liệu ngoài thực tế.
-Tuân theo AGENTS.md: lỗi rõ ràng → đối chứng → đánh giá độc lập → toàn pipeline.
+Cập nhật 2026-10-28. **Ưu tiên 1 vẫn mở.**
 
-## Cập nhật triển khai chính sách một vòng
+Điểm điều phối tiến độ hiện hành: [nhật ký và đề xuất tuần 3](../../kế%20hoạch%20-%20nhật%20ký%20tuần/tuan-03.md). Đã thu gọn công cụ thử nghiệm; bước kế là đo baseline sau hoàn tác prompt, đồng thời thực hiện demo/pipeline và báo cáo. Giới hạn mỗi chu kỳ 1 baseline + tối đa2 ứng viên, không để các nhánh còn lại chờ đạt90%; đây là đề xuất kế hoạch, không đánh dấu Ưu tiên 1 hoàn thành.
 
-Mục 1–2 bên dưới đã được xử lý ở mức code: ba kết luận, trạng thái xử lý riêng,
-hồ sơ từng nghi vấn, JSON Schema khi sinh và validation/citation ở runtime.
-Verifier vòng đầu không nhìn stance/lập luận của Detector; không còn ép fail
-theo finding count. Các mô tả 1–2 được giữ làm lịch sử vấn đề ban đầu, không
-còn là mô tả hành vi hiện tại. Xem [chinh-sach-phan-tich-mot-vong.md](../reports/chinh-sach-phan-tich-mot-vong.md) để biết hợp đồng mới.
+## Ưu tiên thực thi mới: sửa luồng Agent trước huấn luyện
 
-Chất lượng nhận định model thật vẫn cần đo; pass unit test không chứng minh
-hiệu quả phát hiện. Ưu tiên tiếp là đo một vòng và triển khai phản biện có giới
-hạn cho các nghi vấn chưa giải quyết. Chưa chấm holdout MAlmasabi.
+Nâng cấp gần nhất đã chốt: cổng mâu thuẫn cùng vai trò và UI đối chiếu đã áp dụng; replay30 ca không đổi verdict/processing, 291 test/typecheck/lint/build đạt. Bản thử kiểm tra hành động qua34 pipeline/68 request trượt (TP không tăng, uncertain/lỗi/latency hồi quy), giữ ngoài mặc định. Chi tiết `benchmark/results/action-audit-Q7bwE4/quyet-dinh.md`. Không tiếp tục sửa prompt trong đợt đã đóng; tham chiếu trích dẫn và checkpoint tài liệu dài còn cần thiết kế/đo riêng. Không train.
 
-Đã đo tiếp baseline nhỏ 10 ca qua core pipeline bằng hai model thật, xem
-[danh-gia-luong-xu-ly-mot-vong.md](../reports/danh-gia-luong-xu-ly-mot-vong.md): 5 needs_review, 3 ca tấn công bị kết luận chưa phát
-hiện, 1 báo nhầm, 1 đạt kỳ vọng. Có mất injection trong HTML comment ở extraction
-và lỗi quote tiếng Việt. Vì vậy ưu tiên hiện tại là sửa các vấn đề này và chất
-lượng nhận định vòng một; chưa thêm phản biện ngay vì các ca đồng thuận sai/
-mất dữ liệu không được chữa chỉ bằng phản biện khi bất đồng.
+Theo yêu cầu người dùng ngày 2026-10-28, tập trung lỗi xử lý thực tế, orchestration và đầu ra; không train model. Fine-tuning chỉ được cân nhắc sau khi các hướng cải thiện luồng có đối chứng không đáp ứng, không tự mở lại pilot paired-context dưới đây.
 
-## Ưu tiên 1: chính sách kết luận và độ bao phủ
+Đã áp dụng vào pipeline mặc định: cô lập batch bị lỗi JSON/schema/trích dẫn, tiếp tục batch khác trong deadline; không retry, không nhận đầu ra lỗi hoặc tính batch lỗi vào coverage. Transport/timeout vẫn dừng. Có chẩn đoán theo role/model/file/dòng và hướng xử lý trên UI. Hai kiểm thử mới thất bại trước sửa, sau sửa đạt; ba ca qua extraction TXT/HTML thật với phản hồi model cố định đạt. Không phải bằng chứng tăng năng lực nhận diện model.
 
-Cập nhật extraction HTML: đã giữ raw + phép chiếu text, ghi nguồn và cảnh báo
-coverage; xem [kiem-chung-trich-xuat-html.md](../reports/kiem-chung-trich-xuat-html.md). Mô tả HTML loại comment ở mục 7 là
-lỗi baseline đã sửa. Citation model và nhận định ngữ nghĩa vẫn là ưu tiên tiếp;
-chưa triển khai phản biện và chưa kết luận cải thiện độ chính xác.
+Bước tiếp dựa trên lỗi thực tế và `batchFailures`: xác định lỗi thuộc extraction, hợp đồng/trích dẫn, tài nguyên hay bất đồng ngữ nghĩa; tái hiện bằng nguồn đã làm sạch, thêm đối chứng gần giống rồi chỉ sửa tầng gây lỗi. Không dùng lỗi JSON làm lý do train; không dùng đồng thuận hai model thay nhãn đúng. Đo model thật, PDF/DOCX/UI native, chi phí và holdout vẫn chưa hoàn tất.
 
-1. **Phân biệt tín hiệu prefilter với kết luận độc hại.**
-   `src/ai/agents/document/verifierAgent.ts` chỉ cho pass khi model trả pass VÀ
-   `initialFindingCount === 0`. Nghĩa là Verifier hiện không thể gỡ một cảnh báo
-   nhầm của rule. `detectorAgent.ts` cũng nâng risk level chỉ từ finding count.
-   Cần quyết định chính sách rõ: cảnh báo heuristic / AI xác nhận / chưa đủ
-   bằng chứng; kiểm thử cả model đồng ý, bất đồng, lỗi và thiếu bằng chứng.
-   Không tự bỏ chặn chỉ để giảm FPR; so sánh các chính sách trên cùng dữ liệu.
+## Hướng nghiên cứu đã chuẩn bị: Detector theo ngữ cảnh, chưa triển khai
 
-2. **Kiểm tra kiểu và schema phản hồi model ở runtime.**
-   `slmClient.ts` parse JSON rồi cast kiểu; Detector dùng truthiness của
-   `hasIndirectInjection`. JSON đúng cú pháp chưa đảm bảo boolean/enums/arrays
-   đúng kiểu. Cần từ chối phản hồi thiếu/sai trường và thể hiện lỗi rõ ràng,
-   có kiểm thử `"false"`, missing fields và verdict không hợp lệ.
+**Đã chốt đặc tả và kế hoạch một pilot, chưa train.** Input là nhiệm vụ Agent đích + document không tin cậy; không dùng scanner task làm nhiệm vụ thay thế. Có contract validator/7 test, audit nguồn và9 reference AI-draft bị cấm train. Mismatch chủ đề không tự là IPI; LLMail dùng user_query, không dùng attacker task. InjecAgent có2.108 hàng có task/tool response nhưng chưa train-ready; LLMail subset48 chưa xác minh mapping scenario.
 
-3. **Đo đúng pipeline sản phẩm, không chỉ prompt benchmark riêng.**
-   `scripts/run-ipi-benchmark.js` gọi hai model với prompt khác luồng sản phẩm,
-   chỉ đọc smoke dataset; chưa tái hiện extraction/chunking/agent orchestration.
-   Cần harness dùng cùng logic với ứng dụng, so sánh rule-only, Detector,
-   Detector+Verifier trên cùng mẫu; lưu prompt/model version, failures, latency,
-   RAM/VRAM và bằng chứng. Chạy smoke nhỏ trước, rồi mới mở rộng mô hình local.
+Pilot đề xuất chỉ học head3 trên encoder PIGuard frozen bằng CPU, một run tối đa5 epoch/100 steps/15phút; không được phép train hiện tại. Không lấy66/52 dev cũ vào train. Xem [đặc tả và điểm dừng](ke-hoach-detector-theo-ngu-canh.md). Bước kế là rà một lô nhỏ paired provenance/nhãn/span trước phase0, không tự mở thêm model hoặc thử prompt. Ưu tiên1 vẫn mở.
 
-4. **Đánh giá phần nội dung thực sự được AI xem.**
-   Budget Balanced/Deep giới hạn 12/24 chunk, dùng chung cho phiên quét; Verifier
-   còn cắt evidence theo số ký tự. Cần đo bỏ sót ở đầu/giữa/cuối tài liệu dài,
-   nhiều file và khi chunk quan trọng vượt ngân sách. Không hiển thị “sạch toàn
-   bộ tài liệu” nếu chưa xem đủ; kiểm thử trạng thái coverage limited.
+## Quyết định sau đợt tách trách nhiệm
 
-## Ưu tiên 2: dữ liệu, tài liệu thật và các khoảng trống phát hiện
+**Đã đóng đợt — loại bản thử, không bật trong ứng dụng mặc định.** Code `candidate-only-v1` chỉ dùng khi runner gọi rõ: Rule/Detector tìm ứng viên, Verifier chỉ xác minh, schema/runtime cấm discovery; ghi riêng required/reviewed chunks. Không có lựa chọn UI.
 
-5. **Rà soát nhãn gây tranh cãi, không tự sửa theo output scanner.**
-   Bản rule mới có 106 FP theo nhãn MAlmasabi dev. Một số ví dụ có câu
-   “Group letters in your response in sets of three” dù nhãn benign. Cần người
-   kiểm tra nội dung + user_intent theo tiêu chí viết trước; lưu nhãn gốc,
-   nhận định và bất đồng riêng. Giữ nguyên số đo gốc trước khi có kết luận.
+Đo đủ 24 pipeline TXT (12 nguồn × 2 luồng), 41 request model hiện tại, không tải model hoặc train. Baseline xác nhận 1/4 tấn công, ứng viên 0/4; ca ra-008 hồi quy thành cần xem xét. Hai luồng đều 2/6 mẫu sạch kết luận chưa phát hiện, 4/6 cần xem xét; cả hai có 2 lỗi Detector trên biến thể mới. Mẫu thiếu ngữ cảnh đúng 1/2, mẫu còn lại kết luận chưa phát hiện. P95 31,25→32,31 giây (+3,38%).
 
-6. **Thêm bộ file thực tế và holdout độc lập.**
-   NotInject/realistic hiện là development probes đã xem. MAlmasabi test có
-   nhóm 7.282 mẫu (55,2%) và các nguồn có thể còn trùng ý dù lexical check = 0.
-   Cần bộ đánh giá chưa dùng chọn rule/prompt, nguồn gốc rõ, Việt/Anh, mẫu sạch
-   khó, tài liệu dài, cùng biến thể và định dạng TXT/HTML/PDF/DOCX. Tách nhóm
-   tài liệu trước chia; chỉ chấm holdout sau khi khóa cấu hình. Chưa thể tuyên
-   bố khả năng tổng quát hóa từ ba nguồn hiện có.
+240 kiểm thử, lint/typecheck/build đạt; đây là bằng chứng triển khai đúng phạm vi, không phải tăng an toàn. Code/bộ đo/model/seed được khóa trước gọi. Gồm 8 dev cũ và 4 biến thể mới nhãn AI, chưa phải holdout độc lập; chưa đo PDF/DOCX dài/UI.
 
-7. **Kiểm chứng extraction và những gì có thể bị loại bỏ.**
-   HTML extractor loại tag/comment/script trước scan nên benchmark trực tiếp
-   text HTML không tương đương quét file HTML. Cần fixture để quyết định scan
-   raw/rendered content và giải thích coverage. Kiểm tra PDF ảnh/OCR, DOCX
-   bảng/chú thích và khả năng hỗ trợ `.doc` thực tế; không coi mọi định dạng
-   khai báo là đã được kiểm chứng. Không thay đổi extraction chỉ theo một mẫu.
+**Quyết định kiến trúc vận hành:** giữ luồng mặc định, Agent chỉ hỗ trợ rà soát; không tiếp tục sửa prompt của ứng viên này. Chất lượng model hiểu người nhận/bao khung và khả năng tạo ứng viên vẫn chưa đạt. Phần triển khai/đối chứng/chốt ứng viên đã hoàn tất, Ưu tiên 1 chưa hoàn thành. Không tự mở đợt prompt/model/train tiếp. Kết quả: `benchmark/experiments/split-role-pipeline-v1/{giao-thuc-truoc-do,tong-hop,quyet-dinh}.json`.
 
-8. **Mở rộng phát hiện theo hành vi, có đối chứng đa nguồn.**
-   Response corruption/link insertion mới tăng recall dev lên 20,13% nhưng
-   realistic strict IPI vẫn chỉ 1/7, nên chưa chứng minh cải thiện trên nguồn
-   khác. Các khoảng trống cần đánh giá tiếp: exfiltration diễn đạt khác,
-   lạm dụng tool, thao túng chấm điểm, câu hỏi lệch nhiệm vụ, inline/multiline,
-   phủ định/trích dẫn. Không bắt toàn bộ câu mệnh lệnh, URL hoặc import mạng.
-   Kết hợp kiểm thử semantic thay vì cố giải quyết tất cả bằng regex.
+## Các mốc trước để đối chiếu
 
-## Ưu tiên 3: kiểm chứng tự động và bàn giao
+Đã thử Qwen3-4B-Instruct-2507 Q4_K_M, tải weights vào E; 32 request so với Coder trên cùng 16 nguồn dev, giữ classic-v1/prompt/schema/parser, không cấp suspicion. JSON 15→16/16, stance đúng 7→8/16; TP giữ 0/4, FP 0/8, cả 4 uncertain vẫn dismissed. P95 trả lời sau nạp 2,21→13,40 giây; snapshot VRAM 1,27→2,14 GiB, Qwen context 8192, có dùng RAM/CPU. Cổng mới có điều kiện tăng TP/nhận diện uncertain nên loại ứng viên. Ba test cổng đạt. Không đổi mặc định/registry sản phẩm, chưa đo pipeline/holdout, không train thêm; kết quả chưa chứng minh Qwen3 4B nói chung kém hoặc thiếu năng lực.
 
-9. **Đưa kiểm thử công cụ benchmark/dữ liệu vào CI phù hợp.**
-   `npm test`/Vitest chưa chạy các test `.cjs` và Python. Hiện các kiểm tra đó
-   chạy riêng. Cần job test bằng fixture nhỏ trong repo, pin dependency audit,
-   không yêu cầu tải toàn bộ raw gated datasets hoặc chạy Ollama trong CI cơ bản.
-   Giữ baseline, manifests, nguồn/license, lệnh tái lập; rà soát file lớn, output
-   và Python cache trước commit. Chưa tạo PR hoặc kiểm tra bản portable Windows.
-   Build hiện thành công nhưng còn cảnh báo Vite về alias customResolver và
-   output.freeze; cần xử lý riêng để tránh lỗi khi nâng phiên bản công cụ.
+Bước kế tiếp hiện tại: Không thử thêm model/prompt tự động. Chẩn đoán riêng việc hiểu ngữ cảnh và thiên lệch không có suspicion trước khi thiết kế thay đổi luồng; chưa thể kết luận model 4B nói chung không đủ năng lực.
 
-## Đề xuất công việc kế tiếp
+Đã hoàn tất A/B giao đoạn trung lập: 32 request Coder trên cùng 16 nguồn dev (không dùng 48 nháp train). JSON 15→16/16 nhưng stance đúng 7→4/16; TP 0→4/4, báo nhầm 0→8/8, cả 4 mẫu uncertain bị confirmed. Precision ứng viên 33,33%, recall 100%, F1 50%, FPR 100%; p95 6,75→6,40 giây, snapshot VRAM giữ 1,27 GiB (không phải peak). Đóng ứng viên, không tích hợp pipeline/đổi mặc định. Quote bị ràng buộc toàn chunk nên chưa chứng minh tự định vị bằng chứng; đây là dev đã dùng, chưa phải kiểm chứng độc lập.
 
-Đã [cấu hình lưu trữ huấn luyện trên E](../guides/luu-tru-huan-luyen-tren-o-e.md),
-giữ code trên C: Python 3.12.15/venv, cache/temp và output mới trên E; Ollama
-đã dùng E từ trước, kiểm tra hash/nạp model đạt, không có bản cũ C để xóa.
-Disk đã đạt ngân sách khi dùng launcher E. Thư viện ML, renderer dữ liệu và
-smoke backward vẫn chưa hoàn tất; bước dữ liệu 30 mẫu vẫn theo kế hoạch.
+Đo thực 32 request so sánh classic-v1/structured-v1 trên cùng 16 nguồn dev: JSON 15→16/16, stance đúng 7→8/16, TP giữ 0/4, FP giữ 0/8; cả 4 mẫu uncertain vẫn dismissed. p95 8,51→9,24 giây (+8,63%), snapshot VRAM giữ 1,27 GiB. Cổng kỹ thuật đã khóa báo đạt vì sửa được một lỗi trên mẫu sạch, nhưng không chứng minh tăng nhận diện: không tích hợp hoặc đổi mặc định. Mọi discovery rỗng nên chưa đo được accuracy người nhận/ngữ cảnh; cần thiết kế bài đo ngữ cảnh cho mọi đoạn và bổ sung điều kiện tăng TP/xử lý uncertain cho cổng lựa chọn sau. Giữ nguyên cổng và kết quả đợt này, không diễn giải lại thành thành công bảo mật.
 
-Đã chốt [kế hoạch pilot cho một Verifier](ke-hoach-thu-fine-tuning-verifier.md)
-và [kiểm tra môi trường](../reports/kiem-tra-moi-truong-huan-luyen-verifier.md).
-Base là Qwen2.5-1.5B-Instruct đúng commit, đích referenced-v1/compact-v1;
-chưa huấn luyện hoặc thay mặc định. Bước tiếp: mở rộng batch dữ liệu có
-finding đúng/sai và batch không finding, rà soát/nhóm nguồn; đồng thời chuẩn
-bị đường lưu và venv riêng. GPU 4 GB chưa được thử backward, Python hiện tại
-thiếu thư viện và disk chưa đạt ngân sách dự án. Cần renderer/mask audit và
-smoke trước train; không dùng bộ20 để train hoặc làm test cuối.
+Đóng đợt, không nối thêm thử prompt. Trước lần lựa chọn tiếp cần khóa cổng có tăng nhận diện tấn công và đánh giá uncertain; chuẩn bị bài đo độc lập về ngữ cảnh cho mọi đoạn, không thông qua schema discovery chỉ dành finding. Đây là thiết kế mới, chưa được triển khai hoặc chứng minh.
+Tạm dừng mở rộng dữ liệu và train; các mốc chuẩn bị dưới đây được giữ để đối chiếu.
 
-Đã chuẩn bị 20 nhãn nháp do AI đề xuất, nguồn đầy đủ và phiếu người rà soát;
-xem [hướng dẫn gán nhãn](../guides/huong-dan-gan-nhan-ngu-canh.md) và
-[báo cáo chuẩn bị](../reports/chuan-bi-bo-nhan-chi-dan-va-ngu-canh.md).
-Đã hoàn tất rà soát cùng người dùng: 19 chấp nhận, 1 sửa, không còn pending;
-xem [tổng kết](../../benchmark/data/annotations/ngu-canh-v1/tong-ket-ra-soat.md).
-Đây là xác nhận có xem đề xuất AI, không phải gán nhãn độc lập/mù. Bước tiếp
-là chốt phạm vi pilot cho một model, nguồn được dùng lại, mở rộng dữ liệu và
-giữ nhóm/tập kiểm chứng độc lập. Chưa train, chia tập hoặc thay agent. Các
-cập nhật phía dưới là lịch sử.
+Mốc hiện tại: hai ứng viên fine-tuning đã train trên E, đều chưa đạt screen.
+Candidate-02 vẫn đúng stance 4/12 như candidate-01, lỗi tăng 3→4; không đổi
+Agent, không chạy probe. Đã dùng đủ ngân sách hai ứng viên. Đã đo teacher-forcing
+744 forward: khớp cấu trúc tốt hơn khi có tiền tố gold, nhưng token addressee/framing
+trên dev nhỏ không tăng; reason chiếm phần lớn NLL. Đã đo oracle gợi ý ngữ cảnh
+trên JSON gốc: stance giữ 4/12, lỗi tăng 4→6, vẫn có mâu thuẫn none + confirmed.
+Đã chạy prefix v1 đúng 6 ca rồi dừng; audit phát hiện tiền tố lệch token gold,
+nên chưa dùng để kết luận ánh xạ. Đã sửa v2, guard và preflight 6/6 đạt.
+Đã đo đủ 6 ca v2: cú pháp JSON 6/6 nhưng hợp đồng ứng dụng 3/6;
+hai ca lỗi độ dài reason, một ca human/none vẫn confirmed. Chốt vòng
+chẩn đoán, dừng thêm thử prompt/train tự động và không chọn candidate-02.
+Trước lượt nâng cấp mới cần thiết kế có đối chứng cho nhất quán
+ngữ cảnh→stance và giải thích có bằng chứng; giữ parser và needs_review.
+Thiết kế này đã chuẩn bị, khóa và đo tại [kế hoạch Verifier](ke-hoach-thu-fine-tuning-verifier.md).
+Đợt đã dừng ở 48/136 lượt vì candidate có 15 lỗi hợp đồng. Trên 24 cặp đã
+đo, stance đúng 7→3, hợp lệ 12→9; không báo thành kết quả cả bộ.
+Ứng viên bị loại, không tự thêm prompt, train hoặc chạy lại. Trước đợt
+nâng cấp mới cần một giả thuyết và giao thức mới; dữ liệu độc lập, tài liệu
+dài/đa định dạng và toàn pipeline vẫn là phần tồn đọng, chưa thể đóng Ưu tiên 1.
+Đã kiểm toán target train: cấu trúc đạt nhưng giám sát context thực tế lệch
+144/72/72; uncertain chỉ một kiểu, benign AI active/none chỉ hai nguồn EN.
+Đã lập ma trận 16 vị trí neo/bốn loại ngữ cảnh và đọc 12 nguồn để đề xuất
+reason bám bằng chứng; chưa áp dụng. Đã đủ bốn batch, 48 mẫu/96 preview
+qua parser/token/mask/collator và rà gộp. Audit toàn kho v21 giữ đúng bốn
+nhóm train cha, chưa bảo đảm độc lập ngữ nghĩa. Bước tiếp rà ngữ nghĩa theo
+hàng chờ 48 mẫu rồi lập phương án phát hành/thay thế, tiếp tục giữ target
+rỗng, không đưa dev vào train hoặc tự mở lượt model/train mới.
+Các số liệu pool cũ bên dưới là mốc
+lịch sử; số hiện tại xem bảng tổng hợp, không dùng để tính thiếu mẫu mới.
 
-Đã đo Qwen2.5-1.5B-Instruct so với bản Coder qua 48 request; xem
-[báo cáo ứng viên Verifier](../reports/danh-gia-model-thay-the-verifier.md).
-Recognition bắt 4/5 thay vì 1/5, nhưng còn một báo nhầm và một bỏ sót;
-context chỉ 4/12 nhất quán, gồm một mẫu không chấm nhị phân, và có false
-clear. Chưa thay Verifier hoặc thêm phản biện. Bước tiếp đề xuất: chuẩn bị
-bộ chú thích nhỏ về chỉ dẫn/ngữ cảnh có đối chứng được kiểm tra thủ công,
-nhằm chuẩn bị thử fine-tuning một model; giữ dữ liệu độc lập cho kiểm chứng
-cuối. Các đoạn phía dưới là lịch sử mốc đo.
+Nhánh chất lượng Agent: đã đo ví dụ đối chiếu ngữ cảnh trên 13 mẫu, chưa
+đạt cổng chất lượng dù có cải thiện nhỏ. Giữ mặc định; bước tiếp là chốt
+regression về mâu thuẫn stance/lý do, hoàn thiện dữ liệu và trainer cho
+pilot một Verifier. Không tiếp tục đổi prompt nhỏ chỉ để tối ưu bộ dev này.
+Nhánh extraction/định dạng bên dưới vẫn cần hoàn thành riêng.
 
-Đã thử làm rõ nghĩa stance qua 72 request; xem
-[báo cáo stance](../reports/thu-nghiem-lam-ro-nghia-stance.md). Gemma tăng nhất
-quán 5→7/12 nhưng tạo false clear mới ở realistic; Qwen 1→0/12 trong baseline
-chạy cùng lượt. Ứng viên không đạt nên không tích hợp hoặc đo pipeline tiếp.
-Ưu tiên đề xuất: đo model ứng viên thay thế Verifier với cùng giới hạn tài
-nguyên; nếu fine-tune thì thử một model, với nhãn ngữ cảnh được kiểm tra và
-holdout độc lập. Không thêm phản biện hoặc nới validator. Các đoạn dưới là
-lịch sử mốc đo, không phải yêu cầu tiếp tục áp dụng prompt đã trượt cổng.
+Đã có registry 267 bản: 84 giữ dev, 183 ứng viên/68 nhóm chờ điều kiện.
+Batch mới có 32 mẫu tự soạn/8 bối cảnh, không phải nguồn ngoài độc lập;
+đã rà lại 12 mẫu Python. Theo mục tiêu train 180/probe 60, còn thiếu ít
+nhất 57 ứng viên ngoài dev nếu cả 183 bản đều đạt. Ưu tiên nguồn ngoài
+đa dạng/quyền dùng rõ thay vì tiếp tục tăng mẫu cùng khuôn. Audit v11 giữ
+nhóm cũ; audit hiện tại v15, chưa tạo split hay tự phê duyệt quyền train từ khai báo license.
 
-Đã đo riêng 48 lượt nhận diện/gán ngữ cảnh của hai model; xem
-[báo cáo từng model](../reports/do-nhan-dien-ipi-va-gan-ngu-canh-tung-model.md).
-Gemma phân loại trực tiếp bắt 5/5 tấn công nhưng báo nhầm 3/6 sạch; Qwen bắt
-1/5. Context nhất quán chỉ 5/12 và 0/12. Bước tiếp: thử làm rõ nghĩa stance
-trong một ứng viên nhỏ, kiểm tra thiên lệch enum/trường với đối chứng trước
-khi đo lại pipeline. Không tự sửa stance từ reason, không nới validator và
-chưa thêm phản biện. Các cập nhật phía dưới là lịch sử mốc đo trước.
+LLMail-Inject: 23/251 email đã chuẩn hóa; lượt thêm 11 mẫu có 22/22 bản đạt,
+gồm sáu đối chứng việc cho người và một uncertain khác nhãn nguồn.
+Chưa lấy hàng loạt 228 email còn lại vì nhiều mẫu cùng khuôn. Không tự biến ngân hàng FP
+hoặc nhãn nguồn thành stance, không lấp số thiếu bằng cùng một family.
 
-Đã thử rút gọn JSON Verifier: bỏ analysis tự do, reason 20–240 ký tự, giữ các
-kiểm tra nguồn/nhận định. Trên hai bộ đo, JSON Verifier hoàn chỉnh tăng 6/14
-lên 14/14 nhưng validation đầy đủ vẫn 6/14; hai ca exfiltration cùng bỏ sót
-chưa đổi. Xem [báo cáo JSON](../reports/rut-gon-json-verifier-va-do-lai-ca-bo-sot.md).
-Ưu tiên tiếp là đo riêng nhận định IPI và sự nhất quán stance/ngữ cảnh của từng
-model, giữ đối chứng đa nguồn; chưa bật rút gọn mặc định hay thêm phản biện.
+Đã thêm 18 mẫu tiếng Việt trên sáu đoạn hướng dẫn Markdown có ghi công và
+license nội dung CC BY-SA 4.0; 36/36 bản đạt, chưa train. Đã rà pool và hash bằng chứng nguồn. Bước tiếp soạn batch có mục tiêu: confirmed/uncertain tiếng Việt trong nhiều bối cảnh, kèm đối chứng gần giống; kiểm tra span/token và nhóm trước nhập registry. Kịch bản 240 bản còn thiếu 40 confirmed/16 dismissed/17 uncertain, ít nhất 28 bản tiếng Việt nằm trong số đó. Đây là giới hạn lập kế hoạch nếu toàn bộ ứng viên đạt, không phải split đã chốt.
 
-Cập nhật tham chiếu nguồn: đã triển khai thử nghiệm `referenced-v1` để model
-chọn mã đoạn thay vì tự chép văn bản. Xem
-[phép đo mã nguồn](../reports/danh-gia-tham-chieu-bang-ma-nguon.md). Controls có
-7/13 phản hồi hợp lệ nhưng vẫn bỏ sót tấn công và chưa đạt cổng phản biện.
-Tiếp tục đo chất lượng nhận định, lỗi JSON và mức độ nhất quán của từng vai
-trò; không tự bật mặc định chỉ vì lỗi chép trích dẫn đã giảm.
+| Thứ tự | Việc cần làm | Điều kiện chốt |
+| --- | --- | --- |
+| 1 | Chuẩn bị đối chứng PDF/DOCX tự soạn: sạch, hướng dẫn cho người, attack trích dẫn, attack có hiệu lực; vị trí đầu/giữa/cuối, chữ thật/chữ trong ảnh | Có nhãn/span, nguồn cha/nhóm, hash; nhãn không đi vào scanner/model. |
+| 2 | Đo extraction, selection và trạng thái thiếu dữ liệu trên cùng đối chứng | Biết phần chữ mất, đoạn không chọn, lỗi thực; không kết luận sạch khi biết thiếu phạm vi theo chính sách. |
+| 3 | Đo Detector + Verifier và toàn pipeline; chọn một sửa đổi có căn cứ | Baseline trước/sau, đối chứng gần giống, biến thể chưa dùng chọn cấu hình; ghi lỗi, coverage, latency và tài nguyên. |
+| 4 | Hoàn thiện dữ liệu cho một Verifier | Bổ sung nguồn/nhóm còn thiếu; quyền dùng, riêng tư, span/context, trùng lặp, token/mask được kiểm tra; chia theo nhóm. |
+| 5 | Chạy pilot fine-tuning khi đủ điều kiện | Trainer/accumulation/checkpoint-resume đã qua smoke kỹ thuật; còn phải chốt train/dev, holdout độc lập và ngân sách dữ liệu thật. So sánh cùng base/backend có và không adapter. |
+| 6 | Kiểm chứng cuối và cân nhắc vòng phản biện | Đạt tiêu chí đã khóa; đo cấu hình cố định trên holdout mới và luồng sản phẩm. Phản biện tối đa 2–3 vòng cần phép đo riêng. |
 
-Đã đo xong cả ba bộ. Ưu tiên tiếp: rút gọn/giới hạn JSON Verifier và đo riêng
-so với hiện tại (các lỗi Verifier đã thấy đều dừng vì `length`), đồng thời giữ
-ca cả hai model cùng bỏ sót để đánh giá ngữ nghĩa. Chi tiết trong báo cáo mã
-nguồn; chưa bật vòng lặp phản biện và chưa đổi cấu hình mặc định.
+Nguồn công khai 2 PDF/2 DOCX hiện chỉ ở incoming; chưa duyệt quyền train,
+ảnh và metadata toàn bộ. Không cần người dùng tải lại. Chưa cần cài thêm
+phần mềm cho bước tạo/đo đối chứng; nếu phát sinh phụ thuộc sẽ thông báo.
 
-Cập nhật 2026-10-24: đã triển khai hợp đồng `structured-v1` ở chế độ thử nghiệm,
-gồm người nhận chỉ dẫn, framing, chuyển hướng, directive và ngữ cảnh trích nguồn.
-Xem [phép đo có cấu trúc](../reports/danh-gia-nhan-dinh-co-cau-truc.md). Chưa tự
-bật mặc định hoặc thêm vòng phản biện chỉ vì schema/unit test đã qua.
+Nguyên tắc: lỗi chứng minh được → đối chứng sạch/tấn công → dữ liệu độc lập
+→ toàn pipeline. Không nới citation/schema để làm đẹp số đo. Giữ log và
+baseline, không nhân bản nhóm để đủ số lượng.
 
-Kết quả cấu hình cuối: 26/26 ca lỗi phản hồi ở Detector, nên tiếp tục giữ
-`classic-v1`. Ưu tiên kế tiếp là tham chiếu đoạn nguồn bằng mã thay vì yêu cầu
-model tự chép lại directive/ngữ cảnh, rồi đo lại tính hợp lệ và chất lượng nhận
-định. Không giảm validation để làm tăng tỷ lệ hoàn tất.
+Xem [bảng hiện trạng](../reports/tong-hop-hien-trang.md),
+[cổng Ưu tiên 1 đã khóa](cong-hoan-thanh-uu-tien-1.md),
+[kế hoạch Verifier](ke-hoach-thu-fine-tuning-verifier.md).
 
-Đã thử prompt làm rõ directive/ngữ cảnh và bổ sung controls Việt/Anh với cổng
-đo tự động. Controls trung tính chưa đạt: xem
-[thử nghiệm ngữ cảnh](../reports/thu-nghiem-chi-dan-va-ngu-canh.md) và
-[tiêu chí phản biện](tieu-chi-them-vong-phan-bien.md). Không xem thêm lời giải thích trong
-prompt là một cải thiện nếu số đo không xác nhận. Ưu tiên thử hợp đồng nhận định
-có cấu trúc (người nhận chỉ dẫn, directive, deviation, framing) và đối chiếu với
-nguyên văn, rồi đo cùng controls/dev; vẫn cần nguồn độc lập trước kết luận rộng.
+Đã bổ sung 16 mẫu nghiệp vụ tiếng Việt tự soạn; kiểm tra JSON/token và nhóm đạt, registry v6. Bước tiếp rà ngữ nghĩa chéo theo bối cảnh và hoàn thiện điều kiện từng nhóm hiện có trước khi tăng số lượng; nhãn AI không thay kiểm chứng độc lập.
 
-Cập nhật mới: đã bổ sung ánh xạ citation chỉ khác layout và replay phản hồi
-baseline; xem [báo cáo citation](../reports/anh-xa-trich-dan-ve-nguon.md).
-Không tự sửa quote thêm lời giải thích. Bước tiếp cần tập trung vào nhận định
-ngữ nghĩa sai: yêu cầu chỉ ra directive và hành vi bị chuyển hướng, có đối chứng
-tài liệu sạch đa nguồn, rồi đo lại pipeline trước khi thêm phản biện.
+Đã rà lại 16 mẫu nghiệp vụ Việt: 12 giữ nguyên, 4 sửa riêng framing active trong khi stance vẫn uncertain. Registry v7 thay bản nhãn, không tăng số mẫu; nguồn/model input/nhóm giữ nguyên, 32 bản sau sửa qua JSON/token/mask. Đây là AI tự rà lại, chưa kiểm chứng độc lập. Bước tiếp: Rà điều kiện và ngữ nghĩa theo nhóm của các ứng viên tự soạn còn lại, dùng nhãn hiệu chỉnh hiện tại làm tham chiếu; bổ sung nguồn độc lập cho khoảng thiếu confirmed/uncertain. Chưa chia tập hoặc train.
 
-Chính sách và schema vòng một đã được triển khai. Ưu tiên đo chất lượng vòng
-một bằng harness đúng core pipeline trên bộ đối chứng nhỏ đa nguồn và file
-thực tế (mục 3–4, 6–7), gồm tỷ lệ unresolved và tính đúng của bằng chứng. Smoke
-model thật hiện còn bất đồng; chưa chứng minh độ chính xác. Sau đó triển khai
-phản biện tối đa 3 vòng tổng cộng cho unresolved và so sánh một vòng/nhiều vòng.
-Có thể rà soát nhãn dev bằng quy trình ghi nhận độc lập. Chưa fine-tune trước
-khi có baseline pipeline đáng tin cậy và nguồn đánh giá phù hợp.
+Đã tự rà đủ 63 ứng viên tự soạn (registry v8); giữ stance, hiệu chỉnh 17 framing qua hai lượt. Không thêm mẫu hoặc thay văn bản. Rà 18 ứng viên uncertain từ nguồn ngoài theo đúng văn bản đang đưa model, không dùng nhãn nguồn hoặc biến thể khác để suy thêm người nhận/quyền; ghi quyết định từng ca rồi kiểm tra JSON/token nếu sửa. Chưa chia tập/train.
+
+Registry v9: đã rà thêm 18 uncertain nguồn ngoài, giữ stance, sửa 17 framing; 36 bản kiểm tra đạt. Tổng 35 uncertain ngoài dev đều đã tự rà. Rà các ứng viên confirmed/dismissed nguồn ngoài theo nhóm và đối chứng, ưu tiên phát hiện giả định người nhận/quyền hoặc thiếu bao khung; còn 102 bản chưa thuộc lượt rà ngữ nghĩa mới. Không lấy việc sửa framing làm bằng chứng model nhận diện tốt hơn.
+
+Đã hoàn tất lượt AI tự rà ngữ nghĩa 183 ứng viên ngoài dev; 102 bản nhị phân giữ nguyên, không cần tái tạo token vì input/target không đổi. Bổ sung nhóm mới có đủ ngữ cảnh và đối chứng: theo kịch bản pool 240, thiếu 36 confirmed/8 dismissed/13 uncertain, ít nhất 12 tiếng Việt nằm trong số đó. Giữ nhóm nguyên vẹn; chuẩn bị holdout độc lập 200 mẫu riêng, không dùng các ứng viên đã rà làm holdout.
+
+Hiện tại sau batch OpenAPI: registry v10 có 198 ứng viên/69 nhóm, còn thiếu tối thiểu 42. Các số 183/57 bên trên là mốc trước mở rộng. Bổ sung bối cảnh tiếng Việt mới với đủ ngữ cảnh người nhận/quyền, ưu tiên confirmed/uncertain và cách diễn đạt khác nguồn cũ; còn tối thiểu 42 ứng viên theo kịch bản, trong đó 12 vi chưa được bù. Giữ holdout độc lập riêng, chưa chia tập/train.
+
+Hiện tại: registry v11 có 302 bản, gồm 84 dev và 218 ứng viên/73 nhóm. Thêm 20 mẫu nghiệp vụ Việt; 40 bản kiểm tra đạt. Ưu tiên bổ sung confirmed/uncertain ở nhóm mới và kiểm tra khả năng chia theo nhóm. Tổng thiếu ít nhất 22 bản; nếu giữ kịch bản tỷ lệ 40/40/20 thì thiếu 22 confirmed và 6 uncertain (28 bản), không loại đối chứng để làm đẹp tỷ lệ. Tiếng Việt đạt số lượng tham chiếu nhưng chưa chứng minh chất lượng; holdout độc lập còn riêng. Chưa chia tập/train.
+
+Mốc hiện tại: registry v12 có 254 ứng viên/79 nhóm. Đã đạt số lượng, có nghiệm giữ nguyên nhóm cho 180 train/60 probe; chưa cân bằng nguồn/ngôn ngữ hoặc xuất split. Đã đủ số lượng ứng viên cho pilot: dừng gom chỉ để đạt số. Chốt điều kiện sử dụng và chất lượng từng nhóm, đề xuất phân bổ cân bằng nguồn/ngôn ngữ theo nhóm rồi kiểm tra trước khi export train/dev/probe. Chưa train; holdout độc lập và đo toàn pipeline còn thiếu.
+
+Đã lập phương án theo nhóm seed 65: 180 train/84 dev/60 probe, 14 ứng viên chưa dùng. Bốn kiểm thử và kiểm tra hash đạt; chưa export. Đối chiếu điều kiện từng nhóm trong phương án 180 train/84 dev/60 probe: ghi công/notice, phạm vi riêng tư và nhãn hiệu lực; sau đó tái dựng payload/target, kiểm tra token/mask trên đúng bản xuất. Chưa niêm phong probe, chưa train; giữ riêng holdout độc lập.
+
+Đã dựng bản xuất thử v2: đúng 324 nhãn hiệu lực, 648 JSON/token/mask/collator đạt, không truncate. Có bảng điều kiện nguồn/notice/riêng tư từng mẫu. Chốt quyết định dùng nội bộ theo nguồn và phạm vi tên/địa chỉ trong dữ liệu ngoài; tách bản phát hành train/dev/probe với notice và kiểm tra ranh giới vai trò. Bản xuất thử 324 mẫu đã qua JSON/token/mask, chưa được đưa vào Trainer; không dùng file gộp 648 biểu diễn để train.
+
+Đã tách ba file preview nội bộ và sao lưu notice theo nguồn; 18 bản đổi email, 648 bản JSON/token/mask đạt. Rà tác động ngữ nghĩa của 18 bản đổi email, chốt phiên bản dữ liệu nội bộ và khóa phép đo cùng base/backend trước pilot. Chưa train hoặc niêm phong probe.
+
+Đã rà tác động email, tạo bản nội bộ v2 và khóa dữ liệu/phép đo (28 file). Có 16 bản đổi email, hai bản mã hóa giữ raw. 648 JSON/token/mask đạt; chưa bật train. Viết và kiểm tra loader train-only trên phiên bản đã khóa: chỉ nạp 180 nguồn/360 biểu diễn train, chặn dev/probe và mask prompt; sau đó đo baseline HF base trên dev trước pilot. Chưa huấn luyện.
+
+Đã kiểm tra loader train-only và đo đủ baseline HF 84 dev/168 request: 3 qua parser đều báo nhầm, 165 lỗi JSON. Không có lỗi tài nguyên hoặc cập nhật trọng số. Tích hợp loader train-only vào lượt pilot một ứng viên theo giao thức khóa; chuẩn bị đối chứng cùng model/backend với adapter off/on. Đo riêng JSON, stance/ngữ cảnh và lỗi trên dev; không triển khai chỉ vì JSON cải thiện. Chưa dùng probe hoặc sửa Agent mặc định.
+
+Pilot đầu đã train hoàn tất trên E, không cần train lại vì chuyển lưu trữ. Lượt đo off/on chưa hoàn tất; tiếp theo kiểm tra nguyên nhân và chạy lại phép đo theo phiên bản mới, giữ kết quả cũ. Lưu trữ đã kiểm tra sau khi chuyển 92 thư mục kết quả sang E.
+
+Đã hoàn tất off/on screen candidate-01: JSON/parser 1/12→9/12, stance đúng 1/12→4/12; hai FP mới và ba phản hồi lỗi. Candidate bị giữ lại theo cổng đã định, không chạy full dev/probe hoặc thay Agent. Chuẩn bị cặp đối chứng mới về chỉ dẫn cho người/AI và đủ/thiếu quyền; rà sự nhất quán trường context của nhãn dev cũ theo phiên bản riêng, giữ gold lượt đã đo. Sau đó định trước một thay đổi huấn luyện có đối chứng và nhóm diễn đạt mới; không chỉ tăng epoch hoặc nới parser để vượt screen.
+
+Đã tạo và đo 24 đối chứng chẩn đoán mới: 48 request, 35 hợp lệ/9 stance đúng/17 FP/4 false-clear. Giữ candidate-01 chưa đạt; không đưa bộ này vào train. Chuẩn bị bản dữ liệu train phản thực tế từ các nhóm train cũ theo kế hoạch đã ghi; chỉ đổi thành phần đối chứng người nhận/nguồn tự nhận quyền, giữ 180 nguồn/360 biểu diễn và 45 bước, prompt/model/loss không đổi. Không dùng 24 đối chứng dev mới làm bài học; chưa train candidate-02.

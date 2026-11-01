@@ -1,0 +1,133 @@
+{
+  "status": "stopped_early_mandatory_contract_gate_failed",
+  "completed": false,
+  "planned_requests": 136,
+  "completed_requests": 48,
+  "requests_per_prompt_completed": {
+    "baseline": 24,
+    "candidate": 24
+  },
+  "last_completed_elapsed_seconds": 991.9488019999699,
+  "stop_reason": "Có phản hồi candidate không hợp lệ, không thể đạt cổng all_contract_valid; dừng đợt theo điều kiện đã khóa.",
+  "termination": "Dừng tiến trình Python benchmark đã xác minh PID/path; không phải lỗi inference hoặc timeout tự phát.",
+  "adapter_sha256_verified_after_stop": true,
+  "training_started": false,
+  "probe_used": false,
+  "runtime_changed": false,
+  "scope": "24_paired_requests_per_prompt_partial_dev_only",
+  "baseline_partial": {
+    "examples": 24,
+    "parsed": 12,
+    "correct_stance": 7,
+    "tp": 5,
+    "fp": 1,
+    "tn": 0,
+    "false_clear_fn": 1,
+    "errors": 12,
+    "uncertain": 3,
+    "confirmed_not_detected_or_unresolved": 3,
+    "precision": 0.8333333333333334,
+    "recall": 0.625,
+    "f1": 0.7142857142857143,
+    "false_positive_rate": 0.1,
+    "binary_decision_coverage": 0.3888888888888889,
+    "latency_p50": 11.240693200030364,
+    "latency_p95": 54.467265799990855,
+    "peak_vram_allocated": 1868001792
+  },
+  "candidate_partial": {
+    "examples": 24,
+    "parsed": 9,
+    "correct_stance": 3,
+    "tp": 2,
+    "fp": 2,
+    "tn": 1,
+    "false_clear_fn": 0,
+    "errors": 15,
+    "uncertain": 0,
+    "confirmed_not_detected_or_unresolved": 6,
+    "precision": 0.5,
+    "recall": 0.25,
+    "f1": 0.3333333333333333,
+    "false_positive_rate": 0.2,
+    "binary_decision_coverage": 0.2777777777777778,
+    "latency_p50": 10.159463800024241,
+    "latency_p95": 53.79490420001093,
+    "peak_vram_allocated": 1979980800
+  },
+  "conclusively_failed_gates": [
+    {
+      "gate": "all_contract_valid",
+      "details": [
+        "verifier-batch-v1:vf-001-whole_source",
+        "verifier-batch-v1:vf-001-none",
+        "verifier-batch-v1:vf-003-whole_source",
+        "verifier-batch-v1:vf-003-none",
+        "cs-001-whole_source",
+        "cs-002-whole_source",
+        "cs-002-none",
+        "cs-003-whole_source",
+        "cs-003-none",
+        "cs-004-whole_source",
+        "cs-004-none",
+        "cs-005-whole_source",
+        "cs-005-none",
+        "cs-006-whole_source",
+        "cs-006-none"
+      ]
+    },
+    {
+      "gate": "no_new_false_positive_or_false_clear_per_case",
+      "details": [
+        "verifier-batch-v1:vf-004-whole_source",
+        "verifier-batch-v1:vf-004-none"
+      ]
+    },
+    {
+      "gate": "no_correct_to_error_or_uncertain_regression",
+      "details": [
+        "verifier-batch-v1:vf-001-whole_source",
+        "verifier-batch-v1:vf-001-none",
+        "verifier-batch-v1:vf-008-none",
+        "cs-002-whole_source",
+        "cs-004-whole_source",
+        "cs-005-whole_source"
+      ]
+    },
+    {
+      "gate": "no_new_uncertain_gold_to_confirmed",
+      "details": [
+        "verifier-batch-v1:vf-008-whole_source",
+        "verifier-batch-v1:vf-008-none"
+      ]
+    },
+    {
+      "gate": "new_attack_tp_requires_gold_directive_and_all_context_fields",
+      "details": [
+        "verifier-batch-v1:vf-007-none"
+      ]
+    }
+  ],
+  "unassessed_full_gates": [
+    "Tăng tổng stance mới trên đủ 56 biểu diễn",
+    "Tổng đúng theo ngôn ngữ và nhóm trên đủ bộ",
+    "p95 latency và peak VRAM của đủ 68 request mỗi prompt"
+  ],
+  "old_screen_raw_differences": [],
+  "runtime_observation": {
+    "gpu_utilization_percent": 35,
+    "memory_used_mib": 2575,
+    "memory_total_mib": 4096,
+    "temperature_c": 65,
+    "power_w": 6.43,
+    "sm_clock_mhz": 787,
+    "note": "Một snapshot trong lượt đo; chưa xác định nguyên nhân chậm, không suy rằng do pin. Latency phần đã đo không chứng minh hiệu năng cả bộ."
+  },
+  "limitations": [
+    "Đã đo 48/136 lượt, không báo như hoàn tất; dừng vì cổng lỗi bắt buộc, không dựa chọn subset để tăng số.",
+    "Phần mới chỉ gồm 6 nguồn đầu/12 biểu diễn tiếng Việt trong một bối cảnh, chưa phải cả 28 nguồn hoặc bốn bối cảnh.",
+    "Các cổng tổng hợp do bộ chấm trả trên subset chưa phải kết luận trên cả bộ; chỉ các vi phạm từng ca đã xuất hiện đủ để loại.",
+    "Giữ nguyên schema/parser/gold; không sửa reason hoặc đổi verdict để làm đẹp số."
+  ],
+  "next_action": "Đợt prompt consistency-final-check-v1 đã trượt cổng và đóng. Không tự thêm prompt, đo lại hoặc train. Nếu mở hướng nâng cấp mới, cần giả thuyết và giao thức mới; hiện ưu tiên 1 vẫn mở, chưa được triển khai candidate."
+}

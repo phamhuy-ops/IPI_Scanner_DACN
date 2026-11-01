@@ -1,0 +1,213 @@
+{
+  "reviewed_records": 18,
+  "substituted_records": 16,
+  "preserved_raw_records": 2,
+  "stance_changes": 0,
+  "reviewer": "Codex (AI), tự rà không độc lập",
+  "reviews": [
+    {
+      "id": "verifier-batch-v1:vf-001",
+      "planned_role": "dev",
+      "original_input_sha256": "2a0cf2201194b94ddc67c616b352556afd8e05f04e5dacbdbeb36107e06b3541",
+      "reviewed_input_sha256": "c8178c538feca190a36f4e8ad83e3fdfc79ade25ada013a9d2ca31b0faf37b6a",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-011",
+      "planned_role": "dev",
+      "original_input_sha256": "f1a9feba8dbbbc806c625a67307e9eb3b2b2b70f867efb9b800b386571d011da",
+      "reviewed_input_sha256": "b0b7dd8eac28f74f3bb0494e8d450965391419f274bf9202d89653bfea45f362",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-015",
+      "planned_role": "dev",
+      "original_input_sha256": "4a0a1619a698fa841541b9e074d8dfe0ec1725ab9710219f6001618bb2570e4c",
+      "reviewed_input_sha256": "493691c0f470df28a80b10e946406083f3dae04427f76ed33ad2caf4bda2291f",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "dismissed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "exp-realistic-0011-b2c71fb6",
+      "planned_role": "dev",
+      "original_input_sha256": "03828cd4e0726ac578126de63153d324590c5ffbc8631a941580de4213f75f2d",
+      "reviewed_input_sha256": "be1b15daeb5f2273ed30bcb6d7193ecd3bb0f27e594a339ac5be6515e2e921fe",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "dismissed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-025",
+      "planned_role": "train",
+      "original_input_sha256": "52be4b5578d40779eb509bb71e32211671fd09ce4e2ee2c7f5c69140a0e0ecf4",
+      "reviewed_input_sha256": "936f263edee8eb99ad6842bd3ee125d166970289ddff13a7bd51dfcf8f9c28e6",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-026",
+      "planned_role": "train",
+      "original_input_sha256": "15faee8799aa4c9c0a60425a6db7734d735bd1bf968ff878b5678d7d2a8260ae",
+      "reviewed_input_sha256": "61ad1214d4e629be8d1570d48b8ef80feb8d3e3434b99265b71204ba18cc4641",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-027",
+      "planned_role": "train",
+      "original_input_sha256": "f734857881811d935e7e45df1cb9bda16da27d0cb274b5606f3183ae4e7f4fe0",
+      "reviewed_input_sha256": "4c4c76e6d6a455813b822deb926ffdb100f1c994e7dd90b9b13c2a06731a4a55",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-028",
+      "planned_role": "train",
+      "original_input_sha256": "0ed61c89078cfd827bc92c3d9eee516cf274c10879545fcc262965f1ae4868ba",
+      "reviewed_input_sha256": "6ba840cd56a59637fb0b976d2a49f07cf7cbb9241bfa1df4f87e4560a73624fc",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-029",
+      "planned_role": "train",
+      "original_input_sha256": "ad654ea0f63adcbc6ee46f140246dd3cfdace0159bc1cc8d5a349f16609336fd",
+      "reviewed_input_sha256": "bdeed6b83f4c03175d85dcfd625985510bfd9eabe4d8e9d33e1ba4afea2d26a7",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-030",
+      "planned_role": "train",
+      "original_input_sha256": "fab0f062c72150b9e25c010d44cfcb7ebb618f59567c2f461045ced6e88eebbb",
+      "reviewed_input_sha256": "55315ebeceb0d994a77ca34b12f99493ae5fe5e7346bb571ceeb7f14354aa57f",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-001",
+      "planned_role": "train",
+      "original_input_sha256": "ec7062fc16d6e968c9e741ff5383dcd804cbfdd0e30d186512764f01f6376ae3",
+      "reviewed_input_sha256": "202ae7d5f8f43ff1fdd4dd8f154d0c2e15f509653a3463449b737b16d0e713f5",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-002",
+      "planned_role": "train",
+      "original_input_sha256": "b7d3ce882d27a53a195f63c7d123a096c2122314f0b93b3433f4a3bd8a65d657",
+      "reviewed_input_sha256": "56736ef3add0d7ed5e40df83c90f1e3ac3697bed8082a9c3cd6eb1205ae48dcc",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-003",
+      "planned_role": "probe",
+      "original_input_sha256": "9884628a9f9807ef49b8f355cbb81710859f706666efe557bafd94a4bc4a9853",
+      "reviewed_input_sha256": "9884628a9f9807ef49b8f355cbb81710859f706666efe557bafd94a4bc4a9853",
+      "decision": "preserve_raw_encoding_relationship",
+      "rationale": "Có biểu diễn địa chỉ làm rối/base64 cùng địa chỉ hiển thị; giữ nguyên nguồn để không làm lệch quan hệ, không tự diễn giải/giải mã vào input.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-004",
+      "planned_role": "train",
+      "original_input_sha256": "ce0674a0d9cae89b1e6b7ac12e0545fce6027fcbe388fdea438ac60bfc73fcbc",
+      "reviewed_input_sha256": "e2a189bf70994dc3bc1628847db95e9b0a1ca72d3bffccd39346c3a2696e3645",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-037",
+      "planned_role": "train",
+      "original_input_sha256": "e5beb8a7a5276c97c66b4d5db1d7d5bbef76f765b9491928ae324b44cb25ec45",
+      "reviewed_input_sha256": "e5beb8a7a5276c97c66b4d5db1d7d5bbef76f765b9491928ae324b44cb25ec45",
+      "decision": "preserve_raw_encoding_relationship",
+      "rationale": "Có biểu diễn địa chỉ làm rối/base64 cùng địa chỉ hiển thị; giữ nguyên nguồn để không làm lệch quan hệ, không tự diễn giải/giải mã vào input.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-041",
+      "planned_role": "probe",
+      "original_input_sha256": "54a8264789e7232d2a6563823aca29179f7666eb6097ebdef6b4e898d5f89e70",
+      "reviewed_input_sha256": "5676e833a321636b582e9bff185a339a3c40522e53d6cab2861ba110d770a760",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-046",
+      "planned_role": "train",
+      "original_input_sha256": "9ac8cf765dee7be513f575777570a600116c0f41baf2eb5855253ce717ce5061",
+      "reviewed_input_sha256": "35c53bdb69c540ff9f34f13552a775e9548ef508e998ce9a67cde3de7a29d700",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-047",
+      "planned_role": "probe",
+      "original_input_sha256": "a3767c2fc38f49f2e3983247fa3176463bde11ecbb84f36673ab950e07085e35",
+      "reviewed_input_sha256": "11f2c55183aa301db7354772bb4c376849877007e10e500dba3fa898725274ca",
+      "decision": "retain_stance_after_email_substitution",
+      "rationale": "Đích email là tham số của hành vi đã nêu; thay địa chỉ không đổi người nhận chỉ dẫn, hiệu lực, ý đồ chuyển hướng hoặc quyền gửi. Đối chứng liên hệ công khai/tuyển dụng vẫn giữ dismissed.",
+      "stance": "confirmed",
+      "independent_review": false,
+      "human_approved": false
+    }
+  ],
+  "limitations": [
+    "Không suy an toàn chỉ vì email dùng miền invalid; payload vẫn có ý đồ tấn công khi gửi dữ liệu/đổi nhiệm vụ.",
+    "Placeholder xuất hiện nhiều ở attack hơn benign, có thể tạo dấu hiệu phụ; cần đối chiếu bản nguyên gốc và không kết luận bảo mật từ tập này.",
+    "Không phải dữ liệu ẩn danh đầy đủ; hai ngoại lệ chỉ dùng nội bộ."
+  ],
+  "training_started": false
+}

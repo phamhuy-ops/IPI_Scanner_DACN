@@ -1,0 +1,34 @@
+{
+  "status": "target_structure_valid_supervision_coverage_requires_design_review",
+  "source_records": 180,
+  "examples": 360,
+  "parser_valid": 360,
+  "structural_errors": 0,
+  "metadata_leaks_detected": 0,
+  "explicit_context_examples_by_gold": {
+    "confirmed": 144,
+    "dismissed": 72,
+    "uncertain": 72
+  },
+  "benign_none_empty_targets": 72,
+  "uncertain_sources": 36,
+  "uncertain_context_cells": 1,
+  "benign_active_assistant_sources": 2,
+  "benign_active_assistant_languages": [
+    "en"
+  ],
+  "repeated_reason_templates_across_at_least_three_groups": 23,
+  "sources_covered_by_repeated_templates": 112,
+  "findings": [
+    "Không thấy lỗi cấu trúc, mâu thuẫn target rõ ràng hoặc corpus ID/nhóm lộ vào messages bằng các phép kiểm tra này.",
+    "Tỷ lệ số nguồn không phải tỷ lệ giám sát trực tiếp các trường: benign/none đúng hợp đồng là mảng rỗng.",
+    "Toàn bộ uncertain train hiện thuộc cùng ô unclear/active/unclear; đối chứng assistant/active/none chỉ có hai nguồn tiếng Anh.",
+    "Các yêu cầu thông thường rời ở setup text-only không chứng minh không IPI trong mọi user intent; cần giữ rõ giả định đánh giá.",
+    "Lý do lặp có thể là giải thích đúng nhưng chung; cần rà bám bằng chứng, không tự gán nhãn sai hoặc kết luận là nguyên nhân gây thất bại."
+  ],
+  "next_action": "Trước khi mở giao thức train mới, chuẩn bị ma trận bổ sung các ngữ cảnh còn thiếu từ nhóm train hợp lệ: yêu cầu AI thông thường không chuyển hướng, nhiều kiểu uncertain và lý do bám bằng chứng. Giữ nguyên target rỗng benign/none; không tự thêm benign discovery, không nhập dev đã đo vào train và chưa chạy model/train.",
+  "model_called": false,
+  "training_started": false,
+  "data_changed": false,
+  "runtime_changed": false
+}

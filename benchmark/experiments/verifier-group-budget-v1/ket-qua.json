@@ -1,0 +1,48 @@
+{
+  "candidate_records": 254,
+  "candidate_groups": 79,
+  "stances": {
+    "confirmed": 98,
+    "dismissed": 108,
+    "uncertain": 48
+  },
+  "planning_scenario": {
+    "train": {
+      "records": 180,
+      "stances": [
+        72,
+        72,
+        36
+      ]
+    },
+    "probe": {
+      "records": 60,
+      "stances": [
+        24,
+        24,
+        12
+      ]
+    },
+    "note": "Kịch bản 40/40/20 để kiểm tra khả năng số học, không thay cổng đã khóa hoặc chia tập cuối."
+  },
+  "count_only_witness_found": true,
+  "search_scope": "Chọn một tập nhóm dư bằng DP rồi kiểm tra probe trong phần còn lại; false không chứng minh mọi phân bổ đều bất khả thi.",
+  "witness_group_counts": {
+    "unused": 10,
+    "probe": 14,
+    "train": 55
+  },
+  "final_split_created": false,
+  "training_ready": false,
+  "independent_validation_complete": false,
+  "limitations": [
+    "Không tối ưu ngôn ngữ, nguồn, độ dài hoặc độ khó; chưa chốt điều kiện từng nhóm.",
+    "Một nghiệm số học không chứng minh tính độc lập ngữ nghĩa hoặc khả năng nhận diện của model.",
+    "Không xuất danh sách nhóm được phân bổ; probe chưa được niêm phong, không phải holdout độc lập."
+  ],
+  "inputs_sha256": {
+    "benchmark/experiments/verifier-eligibility-v12/registry.jsonl": "429200e396ee281768d7af8e2baf74874dd016e9283e80c5e18df992842338b5"
+  },
+  "code_sha256": "59f26be9c765ea61902fb8d0a73fb5a1c11ac57abba49701283d4044028e89c2",
+  "command": "node scripts/check-verifier-group-budget.cjs"
+}

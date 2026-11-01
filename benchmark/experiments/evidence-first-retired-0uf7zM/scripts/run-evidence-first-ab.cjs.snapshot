@@ -1,0 +1,5 @@
+// Đối chứng một hành vi: thứ tự sinh trích dẫn/giải thích trước stance.
+const { main } = require('./run-semantic-stance-ab.cjs');
+main({ name: 'evidence-first', module: '/src/ai/experiments/evidenceFirst.ts', request: 'evidenceFirstRequest', entry: 'scripts/run-evidence-first-ab.cjs',
+  change: 'Chỉ đổi thứ tự properties/required trong từng nhận định classic-v1 thành id (nếu có), chunkId, quote, reason, stance. Tập ràng buộc, prompt, nguồn, model, token budget và parser/chính sách giữ nguyên.' })
+  .catch(error => { console.error(error); process.exitCode = 1; });

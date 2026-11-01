@@ -1,0 +1,31 @@
+{
+  "version": "verifier-openapi-context-v1",
+  "records": 15,
+  "source_parent_ids": 1,
+  "initial_groups": 1,
+  "labels": {
+    "confirmed": 6,
+    "dismissed": 6,
+    "uncertain": 3
+  },
+  "parser_valid": 30,
+  "training_ready": false,
+  "model_called": false,
+  "final_split_created": false,
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "d19c6a3c7b7b613174053195dcfacfa9295d35b1db43f5a591c5b292f20f0903",
+    "ban-xem-truoc.json": "e37e697587f10bba60be7838b225b972889ea9674545a0199067cd0f5ce68244",
+    "danh-gia-ai.json": "9f43915430bf078fc8060a891ad9701824b9baa18ffce1fb315f16589f5d7fa7"
+  },
+  "code_sha256": {
+    "scripts/prepare-verifier-openapi.cjs": "d234c01af75ba2bc8d3a81f08a2e9ccf1e0a2c3152bbe7d05ec84c4220a7de7b",
+    "scripts/verifier-batch-renderer.ts": "d66db4a967344570e6541996f2432e42324fd43d72077e065e6c8ec126feafab"
+  },
+  "source_snapshot_sha256": "969f62008e32a300e45bcccf464ea9608b852e7d01108ecf4ccffc6f7e9a98bd",
+  "limitations": [
+    "Một tài liệu nền nguồn mới, không phải 15 nguồn hoặc tấn công thực tế độc lập.",
+    "Chỉ tiếng Anh; chưa bù khoảng thiếu tiếng Việt.",
+    "Dạng văn bản mô tả API; chưa đo gọi công cụ hoặc pipeline xử lý JSON/YAML native.",
+    "Nhãn AI, chưa huấn luyện hoặc kiểm chứng model."
+  ]
+}

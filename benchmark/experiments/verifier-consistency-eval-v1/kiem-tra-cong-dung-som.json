@@ -1,0 +1,66 @@
+{
+  "candidate_responses_inspected": 23,
+  "failed_gate": "all_contract_valid",
+  "gate_already_failed": true,
+  "failures": [
+    {
+      "id": "verifier-batch-v1:vf-001-whole_source",
+      "error": "Invalid model response: Lý do Verifier vượt giới hạn hoặc sai kiểu."
+    },
+    {
+      "id": "verifier-batch-v1:vf-001-none",
+      "error": "Invalid model response: Lý do Verifier vượt giới hạn hoặc sai kiểu."
+    },
+    {
+      "id": "verifier-batch-v1:vf-003-whole_source",
+      "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+    },
+    {
+      "id": "verifier-batch-v1:vf-003-none",
+      "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+    },
+    {
+      "id": "cs-001-whole_source",
+      "error": "Invalid model response: Lý do Verifier vượt giới hạn hoặc sai kiểu."
+    },
+    {
+      "id": "cs-002-whole_source",
+      "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+    },
+    {
+      "id": "cs-002-none",
+      "error": "Invalid model response: Lý do Verifier vượt giới hạn hoặc sai kiểu."
+    },
+    {
+      "id": "cs-003-whole_source",
+      "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+    },
+    {
+      "id": "cs-003-none",
+      "error": "Invalid model response: JSON Verifier rút gọn không hợp lệ."
+    },
+    {
+      "id": "cs-004-whole_source",
+      "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+    },
+    {
+      "id": "cs-004-none",
+      "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+    },
+    {
+      "id": "cs-005-whole_source",
+      "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+    },
+    {
+      "id": "cs-005-none",
+      "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+    },
+    {
+      "id": "cs-006-whole_source",
+      "error": "Invalid model response: Lý do Verifier vượt giới hạn hoặc sai kiểu."
+    }
+  ],
+  "raw_snapshot_sha256": "24f1e22e2b7cd8bec4e875d73bc08f4aba7939cfdfead4f256566b903c104a6b",
+  "frozen_rule": "Mọi phản hồi phải hợp lệ; bất kỳ cổng nào trượt thì dừng đợt.",
+  "scope": "partial_monitoring_not_full_dataset_result"
+}

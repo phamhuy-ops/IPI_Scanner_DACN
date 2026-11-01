@@ -1,0 +1,32 @@
+{
+  "version": "verifier-external-context-v1",
+  "records": 24,
+  "source_parent_ids": 12,
+  "initial_groups": 12,
+  "parser_valid": 48,
+  "labels": {
+    "confirmed": 12,
+    "dismissed": 6,
+    "uncertain": 6
+  },
+  "review_status": "ai_reviewed_not_human_reviewed",
+  "training_ready": false,
+  "source_snapshot_sha256": {
+    "benchmark/data/raw/python-context-docs-v1/snapshot.json": "9901299ae1a5c22f9277dfff56a767059096d2788183d97e085abf69f93619ab",
+    "benchmark/data/raw/injecagent/snapshot.json": "8cd26914e2b3df095512a7c3b2d81066bf81dc85a27d4c2bba3ab1d34dc88606"
+  },
+  "code_sha256": {
+    "scripts/prepare-verifier-external-context.cjs": "756d27dcb1d0f2860d4b9c2360041608ee71da838996d4debc615225d8fbc30f",
+    "scripts/verifier-batch-renderer.ts": "804bc01e9cc4175ab4213794deb11ca35ecac1ff948e42ca8bfff22d243db5a2"
+  },
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "e140d7eab0c94e7721af9b67ac596e2d7024c594f82e5e4aa9e9464757956396",
+    "ban-xem-truoc.json": "d5581d2cc89e6d164bd2ff7bc2c7f9355abf53e97307663a52ac35a85b39b2e9",
+    "danh-gia-ai.json": "733e56c7a2fd56422192fae39d06584c841a997fe8b76c0800e1ad8da3f3d70a"
+  },
+  "limitations": [
+    "Sáu attack trên nền Python do AI soạn, không phải nguồn tấn công quan sát thực tế.",
+    "InjecAgent enhanced có cùng tiền tố; rà nhóm có thể gom nhiều family thành một thành phần lớn.",
+    "Chưa có holdout độc lập; không dùng số lượng biến thể thay cho độ đa dạng nguồn."
+  ]
+}

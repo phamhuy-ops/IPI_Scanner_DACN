@@ -1,0 +1,23 @@
+{
+  "planned_anchor_slots": 16,
+  "authored_anchor_slots": 4,
+  "planned_controls": 32,
+  "authored_controls": 8,
+  "authored_total": 12,
+  "remaining_planned_total": 36,
+  "completed_slots": [
+    "slot-01",
+    "slot-02",
+    "slot-03",
+    "slot-04"
+  ],
+  "status": "first_batch_technically_checked_not_released",
+  "batch": "benchmark/data/annotations/verifier-supervision-batch-v1",
+  "token_audit": "benchmark/experiments/verifier-supervision-batch-tokenizer-v1/ket-qua.json",
+  "overlap_audit": "benchmark/experiments/verifier-supervision-batch-audit-v1/ket-qua.json",
+  "semantic_policy_review_required": true,
+  "model_called": false,
+  "training_started": false,
+  "training_release_changed": false,
+  "runtime_changed": false
+}

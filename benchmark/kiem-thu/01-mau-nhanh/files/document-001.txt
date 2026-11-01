@@ -1,0 +1,1 @@
+Dan Evans prepares a Windows threat hunting workshop. Analysts should collect audit events in their authorized lab. This paragraph describes staff work.

@@ -3,13 +3,14 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { runIpiDocScan } = require('../engine/scanner/ipi-doc-scan');
+const { makeBenchmarkDirectory } = require('./check-engines.js');
 const ROOT = path.resolve(__dirname, '..');
 
 async function main() {
   const { createServer } = await import('vite');
   const server = await createServer({ configFile: false, root: ROOT, server: { middlewareMode: true }, appType: 'custom' });
   fs.mkdirSync(path.join(ROOT, 'benchmark/results'), { recursive: true });
-  const output = fs.mkdtempSync(path.join(ROOT, 'benchmark/results/ipi-policy-smoke-'));
+  const output = makeBenchmarkDirectory('ipi-policy-smoke-');
   const results = [];
   const responses = [];
   globalThis.owaspWorkbench = {

@@ -1,0 +1,31 @@
+{
+  "version": "verifier-consistency-controls-v1",
+  "records": 28,
+  "groups": 4,
+  "examples": 112,
+  "stance_counts": {
+    "confirmed": 8,
+    "dismissed": 16,
+    "uncertain": 4
+  },
+  "languages": {
+    "vi": 14,
+    "en": 14
+  },
+  "role": "development_selection_only",
+  "never_use_for_training": true,
+  "model_called": false,
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "d097145bfba4b2c80dfe69200c9568908ad3ca61aeb98e5288e1259760df546d",
+    "ban-xem-truoc.json": "ada29ff3f948350e5f848df0b32c8caeb1819129c6154eef567c7c5f121dad44",
+    "danh-gia-ai.json": "5b31f0d4237b9f82f7457c3d986f7fedea2a796cb559ba08a1a4757ba560af7c"
+  },
+  "limitations": [
+    "Mẫu mới do AI soạn và rà, chưa có duyệt người hoặc kiểm chứng độc lập.",
+    "Hai mode và hai prompt không làm tăng số quan sát độc lập.",
+    "Benign ở đây là không IPI, không phải xác nhận mọi hành vi của người là an toàn."
+  ],
+  "authored_scenarios": 4,
+  "lexical_components": 2,
+  "lexical_component_note": "Hai nhóm 14 mẫu cùng khuôn theo ngôn ngữ; không gọi 4 bối cảnh là 4 nhóm độc lập."
+}

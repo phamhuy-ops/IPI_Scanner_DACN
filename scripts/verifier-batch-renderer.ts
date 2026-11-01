@@ -17,7 +17,7 @@ type CaseInput = { text: string; format: string; candidate_mode: string };
 
 // Hàm này không nhận nhãn, gold hoặc ID ca, nhằm giữ input độc lập đáp án.
 export function buildVerifierInput(input: CaseInput) {
-  if (!['.txt', '.md', '.html'].includes(input.format) || !['supplied', 'none'].includes(input.candidate_mode)) throw new Error('Sai định dạng hoặc chế độ candidate.');
+  if (!['.txt', '.md', '.html'].includes(input.format) || !['supplied', 'none', 'whole_source'].includes(input.candidate_mode)) throw new Error('Sai định dạng hoặc chế độ candidate.');
   const fileName = `document${input.format}`;
   const findings = scanTextForIpi(input.text, fileName);
   const original = createSemanticChunks(input.text, fileName, fileName, undefined, undefined, true);
@@ -26,8 +26,8 @@ export function buildVerifierInput(input: CaseInput) {
     .map((chunk: SemanticChunk, index: number) => ({ ...chunk, sourceChunkId: chunk.chunkId, chunkId: `chunk-${index + 1}`,
       ...(input.format === '.html' ? { sourceView: 'raw-html', lineBasis: 'source' } : {}) }));
   const expected: IpiSuspicion[] = [];
-  if (input.candidate_mode === 'supplied') {
-    const quote = input.text.split(/\r\n?|\n/).filter(line => line.trim())[1];
+  if (input.candidate_mode !== 'none') {
+    const quote = input.candidate_mode === 'whole_source' ? input.text : input.text.split(/\r\n?|\n/).filter(line => line.trim())[1];
     const chunk = chunks.find(item => quote && item.text.includes(quote));
     if (!quote || !chunk) throw new Error('Không ánh xạ được candidate dòng 2 vào nguồn.');
     expected.push({ id: 'suspicion-1', source: 'detector', location: `${fileName}:${chunk.startLine}`,
@@ -61,6 +61,20 @@ export function validateDraftResponse(input: CaseInput, response: unknown, annot
 
 export function renderDraft(input: CaseInput, annotation: Annotation) {
   const rendered = buildVerifierInput(input);
+  if (!annotation.hasDirective) {
+    if (annotation.directive_spans.length || annotation.label !== 'benign' || annotation.stance !== 'dismissed' ||
+      !['none', 'human', 'unclear'].includes(annotation.addressee) || annotation.framing !== 'descriptive' || annotation.deviation !== 'none') {
+      throw new Error('Mẫu không có chỉ dẫn phải là mô tả sạch với span chỉ dẫn rỗng; cần rà nhãn khác riêng.');
+    }
+    const assessments = rendered.expected.map(item => {
+      const ref = rendered.refs.find(row => row.chunkId === item.citation!.chunkId && row.text === item.citation!.quote);
+      if (!ref) throw new Error('Thiếu mã nguồn cho đoạn mô tả được giao.');
+      return { id: item.id, spanId: ref.id, addressee: annotation.addressee, framing: 'descriptive', deviation: 'none',
+        hasDirective: false, stance: 'dismissed', reason: annotation.reason };
+    });
+    const response = { assessments, discoveries: [] };
+    return { ...rendered, response, validation: validateDraftResponse(input, response, annotation) };
+  }
   const focus = annotation.directive_spans[0]?.quote;
   if (!focus || !input.text.includes(focus)) throw new Error('Thiếu chỉ dẫn được chú thích.');
   const focusRef = rendered.refs.filter(ref => ref.text.includes(focus)).sort((a, b) => a.text.length - b.text.length)[0];

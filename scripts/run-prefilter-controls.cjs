@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const { makeBenchmarkDirectory } = require('./check-engines.js');
 const { main: benchmark, metrics } = require('./run-prefilter-benchmark.cjs');
 const ROOT = path.resolve(__dirname, '..');
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
@@ -42,7 +43,7 @@ function runSuite(outputRoot = path.join(ROOT, 'benchmark/results')) {
   }
   if (ids.size !== [...sources.values()].reduce((n, source) => n + source.samples.length, 0)) throw new Error('Some source records are not assigned to a view');
   fs.mkdirSync(outputRoot, { recursive: true });
-  const output = fs.mkdtempSync(path.join(outputRoot, 'prefilter-controls-'));
+  const output = makeBenchmarkDirectory('prefilter-controls-', outputRoot);
   const sourceFiles = ['engine/prefilter/document-prefilter.js', 'engine/prefilter/rules/ipi-document-rules.js',
     'engine/models/finding.js', 'scripts/run-prefilter-benchmark.cjs', 'scripts/run-prefilter-controls.cjs'];
   const codeHashes = Object.fromEntries(sourceFiles.map(file => [file, hash(fs.readFileSync(path.join(ROOT, file)))]));

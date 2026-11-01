@@ -1,0 +1,7 @@
+{
+  "version": "length-aware-v1",
+  "long_min_characters": 10000,
+  "short_p95_ratio": 1.25,
+  "long_p95_seconds": 45,
+  "long_target_seconds": 30
+}

@@ -1,0 +1,61 @@
+{
+  "version": "verifier-local-release-preview-v1",
+  "records": 324,
+  "examples": 648,
+  "changed_records": 18,
+  "roles": {
+    "train": {
+      "records": 180,
+      "examples": 360
+    },
+    "dev": {
+      "records": 84,
+      "examples": 168
+    },
+    "probe": {
+      "records": 60,
+      "examples": 120
+    }
+  },
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "87a97d919606e8b3564d36818b77e353250ba43c8fdb2465a601363a9ab28cd7",
+    "ban-xem-truoc.json": "815ae1d994817a3a03c1165b2ff315aca5179bd3ae1102be05266765f9b5d756",
+    "quyet-dinh-dung-noi-bo.json": "2ca048482f28a3b5b6f4158d741be7481529e594fd1bb2c8c3e52c7507f067f9"
+  },
+  "inputs_sha256": {
+    "benchmark/data/annotations/verifier-split-preview-v2/manifest.json": "ec3eeaa9dd6bc655946d6f4301e9e8f9906ccf2e599a6633bacbcd01cebff828",
+    "benchmark/data/annotations/verifier-split-preview-v2/mau-cho-duyet.jsonl": "580bf241476d4d949ba4047d2428ca332066eff995fe395882eb5d8465fd753f",
+    "benchmark/data/annotations/verifier-split-preview-v2/ban-xem-truoc.json": "e3945d455e055cf0364dfc058b9a214840a6ee4b61f5094a6579f954cd527bb8",
+    "benchmark/data/annotations/verifier-split-preview-v2/dieu-kien-tung-mau.json": "912639aa88cb48df471425f46502cae4071e691c88ebce113d45f5cd12d0386f",
+    "benchmark/data/raw/notinject/README.md": "ffaf685021522a526f94af2047e5099ec6b7439a462c67e0ecaca0d631a0d43f",
+    "benchmark/data/raw/injecagent/LICENCE": "b48589499dbb84caa796b00b4ea652b0443e49660282c44d890fd473b8c0674e",
+    "benchmark/data/raw/injecagent/snapshot.json": "8cd26914e2b3df095512a7c3b2d81066bf81dc85a27d4c2bba3ab1d34dc88606",
+    "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md": "86c94d3082e93c1d1c40ed53035e09121a58ce61056ef88be299d546d9fa7f46",
+    "benchmark/data/raw/python-context-docs-v1/LICENSE": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "benchmark/data/raw/python-context-docs-v1/snapshot.json": "9901299ae1a5c22f9277dfff56a767059096d2788183d97e085abf69f93619ab",
+    "benchmark/data/raw/llmail-intake-v1/README.md": "d85767e349ab1abbaf43db9390c4e906e34954e5df3a1335c8f1516efa64e812",
+    "benchmark/data/raw/vietnamese-markdown-v1/LICENSE": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+    "benchmark/data/raw/vietnamese-markdown-v1/GHI-CONG.md": "07819a8315ccefbff0cb0f5458afc4ebceb0788d116ccc8353d45b9c61360f09",
+    "benchmark/data/raw/openapi-context-v1/LICENSE": "4948367c65e1ce06690e2cadc6e86fce1a6a6db55ef874ce4b78c0f472ce5f13",
+    "benchmark/data/raw/openapi-context-v1/GHI-CONG.md": "0f32ce52172c0015c6d9093b7e2ce9d9bdc92f722589fd7c0c153a3d0bb58d15"
+  },
+  "code_sha256": {
+    "scripts/prepare-verifier-local-release.cjs": "eff2831920b80e98cddbaa7e18e9914a2c9cc5e4ac66f085460c187ed5798d01",
+    "scripts/verifier-batch-renderer.ts": "20a138b00da486e1b7f3ac83243ea67d83ee8db11d1822c3521861a53e7df59f"
+  },
+  "parser_valid": 648,
+  "labels_and_groups_preserved": true,
+  "local_preparation_only": true,
+  "final_split_created": false,
+  "training_export_created": false,
+  "training_ready": false,
+  "probe_sealed": false,
+  "public_release_approved": false,
+  "model_called": false,
+  "limitations": [
+    "Chỉ thay email nhìn thấy được, không bảo đảm xóa mọi thông tin nhận diện hoặc nội dung mã hóa.",
+    "Thay đổi input cần được rà tác động ngữ nghĩa và so lại với bản nguyên gốc khi đánh giá.",
+    "Hai mode mỗi mẫu là hai biểu diễn cùng nguồn, không phải hai quan sát độc lập.",
+    "File tách vai trò vẫn là preview, không đưa dev/probe vào huấn luyện; chưa fine-tuning."
+  ]
+}

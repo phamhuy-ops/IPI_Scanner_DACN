@@ -1,31 +1,35 @@
-# Mục lục tài liệu dự án
+# Tài liệu dự án
 
-- [Việc cần làm](planning/cong-viec-can-lam.md): ưu tiên, tồn đọng và bước tiếp.
-- [Tiêu chí thêm vòng phản biện](planning/tieu-chi-them-vong-phan-bien.md).
-- [Kế hoạch pilot fine-tuning Verifier](planning/ke-hoach-thu-fine-tuning-verifier.md).
-- [Hướng dẫn rà soát nhãn chỉ dẫn/ngữ cảnh](guides/huong-dan-gan-nhan-ngu-canh.md).
-- [Lưu trữ huấn luyện trên ổ E](guides/luu-tru-huan-luyen-tren-o-e.md).
-- [Báo cáo](reports/): triển khai, phép đo và các giới hạn đã ghi nhận.
-  - [Chính sách phân tích một vòng](reports/chinh-sach-phan-tich-mot-vong.md)
-  - [Mốc đo ban đầu với model thật](reports/danh-gia-luong-xu-ly-mot-vong.md)
-  - [Kiểm chứng trích xuất HTML](reports/kiem-chung-trich-xuat-html.md)
-  - [Ánh xạ trích dẫn về nguồn](reports/anh-xa-trich-dan-ve-nguon.md)
-  - [Thử nghiệm directive và ngữ cảnh](reports/thu-nghiem-chi-dan-va-ngu-canh.md)
-  - [Đo nhận định có cấu trúc](reports/danh-gia-nhan-dinh-co-cau-truc.md)
-  - [Đánh giá tham chiếu bằng mã nguồn](reports/danh-gia-tham-chieu-bang-ma-nguon.md)
-  - [Rút gọn JSON Verifier và đo lại ca bỏ sót](reports/rut-gon-json-verifier-va-do-lai-ca-bo-sot.md)
-  - [Đo nhận diện IPI và gán ngữ cảnh từng model](reports/do-nhan-dien-ipi-va-gan-ngu-canh-tung-model.md)
-  - [Thử làm rõ nghĩa stance](reports/thu-nghiem-lam-ro-nghia-stance.md)
-  - [Đánh giá model thay thế Verifier](reports/danh-gia-model-thay-the-verifier.md)
-  - [Chuẩn bị bộ nhãn chỉ dẫn và ngữ cảnh](reports/chuan-bi-bo-nhan-chi-dan-va-ngu-canh.md)
-  - [Kiểm tra môi trường huấn luyện Verifier](reports/kiem-tra-moi-truong-huan-luyen-verifier.md)
-  - [Phân tích bộ lọc trên tập phát triển](../benchmark/data/phan-tich-bo-loc-tren-tap-phat-trien.md)
-- [Kiến trúc và phạm vi](architecture/pham-vi-va-kien-truc-du-an.md).
-- [Kế hoạch và nhật ký tuần](../kế%20hoạch%20-%20nhật%20ký%20tuần/README.md).
-- [Dữ liệu benchmark](../benchmark/data/README.md): nguồn, chuẩn hóa và chia tập.
-- Kết quả chạy máy và log: `benchmark/results/` (giữ nguyên để bảo toàn baseline).
+Điểm vào ngắn gọn, cập nhật 2026-10-26.
 
-README, CONTRIBUTING và AGENTS ở gốc là các điểm vào sử dụng/phát triển dự án.
-Đặt báo cáo mới trong `reports/`, kế hoạch trong `planning/`, mô tả thiết kế
-trong `architecture/`, rồi cập nhật mục lục này. Các báo cáo cũ là lịch sử đo,
-không tự thay số liệu khi code mới thay đổi.
+File mẫu và dataset hiện có được tập hợp tại [kho kiểm thử](../benchmark/kiem-thu/README.md), gồm danh mục file CSV và nhãn/nguồn riêng cho báo cáo.
+
+Tiến độ mới: [tuần 3 — dọn công cụ và chia nhánh công việc](../kế%20hoạch%20-%20nhật%20ký%20tuần/tuan-03.md). Công cụ hiện hành qua `scripts/benchmark.cjs`; [script thử nghiệm đã nghỉ dùng và hash](../benchmark/archives/don-dep-2026-10-28/README.md) nằm trong ZIP, không còn là lệnh chạy trực tiếp trong workspace.
+
+| Cần xem gì? | Tài liệu |
+| --- | --- |
+| Dự án làm gì, cách chạy | [README dự án](../README.md) |
+| Luồng và thành phần kỹ thuật | [Phạm vi và kiến trúc](architecture/pham-vi-va-kien-truc-du-an.md) — tài liệu cũ giữ nguyên ngôn ngữ |
+| Kết quả quan trọng, trạng thái và giới hạn | [Bảng tổng hợp hiện trạng](reports/tong-hop-hien-trang.md) |
+| Làm gì tiếp theo | [Việc cần làm](planning/cong-viec-can-lam.md) |
+| Ưu tiên 1 đã xong chưa | [Tiến độ](planning/tien-do-uu-tien-1.md), [tiêu chí đã khóa](planning/cong-hoan-thanh-uu-tien-1.md) |
+| Chuẩn bị học một Verifier | [Kế hoạch pilot](planning/ke-hoach-thu-fine-tuning-verifier.md) |
+| Khi nào thêm phản biện | [Điều kiện](planning/tieu-chi-them-vong-phan-bien.md) |
+| Cách gán nhãn, mở rộng và AI rà dữ liệu | [Gán nhãn](guides/huong-dan-gan-nhan-ngu-canh.md), [mở rộng](guides/mo-rong-du-lieu-ngu-canh-verifier.md), [AI tự rà](guides/tu-danh-gia-du-lieu-verifier.md) |
+| Python/cache/model trên ổ E | [Hướng dẫn lưu trữ](guides/luu-tru-huan-luyen-tren-o-e.md) |
+
+## Quy ước tài liệu từ bây giờ
+
+- Chỉ duy trì giới thiệu, hướng dẫn, việc cần làm và báo cáo quan trọng dạng tóm tắt bằng tiếng Việt.
+- Cập nhật bảng tổng hợp và việc cần làm khi trạng thái đổi; không tạo một báo cáo/kế hoạch mới cho từng lượt chạy.
+- Báo cáo ngắn ghi kết quả, giới hạn và đường dẫn bằng chứng; số liệu chi tiết, hash, lệnh và log nằm trong `benchmark/experiments/` hoặc `benchmark/results/`.
+- Tách việc đã triển khai với thử nghiệm; không tính test kỹ thuật là cải thiện bảo mật.
+- Chỉ tạo tài liệu riêng khi có quy trình mới cần dùng lại hoặc thay đổi kiến trúc quan trọng.
+
+## Lịch sử đã thu gọn
+
+Báo cáo trung gian và kế hoạch thử cũ đã rời thư mục docs. Snapshot trước
+dọn nằm trong [ZIP lịch sử](../benchmark/archives/docs-truoc-rut-gon-2026-10-26.zip),
+kèm [danh mục/hash](../benchmark/archives/docs-truoc-rut-gon-2026-10-26.json).
+Đường dẫn docs cũ trong artifact bất biến được tra qua danh mục này; không
+viết lại kết quả lịch sử. Dữ liệu và baseline không bị xóa.

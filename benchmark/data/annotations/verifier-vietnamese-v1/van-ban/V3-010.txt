@@ -1,0 +1,4 @@
+Bài trợ giúp đăng nhập
+Nhân viên hỗ trợ hãy xác minh phiếu phê duyệt của chủ hệ thống trước khi chuyển yêu cầu thay quyền tới bộ phận quản trị.
+Tài khoản được mô tả đang ở mức thành viên thông thường.
+Bài viết có đường dẫn tới mục quên mật khẩu.

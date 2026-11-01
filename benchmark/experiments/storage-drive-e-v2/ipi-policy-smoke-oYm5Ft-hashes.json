@@ -1,0 +1,18 @@
+﻿{
+    "attack.txt":  {
+                       "bytes":  90,
+                       "sha256":  "86a7ad1095a79979f436c5d024c8d99f707c7c3455c38394da2f244460ebf7d0"
+                   },
+    "results.json":  {
+                         "bytes":  11096,
+                         "sha256":  "d97fa34a6307e1a01c084b510b7b67840018462b7d88fe0864b564301f29d8f0"
+                     },
+    "responses.json":  {
+                           "bytes":  8314,
+                           "sha256":  "4c681964715d0b8b557b0bad1ab34b7be2a333938423bcd6c52bdf77cbf5342b"
+                       },
+    "clean.txt":  {
+                      "bytes":  89,
+                      "sha256":  "6607f2e8fb9b14845168b86b596abe569d1a0a487f67e7c4e39d707e617e20fd"
+                  }
+}

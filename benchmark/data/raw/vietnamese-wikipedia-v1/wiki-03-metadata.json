@@ -1,0 +1,19 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 13199,
+        "ns": 0,
+        "title": "Năng lượng tái tạo",
+        "revisions": [
+          {
+            "revid": 75640899,
+            "parentid": 75640462,
+            "timestamp": "2026-10-15T07:04:17Z"
+          }
+        ]
+      }
+    ]
+  }
+}

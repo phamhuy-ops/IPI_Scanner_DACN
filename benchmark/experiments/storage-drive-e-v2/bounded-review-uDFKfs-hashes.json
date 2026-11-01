@@ -1,0 +1,30 @@
+﻿{
+    "cases.json":  {
+                       "bytes":  66965,
+                       "sha256":  "f776f07490e5b57a5f3cec211db9c1b8b90b9a9f1bfb60aef1982dd92535b227"
+                   },
+    "summary.json":  {
+                         "bytes":  14566,
+                         "sha256":  "bdd4b8bb42754a4fd93e6491610dc05dcfc4de6b931a1f6604daaefc80773f7d"
+                     },
+    "document-5.txt":  {
+                           "bytes":  267,
+                           "sha256":  "d7bae10f5c54a6089c4e0312214b437c85c36ca52e6a146f036dfdeeb87661c0"
+                       },
+    "plan.json":  {
+                      "bytes":  4884,
+                      "sha256":  "110a16356f6d5757834432c1fdf2bcccfe1b6ec01191965a021827bc8642a32f"
+                  },
+    "document-6.txt":  {
+                           "bytes":  361,
+                           "sha256":  "1e42ec4951d36deea776d83913788b37090f39c817437fead03c644ca044fe27"
+                       },
+    "model-calls.json":  {
+                             "bytes":  405709,
+                             "sha256":  "c401e92e593fe7f6bc3f3a0e7569106353b2d66b5717db8b9dbbdaa678be6f02"
+                         },
+    "document-1.txt":  {
+                           "bytes":  24262,
+                           "sha256":  "882251bc51abb2a058a1dd698f175ba459b2ee9283849f8e6a41ec419ccdc222"
+                       }
+}

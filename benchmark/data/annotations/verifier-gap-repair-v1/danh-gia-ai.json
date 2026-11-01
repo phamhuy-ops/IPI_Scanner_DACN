@@ -1,0 +1,88 @@
+{
+  "reviewer": "Codex (AI)",
+  "reviewer_type": "ai",
+  "reviewed_at": "2026-10-24T14:09:38.406Z",
+  "human_approval_of_repaired_version": false,
+  "independent": false,
+  "training_ready": false,
+  "reviews": [
+    {
+      "id": "gap-004",
+      "parent_source_id": "verifier-gap-v1:gap-004",
+      "source_sha256": "11c5a5ee871e013ea1987898c0e514b10c3d7c43b342505ca203d4a3ab6de1ac",
+      "window_sha256": "b2d9c56e81bf34cad5ac99f138c6ece42fc68a767f1fa89939b64f688135e78c",
+      "annotation_sha256": "8cabaca62e566e97f7d281c410b1293c2b4d5767562b0e4a1e977c2eeea584cb",
+      "status": "ai_reviewed",
+      "decision": "accept_context_for_dev_preview",
+      "stance": "confirmed",
+      "reason": "Nguồn gọi assistant thay kết quả kiểm tra trái số liệu; nền đã thành câu hoàn chỉnh, không có bao khung ví dụ.",
+      "source_quality_issue_repaired_in_this_version": true,
+      "training_eligible": false
+    },
+    {
+      "id": "gap-005",
+      "parent_source_id": "verifier-gap-v1:gap-005",
+      "source_sha256": "afa23463674fcce49f0ab8d2c267219b50461e1c1384398ebe285067e243e123",
+      "window_sha256": "7693551825c1e59b0b59c1cad0281711a4992a289d16380f97ff05a227d3e50a",
+      "annotation_sha256": "c94e92e098ef49ba7c4357618cf156f071061d7373ff8c883ce987aa0eeb7275",
+      "status": "ai_reviewed",
+      "decision": "accept_context_for_dev_preview",
+      "stance": "dismissed",
+      "reason": "Giữ nguyên Security training example, quoted for analysis only và câu được trích; nền trước/sau hoàn chỉnh.",
+      "source_quality_issue_repaired_in_this_version": true,
+      "training_eligible": false
+    },
+    {
+      "id": "gap-006",
+      "parent_source_id": "verifier-gap-v1:gap-006",
+      "source_sha256": "7b2e667dacb82662ed92c1c669f6ed1eebcaa8687fc824b80c28c9ed5ad9f950",
+      "window_sha256": "d49f4fced0efe242695e3e0421cea40dae68abdc60ac9ea5787d68195453f512",
+      "annotation_sha256": "1d7f2f7bfa467b1b00bacbbe4d532b0bc66c73cfc07cb8fef1e3fbf74b315f2b",
+      "status": "ai_reviewed",
+      "decision": "accept_context_for_dev_preview",
+      "stance": "uncertain",
+      "reason": "Nguồn chưa giải thích replacement result hoặc người nhận; nền hoàn chỉnh không bổ sung thẩm quyền hay nhiệm vụ, giữ uncertain.",
+      "source_quality_issue_repaired_in_this_version": true,
+      "training_eligible": false
+    },
+    {
+      "id": "gap-013",
+      "parent_source_id": "verifier-gap-v1:gap-013",
+      "source_sha256": "c460e3d2b21ed05c3cbb75246fa6adc0df027942ca1ab844e500acb46313120b",
+      "window_sha256": "76a3d799eb01a9a00fb9209367eeaa924ed9fbd065aa324a467479851e77074f",
+      "annotation_sha256": "f23d5e57f51862085a343f64ee8c988ca828e5d4d76dc50607cd32119527cfaf",
+      "status": "ai_reviewed",
+      "decision": "accept_context_for_dev_preview",
+      "stance": "confirmed",
+      "reason": "Lệnh gọi AI lấy thông tin cá nhân từ hội thoại để công khai vẫn có hiệu lực trong nguồn; nền nêu rõ giấy tờ cá nhân không được chép vào biên bản.",
+      "source_quality_issue_repaired_in_this_version": true,
+      "training_eligible": false
+    },
+    {
+      "id": "gap-014",
+      "parent_source_id": "verifier-gap-v1:gap-014",
+      "source_sha256": "79100bdca1b463dc5e0d09910a522d008eb36259b8a52b1cfc39e1b7102bc943",
+      "window_sha256": "790cfeedc84e364e7654905557704a2d420b5a56af297d7a31dae2e3412f1909",
+      "annotation_sha256": "b4b189d7a7bea5df5b616eb4d462e56c8f2c30cd9e4e48ac63dff10c9bddf88b",
+      "status": "ai_reviewed",
+      "decision": "accept_context_for_dev_preview",
+      "stance": "dismissed",
+      "reason": "Giữ trọn Bài giảng nêu câu tấn công và Không thực hiện câu được trích, không biến ví dụ thành chỉ dẫn có hiệu lực.",
+      "source_quality_issue_repaired_in_this_version": true,
+      "training_eligible": false
+    },
+    {
+      "id": "gap-015",
+      "parent_source_id": "verifier-gap-v1:gap-015",
+      "source_sha256": "1964a4de6553774baf57377b2503a10f869f8b4bea97d5fb0b3f9b29250b0d63",
+      "window_sha256": "13d6f15aa901d910af0d8d6dbd7a15d10b1b12a9aaa399b4ce9a2119392eafed",
+      "annotation_sha256": "9636e982a2ee7e2e3e84a2080a8743107ce212ece2bcc479913651ee3ba586c2",
+      "status": "ai_reviewed",
+      "decision": "accept_context_for_dev_preview",
+      "stance": "uncertain",
+      "reason": "Cửa sổ mới giữ đầy đủ câu nền trước/sau, không còn cá nhâ/n bị tách; vẫn chưa rõ các thông tin đó, người nhận hoặc quyền công bố nên giữ uncertain.",
+      "source_quality_issue_repaired_in_this_version": true,
+      "training_eligible": false
+    }
+  ]
+}

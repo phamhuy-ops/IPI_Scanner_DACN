@@ -1,0 +1,18 @@
+﻿{
+    "ke-hoach.json":  {
+                          "bytes":  4575,
+                          "sha256":  "61baacc621d45e15c3d4e3bcfe8ff8d65a20bdc105abf13f70a3a83a02b5aa8f"
+                      },
+    "cases.json":  {
+                       "bytes":  41022,
+                       "sha256":  "3b3e954034795cf6261ec643f5f37a9ccc174e8ec67d926f8b643de4398d57c1"
+                   },
+    "model-calls.json":  {
+                             "bytes":  93369,
+                             "sha256":  "9356776751c145ec4f71d1a37ddcfbfb1c415d858da8135bf732b6a7a47aeb79"
+                         },
+    "ket-qua.json":  {
+                         "bytes":  3310,
+                         "sha256":  "9d8e51e1270b78f79e1579c62485d45f7c54f937d0e2fc22607b6c7dae24b1d1"
+                     }
+}

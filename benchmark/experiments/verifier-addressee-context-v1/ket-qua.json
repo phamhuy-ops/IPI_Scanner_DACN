@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-25",
+  "status": "complete",
+  "normalized_records": 7,
+  "quarantined_records": 1,
+  "reviewer": "Codex (AI)",
+  "human_approved": false,
+  "source_text_changed": false,
+  "runtime_changed": false,
+  "training_started": false,
+  "training_ready": false,
+  "split_created": false,
+  "independent_holdout_collected": false,
+  "prior_review_convention_only": true,
+  "parser_preview": {
+    "records": 7,
+    "quarantined": 1,
+    "preview_rebuilt_and_parser_valid": 14,
+    "source_hashes_unchanged": true,
+    "metadata_excluded_from_payload": true,
+    "human_approval_transferred": false,
+    "labels": {
+      "benign": 5,
+      "malicious": 2,
+      "uncertain": 0
+    },
+    "initial_groups": 2,
+    "training_ready": false,
+    "final_split_created": false,
+    "note": "Chưa chấm độ đúng ngữ nghĩa độc lập; xem corpus v8 và token audit riêng.",
+    "code_sha256": "17368e612e571323a95cdc6df22025991fa56fab21c5753ed77f867993f77a7a"
+  },
+  "tokenizer_summary": {
+    "examples": 14,
+    "mask_valid": 14,
+    "collator_valid": 14,
+    "token_max": 1225,
+    "target_max": 98,
+    "over_budget": {
+      "1024": 3,
+      "1536": 0,
+      "2048": 0
+    },
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "offline": true
+  },
+  "corpus": {
+    "report": "benchmark/experiments/verifier-corpus-overlap-v8/ket-qua.json",
+    "reference_records": 174,
+    "candidate_records": 154,
+    "reference_groups": 77,
+    "candidate_groups": 65,
+    "inventory_files": 57,
+    "unique_normalized_texts": 68201,
+    "missing_coverage": [],
+    "inputs_unchanged": true,
+    "prior_group_memberships_preserved": true,
+    "protected_test_overlap_components": 0,
+    "new_membership_components": [
+      {
+        "members": [
+          "verifier-vietnamese-articles-v1:vi-article-011",
+          "verifier-vietnamese-articles-v1:vi-article-012",
+          "verifier-vietnamese-articles-v1:vi-article-013",
+          "verifier-vietnamese-articles-v1:vi-article-014",
+          "verifier-vietnamese-articles-v1:vi-article-015",
+          "verifier-addressee-context-v1:ac-01"
+        ],
+        "size": 6,
+        "flags": [
+          "overlap_dev_fixture_or_manifest"
+        ],
+        "constraint": "development_exposed_keep_group_together",
+        "final_split": null
+      },
+      {
+        "members": [
+          "verifier-addressee-context-v1:ac-03",
+          "verifier-addressee-context-v1:ac-04",
+          "verifier-addressee-context-v1:ac-05",
+          "verifier-addressee-context-v1:ac-06",
+          "verifier-addressee-context-v1:ac-07",
+          "verifier-addressee-context-v1:ac-08"
+        ],
+        "size": 6,
+        "flags": [
+          "overlap_dev_fixture_or_manifest"
+        ],
+        "constraint": "development_exposed_keep_group_together",
+        "final_split": null
+      }
+    ]
+  },
+  "artifacts": {
+    "manifest": "benchmark/data/annotations/verifier-addressee-context-v1/manifest.json",
+    "provenance": "benchmark/experiments/verifier-addressee-context-v1/doi-chieu-nguon-wikipedia.json",
+    "token_audit": "benchmark/experiments/verifier-addressee-tokenizer-v1/ket-qua.json"
+  },
+  "tests": {
+    "node_passed": 2,
+    "python_passed": 4
+  },
+  "priority_one_complete": false,
+  "next": "Bổ sung nguồn ngoài cho các nhóm human/assistant/uncertain còn thiếu với đối chứng tương đương; giữ nhóm và nguồn độc lập trước khi chốt train/dev. Không nhập các ca đã đo vào train để bắt đúng ví dụ.",
+  "limitations": [
+    "Nhãn AI, không kế thừa xác nhận người dùng trên văn bản khác.",
+    "Bảy ca đã lộ qua dev; parser/token đúng không chứng minh chất lượng model.",
+    "Rà từ vựng không chứng minh độc lập ngữ nghĩa.",
+    "Chưa đạt mục tiêu dữ liệu pilot và chưa có holdout độc lập."
+  ]
+}

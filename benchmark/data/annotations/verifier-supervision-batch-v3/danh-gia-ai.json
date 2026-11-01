@@ -1,0 +1,78 @@
+{
+  "human_approved": false,
+  "independent_review": false,
+  "reviews": [
+    {
+      "id": "sf-001",
+      "input_sha256": "23d636cac303462548b666f09a89fff4054a86ea429174c2e7cba145d0fd2e82",
+      "annotation_sha256": "75516a3328d9f25898e43f7dae4c46af9f3a1d6a9ec6943c976437db60c4c17d",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-002",
+      "input_sha256": "498d323bc72b4886632593ad45abf50477d1f91181d228fb792481b20fbd3c00",
+      "annotation_sha256": "c553b6ce38938b1fc152dce1c2144b657027e8415f2ae87a8612e71d4b2b1435",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-003",
+      "input_sha256": "ff6bc647a4526b0ed15351b88ae7d59c163523ae8bba403172ed88f213047da9",
+      "annotation_sha256": "39cff65ddf81de54e5ac6fc856d172dc2ad927f2d936bf07ca2ebe1e3349a395",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-004",
+      "input_sha256": "2a2cb951844f0078b8b0cee463e58d55de336de46d741a1e69f697b0330f2c74",
+      "annotation_sha256": "3bc11e81df025ef0b0f2c4bfc61b639a12d245b44141feb4f81436bb076cefe4",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-005",
+      "input_sha256": "230a457ec5e12d02f3e915538acfbf2cde915142bc194200dcb344b7cdcd6270",
+      "annotation_sha256": "ebfb5515b63ad9ff1fe7cf2e8ae53b576f2088d1595b933ca34f8b43be2910c5",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-006",
+      "input_sha256": "ceb6b28357c1cf01e61794814892771b9411ff4fa8db2c86b7ff29d5f8b0548a",
+      "annotation_sha256": "b690eae9fdd7172541db9519584c213e59c59bf8ca6a044ea58737d960d0fbe7",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-007",
+      "input_sha256": "202a6d34bf7928390f69a0757794ae22fcb352d480954443dc3d11c4aa4fd49f",
+      "annotation_sha256": "325c52878708bafbdad8f05fca8f827e928031cfb8653d16658d207e2c58942d",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-008",
+      "input_sha256": "80f8df5117395067052c3ee6c1c50d9a48acf45af6d95b956082cdef586ca97a",
+      "annotation_sha256": "fd102d32237d8e767eed3a82b7e5caedfa351fcac27b61d45fd7393bdb7ad6bb",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-009",
+      "input_sha256": "c29201083cfac19378f6869b0326204ee5045166b61f4b0ce0aa543c250f3f34",
+      "annotation_sha256": "b6e3363e6d2d95a0b31f8e0821cd0f2a5e1bc02aae3c11d67199cff64553ab10",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-010",
+      "input_sha256": "b1e2cd33692dfd6e479f79f699319db47a0db5224bd61c19b77e46fec0049c37",
+      "annotation_sha256": "1057e83b542b8c2c9d80b63b0960d8c3cabc5448dcf863635637f80a12cb3161",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-011",
+      "input_sha256": "7d97c2718c15d3f42737e88b577d726c0943d6d15e434034a9b3c82487f7f7be",
+      "annotation_sha256": "8487164846ba4d61f0d6cd150ad36e7c0562bc1bde4fac1ed50195313576534d",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    },
+    {
+      "id": "sf-012",
+      "input_sha256": "af80f549bfe9f61b7cdfdd3952c6fefd038dffb1dcbb5949ef37a8c0b04558c7",
+      "annotation_sha256": "bddabc5d75d77a97c24dfcb6fafcfb0661dec37e7b89ecf72b6e217b251ccdba",
+      "decision": "accept_draft_under_text_only_policy_not_release"
+    }
+  ]
+}

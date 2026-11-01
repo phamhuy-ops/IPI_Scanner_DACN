@@ -1,0 +1,32 @@
+{
+  "version": "verifier-vietnamese-markdown-v1",
+  "records": 18,
+  "source_parent_ids": 6,
+  "initial_groups": 6,
+  "labels": {
+    "confirmed": 6,
+    "dismissed": 12,
+    "uncertain": 0
+  },
+  "language": "vi",
+  "parser_valid": 36,
+  "source_snapshot_sha256": "a1b514924a8f28497497c8e03352be3bf493b3dfdafa90069224ba3bfc052136",
+  "training_ready": false,
+  "model_called": false,
+  "final_split_created": false,
+  "code_sha256": {
+    "scripts/prepare-vietnamese-markdown.cjs": "f566b95a0a9df679522408807ea95a3778c7b3449cca92864acadff28977f42c",
+    "scripts/verifier-batch-renderer.ts": "d66db4a967344570e6541996f2432e42324fd43d72077e065e6c8ec126feafab"
+  },
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "c95f9741bd74fb915666b1fbbe66f39b180b234af0fd015c055451e643b6336a",
+    "ban-xem-truoc.json": "ba82a81416effa5aa07ae39e3579561eeb4b21a03f367e802b21443d88604edf",
+    "danh-gia-ai.json": "145bea2c4785d4f2a5634dcd7f1e93833813cd47d1b04c0f787e841553e8b0a4"
+  },
+  "limitations": [
+    "Sáu tài liệu của cùng một bản dịch cộng đồng, không phải sáu nguồn ngoài độc lập.",
+    "Các attack và bao khung trích dẫn do AI soạn; không phải tấn công quan sát ở trang gốc.",
+    "Chỉ gán nhãn đoạn đã xem; phần khác của tài liệu không được coi là sạch.",
+    "Nhãn AI không phải người duyệt độc lập hoặc bằng chứng cải thiện model."
+  ]
+}

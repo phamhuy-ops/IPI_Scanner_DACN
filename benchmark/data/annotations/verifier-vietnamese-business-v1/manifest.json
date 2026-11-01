@@ -1,0 +1,32 @@
+{
+  "version": "verifier-vietnamese-business-v1",
+  "records": 20,
+  "source_parent_ids": 4,
+  "initial_groups": 4,
+  "labels": {
+    "confirmed": 8,
+    "dismissed": 8,
+    "uncertain": 4
+  },
+  "languages": {
+    "vi": 20
+  },
+  "parser_valid": 40,
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "b4e344f2500178e69f2008391e105e1309f40213c0aa660b34cc3471c01d0287",
+    "ban-xem-truoc.json": "d39041d1d53f9c39cba1d818fed209653cf26cd3d1bd4cd750bd58cd50ca9969",
+    "danh-gia-ai.json": "1f15423056c5ace09400647346f6119de0979993c39e7095db45908478d79680"
+  },
+  "code_sha256": {
+    "scripts/prepare-verifier-vietnamese-business.cjs": "0d9f1a0959ebddc1764372058c598b7f77addbb85d90f2b3c9d0175bf743e435",
+    "scripts/verifier-batch-renderer.ts": "d66db4a967344570e6541996f2432e42324fd43d72077e065e6c8ec126feafab"
+  },
+  "training_ready": false,
+  "model_called": false,
+  "final_split_created": false,
+  "limitations": [
+    "Bốn bối cảnh tự soạn, không phải bốn nguồn ngoài độc lập.",
+    "AI rà nhãn và dựng mẫu không tương đương người duyệt độc lập.",
+    "Chỉ văn bản ngắn; chưa bổ sung PDF/DOCX hoặc chứng minh hiệu quả nhận diện."
+  ]
+}

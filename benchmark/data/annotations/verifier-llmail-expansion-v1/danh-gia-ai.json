@@ -1,0 +1,116 @@
+{
+  "reviewer": "Codex (AI)",
+  "human_approved": false,
+  "reviews": [
+    {
+      "id": "llmail-fp-073",
+      "input_sha256": "7430beb8455e78981acc10f5f5a104559c946c243219c542725742951d9dc606",
+      "annotation_sha256": "157238bb5a9ecba09c003341fbcfbe2eb1e736bbcd1a01da062f8773d766cbb6",
+      "window_sha256": "7430beb8455e78981acc10f5f5a104559c946c243219c542725742951d9dc606",
+      "window_annotation_sha256": "157238bb5a9ecba09c003341fbcfbe2eb1e736bbcd1a01da062f8773d766cbb6",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.188Z"
+    },
+    {
+      "id": "llmail-fp-074",
+      "input_sha256": "515ee3b2128907e56a25359038228fc7ab1eddf247f84c5d00690d606c21a7a7",
+      "annotation_sha256": "c90e5f9e897762d7febc1d08de78401f9a9b552a8c5fd8b167aa65414319afdb",
+      "window_sha256": "515ee3b2128907e56a25359038228fc7ab1eddf247f84c5d00690d606c21a7a7",
+      "window_annotation_sha256": "c90e5f9e897762d7febc1d08de78401f9a9b552a8c5fd8b167aa65414319afdb",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.196Z"
+    },
+    {
+      "id": "llmail-fp-075",
+      "input_sha256": "99c84ef2c66f09c46d38db9e47f66bed4e905cd73a52e451e4217a741afcfdf8",
+      "annotation_sha256": "2a7bb50d9e3ed10f0bc923ddf8112c6e4270fcf8a3bff9d79af951041819533d",
+      "window_sha256": "99c84ef2c66f09c46d38db9e47f66bed4e905cd73a52e451e4217a741afcfdf8",
+      "window_annotation_sha256": "2a7bb50d9e3ed10f0bc923ddf8112c6e4270fcf8a3bff9d79af951041819533d",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.196Z"
+    },
+    {
+      "id": "llmail-fp-077",
+      "input_sha256": "f876146932d09ea2f891d37f18223f67deafda689011c05157367ffa8d7028bc",
+      "annotation_sha256": "043f423a448d5c628357cd085a5f514608b6ee1c7459af63ec88a7dd6099667b",
+      "window_sha256": "f876146932d09ea2f891d37f18223f67deafda689011c05157367ffa8d7028bc",
+      "window_annotation_sha256": "043f423a448d5c628357cd085a5f514608b6ee1c7459af63ec88a7dd6099667b",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.196Z"
+    },
+    {
+      "id": "llmail-fp-079",
+      "input_sha256": "e7b6a5b12bfdbd20450dd131cb69c42bc61a195589010005a59f986586e4cd80",
+      "annotation_sha256": "47a98102018c66db2b74dd08322103e6b749711966117df5758f226f84facae6",
+      "window_sha256": "e7b6a5b12bfdbd20450dd131cb69c42bc61a195589010005a59f986586e4cd80",
+      "window_annotation_sha256": "47a98102018c66db2b74dd08322103e6b749711966117df5758f226f84facae6",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.196Z"
+    },
+    {
+      "id": "llmail-fp-199",
+      "input_sha256": "1e6123721bd6c0e6a59e65f77777e7ab69f939972a88737337f6f158de518744",
+      "annotation_sha256": "fb520299dddc7cadec3cb3fab4687716e1bbcb1a8b7c101c77fc807f87bf6fb4",
+      "window_sha256": "1e6123721bd6c0e6a59e65f77777e7ab69f939972a88737337f6f158de518744",
+      "window_annotation_sha256": "fb520299dddc7cadec3cb3fab4687716e1bbcb1a8b7c101c77fc807f87bf6fb4",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.196Z"
+    },
+    {
+      "id": "llmail-phase2-037",
+      "input_sha256": "e5beb8a7a5276c97c66b4d5db1d7d5bbef76f765b9491928ae324b44cb25ec45",
+      "annotation_sha256": "90705c885c43224a9e9be095fdf086c1d5f83ff5c74238d4f003b8cb71232615",
+      "window_sha256": "e5beb8a7a5276c97c66b4d5db1d7d5bbef76f765b9491928ae324b44cb25ec45",
+      "window_annotation_sha256": "90705c885c43224a9e9be095fdf086c1d5f83ff5c74238d4f003b8cb71232615",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.196Z"
+    },
+    {
+      "id": "llmail-phase2-041",
+      "input_sha256": "2983983042ed178c66ef2df20cd38ae8a3eec26e026f084e026198c483253a70",
+      "annotation_sha256": "6503afdb2d2f0676696e6a1b7e5201731aee7fa7d2ae453b09151ad92b6ec875",
+      "window_sha256": "54a8264789e7232d2a6563823aca29179f7666eb6097ebdef6b4e898d5f89e70",
+      "window_annotation_sha256": "b7f7eb36c075225039fd01cac06dd65286d7e543cf8421237a5baf14e4c2b470",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.196Z"
+    },
+    {
+      "id": "llmail-phase2-046",
+      "input_sha256": "9ac8cf765dee7be513f575777570a600116c0f41baf2eb5855253ce717ce5061",
+      "annotation_sha256": "19e2a624eb4f0a8d1d5e5b0700d93e045a6e3f5ae7038a153adee995220778b9",
+      "window_sha256": "9ac8cf765dee7be513f575777570a600116c0f41baf2eb5855253ce717ce5061",
+      "window_annotation_sha256": "19e2a624eb4f0a8d1d5e5b0700d93e045a6e3f5ae7038a153adee995220778b9",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.196Z"
+    },
+    {
+      "id": "llmail-phase2-047",
+      "input_sha256": "a3767c2fc38f49f2e3983247fa3176463bde11ecbb84f36673ab950e07085e35",
+      "annotation_sha256": "8996d5ab76b3fe57c4472eb965979fe5d8db64b11eda85a089848624b3b154c1",
+      "window_sha256": "a3767c2fc38f49f2e3983247fa3176463bde11ecbb84f36673ab950e07085e35",
+      "window_annotation_sha256": "8996d5ab76b3fe57c4472eb965979fe5d8db64b11eda85a089848624b3b154c1",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.197Z"
+    },
+    {
+      "id": "llmail-phase2-044",
+      "input_sha256": "899de1c1959e2ab8f51bf349f623f812e9fb2449b4eef88a439a2d39d848c946",
+      "annotation_sha256": "4440db39488c8f172e802bb8392dac89b7475fa537ce2e9fe35d0c4276da6cc1",
+      "window_sha256": "899de1c1959e2ab8f51bf349f623f812e9fb2449b4eef88a439a2d39d848c946",
+      "window_annotation_sha256": "4440db39488c8f172e802bb8392dac89b7475fa537ce2e9fe35d0c4276da6cc1",
+      "status": "ai_reviewed",
+      "decision": "accept_visible_window_after_source_review",
+      "reviewed_at": "2026-10-26T04:22:23.197Z"
+    }
+  ]
+}

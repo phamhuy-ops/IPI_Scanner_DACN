@@ -1,0 +1,66 @@
+﻿{
+    "realistic-ipi.jsonl":  {
+                                "bytes":  16627,
+                                "sha256":  "accd5c06f738c3688ad0ccdc79cb975b02b08990de2c147bd1834591c272ef8b"
+                            },
+    "notinject-benign.jsonl":  {
+                                   "bytes":  275823,
+                                   "sha256":  "d6e0aa37f2a5a3277a0c153250ccf112b341906915bf2bb7087519750b514669"
+                               },
+    "suite-summary.json":  {
+                               "bytes":  6759,
+                               "sha256":  "0238418215984e3ea68e141a2f9450946c54bc7e1aaac3a88d19d657d600826d"
+                           },
+    "prefilter-custom-U72U6p\\errors.jsonl":  {
+                                                  "bytes":  0,
+                                                  "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                                              },
+    "prefilter-custom-U72U6p\\predictions.jsonl":  {
+                                                       "bytes":  74712,
+                                                       "sha256":  "da595993be576aad76a37aa8ed30788e036804d5603a2dbca7abc0c55612726f"
+                                                   },
+    "prefilter-custom-PaSsaZ\\errors.jsonl":  {
+                                                  "bytes":  2825,
+                                                  "sha256":  "1e9a8daab4d906d12b5a90f1bba127315239496e8536cbb415d243706605e7e5"
+                                              },
+    "prefilter-custom-PaSsaZ\\predictions.jsonl":  {
+                                                       "bytes":  806,
+                                                       "sha256":  "38a19cb27ec86ccafc34da8ec1e67009b1156eb937cd77ef10aeac5d9dc8cc5e"
+                                                   },
+    "prefilter-custom-TT6huh\\predictions.jsonl":  {
+                                                       "bytes":  3647,
+                                                       "sha256":  "7740e74460f54f7a4a2b4f9b7f6f919e686110d480ce3408b03b9ce78d1b9c53"
+                                                   },
+    "realistic-direct-mixed.jsonl":  {
+                                         "bytes":  4080,
+                                         "sha256":  "1d597830341887710c303968e86aae5be4ff3bf1a40359182a394ed104dd4469"
+                                     },
+    "prefilter-custom-U72U6p\\by-group.json":  {
+                                                   "bytes":  274,
+                                                   "sha256":  "4e64250afc621c2f1d469293bfb90cccdb4723c294b068f0b5a1585f32f326dd"
+                                               },
+    "prefilter-custom-TT6huh\\by-group.json":  {
+                                                   "bytes":  301,
+                                                   "sha256":  "000050a8e03a52aeff1fdba7c7e2efd709baad01a46d24da750da0cd2d646fd5"
+                                               },
+    "prefilter-custom-TT6huh\\summary.json":  {
+                                                  "bytes":  2150,
+                                                  "sha256":  "41b58f8ce63e438de9de8cdc80c098d7e2c8dda1010036ba571f230085804607"
+                                              },
+    "prefilter-custom-U72U6p\\summary.json":  {
+                                                  "bytes":  1915,
+                                                  "sha256":  "7497aaf7cf5f5b2bc778ff4151a8444028e52fb1df9cdfe2ab022c328d043b62"
+                                              },
+    "prefilter-custom-TT6huh\\errors.jsonl":  {
+                                                  "bytes":  8962,
+                                                  "sha256":  "8bb5030869fbcd8b735b0f19dbd1cc568d91bbae6c62c2fe1db19bdb9b22202f"
+                                              },
+    "prefilter-custom-PaSsaZ\\by-group.json":  {
+                                                   "bytes":  300,
+                                                   "sha256":  "19a0613fef52e54437445428850b4acc8eeab466aa40ed27612f44cbc794826f"
+                                               },
+    "prefilter-custom-PaSsaZ\\summary.json":  {
+                                                  "bytes":  2151,
+                                                  "sha256":  "c40ef033dc910b2035fd5d9a6796fdeec4902e09e5ee67f30741b2c0ddcfb8d0"
+                                              }
+}

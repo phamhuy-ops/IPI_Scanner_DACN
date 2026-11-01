@@ -1,0 +1,150 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "sequence_tokens": 2048,
+  "steps_requested": 10,
+  "steps": [
+    {
+      "step": 1,
+      "loss": 0.2047184854745865,
+      "grad_norm": 1.3508665561676025,
+      "seconds": 5.086739599995781
+    },
+    {
+      "step": 2,
+      "loss": 0.19335192441940308,
+      "grad_norm": 0.8197616934776306,
+      "seconds": 4.734871299995575
+    },
+    {
+      "step": 3,
+      "loss": 0.18348637223243713,
+      "grad_norm": 0.705008864402771,
+      "seconds": 4.728506500017829
+    },
+    {
+      "step": 4,
+      "loss": 0.1729675829410553,
+      "grad_norm": 0.6358799338340759,
+      "seconds": 4.8968076999881305
+    },
+    {
+      "step": 5,
+      "loss": 0.16325007379055023,
+      "grad_norm": 0.4737868010997772,
+      "seconds": 4.8358096000156365
+    },
+    {
+      "step": 6,
+      "loss": 0.1905553638935089,
+      "grad_norm": 1.5847665071487427,
+      "seconds": 4.299279199971352
+    },
+    {
+      "step": 7,
+      "loss": 0.1709878146648407,
+      "grad_norm": 244.7914581298828,
+      "seconds": 3.9915549000143073
+    },
+    {
+      "step": 8,
+      "loss": 0.13724149763584137,
+      "grad_norm": 0.6748650074005127,
+      "seconds": 4.249687100003939
+    },
+    {
+      "step": 9,
+      "loss": 0.1301616132259369,
+      "grad_norm": 0.44088029861450195,
+      "seconds": 4.013205599971116
+    },
+    {
+      "step": 10,
+      "loss": 0.12197661399841309,
+      "grad_norm": 0.41953808069229126,
+      "seconds": 3.960169500031043
+    }
+  ],
+  "fixture": "fresh_synthetic_resource_only",
+  "dev_or_holdout_used_for_updates": false,
+  "pilot_training_started": false,
+  "training_ready": false,
+  "runtime_changed": false,
+  "save_reload_verified": true,
+  "config": {
+    "nf4": true,
+    "double_quant": true,
+    "dtype": "float16",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "micro_batch_size": 1,
+    "gradient_checkpointing": true,
+    "use_reentrant": false,
+    "attention": "sdpa",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "seed": 42,
+    "cpu_offload": false,
+    "loss_mode": "completion",
+    "target_tokens": 256,
+    "memory_fraction": 0.8,
+    "grad_scaler_initial_scale": 1024
+  },
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "bitsandbytes": "0.48.1",
+    "accelerate": "1.10.1"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "capability": [
+      8,
+      6
+    ],
+    "total_bytes": 4294443008,
+    "free_before_load": 3455791924
+  },
+  "fixture_sha256": "60c3671e2b8fbfedf74fc0574c0df5608dc1ff4e3a40303fedc0eb131a100644",
+  "load_seconds": 5.189626399951521,
+  "trainable_parameters": 1089536,
+  "device_map": {
+    "": "0"
+  },
+  "supervised_tokens": 256,
+  "last_loss_before_backward": 0.12197661399841309,
+  "peak_torch_allocated_bytes": 2954099200,
+  "peak_torch_reserved_bytes": 3246391296,
+  "free_after_steps": 169554740,
+  "process_memory": {
+    "rss": 1870180352,
+    "vms": 7279054848,
+    "num_page_faults": 1320523,
+    "peak_wset": 3961610240,
+    "wset": 1870180352,
+    "peak_paged_pool": 21573936,
+    "paged_pool": 9534144,
+    "peak_nonpaged_pool": 109680,
+    "nonpaged_pool": 109680,
+    "pagefile": 7279054848,
+    "peak_pagefile": 9995087872,
+    "private": 7279054848
+  },
+  "adapter_path": "E:\\IPI-Training\\checkpoints\\technical-only-2048-10-completion-t256-v3",
+  "status": "passed_technical_only",
+  "code_sha256": {
+    "smoke_verifier_gpu.py": "7e5421c0d932410e1825e3bff3b34dfc19ed711f7a3f611079f3de2d155a27dd",
+    "verifier_collator.py": "594bf13412567aef5c9439241de5dbdcdb7fbfd7cd3f1cd40c644aaeaa79b478",
+    "audit_verifier_tokenizer.py": "90bb22dc2f4cb18ac168abe053f2bf87b1e295269b92a42ee3bd666488b42f9b",
+    "verifier_supervised_loss.py": "82254f7d8658f7370f86637e1a88d94cc17bdd05370da6713fd5a6a997a03e75"
+  },
+  "limitations": [
+    "Chỉ fixture kỹ thuật, không đo nhận diện IPI hoặc độ ổn định train dài.",
+    "Peak PyTorch không phải peak toàn GPU, không bao gồm mọi ứng dụng/driver."
+  ]
+}

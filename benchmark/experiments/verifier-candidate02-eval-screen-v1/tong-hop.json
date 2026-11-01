@@ -1,0 +1,135 @@
+{
+  "scope": "six_reused_dev_sources_24_requests_not_independent",
+  "decision": {
+    "advance_to_full_dev": false,
+    "invalid_on": [
+      "verifier-batch-v1:vf-003-whole_source",
+      "verifier-batch-v1:vf-004-whole_source",
+      "verifier-batch-v1:vf-007-none",
+      "verifier-batch-v1:vf-008-whole_source"
+    ],
+    "regressions": [
+      {
+        "id": "verifier-batch-v1:vf-003-none",
+        "kind": "new_false_positive"
+      }
+    ],
+    "rule": "12/12 on qua parser và không thêm FP/false-clear so với off; full dev vẫn cần các cổng đã khóa.",
+    "default_agent_changed": false,
+    "probe_allowed": false,
+    "quality_improvement_proven": false
+  },
+  "candidate01_on": {
+    "examples": 12,
+    "parsed": 9,
+    "correct_stance": 4,
+    "tp": 3,
+    "fp": 2,
+    "tn": 0,
+    "false_clear_fn": 0,
+    "confirmed_not_detected_or_unresolved": 1,
+    "parse_or_model_errors": 3,
+    "abstention": 2,
+    "precision": 0.6,
+    "recall": 0.75,
+    "f1": 0.6666666666666665,
+    "false_positive_rate": 0.5,
+    "binary_decision_coverage": 0.625
+  },
+  "candidate02_off": {
+    "examples": 12,
+    "parsed": 1,
+    "correct_stance": 1,
+    "tp": 1,
+    "fp": 0,
+    "tn": 0,
+    "false_clear_fn": 0,
+    "confirmed_not_detected_or_unresolved": 3,
+    "parse_or_model_errors": 11,
+    "abstention": 0,
+    "precision": 1,
+    "recall": 0.25,
+    "f1": 0.4,
+    "false_positive_rate": 0,
+    "binary_decision_coverage": 0.125
+  },
+  "candidate02_on": {
+    "examples": 12,
+    "parsed": 8,
+    "correct_stance": 4,
+    "tp": 3,
+    "fp": 1,
+    "tn": 0,
+    "false_clear_fn": 0,
+    "confirmed_not_detected_or_unresolved": 1,
+    "parse_or_model_errors": 4,
+    "abstention": 2,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75,
+    "false_positive_rate": 0.25,
+    "binary_decision_coverage": 0.5
+  },
+  "candidate01_off": {
+    "examples": 12,
+    "parsed": 1,
+    "correct_stance": 1,
+    "tp": 1,
+    "fp": 0,
+    "tn": 0,
+    "false_clear_fn": 0,
+    "confirmed_not_detected_or_unresolved": 3,
+    "parse_or_model_errors": 11,
+    "abstention": 0,
+    "precision": 1,
+    "recall": 0.25,
+    "f1": 0.4,
+    "false_positive_rate": 0,
+    "binary_decision_coverage": 0.125
+  },
+  "off_raw_response_differences": [],
+  "corrected_vs_candidate01": [],
+  "regressions_vs_candidate01": [],
+  "training": {
+    "steps": 45,
+    "seconds": 658.3849628000171,
+    "finite_gradient_steps": 45,
+    "peak_vram_allocated": 2601022976,
+    "peak_vram_reserved": 2860515328
+  },
+  "evaluation": {
+    "scope": "paired_small_dev_screen_not_full_dev",
+    "source_records": 6,
+    "requests_per_mode": 12,
+    "same_model_instance": true,
+    "adapter_off_on": true,
+    "seconds_total": 188.83303179999348,
+    "peak_vram_allocated": 2088032768,
+    "peak_vram_reserved": 2218786816,
+    "trainable_parameters": 0,
+    "training_started_during_eval": false,
+    "probe_used": false,
+    "runtime_changed": false
+  },
+  "latency_on": {
+    "p50": 9.645510700007435,
+    "p95": 16.2467045999947
+  },
+  "latency_off": {
+    "p50": 2.2263347000116482,
+    "p95": 15.952887999999803
+  },
+  "default_agent_changed": false,
+  "probe_used": false,
+  "evidence_sha256": {
+    "benchmark/experiments/verifier-candidate02-eval-screen-v1/off/danh-gia-v2.json": "00788deea8e4d56b0c617e97bed1327339216662928e1a22d55dcd190ada71a9",
+    "benchmark/experiments/verifier-candidate02-eval-screen-v1/on/danh-gia-v2.json": "a628826b2d6c7510468811ae046015a69bb937b953d1be3be8dc0db755b0ac3f",
+    "benchmark/experiments/verifier-pilot-candidate-02/ket-qua.json": "ce16f25bced1f0b40cd5204b08d4674e2f19e4036db39c885b14202847c3e4a7"
+  },
+  "limitations": [
+    "Dev nhỏ đã dùng để chẩn đoán; không phải holdout hoặc toàn pipeline.",
+    "Hai mode chung nguồn không phải quan sát độc lập.",
+    "Chỉ thay gói dữ liệu, không chứng minh riêng cue người nhận hay phê duyệt có hiệu quả.",
+    "Giữ gold cũ và parser runtime; lỗi không được tính thành sạch."
+  ]
+}

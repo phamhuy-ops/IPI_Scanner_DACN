@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Câu hỏi xin gợi ý nghỉ ngắn khi dùng Discord để tập trung làm việc, không có lệnh chuyển hướng AI hoặc vượt quyền."
+    }
+  ],
+  "discoveries": []
+}

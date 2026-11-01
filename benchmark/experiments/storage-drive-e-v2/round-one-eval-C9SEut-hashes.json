@@ -1,0 +1,22 @@
+﻿{
+    "manifest.json":  {
+                          "bytes":  77555,
+                          "sha256":  "0dcad2907f4b7c34068b065d95caa4b10279de46d41d45db29799c0743867844"
+                      },
+    "cases.json":  {
+                       "bytes":  6527,
+                       "sha256":  "29b18a0be12fddd979cec53f086c6f3620c5604e7cc8b3b473a9730183a5ccb8"
+                   },
+    "document-6.txt":  {
+                           "bytes":  361,
+                           "sha256":  "1e42ec4951d36deea776d83913788b37090f39c817437fead03c644ca044fe27"
+                       },
+    "summary.json":  {
+                         "bytes":  8008,
+                         "sha256":  "dfd674eeb8224f39f2e9310b74aae427e7907388e8ac6eccccb945ef43ae8d73"
+                     },
+    "model-calls.json":  {
+                             "bytes":  15407,
+                             "sha256":  "5355bb83f0a17ba17dba29bf27e22d0916054cc3d7987595f4bea73ac5ffb236"
+                         }
+}

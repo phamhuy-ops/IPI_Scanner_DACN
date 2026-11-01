@@ -1,4 +1,4 @@
-import { AssessmentStance, EvidenceAssessment, ScanResult } from '../../../types';
+import { AssessmentStance, EvidenceAssessment, IpiBatchReviewSummary, ScanResult } from '../../../types';
 
 export interface SemanticChunk {
   chunkId: string;
@@ -16,6 +16,18 @@ export interface SemanticChunk {
 }
 
 export type SemanticCoverage = NonNullable<ScanResult['metadata']['coverage']>;
+
+export interface ReviewedBatch {
+  chunkIds: string[];
+  model: string;
+  audit?: IpiBatchReviewSummary;
+}
+
+export interface FailedBatch extends ReviewedBatch {
+  recoveryScheduled?: boolean;
+  error: unknown;
+  durationMs: number;
+}
 
 export interface ModelAssessment {
   id: string;

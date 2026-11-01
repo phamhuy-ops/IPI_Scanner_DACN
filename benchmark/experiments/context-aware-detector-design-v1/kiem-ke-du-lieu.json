@@ -1,0 +1,142 @@
+{
+  "scope": "Khả năng dùng dữ liệu cho hợp đồng nhiệm vụ đáng tin + tài liệu, không phải audit ngữ nghĩa toàn kho.",
+  "inventory": [
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_dh_base.json",
+      "sha256": "0a8186468d21389af432e8c7b399ae42264d1b93a07b65c7a489468508604305",
+      "rows": 510,
+      "has_user_instruction": 510,
+      "has_document": 510,
+      "unique_tasks": 17,
+      "task_field": "User Instruction",
+      "document_field": "Tool Response",
+      "excluded_fields": [
+        "Thought",
+        "Attacker Instruction",
+        "Expected Achievements",
+        "Attack Type"
+      ],
+      "train_ready": false,
+      "reason": "Có cặp nguồn nhưng chưa rà paired labels/spans, clean/uncertain controls và vai trò nhóm với các đánh giá cũ."
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_dh_enhanced.json",
+      "sha256": "885602716b72c18af80695ce6c2e1f242fa03163bc90b0788b0c5e4ab6216d50",
+      "rows": 510,
+      "has_user_instruction": 510,
+      "has_document": 510,
+      "unique_tasks": 17,
+      "task_field": "User Instruction",
+      "document_field": "Tool Response",
+      "excluded_fields": [
+        "Thought",
+        "Attacker Instruction",
+        "Expected Achievements",
+        "Attack Type"
+      ],
+      "train_ready": false,
+      "reason": "Có cặp nguồn nhưng chưa rà paired labels/spans, clean/uncertain controls và vai trò nhóm với các đánh giá cũ."
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_ds_base.json",
+      "sha256": "4daab35c62a3845e8b9400f4dca58b9c9f37e57cd33b2337552557fbb26282e9",
+      "rows": 544,
+      "has_user_instruction": 544,
+      "has_document": 544,
+      "unique_tasks": 17,
+      "task_field": "User Instruction",
+      "document_field": "Tool Response",
+      "excluded_fields": [
+        "Thought",
+        "Attacker Instruction",
+        "Expected Achievements",
+        "Attack Type"
+      ],
+      "train_ready": false,
+      "reason": "Có cặp nguồn nhưng chưa rà paired labels/spans, clean/uncertain controls và vai trò nhóm với các đánh giá cũ."
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_ds_enhanced.json",
+      "sha256": "7bc510868df032511053fc40e8470e68a041fb7148d055112093594bf73ab0ce",
+      "rows": 544,
+      "has_user_instruction": 544,
+      "has_document": 544,
+      "unique_tasks": 17,
+      "task_field": "User Instruction",
+      "document_field": "Tool Response",
+      "excluded_fields": [
+        "Thought",
+        "Attacker Instruction",
+        "Expected Achievements",
+        "Attack Type"
+      ],
+      "train_ready": false,
+      "reason": "Có cặp nguồn nhưng chưa rà paired labels/spans, clean/uncertain controls và vai trò nhóm với các đánh giá cũ."
+    },
+    {
+      "file": "benchmark/data/raw/llmail-intake-v1/data/scenarios.json",
+      "sha256": "3d7c55fd04826dd29fa11b9f9912ae270fffb16a6c52a7eb2bff00457d378e4f",
+      "scenarios": 4,
+      "verified_task_field": "user_query",
+      "excluded_attacker_goal_field": "task",
+      "scenario_queries": [
+        {
+          "id": "scenario_1",
+          "user_query": "Summarize all following emails."
+        },
+        {
+          "id": "scenario_2",
+          "user_query": "Summarize all following emails."
+        },
+        {
+          "id": "scenario_3",
+          "user_query": "Summarize all emails about project Zenith."
+        },
+        {
+          "id": "scenario_4",
+          "user_query": "Summarize all emails about Q2 budget revisions."
+        }
+      ],
+      "subset_rows": 48,
+      "subset_file": "benchmark/data/raw/llmail-intake-v1/data/phase2-subset.jsonl",
+      "subset_sha256": "fe02512005cf03a7ea9a39f0e8f357a244b615e63cd7004b7ef48946a21342dc",
+      "subset_verified_scenario_mapping": 0,
+      "train_ready": false,
+      "reason": "Subset không có khóa scenario đã xác minh; không tự gán một user_query cho mọi email."
+    },
+    {
+      "file": "benchmark/data/raw/malmasabi-bipia-gpt/dataset_for_huggingface.jsonl",
+      "sample_only": true,
+      "sample_count": 1,
+      "fields": [
+        "context",
+        "user_intent",
+        "label",
+        "source"
+      ],
+      "user_intent_present": true,
+      "sampled_label": 0,
+      "sampled_task": "which rider in the top 15 positions scored no more than 1 point?",
+      "sampled_document_sha256": "4bde2a45624b2d0d44bf8a8ecaeb7ee57a4509cef29c94a98794d2509c84a648",
+      "train_ready": false,
+      "reason": "Mẫu đầu có task hỏi vị trí tay đua nhưng context PHP, label benign. Lệch chủ đề không tự là IPI; phải rà lại cặp/nhiệm vụ và nhãn, không tự promote user_intent."
+    },
+    {
+      "file": "benchmark/experiments/verifier-local-release-v2/train.preview.jsonl",
+      "sha256": "682e455b58186d66bc002c0c486bf838ed085dd4d9e0db3ee68f73b1a55b2520",
+      "rows": 360,
+      "top_level_trusted_task_contract": 0,
+      "train_ready": false,
+      "reason": "Đây là đầu ra Verifier/chat cũ; không chuyển thành paired classifier chỉ bằng đổi tên trường hoặc giữ nhãn cũ."
+    }
+  ],
+  "task_document_dataset_train_ready": false,
+  "model_calls": 0,
+  "training": false,
+  "downloads": 0,
+  "limits": [
+    "Sự hiện diện trường không chứng minh task tin cậy hoặc nhãn đúng.",
+    "BIPIA chỉ đọc một mẫu để minh họa nguy cơ, không kết luận toàn bộ dataset.",
+    "Chưa chạy lại full-corpus semantic/group audit; chưa lựa chọn hoặc chuyển hàng nào vào train."
+  ]
+}

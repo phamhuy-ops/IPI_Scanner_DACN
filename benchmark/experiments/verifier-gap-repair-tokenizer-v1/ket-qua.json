@@ -1,0 +1,242 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "offline": true,
+  "sources": 6,
+  "examples": 12,
+  "mask_valid": 12,
+  "token_min": 1208,
+  "token_max": 1509,
+  "over_budget": {
+    "1024": 12,
+    "1536": 0,
+    "2048": 0
+  },
+  "mask_method": "verified_token_prefix_JSON_and_EOS; prompt/header/trailing_newline/padding=-100",
+  "no_truncation": true,
+  "rows": [
+    {
+      "id": "gap-004-whole_source",
+      "source_record_id": "gap-004",
+      "group_id": "cg-c8e3c3524633ea88",
+      "mode": "whole_source",
+      "window_id": "context-window-1",
+      "tokens": 1269,
+      "prompt_masked": 1185,
+      "loss_tokens": 83,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-004-none",
+      "source_record_id": "gap-004",
+      "group_id": "cg-c8e3c3524633ea88",
+      "mode": "none",
+      "window_id": "context-window-1",
+      "tokens": 1240,
+      "prompt_masked": 1165,
+      "loss_tokens": 74,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-005-whole_source",
+      "source_record_id": "gap-005",
+      "group_id": "cg-c8e3c3524633ea88",
+      "mode": "whole_source",
+      "window_id": "context-window-1",
+      "tokens": 1306,
+      "prompt_masked": 1216,
+      "loss_tokens": 89,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-005-none",
+      "source_record_id": "gap-005",
+      "group_id": "cg-c8e3c3524633ea88",
+      "mode": "none",
+      "window_id": "context-window-1",
+      "tokens": 1208,
+      "prompt_masked": 1196,
+      "loss_tokens": 11,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-006-whole_source",
+      "source_record_id": "gap-006",
+      "group_id": "cg-c8e3c3524633ea88",
+      "mode": "whole_source",
+      "window_id": "context-window-1",
+      "tokens": 1238,
+      "prompt_masked": 1149,
+      "loss_tokens": 88,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-006-none",
+      "source_record_id": "gap-006",
+      "group_id": "cg-c8e3c3524633ea88",
+      "mode": "none",
+      "window_id": "context-window-1",
+      "tokens": 1209,
+      "prompt_masked": 1129,
+      "loss_tokens": 79,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-013-whole_source",
+      "source_record_id": "gap-013",
+      "group_id": "cg-a3a99a1400d9f9c4",
+      "mode": "whole_source",
+      "window_id": "context-window-1",
+      "tokens": 1434,
+      "prompt_masked": 1351,
+      "loss_tokens": 82,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-013-none",
+      "source_record_id": "gap-013",
+      "group_id": "cg-a3a99a1400d9f9c4",
+      "mode": "none",
+      "window_id": "context-window-1",
+      "tokens": 1405,
+      "prompt_masked": 1331,
+      "loss_tokens": 73,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-014-whole_source",
+      "source_record_id": "gap-014",
+      "group_id": "cg-a3a99a1400d9f9c4",
+      "mode": "whole_source",
+      "window_id": "context-window-1",
+      "tokens": 1509,
+      "prompt_masked": 1420,
+      "loss_tokens": 88,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-014-none",
+      "source_record_id": "gap-014",
+      "group_id": "cg-a3a99a1400d9f9c4",
+      "mode": "none",
+      "window_id": "context-window-1",
+      "tokens": 1412,
+      "prompt_masked": 1400,
+      "loss_tokens": 11,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-015-whole_source",
+      "source_record_id": "gap-015",
+      "group_id": "cg-a3a99a1400d9f9c4",
+      "mode": "whole_source",
+      "window_id": "context-window-1",
+      "tokens": 1386,
+      "prompt_masked": 1297,
+      "loss_tokens": 88,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    },
+    {
+      "id": "gap-015-none",
+      "source_record_id": "gap-015",
+      "group_id": "cg-a3a99a1400d9f9c4",
+      "mode": "none",
+      "window_id": "context-window-1",
+      "tokens": 1357,
+      "prompt_masked": 1277,
+      "loss_tokens": 79,
+      "mask_valid": true,
+      "fits_1024": false,
+      "fits_1536": true,
+      "fits_2048": true
+    }
+  ],
+  "text_lengths": [
+    {
+      "id": "gap-004",
+      "full_text_tokens_without_prompt": 2777,
+      "selected_text_tokens_without_prompt": 125
+    },
+    {
+      "id": "gap-005",
+      "full_text_tokens_without_prompt": 2787,
+      "selected_text_tokens_without_prompt": 135
+    },
+    {
+      "id": "gap-006",
+      "full_text_tokens_without_prompt": 2765,
+      "selected_text_tokens_without_prompt": 113
+    },
+    {
+      "id": "gap-013",
+      "full_text_tokens_without_prompt": 4006,
+      "selected_text_tokens_without_prompt": 179
+    },
+    {
+      "id": "gap-014",
+      "full_text_tokens_without_prompt": 4029,
+      "selected_text_tokens_without_prompt": 202
+    },
+    {
+      "id": "gap-015",
+      "full_text_tokens_without_prompt": 3988,
+      "selected_text_tokens_without_prompt": 161
+    }
+  ],
+  "input_sha256": {
+    "manifest.json": "8a6766b3b983f2b8ab0996d1f8d8c243a7a8026120f0029cdc8d1aa066b7fd6e",
+    "ban-xem-truoc.json": "ea450070005c0d2b97494c12bc843ff880bd8e0d1be115ebec1f730d5365fec9",
+    "nhan-va-cua-so.jsonl": "0f89a1af84cc76cfe8a2fadc3b05b1ad7db74449646d66371e96f7fb625830ca"
+  },
+  "code_sha256": {
+    "audit_verifier_gap_repair_tokens.py": "132f08b1c3b9cdedf0df7d8967cb078c47aeadbfa7e6c27293dc59b76385ba2c",
+    "audit_verifier_tokenizer.py": "90bb22dc2f4cb18ac168abe053f2bf87b1e295269b92a42ee3bd666488b42f9b"
+  },
+  "versions": {
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2",
+    "jinja2": "3.1.6"
+  },
+  "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "training_ready": false,
+  "runtime_changed": false,
+  "weights_downloaded": false,
+  "limitations": [
+    "Chỉ bản xem trước; chưa kiểm tra collator/backend hoặc bộ nhớ GPU.",
+    "Mask hợp lệ không xác nhận ngữ nghĩa cửa sổ; chưa có đánh giá model/pipeline mới.",
+    "Các mức 1536/2048 chỉ dùng thống kê, không đổi max sequence đã đề xuất."
+  ]
+}

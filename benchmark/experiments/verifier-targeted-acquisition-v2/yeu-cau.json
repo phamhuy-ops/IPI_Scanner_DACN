@@ -1,0 +1,26 @@
+{
+  "registry": "benchmark/experiments/verifier-eligibility-v11/ket-qua.json",
+  "registry_sha256": "a05d1990dd484d704b9f37c4ced0caf7015f4cda49c3c7ec09d62c4ad8e7800a",
+  "candidate_records": 218,
+  "stances": {
+    "confirmed": 74,
+    "dismissed": 102,
+    "uncertain": 42
+  },
+  "languages": {
+    "vi": 104,
+    "en": 111,
+    "en-vi": 3
+  },
+  "total_count_lower_bound": 22,
+  "planning_only_stance_gaps": {
+    "confirmed": 22,
+    "dismissed": 0,
+    "uncertain": 6
+  },
+  "planning_stance_gap_total": 28,
+  "vietnamese_count_gap": 0,
+  "note": "Ưu tiên bổ sung confirmed/uncertain ở nhóm mới và kiểm tra khả năng chia theo nhóm. Tổng thiếu ít nhất 22 bản; nếu giữ kịch bản tỷ lệ 40/40/20 thì thiếu 22 confirmed và 6 uncertain (28 bản), không loại đối chứng để làm đẹp tỷ lệ. Tiếng Việt đạt số lượng tham chiếu nhưng chưa chứng minh chất lượng; holdout độc lập còn riêng.",
+  "training_ready": false,
+  "independent_holdout_verified": 0
+}

@@ -1,0 +1,22 @@
+{
+  "counts": {
+    "confirmed": {
+      "source_records": 72,
+      "examples": 144,
+      "supervised_tokens": 12820
+    },
+    "dismissed": {
+      "source_records": 72,
+      "examples": 144,
+      "supervised_tokens": 7191
+    },
+    "uncertain": {
+      "source_records": 36,
+      "examples": 72,
+      "supervised_tokens": 6367
+    }
+  },
+  "loss_policy": "Token-normalized completion-only đã khóa; chỉ ghi phân bố, không đổi trọng số trong lượt đang chạy.",
+  "note": "Số mẫu cân bằng không làm số token có loss cân bằng; chưa chứng minh đây là nguyên nhân báo nhầm hoặc bỏ sót.",
+  "training_configuration_changed": false
+}

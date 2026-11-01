@@ -1,0 +1,65 @@
+{
+  "records": 30,
+  "source_parents": 24,
+  "labels": {
+    "confirmed": 12,
+    "dismissed": 12,
+    "uncertain": 6
+  },
+  "languages": {
+    "en": 30
+  },
+  "reviewer": "Codex (AI)",
+  "review_status": "ai_reviewed_not_human_reviewed",
+  "setup": "text_only_no_user_intent",
+  "contract_examples": 60,
+  "parser_valid": 60,
+  "training_ready": false,
+  "final_split_created": false,
+  "independent": false,
+  "snapshot_sha256": "8cd26914e2b3df095512a7c3b2d81066bf81dc85a27d4c2bba3ab1d34dc88606",
+  "code_sha256": {
+    "scripts/prepare-external-ai-batch.cjs": "89cdd8b6405b4fb29f4780425335586f4ef220f7c5285fc4cec0b6c32c7ae1d7",
+    "scripts/verifier-batch-renderer.ts": "804bc01e9cc4175ab4213794deb11ca35ecac1ff948e42ca8bfff22d243db5a2"
+  },
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "90d350b141c6075592950b953ee748083733349ff7d6315da6f70660622d8a96",
+    "nhan-va-cua-so.jsonl": "90d350b141c6075592950b953ee748083733349ff7d6315da6f70660622d8a96",
+    "ban-xem-truoc.json": "a4a42deb1148caa89b1613ece0170afbc7ac5e10ad216ba9c356243fb34098a8",
+    "van-ban/ext3-001.txt": "adc3ed312770c9c10db2f7f5d85c2977a6f3beb390cb7a370070029e879ae7e1",
+    "van-ban/ext3-002.txt": "7b20e511cc706dfbe0edb1bedaa9575c9349b861f9fae6fff1acf7b7ae8fa098",
+    "van-ban/ext3-003.txt": "9ae502beb2c372a1b88508c363894c8e5a4c8fc483104eeff49daaa0be239350",
+    "van-ban/ext3-004.txt": "6de1fc9f4c1bfca9350e7610bc178eb73920e9a0e33d20d447a1da202217e375",
+    "van-ban/ext3-005.txt": "2b53b909b295e9ee923c5f5e2354d9e8371da27384f5e2e7bfc557933263c2e4",
+    "van-ban/ext3-006.txt": "424575e41073c9dc756ad2037d54a032a4836ac69344e2a9dbd47eafda6979c8",
+    "van-ban/ext3-007.txt": "4c6708874f72e578882bc1d762d415cd4bdea1f0cef93994fbe055471e6302f5",
+    "van-ban/ext3-008.txt": "d2a6e58d8e04b2e75bf51caf8f85612f32e6800c2f06cf1365183dfd3fc2fa45",
+    "van-ban/ext3-009.txt": "6522ceeb5503de32c262580e4fa3030527da1548d4113412b9493483bcca6442",
+    "van-ban/ext3-010.txt": "c413561b1398801b511c3b4352072328f62130b3048a9a59009df3ba8269b23d",
+    "van-ban/ext3-011.txt": "60f2f670bcf6a5acd1f580bc25f6212c2b45a46b287bae8335a429227afcded0",
+    "van-ban/ext3-012.txt": "fc8b5596dc7d990ae4d48936edaa969c43ed277ce2790308d2c56157c646f8c9",
+    "van-ban/ext3-013.txt": "b08d9e2501acf91ecb4622b9dd491cfb02c70bbd9d366f8f3e6f28705a3c2c3c",
+    "van-ban/ext3-014.txt": "a0a2d3b0779ed9674913f7c9c6c23900c677a0adf2b56f3b22b79f85fe5ba1fa",
+    "van-ban/ext3-015.txt": "fe35f151c5210ba359a8ebbb0f2e3cab485f29b1137ba104527261d62705cced",
+    "van-ban/ext3-016.txt": "101c4c81fc424a1c709e40197cf498cdbafc11a6d70b38fff2545ce179b19b41",
+    "van-ban/ext3-017.txt": "6c0b49301d10fb45850d0db1327bdabe47192d417f4405d6cd49bee595a0f171",
+    "van-ban/ext3-018.txt": "a56fe66c8d17785b59067d0294b6100cd90d9b21366439667f2e258b196e038a",
+    "van-ban/ext3-019.txt": "a5d88b76f3febf5d29a8fcb5848ef9a9538e80bd5e909fd101462b3352fe6025",
+    "van-ban/ext3-020.txt": "065a4c2d1fa18fb22fd53e0d4bfda2ac427c1f4da2b06246ac9b7a1fb5033b3c",
+    "van-ban/ext3-021.txt": "754a027aa681c430326724b444f86bd0a3e7daa8ce074cb1c7d6bdaeb383b517",
+    "van-ban/ext3-022.txt": "10b9f0aa7378f9d72c95bf0d7472d5c6bcd399c37709379b738dd44b9fdf95cf",
+    "van-ban/ext3-023.txt": "1e1ea06e295a05f182df67b71b877c9d643db87968374bbdc5a62d5beff6c148",
+    "van-ban/ext3-024.txt": "58b400a06ef246c66011560e1299afa1cdb28b4a7eb1c7c3d59fe9d33dad6ed4",
+    "van-ban/ext3-025.txt": "52be4b5578d40779eb509bb71e32211671fd09ce4e2ee2c7f5c69140a0e0ecf4",
+    "van-ban/ext3-026.txt": "15faee8799aa4c9c0a60425a6db7734d735bd1bf968ff878b5678d7d2a8260ae",
+    "van-ban/ext3-027.txt": "f734857881811d935e7e45df1cb9bda16da27d0cb274b5606f3183ae4e7f4fe0",
+    "van-ban/ext3-028.txt": "0ed61c89078cfd827bc92c3d9eee516cf274c10879545fcc262965f1ae4868ba",
+    "van-ban/ext3-029.txt": "ad654ea0f63adcbc6ee46f140246dd3cfdace0159bc1cc8d5a349f16609336fd",
+    "van-ban/ext3-030.txt": "fab0f062c72150b9e25c010d44cfcb7ebb618f59567c2f461045ced6e88eebbb"
+  },
+  "limitations": [
+    "12 enhanced có cùng tiền tố chuyển hướng: không đại diện tấn công tinh vi hoặc nhóm độc lập.",
+    "6 uncertain là nhãn ngữ cảnh text-only, không phải đổi ground truth benchmark gốc.",
+    "Chưa token/mask/overlap khi tạo manifest; xem audit tiếp theo. Tất cả dùng dev, không holdout."
+  ]
+}

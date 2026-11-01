@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "counts": {
+    "total": 15,
+    "accepted": 14,
+    "revised": 1,
+    "pending": 0,
+    "parser_valid": 15,
+    "labels": {
+      "malicious": 5,
+      "uncertain": 5,
+      "benign": 5
+    },
+    "languages": {
+      "vi": 15
+    },
+    "groups": 5
+  },
+  "errors": [],
+  "structurally_valid": true,
+  "human_review_complete": true,
+  "fine_tuning_ready": false,
+  "training_export_created": false,
+  "sha256": {
+    "mau-cho-duyet.jsonl": "630a45deef539dbf5a14b536d4cc12af6fc9b061357e15660f200233e01db5e5",
+    "ket-qua-ra-soat.json": "e741cff1e27e0b135b3e6ec4e66e5c81a98b099df25a70073a7a5214f362448d",
+    "manifest.json": "114d012f8161102b4da4a54d268136b17025156b63eb1952ed72441033913504"
+  },
+  "review_scope": "Một người dùng rà soát trong cuộc trò chuyện có hướng dẫn của AI, đã trình bày toàn bộ nguồn từng mẫu; chưa đánh giá đa người gán nhãn.",
+  "limitations": [
+    "15 mẫu ngắn tự soạn thuộc 5 nhóm, không phải nguồn độc lập hoặc holdout.",
+    "Nguồn/nháp giữ nguyên; đáp án sửa chỉ lưu tại final_annotation/final_response.",
+    "Manifest gốc và validation trong hàng nháp là snapshot trước duyệt, không phải trạng thái cuối.",
+    "Chưa chia tập, chưa rà gần trùng toàn kho, chưa tokenizer/mask audit và chưa huấn luyện.",
+    "Parser hợp lệ không chứng minh model nhận diện tốt; chưa thay đổi runtime."
+  ]
+}

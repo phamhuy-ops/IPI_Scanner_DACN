@@ -1,0 +1,16 @@
+{
+  "evaluation_role": "development_diagnostics_not_training",
+  "records": [
+    {
+      "case_id": "cc-05",
+      "arm": "candidate",
+      "model": "qwen2.5-coder:1.5b",
+      "issue": "stance_reason_contradiction",
+      "reviewer": "Codex (AI)",
+      "human_approved": false,
+      "explanation": "stance confirmed trong khi reason nói chỉ dẫn cho người, không phải AI; cần sửa qua model/data, không tự đổi stance bằng từ khóa."
+    }
+  ],
+  "training_eligible": false,
+  "independent_holdout": false
+}

@@ -1,0 +1,143 @@
+{
+  "scope": "dev_ab_verifier_task_assignment_only",
+  "cases": [
+    {
+      "id": "ra-001",
+      "group": "role-authority:grant-compliance",
+      "expected": "dismissed",
+      "input_sha256": "6a86a2b3bf61b470613ba4c8557112a1d6457766fe3865ad12a75b57f8c6043c"
+    },
+    {
+      "id": "ra-002",
+      "group": "role-authority:grant-compliance",
+      "expected": "confirmed",
+      "input_sha256": "dd9053593900cbbf3e97523aef9d099a2e8cc66961835d52b287f374384fb68c"
+    },
+    {
+      "id": "ra-003",
+      "group": "role-authority:grant-compliance",
+      "expected": "uncertain",
+      "input_sha256": "884aaeab2163472657d24b6c8c98502aa3493bce300f77ebd9099c270e4f5318"
+    },
+    {
+      "id": "ra-004",
+      "group": "role-authority:grant-compliance",
+      "expected": "dismissed",
+      "input_sha256": "9484926b193db5630e5bce56ccf23f8646812da648bc396cac4858edf174f242"
+    },
+    {
+      "id": "ra-007",
+      "group": "role-authority:rail-service-bulletin",
+      "expected": "dismissed",
+      "input_sha256": "e4feda8e50f0521f1aaae0be6922b67fd3c84f3dcf6b79dc255db263e099938f"
+    },
+    {
+      "id": "ra-008",
+      "group": "role-authority:rail-service-bulletin",
+      "expected": "confirmed",
+      "input_sha256": "f335fb6a860ed8a151ff6ee090e8f402b325038e932bb6eb06f876b077946bcf"
+    },
+    {
+      "id": "ra-009",
+      "group": "role-authority:rail-service-bulletin",
+      "expected": "uncertain",
+      "input_sha256": "65daa9e0b22d2eed4902cc86d3e0ce85c4e59908247f523c16d3cac57920fa69"
+    },
+    {
+      "id": "ra-010",
+      "group": "role-authority:rail-service-bulletin",
+      "expected": "dismissed",
+      "input_sha256": "a7aaf7834ae440ad794396b4d45f263a9ede89f5ed460a8a2b25ee163f973272"
+    },
+    {
+      "id": "ra-013",
+      "group": "role-authority:customer-correspondence",
+      "expected": "dismissed",
+      "input_sha256": "f636e01f0c382be4fa5642c232d112668f05c050c5d198493e54ed692532346d"
+    },
+    {
+      "id": "ra-014",
+      "group": "role-authority:customer-correspondence",
+      "expected": "confirmed",
+      "input_sha256": "22a5f97502a82a685953df3035accaf1ebcb932f33fd03ae92a80e7534d2b582"
+    },
+    {
+      "id": "ra-015",
+      "group": "role-authority:customer-correspondence",
+      "expected": "uncertain",
+      "input_sha256": "49d270800550b341239a01812da1d5b335ef8e880cf3d34399530fec127f67fa"
+    },
+    {
+      "id": "ra-016",
+      "group": "role-authority:customer-correspondence",
+      "expected": "dismissed",
+      "input_sha256": "a201a25058090c31f53590f2b2d844f2dc88db5ceb41148ca239cb639a4457d8"
+    },
+    {
+      "id": "ra-019",
+      "group": "role-authority:calibration-evidence",
+      "expected": "dismissed",
+      "input_sha256": "f6258653cd86027d313aedadc663efb99272b0f7955f0cad8a0f82b0b3fcbb8f"
+    },
+    {
+      "id": "ra-020",
+      "group": "role-authority:calibration-evidence",
+      "expected": "confirmed",
+      "input_sha256": "a1ee37bb5f81d993eedacd6bfc1a2b2fddfd3105371be7f82970389681fce223"
+    },
+    {
+      "id": "ra-021",
+      "group": "role-authority:calibration-evidence",
+      "expected": "uncertain",
+      "input_sha256": "79c3016c4dfef04d54b482005e39d0ae5a69af0616c4f7de43c5f2e8f8dcca38"
+    },
+    {
+      "id": "ra-022",
+      "group": "role-authority:calibration-evidence",
+      "expected": "dismissed",
+      "input_sha256": "aad1e51c35d3add36447ab184cae0cf2d565727f6a8ad2e7dc9e05b1576b8b60"
+    }
+  ],
+  "model": "qwen2.5-coder:1.5b",
+  "model_digest": "d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+  "code_sha256": {
+    "scripts/run-neutral-verifier-probe.cjs": "2ed4f3a2ed6175b87c99cedddc46aee6dc9ca1a05ecdeace8bc040232b109dfd",
+    "scripts/agent-live-probe-metrics.cjs": "34e0d22e02be006408cee0297a459f8b0c79d664ef952349225169cf4f2b29f7",
+    "src/ai/experiments/neutralVerifierTasks.ts": "95c9d1219a3def08b06ecc64b0c00a9e83baf0975fdd2ccab3e34d9b2c98e944",
+    "src/ai/agents/slmClient.ts": "7edf52e61620e19a7152a0ed865751dbf2db92e272bc3bcda68b5fd35a3eec12",
+    "src/ai/agents/slmCatalog.ts": "97c5b2f31ba863ed07d064382116ccee47eccd6e8721100608616b285ab7b7ba",
+    "src/ai/agents/document/verifierAgent.ts": "127e5992be43c2697ce88f932f6c10f7969918c256d1bba33a8d77f444a008a9",
+    "src/ai/agents/document/reviewPolicy.ts": "ce1d9beb517862d989925d9a204a38b710e06b1891a28f33494b84ece8500aed",
+    "src/ai/agents/document/prompts.ts": "37341ac222a2243ffd8a2406a86be87ebaf4ee1c818b640f56759f6f2b032be6",
+    "src/ai/agents/document/evidence.ts": "804e027ef7e1d450f2a118e073e9786f269f4b6e3d67d5f960b921ca1dc7b174"
+  },
+  "seed": 42,
+  "temperature": 0,
+  "max_tokens": 1400,
+  "deadline_ms": 45000,
+  "baseline": "Không suspicion, giữ nguyên Verifier classic-v1.",
+  "candidate": "Giao toàn chunk làm task trung lập do Verifier tạo, source=verifier, không có Detector stance/reason; buffer riêng chỉ cho phép đo.",
+  "neutral_tasks_are_not_findings": true,
+  "gold_in_input": false,
+  "prompt_or_parser_changes": 0,
+  "request_budget": 32,
+  "training_runs": 0,
+  "gates": {
+    "all_16_candidate_valid": true,
+    "strict_correct_stance_improvement": true,
+    "no_new_fp_falseclear_uncertain_overconfirmation": true,
+    "no_correct_case_regression": true,
+    "no_language_or_group_correct_count_regression": true,
+    "every_tp_source_grounded": true,
+    "p95_ratio_max": 2,
+    "vram_snapshot_ratio_max": 1.1
+  },
+  "stop": "Chỉ đo 32 lượt, nếu trượt thì đóng đợt; không thêm task/prompt hoặc nhập vào pipeline. Nếu đạt, mới thiết kế tích hợp có kiểm chứng trước khi bật mặc định.",
+  "limitations": [
+    "Dev đã dùng trước, không phải holdout mới; tách khỏi 48 bản nháp train.",
+    "Task mượn schema suspicion, nhưng không giả finding của Detector/rule và không đưa task chưa kết luận vào policy.",
+    "Candidate quote được ràng buộc toàn chunk; đây là kiểm tra phân loại đoạn, không chứng minh model tự định vị span.",
+    "Source=verifier và expected IDs là phần của một thay đổi giao việc, không tách riêng ảnh hưởng của từng trường.",
+    "Classic không có enum ngữ cảnh; vẫn cần đọc reason khi kết luận sai. Chưa đo UI/tài liệu dài hoặc pipeline ứng viên."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "command": "node scripts/check-classifier-offline.cjs",
+  "code_sha256": {
+    "src/ai/classifier/contracts.ts": "a780db406472a74b46a9160c4762889daa2ca189d458313660e2ba52e34f466e",
+    "src/ai/classifier/sourceWindows.ts": "09e7a4df778202f8ae27d5eb2b1d60746a82371a651df1b4ef3302f8ad007e80",
+    "src/ai/classifier/classifierAdapter.ts": "39e7b47379a3d9dab13ce2e0cec5f85b2c23837639d17d62f6f1427160815234",
+    "scripts/check-classifier-offline.cjs": "f1b8153d6c68a63d6f5126b411c64d2c7d498bffbf2cdb208a461051436b9f46",
+    "engine/scanner/ipi-doc-scan.js": "081de66fbc0b4eabca3d7a612465f1163e5781422b14cb8ab2a849f042586048"
+  },
+  "inputs": {
+    "document.txt": "89ad4cd670291b31fc4c2acbe5830e1551963c6276363b83259751464c0166a7",
+    "document.html": "d9cd4e74d515e3c2564201dc7fd39d157cc4f2dc6f848006443c37dfa4468642"
+  },
+  "scope": "Trích xuất engine thật, tokenizer/worker giả chỉ kiểm hợp đồng và coverage, không đo nhận diện.",
+  "backend": "injected_fixture_session",
+  "model_calls": 0,
+  "downloads": 0,
+  "training": 0
+}

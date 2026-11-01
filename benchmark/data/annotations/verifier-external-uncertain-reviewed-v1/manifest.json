@@ -1,0 +1,35 @@
+{
+  "version": "verifier-external-uncertain-reviewed-v1",
+  "records": 18,
+  "replaced_records": 18,
+  "new_records": 0,
+  "framing_revisions": 17,
+  "stance_changes": 0,
+  "model_inputs_unchanged": true,
+  "parser_valid": 36,
+  "source_texts_unchanged": true,
+  "training_ready": false,
+  "model_called": false,
+  "inputs_sha256": {
+    "benchmark/data/annotations/verifier-external-ai-v1/mau-cho-duyet.jsonl": "90d350b141c6075592950b953ee748083733349ff7d6315da6f70660622d8a96",
+    "benchmark/data/annotations/verifier-vietnamese-articles-v1/mau-cho-duyet.jsonl": "59c63de518ba81099608dc260a876853e3aca75bb31c240cb4a3d9db6b6a0d7f",
+    "benchmark/data/annotations/verifier-external-context-v1/mau-cho-duyet.jsonl": "e140d7eab0c94e7721af9b67ac596e2d7024c594f82e5e4aa9e9464757956396",
+    "benchmark/data/annotations/verifier-llmail-expansion-v1/mau-cho-duyet.jsonl": "a99e4b4dd3a2c8731158f786fce078b7c5921ae874c7617c8844a0cd29f8c00e",
+    "benchmark/experiments/verifier-eligibility-v8/registry.jsonl": "354103ef73720a964afb35cd995e96f036d648c706b92130ac4db114b5d45094"
+  },
+  "code_sha256": {
+    "scripts/review-verifier-external-uncertain.cjs": "71b00e1f7a13acd452af5300f17df5ff950e314eb6ba89b52681adcb945aba82",
+    "scripts/verifier-batch-renderer.ts": "d66db4a967344570e6541996f2432e42324fd43d72077e065e6c8ec126feafab"
+  },
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "d3511f9a116106e954264289e08e8c1982dfada306574244942c9ae087fdf5f1",
+    "danh-gia-ai.json": "3eb16745f144fdde5bd065a1155b77d6c3b6fc1d73ee4cee9634bc10613e46af",
+    "ban-xem-truoc.json": "a6ad7e9758be3a12d36cebe16854970d30b3de96599770f6450b063d4438942a"
+  },
+  "limitations": [
+    "12 snippet InjecAgent cùng một nhóm lớn; không coi là 12 nguồn độc lập.",
+    "5 mẫu Wikipedia là nền bài nguồn ngoài với câu chèn tự soạn; không gọi là tấn công thu thập ngoài thực tế.",
+    "1 LLMail mã hóa giữ nguyên văn bản; không thêm nội dung giải mã vào model input.",
+    "AI tự rà, chưa phải gán nhãn mù hoặc kiểm chứng độc lập; không tự cấp quyền train từ license."
+  ]
+}

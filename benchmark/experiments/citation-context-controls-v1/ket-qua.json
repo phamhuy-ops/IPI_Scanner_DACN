@@ -1,0 +1,287 @@
+{
+  "date": "2026-10-25",
+  "status": "complete",
+  "production_changed": false,
+  "priority_one_complete": false,
+  "raw": "benchmark/results/citation-context-8ioNd0",
+  "prepared_replay": "benchmark/results/citation-context-ddjHbQ",
+  "manifest": "benchmark/experiments/citation-context-controls-v1/mau-da-khoa.json",
+  "reviewer": "AI",
+  "human_approved": false,
+  "unique_cases": 8,
+  "heuristic_groups": 3,
+  "configuration": {
+    "detector": "gemma3:1b",
+    "verifier": "qwen2.5-coder:1.5b",
+    "contract": "classic-v1",
+    "chunks_per_request": 1,
+    "maxChatRequests": 8,
+    "maxSupplementalChunks": 0,
+    "analysisTimeoutMs": 90000,
+    "rounds": 1,
+    "seed": null,
+    "schedule": "thứ tự cố định cc-01 tới cc-08"
+  },
+  "models_unchanged": true,
+  "code_sha256": {
+    "scripts/citation-context-controls.cjs": "06ee5b44986553b80df9ff45329e20e2c13b4e1e5728daaf13de74d4864781f6",
+    "scripts/run-citation-context-controls.cjs": "8affa879d15b7370bd54f1dc42cd6813debf5b0a01785f4cb18978d5d38d8098",
+    "scripts/round-one-metrics.cjs": "063941533768a2d32a54e819f30d602b599e14f6f83af567b88dfded3ed1caf5",
+    "src/ai/experiments/boundedDocumentReview.ts": "2e04c3cc53d1dea37e6109be8535206dd29a85d6d25d28c5c333e16817b99e82",
+    "src/ai/agents/slmClient.ts": "cb771c61810fb84e45cbc5f33d05fadbe7bb657c9fa068f9ac934188834848ee",
+    "src/ai/agents/document/detectorAgent.ts": "ee241718a05b896a05ed50f55f2713433991a78b2b56afeca08632cdd30926da",
+    "src/ai/agents/document/verifierAgent.ts": "5f2dfe8e9f53e5bb28180c11fbe4058c2daf53f49fd99bcb569a0fe740dd5a27",
+    "src/ai/agents/document/reviewPolicy.ts": "ce1d9beb517862d989925d9a204a38b710e06b1891a28f33494b84ece8500aed",
+    "src/ai/agents/document/prompts.ts": "37341ac222a2243ffd8a2406a86be87ebaf4ee1c818b640f56759f6f2b032be6",
+    "src/ai/agents/document/evidence.ts": "804e027ef7e1d450f2a118e073e9786f269f4b6e3d67d5f960b921ca1dc7b174",
+    "src/ai/agents/slmCatalog.ts": "e83427927ebf6a60dfc5665fb0788e483ffc81468793a58fb5781e3139f6caaf",
+    "engine/scanner/ipi-doc-scan.js": "081de66fbc0b4eabca3d7a612465f1163e5781422b14cb8ab2a849f042586048",
+    "engine/document/chunking/semantic-chunker.js": "12f3d701a1af78a1e77f47d035b1804f0b198e56f45d24986b524390c9a154e2",
+    "engine/document/extractors/document-text-extractor.js": "e94e5733f3902947e5e410ef272354b0caf212c10111e59d227e0ac4d7224697",
+    "engine/document/extractors/html-source.js": "cd86a83bf5e5b6b4debc90cb4aa4f8beb7824d545713554588c73241f6946bb8",
+    "engine/prefilter/document-prefilter.js": "7002178bf7ad47590a9d307684dd2c8f5e6308a3d824182b3404edb6f9975a16",
+    "engine/prefilter/rules/ipi-document-rules.js": "02682ae70ba6598e9f6a0d56fe79fd6530f754c19798ded4ac27dcf8d57f8b57",
+    "engine/config/document-scan-config.js": "1baef48fce0a80997085062a8d796720897a1d4d04316f6a8d244cfee8df5214",
+    "src/types.ts": "9de6d0050bee93e3fde7254cc6255abbbbaa4b45c881598045a3151045634c63"
+  },
+  "metrics": {
+    "total": 8,
+    "matrix": {
+      "benign": {
+        "ipi_detected": 2,
+        "not_detected": 3,
+        "needs_review": 1
+      },
+      "malicious": {
+        "ipi_detected": 1,
+        "not_detected": 0,
+        "needs_review": 1
+      }
+    },
+    "processing": {
+      "complete": 7,
+      "invalid_response": 1
+    },
+    "decided": 6,
+    "review_needed": 2,
+    "decision_coverage": 0.75,
+    "review_rate": 0.25,
+    "matching_expected_verdict_rate": 0.5,
+    "precision_of_alerts": 0.3333333333333333,
+    "confirmed_attack_recall": 0.5,
+    "false_clear_rate_on_attacks": 0,
+    "false_alert_rate_on_benign": 0.3333333333333333,
+    "benign_review_rate": 0.16666666666666666,
+    "attack_review_rate": 0.5,
+    "average_seconds": 12.33425,
+    "confirmed_f1_with_abstention_as_unconfirmed": 0.4
+  },
+  "by_source": {
+    "captured_energy": {
+      "total": 2,
+      "matrix": {
+        "benign": {
+          "ipi_detected": 0,
+          "not_detected": 1,
+          "needs_review": 1
+        },
+        "malicious": {
+          "ipi_detected": 0,
+          "not_detected": 0,
+          "needs_review": 0
+        }
+      },
+      "processing": {
+        "complete": 1,
+        "invalid_response": 1
+      },
+      "decided": 1,
+      "review_needed": 1,
+      "decision_coverage": 0.5,
+      "review_rate": 0.5,
+      "matching_expected_verdict_rate": 0.5,
+      "precision_of_alerts": null,
+      "confirmed_attack_recall": null,
+      "false_clear_rate_on_attacks": null,
+      "false_alert_rate_on_benign": 0,
+      "benign_review_rate": 0.5,
+      "attack_review_rate": null,
+      "average_seconds": 12.161,
+      "confirmed_f1_with_abstention_as_unconfirmed": null
+    },
+    "authored_controls": {
+      "total": 6,
+      "matrix": {
+        "benign": {
+          "ipi_detected": 2,
+          "not_detected": 2,
+          "needs_review": 0
+        },
+        "malicious": {
+          "ipi_detected": 1,
+          "not_detected": 0,
+          "needs_review": 1
+        }
+      },
+      "processing": {
+        "complete": 6
+      },
+      "decided": 5,
+      "review_needed": 1,
+      "decision_coverage": 0.8333333333333334,
+      "review_rate": 0.16666666666666666,
+      "matching_expected_verdict_rate": 0.5,
+      "precision_of_alerts": 0.3333333333333333,
+      "confirmed_attack_recall": 0.5,
+      "false_clear_rate_on_attacks": 0,
+      "false_alert_rate_on_benign": 0.5,
+      "benign_review_rate": 0,
+      "attack_review_rate": 0.5,
+      "average_seconds": 12.391999999999998,
+      "confirmed_f1_with_abstention_as_unconfirmed": 0.4
+    }
+  },
+  "by_group": {
+    "vi-wikipedia-page:13199": {
+      "total": 2,
+      "matrix": {
+        "benign": {
+          "ipi_detected": 0,
+          "not_detected": 1,
+          "needs_review": 1
+        },
+        "malicious": {
+          "ipi_detected": 0,
+          "not_detected": 0,
+          "needs_review": 0
+        }
+      },
+      "processing": {
+        "complete": 1,
+        "invalid_response": 1
+      },
+      "decided": 1,
+      "review_needed": 1,
+      "decision_coverage": 0.5,
+      "review_rate": 0.5,
+      "matching_expected_verdict_rate": 0.5,
+      "precision_of_alerts": null,
+      "confirmed_attack_recall": null,
+      "false_clear_rate_on_attacks": null,
+      "false_alert_rate_on_benign": 0,
+      "benign_review_rate": 0.5,
+      "attack_review_rate": null,
+      "average_seconds": 12.161,
+      "confirmed_f1_with_abstention_as_unconfirmed": null
+    },
+    "authored-cancel-en": {
+      "total": 3,
+      "matrix": {
+        "benign": {
+          "ipi_detected": 1,
+          "not_detected": 1,
+          "needs_review": 0
+        },
+        "malicious": {
+          "ipi_detected": 1,
+          "not_detected": 0,
+          "needs_review": 0
+        }
+      },
+      "processing": {
+        "complete": 3
+      },
+      "decided": 3,
+      "review_needed": 0,
+      "decision_coverage": 1,
+      "review_rate": 0,
+      "matching_expected_verdict_rate": 0.6666666666666666,
+      "precision_of_alerts": 0.5,
+      "confirmed_attack_recall": 1,
+      "false_clear_rate_on_attacks": 0,
+      "false_alert_rate_on_benign": 0.5,
+      "benign_review_rate": 0,
+      "attack_review_rate": 0,
+      "average_seconds": 11.869666666666665,
+      "confirmed_f1_with_abstention_as_unconfirmed": 0.6666666666666666
+    },
+    "authored-cancel-vi": {
+      "total": 3,
+      "matrix": {
+        "benign": {
+          "ipi_detected": 1,
+          "not_detected": 1,
+          "needs_review": 0
+        },
+        "malicious": {
+          "ipi_detected": 0,
+          "not_detected": 0,
+          "needs_review": 1
+        }
+      },
+      "processing": {
+        "complete": 3
+      },
+      "decided": 2,
+      "review_needed": 1,
+      "decision_coverage": 0.6666666666666666,
+      "review_rate": 0.3333333333333333,
+      "matching_expected_verdict_rate": 0.3333333333333333,
+      "precision_of_alerts": 0,
+      "confirmed_attack_recall": 0,
+      "false_clear_rate_on_attacks": 0,
+      "false_alert_rate_on_benign": 0.5,
+      "benign_review_rate": 0,
+      "attack_review_rate": 1,
+      "average_seconds": 12.914333333333333,
+      "confirmed_f1_with_abstention_as_unconfirmed": 0
+    }
+  },
+  "benign_with_discoveries": [
+    "cc-05",
+    "cc-08"
+  ],
+  "max_harness_rss_bytes": 185597952,
+  "replay": [
+    {
+      "arm": 0,
+      "kind": "clean_discovery",
+      "original_valid": true,
+      "marker_removal_valid": true
+    },
+    {
+      "arm": 0,
+      "kind": "wrapper_quote",
+      "original_valid": false,
+      "marker_removal_valid": false
+    },
+    {
+      "arm": 3,
+      "kind": "clean_discovery",
+      "original_valid": true,
+      "marker_removal_valid": true
+    },
+    {
+      "arm": 3,
+      "kind": "wrapper_quote",
+      "original_valid": false,
+      "marker_removal_valid": false
+    }
+  ],
+  "findings": [
+    "Quote lỗi cũ vừa chứa marker vừa đổi hoa thường; bỏ marker vẫn bị parser từ chối đúng.",
+    "Discovery có citation hợp lệ vẫn có thể sai ngữ nghĩa.",
+    "Hai model cùng confirmed công việc cho người ở cả EN và VI, dù rule findings bằng 0.",
+    "Active EN được confirmed; active VI bất đồng. Không có false clear trong tám ca này.",
+    "Đoạn sạch đầu bài thay kết quả khi tách thành file: alias/filename/selection khác, không suy ra đã sửa lỗi."
+  ],
+  "decision": "Không thêm prompt bố cục hoặc nới validator. Giữ baseline và dùng cặp human/assistant làm lỗi đích để chuẩn hóa nhãn ngữ cảnh cho Verifier.",
+  "next": "Đối chiếu cặp human/assistant mới với nhãn Verifier đã duyệt, bổ sung nhãn người nhận/chuyển hướng và đối chứng tương đương vào dev có nhóm; kiểm tra dữ liệu trước thử học một model. Chưa train hoặc phản biện.",
+  "limitations": [
+    "Tám ca dev/ba nhóm, nhãn AI, không phải holdout hoặc kiểm chứng ngoài thực tế.",
+    "Đo bằng TXT qua core; không đánh giá UI/IPC hoặc toàn tài liệu dài.",
+    "Hai đoạn cũ giữ text nhưng filename/alias/selection thay đổi khi tách thành file; không phải tái lập nguyên request cũ.",
+    "Chưa đo ngữ cảnh có cấu trúc; stance tổng hợp có thể che khác biệt giữa hai vai trò.",
+    "RSS không phải tổng RAM/peak VRAM của Ollama."
+  ]
+}

@@ -1,0 +1,54 @@
+﻿{
+    "ctx-04.txt":  {
+                       "bytes":  250,
+                       "sha256":  "afcb86a18d317714c191c7013b2966064b24fca5e8c4e5f8af8e75c1d16eca46"
+                   },
+    "model-calls.json":  {
+                             "bytes":  170066,
+                             "sha256":  "ea03b20676c9dd0613150b46716a34b6293e32776853d6af3b51fec61fd485bd"
+                         },
+    "ctx-06.txt":  {
+                       "bytes":  268,
+                       "sha256":  "a7b3edbf0da491fdb1ac8ab384d4b02c3d71f4f1bd76ed1d018d15a3288c1593"
+                   },
+    "ctx-05.txt":  {
+                       "bytes":  212,
+                       "sha256":  "9f1c918da67dfdc7651355ac7527e051f3eb7f920780879bee5f4b19527ccf37"
+                   },
+    "ctx-03.txt":  {
+                       "bytes":  210,
+                       "sha256":  "88bf9898348c180676bbbb54b83cbe322c13df20501d866841d3ef3ab389c6b9"
+                   },
+    "manifest.json":  {
+                          "bytes":  5989,
+                          "sha256":  "50de92db2712ad62be12fbe17d8c0fd1b5af5c7f5a7575145864b286c79d588c"
+                      },
+    "ctx-07.txt":  {
+                       "bytes":  160,
+                       "sha256":  "f26490810de858c866be841d4a5da97bf2b2abf30e467b4f74e1528194af34aa"
+                   },
+    "debate-readiness.json":  {
+                                  "bytes":  760,
+                                  "sha256":  "4f6bc4e741c7478c5696b17c02c19258c1c422a3198784a2455aa5273e3ffebb"
+                              },
+    "ctx-08.txt":  {
+                       "bytes":  163,
+                       "sha256":  "842188d9bb6523b9f247137926532f96cb9a4f31c03c0cd5447e89296465d1a3"
+                   },
+    "ctx-01.txt":  {
+                       "bytes":  135,
+                       "sha256":  "571a0c9fb073fe77677a7850558237eafa58b19cfddd017af96444deb4de5763"
+                   },
+    "ctx-02.txt":  {
+                       "bytes":  181,
+                       "sha256":  "fce6c075a339e45e0a47a1e8e9d1b6b623dcd1bb2a1d241624dec6a759ddeef0"
+                   },
+    "cases.json":  {
+                       "bytes":  77948,
+                       "sha256":  "2089c0af689a75e3cfad9f77175d6f3e5a02522acfbac87a7c8d3411d9b1bfb7"
+                   },
+    "summary.json":  {
+                         "bytes":  6598,
+                         "sha256":  "342cee29f2e69936232609cc8e2b5ae710abb228195f24c96060e07403801dd3"
+                     }
+}

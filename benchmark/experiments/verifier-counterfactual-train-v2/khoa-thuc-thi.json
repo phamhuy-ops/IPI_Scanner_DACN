@@ -1,0 +1,14 @@
+{
+  "files_sha256": {
+    "scripts/train_verifier_candidate02.py": "2558e14df0eb7898649efc38b1fc4b6001ab3c887f57a6068e4a15879c46d8a3",
+    "scripts/verifier_candidate02_loader.py": "ba8294265515258f9f3ca5b135e695739ea7a3bd748b4ca2ab0c5ad56458dcca",
+    "scripts/eval_verifier_candidate02.py": "394c921781c7ccafef9009ef27d071f09848e01d40542df2f444a4f8708c027d",
+    "scripts/train_verifier_pilot.py": "22e97d6f89d1a1a6f4c524f019be2e52af60a75d4dcf936d4a52f7c4c597acb0",
+    "scripts/verifier_data_loader.py": "113dec3101e10b7ce7238e8704bded7105825072dcf74ea7788b2656de027151",
+    "scripts/eval_verifier_pilot.py": "9792a6845189ab671174c72f502f401e17e23d03e45a625b5385581b0fc13e9c"
+  },
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/train_verifier_candidate02.py",
+  "training_config_unchanged": true,
+  "scope": "Chỉ đổi loader train và tên đích; thuật toán train giữ nguyên runner candidate-01.",
+  "screen_policy": "Cùng 6 nguồn/12 request mỗi mode; on phải hợp lệ 12/12 và không thêm FP/false-clear so off; chưa đạt thì không chạy full dev/probe."
+}

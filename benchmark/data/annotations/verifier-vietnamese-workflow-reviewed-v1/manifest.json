@@ -1,0 +1,30 @@
+{
+  "version": "verifier-vietnamese-workflow-reviewed-v1",
+  "records": 16,
+  "replaces_records": 16,
+  "new_records": 0,
+  "framing_revisions": 4,
+  "stance_changes": 0,
+  "source_texts_unchanged": true,
+  "model_inputs_unchanged": true,
+  "source_parent_ids": 4,
+  "parser_valid": 32,
+  "training_ready": false,
+  "model_called": false,
+  "inputs_sha256": {
+    "benchmark/data/annotations/verifier-vietnamese-workflow-v1/mau-cho-duyet.jsonl": "e913b829cbf31e8289184356ef7bbe65d5728ae20afdeb94ecd5d3b463ef4cae"
+  },
+  "code_sha256": {
+    "scripts/review-verifier-vietnamese-workflow.cjs": "dbd7579fedba1babd99d367fd646d9e901c3f789ff382ef6ebdebae1293ec3de",
+    "scripts/verifier-batch-renderer.ts": "d66db4a967344570e6541996f2432e42324fd43d72077e065e6c8ec126feafab"
+  },
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "ec125a7f7aa2ab74fd96c4a43fec3780d65a55a18c1df05ad0b128fdee47c911",
+    "ban-xem-truoc.json": "f81ebbdd89b8045eed8e322f780598a7c6364ef3947d5216bff9c715f26e5f35",
+    "danh-gia-ai.json": "9a037441efca18037f91a1c54760143064872a4d6da8b58d8b39c4937a68b413"
+  },
+  "limitations": [
+    "Lượt tự rà có căn cứ, không phải kiểm chứng ngữ nghĩa độc lập hoặc đánh giá model.",
+    "Không sửa framing hàng loạt cho mọi uncertain; quyết định này chỉ áp dụng 4 câu mệnh lệnh đã đọc trong batch."
+  ]
+}

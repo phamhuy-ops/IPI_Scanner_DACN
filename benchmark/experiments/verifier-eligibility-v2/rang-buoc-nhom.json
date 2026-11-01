@@ -1,0 +1,1286 @@
+{
+  "groups": [
+    {
+      "id": "group-dec241d54188",
+      "members": [
+        "verifier-external-ai-v1:ext3-013",
+        "verifier-external-ai-v1:ext3-014",
+        "verifier-external-ai-v1:ext3-015",
+        "verifier-external-ai-v1:ext3-016",
+        "verifier-external-ai-v1:ext3-017",
+        "verifier-external-ai-v1:ext3-018",
+        "verifier-external-ai-v1:ext3-019",
+        "verifier-external-ai-v1:ext3-020",
+        "verifier-external-ai-v1:ext3-021",
+        "verifier-external-ai-v1:ext3-022",
+        "verifier-external-ai-v1:ext3-023",
+        "verifier-external-ai-v1:ext3-024",
+        "verifier-external-ai-v1:ext3-025",
+        "verifier-external-ai-v1:ext3-026",
+        "verifier-external-ai-v1:ext3-027",
+        "verifier-external-ai-v1:ext3-028",
+        "verifier-external-ai-v1:ext3-029",
+        "verifier-external-ai-v1:ext3-030",
+        "verifier-external-context-v1:ec-013",
+        "verifier-external-context-v1:ec-014",
+        "verifier-external-context-v1:ec-015",
+        "verifier-external-context-v1:ec-016",
+        "verifier-external-context-v1:ec-017",
+        "verifier-external-context-v1:ec-018",
+        "verifier-external-context-v1:ec-019",
+        "verifier-external-context-v1:ec-020",
+        "verifier-external-context-v1:ec-021",
+        "verifier-external-context-v1:ec-022",
+        "verifier-external-context-v1:ec-023",
+        "verifier-external-context-v1:ec-024"
+      ],
+      "size": 30,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-a3a99a1400d9",
+      "members": [
+        "verifier-gap-v1:gap-001",
+        "verifier-gap-v1:gap-002",
+        "verifier-gap-v1:gap-003",
+        "verifier-gap-v1:gap-007",
+        "verifier-gap-v1:gap-008",
+        "verifier-gap-v1:gap-009",
+        "verifier-gap-v1:gap-013",
+        "verifier-gap-v1:gap-014",
+        "verifier-gap-v1:gap-015"
+      ],
+      "size": 9,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-718746dc9fa6",
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-011",
+        "verifier-vietnamese-articles-v1:vi-article-012",
+        "verifier-vietnamese-articles-v1:vi-article-013",
+        "verifier-vietnamese-articles-v1:vi-article-014",
+        "verifier-vietnamese-articles-v1:vi-article-015",
+        "verifier-addressee-context-v1:ac-01"
+      ],
+      "size": 6,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-07d26ec5d37f",
+      "members": [
+        "verifier-addressee-context-v1:ac-03",
+        "verifier-addressee-context-v1:ac-04",
+        "verifier-addressee-context-v1:ac-05",
+        "verifier-addressee-context-v1:ac-06",
+        "verifier-addressee-context-v1:ac-07",
+        "verifier-addressee-context-v1:ac-08"
+      ],
+      "size": 6,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-0531e4c2d607",
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-001",
+        "verifier-vietnamese-articles-v1:vi-article-002",
+        "verifier-vietnamese-articles-v1:vi-article-003",
+        "verifier-vietnamese-articles-v1:vi-article-004",
+        "verifier-vietnamese-articles-v1:vi-article-005"
+      ],
+      "size": 5,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-49f23eba69eb",
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-006",
+        "verifier-vietnamese-articles-v1:vi-article-007",
+        "verifier-vietnamese-articles-v1:vi-article-008",
+        "verifier-vietnamese-articles-v1:vi-article-009",
+        "verifier-vietnamese-articles-v1:vi-article-010"
+      ],
+      "size": 5,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-0c09b4c84423",
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-016",
+        "verifier-vietnamese-articles-v1:vi-article-017",
+        "verifier-vietnamese-articles-v1:vi-article-018",
+        "verifier-vietnamese-articles-v1:vi-article-019",
+        "verifier-vietnamese-articles-v1:vi-article-020"
+      ],
+      "size": 5,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-dd240b64436f",
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-021",
+        "verifier-vietnamese-articles-v1:vi-article-022",
+        "verifier-vietnamese-articles-v1:vi-article-023",
+        "verifier-vietnamese-articles-v1:vi-article-024",
+        "verifier-vietnamese-articles-v1:vi-article-025"
+      ],
+      "size": 5,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-7d20905d52c0",
+      "members": [
+        "verifier-vietnamese-articles-v1:vi-article-026",
+        "verifier-vietnamese-articles-v1:vi-article-027",
+        "verifier-vietnamese-articles-v1:vi-article-028",
+        "verifier-vietnamese-articles-v1:vi-article-029",
+        "verifier-vietnamese-articles-v1:vi-article-030"
+      ],
+      "size": 5,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-aae13ef7cf62",
+      "members": [
+        "verifier-recipient-contrast-v1:rc-001",
+        "verifier-recipient-contrast-v1:rc-002",
+        "verifier-recipient-contrast-v1:rc-003",
+        "verifier-recipient-contrast-v1:rc-004"
+      ],
+      "size": 4,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-b2bef154b4da",
+      "members": [
+        "verifier-recipient-contrast-v1:rc-005",
+        "verifier-recipient-contrast-v1:rc-006",
+        "verifier-recipient-contrast-v1:rc-007",
+        "verifier-recipient-contrast-v1:rc-008"
+      ],
+      "size": 4,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-1d7745dbbcc8",
+      "members": [
+        "verifier-recipient-contrast-v1:rc-009",
+        "verifier-recipient-contrast-v1:rc-010",
+        "verifier-recipient-contrast-v1:rc-011",
+        "verifier-recipient-contrast-v1:rc-012"
+      ],
+      "size": 4,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-b4b83b2a0288",
+      "members": [
+        "verifier-recipient-contrast-v1:rc-013",
+        "verifier-recipient-contrast-v1:rc-014",
+        "verifier-recipient-contrast-v1:rc-015",
+        "verifier-recipient-contrast-v1:rc-016"
+      ],
+      "size": 4,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-ef24976e730c",
+      "members": [
+        "verifier-recipient-contrast-v1:rc-017",
+        "verifier-recipient-contrast-v1:rc-018",
+        "verifier-recipient-contrast-v1:rc-019",
+        "verifier-recipient-contrast-v1:rc-020"
+      ],
+      "size": 4,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-47dbdbfeebca",
+      "members": [
+        "verifier-recipient-contrast-v1:rc-021",
+        "verifier-recipient-contrast-v1:rc-022",
+        "verifier-recipient-contrast-v1:rc-023",
+        "verifier-recipient-contrast-v1:rc-024"
+      ],
+      "size": 4,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-4123482d8e8c",
+      "members": [
+        "verifier-recipient-contrast-v1:rc-025",
+        "verifier-recipient-contrast-v1:rc-026",
+        "verifier-recipient-contrast-v1:rc-027",
+        "verifier-recipient-contrast-v1:rc-028"
+      ],
+      "size": 4,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-97990cc6743f",
+      "members": [
+        "verifier-recipient-contrast-v1:rc-029",
+        "verifier-recipient-contrast-v1:rc-030",
+        "verifier-recipient-contrast-v1:rc-031",
+        "verifier-recipient-contrast-v1:rc-032"
+      ],
+      "size": 4,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-ce256043dd38",
+      "members": [
+        "verifier-batch-v1:vf-001",
+        "verifier-batch-v1:vf-003",
+        "verifier-batch-v1:vf-021"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-batch-v1:vf-001",
+        "verifier-batch-v1:vf-003",
+        "verifier-batch-v1:vf-021"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-638d002da68a",
+      "members": [
+        "verifier-batch-v1:vf-002",
+        "verifier-batch-v1:vf-025",
+        "verifier-batch-v1:vf-027"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-batch-v1:vf-002",
+        "verifier-batch-v1:vf-025",
+        "verifier-batch-v1:vf-027"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-8e8edd4fcd66",
+      "members": [
+        "verifier-batch-v1:vf-004",
+        "verifier-batch-v1:vf-008",
+        "verifier-batch-v1:vf-026"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-batch-v1:vf-004",
+        "verifier-batch-v1:vf-008",
+        "verifier-batch-v1:vf-026"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-fb8888e1263b",
+      "members": [
+        "verifier-batch-v1:vf-005",
+        "verifier-batch-v1:vf-019",
+        "verifier-batch-v1:vf-028"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-batch-v1:vf-005",
+        "verifier-batch-v1:vf-019",
+        "verifier-batch-v1:vf-028"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-836dea35b0ff",
+      "members": [
+        "verifier-batch-v1:vf-006",
+        "verifier-batch-v1:vf-017",
+        "verifier-batch-v1:vf-030"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-batch-v1:vf-006",
+        "verifier-batch-v1:vf-017",
+        "verifier-batch-v1:vf-030"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-1079873a7aff",
+      "members": [
+        "verifier-batch-v1:vf-007",
+        "verifier-batch-v1:vf-018",
+        "verifier-batch-v1:vf-020"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-batch-v1:vf-007",
+        "verifier-batch-v1:vf-018",
+        "verifier-batch-v1:vf-020"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-c1ef7e09f8da",
+      "members": [
+        "verifier-batch-v1:vf-009",
+        "verifier-batch-v1:vf-010",
+        "verifier-batch-v1:vf-014"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-batch-v1:vf-009",
+        "verifier-batch-v1:vf-010",
+        "verifier-batch-v1:vf-014"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-ee109dce99fe",
+      "members": [
+        "verifier-batch-v1:vf-011",
+        "verifier-batch-v1:vf-013",
+        "verifier-batch-v1:vf-016"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-batch-v1:vf-011",
+        "verifier-batch-v1:vf-013",
+        "verifier-batch-v1:vf-016"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-3207bd7a1429",
+      "members": [
+        "verifier-batch-v1:vf-012",
+        "verifier-batch-v1:vf-015",
+        "verifier-batch-v1:vf-023"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-batch-v1:vf-012",
+        "verifier-batch-v1:vf-015",
+        "verifier-batch-v1:vf-023"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-5a460361055d",
+      "members": [
+        "verifier-batch-v1:vf-022",
+        "verifier-batch-v1:vf-024",
+        "verifier-batch-v1:vf-029"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-batch-v1:vf-022",
+        "verifier-batch-v1:vf-024",
+        "verifier-batch-v1:vf-029"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-45c0e0d5e284",
+      "members": [
+        "verifier-vietnamese-v1:V3-001",
+        "verifier-vietnamese-v1:V3-005",
+        "verifier-vietnamese-v1:V3-014"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-vietnamese-v1:V3-001",
+        "verifier-vietnamese-v1:V3-005",
+        "verifier-vietnamese-v1:V3-014"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-a80808433646",
+      "members": [
+        "verifier-vietnamese-v1:V3-002",
+        "verifier-vietnamese-v1:V3-007",
+        "verifier-vietnamese-v1:V3-012"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-vietnamese-v1:V3-002",
+        "verifier-vietnamese-v1:V3-007",
+        "verifier-vietnamese-v1:V3-012"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-6a604a3a5029",
+      "members": [
+        "verifier-vietnamese-v1:V3-003",
+        "verifier-vietnamese-v1:V3-004",
+        "verifier-vietnamese-v1:V3-006"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-vietnamese-v1:V3-003",
+        "verifier-vietnamese-v1:V3-004",
+        "verifier-vietnamese-v1:V3-006"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-acd04e2d1796",
+      "members": [
+        "verifier-vietnamese-v1:V3-008",
+        "verifier-vietnamese-v1:V3-009",
+        "verifier-vietnamese-v1:V3-010"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-vietnamese-v1:V3-008",
+        "verifier-vietnamese-v1:V3-009",
+        "verifier-vietnamese-v1:V3-010"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-e3e3699730da",
+      "members": [
+        "verifier-vietnamese-v1:V3-011",
+        "verifier-vietnamese-v1:V3-013",
+        "verifier-vietnamese-v1:V3-015"
+      ],
+      "size": 3,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "verifier-vietnamese-v1:V3-011",
+        "verifier-vietnamese-v1:V3-013",
+        "verifier-vietnamese-v1:V3-015"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-c8e3c3524633",
+      "members": [
+        "verifier-gap-v1:gap-004",
+        "verifier-gap-v1:gap-005",
+        "verifier-gap-v1:gap-006"
+      ],
+      "size": 3,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-add90d851526",
+      "members": [
+        "verifier-gap-v1:gap-010",
+        "verifier-gap-v1:gap-011",
+        "verifier-gap-v1:gap-012"
+      ],
+      "size": 3,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-446b3323fcfd",
+      "members": [
+        "verifier-external-context-v1:ec-001",
+        "verifier-external-context-v1:ec-002"
+      ],
+      "size": 2,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-e35a70834dcb",
+      "members": [
+        "verifier-external-context-v1:ec-003",
+        "verifier-external-context-v1:ec-004"
+      ],
+      "size": 2,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-68965096a4cf",
+      "members": [
+        "verifier-external-context-v1:ec-005",
+        "verifier-external-context-v1:ec-006"
+      ],
+      "size": 2,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-feb360ff317a",
+      "members": [
+        "verifier-external-context-v1:ec-007",
+        "verifier-external-context-v1:ec-008"
+      ],
+      "size": 2,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-a47b13dde279",
+      "members": [
+        "verifier-external-context-v1:ec-009",
+        "verifier-external-context-v1:ec-010"
+      ],
+      "size": 2,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-b37717a35c95",
+      "members": [
+        "verifier-external-context-v1:ec-011",
+        "verifier-external-context-v1:ec-012"
+      ],
+      "size": 2,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-5f3ecf7cdc19",
+      "members": [
+        "verifier-external-ai-v1:ext3-001"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-3b267f0f117e",
+      "members": [
+        "verifier-external-ai-v1:ext3-002"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-e72cde67200b",
+      "members": [
+        "verifier-external-ai-v1:ext3-003"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-ffe613a80abf",
+      "members": [
+        "verifier-external-ai-v1:ext3-004"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-7370cce3bd64",
+      "members": [
+        "verifier-external-ai-v1:ext3-005"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-9f3ae3e7da67",
+      "members": [
+        "verifier-external-ai-v1:ext3-006"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-8ae3e88107bf",
+      "members": [
+        "verifier-external-ai-v1:ext3-007"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-bd1904673fe0",
+      "members": [
+        "verifier-external-ai-v1:ext3-008"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-41a48fbc6c60",
+      "members": [
+        "verifier-external-ai-v1:ext3-009"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-54ff8e8c149a",
+      "members": [
+        "verifier-external-ai-v1:ext3-010"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-e8de207fcfde",
+      "members": [
+        "verifier-external-ai-v1:ext3-011"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-9f5332585547",
+      "members": [
+        "verifier-external-ai-v1:ext3-012"
+      ],
+      "size": 1,
+      "flags": [],
+      "baseline_model_evaluated_members": [],
+      "proposed_constraint": "unassigned_role_review_required",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-a068538c2885",
+      "members": [
+        "exp-notinject-0025-f4a0e2c4"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0025-f4a0e2c4"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-434d1c300ee2",
+      "members": [
+        "exp-notinject-0004-2c788ef3"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0004-2c788ef3"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-ff6cff3052d9",
+      "members": [
+        "exp-realistic-0008-73df88f2"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0008-73df88f2"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-033643bd79e2",
+      "members": [
+        "exp-notinject-0033-463c34f3"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0033-463c34f3"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-2a76a1ec1ee5",
+      "members": [
+        "exp-realistic-0012-7e24f5e6"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0012-7e24f5e6"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-f4181dd4477d",
+      "members": [
+        "exp-notinject-0046-658ac079"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0046-658ac079"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-7ef9d18b2ccd",
+      "members": [
+        "exp-realistic-0013-5e68cad3"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0013-5e68cad3"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-743566b7d9f1",
+      "members": [
+        "exp-notinject-0072-46f87530"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0072-46f87530"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-c62e17f8720d",
+      "members": [
+        "exp-notinject-0023-9afd9588"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0023-9afd9588"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-50b69e69dc3e",
+      "members": [
+        "exp-realistic-0014-220c66f9"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0014-220c66f9"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-4f155465469f",
+      "members": [
+        "exp-notinject-0097-394af4ef"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0097-394af4ef"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-62f19b39c0a3",
+      "members": [
+        "exp-realistic-0017-c4d2e538"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0017-c4d2e538"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-a17b54768512",
+      "members": [
+        "exp-notinject-0040-003afab6"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0040-003afab6"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-80180f4d72d1",
+      "members": [
+        "exp-realistic-0015-ce348595"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0015-ce348595"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-f23014d2a3d6",
+      "members": [
+        "exp-notinject-0074-9e918b74"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0074-9e918b74"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-b0db58d95951",
+      "members": [
+        "exp-realistic-0002-f3806686"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0002-f3806686"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-495413a1c599",
+      "members": [
+        "exp-notinject-0098-0be1a2e0"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0098-0be1a2e0"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-84b2b27e5207",
+      "members": [
+        "exp-realistic-0007-6f8eb908"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0007-6f8eb908"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-172d6ffda296",
+      "members": [
+        "exp-notinject-0046-990e7221"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0046-990e7221"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-a6e9ebcca086",
+      "members": [
+        "exp-realistic-0011-b2c71fb6"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0011-b2c71fb6"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-fa7dd4524152",
+      "members": [
+        "exp-notinject-0059-243abe44"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0059-243abe44"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-ee13a1deb582",
+      "members": [
+        "exp-realistic-0006-53e0168e"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0006-53e0168e"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-03ccb899044b",
+      "members": [
+        "exp-notinject-0056-1d019692"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0056-1d019692"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-9036e155e2b5",
+      "members": [
+        "exp-notinject-0060-ac0984af"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0060-ac0984af"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-3e2cdfd55d3c",
+      "members": [
+        "exp-realistic-0016-b1d1ebf9"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0016-b1d1ebf9"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-f01182bda458",
+      "members": [
+        "exp-notinject-0051-7ac63a31"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-notinject-0051-7ac63a31"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    },
+    {
+      "id": "group-e91ed1792947",
+      "members": [
+        "exp-realistic-0010-12f63f21"
+      ],
+      "size": 1,
+      "flags": [
+        "overlap_dev_fixture_or_manifest"
+      ],
+      "baseline_model_evaluated_members": [
+        "exp-realistic-0010-12f63f21"
+      ],
+      "proposed_constraint": "retain_development_regression",
+      "final_split": null,
+      "independently_untouched_verified": false
+    }
+  ],
+  "final_split_created": false
+}

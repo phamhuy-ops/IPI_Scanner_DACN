@@ -1,0 +1,145 @@
+{
+  "diagnostic": [
+    {
+      "role": "train",
+      "reason_token_fraction": 0.39298540536410176,
+      "reason_nll_fraction_off": 0.8620276720164115,
+      "reason_nll_fraction_on": 0.9603270583452713,
+      "fields": {
+        "all": {
+          "tokens": 26174,
+          "off_mean_nll": 2.0183788772745777,
+          "on_mean_nll": 1.4271614076206272,
+          "off_gold_prefix_token_accuracy": 0.6501872086803698,
+          "on_gold_prefix_token_accuracy": 0.7366470543287231
+        },
+        "structure_or_eos": {
+          "tokens": 8748,
+          "off_mean_nll": 0.4861497930529431,
+          "on_mean_nll": 0.026808738293579683,
+          "off_gold_prefix_token_accuracy": 0.8275034293552812,
+          "on_gold_prefix_token_accuracy": 0.9917695473251029
+        },
+        "addressee": {
+          "tokens": 938,
+          "off_mean_nll": 1.0071002927417119,
+          "on_mean_nll": 0.32699507639403225,
+          "off_gold_prefix_token_accuracy": 0.8731343283582089,
+          "on_gold_prefix_token_accuracy": 0.8752665245202559
+        },
+        "framing": {
+          "tokens": 902,
+          "off_mean_nll": 0.209173604775778,
+          "on_mean_nll": 0.1704149213115154,
+          "off_gold_prefix_token_accuracy": 0.9434589800443459,
+          "on_gold_prefix_token_accuracy": 0.9567627494456763
+        },
+        "deviation": {
+          "tokens": 1286,
+          "off_mean_nll": 0.9455897517935052,
+          "on_mean_nll": 0.35265111962812673,
+          "off_gold_prefix_token_accuracy": 0.8188180404354588,
+          "on_gold_prefix_token_accuracy": 0.8678071539657853
+        },
+        "stance": {
+          "tokens": 1008,
+          "off_mean_nll": 0.3539000985746774,
+          "on_mean_nll": 0.13437879721148308,
+          "off_gold_prefix_token_accuracy": 0.8571428571428571,
+          "on_gold_prefix_token_accuracy": 0.9573412698412699
+        },
+        "reason": {
+          "tokens": 10286,
+          "off_mean_nll": 4.427386923471326,
+          "on_mean_nll": 3.4875130161498076,
+          "off_gold_prefix_token_accuracy": 0.32033832393544626,
+          "on_gold_prefix_token_accuracy": 0.3804199883336574
+        }
+      }
+    },
+    {
+      "role": "dev_screen",
+      "reason_token_fraction": 0.35071090047393366,
+      "reason_nll_fraction_off": 0.806951705710447,
+      "reason_nll_fraction_on": 0.9403670218124226,
+      "fields": {
+        "all": {
+          "tokens": 844,
+          "off_mean_nll": 1.6812361646280807,
+          "on_mean_nll": 1.213710720279714,
+          "off_gold_prefix_token_accuracy": 0.6883886255924171,
+          "on_gold_prefix_token_accuracy": 0.7630331753554502
+        },
+        "structure_or_eos": {
+          "tokens": 298,
+          "off_mean_nll": 0.4565475432234583,
+          "on_mean_nll": 0.025760531574682038,
+          "off_gold_prefix_token_accuracy": 0.8456375838926175,
+          "on_gold_prefix_token_accuracy": 0.9932885906040269
+        },
+        "addressee": {
+          "tokens": 34,
+          "off_mean_nll": 1.2973638525113795,
+          "on_mean_nll": 0.32957857776674404,
+          "off_gold_prefix_token_accuracy": 0.8235294117647058,
+          "on_gold_prefix_token_accuracy": 0.8235294117647058
+        },
+        "framing": {
+          "tokens": 34,
+          "off_mean_nll": 0.7670603464821397,
+          "on_mean_nll": 0.4784946654306703,
+          "off_gold_prefix_token_accuracy": 0.8529411764705882,
+          "on_gold_prefix_token_accuracy": 0.8529411764705882
+        },
+        "deviation": {
+          "tokens": 44,
+          "off_mean_nll": 0.9338586780303327,
+          "on_mean_nll": 0.30412151543504123,
+          "off_gold_prefix_token_accuracy": 0.8181818181818182,
+          "on_gold_prefix_token_accuracy": 0.8863636363636364
+        },
+        "stance": {
+          "tokens": 36,
+          "off_mean_nll": 0.34747468722525654,
+          "on_mean_nll": 0.1420777409303907,
+          "off_gold_prefix_token_accuracy": 0.8333333333333334,
+          "on_gold_prefix_token_accuracy": 0.9722222222222222
+        },
+        "reason": {
+          "tokens": 296,
+          "off_mean_nll": 3.8683610601078358,
+          "on_mean_nll": 3.2543429184234145,
+          "off_gold_prefix_token_accuracy": 0.36824324324324326,
+          "on_gold_prefix_token_accuracy": 0.39864864864864863
+        }
+      }
+    }
+  ],
+  "generation_screen": {
+    "examples": 12,
+    "parsed": 8,
+    "correct_stance": 4,
+    "tp": 3,
+    "fp": 1,
+    "tn": 0,
+    "false_clear_fn": 0,
+    "confirmed_not_detected_or_unresolved": 1,
+    "parse_or_model_errors": 4,
+    "abstention": 2,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75,
+    "false_positive_rate": 0.25,
+    "binary_decision_coverage": 0.5
+  },
+  "claims_not_supported": [
+    "Chưa thể kết luận overfit từ hai tập khác phân bố.",
+    "Không dùng token accuracy làm stance accuracy.",
+    "Không suy rằng giảm loss lý do sẽ cải thiện bảo mật hoặc tăng epoch sẽ giải quyết lỗi.",
+    "Gold trước stance đã chứa người nhận/ngữ cảnh/độ lệch đúng; điểm stance có điều kiện không chứng minh tự nhận diện được các trường này."
+  ],
+  "recommended_next": "Đo đối chứng trên cùng dev nhỏ: cung cấp các trường ngữ cảnh gold để kiểm tra ánh xạ stance, và so với cấu hình tự suy các trường. Chỉ là diagnostic có oracle, không tích hợp hoặc báo như hiệu quả sản phẩm; chưa train ứng viên thứ ba.",
+  "runtime_changed": false,
+  "training_started": false,
+  "independent_validation_complete": false
+}

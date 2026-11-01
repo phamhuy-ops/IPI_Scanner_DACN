@@ -1,0 +1,29 @@
+{
+  "errors": [],
+  "valid_staging_snapshot": true,
+  "counts": {
+    "train_candidate": 207,
+    "dev_candidate": 73,
+    "transfer_probe_candidate": 74,
+    "reference_only": 2
+  },
+  "review_batch_sources": {
+    "leolee99/NotInject": 15,
+    "treycsa/realistic-prompt-injections": 15
+  },
+  "group_role_conflicts": 0,
+  "reviewed": 30,
+  "pending": 0,
+  "decisions": {
+    "accept_annotation": 27,
+    "exclude_from_ipi_training": 2,
+    "quarantine_mixed_scope": 1
+  },
+  "accepted_context_labels": {
+    "dismissed": 22,
+    "confirmed": 5
+  },
+  "human_review_complete": true,
+  "training_ready": false,
+  "independent_holdout_collected": false
+}

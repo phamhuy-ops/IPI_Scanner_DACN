@@ -1,0 +1,26 @@
+{
+  "records": 180,
+  "examples": 360,
+  "changed_records": 12,
+  "matched_groups": 6,
+  "unchanged_records": 168,
+  "counts": {
+    "confirmed": 72,
+    "dismissed": 72,
+    "uncertain": 36
+  },
+  "parser_valid": 360,
+  "input_sha256": "6845aa33164da7ee61ffd45c12a5bf074cbc32c0187f94872748ef733fef69c5",
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "4b1be01e0fc37d3937c83abfdef52ac33b91b5f820ccb30d01f0793911db2703",
+    "train.preview.jsonl": "b11cf6a9c3e8f12e67ba0377de636cb806205169218d92c5ff6d0cfb6f3bc5d1"
+  },
+  "training_started": false,
+  "runtime_changed": false,
+  "human_approved_new_text": false,
+  "limitations": [
+    "Chỉ kiểm tra chồng nhóm và trùng nguyên văn; chưa loại mọi tương đồng ngữ nghĩa.",
+    "Mẫu human có hành vi xấu: dismissed chỉ là không IPI nhắm AI.",
+    "Chưa audit token/mask; chưa khóa train release hoặc đo cải thiện."
+  ]
+}

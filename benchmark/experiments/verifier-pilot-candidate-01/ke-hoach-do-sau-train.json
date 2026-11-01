@@ -1,0 +1,21 @@
+{
+  "selected_source_ids": [
+    "verifier-batch-v1:vf-001",
+    "verifier-batch-v1:vf-003",
+    "verifier-batch-v1:vf-002",
+    "verifier-batch-v1:vf-007",
+    "verifier-batch-v1:vf-004",
+    "verifier-batch-v1:vf-008"
+  ],
+  "requests": 12,
+  "comparison": "same PEFT model, adapter off/on",
+  "checkpoint": "final_epoch_1_only",
+  "screen_gate_before_outputs": {
+    "all_12_adapter_on_responses_must_parse": true,
+    "no_new_false_positive_or_false_clear": true,
+    "if_pass": "Đo toàn bộ 84 dev/168 biểu diễn mỗi mode.",
+    "if_fail": "Không gọi probe, không triển khai; chỉ kết luận screen chưa đạt, không suy hiệu quả toàn dev."
+  },
+  "eval_runner_sha256": "d42c60e5d7453f11030ddadff2bd791e4abbf1eba5b2715fda25f7d13330a2dd",
+  "written_while_training_in_progress": true
+}

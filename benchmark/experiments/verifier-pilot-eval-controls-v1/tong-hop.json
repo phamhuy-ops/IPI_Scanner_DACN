@@ -1,0 +1,18 @@
+{
+  "records": 24,
+  "groups": 4,
+  "model_requests": 48,
+  "parser_valid": 35,
+  "correct_stance": 9,
+  "false_positive_examples": 17,
+  "false_clear_examples": 4,
+  "invalid_examples": 13,
+  "model_weights_unchanged": true,
+  "probe_used": false,
+  "training_repeated": false,
+  "runtime_changed": false,
+  "diagnostic_only": true,
+  "tests_passed": 8,
+  "old_dev_annotation_proposals_applied": false,
+  "next_plan": "benchmark/experiments/verifier-counterfactual-training-proposal-v1/ke-hoach.json"
+}

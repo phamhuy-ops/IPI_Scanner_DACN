@@ -1,0 +1,489 @@
+{
+  "records": [
+    {
+      "id": "vi-native-001",
+      "source_sha256": "6e302b824b22c61cbf8dc5cf7f459e1ee643c7f46c85ac53efec71cfcedbdaf6",
+      "rendered_pages": [
+        1,
+        2,
+        49,
+        62,
+        63
+      ]
+    },
+    {
+      "id": "vi-native-002",
+      "source_sha256": "a0ef25216c3cd800c4fb2f222e84e601d8f4f1010a9b4e7ff456c413f93aa9fe",
+      "rendered_pages": [
+        1,
+        10,
+        17,
+        23
+      ]
+    },
+    {
+      "id": "vi-native-003",
+      "source_sha256": "faafd2847ddea591b62d66ff46af10626e7a79b48eff046bf8f47b9d10f2e561",
+      "media": [
+        {
+          "name": "word/media/image51.png",
+          "size": [
+            1357,
+            573
+          ],
+          "sha256": "53070d9aeccf8830a8b803c96447a2cd5a0b836c8f54bb5b1de0d9704d823435"
+        },
+        {
+          "name": "word/media/image52.png",
+          "size": [
+            1125,
+            493
+          ],
+          "sha256": "098e71d9a3f871ea7f6c0130e244aaef1688f42f82536cbc66035eb0f803fce2"
+        },
+        {
+          "name": "word/media/image53.png",
+          "size": [
+            418,
+            137
+          ],
+          "sha256": "5729e4c85bef99c2d212568a88de5dd11eb409c4ac393f5326fdef602893ad6b"
+        },
+        {
+          "name": "word/media/image54.png",
+          "size": [
+            1129,
+            499
+          ],
+          "sha256": "68b31b75a392d9408c8f57fa172178667d6bfd118d9a2b01a044f8c07b8a0249"
+        },
+        {
+          "name": "word/media/image55.png",
+          "size": [
+            1103,
+            429
+          ],
+          "sha256": "f3dfb7df6627926315533ba8f254ea529d0931cf2629d75b7cf0370fd4b1ad47"
+        },
+        {
+          "name": "word/media/image56.png",
+          "size": [
+            1359,
+            463
+          ],
+          "sha256": "5d9f8c25c9e9f62b3a883fc948ddcea592da502fd513043a1942dc0250a34fb6"
+        },
+        {
+          "name": "word/media/image48.png",
+          "size": [
+            1125,
+            617
+          ],
+          "sha256": "337732cde703a62e7e763faf5d6c610a07c84646a0d1f6388ecaf01917030bad"
+        },
+        {
+          "name": "word/media/image6.png",
+          "size": [
+            1639,
+            791
+          ],
+          "sha256": "18bc8188e3b2bb919e204efd64d39800db1df8af4c731c8d03375253ac6dbd32"
+        },
+        {
+          "name": "word/media/image1.png",
+          "size": [
+            279,
+            219
+          ],
+          "sha256": "181a3c3ad047bfe29ed924cc6f6cce25d07571ceb0a3a1622035eadf9be2581f"
+        },
+        {
+          "name": "word/media/image2.png",
+          "size": [
+            1670,
+            540
+          ],
+          "sha256": "7ed1b5e96ee07fa03516b6894425bb6df3dc1c3a249f5bb952ef8ba3ed4996ce"
+        },
+        {
+          "name": "word/media/image3.png",
+          "size": [
+            1680,
+            517
+          ],
+          "sha256": "387bc44383d45ca8a63cb62635c3350320a17dbe998255613a60b87424d4206b"
+        },
+        {
+          "name": "word/media/image4.png",
+          "size": [
+            1675,
+            575
+          ],
+          "sha256": "89203291ad6338b3284f1e5152e60080b858f3dbc7199711fa2cf61a60020b99"
+        },
+        {
+          "name": "word/media/image5.png",
+          "size": [
+            279,
+            234
+          ],
+          "sha256": "3abce0a398919a041df5d764213a04e594d7e804c12db7778b414dd6a4a00c12"
+        },
+        {
+          "name": "word/media/image7.png",
+          "size": [
+            1512,
+            416
+          ],
+          "sha256": "eba6d69acd215d33397abdef9626d73f128e46039f41adf967655741b4f5c114"
+        },
+        {
+          "name": "word/media/image8.png",
+          "size": [
+            1609,
+            846
+          ],
+          "sha256": "1a8aa0fedf868e763b5702182f919255d3ae0b5aa2f75a2e2a29a34de61d2055"
+        },
+        {
+          "name": "word/media/image9.png",
+          "size": [
+            1596,
+            521
+          ],
+          "sha256": "092c67d6786bc618daca805d28a81cb60c0aa69ed2d9f56e66040246c08e433c"
+        },
+        {
+          "name": "word/media/image10.png",
+          "size": [
+            274,
+            219
+          ],
+          "sha256": "38f41072aaa4862949d40fca7ebd22ef4cf40441662807ddb83cbf7a44e90d97"
+        },
+        {
+          "name": "word/media/image11.png",
+          "size": [
+            1571,
+            731
+          ],
+          "sha256": "178bc146ed906395197170c8bca9d5ee88f97e0b396bc228db3e8d9fc3952783"
+        },
+        {
+          "name": "word/media/image12.png",
+          "size": [
+            1580,
+            626
+          ],
+          "sha256": "e87159cf10d60d641f44c97743bec1c210a825d4b222262575a1ff719af06a0e"
+        },
+        {
+          "name": "word/media/image13.png",
+          "size": [
+            987,
+            120
+          ],
+          "sha256": "b009451fc66ed71903a99ad17fc419be381577cd3083d630e41b1e452ea515ab"
+        },
+        {
+          "name": "word/media/image14.png",
+          "size": [
+            1670,
+            801
+          ],
+          "sha256": "0f4130703873208128138120c9adbf3e64e43af92ba8cbb8e0cab05c58f6c27e"
+        },
+        {
+          "name": "word/media/image15.png",
+          "size": [
+            1663,
+            908
+          ],
+          "sha256": "f8ce6162994ebb27adc6ce673c04a22c6e093d95223f4d842bc7b06c05fc0e00"
+        },
+        {
+          "name": "word/media/image16.png",
+          "size": [
+            1860,
+            924
+          ],
+          "sha256": "e64a023f19cb15b229a11d45571b9d88a3489c00f12a205bb89f80477d91112d"
+        },
+        {
+          "name": "word/media/image17.png",
+          "size": [
+            982,
+            383
+          ],
+          "sha256": "a74fced689b756f4472404060cdeaf7597279b06d7deb115328bbcd6026939c7"
+        },
+        {
+          "name": "word/media/image18.png",
+          "size": [
+            1349,
+            537
+          ],
+          "sha256": "b18a12e274c67ae86556a7fc1dca4ffd619a89c13143b2d0fdef89dfa8fb2e84"
+        },
+        {
+          "name": "word/media/image19.png",
+          "size": [
+            1357,
+            553
+          ],
+          "sha256": "e55fa82023a368f4de896cf2be43bcf869c5c2a6e080e33e5b9fef328bd7761d"
+        },
+        {
+          "name": "word/media/image20.png",
+          "size": [
+            796,
+            414
+          ],
+          "sha256": "aaca67be045c48d12fa35db19a509c8b5eaedcc97c3a1aa6a89214a310c2b682"
+        },
+        {
+          "name": "word/media/image21.png",
+          "size": [
+            796,
+            476
+          ],
+          "sha256": "eefb55a2f465db5d6f9747daa8add53b21efd33a9163415dd6eb6263c415c3fb"
+        },
+        {
+          "name": "word/media/image22.png",
+          "size": [
+            1347,
+            557
+          ],
+          "sha256": "685734b77fd296a3b5a464b2b6c6759131a05200f62c3dc60326a23fdf6bfe18"
+        },
+        {
+          "name": "word/media/image23.png",
+          "size": [
+            798,
+            449
+          ],
+          "sha256": "d204d225130f5483d7e88cf5bfad1904d05a24d800f343354f99fc80eba69f81"
+        },
+        {
+          "name": "word/media/image24.png",
+          "size": [
+            1355,
+            555
+          ],
+          "sha256": "ff709602ae21099e31ec905b1c4973f4436a4ead0585777fea0a73f72d2257cd"
+        },
+        {
+          "name": "word/media/image25.png",
+          "size": [
+            1333,
+            587
+          ],
+          "sha256": "1078ea6e965f7cef45b3ab763ff7f0c4ef3bb3cf970d5654e0334b635abbf95b"
+        },
+        {
+          "name": "word/media/image26.png",
+          "size": [
+            1361,
+            619
+          ],
+          "sha256": "96febb238529ab70d80ed683f2012aa7c6d6c6c29ff1b8e2c19f1e4dea28c6fc"
+        },
+        {
+          "name": "word/media/image27.png",
+          "size": [
+            798,
+            608
+          ],
+          "sha256": "2d97d5a004439cfa9f4b81adb6eba4ea3650ebab93583d7ff0c046a2233954fe"
+        },
+        {
+          "name": "word/media/image28.png",
+          "size": [
+            1132,
+            410
+          ],
+          "sha256": "33e3178d9c0e76c7a8b7ea77c73ec8beb01eb01454874e87a60ee0140e0eb37a"
+        },
+        {
+          "name": "word/media/image29.png",
+          "size": [
+            799,
+            611
+          ],
+          "sha256": "d80124f2db1529a7237c217397510d2552dde582376614ad371b09abf4ecb872"
+        },
+        {
+          "name": "word/media/image30.png",
+          "size": [
+            1129,
+            363
+          ],
+          "sha256": "bb3c00b7a95b61354ef13369eefb3643a91ddedf4be97cceaad5fa4ba3054322"
+        },
+        {
+          "name": "word/media/image31.png",
+          "size": [
+            1361,
+            623
+          ],
+          "sha256": "101e63e185e4363e2e4273e281805d5e90a097a32bdc6154430bec23d8795ab7"
+        },
+        {
+          "name": "word/media/image32.png",
+          "size": [
+            1345,
+            603
+          ],
+          "sha256": "7874ddb96ee4d981cb0e1255ff5c19d2ae960545ef10c62930892ecba5a0a78b"
+        },
+        {
+          "name": "word/media/image33.png",
+          "size": [
+            1354,
+            681
+          ],
+          "sha256": "deca011bfc3d7d7d264b82754a722b38e416006d561ce87a2b5f67a70470946c"
+        },
+        {
+          "name": "word/media/image34.png",
+          "size": [
+            1354,
+            747
+          ],
+          "sha256": "fb9415afc06bcfb86407c93d4cf94d7d7815432c9ce05c631aa825778f29556b"
+        },
+        {
+          "name": "word/media/image35.png",
+          "size": [
+            1350,
+            759
+          ],
+          "sha256": "cf8cecbae554c4b634cd247101bedba627176140c4727de1cc7ec98b034d9979"
+        },
+        {
+          "name": "word/media/image36.png",
+          "size": [
+            1123,
+            615
+          ],
+          "sha256": "b6c6a6a7510cedcfb8395707e4b86e55f2e255f8c7191249e17d4731966e77f4"
+        },
+        {
+          "name": "word/media/image37.png",
+          "size": [
+            978,
+            348
+          ],
+          "sha256": "37e796f8ff063cb181b8ae3027a46d80a0ec6d28703da9b87e91798e1f1be8f7"
+        },
+        {
+          "name": "word/media/image38.png",
+          "size": [
+            419,
+            558
+          ],
+          "sha256": "c0073701042ed16d3a808389167918365f300a720d9290ba3a2894a2b0bac0b0"
+        },
+        {
+          "name": "word/media/image39.png",
+          "size": [
+            1365,
+            627
+          ],
+          "sha256": "138707c3f56bc1621bd72c2d33c644dd06ff23c2309758b048cf4c6aa282a0c9"
+        },
+        {
+          "name": "word/media/image40.png",
+          "size": [
+            974,
+            433
+          ],
+          "sha256": "cd7eb95e3082baa97add708cd69fb08764cd7f649e317d1ab28399eb1125743e"
+        },
+        {
+          "name": "word/media/image41.png",
+          "size": [
+            628,
+            282
+          ],
+          "sha256": "9a09c9cb9aad47219de863f732c9fc03148c7c111beb85cea544fd7cae93339c"
+        },
+        {
+          "name": "word/media/image42.png",
+          "size": [
+            979,
+            436
+          ],
+          "sha256": "a2c1c60df77230d517335d1a49079ead76abc91c130d0889ac7c40b25ad363e8"
+        },
+        {
+          "name": "word/media/image43.png",
+          "size": [
+            417,
+            136
+          ],
+          "sha256": "a759753def7b53c5eb1c399a83520ee007a27983fcacd4ac76cb0e612b105ee2"
+        },
+        {
+          "name": "word/media/image44.png",
+          "size": [
+            1123,
+            619
+          ],
+          "sha256": "b2920e0cf150d68c0a568d28e12a0a2b1309a920767b9cb3f4c806926325a852"
+        },
+        {
+          "name": "word/media/image45.png",
+          "size": [
+            418,
+            133
+          ],
+          "sha256": "c152b72599b49213a44c1b0c5979388c108d239bdeb2f6482e5f636194523d2a"
+        },
+        {
+          "name": "word/media/image46.png",
+          "size": [
+            1361,
+            579
+          ],
+          "sha256": "0fe0a17423db4d09c00bce2fbef46860c4fc5c979325b4085262ef80f6261bcb"
+        },
+        {
+          "name": "word/media/image47.png",
+          "size": [
+            1131,
+            621
+          ],
+          "sha256": "34ecbb87153e7a3c599a1ae2285fc408a9510ea69a3160fb82c59ceb219e9872"
+        },
+        {
+          "name": "word/media/image49.png",
+          "size": [
+            1366,
+            768
+          ],
+          "sha256": "d868de1590bc37e9c68e30a0c9e4c4fcd92738f47c8d1217c704d96690284ded"
+        },
+        {
+          "name": "word/media/image50.png",
+          "size": [
+            1070,
+            222
+          ],
+          "sha256": "82932b194eca1762007cb08b6cda240e67fa1ca6b9335d6d9690fa44698a00d0"
+        }
+      ],
+      "external_relationship_count": 12
+    },
+    {
+      "id": "vi-native-006",
+      "source_sha256": "9ff6bdcf9d234f603e1371a4958e4b899625ad3e7d8369038099d2189063bfe5",
+      "media": [],
+      "external_relationship_count": 0
+    }
+  ],
+  "model_called": false,
+  "visual_review_status": "images_generated_pending_review",
+  "training_eligible": false
+}

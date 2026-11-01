@@ -1,0 +1,21 @@
+{
+  "status": "fixed_and_validated",
+  "applied_to_source": true,
+  "behavior": "Model được chọn rõ phải khớp endpoint đăng ký; tên không hỗ trợ hoặc request lỗi không lặng lẽ đổi model. Tự chọn không có preferModel giữ fallback cũ.",
+  "explicit_optional_model": "qwen2.5:1.5b-instruct",
+  "default_models_changed": false,
+  "tests_total_passed": 230,
+  "lint_passed": true,
+  "typecheck_passed": true,
+  "build_passed": true,
+  "live_report": "benchmark/experiments/agent-live-model-probe-v1/tong-hop.json",
+  "actual_chat_requests": 40,
+  "code_sha256": {
+    "src/ai/agents/slmCatalog.ts": "97c5b2f31ba863ed07d064382116ccee47eccd6e8721100608616b285ab7b7ba",
+    "src/ai/agents/slmClient.ts": "7edf52e61620e19a7152a0ed865751dbf2db92e272bc3bcda68b5fd35a3eec12"
+  },
+  "limitations": [
+    "Sửa chọn model không đồng nghĩa tăng nhận diện IPI.",
+    "Đã kiểm chứng qua bridge/core pipeline, chưa thao tác UI/native IPC trên app đang mở."
+  ]
+}

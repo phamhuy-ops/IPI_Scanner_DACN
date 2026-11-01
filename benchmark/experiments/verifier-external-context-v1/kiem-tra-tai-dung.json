@@ -1,0 +1,23 @@
+{
+  "records": 24,
+  "payloads_rebuilt_and_parser_valid": 48,
+  "metadata_excluded": true,
+  "source_hashes_unchanged": true,
+  "labels": {
+    "confirmed": 12,
+    "dismissed": 6,
+    "uncertain": 6
+  },
+  "languages": {
+    "en": 21,
+    "en-vi": 3
+  },
+  "source_parent_ids": 12,
+  "unchanged_external_records": 18,
+  "synthetic_attacks": 6,
+  "training_ready": false,
+  "final_split_created": false,
+  "model_called": false,
+  "code_sha256": "691d3e4a882fbb40848e2ba944313ed3d004fc8e45646535f7807549e897a670",
+  "note": "Chỉ kiểm tra cơ học; ngữ nghĩa do AI đánh giá, không phải xác nhận độc lập."
+}

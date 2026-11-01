@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-2",
+      "addressee": "unclear",
+      "framing": "unclear",
+      "deviation": "unclear",
+      "hasDirective": true,
+      "stance": "uncertain",
+      "reason": "Chưa biết tài khoản, mức quyền, người thực hiện và yêu cầu đã thống nhất; chưa xác định được chỉ dẫn vượt quyền hoặc công việc hợp lệ."
+    }
+  ],
+  "discoveries": []
+}

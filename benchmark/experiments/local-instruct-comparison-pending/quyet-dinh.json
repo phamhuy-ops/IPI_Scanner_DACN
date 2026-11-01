@@ -1,0 +1,6 @@
+{
+  "status": "authorized_then_completed_rejected",
+  "result": "benchmark/results/local-instruct-comparison-GGzers/quality-audit.json",
+  "authorization": "benchmark/results/local-instruct-comparison-GGzers/uy-quyen-va-lenh.json",
+  "default_changed": false
+}

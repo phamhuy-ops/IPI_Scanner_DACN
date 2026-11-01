@@ -1,0 +1,11 @@
+{
+  "downloaded": true,
+  "model": "leolee99/PIGuard",
+  "revision": "dd78b24e330193a22d2293ac66922dd4f982f563",
+  "manifest": "E:\\IPI-Training\\weights\\piguard\\local-manifest.json",
+  "weightsBytes": 737719272,
+  "custom_remote_code_executed": false,
+  "backend": "piguard-reviewed-v1",
+  "training": false,
+  "device": "cpu"
+}

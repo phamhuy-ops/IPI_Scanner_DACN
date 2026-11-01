@@ -1,0 +1,22 @@
+﻿{
+    "predictions.jsonl":  {
+                              "bytes":  12653501,
+                              "sha256":  "d71d090ce2e5593a962cee7bae350100d24d484484d1c885ccbae6b503c448f9"
+                          },
+    "comparison.json":  {
+                            "bytes":  1104,
+                            "sha256":  "b47bab51abdf6cbadb4e53ef843244512e487793fb3d24ec42df5c9bd199d7f9"
+                        },
+    "summary.json":  {
+                         "bytes":  2239,
+                         "sha256":  "d8ef30b4d793a6687dcfdca6c502870a9bc66be2f17a57d1859840b7580df591"
+                     },
+    "errors.jsonl":  {
+                         "bytes":  57696781,
+                         "sha256":  "ba40e6ca0762e9a716fd6b130e078ab14882e0acbcf110e2538d09b1290f8aae"
+                     },
+    "by-group.json":  {
+                          "bytes":  8377067,
+                          "sha256":  "6db1c870b3a41353af334111c0e66dcb8697aa1212abf8369f5f518534c6554e"
+                      }
+}

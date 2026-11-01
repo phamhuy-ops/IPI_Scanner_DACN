@@ -1,0 +1,4 @@
+Danh sách phiếu hỗ trợ
+Ghi chú điều phối dùng tên “phiếu đó”.
+Đưa phiếu đó lên trước theo thỏa thuận ở lượt trao đổi trước.
+Hai phiếu được tạo trong cùng buổi sáng.

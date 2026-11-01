@@ -1,0 +1,35 @@
+{
+  "sources": 15,
+  "long_sources": 9,
+  "proposed_groups": 5,
+  "windows": 251,
+  "selected_annotated_windows": 15,
+  "contract_examples": 30,
+  "parser_valid": 30,
+  "full_source_window_coverage": true,
+  "window_selection": "annotation_guided_preparation_only_not_runtime_or_end_to_end_evaluation",
+  "span_mapping": "UTF16_half_open_offsets_and_1_based_lines",
+  "context_rule": "whole_enclosing_lines_plus_available_background_within_900_UTF16",
+  "other_windows_labeled_benign": false,
+  "training_ready": false,
+  "final_split_created": false,
+  "independent": false,
+  "human_span_review_complete": false,
+  "source_sha256": {
+    "rows": "60766eada7697fd7db6cd6531c1f4433a0dad8ae1e4ca0f66e9eac8b7a3d2862",
+    "reviews": "2fc535c1412720db01c3ec478da0b7f94acf7540816c7353cf9669db199bc5dd"
+  },
+  "code_sha256": {
+    "scripts/normalize-verifier-gap.cjs": "362fe3030b2f6fea45df4a7ab604586e007b3f781df467f3ae1ec44cbf3a6e11",
+    "scripts/verifier-batch-renderer.ts": "804bc01e9cc4175ab4213794deb11ca35ecac1ff948e42ca8bfff22d243db5a2"
+  },
+  "assets_sha256": {
+    "nhan-va-cua-so.jsonl": "af9d21ece1690c71ffcd85d83b6bfb6d52aa9efd9160579d3ddb2c5cc351e963",
+    "ban-xem-truoc.json": "3a5eabd92d7a949a2514f891378f74c90860904420b40be926c9837e42ae4eb0"
+  },
+  "limitations": [
+    "Cửa sổ dựa vào nhãn chỉ để chuẩn bị dữ liệu; không chứng minh selector tìm được bằng chứng trong tài liệu gốc.",
+    "Giữ nguyên dòng bao khung không bảo đảm mọi phụ thuộc ngữ nghĩa xa; cần duyệt riêng cửa sổ/span.",
+    "Các cửa sổ không có nhãn không tự được coi là sạch; chưa xuất train."
+  ]
+}

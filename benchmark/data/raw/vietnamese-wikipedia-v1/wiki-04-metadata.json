@@ -1,0 +1,19 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 16162,
+        "ns": 0,
+        "title": "Hệ sinh thái",
+        "revisions": [
+          {
+            "revid": 75272270,
+            "parentid": 75119737,
+            "timestamp": "2026-07-05T08:52:24Z"
+          }
+        ]
+      }
+    ]
+  }
+}

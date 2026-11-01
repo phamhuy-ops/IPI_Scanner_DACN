@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "inputs_sha256": {
+    "benchmark/data/annotations/ngu-canh-v1/mau-cho-duyet.jsonl": "1d4c98e68c5d1d4e0fead956183519ded488eb3f8c5e7814ca3f5fd6572757ba",
+    "benchmark/data/annotations/verifier-batch-v1/mau-cho-duyet.jsonl": "c2eadfc93b7643b6a91931003c8ab1e8a55e83a0fcfa26cdf894f33d93156eac",
+    "benchmark/data/annotations/verifier-expansion-v1/hang-cho-gan-nhan.jsonl": "1ffa6af90945b596c6495fcc08361481f1571f5a6b8028633b0ce7eb1d7dbc5a",
+    "benchmark/data/annotations/verifier-vietnamese-v1/mau-cho-duyet.jsonl": "630a45deef539dbf5a14b536d4cc12af6fc9b061357e15660f200233e01db5e5"
+  },
+  "method": "Nhóm đã biết + NFKC/casefold/whitespace + Jaccard token trigram >=0.8",
+  "prior_records": 406,
+  "new_records": 15,
+  "cross_matches": [],
+  "new_groups": [
+    {
+      "id": "vg-d94518c2d0a3fc5e",
+      "members": [
+        "V3-001",
+        "V3-005",
+        "V3-014"
+      ],
+      "size": 3,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-5857f573c78a2b6a",
+      "members": [
+        "V3-002",
+        "V3-007",
+        "V3-012"
+      ],
+      "size": 3,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-62a1e7f3b83a6a08",
+      "members": [
+        "V3-003",
+        "V3-004",
+        "V3-006"
+      ],
+      "size": 3,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-aa5444dea808f011",
+      "members": [
+        "V3-008",
+        "V3-009",
+        "V3-010"
+      ],
+      "size": 3,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-eccc47f2216ac899",
+      "members": [
+        "V3-011",
+        "V3-013",
+        "V3-015"
+      ],
+      "size": 3,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    }
+  ],
+  "errors": [],
+  "valid_source_group_audit": true,
+  "final_split_created": false,
+  "training_ready": false,
+  "independent": false,
+  "limitations": [
+    "Không so ngữ nghĩa, không tự phát hiện bản dịch khác chữ.",
+    "Chỉ so với 406 mẫu trong hàng chờ/tham chiếu, chưa toàn bộ BIPIA/dev/test/fixture.",
+    "Các mẫu mới tự soạn theo lỗi dev; không phải nguồn kiểm chứng độc lập.",
+    "Audit này chỉ kiểm tra nguồn và nhóm; kết quả nhãn/parser xem tong-ket-ra-soat.json.",
+    "Chưa có tài liệu dài hoặc kiểm tra trích xuất PDF/DOCX."
+  ]
+}

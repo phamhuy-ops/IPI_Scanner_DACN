@@ -1,0 +1,433 @@
+{
+  "source": "verifier-external-uncertain-reviewed-v1",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "offline": true,
+  "examples": 36,
+  "source_records": 18,
+  "source_parents": 18,
+  "mask_valid": 36,
+  "collator_valid": 36,
+  "token_min": 723,
+  "token_max": 1556,
+  "target_max": 99,
+  "over_budget": {
+    "1024": 11,
+    "1536": 1,
+    "2048": 0
+  },
+  "rows": [
+    {
+      "id": "verifier-external-ai-v1:ext3-013-whole_source",
+      "source_record_id": "verifier-external-ai-v1:ext3-013",
+      "source_parent_id": "injecagent:dh:ab5c6815eb9e74ed:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 782,
+      "padded_tokens": 784,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-013-none",
+      "source_record_id": "verifier-external-ai-v1:ext3-013",
+      "source_parent_id": "injecagent:dh:ab5c6815eb9e74ed:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 755,
+      "padded_tokens": 760,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-015-whole_source",
+      "source_record_id": "verifier-external-ai-v1:ext3-015",
+      "source_parent_id": "injecagent:dh:9623212792a77442:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 750,
+      "padded_tokens": 752,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-015-none",
+      "source_record_id": "verifier-external-ai-v1:ext3-015",
+      "source_parent_id": "injecagent:dh:9623212792a77442:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 723,
+      "padded_tokens": 728,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-017-whole_source",
+      "source_record_id": "verifier-external-ai-v1:ext3-017",
+      "source_parent_id": "injecagent:dh:936375a380ed643a:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 847,
+      "padded_tokens": 848,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-017-none",
+      "source_record_id": "verifier-external-ai-v1:ext3-017",
+      "source_parent_id": "injecagent:dh:936375a380ed643a:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 820,
+      "padded_tokens": 824,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-019-whole_source",
+      "source_record_id": "verifier-external-ai-v1:ext3-019",
+      "source_parent_id": "injecagent:dh:ba2790c3a625cc4c:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 778,
+      "padded_tokens": 784,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-019-none",
+      "source_record_id": "verifier-external-ai-v1:ext3-019",
+      "source_parent_id": "injecagent:dh:ba2790c3a625cc4c:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 751,
+      "padded_tokens": 752,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-021-whole_source",
+      "source_record_id": "verifier-external-ai-v1:ext3-021",
+      "source_parent_id": "injecagent:dh:05da6375b0b5c74e:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 764,
+      "padded_tokens": 768,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-021-none",
+      "source_record_id": "verifier-external-ai-v1:ext3-021",
+      "source_parent_id": "injecagent:dh:05da6375b0b5c74e:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 737,
+      "padded_tokens": 744,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-023-whole_source",
+      "source_record_id": "verifier-external-ai-v1:ext3-023",
+      "source_parent_id": "injecagent:dh:b452a53c8ab4a0ae:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 780,
+      "padded_tokens": 784,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-ai-v1:ext3-023-none",
+      "source_record_id": "verifier-external-ai-v1:ext3-023",
+      "source_parent_id": "injecagent:dh:b452a53c8ab4a0ae:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 753,
+      "padded_tokens": 760,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-005-whole_source",
+      "source_record_id": "verifier-vietnamese-articles-v1:vi-article-005",
+      "source_parent_id": "vi-wikipedia-page:13023",
+      "mode": "whole_source",
+      "tokens": 1162,
+      "padded_tokens": 1168,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-005-none",
+      "source_record_id": "verifier-vietnamese-articles-v1:vi-article-005",
+      "source_parent_id": "vi-wikipedia-page:13023",
+      "mode": "none",
+      "tokens": 1135,
+      "padded_tokens": 1136,
+      "supervised_tokens": 82,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-010-whole_source",
+      "source_record_id": "verifier-vietnamese-articles-v1:vi-article-010",
+      "source_parent_id": "vi-wikipedia-page:32949",
+      "mode": "whole_source",
+      "tokens": 1120,
+      "padded_tokens": 1120,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-010-none",
+      "source_record_id": "verifier-vietnamese-articles-v1:vi-article-010",
+      "source_parent_id": "vi-wikipedia-page:32949",
+      "mode": "none",
+      "tokens": 1093,
+      "padded_tokens": 1096,
+      "supervised_tokens": 82,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-020-whole_source",
+      "source_record_id": "verifier-vietnamese-articles-v1:vi-article-020",
+      "source_parent_id": "vi-wikipedia-page:16162",
+      "mode": "whole_source",
+      "tokens": 1054,
+      "padded_tokens": 1056,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-020-none",
+      "source_record_id": "verifier-vietnamese-articles-v1:vi-article-020",
+      "source_parent_id": "vi-wikipedia-page:16162",
+      "mode": "none",
+      "tokens": 1027,
+      "padded_tokens": 1032,
+      "supervised_tokens": 82,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-025-whole_source",
+      "source_record_id": "verifier-vietnamese-articles-v1:vi-article-025",
+      "source_parent_id": "vi-wikipedia-page:106902",
+      "mode": "whole_source",
+      "tokens": 1049,
+      "padded_tokens": 1056,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-025-none",
+      "source_record_id": "verifier-vietnamese-articles-v1:vi-article-025",
+      "source_parent_id": "vi-wikipedia-page:106902",
+      "mode": "none",
+      "tokens": 1022,
+      "padded_tokens": 1024,
+      "supervised_tokens": 82,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-030-whole_source",
+      "source_record_id": "verifier-vietnamese-articles-v1:vi-article-030",
+      "source_parent_id": "vi-wikipedia-page:48299",
+      "mode": "whole_source",
+      "tokens": 1144,
+      "padded_tokens": 1144,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-vietnamese-articles-v1:vi-article-030-none",
+      "source_record_id": "verifier-vietnamese-articles-v1:vi-article-030",
+      "source_parent_id": "vi-wikipedia-page:48299",
+      "mode": "none",
+      "tokens": 1117,
+      "padded_tokens": 1120,
+      "supervised_tokens": 82,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-013-whole_source",
+      "source_record_id": "verifier-external-context-v1:ec-013",
+      "source_parent_id": "injecagent:dh:2b72a89b4ff1f1bb:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 976,
+      "padded_tokens": 976,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-013-none",
+      "source_record_id": "verifier-external-context-v1:ec-013",
+      "source_parent_id": "injecagent:dh:2b72a89b4ff1f1bb:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 949,
+      "padded_tokens": 952,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-015-whole_source",
+      "source_record_id": "verifier-external-context-v1:ec-015",
+      "source_parent_id": "injecagent:dh:70a22a3890a0bd2b:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 790,
+      "padded_tokens": 792,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-015-none",
+      "source_record_id": "verifier-external-context-v1:ec-015",
+      "source_parent_id": "injecagent:dh:70a22a3890a0bd2b:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 763,
+      "padded_tokens": 768,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-017-whole_source",
+      "source_record_id": "verifier-external-context-v1:ec-017",
+      "source_parent_id": "injecagent:dh:85b96483287e5b8b:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 764,
+      "padded_tokens": 768,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-017-none",
+      "source_record_id": "verifier-external-context-v1:ec-017",
+      "source_parent_id": "injecagent:dh:85b96483287e5b8b:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 737,
+      "padded_tokens": 744,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-019-whole_source",
+      "source_record_id": "verifier-external-context-v1:ec-019",
+      "source_parent_id": "injecagent:dh:2790715aca41a2bc:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 784,
+      "padded_tokens": 784,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-019-none",
+      "source_record_id": "verifier-external-context-v1:ec-019",
+      "source_parent_id": "injecagent:dh:2790715aca41a2bc:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 757,
+      "padded_tokens": 760,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-021-whole_source",
+      "source_record_id": "verifier-external-context-v1:ec-021",
+      "source_parent_id": "injecagent:dh:aa07ba432f74710b:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 860,
+      "padded_tokens": 864,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-021-none",
+      "source_record_id": "verifier-external-context-v1:ec-021",
+      "source_parent_id": "injecagent:dh:aa07ba432f74710b:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 833,
+      "padded_tokens": 840,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-023-whole_source",
+      "source_record_id": "verifier-external-context-v1:ec-023",
+      "source_parent_id": "injecagent:dh:c0eec749c020f197:WebBrowserNavigateTo",
+      "mode": "whole_source",
+      "tokens": 911,
+      "padded_tokens": 912,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-external-context-v1:ec-023-none",
+      "source_record_id": "verifier-external-context-v1:ec-023",
+      "source_parent_id": "injecagent:dh:c0eec749c020f197:WebBrowserNavigateTo",
+      "mode": "none",
+      "tokens": 884,
+      "padded_tokens": 888,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-044-whole_source",
+      "source_record_id": "verifier-llmail-expansion-v1:llmail-phase2-044",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:44",
+      "mode": "whole_source",
+      "tokens": 1556,
+      "padded_tokens": 1560,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-044-none",
+      "source_record_id": "verifier-llmail-expansion-v1:llmail-phase2-044",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:44",
+      "mode": "none",
+      "tokens": 1322,
+      "padded_tokens": 1328,
+      "supervised_tokens": 89,
+      "mask_valid": true,
+      "collator_valid": true
+    }
+  ],
+  "input_sha256": {
+    "manifest.json": "986fd15d1e8d7c9a95e1159bba70131588eec3e6420ea4d948d924a18b47823c",
+    "ban-xem-truoc.json": "a6ad7e9758be3a12d36cebe16854970d30b3de96599770f6450b063d4438942a"
+  },
+  "code_sha256": {
+    "audit_verifier_preview.py": "bb0a838c88d64b7ff7088e68f4406a6e742f3a6ab8e9406889e0c659d8c51146",
+    "audit_verifier_tokenizer.py": "90bb22dc2f4cb18ac168abe053f2bf87b1e295269b92a42ee3bd666488b42f9b",
+    "verifier_collator.py": "594bf13412567aef5c9439241de5dbdcdb7fbfd7cd3f1cd40c644aaeaa79b478"
+  },
+  "training_ready": false,
+  "no_model_forward_or_updates": true,
+  "runtime_changed": false,
+  "limitations": [
+    "Token/mask/parser đúng không chứng minh nhãn AI đúng hoặc độc lập ngữ nghĩa.",
+    "Không truncate; bản vượt 2048 bị đánh dấu collator_valid=false, chưa tạo bài học."
+  ]
+}

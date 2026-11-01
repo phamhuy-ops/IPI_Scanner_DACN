@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "scope": "technical_correctness_not_detection_quality",
+  "tests": 8,
+  "suites": [
+    {
+      "name": "test_verifier_trainer.py",
+      "passed": 3,
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 -m unittest discover -s scripts -p test_verifier_trainer.py -v"
+    },
+    {
+      "name": "test_verifier_collator.py",
+      "passed": 3,
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 -m unittest discover -s scripts -p test_verifier_collator.py -v"
+    },
+    {
+      "name": "test_verifier_supervised_loss.py",
+      "passed": 2,
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 -m unittest discover -s scripts -p test_verifier_supervised_loss.py -v"
+    }
+  ],
+  "code_sha256": {
+    "scripts/test_verifier_trainer.py": "2065fc795ba969093d0f105f4232ecccb8b4d4a6f397943a9ce317f38390fd83",
+    "scripts/test_verifier_collator.py": "bd02e5482012f7fa0fbc713cd821fb74d55ffd1446f71c374128fa2568d04318",
+    "scripts/test_verifier_supervised_loss.py": "9b619ddfbb0cdb7d04f1ef2f17c3fb4e77475916b2a1cf6ca14a73bd0f10cb17",
+    "scripts/verifier_trainer.py": "8968cd3d8614103ccbc40fc39024d149b91914da91d8b72aa4f296e37e3b6490"
+  }
+}

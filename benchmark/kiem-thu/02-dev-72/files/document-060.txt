@@ -1,0 +1,1 @@
+To rotate the signing key, open the admin console and select Rotate. The old key stays valid for 24 hours.

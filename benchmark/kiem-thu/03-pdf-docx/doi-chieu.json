@@ -1,0 +1,65 @@
+{
+  "records": [
+    {
+      "file": "03-pdf-docx/files/document-001.pdf",
+      "sha256": "6e302b824b22c61cbf8dc5cf7f459e1ee643c7f46c85ac53efec71cfcedbdaf6",
+      "bytes": 4399875,
+      "source": "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/huong-dan-cong-thong-tin-truong-hoc-ha-noi.pdf",
+      "provenance": "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/manifest.json",
+      "original_name": "huong-dan-cong-thong-tin-truong-hoc-ha-noi.pdf",
+      "role": "extraction_coverage_pending_review",
+      "expected_label": null,
+      "rights_review": "pending",
+      "privacy_review": "pending",
+      "training_eligible": false,
+      "independent": false,
+      "parent_id": "hanoi-school-portal-guide"
+    },
+    {
+      "file": "03-pdf-docx/files/document-002.docx",
+      "sha256": "faafd2847ddea591b62d66ff46af10626e7a79b48eff046bf8f47b9d10f2e561",
+      "bytes": 3801927,
+      "source": "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/huong-dan-hoi-quy-van-thu-luu-tru-phu-tho.docx",
+      "provenance": "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/manifest.json",
+      "original_name": "huong-dan-hoi-quy-van-thu-luu-tru-phu-tho.docx",
+      "role": "extraction_coverage_pending_review",
+      "expected_label": null,
+      "rights_review": "pending",
+      "privacy_review": "pending",
+      "training_eligible": false,
+      "independent": false,
+      "parent_id": "phutho-guide-4835"
+    },
+    {
+      "file": "03-pdf-docx/files/document-003.pdf",
+      "sha256": "a0ef25216c3cd800c4fb2f222e84e601d8f4f1010a9b4e7ff456c413f93aa9fe",
+      "bytes": 1115102,
+      "source": "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/huong-dan-oms-vien-han-lam.pdf",
+      "provenance": "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/manifest.json",
+      "original_name": "huong-dan-oms-vien-han-lam.pdf",
+      "role": "extraction_coverage_pending_review",
+      "expected_label": null,
+      "rights_review": "pending",
+      "privacy_review": "pending",
+      "training_eligible": false,
+      "independent": false,
+      "parent_id": "vast-oms-guide"
+    },
+    {
+      "file": "03-pdf-docx/files/document-004.docx",
+      "sha256": "9ff6bdcf9d234f603e1371a4958e4b899625ad3e7d8369038099d2189063bfe5",
+      "bytes": 1805320,
+      "source": "benchmark/data/incoming/public-vi-documents/nguon-vi-bo-sung-v1/mau-xac-nhan-sinh-vien-hnue.docx",
+      "provenance": "benchmark/data/incoming/public-vi-documents/nguon-vi-bo-sung-v1/manifest.json",
+      "original_name": "mau-xac-nhan-sinh-vien-hnue.docx",
+      "role": "extraction_coverage_pending_review",
+      "expected_label": null,
+      "rights_review": "pending",
+      "privacy_review": "pending",
+      "training_eligible": false,
+      "independent": false,
+      "parent_id": "hnue-form-current-student-faculties"
+    }
+  ],
+  "note": "Chỉ thư mục files là input. Nhãn, annotation và metadata nằm ngoài files, không đưa vào scanner/model."
+}

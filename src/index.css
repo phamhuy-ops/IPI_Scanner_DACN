@@ -128,6 +128,9 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .ipi-finding-loc { color: #6fa7d9; font-family: Consolas, monospace; }
 .ipi-coverage-summary { margin-top: 14px; padding: 10px 12px; border-left: 3px solid #4b9ce3; background: #101820; color: #b8c8d6; font-size: 12px; line-height: 1.55; }
 .theme-light .ipi-coverage-summary { background: #edf2f3; color: #405963; border-color: #4d9ab4; }
+.ipi-review-progress dl { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; margin: 12px 0; }
+.ipi-review-progress dt { overflow-wrap: anywhere; }
+.ipi-review-progress dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; }
 .copilot-explain-box { margin-top: 14px; padding: 13px; background: #101820; border: 1px solid #2d4054; color: #b8c8d6; line-height: 1.6; }
 .ipi-verdict-body { display: grid; gap: 10px; margin-top: 14px; }
 .ipi-verdict-block { padding: 12px; background: #101820; border-left: 3px solid #4b9ce3; }

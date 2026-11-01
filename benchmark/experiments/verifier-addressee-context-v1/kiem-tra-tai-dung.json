@@ -1,0 +1,18 @@
+{
+  "records": 7,
+  "quarantined": 1,
+  "preview_rebuilt_and_parser_valid": 14,
+  "source_hashes_unchanged": true,
+  "metadata_excluded_from_payload": true,
+  "human_approval_transferred": false,
+  "labels": {
+    "benign": 5,
+    "malicious": 2,
+    "uncertain": 0
+  },
+  "initial_groups": 2,
+  "training_ready": false,
+  "final_split_created": false,
+  "note": "Chưa chấm độ đúng ngữ nghĩa độc lập; xem corpus v8 và token audit riêng.",
+  "code_sha256": "17368e612e571323a95cdc6df22025991fa56fab21c5753ed77f867993f77a7a"
+}

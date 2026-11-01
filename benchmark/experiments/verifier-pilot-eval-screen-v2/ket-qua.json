@@ -1,0 +1,14 @@
+{
+  "scope": "paired_small_dev_screen_not_full_dev",
+  "source_records": 6,
+  "requests_per_mode": 12,
+  "same_model_instance": true,
+  "adapter_off_on": true,
+  "seconds_total": 160.23897030000808,
+  "peak_vram_allocated": 2088032768,
+  "peak_vram_reserved": 2218786816,
+  "trainable_parameters": 1089536,
+  "training_started_during_eval": false,
+  "probe_used": false,
+  "runtime_changed": false
+}

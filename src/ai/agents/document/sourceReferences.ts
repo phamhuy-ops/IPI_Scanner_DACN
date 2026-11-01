@@ -49,6 +49,10 @@ export function buildSourceReferences(chunks: SemanticChunk[], expected: IpiSusp
     if (!citation) continue;
     const chunk = chunks.find(row => row.chunkId === citation.chunkId);
     if (!chunk) continue;
+    if (citation.startOffset !== undefined || citation.endOffset !== undefined) {
+      if (validCitationOffsets(citation, chunk)) add(chunk, citation.startOffset!, citation.endOffset!, false);
+      continue;
+    }
     let offset = chunk.text.indexOf(citation.quote);
     while (offset >= 0) {
       const line = chunk.startLine + chunk.text.slice(0, offset).split(/\r\n?|\n/).length - 1;
@@ -63,8 +67,19 @@ export function suspicionReference(item: IpiSuspicion, refs: SourceReference[], 
   return refs.find(ref => {
     if (ref.chunkId !== item.citation?.chunkId || ref.text !== item.citation.quote) return false;
     const chunk = chunks.find(row => row.chunkId === ref.chunkId)!;
+    if (item.citation.startOffset !== undefined || item.citation.endOffset !== undefined) {
+      return validCitationOffsets(item.citation, chunk) && ref.startOffset === item.citation.startOffset && ref.endOffset === item.citation.endOffset;
+    }
     return chunk.startLine + chunk.text.slice(0, ref.startOffset).split(/\r\n?|\n/).length - 1 === item.citation.startLine;
   });
+}
+
+function validCitationOffsets(citation: NonNullable<IpiSuspicion['citation']>, chunk: SemanticChunk): boolean {
+  const { startOffset: start, endOffset: end } = citation;
+  return Number.isSafeInteger(start) && Number.isSafeInteger(end) && start! >= 0 && end! > start! && end! <= chunk.text.length
+    && chunk.text.slice(start, end) === citation.quote
+    && chunk.startLine + chunk.text.slice(0, start).split(/\r\n?|\n/).length - 1 === citation.startLine
+    && citation.startLine + citation.quote.split(/\r\n?|\n/).length - 1 === citation.endLine;
 }
 
 export const COMPACT_REASON_LIMIT = 240;

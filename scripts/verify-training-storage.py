@@ -44,8 +44,8 @@ def main():
     report = {"recorded_at": datetime.datetime.now(datetime.timezone.utc).isoformat(), "root": str(root),
               "python": sys.version, "paths": paths, "directories": checks, "cwd": os.getcwd(),
               "storage_checks_passed": True, "training_ready": False,
-              "note": "Chỉ kiểm tra lưu trữ. Chưa cài thư viện ML hoặc chạy forward/backward; checkpoint/adapter output_dir của trainer tương lai vẫn phải đặt rõ theo cấu hình."}
-    output = root / "logs" / "training-storage-check.json"
+              "note": "Chỉ kiểm tra lưu trữ, không đánh giá chất lượng model. Trainer vẫn phải truyền rõ checkpoint/adapter output_dir trên E."}
+    output = root / "logs" / ("training-storage-check-" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S-%f") + ".json")
     output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     sys.stdout.reconfigure(encoding="utf-8")
     print(json.dumps({"output": str(output), **report}, ensure_ascii=False, indent=2))

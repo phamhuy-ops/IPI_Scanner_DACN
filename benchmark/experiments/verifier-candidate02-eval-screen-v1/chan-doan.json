@@ -1,0 +1,14 @@
+{
+  "status": "candidate_02_rejected_not_promoted",
+  "budget_used": 2,
+  "budget_planned": 2,
+  "findings": [
+    "Không sửa thêm ca stance nào so candidate-01 trên screen: cùng 4/12 đúng.",
+    "Hai FP cũ vf-003/vf-004 whole_source chuyển thành lỗi, không thành TN; vf-003 none xuất hiện FP mới.",
+    "vf-004 whole_source tự ghi deviation none nhưng stance confirmed; vf-007 none trả discovery dismissed, trái hợp đồng đầu ra.",
+    "vf-001 và vf-007 whole_source giữ sai deviation; vf-008 none chưa trích trúng directive."
+  ],
+  "next_action": "Trước khi đề xuất lượt train mới, đo khả năng khớp hợp đồng đầu ra trên train và dev bằng teacher-forcing theo từng nhóm lỗi, không cập nhật weights. Tách lỗi chưa học target khỏi lỗi suy ngữ cảnh; giữ parser/gold cũ và không tăng epoch chỉ để chạy thêm.",
+  "scope": "Dev tái sử dụng, chưa chứng minh tổng quát; đã dùng hết ngân sách hai ứng viên hiện tại.",
+  "runtime_changed": false
+}

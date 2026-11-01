@@ -1,0 +1,10 @@
+﻿{
+    "ket-qua.json":  {
+                         "bytes":  1272,
+                         "sha256":  "a25bed3d27cc376abcba15cadedc9f69792395143d83205c016eb7f547ee0fb0"
+                     },
+    "model-calls.json":  {
+                             "bytes":  1634,
+                             "sha256":  "4cf69f55ada220612de98d0f28563493c9664178d86f2aa64f45d90f67c18ad6"
+                         }
+}

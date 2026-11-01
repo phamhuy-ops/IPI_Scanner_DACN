@@ -1,0 +1,16 @@
+{
+  "reproduced": true,
+  "tests_before": {
+    "failed": 3,
+    "passed": 4
+  },
+  "demonstrated_defects": [
+    "Chọn qwen2.5:1.5b-instruct nhưng request thực tế dùng qwen2.5-coder:1.5b.",
+    "Tên không hỗ trợ vẫn gọi hai model mặc định.",
+    "Model được chọn lỗi HTTP vẫn thử model khác."
+  ],
+  "source_sha256": {
+    "slmCatalog.ts": "e83427927ebf6a60dfc5665fb0788e483ffc81468793a58fb5781e3139f6caaf",
+    "slmClient.ts": "cb771c61810fb84e45cbc5f33d05fadbe7bb657c9fa068f9ac934188834848ee"
+  }
+}

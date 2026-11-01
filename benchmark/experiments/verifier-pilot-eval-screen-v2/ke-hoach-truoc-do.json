@@ -1,0 +1,52 @@
+{
+  "scope": "paired_small_dev_screen_not_full_dev",
+  "request_ids": [
+    "verifier-batch-v1:vf-001-whole_source",
+    "verifier-batch-v1:vf-001-none",
+    "verifier-batch-v1:vf-002-whole_source",
+    "verifier-batch-v1:vf-002-none",
+    "verifier-batch-v1:vf-003-whole_source",
+    "verifier-batch-v1:vf-003-none",
+    "verifier-batch-v1:vf-004-whole_source",
+    "verifier-batch-v1:vf-004-none",
+    "verifier-batch-v1:vf-007-whole_source",
+    "verifier-batch-v1:vf-007-none",
+    "verifier-batch-v1:vf-008-whole_source",
+    "verifier-batch-v1:vf-008-none"
+  ],
+  "selected_source_ids": [
+    "verifier-batch-v1:vf-001",
+    "verifier-batch-v1:vf-002",
+    "verifier-batch-v1:vf-003",
+    "verifier-batch-v1:vf-004",
+    "verifier-batch-v1:vf-007",
+    "verifier-batch-v1:vf-008"
+  ],
+  "seed": 42,
+  "max_new_tokens": 256,
+  "do_sample": false,
+  "model_modes": [
+    "off",
+    "on"
+  ],
+  "same_model_instance": true,
+  "same_kbit_preparation": true,
+  "checkpoint_selection": "final_epoch_only",
+  "screen_rule_before_outputs": "Chỉ chạy full dev nếu on hợp lệ cả 12 request và không thêm FP/false-clear so với off; nếu không đạt thì giữ kết quả screen, không dùng probe.",
+  "lock_sha256": "1c79ab451032e8d5bb4bcb0f1d4be78560b9322c8f85c2397dc2f033432b4672",
+  "adapter_sha256": {
+    "adapter_config.json": "848f00635c77ea09aa08eb01407ceb64a7c2f984d0984de2d41fa2c86f6697bc",
+    "adapter_model.safetensors": "e5d4a6310b53d284243edbf263eef9b3fd8f65e681e086e8ed40226ae17cf016",
+    "added_tokens.json": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab",
+    "chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+    "CHUA-TRIEN-KHAI.json": "46d7ea7a4671cadf75ff68d698131b5c2fa3013cf0f322cc78b09a4d00cfe9cd",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "README.md": "d194d39cb9cfa5d71709c498609d2e4ed094ce7c477645745bf272fdb6793ea9",
+    "special_tokens_map.json": "57255613bbe23c9497211ca68561ff429a51e871dbaf5a59998fa4c8f7fe168a",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "tokenizer_config.json": "5fd4cea2574beb6b70ba31582179880d331b723f5b5119ee67c29d45b983f7be",
+    "training_args.bin": "43842c81bd75cf9be96446fd99bb66101eeb5d33f27218495bfac80694ce4ce2",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "code_sha256": "762384eae2dbad75a254376eaa97d149f099045aebcd48c81b0a6cafb36fb89e"
+}

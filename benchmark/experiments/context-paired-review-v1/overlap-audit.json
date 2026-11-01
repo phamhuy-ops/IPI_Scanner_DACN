@@ -1,0 +1,3055 @@
+{
+  "status": "phase0_not_ready",
+  "batch_sha256": "a71ddbfd3f7d6cf6ed30b94c91ff5408b90c2d0cf53e2495d37f3b2ff65cc21b",
+  "script_sha256": "3f1b57da147523454117dad8f3d04f566514e0b3ec66048484aa68dafacb1893",
+  "command": "python scripts/audit-context-paired-review.py",
+  "files": 431,
+  "records": 207097,
+  "text_fields": 209437,
+  "unique_normalized_texts": 69271,
+  "matched_candidate_file_pairs": 150,
+  "inputs_unchanged": true,
+  "per_candidate": [
+    {
+      "id": "paired-review-0-enhanced",
+      "files_with_matches": 16,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-0-base",
+      "files_with_matches": 15,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-0-human",
+      "files_with_matches": 4,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-0-quoted",
+      "files_with_matches": 16,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-0-irrelevant",
+      "files_with_matches": 4,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-0-reference",
+      "files_with_matches": 4,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-0-missing-task",
+      "files_with_matches": 16,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-2-enhanced",
+      "files_with_matches": 16,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-2-base",
+      "files_with_matches": 15,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-2-human",
+      "files_with_matches": 4,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-2-quoted",
+      "files_with_matches": 16,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-2-irrelevant",
+      "files_with_matches": 4,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-2-reference",
+      "files_with_matches": 4,
+      "training_eligible": false
+    },
+    {
+      "id": "paired-review-2-missing-task",
+      "files_with_matches": 16,
+      "training_eligible": false
+    }
+  ],
+  "errors": [],
+  "files_without_recognized_text_fields": [
+    "benchmark/data/annotations/ngu-canh-v1/ket-qua-ra-soat.json",
+    "benchmark/data/annotations/ngu-canh-v1/manifest.json",
+    "benchmark/data/annotations/ngu-canh-v1/tong-ket-ra-soat.json",
+    "benchmark/data/annotations/verifier-addressee-context-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-addressee-context-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-addressee-context-v1/doi-chieu-nhan-cu.json",
+    "benchmark/data/annotations/verifier-addressee-context-v1/manifest.json",
+    "benchmark/data/annotations/verifier-authored-reviewed-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-authored-reviewed-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-authored-reviewed-v1/manifest.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-001.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-002.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-003.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-004.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-005.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-006.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-007.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-008.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-009.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-010.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-011.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-012.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-013.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-014.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-015.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-016.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-017.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-018.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-019.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-020.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-021.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-022.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-023.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-024.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-025.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-026.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-027.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-028.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-029.json",
+    "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-030.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-001.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-002.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-003.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-004.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-005.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-006.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-007.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-008.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-009.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-010.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-011.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-012.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-013.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-014.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-015.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-016.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-017.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-018.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-019.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-020.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-021.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-022.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-023.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-024.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-025.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-026.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-027.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-028.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-029.json",
+    "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-030.json",
+    "benchmark/data/annotations/verifier-batch-v1/ket-qua-ra-soat.json",
+    "benchmark/data/annotations/verifier-batch-v1/manifest.json",
+    "benchmark/data/annotations/verifier-batch-v1/tong-ket-ra-soat.json",
+    "benchmark/data/annotations/verifier-consistency-controls-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-consistency-controls-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-consistency-controls-v1/manifest.json",
+    "benchmark/data/annotations/verifier-context-transfer-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-context-transfer-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-context-transfer-v1/manifest.json",
+    "benchmark/data/annotations/verifier-expansion-v1/anh-xa-luot-duyet-02.json",
+    "benchmark/data/annotations/verifier-expansion-v1/bao-cao-chuan-bi.json",
+    "benchmark/data/annotations/verifier-expansion-v1/de-xuat-luot-duyet-02.json",
+    "benchmark/data/annotations/verifier-expansion-v1/kiem-tra-hang-cho.json",
+    "benchmark/data/annotations/verifier-expansion-v1/luot-duyet-02.json",
+    "benchmark/data/annotations/verifier-expansion-v1/nhom-va-chia-du-kien.json",
+    "benchmark/data/annotations/verifier-external-ai-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-external-ai-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-external-ai-v1/kiem-tra-va-nhom.json",
+    "benchmark/data/annotations/verifier-external-ai-v1/manifest.json",
+    "benchmark/data/annotations/verifier-external-context-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-external-context-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-external-context-v1/manifest.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/bien-the-kiem-tra.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-001-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-001-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-003-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-003-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-004-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-004-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-005-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-005-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-006-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-006-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-007-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-007-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-008-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-008-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-009-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-009-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-011-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-011-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-012-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-012-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-013-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-013-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-014-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-014-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-015-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-015-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-016-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-016-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-017-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-017-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-018-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-018-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-019-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-019-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-020-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-020-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-021-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-021-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-022-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-022-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-023-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-023-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-024-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-024-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-025-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-025-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-027-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-027-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-028-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-028-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-029-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-029-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-030-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-030-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-001-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-001-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-003-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-003-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-004-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-004-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-005-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-005-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-006-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-006-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-007-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-007-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-008-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-008-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-009-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-009-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-011-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-011-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-012-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-012-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-013-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-013-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-014-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-014-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-015-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-015-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-016-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-016-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-017-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-017-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-018-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-018-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-019-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-019-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-020-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-020-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-021-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-021-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-022-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-022-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-023-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-023-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-024-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-024-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-025-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-025-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-027-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-027-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-028-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-028-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-029-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-029-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-030-none.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-030-whole_source.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/kiem-tra-chuan-hoa.json",
+    "benchmark/data/annotations/verifier-external-normalized-v1/manifest.json",
+    "benchmark/data/annotations/verifier-external-uncertain-reviewed-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-external-uncertain-reviewed-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-external-uncertain-reviewed-v1/manifest.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/canh-bao-chat-luong.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/danh-gia-ai-luot-01.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/ket-qua-duyet-cua-so.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/kiem-tra-chuan-hoa.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/manifest.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/phieu-cua-so-truoc-ai-danh-gia-01.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/phieu-cua-so-truoc-luot-02.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/quyen-su-dung-mau.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/tien-do-duyet-cua-so.json",
+    "benchmark/data/annotations/verifier-gap-normalized-v1/tong-ket-nhom.json",
+    "benchmark/data/annotations/verifier-gap-repair-v1/ban-su-dung-hien-tai.json",
+    "benchmark/data/annotations/verifier-gap-repair-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-gap-repair-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-gap-repair-v1/manifest.json",
+    "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-007.json",
+    "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-008.json",
+    "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-009.json",
+    "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-010.json",
+    "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-011.json",
+    "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-012.json",
+    "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-007.json",
+    "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-008.json",
+    "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-009.json",
+    "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-010.json",
+    "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-011.json",
+    "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-012.json",
+    "benchmark/data/annotations/verifier-gap-v1/ket-qua-ra-soat.json",
+    "benchmark/data/annotations/verifier-gap-v1/manifest.json",
+    "benchmark/data/annotations/verifier-gap-v1/phieu-truoc-duyet-luot-01.json",
+    "benchmark/data/annotations/verifier-gap-v1/phieu-truoc-duyet-luot-02.json",
+    "benchmark/data/annotations/verifier-gap-v1/phieu-truoc-duyet-luot-03.json",
+    "benchmark/data/annotations/verifier-gap-v1/tong-ket-ra-soat.json",
+    "benchmark/data/annotations/verifier-llmail-expansion-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-llmail-expansion-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-llmail-expansion-v1/manifest.json",
+    "benchmark/data/annotations/verifier-llmail-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-llmail-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-llmail-v1/manifest.json",
+    "benchmark/data/annotations/verifier-local-release-preview-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-local-release-preview-v1/manifest.json",
+    "benchmark/data/annotations/verifier-local-release-preview-v1/quyet-dinh-dung-noi-bo.json",
+    "benchmark/data/annotations/verifier-local-release-preview-v2/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-local-release-preview-v2/manifest.json",
+    "benchmark/data/annotations/verifier-local-release-preview-v2/quyet-dinh-dung-noi-bo.json",
+    "benchmark/data/annotations/verifier-openapi-context-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-openapi-context-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-openapi-context-v1/manifest.json",
+    "benchmark/data/annotations/verifier-recipient-contrast-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-recipient-contrast-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-recipient-contrast-v1/manifest.json",
+    "benchmark/data/annotations/verifier-role-authority-controls-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-role-authority-controls-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-role-authority-controls-v1/manifest.json",
+    "benchmark/data/annotations/verifier-split-preview-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-split-preview-v1/dieu-kien-tung-mau.json",
+    "benchmark/data/annotations/verifier-split-preview-v1/manifest.json",
+    "benchmark/data/annotations/verifier-split-preview-v2/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-split-preview-v2/dieu-kien-tung-mau.json",
+    "benchmark/data/annotations/verifier-split-preview-v2/manifest.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v1/manifest.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v2/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v2/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v2/manifest.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v3/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v3/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v3/manifest.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v4/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v4/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-supervision-batch-v4/manifest.json",
+    "benchmark/data/annotations/verifier-vietnamese-articles-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-vietnamese-articles-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-vietnamese-articles-v1/kiem-tra-va-nhom.json",
+    "benchmark/data/annotations/verifier-vietnamese-articles-v1/manifest.json",
+    "benchmark/data/annotations/verifier-vietnamese-business-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-vietnamese-business-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-vietnamese-business-v1/manifest.json",
+    "benchmark/data/annotations/verifier-vietnamese-markdown-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-vietnamese-markdown-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-vietnamese-markdown-v1/manifest.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-001.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-002.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-003.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-004.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-005.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-006.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-007.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-008.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-009.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-010.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-011.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-012.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-013.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-014.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-015.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-001.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-002.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-003.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-004.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-005.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-006.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-007.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-008.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-009.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-010.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-011.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-012.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-013.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-014.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-015.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/ket-qua-ra-soat.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/kiem-tra-trung-va-nhom.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/manifest.json",
+    "benchmark/data/annotations/verifier-vietnamese-v1/tong-ket-ra-soat.json",
+    "benchmark/data/annotations/verifier-vietnamese-workflow-reviewed-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-vietnamese-workflow-reviewed-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-vietnamese-workflow-reviewed-v1/manifest.json",
+    "benchmark/data/annotations/verifier-vietnamese-workflow-v1/ban-xem-truoc.json",
+    "benchmark/data/annotations/verifier-vietnamese-workflow-v1/danh-gia-ai.json",
+    "benchmark/data/annotations/verifier-vietnamese-workflow-v1/manifest.json",
+    "benchmark/data/audits/cross-source-overlap.json",
+    "benchmark/data/audits/notinject-audit.json",
+    "benchmark/data/audits/realistic-prompt-injections-audit.json",
+    "benchmark/data/control-suite.json",
+    "benchmark/data/incoming/public-vi-documents/nguon-tai-lieu.mau.json",
+    "benchmark/data/incoming/public-vi-documents/nguon-vi-bo-sung-v1/manifest.json",
+    "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/manifest.json",
+    "benchmark/data/processed/ipi-cleaning-report.json",
+    "benchmark/data/processed/ipi-data-audit.json",
+    "benchmark/data/processed/ipi-normalization-validation.json",
+    "benchmark/data/processed/notinject/normalization-report.json",
+    "benchmark/data/processed/notinject/normalization-validation.json",
+    "benchmark/data/processed/realistic-prompt-injections/normalization-report.json",
+    "benchmark/data/processed/realistic-prompt-injections/normalization-validation.json",
+    "benchmark/data/raw/injecagent/snapshot.json",
+    "benchmark/data/raw/llmail-intake-v1/data/emails_for_fp_tests.json",
+    "benchmark/data/raw/llmail-intake-v1/data/levels_descriptions.json",
+    "benchmark/data/raw/llmail-intake-v1/data/objectives_descriptions.json",
+    "benchmark/data/raw/llmail-intake-v1/data/scenarios.json",
+    "benchmark/data/raw/llmail-intake-v1/dataset-metadata.json",
+    "benchmark/data/raw/llmail-intake-v1/snapshot.json",
+    "benchmark/data/raw/openapi-context-v1/snapshot.json",
+    "benchmark/data/raw/python-context-docs-v1/snapshot.json",
+    "benchmark/data/raw/python-context-docs-v1/tag-object-1.json",
+    "benchmark/data/raw/python-context-docs-v1/tag-ref.json",
+    "benchmark/data/raw/vietnamese-markdown-v1/snapshot.json",
+    "benchmark/data/raw/vietnamese-markdown-v1/tree.json",
+    "benchmark/data/raw/vietnamese-wikipedia-v1/snapshot.json",
+    "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-01-metadata.json",
+    "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-02-metadata.json",
+    "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-03-metadata.json",
+    "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-04-metadata.json",
+    "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-05-metadata.json",
+    "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-06-metadata.json",
+    "benchmark/data/splits/ipi-group-audit.json",
+    "benchmark/data/splits/ipi-split-report.json"
+  ],
+  "inventory": [
+    {
+      "file": "benchmark/data/annotations/ngu-canh-v1/ket-qua-ra-soat.json",
+      "sha256": "b17a9c8ae0751b535bd0701803f56f8a1d8bc131ef79ad8465dac962e8d36b08",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/ngu-canh-v1/manifest.json",
+      "sha256": "b1c428ce1e425227d6dcedf53673d931a2d67fc5f84fa08ac2d75026bd1ea850",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/ngu-canh-v1/mau-cho-duyet.jsonl",
+      "sha256": "1d4c98e68c5d1d4e0fead956183519ded488eb3f8c5e7814ca3f5fd6572757ba",
+      "records": 20,
+      "text_fields": 20
+    },
+    {
+      "file": "benchmark/data/annotations/ngu-canh-v1/tong-ket-ra-soat.json",
+      "sha256": "6422dfb764bf62946d0bf0485d11582285242f5b2bba5e0eed750e3de291c938",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-addressee-context-v1/ban-xem-truoc.json",
+      "sha256": "9672071b952bf6d9997ff94e0546abe0423dbbad20eac8d14b14cef891e8d73e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-addressee-context-v1/cach-ly.jsonl",
+      "sha256": "0523781cedc30a63e0f1a9f093269402db1b6d3569a96b49200582460d383885",
+      "records": 1,
+      "text_fields": 1
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-addressee-context-v1/danh-gia-ai.json",
+      "sha256": "16e53500d683fd6ece3349810fa98369345631c4be486d4450365c268faf7a06",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-addressee-context-v1/doi-chieu-nhan-cu.json",
+      "sha256": "0d1c93ac405a2d91acbfbb9c0766022b64191ce95b8bdda060e83e3887b7b97d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-addressee-context-v1/manifest.json",
+      "sha256": "5f55555faa44cbfde1ae2897db768afeda44191ced37035066a70b159609acf5",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-addressee-context-v1/mau-cho-duyet.jsonl",
+      "sha256": "63c889ad5ffd08a8aed52daa86b654a1dea80b9d04732bd01a1e99cd49f8a3e4",
+      "records": 7,
+      "text_fields": 7
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-authored-reviewed-v1/ban-xem-truoc.json",
+      "sha256": "5a89d160eb78945f51a620f201d0c0d34ebbfd2f9a266829b772cdb84a9a3ae5",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-authored-reviewed-v1/danh-gia-ai.json",
+      "sha256": "2110436b13083616304e782254c25ff37f467d4d124e099af5d03459f08a6c7d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-authored-reviewed-v1/manifest.json",
+      "sha256": "f2f40b24dae93faff3a12befee037b0102c67539ce2f4f5f2d93894e1d9bf292",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-authored-reviewed-v1/mau-cho-duyet.jsonl",
+      "sha256": "53f9d819b2b1a1b7bea276e297210545adaeaa1aabea417013a0af7aceb7b1d8",
+      "records": 47,
+      "text_fields": 47
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-001.json",
+      "sha256": "6b565d13133982d9fc711061729c6a7645776b4531aef196663150bbebd33157",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-002.json",
+      "sha256": "118a116077fb0ec7a59a1cd77c80d0323224173bfcd568c3bd0f68c8a8905efb",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-003.json",
+      "sha256": "f93cfaed81a74144643411c346e695dbe837d975746ece7a4eb850b8968d22a9",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-004.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-005.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-006.json",
+      "sha256": "8b2c552f7e53e4c353c4fdd74d57aadcbc9d4d8da7dd98a8588b80bd726aec17",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-007.json",
+      "sha256": "69dbd945151537a86c6361f657a31426ea89134b7bd9cb89ffa9525b92996616",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-008.json",
+      "sha256": "125d3403840ca16ae33ee1a061c7755651c97adcd1e72a6f0a03ee416bccedd4",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-009.json",
+      "sha256": "8cc918238357f141537b60bd12d8d971f3dee9ddf53e3927d70cab2a90891575",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-010.json",
+      "sha256": "64fc05d2c35dd2fac25ed187415aac81d6dbc28fcafea57dd21d969e4d4fea2a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-011.json",
+      "sha256": "c55a5227e71f67339a561737ff81db16591e56f51e10a9de464b0cc7b3f2a623",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-012.json",
+      "sha256": "e1bef53614d37fbd58ea8c26761ab76756f4c4314815ac59e10c01c12f4045d5",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-013.json",
+      "sha256": "f2ffa644ba563461556753283805410a9294d4050abd06ad819994a93e401f4c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-014.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-015.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-016.json",
+      "sha256": "5cf84dec30e94ee07072e05227edf419cf2326a2e9607da08ae192e4baccd02c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-017.json",
+      "sha256": "f196b7f2caf9f4c6c324f7e3a1428b5ed8ff73fdc81bbf13f1c403dfbc30e1ed",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-018.json",
+      "sha256": "f2ffa644ba563461556753283805410a9294d4050abd06ad819994a93e401f4c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-019.json",
+      "sha256": "42bc992a3dec73c4c65f7aeaca61801bb69df75e5af4f3aa055cdd3b02c7d11d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-020.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-021.json",
+      "sha256": "26b27d51401310af0227e9c5795639c5cde38c47461d1f62777b4fa5d5bde81f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-022.json",
+      "sha256": "f2ffa644ba563461556753283805410a9294d4050abd06ad819994a93e401f4c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-023.json",
+      "sha256": "f6e62da3c1dda43447f6082e002b706dd6d3f770743aa5bcfe2f5b8d8e416763",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-024.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-025.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-026.json",
+      "sha256": "51ecb9a88dbe23e54298ec9bdfa0849a715a35f7468554769808745b4656a58e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-027.json",
+      "sha256": "9f25b127b0c81c8606bded23aef97c7d30de105e1df8b6446c158c5d3e71446b",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-028.json",
+      "sha256": "59bc2f50bcde28e4879973c97f5d9dce5996b5e199766073bb2541069592fe91",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-029.json",
+      "sha256": "126e15e13bd374abd136d5c966c1321ba240e18f819f7b1c802a496b9f2def07",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dap-an-nhap/vf-030.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-001.json",
+      "sha256": "11ada4ae2be330db7e2008460e7dd23e00580cf07dc440da60b5d126c52e4eee",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-002.json",
+      "sha256": "2d535eb08243a103d1176402af6ec257aa4f41a7e3018bab7abd1ec7255fef02",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-003.json",
+      "sha256": "92324c302ea7bea5bb1d8200891e950ea688a99bdef139b6c46c65fb085d77d0",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-004.json",
+      "sha256": "62f9198e5adef5682cc24161b37afea105dbe3e0d5f7f790b76baa7ce14b481b",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-005.json",
+      "sha256": "42f10152fd73b18aac54e90445af36c9cb565d21cf84a031171d20819cacc212",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-006.json",
+      "sha256": "65c34157c68ba154e4025a7af654bae53cf28a60d9cbd362b6bf0b161c3b0d8f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-007.json",
+      "sha256": "df7865694b4ffb395cf438835d99d1e872e289042b33c50285a15c64c3d11bc5",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-008.json",
+      "sha256": "b806068c1e7a3b7b043c26bcc9ed75c57ffcada59c61130e0a4708cac5539ba0",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-009.json",
+      "sha256": "20b27519f39d17d4e39894e8087805210d4092e730e71ed6f159cd847a21c294",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-010.json",
+      "sha256": "384a4d4d50b8e75a4e5f25b9c9dde7e0ebabf697d311993bbac5b52f8c61e24e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-011.json",
+      "sha256": "d42901b2a460f5d52def584cea1195f770dc86eafd9ecddab7829e1258d773a2",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-012.json",
+      "sha256": "35dcb9345053cca62e9229854919b3b09df02110110ffcbaee433457655bacf4",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-013.json",
+      "sha256": "a5c4d14cd05ee844bb1ad3872f81c227d7facc9388c340f1caac2a493d80e0c2",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-014.json",
+      "sha256": "ec94ea575e64ac9f4cd4b143696015d7124fa171405fb6d36eb4f96a62abc0d0",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-015.json",
+      "sha256": "4ffddcbd7e3c45668dbe0570bdf3f18e1ba4ea857ca03b80af6a0dbdeced8c79",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-016.json",
+      "sha256": "691c93f78864131473d7e186b8f5cb1caa314ab4959a469934b157c702668d68",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-017.json",
+      "sha256": "24eab674ef4fe82ec0533d6b33ecb9b8195ca2aaf5b923dbdb9cc923a354209f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-018.json",
+      "sha256": "645a92fbb26e95cd86b586e79ade8cc556444c8a8f6915ba639e6802f4379402",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-019.json",
+      "sha256": "d904e6f3ae6a71e419a76419f2198f41031e29a05b9ff7c06f7780c1c667f3ed",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-020.json",
+      "sha256": "fb6722c062752d5abba7a924547a7a3b737ea21eea372258d180c0e4ef19b98c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-021.json",
+      "sha256": "22eec27642c72f340ce7f7df3399e90c7353ba103ea4c9916725a29995279170",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-022.json",
+      "sha256": "106e5828f0b244002a337e90ccae14ba23b0c8fdbc88b0fd7ba28803626663a4",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-023.json",
+      "sha256": "bfbe406af54b2e1a8537c7b6086d5d94ce43224ac0912389035f33016eea9cea",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-024.json",
+      "sha256": "469fa24137fceb39cd54173b6b016b61a08ee4ccc370c7d0cd02240d0ef65d13",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-025.json",
+      "sha256": "3a10e1a5308294a9e348d26c2790398149135eb0bb84b59415b66218a9a48ff8",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-026.json",
+      "sha256": "d5fe275db96de2c9355ac62256651f6cba35db3ee59923b0bdd00abe1b38917d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-027.json",
+      "sha256": "b131422c1b414c246ccea2a2fe4f45a426894849fd980215f899c08bbc2e4bb9",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-028.json",
+      "sha256": "4fdbcc360101bc4ff15fae4cb46b96e5705c094ad2633f79ab118d0129725739",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-029.json",
+      "sha256": "43dadd451d8f1fabc04ebfba108052d11422849a6d34e7d42fe5865195c807ab",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/dau-vao/vf-030.json",
+      "sha256": "9495720b30972837c50ffc7350de551224a2a7cd3759271eb1071e6557211c38",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/ket-qua-ra-soat.json",
+      "sha256": "11fc71038cbc14c63a55d0171be1d34fc3cb25b5da2aa6a6e8af078b2bbdebb8",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/manifest.json",
+      "sha256": "b124511f05cc18a691da7e23451783722e31ae328a186d544703db7f00e8fade",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/mau-cho-duyet.jsonl",
+      "sha256": "c2eadfc93b7643b6a91931003c8ab1e8a55e83a0fcfa26cdf894f33d93156eac",
+      "records": 30,
+      "text_fields": 30
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-batch-v1/tong-ket-ra-soat.json",
+      "sha256": "998a5ca12b99ef9817556b894702aad4d0149c5f2b573d018f75cb2f8b67586f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-consistency-controls-v1/ban-xem-truoc.json",
+      "sha256": "ada29ff3f948350e5f848df0b32c8caeb1819129c6154eef567c7c5f121dad44",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-consistency-controls-v1/danh-gia-ai.json",
+      "sha256": "5b31f0d4237b9f82f7457c3d986f7fedea2a796cb559ba08a1a4757ba560af7c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-consistency-controls-v1/manifest.json",
+      "sha256": "71a361243c84f6c655a877594512b10ff3fde47c1caf80f6a67f5509bbe92976",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-consistency-controls-v1/mau-cho-duyet.jsonl",
+      "sha256": "d097145bfba4b2c80dfe69200c9568908ad3ca61aeb98e5288e1259760df546d",
+      "records": 28,
+      "text_fields": 28
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-context-transfer-v1/ban-xem-truoc.json",
+      "sha256": "05b8507d86ba8defcb5e3d0373e847be1e239826875945be40860766190341ba",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-context-transfer-v1/danh-gia-ai.json",
+      "sha256": "2f7931792036a7bd1bba4701a09498a9f56da5a583e7e5c173c256388aa5d339",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-context-transfer-v1/manifest.json",
+      "sha256": "dc580ea461eb6e6668d47cf0ee747a46e6b62e9ca6dc72a9033505c78c7ff75d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-context-transfer-v1/mau-cho-duyet.jsonl",
+      "sha256": "4b07deb0011f202dc63a6c7c7bc5554cc8a079c3e3dab43568507d98b1bd0acb",
+      "records": 36,
+      "text_fields": 36
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-expansion-v1/anh-xa-luot-duyet-02.json",
+      "sha256": "027edb6a16fb24985a7142be91580c57c717bdb753f86c339945a10ed86512bc",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-expansion-v1/bao-cao-chuan-bi.json",
+      "sha256": "44485550de599e75a865d3d12b0f1ba38e205ba50d5bc9a3161a33215440aabb",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-expansion-v1/de-xuat-luot-duyet-02.json",
+      "sha256": "942a9ba9773fc16375bd17b69e22240a8cd835928c6e767a6648d7295c62ed94",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-expansion-v1/hang-cho-gan-nhan.jsonl",
+      "sha256": "1ffa6af90945b596c6495fcc08361481f1571f5a6b8028633b0ce7eb1d7dbc5a",
+      "records": 356,
+      "text_fields": 356
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-expansion-v1/kiem-tra-hang-cho.json",
+      "sha256": "fa73a704cb645d70bdf01a8920f20fc9ac8c3889bbc8cca525e2fcaeafe49a2b",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-expansion-v1/luot-duyet-02.json",
+      "sha256": "7e90ac2256f8ea7ed753bdd5ce7da0c2b33da367b18b6e8d3fd4c3c9f49431df",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-expansion-v1/nhom-va-chia-du-kien.json",
+      "sha256": "114886c3a67654ae3c91da5666cf7d4b3f1f993c4e21ed5455cdf0bd346164f9",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-ai-v1/ban-xem-truoc.json",
+      "sha256": "a4a42deb1148caa89b1613ece0170afbc7ac5e10ad216ba9c356243fb34098a8",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-ai-v1/danh-gia-ai.json",
+      "sha256": "cfb3aa5316e8596ad6ae23552815d0d2b9e2083ebeaeb46be0eb6d3a7ca1a0c5",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-ai-v1/kiem-tra-va-nhom.json",
+      "sha256": "d2bfe2ac73284b17f1a4efd4d358aacdc8d7891d92519ef87acebb40681e0c55",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-ai-v1/manifest.json",
+      "sha256": "8aff313de4de9ae254a24dc60c6630754bf937a6d6c8b91b862c50ca2064912e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-ai-v1/mau-cho-duyet.jsonl",
+      "sha256": "90d350b141c6075592950b953ee748083733349ff7d6315da6f70660622d8a96",
+      "records": 30,
+      "text_fields": 30
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-ai-v1/nhan-va-cua-so.jsonl",
+      "sha256": "90d350b141c6075592950b953ee748083733349ff7d6315da6f70660622d8a96",
+      "records": 30,
+      "text_fields": 30
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-context-v1/ban-xem-truoc.json",
+      "sha256": "d5581d2cc89e6d164bd2ff7bc2c7f9355abf53e97307663a52ac35a85b39b2e9",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-context-v1/danh-gia-ai.json",
+      "sha256": "733e56c7a2fd56422192fae39d06584c841a997fe8b76c0800e1ad8da3f3d70a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-context-v1/manifest.json",
+      "sha256": "2edfc931549886eb03485b42411b139cf8b4c49f61aca1ca5688fbcc7951c320",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-context-v1/mau-cho-duyet.jsonl",
+      "sha256": "e140d7eab0c94e7721af9b67ac596e2d7024c594f82e5e4aa9e9464757956396",
+      "records": 24,
+      "text_fields": 24
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/bien-the-kiem-tra.json",
+      "sha256": "d328e8ca68937016f50aa84e627e2310f6a3e61b69f78a12f7ee441752de775e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-001-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-001-whole_source.json",
+      "sha256": "40e59e97d32d07d4f0d8277c1b30e340fea690e7f9e4d62f1de1039a0ff81308",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-003-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-003-whole_source.json",
+      "sha256": "d198a80f814d0d0c4a554e095c80b331ec850443a612fd6eaa16e6b25a929067",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-004-none.json",
+      "sha256": "da9a2aa1ffd93ee3e147eece4077182580c0b9b8e9b3906002302ba8b8370781",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-004-whole_source.json",
+      "sha256": "33949f08c6b1661140da8746feb7d4b610842172e89d9a24605432c0037d06e2",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-005-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-005-whole_source.json",
+      "sha256": "d4ed209d16a62a5692a7bebc66a7b1e343e9dc77290b1fac5b7c511f2751951b",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-006-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-006-whole_source.json",
+      "sha256": "72e2c756a3cd79caa6ec60b6e5814253151c80a19990426f76670eef4ebcab75",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-007-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-007-whole_source.json",
+      "sha256": "0d2b5d1e29c999758acd067906a2797ed7c3cb0cb489dd3d662bc15cb5510be2",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-008-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-008-whole_source.json",
+      "sha256": "36071f3fc387f21bd09dbdb8c484c6681b584f94cf5bee23b91f5de9bc941235",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-009-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-009-whole_source.json",
+      "sha256": "affbad91486a07c18e9d0d937f4d72f5e5ac4b6c62f65dd8ec099d120e9575f9",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-011-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-011-whole_source.json",
+      "sha256": "8f99d0609736326635f7c8310c12693c9bfc7c21cf4a422ad1393a9e58032e9f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-012-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-012-whole_source.json",
+      "sha256": "149bfc34620d4ba55a5f22c36b65ed1242dfbb9f2a0113fd9edfd230747bff22",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-013-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-013-whole_source.json",
+      "sha256": "67e753849ae2f2f7e8d44286fdf24e87e09cb40a70bd918ed97f92e247eee95f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-014-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-014-whole_source.json",
+      "sha256": "2b213223c43adfd63b5073ad1f798839d5344b44a30b0d76dcc2c09f8c52525d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-015-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-015-whole_source.json",
+      "sha256": "c0b00af6bb3e743a1739370af83276c093ef3a7c7ddb27b4d335f3e8e49400d7",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-016-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-016-whole_source.json",
+      "sha256": "78e909d21d42abeff638d99750cd055c3fe2e42b7ba11b833e3e7d99f5029886",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-017-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-017-whole_source.json",
+      "sha256": "b4e7d7b74f0385a6fa3dd611dac402dc4bb7b58e6cd3df961cbe005d182b608d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-018-none.json",
+      "sha256": "ea46ace6389f541e2769ce57bec06eda0f5def8110aea2d9589aa4ef29952a38",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-018-whole_source.json",
+      "sha256": "93e4f8093a3d99b48948a92525971cb6de75ed78c9e68ae2bcd641e354cff2b7",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-019-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-019-whole_source.json",
+      "sha256": "e4d6c3c902fe12445896f7bb7092a28984d5f09517b4038dfc5acd7bfaf4c7e6",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-020-none.json",
+      "sha256": "15ea6d72e16a72f9bf62a3296b7ffd4bb7c811a10477d58b7ac2b8c6f72c0765",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-020-whole_source.json",
+      "sha256": "250184165a5eb2321441fbbdbdb7927fb5770ca142f29bcca83934a40a7a4268",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-021-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-021-whole_source.json",
+      "sha256": "1514add3b984269f81952ee672747311f694eca200e5c216b16811b7a88213f6",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-022-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-022-whole_source.json",
+      "sha256": "ad3f6d682396a8e952894a3442b23c1d0721eb38835935235cfb648f4ae5a6ff",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-023-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-023-whole_source.json",
+      "sha256": "57d200960cca86b1046a5eea280118c849ca7fcd7e2a8bb77ba78ef031d07d20",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-024-none.json",
+      "sha256": "b4556381da504c4ded16db5270ff23c647114a49448c9a9099e32e6a577b6d5d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-024-whole_source.json",
+      "sha256": "b7dc4ff1c6cc32fd84bb1fb00317af7189fac86dc968f3c785099fa9feb6d1ae",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-025-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-025-whole_source.json",
+      "sha256": "114052b446d53ee44e04fc767ec4344099c8dc2d805f3b4a219a1510cd5594f2",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-027-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-027-whole_source.json",
+      "sha256": "fe32ce27b25761a917cf36228d6e3c51f7f5ca9a648a09647a5c38ccd2653e49",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-028-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-028-whole_source.json",
+      "sha256": "ad6bcf409ba31fbeb462b2313026e9f2d0a1435eea7b67ca7bb99ccc5b70c0bc",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-029-none.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-029-whole_source.json",
+      "sha256": "496d5d7a577214ff262a1a33430269d9159ea92fff842380ac7ebd6af7a489bc",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-030-none.json",
+      "sha256": "00222dd4c720f0facc92a07406888ace1fc9cb88b40607c688f79b354d7ef7ee",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dap-an/R2-030-whole_source.json",
+      "sha256": "8843ea2767924aa1d0748059df45308254ed0955a003c12e528064bac155784e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-001-none.json",
+      "sha256": "d16f2c7e5ca4c68e95ae76b5a52e20b2a9b5c9af6329a7f9b355b6481da987be",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-001-whole_source.json",
+      "sha256": "46f8fe7d164b64e128da57c1f23d478ee395ee3d50402e13c68baaecfc682d89",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-003-none.json",
+      "sha256": "52be8a82dd2378225732c41d2e228aea202c07e6c0f52e81ebfa5c763677aac7",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-003-whole_source.json",
+      "sha256": "30133bed128e253cb13a1d8d717cd767e7103e8e7bdb2e91be5ae50fc99f9737",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-004-none.json",
+      "sha256": "c225c445453115b7f63593cc5a3a510128e48355189c2e7120c2219c3affefa4",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-004-whole_source.json",
+      "sha256": "b9b430d8c6110e6dde6d4009d22b41630ec4c3e029133bd862983e469a16bcea",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-005-none.json",
+      "sha256": "81013ca75dc276e7c5643b19c2743b70922412eb2de65d0e1c67007816134ac4",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-005-whole_source.json",
+      "sha256": "5ed29a4fb8afa1ac656e2c57babb4f804ec2bb38e81fd6dfcc468afa9d52008e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-006-none.json",
+      "sha256": "fa727eea23364a5cc6a3d08ff209d0852194a0f43cb95c54a82c8496da3959ab",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-006-whole_source.json",
+      "sha256": "38ea61a064bf6ca8cef3b30cb39b0ec5d7815d7c3bac3ae0401c3bd37b68cadd",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-007-none.json",
+      "sha256": "7dafd4a34d248e0e29f8a587a8cfae5d876cb729db3ea39401c529edc5a1baaa",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-007-whole_source.json",
+      "sha256": "51ed1e8d82d1c5dd25a70770ab725eb3243490e702ba0f7a89c75f80e2baec64",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-008-none.json",
+      "sha256": "6b3a7f726221e32048f26a5683e89b9866c1824ff40a58d3865887545f2cf6fc",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-008-whole_source.json",
+      "sha256": "84a3b9bd7761f7a5e189f0ad2ba41b97cddeb3716b1cadcb20429d802785f08a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-009-none.json",
+      "sha256": "e99bfacf32d270548ae104973559bd13ca944762051fc4108c91b8bdd2dc1b92",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-009-whole_source.json",
+      "sha256": "943bbe5321606092732cdbde0945f3b986ecd11fdd1b138cd344e66b80d31df2",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-011-none.json",
+      "sha256": "c7cf51659ea54cca91a2e2076fdc328d76758713943dc049742d4d11ef7e6c5c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-011-whole_source.json",
+      "sha256": "35dbd8362ce9e2924b0c034ba846811e028ea0b06b5ae9241cc9c6a00d282d70",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-012-none.json",
+      "sha256": "173c1c7bdf3f00d4f02ad10d77ca15bb7f1cc9946f9f75e951deccfa02da6517",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-012-whole_source.json",
+      "sha256": "fba399a3d5d0e52a83305ac7fca1185f25004381479fb7b90a35aeab04de4a8e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-013-none.json",
+      "sha256": "e8026fdafe36c413b4e945b846814efb76f73ac5c44e21bb45a02775047e98d6",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-013-whole_source.json",
+      "sha256": "4b9af97211276e478252e26b72efc03acecd4c0038d34f1b426c0cf22f48bc51",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-014-none.json",
+      "sha256": "1efff202fbbb743a85d8b6a1ee1bc9633b17a314d33b73f9a01fb540486a964d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-014-whole_source.json",
+      "sha256": "1a0ecd3832c0af61a0b60df2355ddd8b236ba1779b7e713824c4c57bda68d947",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-015-none.json",
+      "sha256": "d35fa2bd72f39d4c7beba315decfabf5b0f92984f4c472188aa718d867966f00",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-015-whole_source.json",
+      "sha256": "9dabbf34bc08c0cd77cdf4197c2239a20363c6d985e407a1dda36923ccd205e9",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-016-none.json",
+      "sha256": "c1d32a40a7a59fabecdeec742cfdd0494d7b8f84a71adac81d05b8522257e013",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-016-whole_source.json",
+      "sha256": "e6e82a1e5cf8a8c59e1b695f9151d3f47c9738e7c1b61e0a8fd13f7a5c6eb345",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-017-none.json",
+      "sha256": "919f1b0b60f1882b91569185a3a8d2cdd44b94bdc82add5759269e130eee4f05",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-017-whole_source.json",
+      "sha256": "0386f48bd8d5b454d51dc46fdefa9c2a2590e55a84c46eafc8c3af37dde3c82c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-018-none.json",
+      "sha256": "514faa12cc5fa0a08ee4e69cab86882787b29e9b0acaca160e9f1ed7d29d7e35",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-018-whole_source.json",
+      "sha256": "06821d06672898eac8a34d76fc1cd150bdad4dd7dc2c4b1a0a84be53f14a3564",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-019-none.json",
+      "sha256": "da468d1abe1507b4077046b44c893379fb4f947df46edd2b0dece038faa69a58",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-019-whole_source.json",
+      "sha256": "8a2cd90f114b3dab8d6c0fc0089e25bb895ab3773a37924d29f7062b0a045f71",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-020-none.json",
+      "sha256": "709d3874ebf38562185667390b110ec91c93cbaa0c1e76e3dfc60203ca157d85",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-020-whole_source.json",
+      "sha256": "3227f33ffa2aa6c4e0a51c570844e26ebaa7f3503a80b1c44124e1e5790afa47",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-021-none.json",
+      "sha256": "c1acd83ea56f29337c2def023530116aaf6b96a2522357ab57106ef0c5fdcad1",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-021-whole_source.json",
+      "sha256": "96602279f8c4aeefc76c604ee4bc75b90454225d957b50afb5c8a32ea5f62786",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-022-none.json",
+      "sha256": "f9f9c4803bc532d1eb6a87990ea561985ba2eb8b116e1e43d11fa98405bcc4fc",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-022-whole_source.json",
+      "sha256": "6eb67b01984261f1547807ca9f609b13a5d29141035cb38b27e4047b7ea5ac81",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-023-none.json",
+      "sha256": "34814f9c94c926b76c80b8df62df367167d3b13e99feccef2839144adbf536d9",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-023-whole_source.json",
+      "sha256": "2c58c13a44e4d0aed81e2c136b26bc6a158a66e7d019e77928d766e0a4f7eeae",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-024-none.json",
+      "sha256": "78e0c16fedd8b5404607bfa603319440b50c1426da448b74607d28d21ba500e4",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-024-whole_source.json",
+      "sha256": "06177195f57db2d142451724ed07baa85293844d825e47a2ccbc568364bbe2dd",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-025-none.json",
+      "sha256": "f9f684b7177f2316cc72bc91e6f391ecc5ab7cb85de68a1c01a0af237a8719ef",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-025-whole_source.json",
+      "sha256": "e29a9ea74c0461b81d59bfb6168ffbe539ca012285d23b5dc93c13e2653f3f56",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-027-none.json",
+      "sha256": "bb4ec635c0114d8cc5e87fc34e54be08f105fe7fe94ed1285f83ff5150b19c4b",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-027-whole_source.json",
+      "sha256": "0c776a6358eaafeb7a551ccf3584c2498242effa1201101c532504b90f68974a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-028-none.json",
+      "sha256": "ff283c4bf0bd973937b263c0a85ebc4d2e51f681e191bc1c2aed587ab08f5214",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-028-whole_source.json",
+      "sha256": "64b00339d6e320c9fb1151459fdee6ac5f379f2ee39ade78439307e41f6a18f6",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-029-none.json",
+      "sha256": "0c61125339259994a2ae53b64037999880890e94276a3cfcb25a4b06abdfad68",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-029-whole_source.json",
+      "sha256": "70ff8a54c10dafa9690ab50502e1b60e33b00f19a2f9f8e3bf4caad4adea06d5",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-030-none.json",
+      "sha256": "01fa4e59c59d560e849ddb8a00542ab8ad5e7e1acd57d1a18119b7f9c865a642",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/dau-vao/R2-030-whole_source.json",
+      "sha256": "c43d8074e7397248edf0ffbd59fb376b762b01b9167f3731b0e3865463c936a3",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/kiem-tra-chuan-hoa.json",
+      "sha256": "30e9f515495a984baac463db2c71964d2c3310b81a269c499a91cd6431c04166",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/manifest.json",
+      "sha256": "c1c63fb9572c40efa55adfcc01849e4de31d98b87d054ee90ee10a687e601aa4",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-normalized-v1/nhan-va-bang-chung.jsonl",
+      "sha256": "c5dc9e3b621e21bf960c7f487c04bbe727728b55a7ce2ffc881086a66ecc46d4",
+      "records": 27,
+      "text_fields": 27
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-uncertain-reviewed-v1/ban-xem-truoc.json",
+      "sha256": "a6ad7e9758be3a12d36cebe16854970d30b3de96599770f6450b063d4438942a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-uncertain-reviewed-v1/danh-gia-ai.json",
+      "sha256": "3eb16745f144fdde5bd065a1155b77d6c3b6fc1d73ee4cee9634bc10613e46af",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-uncertain-reviewed-v1/manifest.json",
+      "sha256": "986fd15d1e8d7c9a95e1159bba70131588eec3e6420ea4d948d924a18b47823c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-external-uncertain-reviewed-v1/mau-cho-duyet.jsonl",
+      "sha256": "d3511f9a116106e954264289e08e8c1982dfada306574244942c9ae087fdf5f1",
+      "records": 18,
+      "text_fields": 18
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/ban-xem-truoc.json",
+      "sha256": "3a5eabd92d7a949a2514f891378f74c90860904420b40be926c9837e42ae4eb0",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/canh-bao-chat-luong.json",
+      "sha256": "18ca0e30076cf1d9bc7e0135864760568a987ced1a33a733faa3ca3b81739f99",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/danh-gia-ai-luot-01.json",
+      "sha256": "847696b0dd42f035a7d73599d2b20e401773361f39e79994a12c81281a35e86e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/ket-qua-duyet-cua-so.json",
+      "sha256": "a824d23b88a4c4b9b13246adbf488cff2761d9008853afd5e3e6578ffd23b431",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/kiem-tra-chuan-hoa.json",
+      "sha256": "3433d889ae9b8632b65bd56fc14e1dcf23f55d975302514732d4025beb96be7d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/manifest.json",
+      "sha256": "0e4e91a40c2c01ab29f6b9bc8d569df044152fc3dabf444999d6a15ca5c2e615",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/nhan-va-cua-so.jsonl",
+      "sha256": "af9d21ece1690c71ffcd85d83b6bfb6d52aa9efd9160579d3ddb2c5cc351e963",
+      "records": 15,
+      "text_fields": 266
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/phieu-cua-so-truoc-ai-danh-gia-01.json",
+      "sha256": "8264ff51b161126d968ab44110e2934a43ffbd567acda64917d25767f4a2b8d5",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/phieu-cua-so-truoc-luot-02.json",
+      "sha256": "1f119e23e01c1c8dfd1151a2f623018390829d0d48532d1e20fa8f4c6e575ad1",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/quyen-su-dung-mau.json",
+      "sha256": "5e591c205d117b6babb153274f6fedc322c9954b0fb355a8dd69c59108d1bf2f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/tien-do-duyet-cua-so.json",
+      "sha256": "430eb5e82ba51ebf066457b055daaa029880768d95cb76c68e811bb4259c944a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-normalized-v1/tong-ket-nhom.json",
+      "sha256": "5b8134b05251e29ea821f45f58edcaa96b4b79987843e281a83a10f46eb5915d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-repair-v1/ban-su-dung-hien-tai.json",
+      "sha256": "57752fd510b1ed5c13866f9184cd1610b66074d68dfc079cc654d29c90a457a3",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-repair-v1/ban-xem-truoc.json",
+      "sha256": "ea450070005c0d2b97494c12bc843ff880bd8e0d1be115ebec1f730d5365fec9",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-repair-v1/danh-gia-ai.json",
+      "sha256": "2a303c501c598950ed2603b13224205d4557d363c2c80921ad85e24a22f1a0a9",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-repair-v1/manifest.json",
+      "sha256": "8a6766b3b983f2b8ab0996d1f8d8c243a7a8026120f0029cdc8d1aa066b7fd6e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-repair-v1/nhan-va-cua-so.jsonl",
+      "sha256": "0f89a1af84cc76cfe8a2fadc3b05b1ad7db74449646d66371e96f7fb625830ca",
+      "records": 6,
+      "text_fields": 171
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-007.json",
+      "sha256": "27488f027d9374912527887dfe4a7135495a95a38938eb9f4f20795b6b7e23f7",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-008.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-009.json",
+      "sha256": "a1059206094bab4aa4bfd8277f0bb5523eac2a04734b9be5113086fb34a77e10",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-010.json",
+      "sha256": "307d9bd3e1e2c44f62d77d2d8008b6b4972791e4615b0b62f09f4b09635d8235",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-011.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dap-an-nhap/gap-012.json",
+      "sha256": "d368702688029d36116e7fcd984bdfd098f9cda504aa68f75caf61a750cc8f32",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-007.json",
+      "sha256": "9f498e23eed71992151194f82e29a38c53cbd5428fb4b26ab13c02546407182c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-008.json",
+      "sha256": "7431edba63ce6ba4c9b0c8fdb79f1c9d0ec900512f14ddd4a11114a1a672968f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-009.json",
+      "sha256": "5a7f89bf4dfba9549431789a74ca742e6607fff42b477114dc389460dada9926",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-010.json",
+      "sha256": "733eabda5c176e65bf7aa773ca13dc768f4c91ea16b2064244921282faae5b17",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-011.json",
+      "sha256": "4399d147815011e1f14abb35b11f8422c520def673789213d24f752d56f5041f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/dau-vao/gap-012.json",
+      "sha256": "532e24dc219a7c8dc09d6e060e9272aaad13e3a205ad8ef207d910c6a9688d99",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/ket-qua-ra-soat.json",
+      "sha256": "2fc535c1412720db01c3ec478da0b7f94acf7540816c7353cf9669db199bc5dd",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/manifest.json",
+      "sha256": "945728a426997797e7593b1ea57d0c65200ca9cccf92cd08f9524c390dca0bf0",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/mau-cho-duyet.jsonl",
+      "sha256": "60766eada7697fd7db6cd6531c1f4433a0dad8ae1e4ca0f66e9eac8b7a3d2862",
+      "records": 15,
+      "text_fields": 15
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/phieu-truoc-duyet-luot-01.json",
+      "sha256": "90e2a202d5971fc12829b9332b2c981e433503b2e969e579ed9a7d58516a8c06",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/phieu-truoc-duyet-luot-02.json",
+      "sha256": "dff08b994b3a214acf4730658e7578aa533ab74eecb902a9a1fc3291e16f508c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/phieu-truoc-duyet-luot-03.json",
+      "sha256": "4cf6783190126760e7fbe004a11b29104ab656ba1901e0fe54bdc60c68938a72",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-gap-v1/tong-ket-ra-soat.json",
+      "sha256": "d5237d2d121106ae21c6b1dc6e5a3b23a13bac4cb98d329eccf057f90900515e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-llmail-expansion-v1/ban-xem-truoc.json",
+      "sha256": "ff24e81b26b357ea60ca17aa4682980fd2594fd834ddc14df15544ad321ab5e6",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-llmail-expansion-v1/danh-gia-ai.json",
+      "sha256": "e74902bcaf04beaf951c4e55fb8cd154ed4c73409f6cb67289e43597bdc25300",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-llmail-expansion-v1/manifest.json",
+      "sha256": "219f5a13a85b2b007f2c375149ff7e9d71bb5cd9908b3deaa6f25dac6d35144d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-llmail-expansion-v1/mau-cho-duyet.jsonl",
+      "sha256": "a99e4b4dd3a2c8731158f786fce078b7c5921ae874c7617c8844a0cd29f8c00e",
+      "records": 11,
+      "text_fields": 11
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-llmail-v1/ban-xem-truoc.json",
+      "sha256": "dbcb86aefe87fe32a15efae0e0e34874a550c8badb3d7f2b21f62dec73937908",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-llmail-v1/danh-gia-ai.json",
+      "sha256": "516cfa2d8766402505646e161d7822cf4ecce4d7d93d12bbd0e43d7cce8d34fe",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-llmail-v1/manifest.json",
+      "sha256": "db639372af25cd33cbee14ba23d4cbf482c4fac464c940aaf712cd2527867bf2",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-llmail-v1/mau-cho-duyet.jsonl",
+      "sha256": "4b90ad392de09df0f2bc26f98b9ff9a7687e599d5c85bbbabed6861630325585",
+      "records": 12,
+      "text_fields": 12
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-local-release-preview-v1/ban-xem-truoc.json",
+      "sha256": "815ae1d994817a3a03c1165b2ff315aca5179bd3ae1102be05266765f9b5d756",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-local-release-preview-v1/manifest.json",
+      "sha256": "efcfb3316c2b0d65c8782043a7fba72ba5784f8e545579e21cba03161318eb84",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-local-release-preview-v1/mau-cho-duyet.jsonl",
+      "sha256": "87a97d919606e8b3564d36818b77e353250ba43c8fdb2465a601363a9ab28cd7",
+      "records": 324,
+      "text_fields": 324
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-local-release-preview-v1/quyet-dinh-dung-noi-bo.json",
+      "sha256": "2ca048482f28a3b5b6f4158d741be7481529e594fd1bb2c8c3e52c7507f067f9",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-local-release-preview-v2/ban-xem-truoc.json",
+      "sha256": "ad6bf4663e9e512c6103f6b7e36907f09f917c4c6c10df670d98830a209bc60e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-local-release-preview-v2/manifest.json",
+      "sha256": "f40a4b1fdb73ea99c4cdc7bb71074e91a8049e647d4eba2fb8b7e9248024c10f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-local-release-preview-v2/mau-cho-duyet.jsonl",
+      "sha256": "6845aa33164da7ee61ffd45c12a5bf074cbc32c0187f94872748ef733fef69c5",
+      "records": 324,
+      "text_fields": 324
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-local-release-preview-v2/quyet-dinh-dung-noi-bo.json",
+      "sha256": "6241f09909230ca9941c408ed9d1c443d7b593ac923213dd75aeb6f846ab5edb",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-openapi-context-v1/ban-xem-truoc.json",
+      "sha256": "e37e697587f10bba60be7838b225b972889ea9674545a0199067cd0f5ce68244",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-openapi-context-v1/danh-gia-ai.json",
+      "sha256": "9f43915430bf078fc8060a891ad9701824b9baa18ffce1fb315f16589f5d7fa7",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-openapi-context-v1/manifest.json",
+      "sha256": "fbc8227ea92a1864e7e5fd16012554e27104fb08cd064dee6ffa08b3904ef0f6",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-openapi-context-v1/mau-cho-duyet.jsonl",
+      "sha256": "d19c6a3c7b7b613174053195dcfacfa9295d35b1db43f5a591c5b292f20f0903",
+      "records": 15,
+      "text_fields": 15
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-recipient-contrast-v1/ban-xem-truoc.json",
+      "sha256": "ead399d5bd668fe31ede5ce48be8e8b040a19e436f4a7d53378df525e2cec2bd",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-recipient-contrast-v1/danh-gia-ai.json",
+      "sha256": "977e126b7ad367a248e61b80de175b198d91775cf710f62f515278e862adb8cd",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-recipient-contrast-v1/manifest.json",
+      "sha256": "b4379ee617bbedb41bb660ddb8c4a6b5d27abdcf0b723f446588c6d4905102c2",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-recipient-contrast-v1/mau-cho-duyet.jsonl",
+      "sha256": "b4236607675d268ca5748246c483a5ca43e576a49b8d75f8059d12de1d3778e0",
+      "records": 32,
+      "text_fields": 32
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-role-authority-controls-v1/ban-xem-truoc.json",
+      "sha256": "fdd3c8625c8c13d597d5155aa1b292864f9f63537767e0de9fd724351d37a461",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-role-authority-controls-v1/danh-gia-ai.json",
+      "sha256": "31ef0f2065878c21a6e47bf9bb40316b63d1d26fb514edea7d98bcbb8632fbf8",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-role-authority-controls-v1/manifest.json",
+      "sha256": "a6bf1b423328653dcd79de2fb60218f09ff6f42519a0fb58740185f0c507fe36",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-role-authority-controls-v1/mau-cho-duyet.jsonl",
+      "sha256": "ecaa339382653fabdc1efcee2ef181c8c0466224c0b80a54ef7b5780d133bdf5",
+      "records": 24,
+      "text_fields": 24
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-split-preview-v1/ban-xem-truoc.json",
+      "sha256": "62e7a47411a72ecb4c605acb563cf1f5d1d6b3bd0c35e87722a6c3af6faefa22",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-split-preview-v1/dieu-kien-tung-mau.json",
+      "sha256": "912639aa88cb48df471425f46502cae4071e691c88ebce113d45f5cd12d0386f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-split-preview-v1/manifest.json",
+      "sha256": "9f926062dc12662a62207802ec565688a5a88e5fcea664308fa7b7db65591e63",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-split-preview-v1/mau-cho-duyet.jsonl",
+      "sha256": "580bf241476d4d949ba4047d2428ca332066eff995fe395882eb5d8465fd753f",
+      "records": 324,
+      "text_fields": 324
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-split-preview-v2/ban-xem-truoc.json",
+      "sha256": "e3945d455e055cf0364dfc058b9a214840a6ee4b61f5094a6579f954cd527bb8",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-split-preview-v2/dieu-kien-tung-mau.json",
+      "sha256": "912639aa88cb48df471425f46502cae4071e691c88ebce113d45f5cd12d0386f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-split-preview-v2/manifest.json",
+      "sha256": "ec3eeaa9dd6bc655946d6f4301e9e8f9906ccf2e599a6633bacbcd01cebff828",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-split-preview-v2/mau-cho-duyet.jsonl",
+      "sha256": "580bf241476d4d949ba4047d2428ca332066eff995fe395882eb5d8465fd753f",
+      "records": 324,
+      "text_fields": 324
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v1/ban-xem-truoc.json",
+      "sha256": "24270569a9067b03aa350d0fa5bd6abedc1159536ca86ea78ed239937faa271e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v1/danh-gia-ai.json",
+      "sha256": "bf2baa3c7df71e3a9c498c0ba31a97fcca9307df982908964f7cb9a420226e74",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v1/manifest.json",
+      "sha256": "190500059162e20ca2598956c0967b9944ac04c20e84b42d40daf13bd760d019",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v1/mau-cho-duyet.jsonl",
+      "sha256": "3a41c64944e04341080b4ec1cdef94749d7b4428c9dc9a66e508d6b577fdac21",
+      "records": 12,
+      "text_fields": 12
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v2/ban-xem-truoc.json",
+      "sha256": "53c766d54741f43b8d4eae6ed42554a9d1b8b1020e7c07352f37bebbd050b750",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v2/danh-gia-ai.json",
+      "sha256": "b9decf943bf7ac496ea29467b7f0cd3853bee87cdcb46810bc5e4cbee4a1e7a0",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v2/manifest.json",
+      "sha256": "0a315b026cb3c1dd13afe2740d1c2f4f3082711975cb3c826ad19bc990abe07d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v2/mau-cho-duyet.jsonl",
+      "sha256": "29bbb8749a9ba0328217835de9e172461c9f9578a8edfae90105374f992cfe86",
+      "records": 12,
+      "text_fields": 12
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v3/ban-xem-truoc.json",
+      "sha256": "993950f9266ad5a28150197e71be982f34e87b7d507ceeadf91dc8077f048f42",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v3/danh-gia-ai.json",
+      "sha256": "476b560f53f8c6d0ceed549caa0039b6fdade2d70694e0b0d98f1b5b26985051",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v3/manifest.json",
+      "sha256": "352c8010b1eb7feda083414754fc1540d73c082e2e418d93a0f5d3b83f9b138f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v3/mau-cho-duyet.jsonl",
+      "sha256": "58e8eca4981c3fb781d8422ef8c22559f5cba6004a462e2982e501bc811788d9",
+      "records": 12,
+      "text_fields": 12
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v4/ban-xem-truoc.json",
+      "sha256": "1a6198b19ecd15852347d0899530281d0b2bd7f2a10b3cdb39eba17de6d5c1c0",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v4/danh-gia-ai.json",
+      "sha256": "8d4a7bf5bdbc558fc9d75638bbad408538d355972fe88e6f0406bd7687a61d20",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v4/manifest.json",
+      "sha256": "88793be76750a5ad916aba327e9b194604526d5727056bfcfa0b85e5eb97d913",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-supervision-batch-v4/mau-cho-duyet.jsonl",
+      "sha256": "65c351d7e3be307f02316a80db63fdd5657cec8d04e88e97c84216035f425398",
+      "records": 12,
+      "text_fields": 12
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-articles-v1/ban-xem-truoc.json",
+      "sha256": "407d3cacfaf103299201988c02c0c9845fd5f3692a6cbfeb013f478024319903",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-articles-v1/danh-gia-ai.json",
+      "sha256": "dda5e0fa14f80a7009e36e1654e04c6c7f428a8a72710aa7ff949a3fc63b26cf",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-articles-v1/kiem-tra-va-nhom.json",
+      "sha256": "6d6b8ddbb58e85beb3339c1ec5b8399f3a7b49a45b4990b35436e7418d891a86",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-articles-v1/manifest.json",
+      "sha256": "945dbae505f20ab4e83ea46a2066fc235bc730e4ce0f0543ba4983ce39b53d8f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-articles-v1/mau-cho-duyet.jsonl",
+      "sha256": "59c63de518ba81099608dc260a876853e3aca75bb31c240cb4a3d9db6b6a0d7f",
+      "records": 30,
+      "text_fields": 30
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-business-v1/ban-xem-truoc.json",
+      "sha256": "d39041d1d53f9c39cba1d818fed209653cf26cd3d1bd4cd750bd58cd50ca9969",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-business-v1/danh-gia-ai.json",
+      "sha256": "1f15423056c5ace09400647346f6119de0979993c39e7095db45908478d79680",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-business-v1/manifest.json",
+      "sha256": "7a0a589bb214a05f17003c5f79dda45c4cf720a9f422ae8fd436345a5340975a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-business-v1/mau-cho-duyet.jsonl",
+      "sha256": "b4e344f2500178e69f2008391e105e1309f40213c0aa660b34cc3471c01d0287",
+      "records": 20,
+      "text_fields": 20
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-markdown-v1/ban-xem-truoc.json",
+      "sha256": "ba82a81416effa5aa07ae39e3579561eeb4b21a03f367e802b21443d88604edf",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-markdown-v1/danh-gia-ai.json",
+      "sha256": "145bea2c4785d4f2a5634dcd7f1e93833813cd47d1b04c0f787e841553e8b0a4",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-markdown-v1/manifest.json",
+      "sha256": "26a1178e222fe29ff217a87f290abca15d9ec870d8680f565bdb6466cfe6289b",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-markdown-v1/mau-cho-duyet.jsonl",
+      "sha256": "c95f9741bd74fb915666b1fbbe66f39b180b234af0fd015c055451e643b6336a",
+      "records": 18,
+      "text_fields": 18
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-001.json",
+      "sha256": "b5e584d2c4528d54d5c8ef47220190c386f1d030b867128ef523f238698f91fd",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-002.json",
+      "sha256": "fb46c18d19e87aa2ebe2e936735906a5a4ef87faa0597a14e26f3dc119b67923",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-003.json",
+      "sha256": "a38c4ae58b623475eccde9da8db56a511b4e7161c8f485aaa1fc44697ad0d4d5",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-004.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-005.json",
+      "sha256": "78574d005ee51f7b9b233f231105f54338e134af517a9051df1b354ce8946b54",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-006.json",
+      "sha256": "db61ecb150a669bdf1657a0d3444d5325593c417b10c9ad979457013fb124809",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-007.json",
+      "sha256": "adbd46669c5986c604a42a6e1341ee2b96d5c9f486c72e4108510b2395b906a3",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-008.json",
+      "sha256": "524167cc343240c4a81bbc333359159b1c98ea9d441bb2ef4adbc7e44f85625a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-009.json",
+      "sha256": "14097e18022bc41f4016c3c147752c55a92e497f8c89d476a76c8712bea25215",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-010.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-011.json",
+      "sha256": "7c99c44b11789ad451a862b39625e5380273588fd7093bec7b8ce437bb42aef1",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-012.json",
+      "sha256": "977daa326638d92af8b00ed8893df329ab1cda017e7444066aa5e5063b5e7f63",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-013.json",
+      "sha256": "f2ffa644ba563461556753283805410a9294d4050abd06ad819994a93e401f4c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-014.json",
+      "sha256": "59279af396ce9085dfe18d07fb59345460a2684416b9fafc9312bd7f05836088",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dap-an-nhap/V3-015.json",
+      "sha256": "98e33cefffd5e3f3877a4bf1b330ef05b83c2c85dc7d327e1ecf8d98bb1dcb1d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-001.json",
+      "sha256": "18e01792e3078f5869115b64b96149f8cd371ea041c1d004838296b74dee8bd8",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-002.json",
+      "sha256": "495ad2c72a7806d2f0ccefc9ae710dbf6e908a269d387af9854f15940087f614",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-003.json",
+      "sha256": "cd69cc082e4828b94814d2cb07854b36d6b1f164f127675c06595fba2c4bdb77",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-004.json",
+      "sha256": "9d66564be97989bf1d92f533e9e88725295183a30e789c345f0b7a11cbf5a410",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-005.json",
+      "sha256": "30c2844ca18921057097bd2bcbf330dd3840a757acf9041fec73d2550ff30dac",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-006.json",
+      "sha256": "d127d1f8ab9f4948060d8b12b117dd0c5632e3e0ac492a4a05ea4164e3bba381",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-007.json",
+      "sha256": "9782acce1123add4b7a311ebd36a09846faa93126667b69f118771d3fe2441fd",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-008.json",
+      "sha256": "68651be5c17a8b2c2f0e9daf857c89ff62c183deab69479290663a0b23c7c290",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-009.json",
+      "sha256": "227e6d8a7ae406b85029c55872e170f8a788f5a91e3b5fcb72f3568be3e315a8",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-010.json",
+      "sha256": "0a4626fc4b0a072db17ab68e9bf3372151fddb6e264d33256b8c0e412dcba9fb",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-011.json",
+      "sha256": "b204fc3e0f8f5aef7272eef104bbea4d23a3944cd7363f4f2f85f8e007e02793",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-012.json",
+      "sha256": "33300a416228644289e012a37bb2463a0c3c41d3920e5a1b90c41293e2acfce8",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-013.json",
+      "sha256": "2d23ec9c7b714a23f3e83ab138baf651dc13b8eb25528712f4520f18538ddd87",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-014.json",
+      "sha256": "381d398743512722264b3b4821b6e040af367c650f261bbe3d4bd0b5607ab242",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/dau-vao/V3-015.json",
+      "sha256": "55191f561b5008c0f6aef9b101dbc96ca6f9074c0cc9d2fa188b5c58fd4d1237",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/ket-qua-ra-soat.json",
+      "sha256": "e741cff1e27e0b135b3e6ec4e66e5c81a98b099df25a70073a7a5214f362448d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/kiem-tra-trung-va-nhom.json",
+      "sha256": "005944db7d276b264dba48b7f80c2388d6404784a322ab4e074d7b83c09723f7",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/manifest.json",
+      "sha256": "114d012f8161102b4da4a54d268136b17025156b63eb1952ed72441033913504",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/mau-cho-duyet.jsonl",
+      "sha256": "630a45deef539dbf5a14b536d4cc12af6fc9b061357e15660f200233e01db5e5",
+      "records": 15,
+      "text_fields": 15
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-v1/tong-ket-ra-soat.json",
+      "sha256": "5a8b806b244130c12d607a4e2b5ca9812a5884e2387ec5ed8696a93490dc4575",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-workflow-reviewed-v1/ban-xem-truoc.json",
+      "sha256": "f81ebbdd89b8045eed8e322f780598a7c6364ef3947d5216bff9c715f26e5f35",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-workflow-reviewed-v1/danh-gia-ai.json",
+      "sha256": "9a037441efca18037f91a1c54760143064872a4d6da8b58d8b39c4937a68b413",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-workflow-reviewed-v1/manifest.json",
+      "sha256": "4c22e2d6c702cc984ac5cb4498c245d4ddd06aa91fb2d2f4ecf10341c388ff26",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-workflow-reviewed-v1/mau-cho-duyet.jsonl",
+      "sha256": "ec125a7f7aa2ab74fd96c4a43fec3780d65a55a18c1df05ad0b128fdee47c911",
+      "records": 16,
+      "text_fields": 16
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-workflow-v1/ban-xem-truoc.json",
+      "sha256": "22d77927dfb07942b4bc36a3569d281ac9a54c28d95977d7ba35b70e2016760e",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-workflow-v1/danh-gia-ai.json",
+      "sha256": "8af76ff7ef0b001dbcff998e9792d2ccddd24b7fe6492c0e2a8f5505043f0eab",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-workflow-v1/manifest.json",
+      "sha256": "a3642a0238e270188b3d0334e3ea87c5bae4cb14ac570add6535ee588ab92abd",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/annotations/verifier-vietnamese-workflow-v1/mau-cho-duyet.jsonl",
+      "sha256": "e913b829cbf31e8289184356ef7bbe65d5728ae20afdeb94ecd5d3b463ef4cae",
+      "records": 16,
+      "text_fields": 16
+    },
+    {
+      "file": "benchmark/data/audits/cross-source-overlap.json",
+      "sha256": "975160a1bbf9f8526a9619d6d735c925d1efa2bbd4d3abe3a393a5e0d802a32b",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/audits/notinject-audit.json",
+      "sha256": "f0c32b97d242489299d1cd7b9743861e944a7f6950ca959be67c5d0bf16ae530",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/audits/realistic-prompt-injections-audit.json",
+      "sha256": "df7a100f377b10a03b3141380077e5165703f256d6105a5bc0d1f4b3fc9bc252",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/context-controls-v1.json",
+      "sha256": "132b208eba7878e70562d48a241b0da30177938176e5026268c95fda43eef55d",
+      "records": 1,
+      "text_fields": 8
+    },
+    {
+      "file": "benchmark/data/context-controls-v2.json",
+      "sha256": "50de92db2712ad62be12fbe17d8c0fd1b5af5c7f5a7575145864b286c79d588c",
+      "records": 1,
+      "text_fields": 8
+    },
+    {
+      "file": "benchmark/data/control-suite.json",
+      "sha256": "c0c878a50ea3ea5bb971c6bc898dfbb9774531e6472d86db2c73b096dee784b5",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/incoming/public-vi-documents/nguon-tai-lieu.mau.json",
+      "sha256": "6bd10275a286a443eb1d9a86b10d2f5c6859e0e42988ed26447b08f5dcfcad91",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/incoming/public-vi-documents/nguon-vi-bo-sung-v1/manifest.json",
+      "sha256": "e95bf25780d20aa65de27d7258341a1533f64c200224824667603648bca77f97",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/manifest.json",
+      "sha256": "9e8189c5cd25c10bc9c75a9cd47eabab5efda113ca95d3dd1d3672f7defaf5b8",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/priority-one-dev-v1.json",
+      "sha256": "64714cf2881ab2c26a9c274741424981ebd16b7e0a452b5ce7a15aad6af5d4df",
+      "records": 1,
+      "text_fields": 72
+    },
+    {
+      "file": "benchmark/data/priority-one-dev-v2.json",
+      "sha256": "7c018bde4e4197beaa3f982fcc3172cebdb89347a9eeff0e17f5743f142ee07e",
+      "records": 1,
+      "text_fields": 72
+    },
+    {
+      "file": "benchmark/data/processed/ipi-clean.jsonl",
+      "sha256": "02510a5df52719e79cd85ccdd33de01b0b4670ead0e3469fff890fe6b069b83b",
+      "records": 65948,
+      "text_fields": 65948
+    },
+    {
+      "file": "benchmark/data/processed/ipi-cleaning-report.json",
+      "sha256": "82b3373206f0466ed482e53d583a087734b0d1bafb0127e925b2010945d52100",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/processed/ipi-conflicts.jsonl",
+      "sha256": "601d1e558fb6b7a63c983991da35d0ddc6a90cc5334c8374fd40b0b11da543f5",
+      "records": 18,
+      "text_fields": 18
+    },
+    {
+      "file": "benchmark/data/processed/ipi-data-audit.json",
+      "sha256": "ad1e128e74c57724048dd2ebbea35fb255312538f9c5de2c8812fdccbfaa8b8b",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/processed/ipi-normalization-validation.json",
+      "sha256": "308b2af60d5e63e4b34fb9ca8c2dd00d7cc8dc7ca4ab7e045208681c5a4288b4",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/processed/notinject/normalization-report.json",
+      "sha256": "d0079bf8ae554e9173ddafbcded03961bc6b85db2b98f27aa7393a50323b1b9c",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/processed/notinject/normalization-validation.json",
+      "sha256": "e2282f10343d082e6550af9e298eeb61c63c69c29cea87e4b8812fe2beb1b53b",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/processed/notinject/notinject.jsonl",
+      "sha256": "fcbca6f07fe90f1b1ba16f8ba917640f343d7049783a496c914119720799f818",
+      "records": 339,
+      "text_fields": 339
+    },
+    {
+      "file": "benchmark/data/processed/realistic-prompt-injections/normalization-report.json",
+      "sha256": "de6cc57456e543a42c07abeb8ac015eeadd97f4cc80cc24500770a4504964ab7",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/processed/realistic-prompt-injections/normalization-validation.json",
+      "sha256": "ef5bae683fc5cefda1001f0af4c749c2b21dd1caa43833c42521815289f8017a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl",
+      "sha256": "ccb93fc99972ff44f5e2e25317072796f5443ce01660587e3decf72962c7cdf0",
+      "records": 17,
+      "text_fields": 17
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_dh_base.json",
+      "sha256": "0a8186468d21389af432e8c7b399ae42264d1b93a07b65c7a489468508604305",
+      "records": 1,
+      "text_fields": 510
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_dh_enhanced.json",
+      "sha256": "885602716b72c18af80695ce6c2e1f242fa03163bc90b0788b0c5e4ab6216d50",
+      "records": 1,
+      "text_fields": 510
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_ds_base.json",
+      "sha256": "4daab35c62a3845e8b9400f4dca58b9c9f37e57cd33b2337552557fbb26282e9",
+      "records": 1,
+      "text_fields": 544
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/data/test_cases_ds_enhanced.json",
+      "sha256": "7bc510868df032511053fc40e8470e68a041fb7148d055112093594bf73ab0ce",
+      "records": 1,
+      "text_fields": 544
+    },
+    {
+      "file": "benchmark/data/raw/injecagent/snapshot.json",
+      "sha256": "8cd26914e2b3df095512a7c3b2d81066bf81dc85a27d4c2bba3ab1d34dc88606",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/llmail-intake-v1/data/emails_for_fp_tests.json",
+      "sha256": "4ddd950b5dbaa8548f5597c886d8e09a051ba07f80a9291fdcca9c2397d22abe",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/llmail-intake-v1/data/levels_descriptions.json",
+      "sha256": "d1391d6fa8bb074b1603bb20699df6c1ada3c6add64db495e1a39faebc0cd400",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/llmail-intake-v1/data/objectives_descriptions.json",
+      "sha256": "daed5cacc5126790073e1a8dfc650b8024c903c415f1e11a189a8171c0c0f183",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/llmail-intake-v1/data/phase2-subset.jsonl",
+      "sha256": "fe02512005cf03a7ea9a39f0e8f357a244b615e63cd7004b7ef48946a21342dc",
+      "records": 48,
+      "text_fields": 48
+    },
+    {
+      "file": "benchmark/data/raw/llmail-intake-v1/data/scenarios.json",
+      "sha256": "3d7c55fd04826dd29fa11b9f9912ae270fffb16a6c52a7eb2bff00457d378e4f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/llmail-intake-v1/dataset-metadata.json",
+      "sha256": "3806493b926f7669df7695c0cc0fd0347500c6b1093e5c46437286656310c0c1",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/llmail-intake-v1/snapshot.json",
+      "sha256": "ab9f580a8cb3956ed6faa24e3dfded6d8d985e817733884c4e193941c93c2eac",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/malmasabi-bipia-gpt/dataset_for_huggingface.jsonl",
+      "sha256": "d7695c0ab744ffc97c2ff586fc57a21ccc936fa800da784ef81fb4a4166eb3c6",
+      "records": 70000,
+      "text_fields": 70000
+    },
+    {
+      "file": "benchmark/data/raw/openapi-context-v1/snapshot.json",
+      "sha256": "969f62008e32a300e45bcccf464ea9608b852e7d01108ecf4ccffc6f7e9a98bd",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/snapshot.json",
+      "sha256": "9901299ae1a5c22f9277dfff56a767059096d2788183d97e085abf69f93619ab",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/tag-object-1.json",
+      "sha256": "5ef729618c5f2388c774e7ac5203ac7ea9ca9a924b87efd9567dd7bdbe2e858b",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/python-context-docs-v1/tag-ref.json",
+      "sha256": "7396131501d5f76f4911f6f959841c71218865198fbc0e8491438e4732f95407",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/realistic-prompt-injections/probes.jsonl",
+      "sha256": "8706b03516206e94effa76bff3087cca7a4b3fe4dd26ef640adc9e638f7649b9",
+      "records": 17,
+      "text_fields": 17
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/snapshot.json",
+      "sha256": "a1b514924a8f28497497c8e03352be3bf493b3dfdafa90069224ba3bfc052136",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-markdown-v1/tree.json",
+      "sha256": "61bbc9cb63d49f5910e0ad0f72bcb28beb87f206a9f8a0cdab4a3cccef4054e2",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/snapshot.json",
+      "sha256": "ffc5ddd3399fa3e094dddd9f86442d924da1e000ed1942d5d33ae92339854c12",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-01-metadata.json",
+      "sha256": "749d61db4ff2f314f48b877a72146b3a84cf8b890383adba10c40cd89d8db52a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-02-metadata.json",
+      "sha256": "087a41e70d21e2b2a1f68d640bdd4dad494d572a441e6e04b81b114b9ff08642",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-03-metadata.json",
+      "sha256": "732437b207b56bcba3da7b5fdd6b4d08e27c8494b24a90cb75bf62fa08b2ba4d",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-04-metadata.json",
+      "sha256": "104c7d3200b9aba55f987f9f18bfa676505fbf1c8ecdcc4f8caebde5f11756fd",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-05-metadata.json",
+      "sha256": "e17ed350cb8ee6b7b5d030541324ba98b6aff3e9a2beef189085777b2d9d1a6a",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/raw/vietnamese-wikipedia-v1/wiki-06-metadata.json",
+      "sha256": "e02fc907881cbbe769f66661bd33d722cb8708231f4c95e08eb04aed8e1bd9a5",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/reference-transfer-v1.json",
+      "sha256": "a29124a0c82eedd0c59b90dbd460be02e8a1524641531f8d7104c9acb549d97f",
+      "records": 1,
+      "text_fields": 8
+    },
+    {
+      "file": "benchmark/data/round-one-eval.json",
+      "sha256": "885eddd7f4d8d040883aff704cbb818f40b0f7dccc2f44b8cb5b94bd97dd176e",
+      "records": 1,
+      "text_fields": 10
+    },
+    {
+      "file": "benchmark/data/selector-spread-screen-v1.json",
+      "sha256": "0dcad2907f4b7c34068b065d95caa4b10279de46d41d45db29799c0743867844",
+      "records": 1,
+      "text_fields": 6
+    },
+    {
+      "file": "benchmark/data/splits/ipi-dev.jsonl",
+      "sha256": "fa9d3c960aad0d24d5609bf0a465887f3965635d325c91e9e7fc95dce7feac3e",
+      "records": 52758,
+      "text_fields": 52758
+    },
+    {
+      "file": "benchmark/data/splits/ipi-group-audit.json",
+      "sha256": "d2c54490547392c9777c8fd1b11842bc9bf7c10fa2a4f63ed0455c39daf9324f",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/splits/ipi-split-report.json",
+      "sha256": "dced576e0938918718dbdbea207634884e48a512e20555eaef0f106ef02f92c8",
+      "records": 1,
+      "text_fields": 0
+    },
+    {
+      "file": "benchmark/data/splits/ipi-test.jsonl",
+      "sha256": "2074a3ff4496afdc891fef77d8722badbb459740d2950db658c7889ff1a68b55",
+      "records": 13190,
+      "text_fields": 13190
+    },
+    {
+      "file": "benchmark/data/structured-transfer-v1.json",
+      "sha256": "a0ef8949c6f29d1a10f4010df1616fecf8a33b6b9a312eb94b35d6f1e24318ca",
+      "records": 1,
+      "text_fields": 8
+    },
+    {
+      "file": "benchmark/experiments/context-aware-detector-design-v1/mau-tham-chieu.jsonl",
+      "sha256": "385d782da0104d5e0ec546e1289a299bda52355e56eb37ce8384015f9d561a5c",
+      "records": 9,
+      "text_fields": 9
+    },
+    {
+      "file": "benchmark/experiments/piguard-en-screen-v1/inputs.jsonl",
+      "sha256": "9408cd83c353ae960b5b6e7341b787412d9adf0497e910d5da54946daa81adb8",
+      "records": 52,
+      "text_fields": 52
+    },
+    {
+      "file": "benchmark/experiments/specialized-detector-screen-v1/inputs.jsonl",
+      "sha256": "84b18a5c36b67bb46b071b746ea10f53ceb936b76111ce1698213a9b75fc25f2",
+      "records": 66,
+      "text_fields": 66
+    },
+    {
+      "file": "benchmark/experiments/verifier-counterfactual-train-v1/train.preview.jsonl",
+      "sha256": "b11cf6a9c3e8f12e67ba0377de636cb806205169218d92c5ff6d0cfb6f3bc5d1",
+      "records": 360,
+      "text_fields": 360
+    },
+    {
+      "file": "benchmark/experiments/verifier-counterfactual-train-v2/train.preview.jsonl",
+      "sha256": "79be6fdee2896bd99ef0d4c22acec10e2c70b5953cd46158bbd5734e0a5d04bb",
+      "records": 360,
+      "text_fields": 360
+    },
+    {
+      "file": "benchmark/experiments/verifier-local-release-v1/dev.preview.jsonl",
+      "sha256": "eb2ab9bb5c9b9ff85fa5f906494074132b7116b4c17997bf48d9b69affbe8b1f",
+      "records": 168,
+      "text_fields": 168
+    },
+    {
+      "file": "benchmark/experiments/verifier-local-release-v1/probe.preview.jsonl",
+      "sha256": "c2abc5567707abda8404ccbf99b50ba3dbb5f68d4f1ff8f3f9b2667f4da8f08e",
+      "records": 120,
+      "text_fields": 120
+    },
+    {
+      "file": "benchmark/experiments/verifier-local-release-v1/train.preview.jsonl",
+      "sha256": "80d34c06cf3ce1bae64f70fa707ad97bc70c58b8886fa71ac160534db304adac",
+      "records": 360,
+      "text_fields": 360
+    },
+    {
+      "file": "benchmark/experiments/verifier-local-release-v2/dev.preview.jsonl",
+      "sha256": "eb2ab9bb5c9b9ff85fa5f906494074132b7116b4c17997bf48d9b69affbe8b1f",
+      "records": 168,
+      "text_fields": 168
+    },
+    {
+      "file": "benchmark/experiments/verifier-local-release-v2/probe.preview.jsonl",
+      "sha256": "d34dce94d173b25718c20ce3a254b10f18e4c8388468a2c8daa0b133790be912",
+      "records": 120,
+      "text_fields": 120
+    },
+    {
+      "file": "benchmark/experiments/verifier-local-release-v2/train.preview.jsonl",
+      "sha256": "682e455b58186d66bc002c0c486bf838ed085dd4d9e0db3ee68f73b1a55b2520",
+      "records": 360,
+      "text_fields": 360
+    }
+  ],
+  "scope": "benchmark/data JSON/JSONL; experiments inputs, preview và reference JSONL, gồm user message trong payload. Không gồm CSV, PDF/DOCX hoặc mọi tên trường tùy ý.",
+  "methods": [
+    "NFKC/casefold/whitespace exact",
+    "trigram Jaccard >=0.8",
+    "shared 12-token passage"
+  ],
+  "policy": "Mọi hit là cờ cần rà, không tự kết luận nhãn/trùng ngữ nghĩa. Cả nhóm lock-access giữ review-only; chưa phát hành train.",
+  "limitations": [
+    "Không chứng minh độc lập từ việc không có lexical hit.",
+    "Shared passage có thể do phần bao khung sản phẩm/repository dùng chung.",
+    "Chưa có đồ thị nhóm/task/template toàn kho hoặc xác minh danh sách protected đầy đủ.",
+    "User message preview là envelope có prompt/reference; shared passage chỉ là cờ cần rà, không chứng minh nguyên document trùng.",
+    "Không đọc gold/target; các file không có trường được hỗ trợ được liệt kê riêng."
+  ],
+  "training_runs": 0,
+  "model_calls": 0
+}

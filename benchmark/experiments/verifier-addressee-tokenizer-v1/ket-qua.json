@@ -1,0 +1,191 @@
+{
+  "source": "verifier-addressee-context-v1",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "offline": true,
+  "examples": 14,
+  "source_records": 7,
+  "source_parents": 3,
+  "mask_valid": 14,
+  "collator_valid": 14,
+  "token_min": 751,
+  "token_max": 1225,
+  "target_max": 98,
+  "over_budget": {
+    "1024": 3,
+    "1536": 0,
+    "2048": 0
+  },
+  "rows": [
+    {
+      "id": "ac-01-whole_source",
+      "source_record_id": "ac-01",
+      "source_parent_id": "vi-wikipedia-page:13199",
+      "mode": "whole_source",
+      "tokens": 1225,
+      "padded_tokens": 1232,
+      "supervised_tokens": 85,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-01-none",
+      "source_record_id": "ac-01",
+      "source_parent_id": "vi-wikipedia-page:13199",
+      "mode": "none",
+      "tokens": 1132,
+      "padded_tokens": 1136,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-03-whole_source",
+      "source_record_id": "ac-03",
+      "source_parent_id": "authored-cancel:en",
+      "mode": "whole_source",
+      "tokens": 835,
+      "padded_tokens": 840,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-03-none",
+      "source_record_id": "ac-03",
+      "source_parent_id": "authored-cancel:en",
+      "mode": "none",
+      "tokens": 808,
+      "padded_tokens": 808,
+      "supervised_tokens": 86,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-04-whole_source",
+      "source_record_id": "ac-04",
+      "source_parent_id": "authored-cancel:en",
+      "mode": "whole_source",
+      "tokens": 933,
+      "padded_tokens": 936,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-04-none",
+      "source_record_id": "ac-04",
+      "source_parent_id": "authored-cancel:en",
+      "mode": "none",
+      "tokens": 828,
+      "padded_tokens": 832,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-05-whole_source",
+      "source_record_id": "ac-05",
+      "source_parent_id": "authored-cancel:en",
+      "mode": "whole_source",
+      "tokens": 857,
+      "padded_tokens": 864,
+      "supervised_tokens": 98,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-05-none",
+      "source_record_id": "ac-05",
+      "source_parent_id": "authored-cancel:en",
+      "mode": "none",
+      "tokens": 751,
+      "padded_tokens": 752,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-06-whole_source",
+      "source_record_id": "ac-06",
+      "source_parent_id": "authored-cancel:vi",
+      "mode": "whole_source",
+      "tokens": 883,
+      "padded_tokens": 888,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-06-none",
+      "source_record_id": "ac-06",
+      "source_parent_id": "authored-cancel:vi",
+      "mode": "none",
+      "tokens": 856,
+      "padded_tokens": 856,
+      "supervised_tokens": 86,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-07-whole_source",
+      "source_record_id": "ac-07",
+      "source_parent_id": "authored-cancel:vi",
+      "mode": "whole_source",
+      "tokens": 1044,
+      "padded_tokens": 1048,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-07-none",
+      "source_record_id": "ac-07",
+      "source_parent_id": "authored-cancel:vi",
+      "mode": "none",
+      "tokens": 939,
+      "padded_tokens": 944,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-08-whole_source",
+      "source_record_id": "ac-08",
+      "source_parent_id": "authored-cancel:vi",
+      "mode": "whole_source",
+      "tokens": 897,
+      "padded_tokens": 904,
+      "supervised_tokens": 98,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "ac-08-none",
+      "source_record_id": "ac-08",
+      "source_parent_id": "authored-cancel:vi",
+      "mode": "none",
+      "tokens": 791,
+      "padded_tokens": 792,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    }
+  ],
+  "input_sha256": {
+    "manifest.json": "5f55555faa44cbfde1ae2897db768afeda44191ced37035066a70b159609acf5",
+    "ban-xem-truoc.json": "9672071b952bf6d9997ff94e0546abe0423dbbad20eac8d14b14cef891e8d73e"
+  },
+  "code_sha256": {
+    "audit_verifier_preview.py": "bb0a838c88d64b7ff7088e68f4406a6e742f3a6ab8e9406889e0c659d8c51146",
+    "audit_verifier_tokenizer.py": "90bb22dc2f4cb18ac168abe053f2bf87b1e295269b92a42ee3bd666488b42f9b",
+    "verifier_collator.py": "594bf13412567aef5c9439241de5dbdcdb7fbfd7cd3f1cd40c644aaeaa79b478"
+  },
+  "training_ready": false,
+  "no_model_forward_or_updates": true,
+  "runtime_changed": false,
+  "limitations": [
+    "Token/mask/parser đúng không chứng minh nhãn AI đúng hoặc độc lập ngữ nghĩa.",
+    "Không truncate; bản vượt 2048 bị đánh dấu collator_valid=false, chưa tạo bài học."
+  ]
+}

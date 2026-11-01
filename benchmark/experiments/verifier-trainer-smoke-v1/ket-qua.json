@@ -1,0 +1,156 @@
+{
+  "status": "passed_technical_only",
+  "pilot_training_started": false,
+  "training_ready": false,
+  "dev_or_holdout_used_for_updates": false,
+  "runtime_changed": false,
+  "fixture": "fresh_synthetic_resource_only",
+  "sequence_tokens": 2048,
+  "target_tokens": [
+    11,
+    256
+  ],
+  "gradient_accumulation_steps": 8,
+  "micro_batch_size": 1,
+  "optimizer_steps_requested": 2,
+  "checkpoint_path": "E:\\IPI-Training\\checkpoints\\technical-trainer-v1",
+  "resume_verified": true,
+  "assets_manifest_sha256": "c46b851db3b954f812921fe4dcb44b4469bf7c07659ddb23e5db3cf8cde1f7ea",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "bitsandbytes": "0.48.1",
+    "accelerate": "1.10.1"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "total_bytes": 4294443008,
+    "free_before_load": 3455791924
+  },
+  "fixture_sha256": "464861fc2072a545b83e42dee3543dd0847a746b19b1029e2c001ce5da5cece6",
+  "trainable_parameters": 1089536,
+  "cpu_offload": false,
+  "train_seconds": 79.78912800003309,
+  "global_steps": 2,
+  "finite_gradient_steps": 2,
+  "loss_observations": [
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 823,
+      "loss_contribution": 0.047241970896720886
+    },
+    {
+      "supervised_tokens": 256,
+      "normalizer_tokens": 823,
+      "loss_contribution": 0.06367914378643036
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 823,
+      "loss_contribution": 0.047241970896720886
+    },
+    {
+      "supervised_tokens": 256,
+      "normalizer_tokens": 823,
+      "loss_contribution": 0.06367914378643036
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 823,
+      "loss_contribution": 0.047241970896720886
+    },
+    {
+      "supervised_tokens": 256,
+      "normalizer_tokens": 823,
+      "loss_contribution": 0.06367914378643036
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 823,
+      "loss_contribution": 0.047241970896720886
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 823,
+      "loss_contribution": 0.047241970896720886
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 1313,
+      "loss_contribution": 0.028687238693237305
+    },
+    {
+      "supervised_tokens": 256,
+      "normalizer_tokens": 1313,
+      "loss_contribution": 0.037832360714673996
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 1313,
+      "loss_contribution": 0.028631363064050674
+    },
+    {
+      "supervised_tokens": 256,
+      "normalizer_tokens": 1313,
+      "loss_contribution": 0.03786363825201988
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 1313,
+      "loss_contribution": 0.028665198013186455
+    },
+    {
+      "supervised_tokens": 256,
+      "normalizer_tokens": 1313,
+      "loss_contribution": 0.03787307068705559
+    },
+    {
+      "supervised_tokens": 256,
+      "normalizer_tokens": 1313,
+      "loss_contribution": 0.03787250816822052
+    },
+    {
+      "supervised_tokens": 256,
+      "normalizer_tokens": 1313,
+      "loss_contribution": 0.037881363183259964
+    }
+  ],
+  "adapter_updated": true,
+  "max_adapter_difference_after_resume": 0.0,
+  "resume_micro_batches": 8,
+  "resume_final_step": 2,
+  "peak_torch_allocated_bytes": 2958803456,
+  "peak_torch_reserved_bytes": 3315597312,
+  "gpu_free_after": 146486068,
+  "process_memory": {
+    "rss": 1889796096,
+    "vms": 7328350208,
+    "num_page_faults": 1330288,
+    "peak_wset": 3963990016,
+    "wset": 1889796096,
+    "peak_paged_pool": 21573920,
+    "paged_pool": 9534288,
+    "peak_nonpaged_pool": 124264,
+    "nonpaged_pool": 109272,
+    "pagefile": 7328350208,
+    "peak_pagefile": 9997561856,
+    "private": 7328350208
+  },
+  "code_sha256": {
+    "smoke_verifier_trainer.py": "2611b2ba73a0f625236b25103285c811535262e7554875c04767933f56354aab",
+    "verifier_trainer.py": "8968cd3d8614103ccbc40fc39024d149b91914da91d8b72aa4f296e37e3b6490",
+    "verifier_supervised_loss.py": "82254f7d8658f7370f86637e1a88d94cc17bdd05370da6713fd5a6a997a03e75",
+    "verifier_collator.py": "594bf13412567aef5c9439241de5dbdcdb7fbfd7cd3f1cd40c644aaeaa79b478",
+    "smoke_verifier_gpu.py": "7e5421c0d932410e1825e3bff3b34dfc19ed711f7a3f611079f3de2d155a27dd"
+  },
+  "limitations": [
+    "Fixture kỹ thuật tự soạn, không đo chất lượng IPI hoặc độ ổn định train dài.",
+    "Chỉ hỗ trợ một thiết bị và phiên bản thư viện đã khóa.",
+    "Peak PyTorch không phải peak toàn GPU.",
+    "Không thay thế dữ liệu đủ điều kiện và kiểm chứng độc lập trước pilot."
+  ],
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/smoke_verifier_trainer.py"
+}

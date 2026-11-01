@@ -1,0 +1,16 @@
+{
+  "command": ". ./scripts/use-training-storage.ps1; node scripts/check-classifier-python-offline.cjs",
+  "executable": "E:\\IPI-Training\\venvs\\verifier\\Scripts\\python.exe",
+  "code_sha256": {
+    "scripts/classifier_worker.py": "55b6b59dc193a849ea3fbf0484d4fff9aecc39dffeb959af7b281dde4b36ac08",
+    "scripts/test_classifier_worker.py": "91d9b7c62562b69691c6732f97eb8429f34a0544641755e7b37a629713a0d9a6",
+    "src/ai/classifier/classifierAdapter.ts": "c9f62a85726cd2ab3fea1455a405d01c32ceae333fc8acbaf5f85cc8f6a0aae3",
+    "src/ai/classifier/contracts.ts": "0b5cd91e42ebe9c3eaffa1b79abc2f8881449fb0884fb8c67d5bf3fc14dc899f",
+    "engine/classifier/stdio-session.js": "e5ccea78b8c43403e84b5f57ea1c4903c1ac3174b3a7fc27dad1d3e5b52e7330",
+    "scripts/check-classifier-python-offline.cjs": "b11eae8b0d9b50ff564f123944745cd157a67412527168d30c398062d8978075"
+  },
+  "backend": "FixtureBackend from unit tests, not LocalBackend",
+  "model_calls": 0,
+  "downloads": 0,
+  "training": false
+}

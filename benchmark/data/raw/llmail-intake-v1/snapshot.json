@@ -1,0 +1,77 @@
+{
+  "repository": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge",
+  "revision": "1063bdf01ec8762b812d5e06ee768a06faa5a6f7",
+  "retrieved_at": "2026-10-26T03:31:39.317Z",
+  "license_declared_in_dataset_card": "MIT",
+  "license_evidence": "README.md và dataset-metadata.json; không suy từ license repo code.",
+  "assets": {
+    "README.md": {
+      "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/README.md",
+      "bytes": 23628,
+      "sha256": "d85767e349ab1abbaf43db9390c4e906e34954e5df3a1335c8f1516efa64e812"
+    },
+    "data/emails_for_fp_tests.json": {
+      "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/emails_for_fp_tests.json",
+      "bytes": 55486,
+      "sha256": "4ddd950b5dbaa8548f5597c886d8e09a051ba07f80a9291fdcca9c2397d22abe"
+    },
+    "data/scenarios.json": {
+      "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/scenarios.json",
+      "bytes": 38812,
+      "sha256": "3d7c55fd04826dd29fa11b9f9912ae270fffb16a6c52a7eb2bff00457d378e4f"
+    },
+    "data/levels_descriptions.json": {
+      "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/levels_descriptions.json",
+      "bytes": 884,
+      "sha256": "d1391d6fa8bb074b1603bb20699df6c1ada3c6add64db495e1a39faebc0cd400"
+    },
+    "data/objectives_descriptions.json": {
+      "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/objectives_descriptions.json",
+      "bytes": 379,
+      "sha256": "daed5cacc5126790073e1a8dfc650b8024c903c415f1e11a189a8171c0c0f183"
+    },
+    "data/phase2-prefix.bin": {
+      "upstream_file": "data/labelled_unique_submissions_phase2.json",
+      "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/labelled_unique_submissions_phase2.json",
+      "bytes": 524288,
+      "sha256": "29d4d76b4f44a911e0cb792e9e21cf2e00fb468cfa959de994f7b033db591b0b",
+      "content_range": "bytes 0-524287/68586935",
+      "full_file_sha256_verified": false,
+      "upstream_metadata": {
+        "rfilename": "data/labelled_unique_submissions_phase2.json",
+        "blobId": "8c018371e27669e80509c631b1e20a70e76b6a08",
+        "size": 68586935,
+        "lfs": {
+          "sha256": "f89af984e345430c3b357903890e30867bf4676f4ef10c138cc7bad218e890b8",
+          "size": 68586935,
+          "pointerSize": 133
+        }
+      }
+    }
+  },
+  "derived_subset": {
+    "file": "data/phase2-subset.jsonl",
+    "sha256": "fe02512005cf03a7ea9a39f0e8f357a244b615e63cd7004b7ef48946a21342dc",
+    "records": 48,
+    "selection": "48 entry hoàn chỉnh đầu tiên trong prefix cố định, không chọn theo thành công hoặc nhãn.",
+    "scope": "Partial snapshot; không có hash xác minh toàn file 68 MB."
+  },
+  "fp_email_bank_records": 203,
+  "bytes_saved": 718196,
+  "source_annotations_not_verifier_labels": true,
+  "source_label_types": {
+    "string": 44,
+    "boolean": 4
+  },
+  "privacy_review": "pending",
+  "training_eligible": false,
+  "independent_holdout_verified": false,
+  "model_called": false,
+  "source_code_executed": false,
+  "code_sha256": "d0d6ff4070ca6df14578711f360e0b110168b57f4e463f50d2a97d9949994666",
+  "limitations": [
+    "Mới kiểm tra cấu trúc; chưa rà nhãn ngữ cảnh, riêng tư, grouping hoặc overlap.",
+    "Mẫu theo thứ tự đầu file có thể lệch về family/team; không đại diện toàn challenge.",
+    "Không coi attack_attempt=False hoặc ngân hàng FP là nhãn dismissed tự động."
+  ]
+}

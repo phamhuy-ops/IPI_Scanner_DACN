@@ -1,0 +1,14 @@
+﻿{
+    "ke-hoach.json":  {
+                          "bytes":  3175,
+                          "sha256":  "ad0c07504cdd20c471a066743d14970c08452a233d821a48f5497a8b2ce26a83"
+                      },
+    "summary.json":  {
+                         "bytes":  48031,
+                         "sha256":  "7b744d791672fb968074e1cd3121085aa3758aa8b15ff0b5d5105fc18447af59"
+                     },
+    "model-calls.json":  {
+                             "bytes":  498373,
+                             "sha256":  "c1457dacc01ffe44d194ea0872c4392c970200b2105278f58e8d106d935fd468"
+                         }
+}

@@ -1,0 +1,22 @@
+{
+  "planned_slots": 16,
+  "planned_controls": 32,
+  "new_authored_records": 0,
+  "reason_proposals": 12,
+  "parser_checked_examples": 24,
+  "input_sha256": "2f97849e38319187505c0a9e10e8ef818f6ed6dea7316ee2756d52a671b5b4a9",
+  "code_sha256": "050405cbdb37e3b14d1c950dbab1be3c412e42fe1abc0e1700e3c6a456227d40",
+  "model_called": false,
+  "training_started": false,
+  "data_changed": false,
+  "runtime_changed": false,
+  "proposals_applied": false,
+  "reason_modified_nonempty_preview_targets": 16,
+  "empty_preview_targets_preserved": 8,
+  "next_action": "Soạn một batch nhỏ đầu tiên theo ma trận từ đúng bốn nhóm train cha; giữ các điều kiện nhãn text-only và đối chứng. Kiểm tra span/context/nhóm/token trước mọi quyết định phát hành; chưa nhập train, không dùng dev đã đo hoặc tự mở train/model.",
+  "reason_proposal_length_range": [
+    111,
+    133
+  ],
+  "metadata_write_repaired": true
+}

@@ -1,0 +1,34 @@
+﻿{
+    "index.html":  {
+                       "bytes":  316,
+                       "sha256":  "35667c5604ab67ff5f412fba8f4d3cb6aff7a3ee223b3853238e9d6a198cbc83"
+                   },
+    "clean.txt":  {
+                      "bytes":  88,
+                      "sha256":  "a69845f26fdf45934c66dfa85c2bac79e174898dc385241118fbf0c206fd3b59"
+                  },
+    "summary.json":  {
+                         "bytes":  260,
+                         "sha256":  "754045b4b46616948a9f000f0bef9c70ec6e0be3307017230b6bc51ef052de73"
+                     },
+    "preview.tsx":  {
+                        "bytes":  794,
+                        "sha256":  "60425627da4280344510a674abc623f4beaeffd0101322ae60a33bc36f65c2ab"
+                    },
+    "detector-error.txt":  {
+                               "bytes":  26169,
+                               "sha256":  "89d67f98983f2244952b0b50e75c614ae61ff1490fce8e08e9a4f7e0bc6baf47"
+                           },
+    "verifier-error.txt":  {
+                               "bytes":  26169,
+                               "sha256":  "89d67f98983f2244952b0b50e75c614ae61ff1490fce8e08e9a4f7e0bc6baf47"
+                           },
+    "cases.json":  {
+                       "bytes":  180328,
+                       "sha256":  "1d31a994c84b8fbee4bfd28d826f7593acdf7949a01469c6b0dba28fbd1a3e25"
+                   },
+    "attack.txt":  {
+                       "bytes":  267,
+                       "sha256":  "d7bae10f5c54a6089c4e0312214b437c85c36ca52e6a146f036dfdeeb87661c0"
+                   }
+}

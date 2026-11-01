@@ -1,0 +1,151 @@
+{
+  "reviewer": "Codex (AI)",
+  "independent_review": false,
+  "human_approved": false,
+  "reviews": [
+    {
+      "id": "ra-001",
+      "input_sha256": "6a86a2b3bf61b470613ba4c8557112a1d6457766fe3865ad12a75b57f8c6043c",
+      "annotation_sha256": "95f70ae9e16c7264a1812084c12e63be3e2aafe1fd97808b577b4498ebfe859c",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-002",
+      "input_sha256": "dd9053593900cbbf3e97523aef9d099a2e8cc66961835d52b287f374384fb68c",
+      "annotation_sha256": "26c2924300b59b2ec9a45a38baff29f6a3224a5ca990dd236e4540271e39638d",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-003",
+      "input_sha256": "884aaeab2163472657d24b6c8c98502aa3493bce300f77ebd9099c270e4f5318",
+      "annotation_sha256": "7b5f006c6d0b432eb2d8c906718bc91d4a0eb77ec5b88bcd05c586cadbfb604c",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-004",
+      "input_sha256": "9484926b193db5630e5bce56ccf23f8646812da648bc396cac4858edf174f242",
+      "annotation_sha256": "bdb4202de2f17369b7288bd78ae66fce8714bf931bbac1dcf0491b095afc1fb6",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-005",
+      "input_sha256": "1daa2690e47fb42e84205fabb1955d0caf834aba87a0b839a7104dc839dd5cf3",
+      "annotation_sha256": "4fd8f64080f7231fd24a4682ac73c9166f59a483ba1b5f25d499cab18f05c21d",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-006",
+      "input_sha256": "00ac2124aa422f125e49b37e4d5a0c0a68601450f975ad4a5098a0545104f1c6",
+      "annotation_sha256": "3c45630d854756ec81d6c9ea8ae6668ecfcdc6adc662c969c1e9038c685b20b2",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-007",
+      "input_sha256": "e4feda8e50f0521f1aaae0be6922b67fd3c84f3dcf6b79dc255db263e099938f",
+      "annotation_sha256": "287fc5f666c6e94d0bfecb377d4dd3e727b11f753bafa8a49f76dee5d0ea9880",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-008",
+      "input_sha256": "f335fb6a860ed8a151ff6ee090e8f402b325038e932bb6eb06f876b077946bcf",
+      "annotation_sha256": "17974d04b3638b868034f5f16358ca6f07f19e808df37309d48db895d6919a1b",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-009",
+      "input_sha256": "65daa9e0b22d2eed4902cc86d3e0ce85c4e59908247f523c16d3cac57920fa69",
+      "annotation_sha256": "af180955e58ff27a969b20a78a96b3fe9321cf1cb4be4e97cc15906850054832",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-010",
+      "input_sha256": "a7aaf7834ae440ad794396b4d45f263a9ede89f5ed460a8a2b25ee163f973272",
+      "annotation_sha256": "ab70b58fef886fcfc7fd77e538f9e7e93e61ebc04339bb00f14be989865c061f",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-011",
+      "input_sha256": "14908d0c54e0cc4022c77d9830cc54d5bd1dadf3d0d68c9ed7f08e913992d6bd",
+      "annotation_sha256": "35800b8c964bd6a673e909ef40f80dd9976372b4ede95f88d7be679bb2571b40",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-012",
+      "input_sha256": "397ad95f69d5d450d40f2757ec8e1e5532b1239a37d8ad33d3c00f2ac7aaa622",
+      "annotation_sha256": "8f6514be405db8749a791c8eb58ddee6fa918dfff8fec89f6b391edc5c05cbef",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-013",
+      "input_sha256": "f636e01f0c382be4fa5642c232d112668f05c050c5d198493e54ed692532346d",
+      "annotation_sha256": "729bf78c567a8448f8f2f5a345a025046b88a5e7159bd24460aaee067223e015",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-014",
+      "input_sha256": "22a5f97502a82a685953df3035accaf1ebcb932f33fd03ae92a80e7534d2b582",
+      "annotation_sha256": "4b8f9dc0107c1ed4b29460f28c729aa66473766f0dd3e43d0e72435cbe13b4ee",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-015",
+      "input_sha256": "49d270800550b341239a01812da1d5b335ef8e880cf3d34399530fec127f67fa",
+      "annotation_sha256": "30df059ede2b84cec76cb451d320b16725a91ea68dc77b752c803a6db9d59038",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-016",
+      "input_sha256": "a201a25058090c31f53590f2b2d844f2dc88db5ceb41148ca239cb639a4457d8",
+      "annotation_sha256": "112c42664fac9331626853bd821936e471c13f41ae20849de69640d87e2d287b",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-017",
+      "input_sha256": "8124477cf93a89af75beede548bf8a949eeacd089e326f998fa46f509cb77dd8",
+      "annotation_sha256": "b07379229626e677663d5e540452166626fbbbfb5ac8c733538ec46e6a10d317",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-018",
+      "input_sha256": "18677b70e54802a9437cafcca6198609c1a2e43d613a0dab03e39e970873e1b3",
+      "annotation_sha256": "b9e8c846f8cb1841140ac39074f83c051370aa9b337daf6779feb851650c9da3",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-019",
+      "input_sha256": "f6258653cd86027d313aedadc663efb99272b0f7955f0cad8a0f82b0b3fcbb8f",
+      "annotation_sha256": "8a7eed22bbcb94648e74a22134c5bdf9b6564ed9ede5c7b767b9bf5bb4616e3e",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-020",
+      "input_sha256": "a1ee37bb5f81d993eedacd6bfc1a2b2fddfd3105371be7f82970389681fce223",
+      "annotation_sha256": "e81914fe1b7b4246225f2617e168a05f021bfb922c5109abc7af62d752054ada",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-021",
+      "input_sha256": "79c3016c4dfef04d54b482005e39d0ae5a69af0616c4f7de43c5f2e8f8dcca38",
+      "annotation_sha256": "85d30ebb9b4f89364421f60d641cb59d9761aab6bfb438973f8c22a55b3fe044",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-022",
+      "input_sha256": "aad1e51c35d3add36447ab184cae0cf2d565727f6a8ad2e7dc9e05b1576b8b60",
+      "annotation_sha256": "783ce4e87f540ffbeb6490c612a9d99cdf43f05a939a57237ccca2c157f30f90",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-023",
+      "input_sha256": "0513ff17dd38adf862988e9ea870dc84be2227cc3eb68a371e769d0247a26914",
+      "annotation_sha256": "976ce0e5a27c47bbce45b77ac26a6cbf048a87753f57f389251a852f33a16a93",
+      "decision": "accept_diagnostic_scope_only"
+    },
+    {
+      "id": "ra-024",
+      "input_sha256": "5dac016cba96e0a2b3c086f7a17af5f757414c3c1f38b31fe576f81bdac60dd1",
+      "annotation_sha256": "a7e5f0e8b085967fb60d9a2fc14890ccd6a2057d48db9914daa9b934bd9ab35e",
+      "decision": "accept_diagnostic_scope_only"
+    }
+  ]
+}

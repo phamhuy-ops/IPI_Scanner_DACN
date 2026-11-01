@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "unclear",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Yêu cầu tạo máy chủ Discord với các kênh theo chủ đề, không có dấu hiệu vượt quyền hoặc đổi nhiệm vụ AI; chưa rõ người nhận chỉ dẫn."
+    }
+  ],
+  "discoveries": []
+}

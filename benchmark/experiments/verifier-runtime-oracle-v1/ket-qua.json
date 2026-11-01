@@ -1,0 +1,12 @@
+{
+  "seconds": 273.89852400001837,
+  "peak_vram_allocated": 2088032768,
+  "peak_vram_reserved": 2218786816,
+  "requests": 24,
+  "adapter_mode": "on_both_contexts",
+  "training_started": false,
+  "probe_used": false,
+  "runtime_changed": false,
+  "adapter_unchanged": true,
+  "trainable_parameters": 0
+}

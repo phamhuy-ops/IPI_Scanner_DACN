@@ -1,0 +1,48 @@
+{
+  "eligible_for_candidate_pipeline": false,
+  "baseline": {
+    "examples": 16,
+    "parsed": 15,
+    "correct_stance": 7,
+    "tp": 0,
+    "fp": 0,
+    "tn": 7,
+    "false_clear_fn": 4,
+    "errors": 1,
+    "uncertain": 0,
+    "uncertain_gold_confirmed": 0,
+    "precision": null,
+    "recall": 0,
+    "f1": null,
+    "false_positive_rate": 0,
+    "gold_instruction_covered_tps": 0,
+    "latency_p50": 4.275931599999996,
+    "latency_p95": 8.1179629,
+    "max_model_vram_snapshot": 1367059988
+  },
+  "candidate": {
+    "examples": 16,
+    "parsed": 13,
+    "correct_stance": 6,
+    "tp": 0,
+    "fp": 0,
+    "tn": 6,
+    "false_clear_fn": 3,
+    "errors": 3,
+    "uncertain": 0,
+    "uncertain_gold_confirmed": 0,
+    "precision": null,
+    "recall": 0,
+    "f1": null,
+    "false_positive_rate": 0,
+    "gold_instruction_covered_tps": 0,
+    "latency_p50": 4.4529988,
+    "latency_p95": 5.941138500000001,
+    "max_model_vram_snapshot": 1367059988
+  },
+  "regressions": [
+    "ra-013"
+  ],
+  "default_verifier_changed": false,
+  "independent_validation_complete": false
+}

@@ -1,0 +1,48 @@
+{
+  "planned_anchor_slots": 16,
+  "authored_anchor_slots": 8,
+  "planned_controls": 32,
+  "authored_controls": 16,
+  "authored_total": 24,
+  "remaining_planned_total": 24,
+  "completed_slots": [
+    "slot-01",
+    "slot-02",
+    "slot-03",
+    "slot-04",
+    "slot-05",
+    "slot-06",
+    "slot-07",
+    "slot-08"
+  ],
+  "status": "two_batches_technically_checked_not_released",
+  "batches": [
+    {
+      "batch": "benchmark/data/annotations/verifier-supervision-batch-v1",
+      "records": 12,
+      "token_audit": "benchmark/experiments/verifier-supervision-batch-tokenizer-v1/ket-qua.json",
+      "overlap_audit": "benchmark/experiments/verifier-supervision-batch-audit-v1/ket-qua.json"
+    },
+    {
+      "batch": "benchmark/data/annotations/verifier-supervision-batch-v2",
+      "records": 12,
+      "token_audit": "benchmark/experiments/verifier-supervision-batch-tokenizer-v2/ket-qua.json",
+      "overlap_audit": "benchmark/experiments/verifier-supervision-batch-audit-v2/ket-qua.json"
+    }
+  ],
+  "pooled_stance_counts": {
+    "confirmed": 8,
+    "dismissed": 12,
+    "uncertain": 4
+  },
+  "pooled_languages": {
+    "vi": 12,
+    "en": 12
+  },
+  "shared_parent_train_groups": 4,
+  "semantic_policy_review_required": true,
+  "model_called": false,
+  "training_started": false,
+  "training_release_changed": false,
+  "runtime_changed": false
+}

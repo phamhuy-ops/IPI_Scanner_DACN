@@ -73,7 +73,7 @@ async function runIpiDocScan(filePaths, options = {}) {
     const rawFindingKeys = new Set();
     const views = extracted.views || [{ id: undefined, text: extracted.text, lineBasis: 'extracted-text' }];
     for (const view of views) {
-      const viewFindings = scanTextForIpi(view.text, filePath, folderPath)
+      const viewFindings = scanTextForIpi(view.text, filePath, folderPath, { includeTransferCandidates: options.includeTransferCandidates === true })
         .filter(finding => view.id !== 'text-projection' || !rawFindingKeys.has(`${finding.ruleId}\u0000${finding.matchedText}`))
         .map(finding => view.id ? { ...finding, sourceView: view.id,
           location: finding.location.replace(/:(\d+)$/, ` [${view.id}]:$1`),
@@ -82,6 +82,16 @@ async function runIpiDocScan(filePaths, options = {}) {
       findings.push(...viewFindings);
       const chunks = createSemanticChunks(view.text, filePath, baseName, undefined, undefined, Boolean(view.id))
         .map(chunk => view.id ? { ...chunk, chunkId: `${chunk.chunkId}:${view.id}`, sourceView: view.id, lineBasis: view.lineBasis } : chunk);
+      // Giữ một cửa sổ nguyên nguồn khi ứng viên đi qua ranh giới chunk hoặc CRLF.
+      for (const finding of viewFindings.filter(row => row.ruleId === 'IPI-DOC-CONVERSATION-TRANSFER-CANDIDATE')) {
+        if (chunks.some(chunk => chunk.text.includes(finding.matchedText))) continue;
+        const startLine = Number(finding.location.match(/:(\d+)$/)?.[1] || 1);
+        chunks.push({ chunkId: `${filePath}-transfer-context-${chunks.length + 1}${view.id ? ':' + view.id : ''}`,
+          filePath, fileName: baseName, index: chunks.length, startLine,
+          endLine: startLine + finding.matchedText.split(/\r\n?|\n/).length - 1,
+          text: finding.matchedText, riskScore: 0, findingCount: 0, selectionReasons: ['candidate-context'],
+          ...(view.id ? { sourceView: view.id, lineBasis: view.lineBasis } : {}) });
+      }
       annotateChunkRisk(chunks, viewFindings);
       allSemanticChunks.push(...chunks);
       extractedSnippets.push({ filePath, fileName: baseName, sourceView: view.id,
@@ -139,6 +149,9 @@ async function runIpiDocScan(filePaths, options = {}) {
       fileResults,
       extractedSnippets,
       semanticChunks,
+      ...(options.includeSemanticChunkCatalog === true ? {
+        semanticChunkCatalog: allSemanticChunks.map(chunk => ({ ...chunk, selectionReasons: [...chunk.selectionReasons] })),
+      } : {}),
       coverage,
       summary,
     },

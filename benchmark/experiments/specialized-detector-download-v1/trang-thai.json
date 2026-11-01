@@ -1,0 +1,9 @@
+{
+  "model": "meta-llama/Llama-Prompt-Guard-2-86M",
+  "revision": "a8ded8e697ce7c355e395a0df51f94adb4a2fd27",
+  "user_authorized_download": true,
+  "training_authorized": false,
+  "training": false,
+  "downloaded": false,
+  "status": "needs_huggingface_login"
+}

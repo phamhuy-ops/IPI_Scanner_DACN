@@ -1,0 +1,35 @@
+{
+  "id": "vi-native-006",
+  "filename": "mau-xac-nhan-sinh-vien-hnue.docx",
+  "title": "Mẫu xác nhận sinh viên đang học tại trường — dành cho sinh viên các khoa đào tạo",
+  "hosting_publisher": "Trường Đại học Sư phạm Hà Nội — Trường Toán học và Công nghệ thông tin",
+  "source_page": "https://smcs.hnue.edu.vn/bieu-mau-van-ban/bieu-mau-danh-cho-sinh-vien.html",
+  "source_page_sha256": "a598a7d18651957dd18a372423ba16d8f205d9c6c568e9ae87a0bc09e7581e11",
+  "download_url": "https://smcs.hnue.edu.vn/vanban_bieumau/sinhvien_bieumau/M%E1%BA%ABu%20X%C3%A1c%20nh%E1%BA%ADn%20SV%20%C4%91ang%20h%E1%BB%8Dc%20t%E1%BA%A1i%20tr%C6%B0%E1%BB%9Dng%20%28D%C3%A0nh%20cho%20SV%20c%C3%A1c%20Khoa%20%C4%91%C3%A0o%20t%E1%BA%A1o%29.docx",
+  "final_url": "https://smcs.hnue.edu.vn/vanban_bieumau/sinhvien_bieumau/M%E1%BA%ABu%20X%C3%A1c%20nh%E1%BA%ADn%20SV%20%C4%91ang%20h%E1%BB%8Dc%20t%E1%BA%A1i%20tr%C6%B0%E1%BB%9Dng%20%28D%C3%A0nh%20cho%20SV%20c%C3%A1c%20Khoa%20%C4%91%C3%A0o%20t%E1%BA%A1o%29.docx",
+  "bytes": 1805320,
+  "sha256": "9ff6bdcf9d234f603e1371a4958e4b899625ad3e7d8369038099d2189063bfe5",
+  "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "retrieved_at": "2026-10-25T15:22:26.193Z",
+  "parent_id": "hnue-form-current-student-faculties",
+  "extraction": {
+    "ok": true,
+    "error": null,
+    "characters_utf16": 1447,
+    "text_sha256": "10b1d59c71700a63aa3388313189292081188e66f4931327660c7762238bc4b7",
+    "manual_quality_review_required": true
+  },
+  "status": "downloaded_pending_rights_and_annotation",
+  "security_label": null,
+  "privacy_review": "pending",
+  "reuse_permission": {
+    "status": "not_verified",
+    "license": null,
+    "note": "Mẫu tải công khai chưa chứng minh quyền dùng lại cho train/phát hành dataset."
+  },
+  "training_eligible": false,
+  "final_split": null,
+  "independent_holdout_verified": false,
+  "replaces_broken_candidate": "DOCX Sơn Tây Thượng trả HTTP 404; không ghi đè hoặc sửa lịch sử lỗi.",
+  "code_sha256": "bbc0624a67d3542fbb19f26090783017006f64446a95d215fbdeb225b06ecc11"
+}

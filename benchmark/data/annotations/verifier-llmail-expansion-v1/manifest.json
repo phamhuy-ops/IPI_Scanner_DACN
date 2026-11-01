@@ -1,0 +1,30 @@
+{
+  "version": "verifier-llmail-expansion-v1",
+  "records": 11,
+  "source_parent_ids": 11,
+  "provisional_groups": 11,
+  "no_directive_records": 0,
+  "selected_window_only_records": 1,
+  "parser_valid": 22,
+  "training_ready": false,
+  "model_called": false,
+  "source_draft": {
+    "file": "benchmark/experiments/llmail-expansion-v1/nhap-nhan-ngu-canh-ai.json",
+    "sha256": "4c8771e2d31f94799d9d219ea04259fa346bd1b697e166a6c6fe5f6719ebdec5"
+  },
+  "code_sha256": {
+    "scripts/prepare-verifier-llmail.cjs": "a552d2ba47836309092125634296bbc0771f33a9355f6975b91472f96698cff1",
+    "scripts/verifier-batch-renderer.ts": "d66db4a967344570e6541996f2432e42324fd43d72077e065e6c8ec126feafab"
+  },
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "a99e4b4dd3a2c8731158f786fce078b7c5921ae874c7617c8844a0cd29f8c00e",
+    "ban-xem-truoc.json": "ff24e81b26b357ea60ca17aa4682980fd2594fd834ddc14df15544ad321ab5e6",
+    "danh-gia-ai.json": "e74902bcaf04beaf951c4e55fb8cd154ed4c73409f6cb67289e43597bdc25300"
+  },
+  "limitations": [
+    "Nhãn và cửa sổ do AI rà, không chuyển thành người duyệt.",
+    "Nhãn cửa sổ không áp dụng phần nguồn bị bỏ khỏi training setup.",
+    "License khai báo MIT và không trùng từ vựng chưa tự chứng minh quyền dùng hoặc độc lập ngữ nghĩa.",
+    "Chưa train/chia tập hoặc gọi model; cần audit nhóm toàn kho mới."
+  ]
+}

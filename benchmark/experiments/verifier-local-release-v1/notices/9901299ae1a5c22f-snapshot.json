@@ -1,0 +1,48 @@
+{
+  "repository": "https://github.com/python/cpython",
+  "tag": "v3.12.0",
+  "revision": "0fb18b02c8ad56299d6a2910be0bab8ad601ef24",
+  "retrieved_at": "2026-10-25T14:49:23.723Z",
+  "license_declared": "PSF License Version 2; xem LICENSE để giữ các thông báo và điều khoản khác",
+  "official_license_url": "https://docs.python.org/3/license.html",
+  "assets": {
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/python/cpython/0fb18b02c8ad56299d6a2910be0bab8ad601ef24/LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936
+    },
+    "Doc/tutorial/venv.rst": {
+      "url": "https://raw.githubusercontent.com/python/cpython/0fb18b02c8ad56299d6a2910be0bab8ad601ef24/Doc/tutorial/venv.rst",
+      "sha256": "cddbb3a66998a0832d8a5e592f08a37aa465ce34094af942713dae171d480fee",
+      "bytes": 7452
+    },
+    "Doc/tutorial/interpreter.rst": {
+      "url": "https://raw.githubusercontent.com/python/cpython/0fb18b02c8ad56299d6a2910be0bab8ad601ef24/Doc/tutorial/interpreter.rst",
+      "sha256": "aad98b0071949d2b97ca2a93a898c5cb1e64347b67b8c7b16053f6a8f3cd87af",
+      "bytes": 6503
+    },
+    "Doc/tutorial/inputoutput.rst": {
+      "url": "https://raw.githubusercontent.com/python/cpython/0fb18b02c8ad56299d6a2910be0bab8ad601ef24/Doc/tutorial/inputoutput.rst",
+      "sha256": "2fb6533d10638f2e16a0d8a0fd3743fa5281450992b44936b9f72d756cd4f194",
+      "bytes": 19988
+    },
+    "Doc/tutorial/errors.rst": {
+      "url": "https://raw.githubusercontent.com/python/cpython/0fb18b02c8ad56299d6a2910be0bab8ad601ef24/Doc/tutorial/errors.rst",
+      "sha256": "0c09ca192cd9a88c2d60362f78a51915d8957dd4e8bbc5947dc48d036e96166a",
+      "bytes": 23109
+    },
+    "Doc/tutorial/modules.rst": {
+      "url": "https://raw.githubusercontent.com/python/cpython/0fb18b02c8ad56299d6a2910be0bab8ad601ef24/Doc/tutorial/modules.rst",
+      "sha256": "05cae16853afbe75e901f26bfd66a0e2c36a64c2631997cc2bbc33d2f22a4380",
+      "bytes": 25440
+    },
+    "Doc/tutorial/stdlib.rst": {
+      "url": "https://raw.githubusercontent.com/python/cpython/0fb18b02c8ad56299d6a2910be0bab8ad601ef24/Doc/tutorial/stdlib.rst",
+      "sha256": "4f6bc514620c5c6298a699064b94562268eba56486acc5f4360bad4589886021",
+      "bytes": 11407
+    }
+  },
+  "independent_holdout_verified": false,
+  "training_ready": false,
+  "note": "Chỉ tải dữ liệu văn bản RST và LICENSE; không cài hoặc chạy lệnh trong tài liệu."
+}

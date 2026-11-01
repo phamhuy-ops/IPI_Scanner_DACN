@@ -1,0 +1,46 @@
+{
+  "archive_verified_members": 1080,
+  "removed_loose_files": 1080,
+  "active_scripts": 34,
+  "package_entrypoints_exist": true,
+  "protected_latest_raw_hashes_unchanged": true,
+  "untouched_result_junctions": 92,
+  "old_bytes": 107867433,
+  "archive_with_index_bytes": 4669524,
+  "checks": {
+    "npm test": {
+      "exit_code": 0,
+      "files": 34,
+      "tests": 367
+    },
+    "npm run test:benchmark": {
+      "exit_code": 0,
+      "tests": 19
+    },
+    "npm run typecheck": {
+      "exit_code": 0
+    },
+    "npm run lint": {
+      "exit_code": 0
+    },
+    "npm run build": {
+      "exit_code": 0,
+      "warnings": [
+        "customResolver deprecated",
+        "freeze output option"
+      ]
+    },
+    "npm run benchmark -- --help": {
+      "exit_code": 0
+    },
+    "node --check scripts/benchmark.cjs": {
+      "exit_code": 0
+    },
+    "git diff --check (file thay đổi trong lượt dọn)": {
+      "exit_code": 0
+    }
+  },
+  "live_model_evaluation": false,
+  "python_cache_removed": false,
+  "reason_cache_retained": "PowerShell deletion rejected by automatic review"
+}

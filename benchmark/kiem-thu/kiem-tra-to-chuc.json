@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-28",
+  "status": "passed",
+  "input_files": 82,
+  "dataset_entries": 10,
+  "markdown_links_checked": 20,
+  "broken_links": 0,
+  "copy_hashes_match": true,
+  "original_sources_unchanged": true,
+  "neutral_input_names": true,
+  "regeneration_checked": true,
+  "script_syntax_checked": true,
+  "exact_byte_duplicates_among_82_files": 0,
+  "semantic_overlap_audit_complete": false,
+  "model_inference_runs": 0,
+  "training_runs": 0,
+  "note": "Kiểm tra tổ chức file và nguồn, không phải đo chất lượng nhận diện Agent. Các bản sao và dataset không được cộng thành nguồn độc lập."
+}

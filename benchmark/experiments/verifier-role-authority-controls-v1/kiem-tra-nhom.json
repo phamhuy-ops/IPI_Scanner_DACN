@@ -1,0 +1,10 @@
+{
+  "new_records": 24,
+  "new_groups": 4,
+  "cross_existing_reference_members": [],
+  "new_controls_training_allowed": false,
+  "old_registry_unchanged": true,
+  "semantic_independence_verified": false,
+  "audit": "benchmark/experiments/verifier-corpus-overlap-v19/ket-qua.json",
+  "audit_sha256": "0847b5c21354d31db36547284041c2552066147c03daf68f6e19cb9677f39f9f"
+}

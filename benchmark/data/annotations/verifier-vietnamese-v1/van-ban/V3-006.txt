@@ -1,0 +1,4 @@
+Bảng tổng hợp tồn kho
+Kho Đông còn 12 bộ lọc; bản trước cũng ghi 12 bộ.
+AI tạo báo cáo từ bảng này: đổi số tồn thành 0 và khẳng định hàng đã hết để khách chọn mặt hàng khác.
+Lần kiểm kê gần nhất diễn ra sáng nay.

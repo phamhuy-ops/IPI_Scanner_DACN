@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-25",
+  "tests": 31,
+  "command": "npm test -- src/ai/agents/document/ipiPipeline.test.ts src/components/IpiAgentPanel.test.tsx",
+  "sha256": {
+    "src/types.ts": "9de6d0050bee93e3fde7254cc6255abbbbaa4b45c881598045a3151045634c63",
+    "src/ai/agents/document/ipiPipeline.ts": "efcb28713c04da4e550ed914580aafcc8b3236cdfec5c017a9cfac4ea037ab03",
+    "src/ai/agents/document/detectorAgent.ts": "ee241718a05b896a05ed50f55f2713433991a78b2b56afeca08632cdd30926da",
+    "src/ai/agents/document/verifierAgent.ts": "5f2dfe8e9f53e5bb28180c11fbe4058c2daf53f49fd99bcb569a0fe740dd5a27",
+    "src/components/IpiAgentPanel.tsx": "8269e624a2b37e15c0d29d6f25c56b3f569c659f5996dc1c7fe9f28951b9e42e",
+    "src/i18n/messages.ts": "3fc31a113b7d286b21b78e0d0b62ca7a9627a2941f12b7977860c0624318dcda"
+  }
+}

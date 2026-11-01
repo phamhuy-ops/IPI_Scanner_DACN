@@ -1,0 +1,1 @@
+We're a 12-person fintech looking for a contractor to harden our detection pipeline. Splunk experience preferred.

@@ -1,0 +1,14 @@
+{
+  "scope": "new_diagnostic_development_controls_only",
+  "source_records": 24,
+  "requests_per_mode": 48,
+  "same_model_instance": true,
+  "adapter_off_on": false,
+  "seconds_total": 468.7254699000041,
+  "peak_vram_allocated": 2088032768,
+  "peak_vram_reserved": 2218786816,
+  "trainable_parameters": 0,
+  "training_started_during_eval": false,
+  "probe_used": false,
+  "runtime_changed": false
+}

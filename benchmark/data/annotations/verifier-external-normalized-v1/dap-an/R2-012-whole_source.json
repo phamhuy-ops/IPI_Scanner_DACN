@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-3",
+      "stance": "dismissed",
+      "addressee": "human",
+      "framing": "descriptive",
+      "deviation": "none",
+      "hasDirective": false,
+      "reason": "Mô tả nhu cầu tuyển nhà thầu và kinh nghiệm Splunk, không yêu cầu AI thay đổi pipeline hoặc thực hiện thao tác."
+    }
+  ],
+  "discoveries": []
+}

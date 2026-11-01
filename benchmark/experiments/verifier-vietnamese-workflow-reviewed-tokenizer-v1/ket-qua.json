@@ -1,0 +1,389 @@
+{
+  "source": "verifier-vietnamese-workflow-reviewed-v1",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "offline": true,
+  "examples": 32,
+  "source_records": 16,
+  "source_parents": 4,
+  "mask_valid": 32,
+  "collator_valid": 32,
+  "token_min": 692,
+  "token_max": 1038,
+  "target_max": 100,
+  "over_budget": {
+    "1024": 3,
+    "1536": 0,
+    "2048": 0
+  },
+  "rows": [
+    {
+      "id": "vw-001-whole_source",
+      "source_record_id": "vw-001",
+      "source_parent_id": "vi-workflow:tool-stock",
+      "mode": "whole_source",
+      "tokens": 901,
+      "padded_tokens": 904,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-001-none",
+      "source_record_id": "vw-001",
+      "source_parent_id": "vi-workflow:tool-stock",
+      "mode": "none",
+      "tokens": 799,
+      "padded_tokens": 800,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-002-whole_source",
+      "source_record_id": "vw-002",
+      "source_parent_id": "vi-workflow:tool-stock",
+      "mode": "whole_source",
+      "tokens": 896,
+      "padded_tokens": 896,
+      "supervised_tokens": 92,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-002-none",
+      "source_record_id": "vw-002",
+      "source_parent_id": "vi-workflow:tool-stock",
+      "mode": "none",
+      "tokens": 869,
+      "padded_tokens": 872,
+      "supervised_tokens": 84,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-003-whole_source",
+      "source_record_id": "vw-003",
+      "source_parent_id": "vi-workflow:tool-stock",
+      "mode": "whole_source",
+      "tokens": 1038,
+      "padded_tokens": 1040,
+      "supervised_tokens": 93,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-003-none",
+      "source_record_id": "vw-003",
+      "source_parent_id": "vi-workflow:tool-stock",
+      "mode": "none",
+      "tokens": 937,
+      "padded_tokens": 944,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-004-whole_source",
+      "source_record_id": "vw-004",
+      "source_parent_id": "vi-workflow:tool-stock",
+      "mode": "whole_source",
+      "tokens": 768,
+      "padded_tokens": 768,
+      "supervised_tokens": 100,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-004-none",
+      "source_record_id": "vw-004",
+      "source_parent_id": "vi-workflow:tool-stock",
+      "mode": "none",
+      "tokens": 741,
+      "padded_tokens": 744,
+      "supervised_tokens": 92,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-005-whole_source",
+      "source_record_id": "vw-005",
+      "source_parent_id": "vi-workflow:calendar-note",
+      "mode": "whole_source",
+      "tokens": 871,
+      "padded_tokens": 872,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-005-none",
+      "source_record_id": "vw-005",
+      "source_parent_id": "vi-workflow:calendar-note",
+      "mode": "none",
+      "tokens": 769,
+      "padded_tokens": 776,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-006-whole_source",
+      "source_record_id": "vw-006",
+      "source_parent_id": "vi-workflow:calendar-note",
+      "mode": "whole_source",
+      "tokens": 901,
+      "padded_tokens": 904,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-006-none",
+      "source_record_id": "vw-006",
+      "source_parent_id": "vi-workflow:calendar-note",
+      "mode": "none",
+      "tokens": 874,
+      "padded_tokens": 880,
+      "supervised_tokens": 83,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-007-whole_source",
+      "source_record_id": "vw-007",
+      "source_parent_id": "vi-workflow:calendar-note",
+      "mode": "whole_source",
+      "tokens": 1028,
+      "padded_tokens": 1032,
+      "supervised_tokens": 92,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-007-none",
+      "source_record_id": "vw-007",
+      "source_parent_id": "vi-workflow:calendar-note",
+      "mode": "none",
+      "tokens": 928,
+      "padded_tokens": 928,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-008-whole_source",
+      "source_record_id": "vw-008",
+      "source_parent_id": "vi-workflow:calendar-note",
+      "mode": "whole_source",
+      "tokens": 755,
+      "padded_tokens": 760,
+      "supervised_tokens": 99,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-008-none",
+      "source_record_id": "vw-008",
+      "source_parent_id": "vi-workflow:calendar-note",
+      "mode": "none",
+      "tokens": 728,
+      "padded_tokens": 728,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-009-whole_source",
+      "source_record_id": "vw-009",
+      "source_parent_id": "vi-workflow:support-log",
+      "mode": "whole_source",
+      "tokens": 794,
+      "padded_tokens": 800,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-009-none",
+      "source_record_id": "vw-009",
+      "source_parent_id": "vi-workflow:support-log",
+      "mode": "none",
+      "tokens": 692,
+      "padded_tokens": 696,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-010-whole_source",
+      "source_record_id": "vw-010",
+      "source_parent_id": "vi-workflow:support-log",
+      "mode": "whole_source",
+      "tokens": 822,
+      "padded_tokens": 824,
+      "supervised_tokens": 92,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-010-none",
+      "source_record_id": "vw-010",
+      "source_parent_id": "vi-workflow:support-log",
+      "mode": "none",
+      "tokens": 795,
+      "padded_tokens": 800,
+      "supervised_tokens": 84,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-011-whole_source",
+      "source_record_id": "vw-011",
+      "source_parent_id": "vi-workflow:support-log",
+      "mode": "whole_source",
+      "tokens": 1034,
+      "padded_tokens": 1040,
+      "supervised_tokens": 93,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-011-none",
+      "source_record_id": "vw-011",
+      "source_parent_id": "vi-workflow:support-log",
+      "mode": "none",
+      "tokens": 933,
+      "padded_tokens": 936,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-012-whole_source",
+      "source_record_id": "vw-012",
+      "source_parent_id": "vi-workflow:support-log",
+      "mode": "whole_source",
+      "tokens": 753,
+      "padded_tokens": 760,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-012-none",
+      "source_record_id": "vw-012",
+      "source_parent_id": "vi-workflow:support-log",
+      "mode": "none",
+      "tokens": 726,
+      "padded_tokens": 728,
+      "supervised_tokens": 89,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-013-whole_source",
+      "source_record_id": "vw-013",
+      "source_parent_id": "vi-workflow:web-policy",
+      "mode": "whole_source",
+      "tokens": 872,
+      "padded_tokens": 872,
+      "supervised_tokens": 94,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-013-none",
+      "source_record_id": "vw-013",
+      "source_parent_id": "vi-workflow:web-policy",
+      "mode": "none",
+      "tokens": 770,
+      "padded_tokens": 776,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-014-whole_source",
+      "source_record_id": "vw-014",
+      "source_parent_id": "vi-workflow:web-policy",
+      "mode": "whole_source",
+      "tokens": 822,
+      "padded_tokens": 824,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-014-none",
+      "source_record_id": "vw-014",
+      "source_parent_id": "vi-workflow:web-policy",
+      "mode": "none",
+      "tokens": 795,
+      "padded_tokens": 800,
+      "supervised_tokens": 82,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-015-whole_source",
+      "source_record_id": "vw-015",
+      "source_parent_id": "vi-workflow:web-policy",
+      "mode": "whole_source",
+      "tokens": 903,
+      "padded_tokens": 904,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-015-none",
+      "source_record_id": "vw-015",
+      "source_parent_id": "vi-workflow:web-policy",
+      "mode": "none",
+      "tokens": 804,
+      "padded_tokens": 808,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-016-whole_source",
+      "source_record_id": "vw-016",
+      "source_parent_id": "vi-workflow:web-policy",
+      "mode": "whole_source",
+      "tokens": 755,
+      "padded_tokens": 760,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "vw-016-none",
+      "source_record_id": "vw-016",
+      "source_parent_id": "vi-workflow:web-policy",
+      "mode": "none",
+      "tokens": 728,
+      "padded_tokens": 728,
+      "supervised_tokens": 83,
+      "mask_valid": true,
+      "collator_valid": true
+    }
+  ],
+  "input_sha256": {
+    "manifest.json": "4c22e2d6c702cc984ac5cb4498c245d4ddd06aa91fb2d2f4ecf10341c388ff26",
+    "ban-xem-truoc.json": "f81ebbdd89b8045eed8e322f780598a7c6364ef3947d5216bff9c715f26e5f35"
+  },
+  "code_sha256": {
+    "audit_verifier_preview.py": "bb0a838c88d64b7ff7088e68f4406a6e742f3a6ab8e9406889e0c659d8c51146",
+    "audit_verifier_tokenizer.py": "90bb22dc2f4cb18ac168abe053f2bf87b1e295269b92a42ee3bd666488b42f9b",
+    "verifier_collator.py": "594bf13412567aef5c9439241de5dbdcdb7fbfd7cd3f1cd40c644aaeaa79b478"
+  },
+  "training_ready": false,
+  "no_model_forward_or_updates": true,
+  "runtime_changed": false,
+  "limitations": [
+    "Token/mask/parser đúng không chứng minh nhãn AI đúng hoặc độc lập ngữ nghĩa.",
+    "Không truncate; bản vượt 2048 bị đánh dấu collator_valid=false, chưa tạo bài học."
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-25",
+  "status": "complete",
+  "manual_action_required": false,
+  "external_software_installed": false,
+  "external_download": {
+    "snapshot": "benchmark/data/raw/python-context-docs-v1/snapshot.json",
+    "revision": "0fb18b02c8ad56299d6a2910be0bab8ad601ef24",
+    "file_count": 7,
+    "approximate_bytes": 111000
+  },
+  "new_records": 24,
+  "unchanged_external_records": 18,
+  "synthetic_attack_variants": 6,
+  "reviewer": "Codex (AI)",
+  "human_approved": false,
+  "normalization": {
+    "records": 24,
+    "payloads_rebuilt_and_parser_valid": 48,
+    "metadata_excluded": true,
+    "source_hashes_unchanged": true,
+    "labels": {
+      "confirmed": 12,
+      "dismissed": 6,
+      "uncertain": 6
+    },
+    "languages": {
+      "en": 21,
+      "en-vi": 3
+    },
+    "source_parent_ids": 12,
+    "unchanged_external_records": 18,
+    "synthetic_attacks": 6,
+    "training_ready": false,
+    "final_split_created": false,
+    "model_called": false,
+    "code_sha256": "691d3e4a882fbb40848e2ba944313ed3d004fc8e45646535f7807549e897a670",
+    "note": "Chỉ kiểm tra cơ học; ngữ nghĩa do AI đánh giá, không phải xác nhận độc lập."
+  },
+  "tokenizer": {
+    "report": "benchmark/experiments/verifier-external-context-tokenizer-v1/ket-qua.json",
+    "examples": 48,
+    "mask_valid": 48,
+    "collator_valid": 48,
+    "token_max": 1624,
+    "target_max": 100,
+    "over_budget": {
+      "1024": 20,
+      "1536": 2,
+      "2048": 0
+    }
+  },
+  "corpus": {
+    "report": "benchmark/experiments/verifier-corpus-overlap-v9/ket-qua.json",
+    "reference_records": 198,
+    "candidate_records": 178,
+    "candidate_groups": 71,
+    "reference_groups": 83,
+    "files": 66,
+    "unique_normalized_texts": 68219,
+    "largest_component_sizes": [
+      30,
+      9,
+      6,
+      6,
+      5
+    ],
+    "prior_group_memberships_preserved": true,
+    "protected_bipia_test_overlap_components": 0,
+    "missing_coverage": [],
+    "inputs_unchanged": true
+  },
+  "tests": {
+    "node_passed": 2,
+    "python_passed": 4
+  },
+  "runtime_changed": false,
+  "production_files_changed": [],
+  "training_started": false,
+  "training_ready": false,
+  "split_created": false,
+  "independent_holdout_collected": false,
+  "priority_one_complete": false,
+  "next": "Lập danh sách khoảng trống nguồn/nhóm và khả năng phân bổ trước split, ưu tiên tài liệu Việt/PDF/DOCX và human/uncertain ngoài template InjecAgent; không tiếp tục nhân bản nhóm lớn để đủ số.",
+  "limitations": [
+    "Nhãn AI, không kế thừa xác nhận người dùng hoặc coi target schema hợp lệ là đúng độc lập.",
+    "Sáu attack Python tự soạn; không phải tấn công thu thập ngoài thực tế.",
+    "InjecAgent text-only uncertain không thay nhãn benchmark gốc có ngữ cảnh.",
+    "Rà từ vựng không loại hết tương đồng ngữ nghĩa hoặc chứng minh holdout độc lập."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "total": 15,
+  "reviewed_presented_context_human": 10,
+  "reviewed_context_ai": 5,
+  "pending": 0,
+  "accepted_context_human": 10,
+  "accepted_context_ai": 4,
+  "requires_context_repair": 1,
+  "quarantined_sources": 6,
+  "usable_for_dev_preview_sources": 9,
+  "quality_flags_resolved": false,
+  "full_span_review_complete": false,
+  "training_ready": false,
+  "worksheet_sha256": "a824d23b88a4c4b9b13246adbf488cff2761d9008853afd5e3e6578ffd23b431"
+}

@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Yêu cầu nhập vai và lên kế hoạch, bỏ qua yếu tố gây phân tâm; không yêu cầu AI bỏ ràng buộc bảo mật hoặc thay nhiệm vụ bằng lệnh chèn."
+    }
+  ],
+  "discoveries": []
+}

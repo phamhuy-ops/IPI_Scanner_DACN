@@ -1,0 +1,284 @@
+TÀI LIỆU HƯỚNG DẪN SỬ DỤNG OMS
+I. GIỚI THIỆU OMS
+OMS (Online Management System) là Hệ thống quản lý trực tuyến một số
+hoạt động nghiệp vụ của Viện Hàn lâm KHCNVN, như Lý lịch khoa học , CSDL
+chuyên gia, Đăng ký đề tài KHCN, Nộp báo cáo kết quả thực hiện đề tài, v.v... Tất
+cả các modul này đều hoạt động trực tuyến trên nền web với cùng một tài khoản
+của nhà khoa học được đăng ký trên hệ thống OMS.
+1. Đăng ký tài khoản OMS
+Địa chỉ web: http://isi.vast.vn/oms
+Bấm chọn Đăng ký tài khoản mới :
+Hình 1: Giao diện chương trình
+Hình 2: Giao diện đăng ký tài khoản mới
+1
+2
+
+-- 1 of 23 --
+
+Người dùng khai báo các thông tin cần thiết (trường đánh dấu * là không được để
+trống):
+- Họ và tên: họ tên đầy đủ của người dùng.
+- Email đăng nhập hệ thống: tài khoản email chính thức sẽ được sử dụng để
+đăng nhập chương trình và cũng là địa chỉ để liên hệ.
+- Mật khẩu: mật khẩu để đăng nhập chương trình, cần tối thiểu 8 kí tự, trong đó
+phải bao gồm chữ hoa, chữ thường và số.
+- Nhập lại mật khẩu: nhập lại mật khẩu ở trên.
+Bấm Đăng ký để tạo tài khoản.
+Nếu đăng ký thành công, hệ thống sẽ hiện thông báo giống như bên dưới, bấm OK
+để tiếp tục:
+Hình 3: Thông báo tạo tài khoản thành công
+Lúc này, tài khoản người dùng đã được tạo, tuy nhiên người dùng cần thêm một
+bước nữa là kích hoạt tài khoản để có thể sử dụng tài khoản trên.
+Để kích hoạt tài khoản, người dùng vào hòm thư của email đã khai báo ở trên, tìm
+đến thư của hệ thống gửi đến từ support@isi.vast.vn, thư có nội dung như sau:
+Hình 4: Nội dung thư gửi kích hoạt tài khoản
+
+-- 2 of 23 --
+
+Bấm vào đường link trong thư để kích hoạt tài khoản, lúc này người dùng đã hoàn
+thành việc đăng ký tài khoản.
+Chú ý các lỗi có thể xảy ra:
+1. Không nhận được email kích hoạt tài khoản.
+- Nguyên nhân 1: địa chỉ email người dùng đăng ký không chính xác hoặc đã
+ngừng sử dụng, người dùng cần kiểm tra lại địa chỉ email dùng để đăng ký.
+- Nguyên nhân 2: email kích hoạt nằm trong mục Spam hoặc Junk E-mail của
+hòm thư, người dùng cần kiểm tra 2 mục này và tiến hành kích hoạt.
+2. Đăng nhập tài khoản OMS
+Nhập Email và Mật khẩu ở mục Đăng nhập hệ thống, sau đó bấm Đăng nhập
+để đăng nhập chương trình:
+3. Quên mật khẩu đăng nhập
+Trong trường hợp người dùng quên mật khẩu đăng nhập, bấm vào Quên mật
+khẩu? để xin hệ thống cấp lại mật khẩu mới:
+
+-- 3 of 23 --
+
+Nhập địa chỉ email mà bạn sử dụng để tạo tài khoản ban đầu, sau đó bấm Nhận
+mật khẩu:
+Nếu thành công, hệ thống sẽ hiện thông báo giống như bên dưới, bấm OK để tiếp
+tục:
+Như thông báo trên, người dùng vào hòm thư của email đã khai báo ở trên, tìm đến
+thư của hệ thống gửi đến từ support@isi.vast.vn, thư có nội dung như sau:
+2
+1
+3
+
+-- 4 of 23 --
+
+Làm theo hướng dẫn trong thư, bấm vào đường link trong thư hoặc copy đường
+link và dán vào trình duyệt để thay đổi mật khẩu.
+Người dùng được chuyển đến trang thay đổi mật khẩu.
+Tại đây, người dùng nhập mật khẩu mới theo yêu cầu của hệ thống (mật khẩu gồm
+dài tối thiểu 8 ký tự, chứa ít nhất 1 ký tự viết hoa, một kí tự viết thường và 1 số ),
+sau đó bấm Thay đổi.
+Nếu đổi mật khẩu thành công, hệ thống sẽ hiện ra thông báo bên dưới:
+4
+5
+
+-- 5 of 23 --
+
+4. Giới thiệu trang chủ OMS
+Màn hình sau khi đăng nhập hệ thống OMS:
+Các Modul của hệ thống OMS:
+1 - Lý lịch khoa học: Modul quản lý Lý lịch khoa học.
+2 - CSDL chuyên gia: Modul quản lý các thông tin cá nhân và khoa học của
+các chuyên gia.
+3 - Đề tài ban HTQT: Modul quản lý đề tài của Ban Hợp tác quốc tế.
+4 - Đề tài ban KHTC: Modul quản lý đề tài của Ban Kế hoạch - Tài chính.
+5 - Đề tài ban ƯDTKCN: Modul quản lý đề tài của Ban Ứng dụng &
+TKCN.
+6 - Nộp báo cáo đề tài: Modul quản lý giao nộp báo cáo đề tài.
+7. Thay đổi ảnh đại diện: Để thay đổi ảnh đại diện của người dùng, bấm
+Thay đổi ảnh đại diện
+
+-- 6 of 23 --
+
+Thay đổi ảnh đại diện: Nhấn Browse để chọn ảnh đại diện, sau đó bấm Cập nhật
+Thay đổi mật khẩu: Người dùng có thể thay đổi mật khẩu đăng nhập bằng cách
+nhấn Đổi mật khẩu và nhập thông tin mật khẩu cũ và mới.
+II. MODUL ĐĂNG KÝ ĐỀ TÀI HỢP TÁC QUỐC TẾ
+Giao diện chính của chương trình:
+
+-- 7 of 23 --
+
+Giao diện chính của Modul quản lý đề tài HTQT
+Trong đó:
+- 1: Đăng ký đề tài mới : cho phép người dùng đăng ký đề tài mới.
+- 2: Liệt kê danh sách các đề tài đã đăng ký ở mục 1, và cho phép nhập Thông tin
+chi tiết của đề tài.
+Người dùng có thể dùng thanh thực đơn phía trên để quay về trang chủ, đổi mật
+khẩu, hoặc đăng xuất ra khỏi chương trình.
+1. Đăng ký đề tài mới
+Bấm Đăng ký đề tài mới. Trong cửa sổ hiện ra, nhập các thông tin cần thiết:
+Chương trình hợp tác, Tên đề tài (tiếng Việt), Tên đề tài (tiếng Anh), Thời
+gian thực hiện từ, Thời gian thực hiện đến.
+Sau đó bấm Tạo đề tài để lưu, Hủy nếu muốn hủy việc tạo.
+
+-- 8 of 23 --
+
+Giao diện Đăng ký đề tài mới
+Đề tài được thêm mới thành công sẽ được thông báo và hiển thị ở bảng danh sách
+bên dưới:
+2. Hồ sơ đề xuất đề tài
+Bấm chọn vào tên đề tài trong bảng danh sách đề tài ở trên để hoàn thiện hồ sơ:
+
+-- 9 of 23 --
+
+Thông tin Hồ sơ của đề tài sẽ xuất hiện như bảng dưới:
+Phía trên cùng bên phải là thời gian còn lại cho hạn nộp hồ sơ.
+
+-- 10 of 23 --
+
+Phía dưới là thông tin chung của đề tài: Tên đề tài (tiếng Việt và tiếng Anh), Thuộc
+chương trình hợp tác, Tình trạng đề tài (Chưa nộp, Đã nộp, Được chấp nhận,
+Không được chấp nhận)
+Người dùng cần hoàn thành bộ hồ sơ đăng ký đề xuất bao gồm 4 biểu mẫu và các
+file đính kèm:
+1 - Đề cương đề xuất nhiệm vụ (mẫu PL1a).
+2 - Đơn đăng ký nhiệm vụ (mẫu PL3).
+3 - Lý lịch khoa học (PL4)
+4 - Tóm tắt hoạt động KHCN của đơn vị chủ trì (mẫu PL5).
+5 - Các file đính kèm:
+5.1 Đề cương đề xuất nhiệm vụ: để tải lên file word đề cương, nếu khác với bản
+đăng ký online. (Hệ thống chấp nhận file doc, docx. Dung lượng tối đa 10M)
+5.2 Các văn bản khác (nếu có, như minh chứng thỏa thuận hợp tác,....Nếu có nhiều
+file thì nén thành 1 để tải lên). (Hệ thống chấp nhận file zip, rar, pdf. Dung lượng
+tối đa 10M)
+5.3 Bản scan công văn của đơn vị (Có chữ ký và dấu) (Hệ thống chấp nhận file
+jpg, jpeg, png, gif, pdf. Dung lượng tối đa 10M)
+2.1. Đề cương đề xuất nhiệm vụ (mẫu PL1a).
+2.1.1. Thông tin chung
+Bấm chọn Thông tin chung để các cập nhật thông tin chung như hình dưới :
+
+-- 11 of 23 --
+
+Người dùng cần nhập đầy đủ các thông tin trong form, sau đó bấm “Lưu và tiếp
+theo” để lưu và chuyển sang mục tiếp theo.
+2.1.2. Nội dung KHCN:
+Bấm chọn II. Nội dung KHCN
+
+-- 12 of 23 --
+
+Người dùng cần nhập đầy đủ các thông tin trong form sau đó bấm “Lưu và tiếp
+theo” để lưu và chuyển sang mục tiếp theo.
+2.1.3. Kết quả dự kiến:
+Bấm chọn III. Kết quả dự kiến để nhập thông tin.
+
+-- 13 of 23 --
+
+Người dùng cần nhập đầy đủ các thông tin trong form và bấm “Lưu và tiếp theo”
+để lưu và chuyển sang mục tiếp theo.
+2.1.4. Nghiên cứu trong 5 năm gần nhất:
+Bấm chọn IV. Nghiên cứu trong 5 năm gần nhất.
+
+-- 14 of 23 --
+
+Người dùng cần nhập thực hiện lựa chọn các thông tin cần thiết sau đây:
+ Các công trình KHCN chủ yếu được công bố, sách chuyên khảo: danh sách
+công trình hiển thị ở bảng bên dưới, người dùng có thể thêm mới bằng cách
+bấm chọn Thêm công trình nghiên cứu (nhập các thông tin trong cửa sổ hiện
+ra sau đó bấm Lưu) hoặc sửa bằng cách bấm chọn hoặc xóa bằng cách
+chọn .
+ Các văn bằng sở hữu trí tuệ đã được cấp (Độc quyền Sáng chế / Giải pháp hữu
+ích): danh sách các văn bằng sở hữu trí tuệ đã được cấp hiển thị ở bảng bên
+dưới, người dùng có thể thêm mới bằng cách bấm chọn Thêm văn bằng
+SHTT (nhập các thông tin trong cửa sổ hiện ra sau đó bấm Lưu) hoặc sửa
+bằng cách bấm chọn hoặc xóa bằng cách chọn .
+ Các nhiệm vụ KHCN đã chủ trì hoặc tham gia chính trong 5 năm gần đây:
+danh sách các nhiệm vụ KHCN hiển thị ở bảng bên dưới, người dùng có thể
+thêm mới bằng cách bấm chọn Thêm các nhiệm vụ KHCN (nhập các thông
+tin trong cửa sổ hiện ra sau đó bấm Lưu) hoặc sửa bằng cách bấm chọn
+hoặc xóa bằng cách chọn .
+
+-- 15 of 23 --
+
+Để chọn thông tin, bấm tích chọn vào ô vuông đầu tiên ở mỗi dòng, sau đó bấm
+Lưu lựa chọn.
+Sau khi nhập các thông tin cần thiết, bấm Tiếp theo để lưu và chuyển sang mục
+tiếp theo.
+5. Tình trạng hồ sơ
+Bấm chọn Tình trạng hồ sơ để xem danh sách các trường thông tin còn thiếu
+trong đề cương đề xuất để bổ sung:
+2.2. Đơn đăng ký Nhiệm vụ (mẫu PL3).
+2.2.1. PL3 - Mẫu đơn đăng ký
+Bấm chọn PL3 - Mẫu đơn đăng ký để các cập nhật thông tin chung cho mẫu đăng
+ký nhiệm vụ:
+
+-- 16 of 23 --
+
+Người dùng cần nhập đầy đủ các thông tin trong form bấm “Lưu và tiếp theo” để
+lưu và chuyển sang mục tiếp theo.
+
+-- 17 of 23 --
+
+2.2.2. Tình trạng hồ sơ
+Bấm chọn Tình trạng hồ sơ để xem danh sách các trường thông tin còn thiếu
+trong đơn đăng ký nhiệm vụ để bổ sung:
+2.3. Lý lịch khoa học (mẫu PL4).
+2.3.1. Thông tin chung
+Bấm chọn Thông tin chung để các cập nhật thông tin chung như hình dưới :
+
+-- 18 of 23 --
+
+Người dùng cần nhập đầy đủ các thông tin trong form bấm “Lưu thông tin cá
+nhân” để lưu và chuyển sang mục tiếp theo.
+2.3.2. Đào tạo - công tác:
+Bấm chọn Đào tạo - công tác để các cập nhật thông tin chung như hình dưới :
+Người dùng cần nhập đầy đủ các thông tin cần thiết như:
+ Quá trình đào tạo: danh sách quá trình đào tạo hiển thị ở bảng bên dưới,
+người dùng có thể thêm mới bằng cách bấm chọn Thêm quá trình đào tạo
+
+-- 19 of 23 --
+
+(nhập các thông tin trong cửa sổ hiện ra sau đó bấm Thêm quá trình đào tạo)
+hoặc sửa bằng cách bấm chọn hoặc xóa bằng cách chọn .
+ Quá trình công tác: danh sách quá trình công tác hiển thị ở bảng bên dưới,
+người dùng có thể thêm mới bằng cách bấm chọn Thêm quá trình công tác
+(nhập các thông tin trong cửa sổ hiện ra sau đó bấm Thêm quá trình công tác)
+hoặc sửa bằng cách bấm chọn hoặc xóa bằng cách chọn .
+ Ngoại ngữ : danh sách ngoại ngữ hiển thị ở bảng bên dưới, người dùng có thể
+thêm mới bằng cách bấm chọn Thêm ngoại ngữ (nhập các thông tin trong cửa
+sổ hiện ra sau đó bấm Thêm ngoại ngữ) hoặc sửa bằng cách bấm chọn
+hoặc xóa bằng cách chọn .
+2.3.3. Hướng nghiên cứu chính:
+Bấm chọn Hướng nghiên cứu chính để nhập thông tin.
+Người dùng cần nhập đầy đủ các thông tin trong form và bấm Cập nhật để lưu.
+2.3.4. Đề tài - Kết quả nghiên cứu:
+Bấm chọn Đề tài - Kết quả nghiên cứu.
+
+-- 20 of 23 --
+
+Người dùng cần nhập thực hiện lựa chọn các thông tin cần thiết sau đây:
+ Danh sách nhiệm vụ/dự án nghiên cứu đã tham gia thực hiện: danh sách
+nhiệm vụ, dự án hiển thị ở bảng bên dưới, người dùng có thể thêm mới bằng
+cách bấm chọn Thêm các nhiệm vụ KHCN (nhập các thông tin trong cửa sổ
+hiện ra sau đó bấm Lưu), bấm Hiện 5 năm gần nhất để hiện các nhiệm vụ, dự
+án trong 5 năm gần nhất, sửa bằng cách bấm chọn hoặc xóa bằng cách
+chọn .
+ Kết quả nghiên cứu đã được công bố: danh sách nghiên cứu đã được công
+bố hiển thị ở bảng bên dưới, người dùng có thể thêm mới bằng cách bấm chọn
+Thêm kết quả nghiên cứu (nhập các thông tin trong cửa sổ hiện ra sau đó bấm
+Lưu), sửa thông tin bằng cách bấm chọn hoặc xóa bằng cách chọn .
+Để chọn thông tin, bấm tích chọn vào ô vuông đầu tiên ở mỗi dòng, sau đó bấm
+Lưu lựa chọn
+Sau khi nhập các thông tin cần thiết, bấm Tiếp theo để lưu và chuyển sang mục
+tiếp theo.
+
+-- 21 of 23 --
+
+2.3.5. Tình trạng hồ sơ
+Bấm chọn Tình trạng hồ sơ để xem danh sách các trường thông tin còn thiếu
+trong lý lịch khoa học để bổ sung:
+2.4. Tóm tắt hoạt động KHCN của đơn vị chủ trì ( mẫu PL5).
+2.4.1. PL5 - Thông tin KH của đơn vị chủ trì
+Bấm chọn Thông tin chung để các cập nhật thông tin chung như hình dưới :
+Người dùng cần nhập đầy đủ các thông tin bấm “Lưu và tiếp theo” để lưu và
+chuyển sang mục tiếp theo.
+
+-- 22 of 23 --
+
+2.4.2. Tình trạng hồ sơ
+Bấm chọn Tình trạng hồ sơ để xem danh sách các trường thông tin còn thiếu
+trong đề cương đề xuất để bổ sung:
+
+-- 23 of 23 --
+

@@ -1,0 +1,198 @@
+{
+  "reviewer": "Codex (AI)",
+  "human_approved": false,
+  "reviews": [
+    {
+      "id": "ec-001",
+      "input_sha256": "5699a86ba40eadee8e549310936cf197afae4820172397d959943c926010d654",
+      "annotation_sha256": "e1e97f116bb326cafcf61e7fc416d1010faf5b548529edaf3da6cbd6ee55658e",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.335Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-002",
+      "input_sha256": "c7201b806d3a0117e50b94c4b12912ba2d57eb11f2b03b5d021b5f7dc03d7d16",
+      "annotation_sha256": "46aad0a0ef9f4e64c1d377c5e37387e4d8026f920bd0af246da89a9f513aa0c7",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-003",
+      "input_sha256": "666914bd12040362ee1b5b80b2b680aad0f54e8065b745a24caef74f1c646895",
+      "annotation_sha256": "267eef12c3acabe9e47105dad0e199164362a1502d38427ee7111e870e96f636",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-004",
+      "input_sha256": "e80eb32cd6a2313539dfc595e96aef776585152d889f3c9876778a0cbce05444",
+      "annotation_sha256": "744f9b0afb3c9f28b575f1f77277e0fdaed0b8196024fa909ed3fe3729a2667b",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-005",
+      "input_sha256": "31d5f18637ea049aa1a0471e5b4c7c04ad3039f2aa66c79dd8e62d57b29f1cbd",
+      "annotation_sha256": "7a2401c420571c3c61b839aeda7fb2a1640e10956dc6732e7c4765ef1279729d",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-006",
+      "input_sha256": "d448d0c0a8999fe844924d0cd66a80f87ea66ac69bf2ec28327fd7af5c364f3f",
+      "annotation_sha256": "08d03311687ecce83b71102f80836e08255dc2579b7036afe2dda0be1ce4f489",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-007",
+      "input_sha256": "5140a600780bdcd3c1e278be02718d9cdecda84034cdcad1b08a9b02e0125493",
+      "annotation_sha256": "527cbadc63b821c039f782429dd2942bca6df7b1e255caf6fc521b5f17968ae4",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-008",
+      "input_sha256": "10b00f9ce2b407700fcc7700f86a3456f3911d1fae9214f58d3463c1e0648b43",
+      "annotation_sha256": "e3e55c2260e6155eb34aa04fae201219d1cf6340010f5c9a2cc38d42198d77e1",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-009",
+      "input_sha256": "78d617bc41272682df120e0674c9d68c60d82b2a72e4f192041ac41ebe23c595",
+      "annotation_sha256": "bf4c82079145af6890bfcf88c4331a4255fc68628c7d892af82ef553be2a4bf3",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-010",
+      "input_sha256": "fdc245caa52db5aea3c7150b73c497843c9e92073b5fd3c526655fcca9c8c255",
+      "annotation_sha256": "1dfdfc6ef479e3f93c34ff27a5804c32b299992febc325330f5abcb49ef38ebd",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-011",
+      "input_sha256": "593baf52c9c49539e1474ad1f969de8ffa3c4df4ee91986f791e6024c484e702",
+      "annotation_sha256": "4bb8a0eb6d60e5df755f65dc8a23f5ef173daf8d6ea3b8a0247817225be0e473",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-012",
+      "input_sha256": "e9425002a547a76ca4f9117d797d83de9a5b29d789393c2513624d7fe7b373a3",
+      "annotation_sha256": "0aaf465182ef1a535ccee76b9d9bce3b1df0e7b9692f92d5fac3b0389871d42f",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-013",
+      "input_sha256": "b06001f5625d0ca085e477a4bb4d763ca5b5848f94b3dbd9d5b50d57090c03bb",
+      "annotation_sha256": "e803b0612998b078193f9eb9805340600c5fb2db812c2ae542def2703eaacb8b",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-014",
+      "input_sha256": "c1ba0a5a7a188558d100038794aa79a605bbaa45ad62c218540ea9fb5fc74847",
+      "annotation_sha256": "3fe33c8a7de243ff243286c81a03ce6110f7e6724dac6287f632fbc0705e0ecc",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-015",
+      "input_sha256": "ed1ffdcda2c60b0019f02b671cda24579078c981c570ae6b9f6750cdca2e5cd9",
+      "annotation_sha256": "9cddedac3bffdef1b1adaae8231350154d4d3fb4b9f45c3d6b2bbb8cb8d14369",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-016",
+      "input_sha256": "b197d56fb2ce81a7108cdd8ecb2e8b9c3ea316f6990816db6787316fe72b38bf",
+      "annotation_sha256": "ee7cecd88f86d766ebd6daf5a38bd772165c88e6c3db4265d1da53e764cb69cc",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-017",
+      "input_sha256": "c32c5c8f8847c0b52f1cfa11da71a4fd7ea1c913a0df4aef3207bad07da559ee",
+      "annotation_sha256": "d76df75a222381679e3cea64220f3fc97f86a0019233f2f845db638fe3521539",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-018",
+      "input_sha256": "0a25478e7d4e2f45765c489295681ff9bd608856b1769bb989393f8950228406",
+      "annotation_sha256": "52af8627d0ac4c73044bff79928b34a9b647c8afd36b278794a84c4b31bc2691",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-019",
+      "input_sha256": "fe3d46daa58fd8241763c5ab275e7947bd0aea9a9e4767214077c7a515b94867",
+      "annotation_sha256": "298c4780e669015c6d118f5b78d9b70d339c88e81cecdb226537bab6941a4e08",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-020",
+      "input_sha256": "615ac959dde1cdc42cecc800a67e62c654bab9e616ead89480f30f9aac44dca8",
+      "annotation_sha256": "2a5da958784fa71892945040ecd4c55f05fe2d261ed8940fc10f38ac45dde034",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-021",
+      "input_sha256": "6abfaccba60bac854ee9a5e5aa4e4ced0c018bd0e9b63faff99023e1ffe2640e",
+      "annotation_sha256": "eed09bca4e074fc798a4f1989790bb51da45a8fd8b7064ec739331b49dba0b81",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-022",
+      "input_sha256": "caced806b2a2e02c985ca39e57eb5d3f62a443c1ac5d433c74b700d09ef85f16",
+      "annotation_sha256": "1e6b49fec8e9376a256ed196a7335652b2ccca9301fd0c3ec08bb0955369b07d",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-023",
+      "input_sha256": "c3800e25764b64c6ef2a08ba3af0e8cd0b5b58d1075f1b3550aefa62f922be50",
+      "annotation_sha256": "ddb3f43f3e2af0715350bdc30f2ab2a7388aa58320f31dcb7fb426621b30dec1",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    },
+    {
+      "id": "ec-024",
+      "input_sha256": "4e14abc2bc4bfa6684df65e8ec07fa706bb34b6aeba7adb4acfb1fb3ffbf959a",
+      "annotation_sha256": "66a950660774975004b0227ab967139ccd234587bdb16fe25ffa8c5c8704fab1",
+      "status": "ai_reviewed",
+      "reviewed_at": "2026-10-25T14:53:23.336Z",
+      "decision": "accept_visible_context_text_only"
+    }
+  ]
+}

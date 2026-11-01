@@ -1,0 +1,16 @@
+{
+  "filename": null,
+  "source_url": null,
+  "publisher_or_author": null,
+  "document_title": null,
+  "version_or_date": null,
+  "license_or_permission": null,
+  "license_evidence_url_or_file": null,
+  "contains_private_information": null,
+  "sanitization_changes": null,
+  "original_document_group": null,
+  "intake_status": "pending_source_rights_and_extraction_review",
+  "final_split": null,
+  "training_eligible": false,
+  "independent_holdout_verified": false
+}

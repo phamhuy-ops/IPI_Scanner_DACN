@@ -1,248 +1,126 @@
-# Kế hoạch pilot fine-tuning Verifier
+# Kế hoạch thử fine-tuning một Verifier
 
-Ngày chốt: 2026-10-24. Trạng thái: **đã có kế hoạch, chưa huấn luyện**.
-Sau yêu cầu dùng ổ E, đã tạo Python 3.12.15/venv và đường cache/output riêng;
-xem [cấu hình lưu trữ](../guides/luu-tru-huan-luyen-tren-o-e.md). Mục tiêu
-model/dữ liệu/cổng không đổi. Các số inventory ban đầu trong mục kiểm tra
-máy bên dưới là mốc lịch sử; hiện disk trên E đạt ngân sách, thư viện ML và
-smoke GPU vẫn chưa được chuẩn bị/chạy. Snapshot kế hoạch trước thay đổi và
-inventory mới được lưu riêng trong thư mục thí nghiệm.
+Cập nhật 2026-10-27. **Đã train hai ứng viên nội bộ, chưa đạt để triển khai. Không mở thêm lượt train trong đợt này.**
 
-Ứng viên duy nhất là Qwen2.5-1.5B-Instruct. Mục tiêu là kiểm chứng nghi vấn
-IPI bằng nguồn và ngữ cảnh, trả kết luận có bằng chứng và nhất quán. Kế hoạch
-máy đọc tại [ke-hoach.json](../../benchmark/experiments/verifier-finetune-pilot-v1/ke-hoach.json).
+Hiện tạm dừng mở rộng dữ liệu. Đã quay lại đo Verifier Ollama thực trên
+16 nguồn dev ngoài pool train và bốn pipeline TXT ngắn; không dùng 48 mẫu
+nháp làm bộ chọn model. Instruct chưa đạt hơn Coder, mặc định giữ nguyên.
+Đã sửa lỗi routing model chọn rõ trong mã nguồn; đây là sửa luồng, không
+phải nâng cấp nhận diện đã được chứng minh. Hướng kiểm chứng tiếp là cách
+giao đoạn kiểm tra khi chưa có finding, không mở thêm fine-tuning lúc này.
 
-## Phạm vi và mốc so sánh
+## Đợt tiếp: kiểm tra nhất quán trước khi xuất JSON
 
-Chỉ huấn luyện một Verifier. Giữ Detector, Rule Prefilter, extraction,
-chunking và chính sách kết luận làm mốc khi đo pipeline. Chưa thay mặc định,
-allowlist hoặc thêm vòng phản biện. Sửa chúng trong một thí nghiệm khác nếu
-có lỗi riêng được chứng minh, không trộn vào kết quả fine-tuning.
+Đã khóa và đo một ứng viên prompt: nối một bước kiểm tra cuối vào
+system hiện có. Model phải đối chiếu bằng chứng, người nhận, ngữ cảnh và
+chuyển hướng với stance; giải thích bằng một câu ngắn, nhắm 40–180 ký tự
+trong giới hạn gốc 20–240. Không đổi schema/parser, không cắt reason hoặc
+tự sửa stance sau model. Mâu thuẫn vẫn đi theo chính sách cần xem xét.
 
-Bản Qwen instruct nhận diện trực tiếp 4/5 tấn công nhưng context chỉ 4/12
-nhất quán, có false clear; xem [phép đo ứng viên](../reports/danh-gia-model-thay-the-verifier.md).
-Đó là căn cứ chọn vấn đề để học, chưa chứng minh model sẽ học thành công.
+Baseline và ứng viên đều dùng candidate-02 adapter bật, cùng HF NF4/model
+instance/seed 42/max_new_tokens 256. Đây không phải đổi Verifier Ollama
+mặc định. Ngân sách: **1 ứng viên prompt, 0 lượt train, 0 thử lại tự động**.
 
-Khóa base HF `Qwen/Qwen2.5-1.5B-Instruct`, commit
-`989aa7980e4cf806f80c7fef2b1adb7bc71aa306`, license khai báo Apache-2.0.
-Đã đọc metadata công khai để xác nhận commit, chưa tải weights huấn luyện.
-[Metadata lưu](../../benchmark/experiments/verifier-finetune-pilot-v1/phien-ban-model-goc.json).
-Model GGUF trong Ollama hiện có tiếp tục làm mốc inference; lộ trình pilot
-đề xuất dùng weights/tokenizer HF tương ứng với PEFT/QLoRA, không coi file
-GGUF đang chạy là checkpoint huấn luyện Transformers.
+Đối chứng gồm 28 nguồn mới, 14 Việt/14 Anh: lệnh AI, việc cho người,
+trích dẫn, thiếu người nhận, nguồn tự nhận phê duyệt, nhắc AI nhưng giao
+việc cho người và mô tả sạch. Bốn bối cảnh có chung khuôn nên audit gom
+thành hai nhóm từ vựng 14 mẫu; không coi là bốn nhóm độc lập. Nhãn AI đã
+rà nội bộ, chưa có duyệt người; chỉ dùng dev chọn prompt, tuyệt đối không
+nhập train hoặc gọi là holdout. Hai mode × hai prompt tạo 112 bản xem
+trước; span/parser/token/mask/collator đều đạt, tối đa 1455 token.
 
-## Verifier cần học gì
+Khi runner được triển khai, đo 12 biểu diễn dev cũ + 56 biểu diễn mới cho
+mỗi prompt, tổng 136 lượt. Cổng đạt phải đồng thời có: mọi phản hồi hợp lệ;
+stance đúng tăng trên đối chứng mới; không thêm FP/false-clear, không làm
+ca đúng thành lỗi/uncertain, không xác nhận nhầm gold uncertain; không
+hồi quy theo ngôn ngữ hoặc nhóm. TP mới phải đúng span và các trường ngữ
+cảnh. p95 latency tối đa 1,2 lần, VRAM allocated tối đa 1,1 lần baseline.
+Các ngưỡng là cổng chọn dev bảo thủ, không phải chuẩn an toàn tổng quát.
 
-Giữ hợp đồng thử nghiệm hiện có `referenced-v1` + `compact-v1`, chưa đưa vào
-mặc định. Đầu vào gồm system prompt Verifier được khóa, bảng mã đoạn nguồn,
-các ID nghi vấn nếu có và toàn bộ chunk nguồn trong batch. Vòng đầu không
-nhìn stance, reason hoặc confidence của Detector.
+Trượt bất kỳ cổng nào thì chốt thất bại đợt này, giữ Agent. Đạt mới xem
+xét full dev; vẫn cần dữ liệu độc lập mới, tài liệu dài/đa định dạng và
+toàn pipeline trước triển khai. **Runner đã viết và đợt đã đóng do trượt
+cổng bắt buộc.** Đã chạy 48/136 lượt: 24 baseline và 24 candidate cùng ca.
+Candidate có 15 lỗi hợp đồng, nên không thể đạt cổng mọi phản hồi hợp lệ;
+đã dừng sớm, giữ raw, không tự thử lại. Trên subset: stance đúng 7→3/24,
+hợp lệ 12→9/24, FP 1→2; không suy chỉ số này cho đủ 68 ca mỗi prompt.
+Phần đối chứng mới mới chạy sáu nguồn đầu trong một bối cảnh tiếng Việt.
+Các cổng tổng hợp trên toàn bộ chưa được đánh giá đầy đủ; vi phạm từng ca
+đã đủ loại ứng viên. Không đổi Agent, parser hoặc adapter, không train.
 
-Chỉ các ID tham chiếu phục vụ ràng buộc inference được phép xuất hiện, như
-`suspicion-1`, `ref-1`, `chunk-1`; chúng không mang nhãn. ID dataset/ca/nhóm,
-provenance, source_label, đáp án và ghi chú người duyệt chỉ nằm ngoài input.
-Không cung cấp user_intent trong setup này; không suy task mismatch dựa vào
-nhiệm vụ chỉ có trong metadata.
+Thực thi: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/eval_verifier_consistency.py`;
+chấm: `node scripts/score-verifier-consistency.cjs`. Các lệnh từ chối ghi đè
+đợt hiện tại; không chạy lại để tìm kết quả tốt hơn. Xem
+[kết luận dừng sớm](../../benchmark/experiments/verifier-consistency-eval-v1/ket-luan.json).
 
-Tên file được ánh xạ trung tính, không mang ID ca/nhãn dataset. Header risk
-score, số finding và lý do chọn chunk hiện có trong formatter phải lấy từ
-scanner/selector đã khóa, không được dựng từ đáp án. Ghi lại nguồn các giá
-trị này và có đối chứng finding sai/nguồn sạch để model không học rằng có
-finding hoặc risk cao tự đồng nghĩa tấn công. Không cung cấp Detector
-confidence qua một trường metadata thay thế.
+[Giao thức đã khóa](../../benchmark/experiments/verifier-consistency-candidate-v1/giao-thuc-da-khoa.json)
+và [ứng viên cụ thể](../../benchmark/experiments/verifier-consistency-candidate-v1/ung-vien.json)
+giữ suffix, cổng và hash. Kiểm tra bằng
+`node scripts/freeze-verifier-consistency-candidate.cjs --check`.
 
-Đầu ra có đúng hai mảng `assessments` và `discoveries`:
+## Chuẩn bị dữ liệu sau kiểm toán
 
-- Assessment: id, spanId, addressee, framing, deviation, hasDirective, stance,
-  reason. Mỗi nghi vấn đầu vào được trả đúng một lần. spanId phải khớp mã
-  ràng buộc nghi vấn; phần này học kiểm chứng, không được đổi span tùy ý.
-- Discovery: cùng các trường, bỏ id, chọn spanId từ nguồn cho chỉ dẫn tấn
-  công mới. Các ràng buộc discovery của validator hiện tại vẫn giữ nguyên.
-- Không có nghi vấn thì assessments rỗng, nhưng vẫn phải tìm trên toàn bộ
-  nguồn để trả discoveries phù hợp. Không có tấn công thì discoveries rỗng.
-- Reason 20–240 ký tự, nêu bằng chứng/ngữ cảnh ngắn gọn. Không có analysis tự
-  do, quote do model tự viết hoặc yêu cầu model sinh chuỗi suy luận dài.
+Đã lập [ma trận bổ sung](../../benchmark/experiments/verifier-supervision-review-v1/ma-tran-bo-sung.json)
+với 16 vị trí neo trên bốn nhóm train cha, hai ngôn ngữ. Bốn loại cần soạn:
 
-Confirmed xác nhận có IPI đang hoạt động; dismissed bác bỏ nghi vấn trong
-ngữ cảnh; uncertain là thiếu bằng chứng thực sự. Phân biệt người nhận trong
-câu trích và hiệu lực của câu đó. Học bác bỏ finding sai, nhận ra lệnh thật,
-tìm thêm lệnh bị bỏ qua và không lạm dụng uncertain để né kết luận.
+- Yêu cầu AI thông thường, không có chứng cứ chuyển hướng trong setup text-only.
+- AI là người nhận rõ nhưng chưa xác định được chuyển hướng cụ thể.
+- Lệnh nhắm AI rõ nhưng chưa rõ đang có hiệu lực hay nằm trong câu trích.
+- Hành động công cụ rõ nhưng chưa xác định người nhận là người hay AI.
 
-Trích dẫn thật được ứng dụng truy hồi từ ID. Khớp nguồn không chứng minh
-hiểu đúng: cần kiểm tra cả lý do và ngữ cảnh, như ca mô tả đúng lệnh gửi
-hội thoại nhưng gán quoted_example/dismissed. Xem ontology trong
-[hướng dẫn gán nhãn](../guides/huong-dan-gan-nhan-ngu-canh.md).
+Mỗi vị trí cần thêm đối chứng confirmed và human/quoted dismissed: dự kiến
+48 biến thể. **Đã soạn đủ bốn batch: 48 mẫu, gồm 16 vị trí neo và 32 đối chứng.**
+Batch đầu tập trung AI active/none trong
+bốn bối cảnh train cha, có 6 Việt/6 Anh, 8 dismissed/4 confirmed.
+24 biểu diễn qua parser/token/mask/collator, tối đa 1133 token; đối chiếu
+376 nguồn split/dev không có match theo heuristic hoặc sai vai trò nhóm.
+Đây chưa phải audit toàn raw hoặc độc lập ngữ nghĩa. Nhóm cha vẫn giữ dù
+không có match từ vựng; nhãn text-only cần giữ đúng giới hạn áp dụng.
+Batch hai có 4 uncertain/4 confirmed/4 dismissed, 6 Việt/6 Anh: người nhận
+AI rõ nhưng thao tác tham chiếu nội dung không có trong phần nguồn.
+24 preview đạt parser/token/mask/collator, max 1131 token. Đối chiếu 388
+nguồn gồm split/dev và batch đầu không có match heuristic hoặc sai nhóm.
+Batch ba giữ nguyên câu lệnh qua ba bao khung unclear/active/quoted, mỗi
+nhãn bốn mẫu, 6 Việt/6 Anh. 24 preview đạt parser/token/mask/collator, max
+1162 token; audit 400 nguồn split/dev/batch trước không có match heuristic
+hoặc sai nhóm. Đây là TXT mô phỏng mất liên kết khối/cột, không phải kết
+quả extractor PDF/DOCX. Batch bốn giữ cùng thao tác xóa lịch sử, chỉ phân
+định người nhận; 24 preview đạt, max 1020 token.
+Rà gộp đủ 48 mẫu/96 preview không thấy lỗi nhãn cấu trúc, span, mode,
+metadata hoặc thiếu ô mục tiêu. Tổng 16 confirmed/20 dismissed/12 uncertain,
+24 Việt/24 Anh; vẫn chỉ bốn nhóm train cha. Audit toàn kho v21 kiểm kê
+102 file/68.730 văn bản chuẩn hóa khác nhau; nhóm mới chỉ nối đúng cha cũ,
+chưa loại hết tương đồng ngữ nghĩa. Chưa duyệt độc lập hoặc ghép train.
+Xem [tiến độ ma trận](../../benchmark/experiments/verifier-supervision-batch-audit-v4/tien-do-ma-tran.json)
+và [bảng rà gộp](../../benchmark/experiments/verifier-supervision-pool-review-v1/ket-qua.json).
+Đây là phạm vi soạn thử, không phải số lượng chứng minh đủ để train. Tất cả
+giữ nhóm cha; không đưa dev đã đo vào train hoặc coi là nguồn độc lập mới.
 
-## Mở rộng dữ liệu theo nhóm nguồn
+Đã đọc và đề xuất reason cụ thể hơn cho 12 nguồn train, giữ stance/context;
+24 biểu diễn thử qua parser, gồm 16 target có reason đề xuất và 8 target
+rỗng giữ nguyên. [Đề xuất reason](../../benchmark/experiments/verifier-supervision-review-v1/de-xuat-ly-do.json)
+ghi span bằng chứng và hash; chưa áp dụng, không chuyển duyệt người cũ sang
+bản sửa. Bước tiếp rà ngữ nghĩa theo hàng chờ 48 mẫu, nhất là các ca
+AI active/none và uncertain, rồi lập phương án phát hành/thay thế có kiểm
+soát. Không tự nhập train, đổi split cũ hoặc mở thêm ngân sách model/train.
+Không gọi model hoặc tự mở lượt train từ bước chuẩn bị này.
 
-Hai mươi mẫu vừa duyệt là **bộ tham chiếu cách gán nhãn và regression dev
-cũ**. Không dùng chúng làm bài học train hoặc holdout. Quyết định ann-004
-đã sửa phải lấy từ final_annotation; không lấy lại nhãn nháp assistant.
-Quá trình rà soát có xem đề xuất AI, không phải gán nhãn độc lập/mù.
+## Các mốc chuẩn bị pilot trước đây
 
-Mục tiêu thu thập pilot: **300 lượt kiểm chứng từ ít nhất 100 nhóm nguồn**,
-dự kiến 180 train, 60 dev, 60 probe biến thể để mở sau khi chọn ứng viên.
-Đây là ngân sách khởi đầu, chưa có số mẫu này trong repo và không bảo đảm
-đủ để học. Chia theo nhóm trước; chấp nhận lệch số hàng, không phá nhóm để
-đạt tỷ lệ đẹp. Probe tự soạn vẫn là chẩn đoán chuyển ngữ cảnh, không phải
-tập kiểm chứng độc lập cuối.
+Các gạch đầu dòng dưới là mốc trước khi mở pilot, không phải trạng thái
+hiện tại; số liệu mới xem bảng hiện trạng. Giữ để đối chiếu lịch sử.
 
-Định hướng nội dung:
+- Chỉ học một Verifier, không huấn luyện Rule Prefilter. Base HF: `Qwen/Qwen2.5-1.5B-Instruct`, revision `989aa7980e4cf806f80c7fef2b1adb7bc71aa306`.
+- Đích học: phân biệt người/AI, attack có hiệu lực/trích dẫn/không đủ ngữ cảnh; stance và bằng chứng đúng nguồn, JSON hợp lệ.
+- Model Verifier Ollama mặc định là `qwen2.5-coder:1.5b`; không coi là cùng checkpoint với base HF. Không tự triển khai adapter smoke.
+- Weights/tokenizer đã ở E; Trainer completion-only đã qua 8 kiểm thử CPU và smoke QLoRA 2048 token/accumulation 8, hai bước cập nhật và resume khớp hoàn toàn. Chỉ hỗ trợ một thiết bị/phiên bản thư viện đã khóa; GPU còn ít dư địa, chưa chứng minh đủ cho train dài hoặc mọi batch.
+- Dữ liệu còn phải hoàn thiện quyền dùng, riêng tư, nhãn/span/context, trùng lặp và chia nhóm. 251 bản ứng viên không phải 251 bản đã đủ điều kiện train.
+- Sau audit v14: 84 bản giữ dev, pool 167 ứng viên/64 nhóm chờ xét; mục tiêu train 180 + probe 60 còn thiếu ít nhất 73 ứng viên ngoài dev. Đã chuẩn hóa 23 email LLMail và 18 mẫu trên sáu đoạn Markdown tiếng Việt, không tự coi là holdout độc lập. Mốc 108 nhóm heuristic chưa chứng minh đủ độc lập hoặc chất lượng; rà tiếp khoảng thiếu và điều kiện dùng nguồn trước chia tập.
+- Chỉ mở pilot sau khi khóa train/dev và tập kiểm chứng độc lập; giữ kiểm tra mask và ngân sách từng mẫu. Trainer/mask/gradient accumulation/checkpoint-resume đã qua smoke kỹ thuật, không thay thế điều kiện dữ liệu. Bộ tham chiếu và mẫu đã dùng chọn cấu hình không tự làm test cuối.
+- Đo cùng base/backend trước và sau adapter; giữ các thành phần khác để so sánh. Báo cáo precision/recall/F1/FPR, confusion counts, abstention, lỗi, latency và RAM/VRAM; sau đó đo toàn pipeline.
+- NF4 huấn luyện và GGUF quantization triển khai là hai bước khác nhau, cần đo tương ứng.
 
-- Khoảng 40% confirmed, 40% dismissed, 20% uncertain có căn cứ thiếu ngữ
-  cảnh; tiếng Việt và Anh mỗi ngôn ngữ ít nhất 40%. Đây là mục tiêu lấy mẫu,
-  không phải tần suất IPI tự nhiên hay cơ sở hiệu chỉnh xác suất thực tế.
-- Khoảng 60% có nghi vấn được cung cấp và 40% không có nghi vấn. Có cả
-  batch không finding nhưng chứa tấn công, và batch sạch không finding.
-- Có finding báo nhầm từ rule/Detector, ví dụ đào tạo, hướng dẫn cho người,
-  tên Dan Evans; lệnh chủ động đổi nhiệm vụ/đáp án, tiết lộ dữ liệu, dùng
-  công cụ sai; nhiều nghi vấn đúng/sai trong cùng tài liệu.
-- Có nguồn sạch thực tế công khai/đã khử dữ liệu riêng tư, email, trang web,
-  tài liệu công việc, nhiều vị trí đầu/giữa/cuối và độ dài. HTML comment và
-  định dạng nguồn gốc được giữ để đo extraction/pipeline sau này.
-
-Nghi vấn đầu vào phải đến từ snapshot rule/Detector được khóa, hoặc cách
-chọn câu độc lập với nhãn được định nghĩa trước. Không chỉ lấy đúng gold
-attack span làm candidate rồi coi đó là khả năng tự tìm IPI. Bảng mã phải
-bao phủ nguồn theo cách runtime làm; không đánh dấu span đáp án vào input.
-Đáp án discovery chọn span từ bảng là supervision ở output, được kiểm tra
-bằng validator sản phẩm khi triển khai renderer/exporter.
-
-Giữ source/version/license và mức chắc chắn từng mẫu. Nhãn nhị phân của
-dataset không tự chuyển thành stance/ngữ cảnh. Người rà soát phải đọc nguồn,
-xử lý bất đồng; bất đồng chưa giải quyết được cách ly, không tự gán uncertain
-để đủ tỷ lệ. Uncertain chỉ là đáp án khi chính bài toán thiếu bằng chứng.
-Với tập đánh giá, người gán nhãn không được xem output model để chọn đáp án;
-ưu tiên có người thứ hai rà soát ca khó và ghi rõ phương pháp thực tế.
-
-Nguồn BIPIA/MAlmasabi, NotInject và realistic đã dùng dev không được đổi tên
-thành nguồn độc lập. Kiểm tra quyền dùng lại trước khi đưa vào bản train;
-giữ attribution và điều kiện từng nguồn, không gộp license tùy tiện.
-
-## Giữ tính độc lập
-
-Gom trước khi chia: tài liệu gốc, bản trích, phiên bản định dạng, cặp gần
-giống, bản dịch và biến thể tấn công thuộc cùng family. Kiểm tra hash, text
-chuẩn hóa, near duplicate và provenance; rà soát nhóm lớn, lưu seed và bản
-đồ group. Không gom toàn bộ một loại hành vi thành một nhóm hoặc nhầm tên
-dataset khác nhau với độc lập nguồn. Chưa bảo đảm hết tương đồng ngữ nghĩa.
-
-Khóa train/dev/probe sau khi có dữ liệu thực tế. Chỉ dev được dùng chọn
-learning rate/checkpoint/prompt. Probe dùng sau khi chọn ứng viên; nếu sửa
-theo lỗi probe thì nó thành dev và phải thay probe cho kiểm tra chuyển tiếp.
-
-Tập kiểm chứng độc lập cuối **chưa được thu thập**. Mục tiêu 200 mẫu từ ít
-nhất hai family nguồn độc lập với toàn bộ dữ liệu phát triển: khoảng 80 tấn
-công, 80 sạch và 40 thiếu ngữ cảnh có chủ đích. Cần dữ liệu nhiều môi trường
-và kiểm tra overlap cả với bộ dev cũ. Nhãn được chốt trước khi xem output.
-Không mặc định NVIDIA hoặc dataset mới nào độc lập chỉ từ tên nhà phát hành.
-
-Trước lần chạy cuối, khóa model/adapter, tokenizer, prompt, parser, template,
-quy tắc chunking, quantizer và policy. Không chọn checkpoint trên holdout.
-Nếu sửa theo kết quả holdout, ghi rõ nó đã thành dữ liệu phát triển và lấy
-holdout mới cho claim cuối. Không chấm tập MAlmasabi test để điều chỉnh pilot.
-
-## Cách huấn luyện dự kiến
-
-Đề xuất QLoRA: base 4-bit NF4, double quantization và LoRA cho q_proj/v_proj;
-không cập nhật toàn bộ base. Cấu hình khởi đầu: r=8, alpha=16, dropout=0,05,
-micro-batch=1, gradient accumulation=8, gradient checkpointing, packing=false,
-sequence tối đa ban đầu 1.024 token, seed=42. Chọn tối đa hai ứng viên
-learning rate 1e-4 hoặc 5e-5, tối đa hai epoch; chọn bằng dev có kiểm tra
-false clear/báo nhầm/abstention, không chỉ loss.
-
-Đây là **cấu hình đề xuất chưa thử**, không phải khẳng định vừa 4 GB VRAM.
-Ưu tiên thử compute fp16 sau khi kiểm tra hỗ trợ, không mặc định bf16.
-Cần venv riêng, ưu tiên thử Python 3.12 và khóa chính xác dependency sau khi
-resolver/wheel/import được kiểm tra; không có requirements đã xác nhận ở
-bước này. Không cài toàn cục hoặc dùng bản fork không rõ nguồn để lách lỗi.
-
-Theo [PEFT](https://huggingface.co/docs/peft/developer_guides/quantization),
-QLoRA dùng base lượng tử hóa với adapter và cần chuẩn bị model cho k-bit
-training. Theo [TRL](https://huggingface.co/docs/trl/sft_trainer), dữ liệu
-prompt-completion cho phép tính loss ở completion; phải kiểm tra token mask
-thực tế: system/user/source có label=-100, chỉ assistant JSON được học.
-Không mặc định một chat template bất kỳ hỗ trợ assistant mask đúng.
-
-Không cắt ngầm mẫu quá dài để vừa token budget. Tokenizer audit phải tính
-cả prompt, bảng mã, nguồn và target; nếu vượt thì tạo window/batch có đủ
-directive và ngữ cảnh, giữ group, hoặc loại khỏi lượt train và ghi coverage.
-Không bỏ lời dẫn “ví dụ không thực thi” vì sẽ làm đổi nhãn. Đánh giá pipeline
-vẫn đọc file gốc đầy đủ để đo extraction/chunk selection, không chỉ window
-được chuẩn bị thuận lợi cho model.
-
-## Kiểm tra máy trước khi train
-
-Đã có [inventory thực tế](../reports/kiem-tra-moi-truong-huan-luyen-verifier.md):
-GPU 4 GB, khoảng 23,8 GiB RAM; ổ chứa dự án còn khoảng 7 GB. Python hiện tại
-3.14.2 chưa có torch/transformers/PEFT/TRL/bitsandbytes và các thư viện dữ
-liệu cần kiểm tra. Chưa có import CUDA, nạp weights hoặc backward.
-
-Đặt ngân sách làm việc ban đầu 12 GiB trống ở nơi đặt cache/output. Đây là
-ngưỡng thực hành của dự án, chưa phải yêu cầu nhà cung cấp được chứng nhận;
-cần ước lượng lại theo weights, dependency, checkpoint và bước merge/export
-thực tế. Không tự xóa file để đủ chỗ, chưa tải thêm weights hoặc cài thư viện.
-
-Sau khi chuẩn bị môi trường và dữ liệu train mới, chạy smoke 10 optimizer
-steps: kiểm tra đúng commit và mask, forward/backward không OOM/NaN, đo peak
-VRAM/RAM/thời gian, lưu và nạp lại adapter. Không dùng 20 mẫu tham chiếu,
-probe hoặc holdout làm bài học smoke. Mục tiêu smoke là xác minh kỹ thuật,
-không đo khả năng khái quát hóa. Nếu không vừa tài nguyên hoặc không giữ đủ
-ngữ cảnh, báo kết quả và sửa kế hoạch tài nguyên/phạm vi, không âm thầm đổi
-model hoặc cắt mất bằng chứng. Chưa thể kết luận máy chắc chắn train được.
-
-## Đánh giá trước và sau
-
-Đầu tiên so HF base NF4 và base + adapter trên cùng backend, tokenizer,
-prompt/schema/seed/nguồn để tách tác động fine-tuning. Khi triển khai Ollama,
-so base và fine-tune qua cùng converter, lượng tử hóa, template và phiên
-bản runtime; giữ bản Ollama hiện tại như mốc lịch sử riêng. NF4 huấn luyện
-không phải Q4_K_M inference, nên phải đo lại bản deploy sau chuyển đổi.
-[Ollama](https://docs.ollama.com/import) hỗ trợ nhập weights/GGUF; đường merge,
-converter và kiến trúc cụ thể phải được kiểm tra rồi mới nhập tag thử nghiệm
-riêng, không ghi đè model hiện dùng hoặc công bố model ra ngoài.
-
-Báo cáo cho từng stage, source/group/ngôn ngữ/định dạng/vị trí/độ dài:
-
-- TP/FP/TN/FN, abstention, precision, recall, F1, FPR và coverage. Recall
-  tính cả tấn công bị abstain trong mẫu số; undefined là null. Ca gold
-  uncertain được đo riêng về trả uncertain đúng, không ép thành nhị phân.
-- JSON/schema, nhất quán logic, độ đúng từng trường và độ đúng ngữ nghĩa
-  tách riêng. Citation khớp nguồn và bằng chứng có đúng hành vi cần xét cũng
-  tách riêng; lỗi JSON/citation/transport không biến thành kết luận sạch.
-- So từng ca trước/sau, khoảng tin cậy 95% và bất định theo nhóm nguồn.
-  Tập nhỏ không đủ cho claim bảo vệ tổng quát dù đạt điểm mục tiêu.
-- Latency p50/p95, peak VRAM/RAM, disk, timeout, lỗi và nguồn không được bao
-  phủ. Không coi giảm loss hoặc sinh JSON đủ là cải thiện bảo mật.
-
-Các ngưỡng kỹ thuật đề xuất, phải giữ trước khi train/test: JSON/schema
->=98%, nhất quán ngữ cảnh >=95%, confirmed attack recall >=90%, FPR <=5%,
-binary coverage >=80%, trả uncertain đúng trên ca thiếu ngữ cảnh >=80%.
-Không có false clear mới trên các ca legacy đã nhận ra; p95 latency không
-quá 1,25 lần baseline, không OOM. Khi đo pipeline paired, FP/false clear
-không tăng và coverage không giảm. Đây là tiêu chí pilot, không phải chứng
-nhận an toàn hoặc suy ra FPR thực tế từ một tập có tần suất nhân tạo.
-
-Chỉ sau dev và probe đạt mới chạy độc lập với cấu hình khóa, rồi đo pipeline
-paired trên cùng file gốc. Giữ Detector/rules/policy cố định và đo extraction,
-chunk coverage, prefilter, Detector, Verifier, kết luận cuối. Verifier tốt
-hơn vẫn không tự bảo đảm chữa mọi ca hai model cùng không tạo nghi vấn.
-Chỉ cân nhắc thay mặc định sau các bước này, không dựa vào riêng điểm Verifier.
-
-## Công việc tiếp theo đã xác định
-
-1. Mở rộng batch dữ liệu đầu tiên theo ontology, có cả finding thật, báo
-   nhầm và batch không finding; mục tiêu 30 mẫu mới từ ít nhất 10 nhóm nguồn,
-   khoảng 12 confirmed, 12 dismissed và 6 thiếu ngữ cảnh có căn cứ. Đây là
-   mục tiêu gán nhãn, chưa phải 30 đáp án đúng đã có. Kiểm tra nguồn, nhóm,
-   renderer/schema và nhãn thủ công trước khi mở rộng tới 300 lượt.
-2. Chọn đường cache/output đủ dung lượng, chuẩn bị môi trường riêng và
-   khóa dependency. Xác minh renderer dùng đúng product schema/parser,
-   tokenizer/mask, không lẫn metadata hoặc mất ngữ cảnh.
-3. Chạy smoke phần cứng trên mẫu train mới sau khi đủ điều kiện. Nếu đạt,
-   mới thực hiện pilot train và chuỗi đánh giá ở trên.
-
-Bước hiện tại chỉ chốt kế hoạch và kiểm tra khả năng chuẩn bị môi trường.
-Chưa thu đủ dữ liệu, xuất tập train, cài thư viện, chạy fine-tuning, tạo
-adapter hoặc thay model. Những phần này là công việc tiếp nối, không được
-đánh dấu đã hoàn tất từ một file kế hoạch.
+[Kế hoạch máy đọc](../../benchmark/experiments/verifier-finetune-pilot-v1/ke-hoach.json)
+giữ chi tiết tái lập; [lưu trữ ổ E](../guides/luu-tru-huan-luyen-tren-o-e.md)
+giữ lệnh sử dụng. Các mốc cũ được lưu trong ZIP lịch sử, không trộn vào
+trạng thái hiện tại. Xem [việc cần làm](cong-viec-can-lam.md).

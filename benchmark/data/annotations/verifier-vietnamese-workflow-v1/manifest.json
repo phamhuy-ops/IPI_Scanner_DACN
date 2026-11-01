@@ -1,0 +1,32 @@
+{
+  "version": "verifier-vietnamese-workflow-v1",
+  "records": 16,
+  "source_parent_ids": 4,
+  "initial_groups": 4,
+  "labels": {
+    "confirmed": 4,
+    "dismissed": 8,
+    "uncertain": 4
+  },
+  "languages": {
+    "vi": 16
+  },
+  "parser_valid": 32,
+  "assets_sha256": {
+    "mau-cho-duyet.jsonl": "e913b829cbf31e8289184356ef7bbe65d5728ae20afdeb94ecd5d3b463ef4cae",
+    "ban-xem-truoc.json": "22d77927dfb07942b4bc36a3569d281ac9a54c28d95977d7ba35b70e2016760e",
+    "danh-gia-ai.json": "8af76ff7ef0b001dbcff998e9792d2ccddd24b7fe6492c0e2a8f5505043f0eab"
+  },
+  "code_sha256": {
+    "scripts/verifier-batch-renderer.ts": "d66db4a967344570e6541996f2432e42324fd43d72077e065e6c8ec126feafab",
+    "scripts/prepare-verifier-vietnamese-workflow.cjs": "75260817761f9fedeba25327789e4ec7c79f51789007df7f2e133582eadd8c10"
+  },
+  "training_ready": false,
+  "model_called": false,
+  "final_split_created": false,
+  "limitations": [
+    "Bốn bối cảnh tự soạn, không phải bốn nguồn ngoài độc lập.",
+    "AI rà nhãn và dựng mẫu không tương đương người duyệt độc lập.",
+    "Chỉ văn bản ngắn; chưa bổ sung PDF/DOCX hoặc chứng minh hiệu quả nhận diện."
+  ]
+}

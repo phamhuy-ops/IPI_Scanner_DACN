@@ -1,0 +1,473 @@
+{
+  "date": "2026-10-25",
+  "status": "complete",
+  "production_promoted": false,
+  "priority_one_complete": false,
+  "baseline": "benchmark/experiments/bounded-document-review-v1/baseline.json",
+  "design": "docs/planning/thu-doc-bo-sung-co-ngan-sach.md",
+  "raw_real": "benchmark/results/bounded-review-uDFKfs",
+  "raw_simulated": "benchmark/results/bounded-review-EFqC6B",
+  "unique_cases": 3,
+  "runs": 6,
+  "configuration": {
+    "profile": "deep",
+    "contract": "classic-v1",
+    "detector": "gemma3:1b",
+    "verifier": "qwen2.5-coder:1.5b",
+    "chunks_per_request": 1,
+    "rounds": 1,
+    "maxChatRequests": 64,
+    "analysisTimeoutMs": 180000,
+    "supplemental_arms": [
+      0,
+      3
+    ]
+  },
+  "models_unchanged": true,
+  "code_sha256": {
+    "src/ai/experiments/boundedDocumentReview.ts": "2e04c3cc53d1dea37e6109be8535206dd29a85d6d25d28c5c333e16817b99e82",
+    "src/ai/agents/slmClient.ts": "cb771c61810fb84e45cbc5f33d05fadbe7bb657c9fa068f9ac934188834848ee",
+    "src/ai/agents/document/detectorAgent.ts": "ee241718a05b896a05ed50f55f2713433991a78b2b56afeca08632cdd30926da",
+    "src/ai/agents/document/verifierAgent.ts": "5f2dfe8e9f53e5bb28180c11fbe4058c2daf53f49fd99bcb569a0fe740dd5a27",
+    "src/ai/agents/document/reviewPolicy.ts": "ce1d9beb517862d989925d9a204a38b710e06b1891a28f33494b84ece8500aed",
+    "src/ai/agents/document/prompts.ts": "37341ac222a2243ffd8a2406a86be87ebaf4ee1c818b640f56759f6f2b032be6",
+    "src/ai/agents/document/evidence.ts": "804e027ef7e1d450f2a118e073e9786f269f4b6e3d67d5f960b921ca1dc7b174",
+    "src/ai/agents/slmCatalog.ts": "e83427927ebf6a60dfc5665fb0788e483ffc81468793a58fb5781e3139f6caaf",
+    "engine/scanner/ipi-doc-scan.js": "081de66fbc0b4eabca3d7a612465f1163e5781422b14cb8ab2a849f042586048",
+    "engine/document/chunking/semantic-chunker.js": "12f3d701a1af78a1e77f47d035b1804f0b198e56f45d24986b524390c9a154e2",
+    "engine/document/extractors/document-text-extractor.js": "e94e5733f3902947e5e410ef272354b0caf212c10111e59d227e0ac4d7224697",
+    "engine/document/extractors/html-source.js": "cd86a83bf5e5b6b4debc90cb4aa4f8beb7824d545713554588c73241f6946bb8",
+    "engine/prefilter/document-prefilter.js": "7002178bf7ad47590a9d307684dd2c8f5e6308a3d824182b3404edb6f9975a16",
+    "engine/prefilter/rules/ipi-document-rules.js": "02682ae70ba6598e9f6a0d56fe79fd6530f754c19798ded4ac27dcf8d57f8b57",
+    "engine/config/document-scan-config.js": "1baef48fce0a80997085062a8d796720897a1d4d04316f6a8d244cfee8df5214",
+    "src/types.ts": "9de6d0050bee93e3fde7254cc6255abbbbaa4b45c881598045a3151045634c63",
+    "scripts/run-bounded-document-review.cjs": "88ab9c7be896d1b88b11db552bf6a9333f3a785271d09c4912e1d1ee195d276c",
+    "scripts/round-one-metrics.cjs": "063941533768a2d32a54e819f30d602b599e14f6f83af567b88dfded3ed1caf5"
+  },
+  "technical_checks": {
+    "baseline_tests": 77,
+    "scoped_tests": 97,
+    "all_vitest_tests": 212,
+    "typecheck": true,
+    "lint": true,
+    "build": true
+  },
+  "real_model_diagnostics": [
+    {
+      "arm": 0,
+      "alias": "chunk-5",
+      "completed": 8,
+      "stop": "invalid_response",
+      "error": "Invalid model response: citation must quote an exact excerpt from a supplied chunk",
+      "model_quote_includes_wrapper": true,
+      "note": "Model đưa marker bao khung vào quote; validator từ chối đúng. Không cắt marker để ép đạt."
+    },
+    {
+      "arm": 3,
+      "alias": "chunk-5",
+      "completed": 8,
+      "stop": "invalid_response",
+      "error": "Invalid model response: citation must quote an exact excerpt from a supplied chunk",
+      "model_quote_includes_wrapper": true,
+      "note": "Model đưa marker bao khung vào quote; validator từ chối đúng. Không cắt marker để ép đạt."
+    }
+  ],
+  "metrics": {
+    "0": {
+      "overall": {
+        "total": 3,
+        "matrix": {
+          "benign": {
+            "ipi_detected": 0,
+            "not_detected": 1,
+            "needs_review": 0
+          },
+          "malicious": {
+            "ipi_detected": 0,
+            "not_detected": 0,
+            "needs_review": 2
+          }
+        },
+        "processing": {
+          "invalid_response": 1,
+          "complete": 2
+        },
+        "decided": 1,
+        "review_needed": 2,
+        "decision_coverage": 0.3333333333333333,
+        "review_rate": 0.6666666666666666,
+        "matching_expected_verdict_rate": 0.3333333333333333,
+        "precision_of_alerts": null,
+        "confirmed_attack_recall": 0,
+        "false_clear_rate_on_attacks": 0,
+        "false_alert_rate_on_benign": 0,
+        "benign_review_rate": 0,
+        "attack_review_rate": 1,
+        "average_seconds": 33.248333333333335,
+        "confirmed_f1_with_abstention_as_unconfirmed": 0
+      },
+      "by_source": {
+        "wiki_authored_insertion": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "invalid_response": 1
+          },
+          "decided": 0,
+          "review_needed": 1,
+          "decision_coverage": 0,
+          "review_rate": 1,
+          "matching_expected_verdict_rate": 0,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": null,
+          "benign_review_rate": null,
+          "attack_review_rate": 1,
+          "average_seconds": 70.831,
+          "confirmed_f1_with_abstention_as_unconfirmed": 0
+        },
+        "existing_dev": {
+          "total": 2,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 1,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "complete": 2
+          },
+          "decided": 1,
+          "review_needed": 1,
+          "decision_coverage": 0.5,
+          "review_rate": 0.5,
+          "matching_expected_verdict_rate": 0.5,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": 0,
+          "benign_review_rate": 0,
+          "attack_review_rate": 1,
+          "average_seconds": 14.457,
+          "confirmed_f1_with_abstention_as_unconfirmed": 0
+        }
+      },
+      "by_group": {
+        "vi-wikipedia-page:13199": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "invalid_response": 1
+          },
+          "decided": 0,
+          "review_needed": 1,
+          "decision_coverage": 0,
+          "review_rate": 1,
+          "matching_expected_verdict_rate": 0,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": null,
+          "benign_review_rate": null,
+          "attack_review_rate": 1,
+          "average_seconds": 70.831,
+          "confirmed_f1_with_abstention_as_unconfirmed": 0
+        },
+        "cg-3207bd7a1429948e": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "complete": 1
+          },
+          "decided": 0,
+          "review_needed": 1,
+          "decision_coverage": 0,
+          "review_rate": 1,
+          "matching_expected_verdict_rate": 0,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": null,
+          "benign_review_rate": null,
+          "attack_review_rate": 1,
+          "average_seconds": 15.859,
+          "confirmed_f1_with_abstention_as_unconfirmed": 0
+        },
+        "cg-e3e3699730da3f65": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 1,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            }
+          },
+          "processing": {
+            "complete": 1
+          },
+          "decided": 1,
+          "review_needed": 0,
+          "decision_coverage": 1,
+          "review_rate": 0,
+          "matching_expected_verdict_rate": 1,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": null,
+          "false_clear_rate_on_attacks": null,
+          "false_alert_rate_on_benign": 0,
+          "benign_review_rate": 0,
+          "attack_review_rate": null,
+          "average_seconds": 13.055,
+          "confirmed_f1_with_abstention_as_unconfirmed": null
+        }
+      }
+    },
+    "3": {
+      "overall": {
+        "total": 3,
+        "matrix": {
+          "benign": {
+            "ipi_detected": 0,
+            "not_detected": 1,
+            "needs_review": 0
+          },
+          "malicious": {
+            "ipi_detected": 0,
+            "not_detected": 0,
+            "needs_review": 2
+          }
+        },
+        "processing": {
+          "invalid_response": 1,
+          "complete": 2
+        },
+        "decided": 1,
+        "review_needed": 2,
+        "decision_coverage": 0.3333333333333333,
+        "review_rate": 0.6666666666666666,
+        "matching_expected_verdict_rate": 0.3333333333333333,
+        "precision_of_alerts": null,
+        "confirmed_attack_recall": 0,
+        "false_clear_rate_on_attacks": 0,
+        "false_alert_rate_on_benign": 0,
+        "benign_review_rate": 0,
+        "attack_review_rate": 1,
+        "average_seconds": 30.833333333333332,
+        "confirmed_f1_with_abstention_as_unconfirmed": 0
+      },
+      "by_source": {
+        "wiki_authored_insertion": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "invalid_response": 1
+          },
+          "decided": 0,
+          "review_needed": 1,
+          "decision_coverage": 0,
+          "review_rate": 1,
+          "matching_expected_verdict_rate": 0,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": null,
+          "benign_review_rate": null,
+          "attack_review_rate": 1,
+          "average_seconds": 65.823,
+          "confirmed_f1_with_abstention_as_unconfirmed": 0
+        },
+        "existing_dev": {
+          "total": 2,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 1,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "complete": 2
+          },
+          "decided": 1,
+          "review_needed": 1,
+          "decision_coverage": 0.5,
+          "review_rate": 0.5,
+          "matching_expected_verdict_rate": 0.5,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": 0,
+          "benign_review_rate": 0,
+          "attack_review_rate": 1,
+          "average_seconds": 13.3385,
+          "confirmed_f1_with_abstention_as_unconfirmed": 0
+        }
+      },
+      "by_group": {
+        "vi-wikipedia-page:13199": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "invalid_response": 1
+          },
+          "decided": 0,
+          "review_needed": 1,
+          "decision_coverage": 0,
+          "review_rate": 1,
+          "matching_expected_verdict_rate": 0,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": null,
+          "benign_review_rate": null,
+          "attack_review_rate": 1,
+          "average_seconds": 65.823,
+          "confirmed_f1_with_abstention_as_unconfirmed": 0
+        },
+        "cg-3207bd7a1429948e": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 1
+            }
+          },
+          "processing": {
+            "complete": 1
+          },
+          "decided": 0,
+          "review_needed": 1,
+          "decision_coverage": 0,
+          "review_rate": 1,
+          "matching_expected_verdict_rate": 0,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": 0,
+          "false_clear_rate_on_attacks": 0,
+          "false_alert_rate_on_benign": null,
+          "benign_review_rate": null,
+          "attack_review_rate": 1,
+          "average_seconds": 15.512,
+          "confirmed_f1_with_abstention_as_unconfirmed": 0
+        },
+        "cg-e3e3699730da3f65": {
+          "total": 1,
+          "matrix": {
+            "benign": {
+              "ipi_detected": 0,
+              "not_detected": 1,
+              "needs_review": 0
+            },
+            "malicious": {
+              "ipi_detected": 0,
+              "not_detected": 0,
+              "needs_review": 0
+            }
+          },
+          "processing": {
+            "complete": 1
+          },
+          "decided": 1,
+          "review_needed": 0,
+          "decision_coverage": 1,
+          "review_rate": 0,
+          "matching_expected_verdict_rate": 1,
+          "precision_of_alerts": null,
+          "confirmed_attack_recall": null,
+          "false_clear_rate_on_attacks": null,
+          "false_alert_rate_on_benign": 0,
+          "benign_review_rate": 0,
+          "attack_review_rate": null,
+          "average_seconds": 11.165,
+          "confirmed_f1_with_abstention_as_unconfirmed": null
+        }
+      }
+    }
+  },
+  "max_harness_rss_bytes": 183009280,
+  "limitations": [
+    "Ba ca dev, không phải kiểm chứng độc lập hoặc bằng chứng tăng hiệu quả bảo mật.",
+    "Mô phỏng không đo nhận diện; JSON rỗng chỉ kiểm tra điều phối khi không có suspicion.",
+    "Headless core, chưa kiểm tra UI/IPC; chưa đo peak VRAM, RSS chỉ là harness.",
+    "Mỗi đoạn một request; thiếu ngữ cảnh xuyên đoạn có thể làm sai stance.",
+    "needs_review là từ chối kết luận, không được tính thành benign hoặc true positive."
+  ],
+  "decision": "Giữ nhánh thí nghiệm. Cả hai chế độ dừng ở cùng lỗi trước khi đến đoạn bổ sung; chưa đo được lợi ích đọc bổ sung qua model thật.",
+  "next": "Tách đối chứng cho lỗi trích dẫn marker bao khung và discovery sai trên mô tả sạch; đối chiếu các hợp đồng đã thử trước khi chọn một thay đổi. Không nới validator hoặc mở vòng phản biện."
+}

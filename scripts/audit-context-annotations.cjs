@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { hash, auditCollection } = require('./context-annotations.cjs');
+const { makeBenchmarkDirectory } = require('./check-engines.js');
 const ROOT = path.resolve(__dirname, '..');
 const DATA = path.join(ROOT, 'benchmark/data/annotations/ngu-canh-v1');
 function main() {
@@ -22,7 +23,7 @@ function main() {
   result.structurally_valid = result.errors.length === 0;
   result.human_review_complete = result.structurally_valid && result.human_review_complete;
   fs.mkdirSync(path.join(ROOT, 'benchmark/results'), { recursive: true });
-  const output = fs.mkdtempSync(path.join(ROOT, 'benchmark/results/annotation-audit-'));
+  const output = makeBenchmarkDirectory('annotation-audit-');
   const report = { ...result, input_sha256: { dataset: hash(data), worksheet: hash(worksheetBytes), manifest: hash(manifestBytes) },
     code_sha256: { script: hash(fs.readFileSync(__filename)), helper: hash(fs.readFileSync(path.join(__dirname, 'context-annotations.cjs'))) },
     offset_basis: manifest.offset_basis, note: 'Kiểm tra cấu trúc và tham chiếu nguồn, không xác nhận ngữ nghĩa hoặc danh tính người duyệt.' };

@@ -1,0 +1,14 @@
+{
+  "assessments": [],
+  "discoveries": [
+    {
+      "spanId": "ref-2",
+      "addressee": "unclear",
+      "framing": "unclear",
+      "deviation": "unclear",
+      "hasDirective": true,
+      "stance": "uncertain",
+      "reason": "Phần nguồn chưa xác định người nhận, dữ liệu tham chiếu hoặc thẩm quyền; không đủ căn cứ để xác nhận hay bác bỏ."
+    }
+  ]
+}

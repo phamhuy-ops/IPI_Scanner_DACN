@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "generated_by": "scripts/organize-benchmark.cjs",
+  "inputs": 82,
+  "groups": {
+    "01-mau-nhanh": 6,
+    "02-dev-72": 72,
+    "03-pdf-docx": 4
+  },
+  "dataset_entries": 10,
+  "exact_copy_duplicates": [],
+  "additive_independent_total": null,
+  "limits": [
+    "Các bản tập hợp là bản sao phục vụ kiểm thử, không phải nguồn mới.",
+    "Chỉ kiểm trùng byte giữa các file tập hợp, chưa audit near duplicates với toàn dataset.",
+    "PDF/DOCX chưa có nhãn hoàn chỉnh; không tính chúng là benign.",
+    "Không chạy suy luận model hoặc benchmark hiệu quả nhận diện trong lượt tổ chức."
+  ],
+  "source_hashes": {
+    "benchmark/fixtures/demo-output-v1/clean.txt": "8f6597fe64ca1180725aeb4b34909554b7613fd1e625ceb830e3b41a4251fb7a",
+    "benchmark/fixtures/demo-output-v1/attack.txt": "3aa516432b3ac01bcabb8e16d70bf237b15fdad5d674de99608a8cc8e1165a2d",
+    "benchmark/fixtures/demo-output-v1/quoted.txt": "369f6f15d45f9f09ed131d41cd6608a9175aa6ea6fad5a0995799a81abccb345",
+    "benchmark/fixtures/round-one/vi-clean.md": "a125d89fa070a80a52976d902e379cc9135649696dfa355c430b3d0f41a6ba20",
+    "benchmark/fixtures/round-one/vi-injected.md": "88fddc28b622f7c93e0dc36cadf8f0689917c57ddf950f7691fbfb16681d15f9",
+    "benchmark/fixtures/round-one/hidden-injected.html": "de735d4cb191ccc801bbe00fd6524038ac8388e3f8a992ea9c54b23acb5ae010",
+    "benchmark/data/priority-one-dev-v2.json": "7c018bde4e4197beaa3f982fcc3172cebdb89347a9eeff0e17f5743f142ee07e",
+    "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/manifest.json": "9e8189c5cd25c10bc9c75a9cd47eabab5efda113ca95d3dd1d3672f7defaf5b8",
+    "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/huong-dan-cong-thong-tin-truong-hoc-ha-noi.pdf": "6e302b824b22c61cbf8dc5cf7f459e1ee643c7f46c85ac53efec71cfcedbdaf6",
+    "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/huong-dan-hoi-quy-van-thu-luu-tru-phu-tho.docx": "faafd2847ddea591b62d66ff46af10626e7a79b48eff046bf8f47b9d10f2e561",
+    "benchmark/data/incoming/public-vi-documents/nguon-vi-v1/huong-dan-oms-vien-han-lam.pdf": "a0ef25216c3cd800c4fb2f222e84e601d8f4f1010a9b4e7ff456c413f93aa9fe",
+    "benchmark/data/incoming/public-vi-documents/nguon-vi-bo-sung-v1/manifest.json": "e95bf25780d20aa65de27d7258341a1533f64c200224824667603648bca77f97",
+    "benchmark/data/incoming/public-vi-documents/nguon-vi-bo-sung-v1/mau-xac-nhan-sinh-vien-hnue.docx": "9ff6bdcf9d234f603e1371a4958e4b899625ad3e7d8369038099d2189063bfe5",
+    "benchmark/data/raw/malmasabi-bipia-gpt/dataset_for_huggingface.jsonl": "d7695c0ab744ffc97c2ff586fc57a21ccc936fa800da784ef81fb4a4166eb3c6",
+    "benchmark/data/splits/ipi-dev.jsonl": "fa9d3c960aad0d24d5609bf0a465887f3965635d325c91e9e7fc95dce7feac3e",
+    "benchmark/data/splits/ipi-test.jsonl": "2074a3ff4496afdc891fef77d8722badbb459740d2950db658c7889ff1a68b55",
+    "benchmark/data/processed/notinject/notinject.jsonl": "fcbca6f07fe90f1b1ba16f8ba917640f343d7049783a496c914119720799f818",
+    "benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl": "ccb93fc99972ff44f5e2e25317072796f5443ce01660587e3decf72962c7cdf0",
+    "benchmark/data/raw/llmail-intake-v1/data/phase2-subset.jsonl": "fe02512005cf03a7ea9a39f0e8f357a244b615e63cd7004b7ef48946a21342dc",
+    "benchmark/data/raw/injecagent/data/test_cases_dh_base.json": "0a8186468d21389af432e8c7b399ae42264d1b93a07b65c7a489468508604305",
+    "benchmark/data/raw/injecagent/data/test_cases_dh_enhanced.json": "885602716b72c18af80695ce6c2e1f242fa03163bc90b0788b0c5e4ab6216d50",
+    "benchmark/data/raw/injecagent/data/test_cases_ds_base.json": "4daab35c62a3845e8b9400f4dca58b9c9f37e57cd33b2337552557fbb26282e9",
+    "benchmark/data/raw/injecagent/data/test_cases_ds_enhanced.json": "7bc510868df032511053fc40e8470e68a041fb7148d055112093594bf73ab0ce"
+  }
+}

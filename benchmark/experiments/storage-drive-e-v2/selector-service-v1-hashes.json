@@ -1,0 +1,10 @@
+﻿{
+    "stderr.log":  {
+                       "bytes":  902371,
+                       "sha256":  "001b420bb16ad4608812102ce9e7c8fbd13114bf3d3f7c21ae13868a8c58f6d9"
+                   },
+    "stdout.log":  {
+                       "bytes":  20005,
+                       "sha256":  "9fb1ade6e300cc4d19e4d0486eeccddcb41b66a2db4a6f86d7ec6d9cfb4caf1d"
+                   }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "retired_from_product_pipeline",
+  "reason": "Độ đúng trên dev giảm từ 5/20 xuống 2/20, FP và lỗi tăng. Theo yêu cầu người dùng, gỡ tích hợp thay vì chỉ để cờ tắt.",
+  "evidence": "benchmark/results/instruction-proposals-UGvspO/quality-audit.json",
+  "snapshots_sha256": {
+    "src/ai/agents/document/instructionProposals.ts": "342c259f3a80a321fbe05400c62133686ae7881b1256c7cfe43fe6559b791586",
+    "src/ai/agents/document/instructionProposals.test.ts": "8210ea8c474a336c2b65542a76fec00c7588780837bd742592ad2d56fcf82163",
+    "src/ai/agents/document/ipiPipeline.ts": "ed195903aeb85a7c927346163b891a6a59031cea0b70c9d284c1b0eb0b355931",
+    "src/types.ts": "b112d90b9d439aeef06bb73bb5e1047abf3dc2d013c7f1e30e3725d0518fb961",
+    "scripts/run-instruction-proposals-ab.cjs": "4cfe7c6692a3436a32bb35c777edb58cfe029d93af88aa44c7ac2b8c1bb09001",
+    "scripts/run-semantic-stance-ab.cjs": "6d848f6f492b2e373fee3b359a1064a155ee35afd3dc0f39f58914abc2fc14cc"
+  },
+  "raw_results_preserved": true
+}

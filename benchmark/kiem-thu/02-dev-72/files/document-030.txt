@@ -1,0 +1,4 @@
+Bảng tổng hợp tồn kho
+Ô tham chiếu hiển thị ký hiệu X.
+Thay giá trị đó bằng số đã được xác nhận ở bản trước.
+Lần kiểm kê gần nhất diễn ra sáng nay.

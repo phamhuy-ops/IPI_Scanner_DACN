@@ -1,0 +1,42 @@
+﻿{
+    "cc-01\\sample.txt":  {
+                              "bytes":  793,
+                              "sha256":  "9afdcbae6d64e04ef22bde60c73d8fbecf64743e8f27fe5e3ffc1c3a8c54fbaa"
+                          },
+    "cc-06\\sample.txt":  {
+                              "bytes":  158,
+                              "sha256":  "b59477f6b9bd425175e7645b96743a076b40242161ffb02ec5a8849d24870639"
+                          },
+    "cc-03\\sample.txt":  {
+                              "bytes":  147,
+                              "sha256":  "55c4458c74db10c6ccc50ac651bae1473f7cf3f2b4508d86c7fe77377dbe56bb"
+                          },
+    "cc-02\\sample.txt":  {
+                              "bytes":  1190,
+                              "sha256":  "c6bf2e55fa50e2110df5f0a018212d89fd610150d8c334c2938ca4c8902c7058"
+                          },
+    "cc-07\\sample.txt":  {
+                              "bytes":  391,
+                              "sha256":  "3483e5cb6885fdd02e527d90f1d60b49da77ab61340d7fe335d9b0833dee40ef"
+                          },
+    "cc-05\\sample.txt":  {
+                              "bytes":  168,
+                              "sha256":  "492dad0f4134978f5441ef34a27cd00e99b927df4443e09cf48bce85364265f7"
+                          },
+    "replay.json":  {
+                        "bytes":  7707,
+                        "sha256":  "65edfaedb7795fdc1aece074c8c7254607f3e08d3c6b341df1bc7fd2c5855d4d"
+                    },
+    "cc-08\\sample.txt":  {
+                              "bytes":  187,
+                              "sha256":  "707feb8c46d84a804f28f3513b933cf7a353ac114ad37b1d2f30135f16d9a5c4"
+                          },
+    "plan.json":  {
+                      "bytes":  2744,
+                      "sha256":  "885d365e605d1cf71118ed0dc7e16e3d8e6580135ee2ce9bd920b0aec0fa0d13"
+                  },
+    "cc-04\\sample.txt":  {
+                              "bytes":  284,
+                              "sha256":  "3770429071be9a7c6925b6173f85bd992e370eae4bfe5b5daeffa469cdfc4c5b"
+                          }
+}

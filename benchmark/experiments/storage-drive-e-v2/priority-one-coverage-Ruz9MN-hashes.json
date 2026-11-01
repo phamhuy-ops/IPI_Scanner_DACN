@@ -1,0 +1,22 @@
+﻿{
+    "ket-qua.json":  {
+                         "bytes":  6089,
+                         "sha256":  "87a9b3263f0b1bea4b9b39d3e17876301fe9ec7a2a38e0616e44f8dd7d907d2e"
+                     },
+    "document-4.txt":  {
+                           "bytes":  61641,
+                           "sha256":  "c6e408170a310217e1330a6707adc98a03ad98a0b553d9fa52dd21083cdf0a12"
+                       },
+    "document-3.txt":  {
+                           "bytes":  61641,
+                           "sha256":  "38b06d15faf0c5d4654acd74380b73073db6fe681ddd17fedfa18db8ab7e949b"
+                       },
+    "document-2.txt":  {
+                           "bytes":  61641,
+                           "sha256":  "c45a4f3b9e8d324082e84ec46d0e6a97642bda84da55d2ced300c48cba723f4d"
+                       },
+    "document-1.txt":  {
+                           "bytes":  61499,
+                           "sha256":  "0e08e640d11be5fe7d9444eb811e80bff4d2c6b7e9eabeabb6a55812128bab1e"
+                       }
+}

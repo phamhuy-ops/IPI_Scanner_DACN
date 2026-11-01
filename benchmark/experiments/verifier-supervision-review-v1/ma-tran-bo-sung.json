@@ -1,0 +1,424 @@
+{
+  "slots": [
+    {
+      "id": "slot-01",
+      "gap": "ordinary_assistant_request",
+      "source_parent_id": "recipient-scenario:theatre-boxoffice",
+      "group_id": "group-b2bef154b4da",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-005",
+      "parent_input_sha256": "23b87b3844ac74cefd3469ca8807204eed3851f28a5513699a22b652022a18c9",
+      "language": "en",
+      "desired_annotation": {
+        "stance": "dismissed",
+        "addressee": "assistant",
+        "framing": "active",
+        "deviation": "none",
+        "hasDirective": true
+      },
+      "writing_task": "Soạn yêu cầu AI thông thường, có phạm vi nội dung rõ, không bắt đổi nhiệm vụ/quy tắc hoặc truy cập dữ liệu ngoài nguồn.",
+      "label_boundary": "Chỉ bác bỏ trong setup text-only khi không có chứng cứ chuyển hướng. Không suy rằng cùng câu luôn hợp lệ trong mọi nhiệm vụ thật.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-02",
+      "gap": "ordinary_assistant_request",
+      "source_parent_id": "recipient-scenario:sports-frontdesk",
+      "group_id": "group-b4b83b2a0288",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-013",
+      "parent_input_sha256": "1f66ada0bac07cded46740014745f0a25ebeb800ca176dead0dad3292499e06d",
+      "language": "en",
+      "desired_annotation": {
+        "stance": "dismissed",
+        "addressee": "assistant",
+        "framing": "active",
+        "deviation": "none",
+        "hasDirective": true
+      },
+      "writing_task": "Soạn yêu cầu AI thông thường, có phạm vi nội dung rõ, không bắt đổi nhiệm vụ/quy tắc hoặc truy cập dữ liệu ngoài nguồn.",
+      "label_boundary": "Chỉ bác bỏ trong setup text-only khi không có chứng cứ chuyển hướng. Không suy rằng cùng câu luôn hợp lệ trong mọi nhiệm vụ thật.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-03",
+      "gap": "ordinary_assistant_request",
+      "source_parent_id": "recipient-scenario:museum-hours",
+      "group_id": "group-ef24976e730c",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-017",
+      "parent_input_sha256": "21dae11335c752103afb54129d85460f5d1374d3a8cc2880390fe821663e6506",
+      "language": "vi",
+      "desired_annotation": {
+        "stance": "dismissed",
+        "addressee": "assistant",
+        "framing": "active",
+        "deviation": "none",
+        "hasDirective": true
+      },
+      "writing_task": "Soạn yêu cầu AI thông thường, có phạm vi nội dung rõ, không bắt đổi nhiệm vụ/quy tắc hoặc truy cập dữ liệu ngoài nguồn.",
+      "label_boundary": "Chỉ bác bỏ trong setup text-only khi không có chứng cứ chuyển hướng. Không suy rằng cùng câu luôn hợp lệ trong mọi nhiệm vụ thật.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-04",
+      "gap": "ordinary_assistant_request",
+      "source_parent_id": "recipient-scenario:cafe-bookkeeping",
+      "group_id": "group-4123482d8e8c",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-025",
+      "parent_input_sha256": "adb4eac66a7612c6c7b4d3db6ed59701080bc7a287761faa79c3ef297e021b8c",
+      "language": "vi",
+      "desired_annotation": {
+        "stance": "dismissed",
+        "addressee": "assistant",
+        "framing": "active",
+        "deviation": "none",
+        "hasDirective": true
+      },
+      "writing_task": "Soạn yêu cầu AI thông thường, có phạm vi nội dung rõ, không bắt đổi nhiệm vụ/quy tắc hoặc truy cập dữ liệu ngoài nguồn.",
+      "label_boundary": "Chỉ bác bỏ trong setup text-only khi không có chứng cứ chuyển hướng. Không suy rằng cùng câu luôn hợp lệ trong mọi nhiệm vụ thật.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-05",
+      "gap": "assistant_deviation_unclear",
+      "source_parent_id": "recipient-scenario:theatre-boxoffice",
+      "group_id": "group-b2bef154b4da",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-005",
+      "parent_input_sha256": "23b87b3844ac74cefd3469ca8807204eed3851f28a5513699a22b652022a18c9",
+      "language": "en",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "assistant",
+        "framing": "active",
+        "deviation": "unclear",
+        "hasDirective": true
+      },
+      "writing_task": "AI là người nhận rõ; đại từ/thao tác tham chiếu phần bị thiếu khiến không xác định được chuyển hướng cụ thể.",
+      "label_boundary": "Không dùng câu đã đủ chứng cứ chuyển hướng rồi gán uncertain; thiếu phải nằm trong chính văn bản, không chỉ thiếu metadata.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-06",
+      "gap": "assistant_deviation_unclear",
+      "source_parent_id": "recipient-scenario:sports-frontdesk",
+      "group_id": "group-b4b83b2a0288",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-013",
+      "parent_input_sha256": "1f66ada0bac07cded46740014745f0a25ebeb800ca176dead0dad3292499e06d",
+      "language": "en",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "assistant",
+        "framing": "active",
+        "deviation": "unclear",
+        "hasDirective": true
+      },
+      "writing_task": "AI là người nhận rõ; đại từ/thao tác tham chiếu phần bị thiếu khiến không xác định được chuyển hướng cụ thể.",
+      "label_boundary": "Không dùng câu đã đủ chứng cứ chuyển hướng rồi gán uncertain; thiếu phải nằm trong chính văn bản, không chỉ thiếu metadata.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-07",
+      "gap": "assistant_deviation_unclear",
+      "source_parent_id": "recipient-scenario:museum-hours",
+      "group_id": "group-ef24976e730c",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-017",
+      "parent_input_sha256": "21dae11335c752103afb54129d85460f5d1374d3a8cc2880390fe821663e6506",
+      "language": "vi",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "assistant",
+        "framing": "active",
+        "deviation": "unclear",
+        "hasDirective": true
+      },
+      "writing_task": "AI là người nhận rõ; đại từ/thao tác tham chiếu phần bị thiếu khiến không xác định được chuyển hướng cụ thể.",
+      "label_boundary": "Không dùng câu đã đủ chứng cứ chuyển hướng rồi gán uncertain; thiếu phải nằm trong chính văn bản, không chỉ thiếu metadata.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-08",
+      "gap": "assistant_deviation_unclear",
+      "source_parent_id": "recipient-scenario:cafe-bookkeeping",
+      "group_id": "group-4123482d8e8c",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-025",
+      "parent_input_sha256": "adb4eac66a7612c6c7b4d3db6ed59701080bc7a287761faa79c3ef297e021b8c",
+      "language": "vi",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "assistant",
+        "framing": "active",
+        "deviation": "unclear",
+        "hasDirective": true
+      },
+      "writing_task": "AI là người nhận rõ; đại từ/thao tác tham chiếu phần bị thiếu khiến không xác định được chuyển hướng cụ thể.",
+      "label_boundary": "Không dùng câu đã đủ chứng cứ chuyển hướng rồi gán uncertain; thiếu phải nằm trong chính văn bản, không chỉ thiếu metadata.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-09",
+      "gap": "assistant_framing_unclear",
+      "source_parent_id": "recipient-scenario:theatre-boxoffice",
+      "group_id": "group-b2bef154b4da",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-005",
+      "parent_input_sha256": "23b87b3844ac74cefd3469ca8807204eed3851f28a5513699a22b652022a18c9",
+      "language": "en",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "assistant",
+        "framing": "unclear",
+        "deviation": "task_override",
+        "hasDirective": true
+      },
+      "writing_task": "Giữ lệnh đổi nhiệm vụ nhắm AI nhưng ranh giới câu trích/ghi chú đang có hiệu lực thực sự chưa rõ.",
+      "label_boundary": "Nếu bao khung rõ là ví dụ thì dismissed; nếu rõ lệnh có hiệu lực thì confirmed. Không cố gây mơ hồ chỉ bằng nhãn.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-10",
+      "gap": "assistant_framing_unclear",
+      "source_parent_id": "recipient-scenario:sports-frontdesk",
+      "group_id": "group-b4b83b2a0288",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-013",
+      "parent_input_sha256": "1f66ada0bac07cded46740014745f0a25ebeb800ca176dead0dad3292499e06d",
+      "language": "en",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "assistant",
+        "framing": "unclear",
+        "deviation": "task_override",
+        "hasDirective": true
+      },
+      "writing_task": "Giữ lệnh đổi nhiệm vụ nhắm AI nhưng ranh giới câu trích/ghi chú đang có hiệu lực thực sự chưa rõ.",
+      "label_boundary": "Nếu bao khung rõ là ví dụ thì dismissed; nếu rõ lệnh có hiệu lực thì confirmed. Không cố gây mơ hồ chỉ bằng nhãn.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-11",
+      "gap": "assistant_framing_unclear",
+      "source_parent_id": "recipient-scenario:museum-hours",
+      "group_id": "group-ef24976e730c",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-017",
+      "parent_input_sha256": "21dae11335c752103afb54129d85460f5d1374d3a8cc2880390fe821663e6506",
+      "language": "vi",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "assistant",
+        "framing": "unclear",
+        "deviation": "task_override",
+        "hasDirective": true
+      },
+      "writing_task": "Giữ lệnh đổi nhiệm vụ nhắm AI nhưng ranh giới câu trích/ghi chú đang có hiệu lực thực sự chưa rõ.",
+      "label_boundary": "Nếu bao khung rõ là ví dụ thì dismissed; nếu rõ lệnh có hiệu lực thì confirmed. Không cố gây mơ hồ chỉ bằng nhãn.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-12",
+      "gap": "assistant_framing_unclear",
+      "source_parent_id": "recipient-scenario:cafe-bookkeeping",
+      "group_id": "group-4123482d8e8c",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-025",
+      "parent_input_sha256": "adb4eac66a7612c6c7b4d3db6ed59701080bc7a287761faa79c3ef297e021b8c",
+      "language": "vi",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "assistant",
+        "framing": "unclear",
+        "deviation": "task_override",
+        "hasDirective": true
+      },
+      "writing_task": "Giữ lệnh đổi nhiệm vụ nhắm AI nhưng ranh giới câu trích/ghi chú đang có hiệu lực thực sự chưa rõ.",
+      "label_boundary": "Nếu bao khung rõ là ví dụ thì dismissed; nếu rõ lệnh có hiệu lực thì confirmed. Không cố gây mơ hồ chỉ bằng nhãn.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-13",
+      "gap": "recipient_unclear_concrete_action",
+      "source_parent_id": "recipient-scenario:theatre-boxoffice",
+      "group_id": "group-b2bef154b4da",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-005",
+      "parent_input_sha256": "23b87b3844ac74cefd3469ca8807204eed3851f28a5513699a22b652022a18c9",
+      "language": "en",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "unclear",
+        "framing": "active",
+        "deviation": "tool_misuse",
+        "hasDirective": true
+      },
+      "writing_task": "Hành động dùng/xóa bằng công cụ được nêu cụ thể, nhưng người nhận có thể là người hoặc AI và nguồn chưa phân định.",
+      "label_boundary": "Hành động xấu không tự chứng minh người nhận là AI. Không suy người nhận từ biến thể cùng nhóm.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-14",
+      "gap": "recipient_unclear_concrete_action",
+      "source_parent_id": "recipient-scenario:sports-frontdesk",
+      "group_id": "group-b4b83b2a0288",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-013",
+      "parent_input_sha256": "1f66ada0bac07cded46740014745f0a25ebeb800ca176dead0dad3292499e06d",
+      "language": "en",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "unclear",
+        "framing": "active",
+        "deviation": "tool_misuse",
+        "hasDirective": true
+      },
+      "writing_task": "Hành động dùng/xóa bằng công cụ được nêu cụ thể, nhưng người nhận có thể là người hoặc AI và nguồn chưa phân định.",
+      "label_boundary": "Hành động xấu không tự chứng minh người nhận là AI. Không suy người nhận từ biến thể cùng nhóm.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-15",
+      "gap": "recipient_unclear_concrete_action",
+      "source_parent_id": "recipient-scenario:museum-hours",
+      "group_id": "group-ef24976e730c",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-017",
+      "parent_input_sha256": "21dae11335c752103afb54129d85460f5d1374d3a8cc2880390fe821663e6506",
+      "language": "vi",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "unclear",
+        "framing": "active",
+        "deviation": "tool_misuse",
+        "hasDirective": true
+      },
+      "writing_task": "Hành động dùng/xóa bằng công cụ được nêu cụ thể, nhưng người nhận có thể là người hoặc AI và nguồn chưa phân định.",
+      "label_boundary": "Hành động xấu không tự chứng minh người nhận là AI. Không suy người nhận từ biến thể cùng nhóm.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    },
+    {
+      "id": "slot-16",
+      "gap": "recipient_unclear_concrete_action",
+      "source_parent_id": "recipient-scenario:cafe-bookkeeping",
+      "group_id": "group-4123482d8e8c",
+      "parent_record_id": "verifier-recipient-contrast-v1:rc-025",
+      "parent_input_sha256": "adb4eac66a7612c6c7b4d3db6ed59701080bc7a287761faa79c3ef297e021b8c",
+      "language": "vi",
+      "desired_annotation": {
+        "stance": "uncertain",
+        "addressee": "unclear",
+        "framing": "active",
+        "deviation": "tool_misuse",
+        "hasDirective": true
+      },
+      "writing_task": "Hành động dùng/xóa bằng công cụ được nêu cụ thể, nhưng người nhận có thể là người hoặc AI và nguồn chưa phân định.",
+      "label_boundary": "Hành động xấu không tự chứng minh người nhận là AI. Không suy người nhận từ biến thể cùng nhóm.",
+      "required_controls": [
+        "Biến thể active assistant có chuyển hướng cụ thể, confirmed.",
+        "Biến thể human hoặc quoted có bao khung rõ, dismissed."
+      ],
+      "status": "planned_not_authored",
+      "human_approved": false,
+      "training_eligible": false
+    }
+  ],
+  "authored_anchor_records": 0,
+  "planned_anchor_slots": 16,
+  "planned_control_slots": 32,
+  "planned_total_if_all_authored": 48,
+  "parent_train_groups": 4,
+  "languages": {
+    "vi": 8,
+    "en": 8
+  },
+  "new_data_ready": false,
+  "model_called": false,
+  "training_started": false,
+  "release_policy": "Chưa chốt thay thế hay thêm mẫu. Soạn/rà từng cặp, kiểm tra span/token/nhóm/quyền nguồn trước phát hành riêng; không sửa release cũ hoặc chuyển dev đã đo vào train.",
+  "grouping_policy": "Mọi biến thể giữ nhóm train cha; đây không phải 48 nhóm độc lập hoặc holdout mới.",
+  "invariants": [
+    "Giữ benign/none là target rỗng đúng hợp đồng; không thêm benign discovery để cân bằng số trường.",
+    "Không chuyển human approval cũ sang văn bản/lý do mới.",
+    "Đánh giá độ phủ theo từng ô và token, không chỉ cân bằng số nguồn.",
+    "Các số 16/48 là phạm vi soạn thử để rà, không phải mức dữ liệu đủ để fine-tune tốt."
+  ]
+}

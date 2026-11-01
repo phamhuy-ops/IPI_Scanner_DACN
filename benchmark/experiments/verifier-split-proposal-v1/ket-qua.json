@@ -1,0 +1,208 @@
+{
+  "version": "verifier-split-proposal-v1",
+  "seed": 65,
+  "attempts_used": 24,
+  "checks": {
+    "train": {
+      "summary": {
+        "records": 180,
+        "groups": 55,
+        "stances": {
+          "dismissed": 72,
+          "confirmed": 72,
+          "uncertain": 36
+        },
+        "languages": {
+          "vi": 85,
+          "en": 92,
+          "en-vi": 3
+        },
+        "families": {
+          "project_authored": 90,
+          "vi.wikipedia.org": 15,
+          "leolee99/NotInject": 7,
+          "OEVIETNAM/markdown-vietnamese": 12,
+          "microsoft/llmail-inject-challenge": 16,
+          "python/cpython": 10,
+          "uiuc-kang-lab/InjecAgent": 30
+        },
+        "sources": {
+          "project_authored_context_transfer": 30,
+          "vi.wikipedia.org+authored_variants": 15,
+          "project_authored_recipient_contrast": 24,
+          "leolee99/NotInject": 7,
+          "project_authored_vietnamese_workflow": 16,
+          "verifier-gap-v1": 15,
+          "OEVIETNAM/markdown-vietnamese": 4,
+          "OEVIETNAM/markdown-vietnamese+authored_variants": 8,
+          "microsoft/llmail-inject-challenge": 16,
+          "python/cpython": 5,
+          "python/cpython+authored_injection": 5,
+          "uiuc-kang-lab/InjecAgent": 30,
+          "project_authored_vietnamese_business": 5
+        },
+        "largest_group": 30
+      },
+      "language_vi_40": true,
+      "language_en_40": true,
+      "at_least_3_families": true,
+      "largest_family_share": 0.5
+    },
+    "dev": {
+      "summary": {
+        "records": 84,
+        "groups": 44,
+        "stances": {
+          "dismissed": 47,
+          "confirmed": 25,
+          "uncertain": 12
+        },
+        "languages": {
+          "en": 41,
+          "zh": 4,
+          "vi": 39
+        },
+        "families": {
+          "leolee99/NotInject": 15,
+          "authored_context_controls": 6,
+          "verifier-batch-v1": 30,
+          "treycsa/realistic-prompt-injections": 12,
+          "verifier-vietnamese-v1": 15,
+          "vi.wikipedia.org": 5,
+          "captured_energy_excerpt": 1
+        },
+        "sources": {
+          "leolee99/NotInject": 15,
+          "authored_context_controls": 6,
+          "verifier-batch-v1": 30,
+          "treycsa/realistic-prompt-injections": 12,
+          "verifier-vietnamese-v1": 15,
+          "vi.wikipedia.org+authored_variants": 5,
+          "captured_energy_excerpt": 1
+        },
+        "largest_group": 6
+      },
+      "language_vi_40": true,
+      "language_en_40": true,
+      "at_least_3_families": true,
+      "largest_family_share": 0.35714285714285715
+    },
+    "probe": {
+      "summary": {
+        "records": 60,
+        "groups": 14,
+        "stances": {
+          "confirmed": 24,
+          "dismissed": 24,
+          "uncertain": 12
+        },
+        "languages": {
+          "en": 29,
+          "vi": 31
+        },
+        "families": {
+          "microsoft/llmail-inject-challenge": 4,
+          "project_authored": 29,
+          "vi.wikipedia.org": 10,
+          "python/cpython": 2,
+          "OAI/OpenAPI-Specification": 15
+        },
+        "sources": {
+          "microsoft/llmail-inject-challenge": 4,
+          "project_authored_context_transfer": 6,
+          "vi.wikipedia.org+authored_variants": 10,
+          "project_authored_vietnamese_business": 15,
+          "project_authored_recipient_contrast": 8,
+          "python/cpython": 1,
+          "python/cpython+authored_injection": 1,
+          "OAI/OpenAPI-Specification": 3,
+          "OAI/OpenAPI-Specification+authored_variants": 12
+        },
+        "largest_group": 15
+      },
+      "language_vi_40": true,
+      "language_en_40": true,
+      "at_least_3_families": true,
+      "largest_family_share": 0.48333333333333334
+    }
+  },
+  "other_roles": {
+    "unused_candidates": {
+      "records": 14,
+      "groups": 10,
+      "stances": {
+        "dismissed": 12,
+        "confirmed": 2
+      },
+      "languages": {
+        "en": 8,
+        "vi": 6
+      },
+      "families": {
+        "leolee99/NotInject": 5,
+        "microsoft/llmail-inject-challenge": 3,
+        "OEVIETNAM/markdown-vietnamese": 6
+      },
+      "sources": {
+        "leolee99/NotInject": 5,
+        "microsoft/llmail-inject-challenge": 3,
+        "OEVIETNAM/markdown-vietnamese": 2,
+        "OEVIETNAM/markdown-vietnamese+authored_variants": 4
+      },
+      "largest_group": 3
+    },
+    "dev_regression_extra": {
+      "records": 0,
+      "groups": 0,
+      "stances": {},
+      "languages": {},
+      "families": {},
+      "sources": {},
+      "largest_group": 0
+    }
+  },
+  "planning_constraints": {
+    "records": {
+      "train": 180,
+      "dev": 84,
+      "probe": 60
+    },
+    "train_probe_stance_fraction": [
+      0.4,
+      0.4,
+      0.2
+    ],
+    "vi_min": 0.4,
+    "en_min": 0.4,
+    "family_min": 3,
+    "family_share_max": 0.5,
+    "note": "Đề xuất giữ cả 84 dev đã tiếp xúc thay mốc dự kiến 60; dev giữ phân bố gốc, không ép 40/40/20. Điều kiện lập phương án không phải ngưỡng bảo mật; source cùng họ vẫn có thể xuất hiện ở nhiều vai trò."
+  },
+  "group_integrity_verified": true,
+  "no_dev_in_train_or_probe": true,
+  "model_called": false,
+  "inputs_sha256": {
+    "benchmark/experiments/verifier-eligibility-v12/registry.jsonl": "429200e396ee281768d7af8e2baf74874dd016e9283e80c5e18df992842338b5",
+    "benchmark/data/raw/notinject/README.md": "ffaf685021522a526f94af2047e5099ec6b7439a462c67e0ecaca0d631a0d43f",
+    "benchmark/data/raw/injecagent/LICENCE": "b48589499dbb84caa796b00b4ea652b0443e49660282c44d890fd473b8c0674e",
+    "benchmark/data/raw/injecagent/snapshot.json": "8cd26914e2b3df095512a7c3b2d81066bf81dc85a27d4c2bba3ab1d34dc88606",
+    "benchmark/data/raw/vietnamese-wikipedia-v1/GHI-CONG-VA-GIAY-PHEP.md": "86c94d3082e93c1d1c40ed53035e09121a58ce61056ef88be299d546d9fa7f46",
+    "benchmark/data/raw/python-context-docs-v1/LICENSE": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "benchmark/data/raw/python-context-docs-v1/snapshot.json": "9901299ae1a5c22f9277dfff56a767059096d2788183d97e085abf69f93619ab",
+    "benchmark/data/raw/llmail-intake-v1/README.md": "d85767e349ab1abbaf43db9390c4e906e34954e5df3a1335c8f1516efa64e812",
+    "benchmark/data/raw/vietnamese-markdown-v1/LICENSE": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+    "benchmark/data/raw/openapi-context-v1/LICENSE": "4948367c65e1ce06690e2cadc6e86fce1a6a6db55ef874ce4b78c0f472ce5f13"
+  },
+  "code_sha256": "8a4683edecb11d6c1424162029c4b6857fe34abd75cf65a3d3cc776a0d75eb07",
+  "command": "node scripts/propose-verifier-split.cjs",
+  "final_split_created": false,
+  "training_export_created": false,
+  "training_ready": false,
+  "probe_sealed": false,
+  "independent_holdout_verified": false,
+  "limitations": [
+    "Phương án đã được phân tích metadata, không coi probe là holdout độc lập chưa chạm.",
+    "Cân bằng họ nguồn không chứng minh độc lập ngữ nghĩa; grouping hiện vẫn là heuristic.",
+    "AI tự soạn/rà nhiều nhãn; còn thiếu tài liệu dài đa định dạng và đo toàn pipeline."
+  ]
+}

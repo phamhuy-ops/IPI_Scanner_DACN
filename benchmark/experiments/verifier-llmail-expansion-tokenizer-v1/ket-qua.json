@@ -1,0 +1,279 @@
+{
+  "source": "verifier-llmail-expansion-v1",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "offline": true,
+  "examples": 22,
+  "source_records": 11,
+  "source_parents": 11,
+  "mask_valid": 22,
+  "collator_valid": 22,
+  "token_min": 838,
+  "token_max": 1676,
+  "target_max": 97,
+  "over_budget": {
+    "1024": 10,
+    "1536": 3,
+    "2048": 0
+  },
+  "rows": [
+    {
+      "id": "llmail-fp-073-whole_source",
+      "source_record_id": "llmail-fp-073",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:73",
+      "mode": "whole_source",
+      "tokens": 1059,
+      "padded_tokens": 1064,
+      "supervised_tokens": 83,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-073-none",
+      "source_record_id": "llmail-fp-073",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:73",
+      "mode": "none",
+      "tokens": 968,
+      "padded_tokens": 968,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-074-whole_source",
+      "source_record_id": "llmail-fp-074",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:74",
+      "mode": "whole_source",
+      "tokens": 1039,
+      "padded_tokens": 1040,
+      "supervised_tokens": 81,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-074-none",
+      "source_record_id": "llmail-fp-074",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:74",
+      "mode": "none",
+      "tokens": 950,
+      "padded_tokens": 952,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-075-whole_source",
+      "source_record_id": "llmail-fp-075",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:75",
+      "mode": "whole_source",
+      "tokens": 1005,
+      "padded_tokens": 1008,
+      "supervised_tokens": 83,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-075-none",
+      "source_record_id": "llmail-fp-075",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:75",
+      "mode": "none",
+      "tokens": 914,
+      "padded_tokens": 920,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-077-whole_source",
+      "source_record_id": "llmail-fp-077",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:77",
+      "mode": "whole_source",
+      "tokens": 988,
+      "padded_tokens": 992,
+      "supervised_tokens": 84,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-077-none",
+      "source_record_id": "llmail-fp-077",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:77",
+      "mode": "none",
+      "tokens": 896,
+      "padded_tokens": 896,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-079-whole_source",
+      "source_record_id": "llmail-fp-079",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:79",
+      "mode": "whole_source",
+      "tokens": 961,
+      "padded_tokens": 968,
+      "supervised_tokens": 81,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-079-none",
+      "source_record_id": "llmail-fp-079",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:79",
+      "mode": "none",
+      "tokens": 872,
+      "padded_tokens": 872,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-199-whole_source",
+      "source_record_id": "llmail-fp-199",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:199",
+      "mode": "whole_source",
+      "tokens": 929,
+      "padded_tokens": 936,
+      "supervised_tokens": 83,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-fp-199-none",
+      "source_record_id": "llmail-fp-199",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:fp_email_bank:199",
+      "mode": "none",
+      "tokens": 838,
+      "padded_tokens": 840,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-phase2-037-whole_source",
+      "source_record_id": "llmail-phase2-037",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:37",
+      "mode": "whole_source",
+      "tokens": 1676,
+      "padded_tokens": 1680,
+      "supervised_tokens": 95,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-phase2-037-none",
+      "source_record_id": "llmail-phase2-037",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:37",
+      "mode": "none",
+      "tokens": 1648,
+      "padded_tokens": 1648,
+      "supervised_tokens": 87,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-phase2-041-whole_source",
+      "source_record_id": "llmail-phase2-041",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:41",
+      "mode": "whole_source",
+      "tokens": 1199,
+      "padded_tokens": 1200,
+      "supervised_tokens": 89,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-phase2-041-none",
+      "source_record_id": "llmail-phase2-041",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:41",
+      "mode": "none",
+      "tokens": 1063,
+      "padded_tokens": 1064,
+      "supervised_tokens": 81,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-phase2-046-whole_source",
+      "source_record_id": "llmail-phase2-046",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:46",
+      "mode": "whole_source",
+      "tokens": 1175,
+      "padded_tokens": 1176,
+      "supervised_tokens": 85,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-phase2-046-none",
+      "source_record_id": "llmail-phase2-046",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:46",
+      "mode": "none",
+      "tokens": 1148,
+      "padded_tokens": 1152,
+      "supervised_tokens": 77,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-phase2-047-whole_source",
+      "source_record_id": "llmail-phase2-047",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:47",
+      "mode": "whole_source",
+      "tokens": 945,
+      "padded_tokens": 952,
+      "supervised_tokens": 88,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-phase2-047-none",
+      "source_record_id": "llmail-phase2-047",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:47",
+      "mode": "none",
+      "tokens": 918,
+      "padded_tokens": 920,
+      "supervised_tokens": 80,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-phase2-044-whole_source",
+      "source_record_id": "llmail-phase2-044",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:44",
+      "mode": "whole_source",
+      "tokens": 1556,
+      "padded_tokens": 1560,
+      "supervised_tokens": 97,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "llmail-phase2-044-none",
+      "source_record_id": "llmail-phase2-044",
+      "source_parent_id": "llmail:1063bdf01ec8762b812d5e06ee768a06faa5a6f7:phase2_prefix:44",
+      "mode": "none",
+      "tokens": 1322,
+      "padded_tokens": 1328,
+      "supervised_tokens": 89,
+      "mask_valid": true,
+      "collator_valid": true
+    }
+  ],
+  "input_sha256": {
+    "manifest.json": "219f5a13a85b2b007f2c375149ff7e9d71bb5cd9908b3deaa6f25dac6d35144d",
+    "ban-xem-truoc.json": "ff24e81b26b357ea60ca17aa4682980fd2594fd834ddc14df15544ad321ab5e6"
+  },
+  "code_sha256": {
+    "audit_verifier_preview.py": "bb0a838c88d64b7ff7088e68f4406a6e742f3a6ab8e9406889e0c659d8c51146",
+    "audit_verifier_tokenizer.py": "90bb22dc2f4cb18ac168abe053f2bf87b1e295269b92a42ee3bd666488b42f9b",
+    "verifier_collator.py": "594bf13412567aef5c9439241de5dbdcdb7fbfd7cd3f1cd40c644aaeaa79b478"
+  },
+  "training_ready": false,
+  "no_model_forward_or_updates": true,
+  "runtime_changed": false,
+  "limitations": [
+    "Token/mask/parser đúng không chứng minh nhãn AI đúng hoặc độc lập ngữ nghĩa.",
+    "Không truncate; bản vượt 2048 bị đánh dấu collator_valid=false, chưa tạo bài học."
+  ]
+}

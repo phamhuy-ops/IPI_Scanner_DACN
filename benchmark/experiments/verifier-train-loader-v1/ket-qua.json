@@ -1,0 +1,22 @@
+{
+  "examples": 360,
+  "source_records": 180,
+  "roles_loaded_for_loss": [
+    "train"
+  ],
+  "dev_or_probe_in_features": false,
+  "feature_fields": [
+    "input_ids",
+    "labels"
+  ],
+  "prompt_padding_mask_verified": true,
+  "max_tokens": 1735,
+  "supervised_tokens": 26378,
+  "lock_sha256": "1c79ab451032e8d5bb4bcb0f1d4be78560b9322c8f85c2397dc2f033432b4672",
+  "train_file_sha256": "682e455b58186d66bc002c0c486bf838ed085dd4d9e0db3ee68f73b1a55b2520",
+  "code_sha256": "113dec3101e10b7ce7238e8704bded7105825072dcf74ea7788b2656de027151",
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/verifier_data_loader.py",
+  "model_forward": false,
+  "training_started": false,
+  "training_enabled": false
+}

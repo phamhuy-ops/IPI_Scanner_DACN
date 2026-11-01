@@ -1,0 +1,58 @@
+﻿{
+    "model-calls.json":  {
+                             "bytes":  214157,
+                             "sha256":  "ed092a26dc5abced690a6a13e185ce8f80f999acb9334564eae89718727b7609"
+                         },
+    "case-04.txt":  {
+                        "bytes":  133,
+                        "sha256":  "6b29631516b748e4a1ee43920d01c0030f948a85bd0a8db020ed037f26fd229f"
+                    },
+    "case-01.txt":  {
+                        "bytes":  588,
+                        "sha256":  "142c1a59d4c1c48d892f1b5a0cbac5468b63cb55c673de741aa7fc4b39b2fcfe"
+                    },
+    "case-06.txt":  {
+                        "bytes":  106,
+                        "sha256":  "30af937ff97998662437b6aeedc742c84db7facf0225383a1de79cd7013a23fa"
+                    },
+    "case-03.txt":  {
+                        "bytes":  70,
+                        "sha256":  "b6cf4ab420655cbe1918da0a9d12585064715a21df108999b6939507b53e972e"
+                    },
+    "case-09.md":  {
+                       "bytes":  206,
+                       "sha256":  "88fddc28b622f7c93e0dc36cadf8f0689917c57ddf950f7691fbfb16681d15f9"
+                   },
+    "manifest.json":  {
+                          "bytes":  10283,
+                          "sha256":  "885eddd7f4d8d040883aff704cbb818f40b0f7dccc2f44b8cb5b94bd97dd176e"
+                      },
+    "case-02.txt":  {
+                        "bytes":  794,
+                        "sha256":  "4af9602afa04af497ee2991dda0845a83aa3eb71e370ceb2c345b26a7e4f993b"
+                    },
+    "cases.json":  {
+                       "bytes":  116013,
+                       "sha256":  "111d9b00c64b707fbc9779c519b078bf62cc92c81f96a37d54e723716bb4eacf"
+                   },
+    "case-08.md":  {
+                       "bytes":  333,
+                       "sha256":  "a125d89fa070a80a52976d902e379cc9135649696dfa355c430b3d0f41a6ba20"
+                   },
+    "summary.json":  {
+                         "bytes":  9794,
+                         "sha256":  "ad368343bb2aa96365c6450ba55502a96855fdb8d7ab13d617aac9c212c7559a"
+                     },
+    "case-07.md":  {
+                       "bytes":  1560,
+                       "sha256":  "f86b5ef8602f1bf165f761f3fe77f7471fa7b754c91f923729ebd6a62fcaf99c"
+                   },
+    "case-05.txt":  {
+                        "bytes":  311,
+                        "sha256":  "2a1515690e8e7b12d44bec109a8c1c043edf179d985d6fe79ab1c5c693b36c69"
+                    },
+    "case-10.html":  {
+                         "bytes":  277,
+                         "sha256":  "de735d4cb191ccc801bbe00fd6524038ac8388e3f8a992ea9c54b23acb5ae010"
+                     }
+}

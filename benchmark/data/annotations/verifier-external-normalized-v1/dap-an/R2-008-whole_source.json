@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-3",
+      "stance": "dismissed",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Câu hỏi kỹ thuật về xử lý timeout sau commit, không có lệnh vô hiệu hóa thời hạn hoặc chuyển hướng hệ thống."
+    }
+  ],
+  "discoveries": []
+}

@@ -1,0 +1,683 @@
+{
+  "created_at": "2026-10-26T02:19:50.354Z",
+  "input": {
+    "path": "benchmark/experiments/public-vi-native-intake-v1/ket-qua.json",
+    "sha256": "61a3ccfde0baf90d1e236e01069a9fce22f167555a133c389b0bec88e266a6b0"
+  },
+  "script_sha256": "6fe89ca3345d1ad87ffac4744581c700aef86fbf306a132bf20611151e106cb0",
+  "code_sha256": {
+    "engine/scanner/ipi-doc-scan.js": "081de66fbc0b4eabca3d7a612465f1163e5781422b14cb8ab2a849f042586048",
+    "engine/document/extractors/document-text-extractor.js": "e94e5733f3902947e5e410ef272354b0caf212c10111e59d227e0ac4d7224697",
+    "engine/document/chunking/semantic-chunker.js": "12f3d701a1af78a1e77f47d035b1804f0b198e56f45d24986b524390c9a154e2",
+    "engine/config/document-scan-config.js": "1baef48fce0a80997085062a8d796720897a1d4d04316f6a8d244cfee8df5214"
+  },
+  "records": [
+    {
+      "id": "vi-native-001",
+      "parent_id": "hanoi-school-portal-guide",
+      "sha256": "6e302b824b22c61cbf8dc5cf7f459e1ee643c7f46c85ac53efec71cfcedbdaf6",
+      "text_sha256": "5da692645dfa2b59fa5bef094830551879c0bf86e30b7edb149b790a0b546c98",
+      "extraction_matches_previous_snapshot": true,
+      "characters_utf16": 68317,
+      "flags": {
+        "email_matches": 3,
+        "phone_like_matches": 0,
+        "credential_word_matches": 42,
+        "replacement_characters": 0,
+        "unexpected_controls": 0
+      },
+      "structure": {
+        "pages": [
+          {
+            "page": 1,
+            "characters_utf16": 1
+          },
+          {
+            "page": 2,
+            "characters_utf16": 3854
+          },
+          {
+            "page": 3,
+            "characters_utf16": 4035
+          },
+          {
+            "page": 4,
+            "characters_utf16": 1022
+          },
+          {
+            "page": 5,
+            "characters_utf16": 1922
+          },
+          {
+            "page": 6,
+            "characters_utf16": 2035
+          },
+          {
+            "page": 7,
+            "characters_utf16": 726
+          },
+          {
+            "page": 8,
+            "characters_utf16": 1307
+          },
+          {
+            "page": 9,
+            "characters_utf16": 1237
+          },
+          {
+            "page": 10,
+            "characters_utf16": 858
+          },
+          {
+            "page": 11,
+            "characters_utf16": 423
+          },
+          {
+            "page": 12,
+            "characters_utf16": 997
+          },
+          {
+            "page": 13,
+            "characters_utf16": 1183
+          },
+          {
+            "page": 14,
+            "characters_utf16": 983
+          },
+          {
+            "page": 15,
+            "characters_utf16": 1363
+          },
+          {
+            "page": 16,
+            "characters_utf16": 1690
+          },
+          {
+            "page": 17,
+            "characters_utf16": 374
+          },
+          {
+            "page": 18,
+            "characters_utf16": 270
+          },
+          {
+            "page": 19,
+            "characters_utf16": 583
+          },
+          {
+            "page": 20,
+            "characters_utf16": 1006
+          },
+          {
+            "page": 21,
+            "characters_utf16": 189
+          },
+          {
+            "page": 22,
+            "characters_utf16": 750
+          },
+          {
+            "page": 23,
+            "characters_utf16": 372
+          },
+          {
+            "page": 24,
+            "characters_utf16": 2597
+          },
+          {
+            "page": 25,
+            "characters_utf16": 1640
+          },
+          {
+            "page": 26,
+            "characters_utf16": 1816
+          },
+          {
+            "page": 27,
+            "characters_utf16": 795
+          },
+          {
+            "page": 28,
+            "characters_utf16": 1400
+          },
+          {
+            "page": 29,
+            "characters_utf16": 1016
+          },
+          {
+            "page": 30,
+            "characters_utf16": 1145
+          },
+          {
+            "page": 31,
+            "characters_utf16": 653
+          },
+          {
+            "page": 32,
+            "characters_utf16": 930
+          },
+          {
+            "page": 33,
+            "characters_utf16": 822
+          },
+          {
+            "page": 34,
+            "characters_utf16": 576
+          },
+          {
+            "page": 35,
+            "characters_utf16": 911
+          },
+          {
+            "page": 36,
+            "characters_utf16": 1112
+          },
+          {
+            "page": 37,
+            "characters_utf16": 1108
+          },
+          {
+            "page": 38,
+            "characters_utf16": 703
+          },
+          {
+            "page": 39,
+            "characters_utf16": 689
+          },
+          {
+            "page": 40,
+            "characters_utf16": 1012
+          },
+          {
+            "page": 41,
+            "characters_utf16": 731
+          },
+          {
+            "page": 42,
+            "characters_utf16": 453
+          },
+          {
+            "page": 43,
+            "characters_utf16": 1662
+          },
+          {
+            "page": 44,
+            "characters_utf16": 1233
+          },
+          {
+            "page": 45,
+            "characters_utf16": 622
+          },
+          {
+            "page": 46,
+            "characters_utf16": 1136
+          },
+          {
+            "page": 47,
+            "characters_utf16": 1286
+          },
+          {
+            "page": 48,
+            "characters_utf16": 635
+          },
+          {
+            "page": 49,
+            "characters_utf16": 125
+          },
+          {
+            "page": 50,
+            "characters_utf16": 1285
+          },
+          {
+            "page": 51,
+            "characters_utf16": 869
+          },
+          {
+            "page": 52,
+            "characters_utf16": 512
+          },
+          {
+            "page": 53,
+            "characters_utf16": 1142
+          },
+          {
+            "page": 54,
+            "characters_utf16": 663
+          },
+          {
+            "page": 55,
+            "characters_utf16": 1178
+          },
+          {
+            "page": 56,
+            "characters_utf16": 221
+          },
+          {
+            "page": 57,
+            "characters_utf16": 1095
+          },
+          {
+            "page": 58,
+            "characters_utf16": 881
+          },
+          {
+            "page": 59,
+            "characters_utf16": 958
+          },
+          {
+            "page": 60,
+            "characters_utf16": 612
+          },
+          {
+            "page": 61,
+            "characters_utf16": 1671
+          },
+          {
+            "page": 62,
+            "characters_utf16": 2117
+          },
+          {
+            "page": 63,
+            "characters_utf16": 0
+          }
+        ],
+        "visual_and_metadata_content_review": "pending"
+      },
+      "scans": [
+        {
+          "requested_profile": "balanced",
+          "coverage": {
+            "mode": "hybrid-priority-sampling",
+            "scanProfile": "balanced",
+            "totalChunks": 92,
+            "aiReviewedChunks": 12,
+            "highRiskChunks": 0,
+            "highRiskChunksReviewed": 0,
+            "coverageLimited": true,
+            "maxAiChunks": 12,
+            "detectorBatchSize": 3,
+            "verifierEvidenceCharacters": 7600
+          },
+          "findings": [],
+          "note": "Số được chọn không phải số model đã đọc; chưa gọi Detector/Verifier."
+        },
+        {
+          "requested_profile": "deep",
+          "coverage": {
+            "mode": "hybrid-priority-sampling",
+            "scanProfile": "deep",
+            "totalChunks": 92,
+            "aiReviewedChunks": 24,
+            "highRiskChunks": 0,
+            "highRiskChunksReviewed": 0,
+            "coverageLimited": true,
+            "maxAiChunks": 24,
+            "detectorBatchSize": 3,
+            "verifierEvidenceCharacters": 14000
+          },
+          "findings": [],
+          "note": "Số được chọn không phải số model đã đọc; chưa gọi Detector/Verifier."
+        }
+      ],
+      "elapsed_ms": 2328,
+      "security_label": null,
+      "training_eligible": false,
+      "final_split": null,
+      "privacy_review": "automated_triage_only",
+      "reuse_permission": {
+        "status": "not_verified",
+        "license": null,
+        "note": "Nguồn chính thức/công khai không tự chứng minh quyền dùng lại cho train hoặc phát hành dataset."
+      }
+    },
+    {
+      "id": "vi-native-002",
+      "parent_id": "vast-oms-guide",
+      "sha256": "a0ef25216c3cd800c4fb2f222e84e601d8f4f1010a9b4e7ff456c413f93aa9fe",
+      "text_sha256": "fed62b8bb106740f233a967f877318bc46fa226963749e7e68ab4d82da80999a",
+      "extraction_matches_previous_snapshot": true,
+      "characters_utf16": 11456,
+      "flags": {
+        "email_matches": 2,
+        "phone_like_matches": 0,
+        "credential_word_matches": 18,
+        "replacement_characters": 0,
+        "unexpected_controls": 0
+      },
+      "structure": {
+        "pages": [
+          {
+            "page": 1,
+            "characters_utf16": 568
+          },
+          {
+            "page": 2,
+            "characters_utf16": 936
+          },
+          {
+            "page": 3,
+            "characters_utf16": 737
+          },
+          {
+            "page": 4,
+            "characters_utf16": 329
+          },
+          {
+            "page": 5,
+            "characters_utf16": 435
+          },
+          {
+            "page": 6,
+            "characters_utf16": 603
+          },
+          {
+            "page": 7,
+            "characters_utf16": 282
+          },
+          {
+            "page": 8,
+            "characters_utf16": 619
+          },
+          {
+            "page": 9,
+            "characters_utf16": 221
+          },
+          {
+            "page": 10,
+            "characters_utf16": 118
+          },
+          {
+            "page": 11,
+            "characters_utf16": 1055
+          },
+          {
+            "page": 12,
+            "characters_utf16": 168
+          },
+          {
+            "page": 13,
+            "characters_utf16": 191
+          },
+          {
+            "page": 14,
+            "characters_utf16": 200
+          },
+          {
+            "page": 15,
+            "characters_utf16": 1006
+          },
+          {
+            "page": 16,
+            "characters_utf16": 463
+          },
+          {
+            "page": 17,
+            "characters_utf16": 111
+          },
+          {
+            "page": 18,
+            "characters_utf16": 265
+          },
+          {
+            "page": 19,
+            "characters_utf16": 419
+          },
+          {
+            "page": 20,
+            "characters_utf16": 882
+          },
+          {
+            "page": 21,
+            "characters_utf16": 901
+          },
+          {
+            "page": 22,
+            "characters_utf16": 410
+          },
+          {
+            "page": 23,
+            "characters_utf16": 132
+          }
+        ],
+        "visual_and_metadata_content_review": "pending"
+      },
+      "scans": [
+        {
+          "requested_profile": "balanced",
+          "coverage": {
+            "mode": "hybrid-priority-sampling",
+            "scanProfile": "balanced",
+            "totalChunks": 15,
+            "aiReviewedChunks": 12,
+            "highRiskChunks": 0,
+            "highRiskChunksReviewed": 0,
+            "coverageLimited": true,
+            "maxAiChunks": 12,
+            "detectorBatchSize": 3,
+            "verifierEvidenceCharacters": 7600
+          },
+          "findings": [],
+          "note": "Số được chọn không phải số model đã đọc; chưa gọi Detector/Verifier."
+        },
+        {
+          "requested_profile": "deep",
+          "coverage": {
+            "mode": "hybrid-priority-sampling",
+            "scanProfile": "deep",
+            "totalChunks": 15,
+            "aiReviewedChunks": 15,
+            "highRiskChunks": 0,
+            "highRiskChunksReviewed": 0,
+            "coverageLimited": false,
+            "maxAiChunks": 24,
+            "detectorBatchSize": 3,
+            "verifierEvidenceCharacters": 14000
+          },
+          "findings": [],
+          "note": "Số được chọn không phải số model đã đọc; chưa gọi Detector/Verifier."
+        }
+      ],
+      "elapsed_ms": 290,
+      "security_label": null,
+      "training_eligible": false,
+      "final_split": null,
+      "privacy_review": "automated_triage_only",
+      "reuse_permission": {
+        "status": "not_verified",
+        "license": null,
+        "note": "Nguồn chính thức/công khai không tự chứng minh quyền dùng lại cho train hoặc phát hành dataset."
+      }
+    },
+    {
+      "id": "vi-native-003",
+      "parent_id": "phutho-guide-4835",
+      "sha256": "faafd2847ddea591b62d66ff46af10626e7a79b48eff046bf8f47b9d10f2e561",
+      "text_sha256": "432b78f8b0dd4a402bdad91c04458db3f531f4983163bab743fb5e8cdb015600",
+      "extraction_matches_previous_snapshot": true,
+      "characters_utf16": 36605,
+      "flags": {
+        "email_matches": 0,
+        "phone_like_matches": 5,
+        "credential_word_matches": 0,
+        "replacement_characters": 0,
+        "unexpected_controls": 0
+      },
+      "structure": {
+        "media_entries": 56,
+        "embedded_entries": 0,
+        "macro_entries": 0,
+        "comment_parts": 0,
+        "tracked_change_tags": 0,
+        "tables": 0,
+        "metadata_parts": [
+          "docProps/core.xml",
+          "docProps/app.xml"
+        ],
+        "relationship_parts": 6,
+        "visual_and_metadata_content_review": "pending"
+      },
+      "scans": [
+        {
+          "requested_profile": "balanced",
+          "coverage": {
+            "mode": "hybrid-priority-sampling",
+            "scanProfile": "balanced",
+            "totalChunks": 52,
+            "aiReviewedChunks": 12,
+            "highRiskChunks": 0,
+            "highRiskChunksReviewed": 0,
+            "coverageLimited": true,
+            "maxAiChunks": 12,
+            "detectorBatchSize": 3,
+            "verifierEvidenceCharacters": 7600
+          },
+          "findings": [],
+          "note": "Số được chọn không phải số model đã đọc; chưa gọi Detector/Verifier."
+        },
+        {
+          "requested_profile": "deep",
+          "coverage": {
+            "mode": "hybrid-priority-sampling",
+            "scanProfile": "deep",
+            "totalChunks": 52,
+            "aiReviewedChunks": 24,
+            "highRiskChunks": 0,
+            "highRiskChunksReviewed": 0,
+            "coverageLimited": true,
+            "maxAiChunks": 24,
+            "detectorBatchSize": 3,
+            "verifierEvidenceCharacters": 14000
+          },
+          "findings": [],
+          "note": "Số được chọn không phải số model đã đọc; chưa gọi Detector/Verifier."
+        }
+      ],
+      "elapsed_ms": 2238,
+      "security_label": null,
+      "training_eligible": false,
+      "final_split": null,
+      "privacy_review": "automated_triage_only",
+      "reuse_permission": {
+        "status": "not_verified",
+        "license": null,
+        "note": "Nguồn chính thức/công khai không tự chứng minh quyền dùng lại cho train hoặc phát hành dataset."
+      }
+    },
+    {
+      "id": "vi-native-006",
+      "parent_id": "hnue-form-current-student-faculties",
+      "sha256": "9ff6bdcf9d234f603e1371a4958e4b899625ad3e7d8369038099d2189063bfe5",
+      "text_sha256": "10b1d59c71700a63aa3388313189292081188e66f4931327660c7762238bc4b7",
+      "extraction_matches_previous_snapshot": true,
+      "characters_utf16": 1447,
+      "flags": {
+        "email_matches": 0,
+        "phone_like_matches": 0,
+        "credential_word_matches": 0,
+        "replacement_characters": 0,
+        "unexpected_controls": 0
+      },
+      "structure": {
+        "media_entries": 0,
+        "embedded_entries": 0,
+        "macro_entries": 0,
+        "comment_parts": 0,
+        "tracked_change_tags": 0,
+        "tables": 2,
+        "metadata_parts": [
+          "docProps/core.xml",
+          "docProps/app.xml"
+        ],
+        "relationship_parts": 3,
+        "visual_and_metadata_content_review": "pending"
+      },
+      "scans": [
+        {
+          "requested_profile": "balanced",
+          "coverage": {
+            "mode": "hybrid-priority-sampling",
+            "scanProfile": "balanced",
+            "totalChunks": 2,
+            "aiReviewedChunks": 2,
+            "highRiskChunks": 0,
+            "highRiskChunksReviewed": 0,
+            "coverageLimited": false,
+            "maxAiChunks": 12,
+            "detectorBatchSize": 3,
+            "verifierEvidenceCharacters": 7600
+          },
+          "findings": [],
+          "note": "Số được chọn không phải số model đã đọc; chưa gọi Detector/Verifier."
+        },
+        {
+          "requested_profile": "deep",
+          "coverage": {
+            "mode": "hybrid-priority-sampling",
+            "scanProfile": "deep",
+            "totalChunks": 2,
+            "aiReviewedChunks": 2,
+            "highRiskChunks": 0,
+            "highRiskChunksReviewed": 0,
+            "coverageLimited": false,
+            "maxAiChunks": 24,
+            "detectorBatchSize": 3,
+            "verifierEvidenceCharacters": 14000
+          },
+          "findings": [],
+          "note": "Số được chọn không phải số model đã đọc; chưa gọi Detector/Verifier."
+        }
+      ],
+      "elapsed_ms": 39,
+      "security_label": null,
+      "training_eligible": false,
+      "final_split": null,
+      "privacy_review": "automated_triage_only",
+      "reuse_permission": {
+        "status": "not_verified",
+        "license": null,
+        "note": "Mẫu tải công khai chưa chứng minh quyền dùng lại cho train/phát hành dataset."
+      }
+    }
+  ],
+  "combined": [
+    {
+      "requested_profile": "balanced",
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "balanced",
+        "totalChunks": 161,
+        "aiReviewedChunks": 12,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 12,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 7600
+      }
+    },
+    {
+      "requested_profile": "deep",
+      "coverage": {
+        "mode": "hybrid-priority-sampling",
+        "scanProfile": "deep",
+        "totalChunks": 161,
+        "aiReviewedChunks": 24,
+        "highRiskChunks": 0,
+        "highRiskChunksReviewed": 0,
+        "coverageLimited": true,
+        "maxAiChunks": 24,
+        "detectorBatchSize": 3,
+        "verifierEvidenceCharacters": 14000
+      }
+    }
+  ],
+  "model_called": false,
+  "runtime_changed": false,
+  "priority_one_complete": false,
+  "limits": [
+    "Chưa kiểm tra ảnh, thứ tự đọc và metadata bằng mắt.",
+    "Regex riêng tư chỉ gắn cờ, không xác nhận an toàn.",
+    "Chưa xác minh quyền train/tái phân phối.",
+    "Chưa gán nhãn hoặc đo chất lượng nhận diện toàn pipeline."
+  ]
+}

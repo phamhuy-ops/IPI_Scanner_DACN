@@ -1,0 +1,3994 @@
+{
+  "groups": [
+    {
+      "id": "vg-cf1015b79e6c53a6",
+      "members": [
+        "ngu-canh-v1:ann-001",
+        "ngu-canh-v1:ann-011"
+      ],
+      "size": 2,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e1ddb648598cd5e8",
+      "members": [
+        "ngu-canh-v1:ann-002"
+      ],
+      "size": 1,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bbb7f7ef78c5dc3f",
+      "members": [
+        "ngu-canh-v1:ann-003"
+      ],
+      "size": 1,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-701c0c950aded545",
+      "members": [
+        "ngu-canh-v1:ann-004",
+        "ngu-canh-v1:ann-006"
+      ],
+      "size": 2,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2f71f6d4ee6dc21b",
+      "members": [
+        "ngu-canh-v1:ann-005",
+        "ngu-canh-v1:ann-010",
+        "exp-realistic-0003-ac5e12d0"
+      ],
+      "size": 3,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-971d4fcca8fcfc3d",
+      "members": [
+        "ngu-canh-v1:ann-007",
+        "ngu-canh-v1:ann-008"
+      ],
+      "size": 2,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-fc7e8db469dae88a",
+      "members": [
+        "ngu-canh-v1:ann-009",
+        "exp-notinject-0095-e139b29e"
+      ],
+      "size": 2,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c5966c508b70dee5",
+      "members": [
+        "ngu-canh-v1:ann-012"
+      ],
+      "size": 1,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-36097b47d864c871",
+      "members": [
+        "ngu-canh-v1:ann-013",
+        "ngu-canh-v1:ann-014"
+      ],
+      "size": 2,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-4fa84c44e6234bb0",
+      "members": [
+        "ngu-canh-v1:ann-015",
+        "ngu-canh-v1:ann-016"
+      ],
+      "size": 2,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-31190bbccd784a0d",
+      "members": [
+        "ngu-canh-v1:ann-017",
+        "ngu-canh-v1:ann-018"
+      ],
+      "size": 2,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-56136e9f9b429d0c",
+      "members": [
+        "ngu-canh-v1:ann-019",
+        "ngu-canh-v1:ann-020"
+      ],
+      "size": 2,
+      "proposed_role": "reference_only",
+      "contains_legacy": true,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ce256043dd384b88",
+      "members": [
+        "verifier-batch-v1:vf-001",
+        "verifier-batch-v1:vf-003",
+        "verifier-batch-v1:vf-021"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-638d002da68aaf62",
+      "members": [
+        "verifier-batch-v1:vf-002",
+        "verifier-batch-v1:vf-025",
+        "verifier-batch-v1:vf-027"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-8e8edd4fcd66d965",
+      "members": [
+        "verifier-batch-v1:vf-004",
+        "verifier-batch-v1:vf-008",
+        "verifier-batch-v1:vf-026"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-fb8888e1263bc9c8",
+      "members": [
+        "verifier-batch-v1:vf-005",
+        "verifier-batch-v1:vf-019",
+        "verifier-batch-v1:vf-028"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-836dea35b0ff539e",
+      "members": [
+        "verifier-batch-v1:vf-006",
+        "verifier-batch-v1:vf-017",
+        "verifier-batch-v1:vf-030"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-1079873a7affe64f",
+      "members": [
+        "verifier-batch-v1:vf-007",
+        "verifier-batch-v1:vf-018",
+        "verifier-batch-v1:vf-020"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-c1ef7e09f8da7ba7",
+      "members": [
+        "verifier-batch-v1:vf-009",
+        "verifier-batch-v1:vf-010",
+        "verifier-batch-v1:vf-014"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-ee109dce99feb060",
+      "members": [
+        "verifier-batch-v1:vf-011",
+        "verifier-batch-v1:vf-013",
+        "verifier-batch-v1:vf-016"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-3207bd7a1429948e",
+      "members": [
+        "verifier-batch-v1:vf-012",
+        "verifier-batch-v1:vf-015",
+        "verifier-batch-v1:vf-023"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-5a460361055d1d86",
+      "members": [
+        "verifier-batch-v1:vf-022",
+        "verifier-batch-v1:vf-024",
+        "verifier-batch-v1:vf-029"
+      ],
+      "size": 3,
+      "proposed_role": "dev_regression_only",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": true
+    },
+    {
+      "id": "vg-fca099c9e18c9f15",
+      "members": [
+        "exp-notinject-0001-0b4d3c64"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-cca889a373b28bd3",
+      "members": [
+        "exp-notinject-0002-62801def"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-76e84f842e7078b7",
+      "members": [
+        "exp-notinject-0003-b34c3947"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f76a72dd506afc03",
+      "members": [
+        "exp-notinject-0004-af9c0478"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7d81e912f296c7ff",
+      "members": [
+        "exp-notinject-0005-68d58360"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-56570655b4d03381",
+      "members": [
+        "exp-notinject-0006-ed04bb52"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f197d213e07185ab",
+      "members": [
+        "exp-notinject-0007-5478a17e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ea259c500c1c45fd",
+      "members": [
+        "exp-notinject-0008-feff7392"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9b284d713975af97",
+      "members": [
+        "exp-notinject-0009-4526a3a0"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7bd4a4841c2e7cc4",
+      "members": [
+        "exp-notinject-0010-7964e493"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-42bdeaab89968302",
+      "members": [
+        "exp-notinject-0011-3ca07106"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d805ac07fb3ac787",
+      "members": [
+        "exp-notinject-0012-fd0dff3e"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b80fe25c64c8b283",
+      "members": [
+        "exp-notinject-0013-60c755f9"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b887401254eea2eb",
+      "members": [
+        "exp-notinject-0014-2a723966"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-eab1645ecdf82ac6",
+      "members": [
+        "exp-notinject-0015-58e5b47a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-50f3c4f27d7404a4",
+      "members": [
+        "exp-notinject-0016-6888d6e9"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f563010b2972d269",
+      "members": [
+        "exp-notinject-0017-a030a386"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bf3993b130d43a16",
+      "members": [
+        "exp-notinject-0018-342d5285"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d4099aee046401f3",
+      "members": [
+        "exp-notinject-0019-ff2b6d37"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-34a89b6160a478f0",
+      "members": [
+        "exp-notinject-0020-bb2123a3"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-aceba4812a119755",
+      "members": [
+        "exp-notinject-0021-e4491497"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bce2a2642198ea0e",
+      "members": [
+        "exp-notinject-0022-05a676c5"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bf7b79699ed4ad0c",
+      "members": [
+        "exp-notinject-0023-d476b735"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-823e28b77b06a741",
+      "members": [
+        "exp-notinject-0024-47e46d11"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-cf688086e9f2a3cd",
+      "members": [
+        "exp-notinject-0025-1f753942"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-0b177f9eebe761df",
+      "members": [
+        "exp-notinject-0026-4230efee"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bcc5b5371fd66c14",
+      "members": [
+        "exp-notinject-0027-657b19eb"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9cf6f638e902d453",
+      "members": [
+        "exp-notinject-0028-9b3f21ca"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c663c6e4a84a6324",
+      "members": [
+        "exp-notinject-0029-697fbc5b"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-5bcf11e7eed81b53",
+      "members": [
+        "exp-notinject-0030-33f4126d"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3d22837daa6ad74a",
+      "members": [
+        "exp-notinject-0031-2ee934e9"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-412b4073ed65ceb4",
+      "members": [
+        "exp-notinject-0032-b3611fe9"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b92d1c37225b37da",
+      "members": [
+        "exp-notinject-0033-e164eb79"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-010d086f386e778e",
+      "members": [
+        "exp-notinject-0034-62eb0307"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f2aee6d64aec321a",
+      "members": [
+        "exp-notinject-0035-7dc8c5de"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-00528a4d1df72e9b",
+      "members": [
+        "exp-notinject-0036-ad00e1fa"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-80e6acd6c1dac643",
+      "members": [
+        "exp-notinject-0037-984c2e08"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-eaa0f2ed6dd54fcb",
+      "members": [
+        "exp-notinject-0038-ea077955"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b8bf5576e0916ba8",
+      "members": [
+        "exp-notinject-0039-d3428407"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-511403ebe509d8df",
+      "members": [
+        "exp-notinject-0040-ef900f18"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-957abb2c7d027bba",
+      "members": [
+        "exp-notinject-0041-7fe5537c"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-4cc3b9fe22d6bc86",
+      "members": [
+        "exp-notinject-0042-7c6651c9"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-955da455bf2a58ad",
+      "members": [
+        "exp-notinject-0043-970963c1"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f4c9b9ce1936b8a2",
+      "members": [
+        "exp-notinject-0044-0c9b6c5a"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-210f68cce5eef75f",
+      "members": [
+        "exp-notinject-0045-3e03b5b0"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f4181dd4477d1736",
+      "members": [
+        "exp-notinject-0046-658ac079"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ee0ecf5dcb5fa50a",
+      "members": [
+        "exp-notinject-0047-d47feaec"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ccdc81aded201275",
+      "members": [
+        "exp-notinject-0048-fc7128fc"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8fb6d55239951d31",
+      "members": [
+        "exp-notinject-0049-70792c30"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-50e4b153cfcbad8d",
+      "members": [
+        "exp-notinject-0050-da315011"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9e9630ff5cd77585",
+      "members": [
+        "exp-notinject-0051-2842644e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-82cd36f51e9f7eed",
+      "members": [
+        "exp-notinject-0052-f444da81"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8bf71a940cad7404",
+      "members": [
+        "exp-notinject-0053-c8f97d64"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-02410bca83e27a79",
+      "members": [
+        "exp-notinject-0054-448f6b77"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8a1ac09e626654ec",
+      "members": [
+        "exp-notinject-0055-fa8e0cb1"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-09f4a5983c87169f",
+      "members": [
+        "exp-notinject-0056-c819db1f"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-24c0cee9e5461451",
+      "members": [
+        "exp-notinject-0057-b5e6f870"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bde27ff646e5e1c8",
+      "members": [
+        "exp-notinject-0058-a1fbec09"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-fa7dd4524152cefd",
+      "members": [
+        "exp-notinject-0059-243abe44"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9036e155e2b519e8",
+      "members": [
+        "exp-notinject-0060-ac0984af"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b783f12ffd1d6a26",
+      "members": [
+        "exp-notinject-0061-2bfebb0a"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d0ad77f292a2d8ad",
+      "members": [
+        "exp-notinject-0062-ade75425"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8abb92a38d30ea51",
+      "members": [
+        "exp-notinject-0063-b4d402e9"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3a0117f80f96022a",
+      "members": [
+        "exp-notinject-0064-1e00d161"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-0ae801515ebe5c95",
+      "members": [
+        "exp-notinject-0065-3f0af1cf"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-21a6a66050bd16c3",
+      "members": [
+        "exp-notinject-0066-61735a6d"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-31800606e376d429",
+      "members": [
+        "exp-notinject-0067-3d7a1d86"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8550d26d2f32db3a",
+      "members": [
+        "exp-notinject-0068-6f96a4d3"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e8516f85bbf205d2",
+      "members": [
+        "exp-notinject-0069-e2b4eb98"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-4f3b899882e56113",
+      "members": [
+        "exp-notinject-0070-4cc163ae"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f0c706fa0ba89b5b",
+      "members": [
+        "exp-notinject-0071-e5abae5c"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-15e36180f76dc23f",
+      "members": [
+        "exp-notinject-0072-5a896008"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-771eaeb0b1afe6ef",
+      "members": [
+        "exp-notinject-0073-16cc1b4e"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f23014d2a3d68610",
+      "members": [
+        "exp-notinject-0074-9e918b74"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-742f0d43f62a1fa5",
+      "members": [
+        "exp-notinject-0075-8fbf566b"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9f7bde375d5b5246",
+      "members": [
+        "exp-notinject-0076-d591643e"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-32c091ad55c0bd84",
+      "members": [
+        "exp-notinject-0077-e4647c1b"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-547ad0a095794aec",
+      "members": [
+        "exp-notinject-0078-b34b6dfd"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3605853ef90db065",
+      "members": [
+        "exp-notinject-0079-d3f07210"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bdf806c07d8a8d5d",
+      "members": [
+        "exp-notinject-0080-d0c55f8a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-45a4da2bc53334c3",
+      "members": [
+        "exp-notinject-0081-420e08d0"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-22629f898f83399a",
+      "members": [
+        "exp-notinject-0082-65983a60"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-084a943899024a5b",
+      "members": [
+        "exp-notinject-0083-c40adfb8"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-81cfd5f7955c891f",
+      "members": [
+        "exp-notinject-0084-1d47662e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-71d430fb29150013",
+      "members": [
+        "exp-notinject-0085-8b2e3edd"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-a2e62648e9036d04",
+      "members": [
+        "exp-notinject-0086-ff305e2c"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-1171c2471b87dd89",
+      "members": [
+        "exp-notinject-0087-09afbc9c"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-5c046e4568b2553c",
+      "members": [
+        "exp-notinject-0088-919dbc9e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e32f72d7a585b202",
+      "members": [
+        "exp-notinject-0089-ce0d91ce"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-10a9700460ea74ff",
+      "members": [
+        "exp-notinject-0090-25d5d09c"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-963e14e293c58f9d",
+      "members": [
+        "exp-notinject-0091-c7e9267e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ce1e1bd47f4e237c",
+      "members": [
+        "exp-notinject-0092-590a7f58"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d839f2913d8ab9c5",
+      "members": [
+        "exp-notinject-0093-c42f071d"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-fff79536ded2122c",
+      "members": [
+        "exp-notinject-0094-1fc50376"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8dfff29345cec526",
+      "members": [
+        "exp-notinject-0096-592802d0"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-4f155465469f90fe",
+      "members": [
+        "exp-notinject-0097-394af4ef"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8c4596310d6e3e34",
+      "members": [
+        "exp-notinject-0098-001ee481"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e6e814e50cde0f16",
+      "members": [
+        "exp-notinject-0099-64dc098a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-09cf2210c3242306",
+      "members": [
+        "exp-notinject-0100-f6ae697f"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-056e5631b9a97f0a",
+      "members": [
+        "exp-notinject-0101-fed2eabd"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ca241f3f8a80f584",
+      "members": [
+        "exp-notinject-0102-b01c35db"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b486ce2a4b66cc04",
+      "members": [
+        "exp-notinject-0103-3178365b"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-554d61d0084d0371",
+      "members": [
+        "exp-notinject-0104-f71605dc"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-5dddef4c31d5c48e",
+      "members": [
+        "exp-notinject-0105-3cdb8fc3"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-630f93ab648eaf8b",
+      "members": [
+        "exp-notinject-0106-e91a885a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-4840dc43a57b3c0e",
+      "members": [
+        "exp-notinject-0107-11dd2d6a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-16c8ec15338da05b",
+      "members": [
+        "exp-notinject-0108-822731a6"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b5ff258580df6a40",
+      "members": [
+        "exp-notinject-0109-4542851a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-57f10d7c30a50eaa",
+      "members": [
+        "exp-notinject-0110-9e53e31e"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e6f91df85b6dfd12",
+      "members": [
+        "exp-notinject-0111-b1d89bdc"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bec1f2fa7babd9c0",
+      "members": [
+        "exp-notinject-0112-0da520cf"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-102989b784b4adf4",
+      "members": [
+        "exp-notinject-0113-c63ea510"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9d6fe7ef0fb4d525",
+      "members": [
+        "exp-notinject-0001-2fbf0fa0"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e4b10881ad36dd43",
+      "members": [
+        "exp-notinject-0002-9ba56957"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2f2b5298e3234d4b",
+      "members": [
+        "exp-notinject-0003-1e7f32b7"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2cddcb05ce4b9148",
+      "members": [
+        "exp-notinject-0004-97e2def5"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-96c24958e92935cb",
+      "members": [
+        "exp-notinject-0005-3ba0c8b8"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-6e3587ec65a86dea",
+      "members": [
+        "exp-notinject-0006-b9f731e4"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ee00e70d9ad8f0b6",
+      "members": [
+        "exp-notinject-0007-bfdd75dc"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c9eaf61f0894a33c",
+      "members": [
+        "exp-notinject-0008-18b7ec12"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-46f0d78f4c7d2e13",
+      "members": [
+        "exp-notinject-0009-3ae820bf"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3018f32be449e3bf",
+      "members": [
+        "exp-notinject-0010-1e8cc338"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c693df0cb69381ec",
+      "members": [
+        "exp-notinject-0011-79a591f6"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-04e86f42da638b4c",
+      "members": [
+        "exp-notinject-0012-ec669974"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bbdc09284117f134",
+      "members": [
+        "exp-notinject-0013-cca74109"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9ff7261003ede590",
+      "members": [
+        "exp-notinject-0014-c9e88042"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-1350811bbe4c32c5",
+      "members": [
+        "exp-notinject-0015-16e40f68"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c48fe98e0a27242a",
+      "members": [
+        "exp-notinject-0016-606337cd"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-6bb58a0d887efa0d",
+      "members": [
+        "exp-notinject-0017-d0bb4469"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-a08ef3bf431c6bb1",
+      "members": [
+        "exp-notinject-0018-d01b8fa8"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8358cb781fca3ff0",
+      "members": [
+        "exp-notinject-0019-2a7413a3"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-cab65f5c167c6283",
+      "members": [
+        "exp-notinject-0020-d2c76a37"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ee6f08d121451ef3",
+      "members": [
+        "exp-notinject-0021-6e9c11c9"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c6f26f27791b5ebb",
+      "members": [
+        "exp-notinject-0022-c5fe9e55"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c62e17f8720d49f2",
+      "members": [
+        "exp-notinject-0023-9afd9588"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-540b00c11022384e",
+      "members": [
+        "exp-notinject-0024-208aef27"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b3ea90ac1a87a3ee",
+      "members": [
+        "exp-notinject-0025-7021dd1d"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-00321def901dd078",
+      "members": [
+        "exp-notinject-0026-3636a18c"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3736dbbb6cd99f09",
+      "members": [
+        "exp-notinject-0027-c8b72e3b"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-933f90a3f2e448f3",
+      "members": [
+        "exp-notinject-0028-98412e25"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ede0e3607e3dc4e4",
+      "members": [
+        "exp-notinject-0029-42c54e7b"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-70e55fd099c65e7f",
+      "members": [
+        "exp-notinject-0030-2b844e54"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-51f8f3bb57250c26",
+      "members": [
+        "exp-notinject-0031-3ae8914c"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-cfc3451d750491da",
+      "members": [
+        "exp-notinject-0032-89f50c10"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-033643bd79e228c8",
+      "members": [
+        "exp-notinject-0033-463c34f3"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-6d7bfefed9cfadf0",
+      "members": [
+        "exp-notinject-0034-4f60710f"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c80f6d0a14e0aa17",
+      "members": [
+        "exp-notinject-0035-ec757ff0"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-259d6e1959d71d48",
+      "members": [
+        "exp-notinject-0036-a6c3d72c"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-721705a7eac9f255",
+      "members": [
+        "exp-notinject-0037-e41838c6"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-16a51c2e4590a58e",
+      "members": [
+        "exp-notinject-0038-d875b305"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-fb7e244231621343",
+      "members": [
+        "exp-notinject-0039-9ca802c8"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-486725e6669cc7f7",
+      "members": [
+        "exp-notinject-0040-ff072ef1"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-6fb6dbd105239363",
+      "members": [
+        "exp-notinject-0041-66f22683"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8e17fe7556bbcfaf",
+      "members": [
+        "exp-notinject-0042-810d086e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-41fe1889aad75b08",
+      "members": [
+        "exp-notinject-0043-3751576a"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d90f1488d83b7540",
+      "members": [
+        "exp-notinject-0044-9ff9aaf1"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2c3cc1c6f4cfd563",
+      "members": [
+        "exp-notinject-0045-13763502"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b8fd2911ed85eca4",
+      "members": [
+        "exp-notinject-0046-68e25ca0"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2e99d88816d3b688",
+      "members": [
+        "exp-notinject-0047-eddd23c4"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3aa4f0cf4a24d5fe",
+      "members": [
+        "exp-notinject-0048-db6a599b"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-cb6e9ed1a0e032a3",
+      "members": [
+        "exp-notinject-0049-3af2aaf2"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-589775afc65de339",
+      "members": [
+        "exp-notinject-0050-050ce5bf"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f01182bda458d92d",
+      "members": [
+        "exp-notinject-0051-7ac63a31"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d51cd88d0b3791f3",
+      "members": [
+        "exp-notinject-0052-976ff7da"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-57d824c1ae781c4f",
+      "members": [
+        "exp-notinject-0053-3a7e494c"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7685c785b13658aa",
+      "members": [
+        "exp-notinject-0054-d4de9ddc"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-273e9d6508af4ba3",
+      "members": [
+        "exp-notinject-0055-922f3b20"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-03ccb899044b71c2",
+      "members": [
+        "exp-notinject-0056-1d019692"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-98bf8ac5d25f673e",
+      "members": [
+        "exp-notinject-0057-30a5b950"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-88c56ef01b8c8f3b",
+      "members": [
+        "exp-notinject-0058-75054f56"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ba89a4f9f37a17e9",
+      "members": [
+        "exp-notinject-0059-2f576d67"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-cd5cc61185a64ba7",
+      "members": [
+        "exp-notinject-0060-3131cc4e"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-6a7b9776bbccb615",
+      "members": [
+        "exp-notinject-0061-f66d8fa4"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-07c1104d472204db",
+      "members": [
+        "exp-notinject-0062-4663a6ad"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-62f82c94f8ebb693",
+      "members": [
+        "exp-notinject-0063-ec823619"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-5d0e064892d1e6b2",
+      "members": [
+        "exp-notinject-0064-f18489bc"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c514a619abdf9e04",
+      "members": [
+        "exp-notinject-0065-f0eb7040"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c7a8f02572b510b5",
+      "members": [
+        "exp-notinject-0066-142d2a7e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-84611103822cc9bb",
+      "members": [
+        "exp-notinject-0067-97df29dd"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-691e579a2e46e04a",
+      "members": [
+        "exp-notinject-0068-6ff23b7f"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8894254df343f1d0",
+      "members": [
+        "exp-notinject-0069-d1bd0ccd"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-78aff835abb34f86",
+      "members": [
+        "exp-notinject-0070-d56e4d71"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-17c42b5c3786aa04",
+      "members": [
+        "exp-notinject-0071-706b1942"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-743566b7d9f14d2d",
+      "members": [
+        "exp-notinject-0072-46f87530"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bf5ef07849a38ecb",
+      "members": [
+        "exp-notinject-0073-65960a01"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9e50f19b032e6175",
+      "members": [
+        "exp-notinject-0074-574b4e1c"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-a477e2d14a797159",
+      "members": [
+        "exp-notinject-0075-038f8327"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ea80a6e9c4ca70bf",
+      "members": [
+        "exp-notinject-0076-dafa64fe"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-5dca996fd4158dc1",
+      "members": [
+        "exp-notinject-0077-d81251b6"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2815248db52e4cb1",
+      "members": [
+        "exp-notinject-0078-92d398a6"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-83b12087dee1644e",
+      "members": [
+        "exp-notinject-0079-5d12f404"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-56ebf5faf0103210",
+      "members": [
+        "exp-notinject-0080-fdb72d43"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-fe912636d42b176b",
+      "members": [
+        "exp-notinject-0081-2c91e9b0"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8bd02f35e7f079c3",
+      "members": [
+        "exp-notinject-0082-58e4c23a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-72574b6a38dcbbd1",
+      "members": [
+        "exp-notinject-0083-e6413d34"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-398b2cbc5ded6fcd",
+      "members": [
+        "exp-notinject-0084-26d48208"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d99253a9e1d8a7d3",
+      "members": [
+        "exp-notinject-0085-09f7f1bd"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e92735fecf4d6263",
+      "members": [
+        "exp-notinject-0086-f93e2385"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d77abc0599ac4da7",
+      "members": [
+        "exp-notinject-0087-4c3d7634"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2788dece154a3c88",
+      "members": [
+        "exp-notinject-0088-9ceb0e63"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-cf4d1156d669f4e1",
+      "members": [
+        "exp-notinject-0089-f7bceae1"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9258820a184f0e94",
+      "members": [
+        "exp-notinject-0090-1952281b"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ce61505bd5c3cd89",
+      "members": [
+        "exp-notinject-0091-4d2a5bfe"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-0fbe8d6ed6ada810",
+      "members": [
+        "exp-notinject-0092-9b771699"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-64a0b4f8d6baf622",
+      "members": [
+        "exp-notinject-0093-5063782e"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-4be37b7b0c509887",
+      "members": [
+        "exp-notinject-0094-868c85c6"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f7e63e4431c77c59",
+      "members": [
+        "exp-notinject-0095-83418303"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e6822194a0a1d7f0",
+      "members": [
+        "exp-notinject-0096-96e03a78"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7431c053f53fc8b5",
+      "members": [
+        "exp-notinject-0097-54f28458"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9014cc382704f28c",
+      "members": [
+        "exp-notinject-0098-37ed954e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-631dd722591e3473",
+      "members": [
+        "exp-notinject-0099-416a9cf6"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e6e6a68823a410d0",
+      "members": [
+        "exp-notinject-0100-4cbd3aa0"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-adc17bbaae6b0871",
+      "members": [
+        "exp-notinject-0101-a6785153"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-edba9915c8fc8947",
+      "members": [
+        "exp-notinject-0102-a0f2ee23"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-58a9f7716bec7551",
+      "members": [
+        "exp-notinject-0103-c8165d51"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d79b901183b9726f",
+      "members": [
+        "exp-notinject-0104-2b7c2ddb"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-71854b00668077ba",
+      "members": [
+        "exp-notinject-0105-75fcd979"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d96be50eb14fe2f3",
+      "members": [
+        "exp-notinject-0106-c98cc7bc"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9336036b99423a1d",
+      "members": [
+        "exp-notinject-0107-40b4ed99"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-5309dc2e677ac2b3",
+      "members": [
+        "exp-notinject-0108-2b080baa"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2801991b3eaab329",
+      "members": [
+        "exp-notinject-0109-08b6f090"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3cecab3a8edd34c5",
+      "members": [
+        "exp-notinject-0110-f5f76f69"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d5172be05ae6700f",
+      "members": [
+        "exp-notinject-0111-fa241907"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c7c1352ced627e07",
+      "members": [
+        "exp-notinject-0112-95abfacc"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e7121697f60207fe",
+      "members": [
+        "exp-notinject-0113-da0c30f7"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d874ca2f40a1661c",
+      "members": [
+        "exp-notinject-0001-3aaf3a3e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-eb9611751c386500",
+      "members": [
+        "exp-notinject-0002-73f8af12"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b93501be8d62338d",
+      "members": [
+        "exp-notinject-0003-5ee69c6d"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-434d1c300ee2a1cc",
+      "members": [
+        "exp-notinject-0004-2c788ef3"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9c64bf9c9b380d80",
+      "members": [
+        "exp-notinject-0005-2abd41ce"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2c674a42d7ea8049",
+      "members": [
+        "exp-notinject-0006-72ef75a6"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-a7025eb28419f80b",
+      "members": [
+        "exp-notinject-0007-9a7d9d5e"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3e3d2b06331230a6",
+      "members": [
+        "exp-notinject-0008-78c74672"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c73ebc27854e611a",
+      "members": [
+        "exp-notinject-0009-66b21730"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2ddb76a011672779",
+      "members": [
+        "exp-notinject-0010-3d4b4d7f"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-059bd35981aef16e",
+      "members": [
+        "exp-notinject-0011-753d9141"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f9b2888ecc5a1cb7",
+      "members": [
+        "exp-notinject-0012-4fcaaec2"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7a4e7c5ca8308385",
+      "members": [
+        "exp-notinject-0013-7e88685f"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d8655ca3974b70de",
+      "members": [
+        "exp-notinject-0014-9f6b1b50"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-0e66f42c6055535e",
+      "members": [
+        "exp-notinject-0015-094f6066"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d687fc2a422fb31b",
+      "members": [
+        "exp-notinject-0016-b4eccffe"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-acdc040054550773",
+      "members": [
+        "exp-notinject-0017-55a9695c"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-15f6bbbd93d6a848",
+      "members": [
+        "exp-notinject-0018-390d495c"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9267166f2d0bc1b0",
+      "members": [
+        "exp-notinject-0019-d3c5ba38"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-fccd6b7168e36422",
+      "members": [
+        "exp-notinject-0020-b61c4248"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-36d17df2ba05f234",
+      "members": [
+        "exp-notinject-0021-18f09955"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f7b0024c96b71325",
+      "members": [
+        "exp-notinject-0022-0cf718e3"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ed043ab0aadf49d2",
+      "members": [
+        "exp-notinject-0023-86c5270b"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-0d77a3a8e6b83b95",
+      "members": [
+        "exp-notinject-0024-9931905f"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-a068538c28853674",
+      "members": [
+        "exp-notinject-0025-f4a0e2c4"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7156f3f8a11bc96d",
+      "members": [
+        "exp-notinject-0026-15d4ed83"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ecd7dcca88f36c4b",
+      "members": [
+        "exp-notinject-0027-cee1d7cd"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7a1fdeb4d14ca814",
+      "members": [
+        "exp-notinject-0028-72312302"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-84fbf1d727cda646",
+      "members": [
+        "exp-notinject-0029-6333934a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7557ca4528a4eca3",
+      "members": [
+        "exp-notinject-0030-664300a3"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7affcb096b876bf1",
+      "members": [
+        "exp-notinject-0031-3a32f3b7"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3051123575a9f42f",
+      "members": [
+        "exp-notinject-0032-f4ad2dc5"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c1fd4910d36e9b62",
+      "members": [
+        "exp-notinject-0033-35dfa1c7"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e358d33f42cb03a4",
+      "members": [
+        "exp-notinject-0034-eac93b6f"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-291b227bbceb4fdc",
+      "members": [
+        "exp-notinject-0035-0e2885ad"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-0cb46eacbed85fbd",
+      "members": [
+        "exp-notinject-0036-ecc70d12"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-aae157c9fedda714",
+      "members": [
+        "exp-notinject-0037-ab286f67"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-409d9e310e4d1632",
+      "members": [
+        "exp-notinject-0038-570f4e37"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d8d52796a19c20fc",
+      "members": [
+        "exp-notinject-0039-44ba4d74"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-a17b54768512df29",
+      "members": [
+        "exp-notinject-0040-003afab6"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ea65fe2e66a9ad63",
+      "members": [
+        "exp-notinject-0041-9a2010cb"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-1ab111e75b28d347",
+      "members": [
+        "exp-notinject-0042-938b6cac"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-281111fa18c719f0",
+      "members": [
+        "exp-notinject-0043-c2c03ff7"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-5a5673409b18705a",
+      "members": [
+        "exp-notinject-0044-a9ee65e4"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-6a2c1dc5dfad5951",
+      "members": [
+        "exp-notinject-0045-63fcc26a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-172d6ffda2966081",
+      "members": [
+        "exp-notinject-0046-990e7221"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c4e6f0bbffd0879e",
+      "members": [
+        "exp-notinject-0047-a142334b"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-9f6b9e1f347ea0bb",
+      "members": [
+        "exp-notinject-0048-8c52ae6e"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-56437d611a03b0b8",
+      "members": [
+        "exp-notinject-0049-3eb4f899"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ea08e6575de2dc13",
+      "members": [
+        "exp-notinject-0050-83c30554"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-76a0f3b389dc112a",
+      "members": [
+        "exp-notinject-0051-a3ff9220"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-49d76987b0acc33c",
+      "members": [
+        "exp-notinject-0052-79bbaf0a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-0b501889fb65186b",
+      "members": [
+        "exp-notinject-0053-2bb42b19"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-77a7586fd4abfd16",
+      "members": [
+        "exp-notinject-0054-79229396"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-fb051422565a9bcb",
+      "members": [
+        "exp-notinject-0055-187d54a6"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b568d8162d36a3eb",
+      "members": [
+        "exp-notinject-0056-c7734e97"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ad678d2a97e6a5b2",
+      "members": [
+        "exp-notinject-0057-db619cbd"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-467f159d1453c1b8",
+      "members": [
+        "exp-notinject-0058-9125d10a"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f23136e05b84f2fa",
+      "members": [
+        "exp-notinject-0059-0560f032"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bfcab82cb3beb0aa",
+      "members": [
+        "exp-notinject-0060-2f6bd687"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-621343405aa31c92",
+      "members": [
+        "exp-notinject-0061-082b236e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-bb383d851a5048c5",
+      "members": [
+        "exp-notinject-0062-0c67903b"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c4f6b13a0fbbdf40",
+      "members": [
+        "exp-notinject-0063-e5db190d"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c9ce1fb19af326d1",
+      "members": [
+        "exp-notinject-0064-cf7efc4c"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-db911a401190fbfc",
+      "members": [
+        "exp-notinject-0065-e4055936"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-664b10b218d9444a",
+      "members": [
+        "exp-notinject-0066-4ebf0c63"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-65eb4b55cbce6c27",
+      "members": [
+        "exp-notinject-0067-a195677d"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-14abb4da03783037",
+      "members": [
+        "exp-notinject-0068-0a7d48a0"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-db0c8e2e2c9cfe40",
+      "members": [
+        "exp-notinject-0069-3ab43f50"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-5fa3cb8201a6ec02",
+      "members": [
+        "exp-notinject-0070-bfb776b2"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-cf7839483440d984",
+      "members": [
+        "exp-notinject-0071-6997f617"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b06ea28e1cbc92f5",
+      "members": [
+        "exp-notinject-0072-001a28c7"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d8e167d2d78e02d8",
+      "members": [
+        "exp-notinject-0073-36ab8f58"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-4bb3910d205e50ad",
+      "members": [
+        "exp-notinject-0074-3bb58483"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7d769a01c73cb06e",
+      "members": [
+        "exp-notinject-0075-52bd77a3"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2b5fcdb27477c581",
+      "members": [
+        "exp-notinject-0076-4ec0e2af"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7b97b0b2b1d5e6bf",
+      "members": [
+        "exp-notinject-0077-eff94663"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2777866f5653900d",
+      "members": [
+        "exp-notinject-0078-3658da61"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-1541922e7b0a79ef",
+      "members": [
+        "exp-notinject-0079-38135b71"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e4a716abe40e5ea1",
+      "members": [
+        "exp-notinject-0080-c7c887c4"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-1b2f01e9c36e32f7",
+      "members": [
+        "exp-notinject-0081-2fd2c620"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-97d24fa66790afc4",
+      "members": [
+        "exp-notinject-0082-7df46095"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-6b644b2540158ff3",
+      "members": [
+        "exp-notinject-0083-97297c67"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e3158eb1ba744fec",
+      "members": [
+        "exp-notinject-0084-ee7f2d41"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-f9edcc31f6c1dcad",
+      "members": [
+        "exp-notinject-0085-d4f09a5f"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-4d9830de04f25f45",
+      "members": [
+        "exp-notinject-0086-e96c5f36"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b895cd2633c5cc5b",
+      "members": [
+        "exp-notinject-0087-c9a7a6c2"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8f098d1530af1d94",
+      "members": [
+        "exp-notinject-0088-a52d7a0f"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-26f6114309ad5af2",
+      "members": [
+        "exp-notinject-0089-41acd75a"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-72330f2e0c0148f3",
+      "members": [
+        "exp-notinject-0090-a0510a4f"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-18524cde01760d07",
+      "members": [
+        "exp-notinject-0091-2bb99eb7"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-10cd324a36ea1fdc",
+      "members": [
+        "exp-notinject-0092-bb54129b"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-689d6075536a5f4b",
+      "members": [
+        "exp-notinject-0093-b227cc85"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2cf2259f8d26844f",
+      "members": [
+        "exp-notinject-0094-06910327"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-4209b3dfe2a485af",
+      "members": [
+        "exp-notinject-0095-1df7be6b"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-8297da197ef70ecb",
+      "members": [
+        "exp-notinject-0096-7a104cbe"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3e6a9a652fedcc91",
+      "members": [
+        "exp-notinject-0097-1614d748"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-495413a1c5992f11",
+      "members": [
+        "exp-notinject-0098-0be1a2e0"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-5f0068fd8beeaec4",
+      "members": [
+        "exp-notinject-0099-5bccc290"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-c88c13dbfdc8fbc2",
+      "members": [
+        "exp-notinject-0100-25c18bc3"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-d4d77e5cbe925c2d",
+      "members": [
+        "exp-notinject-0101-2524b20c"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-931a9bbf18947a06",
+      "members": [
+        "exp-notinject-0102-06c3ca2f"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-19bf4e7d609fe458",
+      "members": [
+        "exp-notinject-0103-2813a367"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-a2ad3c2259199e90",
+      "members": [
+        "exp-notinject-0104-b0dc19d9"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-76d1c06d9c2b4faf",
+      "members": [
+        "exp-notinject-0105-6167b185"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-04314553a675a62d",
+      "members": [
+        "exp-notinject-0106-e362c400"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b6adb635e9f53611",
+      "members": [
+        "exp-notinject-0107-065af649"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b6b414d69a0c4d36",
+      "members": [
+        "exp-notinject-0108-7fb621a9"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-105db7e4ee1502bb",
+      "members": [
+        "exp-notinject-0109-72fef51f"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-4dbe3c494dcb43e0",
+      "members": [
+        "exp-notinject-0110-75bee8f1"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b351f51fb146df03",
+      "members": [
+        "exp-notinject-0111-8124a552"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ca39ae1c04659e5e",
+      "members": [
+        "exp-notinject-0112-7a063726"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-6a4404a5ec83d1b9",
+      "members": [
+        "exp-notinject-0113-76a49d3e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-0a31353e87a6f4c0",
+      "members": [
+        "exp-realistic-0001-5edc3076"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-b0db58d959519e24",
+      "members": [
+        "exp-realistic-0002-f3806686"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-328bca3e12489de1",
+      "members": [
+        "exp-realistic-0004-d9ad3b9c"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-339245f8dac0c846",
+      "members": [
+        "exp-realistic-0005-c58ac027"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ee13a1deb582d7ca",
+      "members": [
+        "exp-realistic-0006-53e0168e"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-84b2b27e52078349",
+      "members": [
+        "exp-realistic-0007-6f8eb908"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-ff6cff3052d9f517",
+      "members": [
+        "exp-realistic-0008-73df88f2"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-0f4e981b60a0868e",
+      "members": [
+        "exp-realistic-0009-24899d30"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-e91ed17929479e18",
+      "members": [
+        "exp-realistic-0010-12f63f21"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-a6e9ebcca0860022",
+      "members": [
+        "exp-realistic-0011-b2c71fb6"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-2a76a1ec1ee5db07",
+      "members": [
+        "exp-realistic-0012-7e24f5e6"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-7ef9d18b2ccde6cc",
+      "members": [
+        "exp-realistic-0013-5e68cad3"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-50b69e69dc3e3cbf",
+      "members": [
+        "exp-realistic-0014-220c66f9"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-80180f4d72d19f64",
+      "members": [
+        "exp-realistic-0015-ce348595"
+      ],
+      "size": 1,
+      "proposed_role": "dev_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-3e2cdfd55d3c6508",
+      "members": [
+        "exp-realistic-0016-b1d1ebf9"
+      ],
+      "size": 1,
+      "proposed_role": "transfer_probe_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    },
+    {
+      "id": "vg-62f19b39c0a3feb0",
+      "members": [
+        "exp-realistic-0017-c4d2e538"
+      ],
+      "size": 1,
+      "proposed_role": "train_candidate",
+      "contains_legacy": false,
+      "contains_reviewed_pilot": false
+    }
+  ],
+  "edges": [
+    {
+      "left": "ngu-canh-v1:ann-004",
+      "right": "ngu-canh-v1:ann-006",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "ngu-canh-v1:ann-007",
+      "right": "ngu-canh-v1:ann-008",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "ngu-canh-v1:ann-005",
+      "right": "ngu-canh-v1:ann-010",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "ngu-canh-v1:ann-001",
+      "right": "ngu-canh-v1:ann-011",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "ngu-canh-v1:ann-013",
+      "right": "ngu-canh-v1:ann-014",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "ngu-canh-v1:ann-015",
+      "right": "ngu-canh-v1:ann-016",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "ngu-canh-v1:ann-017",
+      "right": "ngu-canh-v1:ann-018",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "ngu-canh-v1:ann-017",
+      "right": "ngu-canh-v1:ann-018",
+      "method": "trigram_jaccard",
+      "score": 0.818182
+    },
+    {
+      "left": "ngu-canh-v1:ann-019",
+      "right": "ngu-canh-v1:ann-020",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-001",
+      "right": "verifier-batch-v1:vf-003",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-004",
+      "right": "verifier-batch-v1:vf-008",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-009",
+      "right": "verifier-batch-v1:vf-010",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-011",
+      "right": "verifier-batch-v1:vf-013",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-009",
+      "right": "verifier-batch-v1:vf-014",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-012",
+      "right": "verifier-batch-v1:vf-015",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-011",
+      "right": "verifier-batch-v1:vf-016",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-006",
+      "right": "verifier-batch-v1:vf-017",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-007",
+      "right": "verifier-batch-v1:vf-018",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-005",
+      "right": "verifier-batch-v1:vf-019",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-007",
+      "right": "verifier-batch-v1:vf-020",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-001",
+      "right": "verifier-batch-v1:vf-021",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-012",
+      "right": "verifier-batch-v1:vf-023",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-022",
+      "right": "verifier-batch-v1:vf-024",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-002",
+      "right": "verifier-batch-v1:vf-025",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-004",
+      "right": "verifier-batch-v1:vf-026",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-002",
+      "right": "verifier-batch-v1:vf-027",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-005",
+      "right": "verifier-batch-v1:vf-028",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-022",
+      "right": "verifier-batch-v1:vf-029",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "verifier-batch-v1:vf-006",
+      "right": "verifier-batch-v1:vf-030",
+      "method": "known_family",
+      "score": null
+    },
+    {
+      "left": "ngu-canh-v1:ann-009",
+      "right": "exp-notinject-0095-e139b29e",
+      "method": "normalized_exact",
+      "score": null
+    },
+    {
+      "left": "ngu-canh-v1:ann-009",
+      "right": "exp-notinject-0095-e139b29e",
+      "method": "trigram_jaccard",
+      "score": 1.0
+    },
+    {
+      "left": "ngu-canh-v1:ann-010",
+      "right": "exp-realistic-0003-ac5e12d0",
+      "method": "normalized_exact",
+      "score": null
+    },
+    {
+      "left": "ngu-canh-v1:ann-010",
+      "right": "exp-realistic-0003-ac5e12d0",
+      "method": "trigram_jaccard",
+      "score": 1.0
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Phiếu lịch phòng họp
+Nhân viên lễ tân hãy đối chiếu bản trước với phiếu có chữ ký người tổ chức trước khi cập nhật lịch phòng.
+Phòng B đã được đặt từ 14:00 đến 15:00, bản trước ghi cùng thời gian.
+Mã phòng là B, sức chứa 12 người.

@@ -1,0 +1,38 @@
+﻿{
+    "models-after.json":  {
+                              "bytes":  2001,
+                              "sha256":  "9452fbd15b67b6ac86589f8f343d394a7a6bb3a12cd65759c68a1f9805b8b4ed"
+                          },
+    "models-before.json":  {
+                               "bytes":  2001,
+                               "sha256":  "9452fbd15b67b6ac86589f8f343d394a7a6bb3a12cd65759c68a1f9805b8b4ed"
+                           },
+    "input\\sample.txt":  {
+                              "bytes":  102,
+                              "sha256":  "03828cd4e0726ac578126de63153d324590c5ffbc8631a941580de4213f75f2d"
+                          },
+    "decision.json":  {
+                          "bytes":  2026,
+                          "sha256":  "d492ff3e9162d233046fe342e061331506ff8151a793d8e6fb1758917dc13277"
+                      },
+    "comparison.json":  {
+                            "bytes":  3620,
+                            "sha256":  "a6cdcbf5393a571ba82e29824f575e07af80f7dd74e0fa60d836093095da8d58"
+                        },
+    "plan.json":  {
+                      "bytes":  10429,
+                      "sha256":  "e7a865d6c5cb4cea2cc66ba3d80d860b29fa8aa2efddeae4b465f96611f66d48"
+                  },
+    "summary.json":  {
+                         "bytes":  38144,
+                         "sha256":  "5da0e85cb4165cec8d986d85352b92205fdebd4ac0fa08e23fb12b4901124b76"
+                     },
+    "model-calls.json":  {
+                             "bytes":  454380,
+                             "sha256":  "b3f367a936fbc6c90561d59c59f3e62f1349b0fbd1f31a5aaebdf06dba35b4b4"
+                         },
+    "cases.json":  {
+                       "bytes":  244697,
+                       "sha256":  "ddbc057db9783debce0043fcbaa5535aeef80dc5e284aa34d88de3f0c36dc313"
+                   }
+}

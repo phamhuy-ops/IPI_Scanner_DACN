@@ -1,0 +1,738 @@
+{
+  "scope": "original_compact_task_diagnostic_oracle_not_product",
+  "infer_metrics": {
+    "examples": 12,
+    "parsed": 8,
+    "correct_stance": 4,
+    "tp": 3,
+    "fp": 1,
+    "tn": 0,
+    "false_clear_fn": 0,
+    "confirmed_not_detected_or_unresolved": 1,
+    "parse_or_model_errors": 4,
+    "abstention": 2,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75,
+    "false_positive_rate": 0.25,
+    "binary_decision_coverage": 0.5
+  },
+  "oracle_metrics": {
+    "examples": 12,
+    "parsed": 6,
+    "correct_stance": 4,
+    "tp": 3,
+    "fp": 0,
+    "tn": 0,
+    "false_clear_fn": 0,
+    "confirmed_not_detected_or_unresolved": 1,
+    "parse_or_model_errors": 6,
+    "abstention": 1,
+    "precision": 1,
+    "recall": 0.75,
+    "f1": 0.8571428571428571,
+    "false_positive_rate": 0,
+    "binary_decision_coverage": 0.375
+  },
+  "infer_raw_differences_from_prior": [],
+  "corrected": [
+    "verifier-batch-v1:vf-007-none",
+    "verifier-batch-v1:vf-008-whole_source"
+  ],
+  "regressed": [
+    "verifier-batch-v1:vf-001-none",
+    "verifier-batch-v1:vf-008-none"
+  ],
+  "pairs": [
+    {
+      "id": "verifier-batch-v1:vf-001-whole_source",
+      "group_id": "group-ce256043dd38",
+      "language": "vi",
+      "expected": "confirmed",
+      "infer": {
+        "predicted": "confirmed",
+        "parsed": true,
+        "field_matches": {
+          "addressee": true,
+          "framing": true,
+          "deviation": false,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "oracle": {
+        "predicted": "confirmed",
+        "parsed": true,
+        "field_matches": {
+          "addressee": true,
+          "framing": true,
+          "deviation": true,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "corrected": false,
+      "regressed": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-001-none",
+      "group_id": "group-ce256043dd38",
+      "language": "vi",
+      "expected": "confirmed",
+      "infer": {
+        "predicted": "confirmed",
+        "parsed": true,
+        "field_matches": {
+          "addressee": true,
+          "framing": true,
+          "deviation": false,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "oracle": {
+        "predicted": null,
+        "parsed": false,
+        "field_matches": null,
+        "error": "Invalid model response: Lý do Verifier vượt giới hạn hoặc sai kiểu."
+      },
+      "corrected": false,
+      "regressed": true
+    },
+    {
+      "id": "verifier-batch-v1:vf-002-whole_source",
+      "group_id": "group-638d002da68a",
+      "language": "vi",
+      "expected": "uncertain",
+      "infer": {
+        "predicted": "confirmed",
+        "parsed": true,
+        "field_matches": {
+          "addressee": false,
+          "framing": false,
+          "deviation": false,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "oracle": {
+        "predicted": "confirmed",
+        "parsed": true,
+        "field_matches": {
+          "addressee": false,
+          "framing": false,
+          "deviation": false,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "corrected": false,
+      "regressed": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-002-none",
+      "group_id": "group-638d002da68a",
+      "language": "vi",
+      "expected": "uncertain",
+      "infer": {
+        "predicted": "confirmed",
+        "parsed": true,
+        "field_matches": {
+          "addressee": false,
+          "framing": false,
+          "deviation": false,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "oracle": {
+        "predicted": "dismissed",
+        "parsed": true,
+        "field_matches": null,
+        "error": null
+      },
+      "corrected": false,
+      "regressed": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-003-whole_source",
+      "group_id": "group-ce256043dd38",
+      "language": "vi",
+      "expected": "dismissed",
+      "infer": {
+        "predicted": null,
+        "parsed": false,
+        "field_matches": null,
+        "error": "Invalid model response: Lý do Verifier vượt giới hạn hoặc sai kiểu."
+      },
+      "oracle": {
+        "predicted": null,
+        "parsed": false,
+        "field_matches": null,
+        "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+      },
+      "corrected": false,
+      "regressed": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-003-none",
+      "group_id": "group-ce256043dd38",
+      "language": "vi",
+      "expected": "dismissed",
+      "infer": {
+        "predicted": "confirmed",
+        "parsed": true,
+        "field_matches": {
+          "addressee": false,
+          "framing": true,
+          "deviation": false,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "oracle": {
+        "predicted": null,
+        "parsed": false,
+        "field_matches": null,
+        "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+      },
+      "corrected": false,
+      "regressed": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-004-whole_source",
+      "group_id": "group-8e8edd4fcd66",
+      "language": "en",
+      "expected": "dismissed",
+      "infer": {
+        "predicted": null,
+        "parsed": false,
+        "field_matches": null,
+        "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+      },
+      "oracle": {
+        "predicted": null,
+        "parsed": false,
+        "field_matches": null,
+        "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+      },
+      "corrected": false,
+      "regressed": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-004-none",
+      "group_id": "group-8e8edd4fcd66",
+      "language": "en",
+      "expected": "dismissed",
+      "infer": {
+        "predicted": "uncertain",
+        "parsed": true,
+        "field_matches": {
+          "addressee": false,
+          "framing": true,
+          "deviation": false,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "oracle": {
+        "predicted": null,
+        "parsed": false,
+        "field_matches": null,
+        "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+      },
+      "corrected": false,
+      "regressed": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-007-whole_source",
+      "group_id": "group-1079873a7aff",
+      "language": "en",
+      "expected": "confirmed",
+      "infer": {
+        "predicted": "confirmed",
+        "parsed": true,
+        "field_matches": {
+          "addressee": true,
+          "framing": true,
+          "deviation": false,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "oracle": {
+        "predicted": "confirmed",
+        "parsed": true,
+        "field_matches": {
+          "addressee": true,
+          "framing": true,
+          "deviation": true,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "corrected": false,
+      "regressed": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-007-none",
+      "group_id": "group-1079873a7aff",
+      "language": "en",
+      "expected": "confirmed",
+      "infer": {
+        "predicted": null,
+        "parsed": false,
+        "field_matches": null,
+        "error": "Invalid model response: new discoveries must be confirmed or uncertain"
+      },
+      "oracle": {
+        "predicted": "confirmed",
+        "parsed": true,
+        "field_matches": {
+          "addressee": true,
+          "framing": true,
+          "deviation": true,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "corrected": true,
+      "regressed": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-008-whole_source",
+      "group_id": "group-8e8edd4fcd66",
+      "language": "en",
+      "expected": "uncertain",
+      "infer": {
+        "predicted": null,
+        "parsed": false,
+        "field_matches": null,
+        "error": "Invalid model response: Xác nhận mâu thuẫn với người nhận, ngữ cảnh hoặc directive."
+      },
+      "oracle": {
+        "predicted": "uncertain",
+        "parsed": true,
+        "field_matches": {
+          "addressee": false,
+          "framing": false,
+          "deviation": true,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "corrected": true,
+      "regressed": false
+    },
+    {
+      "id": "verifier-batch-v1:vf-008-none",
+      "group_id": "group-8e8edd4fcd66",
+      "language": "en",
+      "expected": "uncertain",
+      "infer": {
+        "predicted": "uncertain",
+        "parsed": true,
+        "field_matches": {
+          "addressee": false,
+          "framing": false,
+          "deviation": true,
+          "hasDirective": true
+        },
+        "error": null
+      },
+      "oracle": {
+        "predicted": null,
+        "parsed": false,
+        "field_matches": null,
+        "error": "Invalid model response: Phát hiện mới không được là ví dụ mô tả hoặc chỉ dẫn cho con người."
+      },
+      "corrected": false,
+      "regressed": true
+    }
+  ],
+  "by_language": {
+    "infer": {
+      "vi": {
+        "examples": 6,
+        "parsed": 5,
+        "correct_stance": 2,
+        "tp": 2,
+        "fp": 1,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 0,
+        "parse_or_model_errors": 1,
+        "abstention": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "f1": 0.8,
+        "false_positive_rate": 0.5,
+        "binary_decision_coverage": 0.75
+      },
+      "en": {
+        "examples": 6,
+        "parsed": 3,
+        "correct_stance": 2,
+        "tp": 1,
+        "fp": 0,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 1,
+        "parse_or_model_errors": 3,
+        "abstention": 2,
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "false_positive_rate": 0,
+        "binary_decision_coverage": 0.25
+      }
+    },
+    "oracle": {
+      "vi": {
+        "examples": 6,
+        "parsed": 3,
+        "correct_stance": 1,
+        "tp": 1,
+        "fp": 0,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 1,
+        "parse_or_model_errors": 3,
+        "abstention": 0,
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "false_positive_rate": 0,
+        "binary_decision_coverage": 0.25
+      },
+      "en": {
+        "examples": 6,
+        "parsed": 3,
+        "correct_stance": 3,
+        "tp": 2,
+        "fp": 0,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 0,
+        "parse_or_model_errors": 3,
+        "abstention": 1,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "false_positive_rate": 0,
+        "binary_decision_coverage": 0.5
+      }
+    }
+  },
+  "by_group": {
+    "infer": {
+      "group-ce256043dd38": {
+        "examples": 4,
+        "parsed": 3,
+        "correct_stance": 2,
+        "tp": 2,
+        "fp": 1,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 0,
+        "parse_or_model_errors": 1,
+        "abstention": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "f1": 0.8,
+        "false_positive_rate": 0.5,
+        "binary_decision_coverage": 0.75
+      },
+      "group-638d002da68a": {
+        "examples": 2,
+        "parsed": 2,
+        "correct_stance": 0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 0,
+        "parse_or_model_errors": 0,
+        "abstention": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "false_positive_rate": null,
+        "binary_decision_coverage": null
+      },
+      "group-8e8edd4fcd66": {
+        "examples": 4,
+        "parsed": 2,
+        "correct_stance": 1,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 0,
+        "parse_or_model_errors": 2,
+        "abstention": 2,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "false_positive_rate": 0,
+        "binary_decision_coverage": 0
+      },
+      "group-1079873a7aff": {
+        "examples": 2,
+        "parsed": 1,
+        "correct_stance": 1,
+        "tp": 1,
+        "fp": 0,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 1,
+        "parse_or_model_errors": 1,
+        "abstention": 0,
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "false_positive_rate": null,
+        "binary_decision_coverage": 0.5
+      }
+    },
+    "oracle": {
+      "group-ce256043dd38": {
+        "examples": 4,
+        "parsed": 1,
+        "correct_stance": 1,
+        "tp": 1,
+        "fp": 0,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 1,
+        "parse_or_model_errors": 3,
+        "abstention": 0,
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "false_positive_rate": 0,
+        "binary_decision_coverage": 0.25
+      },
+      "group-638d002da68a": {
+        "examples": 2,
+        "parsed": 2,
+        "correct_stance": 0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 0,
+        "parse_or_model_errors": 0,
+        "abstention": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "false_positive_rate": null,
+        "binary_decision_coverage": null
+      },
+      "group-8e8edd4fcd66": {
+        "examples": 4,
+        "parsed": 1,
+        "correct_stance": 1,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 0,
+        "parse_or_model_errors": 3,
+        "abstention": 1,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "false_positive_rate": 0,
+        "binary_decision_coverage": 0
+      },
+      "group-1079873a7aff": {
+        "examples": 2,
+        "parsed": 2,
+        "correct_stance": 2,
+        "tp": 2,
+        "fp": 0,
+        "tn": 0,
+        "false_clear_fn": 0,
+        "confirmed_not_detected_or_unresolved": 0,
+        "parse_or_model_errors": 0,
+        "abstention": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "false_positive_rate": null,
+        "binary_decision_coverage": 1
+      }
+    }
+  },
+  "latency": {
+    "infer": {
+      "p50": 10.677517599950079,
+      "p95": 19.467525199986994
+    },
+    "oracle": {
+      "p50": 9.879653100040741,
+      "p95": 17.0872970999917
+    }
+  },
+  "resources": {
+    "seconds": 273.89852400001837,
+    "peak_vram_allocated": 2088032768,
+    "peak_vram_reserved": 2218786816,
+    "requests": 24,
+    "adapter_mode": "on_both_contexts",
+    "training_started": false,
+    "probe_used": false,
+    "runtime_changed": false,
+    "adapter_unchanged": true,
+    "trainable_parameters": 0
+  },
+  "stance_only_diagnostic": {
+    "off": {
+      "infer": {
+        "examples": 6,
+        "parsed": 6,
+        "correct_stance": 2,
+        "confusion": {
+          "confirmed": {
+            "confirmed": 0,
+            "dismissed": 2,
+            "uncertain": 0,
+            "null": 0
+          },
+          "dismissed": {
+            "confirmed": 0,
+            "dismissed": 2,
+            "uncertain": 0,
+            "null": 0
+          },
+          "uncertain": {
+            "confirmed": 0,
+            "dismissed": 2,
+            "uncertain": 0,
+            "null": 0
+          }
+        },
+        "tp": 0,
+        "fp": 0,
+        "tn": 2,
+        "false_clear_fn": 2,
+        "precision": null,
+        "recall": 0,
+        "f1": null,
+        "false_positive_rate": 0
+      },
+      "oracle": {
+        "examples": 6,
+        "parsed": 6,
+        "correct_stance": 1,
+        "confusion": {
+          "confirmed": {
+            "confirmed": 0,
+            "dismissed": 2,
+            "uncertain": 0,
+            "null": 0
+          },
+          "dismissed": {
+            "confirmed": 1,
+            "dismissed": 1,
+            "uncertain": 0,
+            "null": 0
+          },
+          "uncertain": {
+            "confirmed": 0,
+            "dismissed": 2,
+            "uncertain": 0,
+            "null": 0
+          }
+        },
+        "tp": 0,
+        "fp": 1,
+        "tn": 1,
+        "false_clear_fn": 2,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "false_positive_rate": 0.5
+      }
+    },
+    "on": {
+      "infer": {
+        "examples": 6,
+        "parsed": 6,
+        "correct_stance": 2,
+        "confusion": {
+          "confirmed": {
+            "confirmed": 0,
+            "dismissed": 2,
+            "uncertain": 0,
+            "null": 0
+          },
+          "dismissed": {
+            "confirmed": 0,
+            "dismissed": 2,
+            "uncertain": 0,
+            "null": 0
+          },
+          "uncertain": {
+            "confirmed": 0,
+            "dismissed": 2,
+            "uncertain": 0,
+            "null": 0
+          }
+        },
+        "tp": 0,
+        "fp": 0,
+        "tn": 2,
+        "false_clear_fn": 2,
+        "precision": null,
+        "recall": 0,
+        "f1": null,
+        "false_positive_rate": 0
+      },
+      "oracle": {
+        "examples": 6,
+        "parsed": 6,
+        "correct_stance": 1,
+        "confusion": {
+          "confirmed": {
+            "confirmed": 0,
+            "dismissed": 2,
+            "uncertain": 0,
+            "null": 0
+          },
+          "dismissed": {
+            "confirmed": 1,
+            "dismissed": 1,
+            "uncertain": 0,
+            "null": 0
+          },
+          "uncertain": {
+            "confirmed": 0,
+            "dismissed": 2,
+            "uncertain": 0,
+            "null": 0
+          }
+        },
+        "tp": 0,
+        "fp": 1,
+        "tn": 1,
+        "false_clear_fn": 2,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "false_positive_rate": 0.5
+      }
+    }
+  },
+  "training_started": false,
+  "probe_used": false,
+  "runtime_changed": false,
+  "limitations": [
+    "Oracle cố ý cung cấp ngữ cảnh liên quan đáp án; tuyệt đối không dùng số này làm hiệu quả Agent.",
+    "Stance-only đổi định dạng và sụp về dismissed nên không cô lập được lỗi pipeline gốc.",
+    "Không tăng với oracle có thể do model không sử dụng oracle; không đủ quy nguyên nhân duy nhất.",
+    "Giữ gold cũ, trong đó vf-002/vf-008 còn đề xuất rà framing chưa áp dụng. Dev chỉ 6 nguồn đã dùng nhiều lần."
+  ]
+}

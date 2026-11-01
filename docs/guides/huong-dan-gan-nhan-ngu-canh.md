@@ -1,5 +1,9 @@
 # Hướng dẫn rà soát nhãn chỉ dẫn và ngữ cảnh
 
+Lưu ý cập nhật 2026-10-26: bộ 20 mẫu tham chiếu đã được duyệt. Các bước
+bên dưới giữ làm hướng dẫn cách gán nhãn, không phải yêu cầu duyệt lại.
+Tiến độ dữ liệu hiện tại xem [bảng tổng hợp](../reports/tong-hop-hien-trang.md).
+
 Bộ v1 đã có 20 đề xuất của AI để người đọc kiểm tra. Bạn không cần tự nghĩ
 toàn bộ ví dụ hoặc tự viết lại dataset. Công việc hiện tại là đọc nguồn,
 đối chiếu đề xuất và chỉ ra chỗ đúng/sai/chưa rõ. Chưa chạy fine-tuning.
@@ -111,3 +115,5 @@ luyện riêng, không được nối vào văn bản đầu vào.
 Phiên bản v1 luôn ghi fine_tuning_ready=false. Sau khi chốt chất lượng nhãn
 mới tạo bản phát hành cho thử nghiệm fine-tuning một model, giữ dữ liệu gốc,
 baseline và bài đo độc lập; tiếp đó đánh giá cả pipeline.
+
+Lưu ý từ lượt rà batch nghiệp vụ Việt: `uncertain` không bắt buộc mọi trường đều `unclear`. Một câu rõ là mệnh lệnh có thể mang `framing: active` nhưng vẫn chưa rõ người nhận hoặc hành vi chuyển hướng. Chỉ sửa từng trường theo bằng chứng; không tự nâng thành confirmed/dismissed, và không áp active hàng loạt cho mọi mẫu uncertain.

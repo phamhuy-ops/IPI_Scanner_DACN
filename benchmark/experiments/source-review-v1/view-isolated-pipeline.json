@@ -1,0 +1,6 @@
+{
+  "detectorFlow": "source-review-compact-v1",
+  "evidencePresentation": "stable-alias-v1",
+  "contextDependencyModel": "qwen3:4b-instruct-2507-q4_K_M",
+  "verifierEvidenceMode": "split-views-multiple-targets-v1"
+}

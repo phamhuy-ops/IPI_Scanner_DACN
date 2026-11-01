@@ -1,0 +1,581 @@
+{
+  "complete": true,
+  "passed": true,
+  "windows": 22,
+  "python_processes": 2,
+  "all_processes_stopped": true,
+  "model_inference_calls": 0,
+  "tokenizer_backend": "fixture",
+  "model_downloads": 0,
+  "training": false,
+  "default_app_changed": false,
+  "prepared": {
+    "protocol": 1,
+    "model": "fixture-only",
+    "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tokenizerSha256": "145b0db7aac3d2bb91058dbbed7f6be929aeba0905c828dec85d0902f446b1a1",
+    "operation": "prepare",
+    "sourceSha256": "9439cdf389d1842aa721ace488fb31cfd9f4390c7cbe37889436873e40da32bc",
+    "windows": [
+      {
+        "id": "window-1",
+        "startOffset": 0,
+        "endOffset": 19,
+        "startLine": 3,
+        "endLine": 4,
+        "text": "  Hồ sơ 😀\r\nBản ghi",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-2",
+        "startOffset": 12,
+        "endOffset": 32,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-3",
+        "startOffset": 24,
+        "endOffset": 45,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-4",
+        "startOffset": 38,
+        "endOffset": 58,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-5",
+        "startOffset": 50,
+        "endOffset": 71,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-6",
+        "startOffset": 64,
+        "endOffset": 84,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-7",
+        "startOffset": 76,
+        "endOffset": 97,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-8",
+        "startOffset": 90,
+        "endOffset": 110,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-9",
+        "startOffset": 102,
+        "endOffset": 123,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-10",
+        "startOffset": 116,
+        "endOffset": 136,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-11",
+        "startOffset": 128,
+        "endOffset": 149,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-12",
+        "startOffset": 142,
+        "endOffset": 162,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-13",
+        "startOffset": 154,
+        "endOffset": 175,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-14",
+        "startOffset": 168,
+        "endOffset": 188,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-15",
+        "startOffset": 180,
+        "endOffset": 201,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-16",
+        "startOffset": 194,
+        "endOffset": 214,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-17",
+        "startOffset": 206,
+        "endOffset": 227,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-18",
+        "startOffset": 220,
+        "endOffset": 240,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-19",
+        "startOffset": 232,
+        "endOffset": 253,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-20",
+        "startOffset": 246,
+        "endOffset": 266,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-21",
+        "startOffset": 258,
+        "endOffset": 280,
+        "startLine": 4,
+        "endLine": 5,
+        "text": "chờ kiểm tra. \r\nEnd of",
+        "inputTokens": 7
+      },
+      {
+        "id": "window-22",
+        "startOffset": 274,
+        "endOffset": 299,
+        "startLine": 5,
+        "endLine": 5,
+        "text": "End of quoted exercise.  ",
+        "inputTokens": 6
+      }
+    ]
+  },
+  "result": {
+    "sourceId": "view-1",
+    "filePath": "/fixture.txt",
+    "sourceView": "text",
+    "identity": {
+      "model": "fixture-only",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "tokenizerSha256": "145b0db7aac3d2bb91058dbbed7f6be929aeba0905c828dec85d0902f446b1a1",
+      "labels": [
+        "benign",
+        "malicious"
+      ]
+    },
+    "windows": [
+      {
+        "id": "window-1",
+        "startOffset": 0,
+        "endOffset": 19,
+        "startLine": 3,
+        "endLine": 4,
+        "text": "  Hồ sơ 😀\r\nBản ghi",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-2",
+        "startOffset": 12,
+        "endOffset": 32,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-3",
+        "startOffset": 24,
+        "endOffset": 45,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-4",
+        "startOffset": 38,
+        "endOffset": 58,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-5",
+        "startOffset": 50,
+        "endOffset": 71,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-6",
+        "startOffset": 64,
+        "endOffset": 84,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-7",
+        "startOffset": 76,
+        "endOffset": 97,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-8",
+        "startOffset": 90,
+        "endOffset": 110,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-9",
+        "startOffset": 102,
+        "endOffset": 123,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-10",
+        "startOffset": 116,
+        "endOffset": 136,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-11",
+        "startOffset": 128,
+        "endOffset": 149,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-12",
+        "startOffset": 142,
+        "endOffset": 162,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-13",
+        "startOffset": 154,
+        "endOffset": 175,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-14",
+        "startOffset": 168,
+        "endOffset": 188,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-15",
+        "startOffset": 180,
+        "endOffset": 201,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-16",
+        "startOffset": 194,
+        "endOffset": 214,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-17",
+        "startOffset": 206,
+        "endOffset": 227,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-18",
+        "startOffset": 220,
+        "endOffset": 240,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-19",
+        "startOffset": 232,
+        "endOffset": 253,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "chờ kiểm tra. Bản ghi",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-20",
+        "startOffset": 246,
+        "endOffset": 266,
+        "startLine": 4,
+        "endLine": 4,
+        "text": "Bản ghi còn chờ kiểm",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-21",
+        "startOffset": 258,
+        "endOffset": 280,
+        "startLine": 4,
+        "endLine": 5,
+        "text": "chờ kiểm tra. \r\nEnd of",
+        "inputTokens": 7,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      },
+      {
+        "id": "window-22",
+        "startOffset": 274,
+        "endOffset": 299,
+        "startLine": 5,
+        "endLine": 5,
+        "text": "End of quoted exercise.  ",
+        "inputTokens": 6,
+        "logits": [
+          0,
+          0
+        ],
+        "score": 0.5,
+        "route": "review"
+      }
+    ],
+    "issues": [],
+    "coverage": {
+      "sourceCharacters": 299,
+      "scoredCharacters": 299,
+      "plannedWindows": 22,
+      "submittedWindows": 22,
+      "scoredWindows": 22,
+      "omittedWindows": 0,
+      "complete": true
+    },
+    "inferenceBackend": "injected_session"
+  },
+  "limits": [
+    "Tiến trình và worker Python thật, nhưng backend tokenizer/logits giả; chưa chứng minh weights/model thật tương thích.",
+    "Chưa có quyền tải hoặc manifest model thật được pin."
+  ]
+}

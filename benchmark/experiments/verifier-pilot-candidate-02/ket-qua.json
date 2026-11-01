@@ -1,0 +1,1911 @@
+{
+  "status": "trained_not_quality_validated",
+  "pilot_training_started": true,
+  "runtime_changed": false,
+  "dev_or_probe_used_for_updates": false,
+  "adapter_path": "E:\\IPI-Training\\adapters\\verifier-pilot-v1\\candidate-02",
+  "trainable_parameters": 1089536,
+  "global_steps": 45,
+  "micro_batches": 360,
+  "finite_gradient_steps": 45,
+  "adapter_updated": true,
+  "loss_observations": [
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 463,
+      "loss_contribution": 0.3804459571838379
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 463,
+      "loss_contribution": 0.02128942310810089
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 463,
+      "loss_contribution": 0.31810399889945984
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 463,
+      "loss_contribution": 0.019148383289575577
+    },
+    {
+      "supervised_tokens": 94,
+      "normalizer_tokens": 463,
+      "loss_contribution": 0.4335303008556366
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 463,
+      "loss_contribution": 0.0188785158097744
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 463,
+      "loss_contribution": 0.38525107502937317
+    },
+    {
+      "supervised_tokens": 81,
+      "normalizer_tokens": 463,
+      "loss_contribution": 0.2799094021320343
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 699,
+      "loss_contribution": 0.3310799300670624
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 699,
+      "loss_contribution": 0.302717924118042
+    },
+    {
+      "supervised_tokens": 77,
+      "normalizer_tokens": 699,
+      "loss_contribution": 0.1977446973323822
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 699,
+      "loss_contribution": 0.1805211454629898
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 699,
+      "loss_contribution": 0.21768546104431152
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 699,
+      "loss_contribution": 0.18175336718559265
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 699,
+      "loss_contribution": 0.19167418777942657
+    },
+    {
+      "supervised_tokens": 84,
+      "normalizer_tokens": 699,
+      "loss_contribution": 0.2548772692680359
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 524,
+      "loss_contribution": 0.3989497125148773
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 524,
+      "loss_contribution": 0.3818667531013489
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 524,
+      "loss_contribution": 0.01434627640992403
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 524,
+      "loss_contribution": 0.016102559864521027
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 524,
+      "loss_contribution": 0.2584714889526367
+    },
+    {
+      "supervised_tokens": 84,
+      "normalizer_tokens": 524,
+      "loss_contribution": 0.38169652223587036
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 524,
+      "loss_contribution": 0.3947703540325165
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 524,
+      "loss_contribution": 0.2540091276168823
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 620,
+      "loss_contribution": 0.28951722383499146
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 620,
+      "loss_contribution": 0.2089124321937561
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 620,
+      "loss_contribution": 0.010326282121241093
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 620,
+      "loss_contribution": 0.2302546352148056
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 620,
+      "loss_contribution": 0.22338931262493134
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 620,
+      "loss_contribution": 0.3317035734653473
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 620,
+      "loss_contribution": 0.23066650331020355
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 620,
+      "loss_contribution": 0.27914735674858093
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 420,
+      "loss_contribution": 0.016936136409640312
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 420,
+      "loss_contribution": 0.015479449182748795
+    },
+    {
+      "supervised_tokens": 77,
+      "normalizer_tokens": 420,
+      "loss_contribution": 0.46153703331947327
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 420,
+      "loss_contribution": 0.4411930739879608
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 420,
+      "loss_contribution": 0.01802956312894821
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 420,
+      "loss_contribution": 0.5604032278060913
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 420,
+      "loss_contribution": 0.582353413105011
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 420,
+      "loss_contribution": 0.017290737479925156
+    },
+    {
+      "supervised_tokens": 81,
+      "normalizer_tokens": 459,
+      "loss_contribution": 0.3235018849372864
+    },
+    {
+      "supervised_tokens": 84,
+      "normalizer_tokens": 459,
+      "loss_contribution": 0.2589878737926483
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 459,
+      "loss_contribution": 0.4413064122200012
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 459,
+      "loss_contribution": 0.013814408332109451
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 459,
+      "loss_contribution": 0.01406303234398365
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 459,
+      "loss_contribution": 0.34617337584495544
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 459,
+      "loss_contribution": 0.3677613437175751
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 459,
+      "loss_contribution": 0.012892729602754116
+    },
+    {
+      "supervised_tokens": 73,
+      "normalizer_tokens": 549,
+      "loss_contribution": 0.23454275727272034
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 549,
+      "loss_contribution": 0.010081557556986809
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 549,
+      "loss_contribution": 0.31079262495040894
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 549,
+      "loss_contribution": 0.43227988481521606
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 549,
+      "loss_contribution": 0.26732635498046875
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 549,
+      "loss_contribution": 0.30524611473083496
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 549,
+      "loss_contribution": 0.2987232506275177
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 549,
+      "loss_contribution": 0.009309351444244385
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 640,
+      "loss_contribution": 0.28607499599456787
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 640,
+      "loss_contribution": 0.25692620873451233
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 640,
+      "loss_contribution": 0.353702187538147
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 640,
+      "loss_contribution": 0.006828685291111469
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 640,
+      "loss_contribution": 0.29437246918678284
+    },
+    {
+      "supervised_tokens": 74,
+      "normalizer_tokens": 640,
+      "loss_contribution": 0.23405592143535614
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 640,
+      "loss_contribution": 0.2331981658935547
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 640,
+      "loss_contribution": 0.28412264585494995
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 598,
+      "loss_contribution": 0.3264613151550293
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 598,
+      "loss_contribution": 0.27150678634643555
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 598,
+      "loss_contribution": 0.308033287525177
+    },
+    {
+      "supervised_tokens": 77,
+      "normalizer_tokens": 598,
+      "loss_contribution": 0.16361673176288605
+    },
+    {
+      "supervised_tokens": 80,
+      "normalizer_tokens": 598,
+      "loss_contribution": 0.2707429826259613
+    },
+    {
+      "supervised_tokens": 80,
+      "normalizer_tokens": 598,
+      "loss_contribution": 0.1613505631685257
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 598,
+      "loss_contribution": 0.006316202227026224
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 598,
+      "loss_contribution": 0.26078489422798157
+    },
+    {
+      "supervised_tokens": 98,
+      "normalizer_tokens": 677,
+      "loss_contribution": 0.29358866810798645
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 677,
+      "loss_contribution": 0.2835361063480377
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 677,
+      "loss_contribution": 0.2572031319141388
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 677,
+      "loss_contribution": 0.303535133600235
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 677,
+      "loss_contribution": 0.006267011631280184
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 677,
+      "loss_contribution": 0.2820606231689453
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 677,
+      "loss_contribution": 0.31649571657180786
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 677,
+      "loss_contribution": 0.2874506711959839
+    },
+    {
+      "supervised_tokens": 96,
+      "normalizer_tokens": 657,
+      "loss_contribution": 0.26124557852745056
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 657,
+      "loss_contribution": 0.2589050531387329
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 657,
+      "loss_contribution": 0.24810604751110077
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 657,
+      "loss_contribution": 0.28750574588775635
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 657,
+      "loss_contribution": 0.29818007349967957
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 657,
+      "loss_contribution": 0.33268386125564575
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 657,
+      "loss_contribution": 0.003761840285733342
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 657,
+      "loss_contribution": 0.24458009004592896
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 632,
+      "loss_contribution": 0.2565891444683075
+    },
+    {
+      "supervised_tokens": 94,
+      "normalizer_tokens": 632,
+      "loss_contribution": 0.28161120414733887
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 632,
+      "loss_contribution": 0.004743021912872791
+    },
+    {
+      "supervised_tokens": 79,
+      "normalizer_tokens": 632,
+      "loss_contribution": 0.18285782635211945
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 632,
+      "loss_contribution": 0.29652589559555054
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 632,
+      "loss_contribution": 0.35384735465049744
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 632,
+      "loss_contribution": 0.3471006453037262
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 632,
+      "loss_contribution": 0.2536376714706421
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.4055211842060089
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.20927725732326508
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.19365285336971283
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.29387366771698
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.28423964977264404
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.3589320182800293
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.0037811663933098316
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.004244245123118162
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.21821463108062744
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.2763793468475342
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.20024050772190094
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.3948926031589508
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.002974498551338911
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.31835827231407166
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.0034086788073182106
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.26000863313674927
+    },
+    {
+      "supervised_tokens": 84,
+      "normalizer_tokens": 533,
+      "loss_contribution": 0.20331886410713196
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 533,
+      "loss_contribution": 0.25588515400886536
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 533,
+      "loss_contribution": 0.31491851806640625
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 533,
+      "loss_contribution": 0.19560857117176056
+    },
+    {
+      "supervised_tokens": 94,
+      "normalizer_tokens": 533,
+      "loss_contribution": 0.3680694103240967
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 533,
+      "loss_contribution": 0.0032540021929889917
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 533,
+      "loss_contribution": 0.00443170964717865
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 533,
+      "loss_contribution": 0.22376301884651184
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 563,
+      "loss_contribution": 0.30293336510658264
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 563,
+      "loss_contribution": 0.2926768660545349
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 563,
+      "loss_contribution": 0.0027182770427316427
+    },
+    {
+      "supervised_tokens": 94,
+      "normalizer_tokens": 563,
+      "loss_contribution": 0.30316638946533203
+    },
+    {
+      "supervised_tokens": 94,
+      "normalizer_tokens": 563,
+      "loss_contribution": 0.20423373579978943
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 563,
+      "loss_contribution": 0.26271313428878784
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 563,
+      "loss_contribution": 0.0033020745031535625
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 563,
+      "loss_contribution": 0.3296222686767578
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.0030596363358199596
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.19240573048591614
+    },
+    {
+      "supervised_tokens": 85,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.32088613510131836
+    },
+    {
+      "supervised_tokens": 95,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.25030049681663513
+    },
+    {
+      "supervised_tokens": 95,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.2793673276901245
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.27366718649864197
+    },
+    {
+      "supervised_tokens": 81,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.1814795881509781
+    },
+    {
+      "supervised_tokens": 81,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.21663545072078705
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 539,
+      "loss_contribution": 0.32768571376800537
+    },
+    {
+      "supervised_tokens": 71,
+      "normalizer_tokens": 539,
+      "loss_contribution": 0.20610032975673676
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 539,
+      "loss_contribution": 0.0028306003659963608
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 539,
+      "loss_contribution": 0.21086527407169342
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 539,
+      "loss_contribution": 0.0022143167443573475
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 539,
+      "loss_contribution": 0.31247276067733765
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 539,
+      "loss_contribution": 0.4007633328437805
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 539,
+      "loss_contribution": 0.38730767369270325
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 553,
+      "loss_contribution": 0.001926614437252283
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 553,
+      "loss_contribution": 0.002458676928654313
+    },
+    {
+      "supervised_tokens": 73,
+      "normalizer_tokens": 553,
+      "loss_contribution": 0.23842589557170868
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 553,
+      "loss_contribution": 0.3250259459018707
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 553,
+      "loss_contribution": 0.2752538323402405
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 553,
+      "loss_contribution": 0.3355523347854614
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 553,
+      "loss_contribution": 0.35906949639320374
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 553,
+      "loss_contribution": 0.2657184898853302
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.24138586223125458
+    },
+    {
+      "supervised_tokens": 73,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.2158840447664261
+    },
+    {
+      "supervised_tokens": 80,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.19482852518558502
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.0015579459723085165
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.2606993019580841
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.28271591663360596
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.33501312136650085
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 543,
+      "loss_contribution": 0.0023798090405762196
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.29995033144950867
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.0015987223014235497
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.28027886152267456
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.19205303490161896
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.2622412145137787
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.29933473467826843
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.2858794331550598
+    },
+    {
+      "supervised_tokens": 77,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.23475442826747894
+    },
+    {
+      "supervised_tokens": 81,
+      "normalizer_tokens": 542,
+      "loss_contribution": 0.20681852102279663
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 542,
+      "loss_contribution": 0.3985846936702728
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 542,
+      "loss_contribution": 0.3235273063182831
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 542,
+      "loss_contribution": 0.2333654761314392
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 542,
+      "loss_contribution": 0.25353214144706726
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 542,
+      "loss_contribution": 0.3396436870098114
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 542,
+      "loss_contribution": 0.002514616586267948
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 542,
+      "loss_contribution": 0.004450441803783178
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 708,
+      "loss_contribution": 0.2149895280599594
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 708,
+      "loss_contribution": 0.17085832357406616
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 708,
+      "loss_contribution": 0.1475755125284195
+    },
+    {
+      "supervised_tokens": 94,
+      "normalizer_tokens": 708,
+      "loss_contribution": 0.23230217397212982
+    },
+    {
+      "supervised_tokens": 81,
+      "normalizer_tokens": 708,
+      "loss_contribution": 0.20566202700138092
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 708,
+      "loss_contribution": 0.30253803730010986
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 708,
+      "loss_contribution": 0.2396746724843979
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 708,
+      "loss_contribution": 0.22314883768558502
+    },
+    {
+      "supervised_tokens": 85,
+      "normalizer_tokens": 547,
+      "loss_contribution": 0.26288771629333496
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 547,
+      "loss_contribution": 0.2764958441257477
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 547,
+      "loss_contribution": 0.002316835103556514
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 547,
+      "loss_contribution": 0.00205817143432796
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 547,
+      "loss_contribution": 0.2226465493440628
+    },
+    {
+      "supervised_tokens": 80,
+      "normalizer_tokens": 547,
+      "loss_contribution": 0.22700989246368408
+    },
+    {
+      "supervised_tokens": 94,
+      "normalizer_tokens": 547,
+      "loss_contribution": 0.31068694591522217
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 547,
+      "loss_contribution": 0.2985689640045166
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 594,
+      "loss_contribution": 0.0029390344861894846
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 594,
+      "loss_contribution": 0.22601236402988434
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 594,
+      "loss_contribution": 0.20828868448734283
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 594,
+      "loss_contribution": 0.30610302090644836
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 594,
+      "loss_contribution": 0.23355145752429962
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 594,
+      "loss_contribution": 0.2117200344800949
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 594,
+      "loss_contribution": 0.20924247801303864
+    },
+    {
+      "supervised_tokens": 71,
+      "normalizer_tokens": 594,
+      "loss_contribution": 0.17436467111110687
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 629,
+      "loss_contribution": 0.21648041903972626
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 629,
+      "loss_contribution": 0.2439047396183014
+    },
+    {
+      "supervised_tokens": 95,
+      "normalizer_tokens": 629,
+      "loss_contribution": 0.25910475850105286
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 629,
+      "loss_contribution": 0.1947437971830368
+    },
+    {
+      "supervised_tokens": 80,
+      "normalizer_tokens": 629,
+      "loss_contribution": 0.27165457606315613
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 629,
+      "loss_contribution": 0.0036516806576400995
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 629,
+      "loss_contribution": 0.2747279703617096
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 629,
+      "loss_contribution": 0.2357310652732849
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 650,
+      "loss_contribution": 0.23751309514045715
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 650,
+      "loss_contribution": 0.24144324660301208
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 650,
+      "loss_contribution": 0.21032747626304626
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 650,
+      "loss_contribution": 0.0026265261694788933
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 650,
+      "loss_contribution": 0.2625303268432617
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 650,
+      "loss_contribution": 0.20860257744789124
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 650,
+      "loss_contribution": 0.22786329686641693
+    },
+    {
+      "supervised_tokens": 98,
+      "normalizer_tokens": 650,
+      "loss_contribution": 0.27675777673721313
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 694,
+      "loss_contribution": 0.18204660713672638
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 694,
+      "loss_contribution": 0.296869158744812
+    },
+    {
+      "supervised_tokens": 85,
+      "normalizer_tokens": 694,
+      "loss_contribution": 0.25904011726379395
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 694,
+      "loss_contribution": 0.1723591536283493
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 694,
+      "loss_contribution": 0.24616824090480804
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 694,
+      "loss_contribution": 0.20081005990505219
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 694,
+      "loss_contribution": 0.12264689058065414
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 694,
+      "loss_contribution": 0.2062344253063202
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 456,
+      "loss_contribution": 0.0034730564802885056
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 456,
+      "loss_contribution": 0.24667632579803467
+    },
+    {
+      "supervised_tokens": 79,
+      "normalizer_tokens": 456,
+      "loss_contribution": 0.37398621439933777
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 456,
+      "loss_contribution": 0.0033844553399831057
+    },
+    {
+      "supervised_tokens": 95,
+      "normalizer_tokens": 456,
+      "loss_contribution": 0.3094887435436249
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 456,
+      "loss_contribution": 0.25884655117988586
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 456,
+      "loss_contribution": 0.0034914487041532993
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 456,
+      "loss_contribution": 0.28967976570129395
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.28863686323165894
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.24898919463157654
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.0023090695030987263
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.2640898823738098
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.2951829135417938
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.24527893960475922
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.0018301840173080564
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 573,
+      "loss_contribution": 0.2856929302215576
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 405,
+      "loss_contribution": 0.004216969478875399
+    },
+    {
+      "supervised_tokens": 95,
+      "normalizer_tokens": 405,
+      "loss_contribution": 0.40003180503845215
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 405,
+      "loss_contribution": 0.0055622742511332035
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 405,
+      "loss_contribution": 0.3828468322753906
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 405,
+      "loss_contribution": 0.3372887969017029
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 405,
+      "loss_contribution": 0.262538343667984
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 405,
+      "loss_contribution": 0.003396471031010151
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 405,
+      "loss_contribution": 0.0033234949223697186
+    },
+    {
+      "supervised_tokens": 98,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.28291547298431396
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.2736749053001404
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.003854918759316206
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.30590203404426575
+    },
+    {
+      "supervised_tokens": 80,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.23129436373710632
+    },
+    {
+      "supervised_tokens": 85,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.13164713978767395
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.2556902766227722
+    },
+    {
+      "supervised_tokens": 74,
+      "normalizer_tokens": 626,
+      "loss_contribution": 0.2522467374801636
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 671,
+      "loss_contribution": 0.2280014157295227
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 671,
+      "loss_contribution": 0.1909133493900299
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 671,
+      "loss_contribution": 0.24111978709697723
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 671,
+      "loss_contribution": 0.2820281386375427
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 671,
+      "loss_contribution": 0.0011829095892608166
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 671,
+      "loss_contribution": 0.15728354454040527
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 671,
+      "loss_contribution": 0.23978984355926514
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 671,
+      "loss_contribution": 0.21883291006088257
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 397,
+      "loss_contribution": 0.0041872551664710045
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 397,
+      "loss_contribution": 0.39983731508255005
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 397,
+      "loss_contribution": 0.36256226897239685
+    },
+    {
+      "supervised_tokens": 84,
+      "normalizer_tokens": 397,
+      "loss_contribution": 0.23182964324951172
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 397,
+      "loss_contribution": 0.0034153659362345934
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 397,
+      "loss_contribution": 0.003204293781891465
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 397,
+      "loss_contribution": 0.5081497430801392
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 397,
+      "loss_contribution": 0.0019808749202638865
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 628,
+      "loss_contribution": 0.26765409111976624
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 628,
+      "loss_contribution": 0.16502989828586578
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 628,
+      "loss_contribution": 0.17697200179100037
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 628,
+      "loss_contribution": 0.2606211006641388
+    },
+    {
+      "supervised_tokens": 98,
+      "normalizer_tokens": 628,
+      "loss_contribution": 0.26886728405952454
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 628,
+      "loss_contribution": 0.25014880299568176
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 628,
+      "loss_contribution": 0.001327446079812944
+    },
+    {
+      "supervised_tokens": 73,
+      "normalizer_tokens": 628,
+      "loss_contribution": 0.18554197251796722
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 393,
+      "loss_contribution": 0.5145598649978638
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 393,
+      "loss_contribution": 0.0015538301086053252
+    },
+    {
+      "supervised_tokens": 81,
+      "normalizer_tokens": 393,
+      "loss_contribution": 0.23310168087482452
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 393,
+      "loss_contribution": 0.006144041195511818
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 393,
+      "loss_contribution": 0.005142897367477417
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 393,
+      "loss_contribution": 0.0015958098229020834
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 393,
+      "loss_contribution": 0.5060514211654663
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 393,
+      "loss_contribution": 0.25931015610694885
+    },
+    {
+      "supervised_tokens": 85,
+      "normalizer_tokens": 541,
+      "loss_contribution": 0.23278318345546722
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 541,
+      "loss_contribution": 0.3117488920688629
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 541,
+      "loss_contribution": 0.0016012688865885139
+    },
+    {
+      "supervised_tokens": 72,
+      "normalizer_tokens": 541,
+      "loss_contribution": 0.21249747276306152
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 541,
+      "loss_contribution": 0.0006513771950267255
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 541,
+      "loss_contribution": 0.28855860233306885
+    },
+    {
+      "supervised_tokens": 79,
+      "normalizer_tokens": 541,
+      "loss_contribution": 0.2636635899543762
+    },
+    {
+      "supervised_tokens": 94,
+      "normalizer_tokens": 541,
+      "loss_contribution": 0.17670753598213196
+    },
+    {
+      "supervised_tokens": 84,
+      "normalizer_tokens": 614,
+      "loss_contribution": 0.23236237466335297
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 614,
+      "loss_contribution": 0.23488149046897888
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 614,
+      "loss_contribution": 0.27569758892059326
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 614,
+      "loss_contribution": 0.16230934858322144
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 614,
+      "loss_contribution": 0.17305313050746918
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 614,
+      "loss_contribution": 0.2593490779399872
+    },
+    {
+      "supervised_tokens": 74,
+      "normalizer_tokens": 614,
+      "loss_contribution": 0.1946532428264618
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 614,
+      "loss_contribution": 0.0006888472707942128
+    },
+    {
+      "supervised_tokens": 94,
+      "normalizer_tokens": 692,
+      "loss_contribution": 0.22491814196109772
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 692,
+      "loss_contribution": 0.1830884963274002
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 692,
+      "loss_contribution": 0.19962821900844574
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 692,
+      "loss_contribution": 0.1453080028295517
+    },
+    {
+      "supervised_tokens": 80,
+      "normalizer_tokens": 692,
+      "loss_contribution": 0.18588145077228546
+    },
+    {
+      "supervised_tokens": 90,
+      "normalizer_tokens": 692,
+      "loss_contribution": 0.18633197247982025
+    },
+    {
+      "supervised_tokens": 81,
+      "normalizer_tokens": 692,
+      "loss_contribution": 0.15664400160312653
+    },
+    {
+      "supervised_tokens": 80,
+      "normalizer_tokens": 692,
+      "loss_contribution": 0.1798546463251114
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 535,
+      "loss_contribution": 0.20344015955924988
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 535,
+      "loss_contribution": 0.28728950023651123
+    },
+    {
+      "supervised_tokens": 96,
+      "normalizer_tokens": 535,
+      "loss_contribution": 0.284665584564209
+    },
+    {
+      "supervised_tokens": 79,
+      "normalizer_tokens": 535,
+      "loss_contribution": 0.1734466403722763
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 535,
+      "loss_contribution": 0.0017523211427032948
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 535,
+      "loss_contribution": 0.1791328638792038
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 535,
+      "loss_contribution": 0.29994699358940125
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 535,
+      "loss_contribution": 0.0012224871898069978
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 551,
+      "loss_contribution": 0.001600810093805194
+    },
+    {
+      "supervised_tokens": 86,
+      "normalizer_tokens": 551,
+      "loss_contribution": 0.18696880340576172
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 551,
+      "loss_contribution": 0.0013372914399951696
+    },
+    {
+      "supervised_tokens": 95,
+      "normalizer_tokens": 551,
+      "loss_contribution": 0.30511024594306946
+    },
+    {
+      "supervised_tokens": 78,
+      "normalizer_tokens": 551,
+      "loss_contribution": 0.1863432079553604
+    },
+    {
+      "supervised_tokens": 87,
+      "normalizer_tokens": 551,
+      "loss_contribution": 0.28879469633102417
+    },
+    {
+      "supervised_tokens": 85,
+      "normalizer_tokens": 551,
+      "loss_contribution": 0.25969380140304565
+    },
+    {
+      "supervised_tokens": 98,
+      "normalizer_tokens": 551,
+      "loss_contribution": 0.3065855801105499
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 636,
+      "loss_contribution": 0.29754364490509033
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 636,
+      "loss_contribution": 0.14382600784301758
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 636,
+      "loss_contribution": 0.23955614864826202
+    },
+    {
+      "supervised_tokens": 73,
+      "normalizer_tokens": 636,
+      "loss_contribution": 0.1437450796365738
+    },
+    {
+      "supervised_tokens": 80,
+      "normalizer_tokens": 636,
+      "loss_contribution": 0.20896631479263306
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 636,
+      "loss_contribution": 0.0008609270444139838
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 636,
+      "loss_contribution": 0.2937121093273163
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 636,
+      "loss_contribution": 0.25412681698799133
+    },
+    {
+      "supervised_tokens": 95,
+      "normalizer_tokens": 710,
+      "loss_contribution": 0.21100305020809174
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 710,
+      "loss_contribution": 0.1819547414779663
+    },
+    {
+      "supervised_tokens": 97,
+      "normalizer_tokens": 710,
+      "loss_contribution": 0.20140805840492249
+    },
+    {
+      "supervised_tokens": 99,
+      "normalizer_tokens": 710,
+      "loss_contribution": 0.2615809142589569
+    },
+    {
+      "supervised_tokens": 89,
+      "normalizer_tokens": 710,
+      "loss_contribution": 0.20195871591567993
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 710,
+      "loss_contribution": 0.20420585572719574
+    },
+    {
+      "supervised_tokens": 82,
+      "normalizer_tokens": 710,
+      "loss_contribution": 0.16333363950252533
+    },
+    {
+      "supervised_tokens": 74,
+      "normalizer_tokens": 710,
+      "loss_contribution": 0.16096636652946472
+    },
+    {
+      "supervised_tokens": 100,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.2135581523180008
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.25493282079696655
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.19213682413101196
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.21476076543331146
+    },
+    {
+      "supervised_tokens": 11,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.0014090476324781775
+    },
+    {
+      "supervised_tokens": 72,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.1426926702260971
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.2090400606393814
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 625,
+      "loss_contribution": 0.21272656321525574
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 721,
+      "loss_contribution": 0.17975053191184998
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 721,
+      "loss_contribution": 0.16573558747768402
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 721,
+      "loss_contribution": 0.16954366862773895
+    },
+    {
+      "supervised_tokens": 88,
+      "normalizer_tokens": 721,
+      "loss_contribution": 0.17814022302627563
+    },
+    {
+      "supervised_tokens": 83,
+      "normalizer_tokens": 721,
+      "loss_contribution": 0.16558852791786194
+    },
+    {
+      "supervised_tokens": 91,
+      "normalizer_tokens": 721,
+      "loss_contribution": 0.20731709897518158
+    },
+    {
+      "supervised_tokens": 92,
+      "normalizer_tokens": 721,
+      "loss_contribution": 0.2570226788520813
+    },
+    {
+      "supervised_tokens": 93,
+      "normalizer_tokens": 721,
+      "loss_contribution": 0.21430887281894684
+    }
+  ],
+  "trainer_log_history": [
+    {
+      "loss": 1.9464,
+      "grad_norm": 1.2174206972122192,
+      "learning_rate": 0.0001,
+      "epoch": 0.1111111111111111,
+      "step": 5
+    },
+    {
+      "loss": 1.879,
+      "grad_norm": 0.840147078037262,
+      "learning_rate": 0.0001,
+      "epoch": 0.2222222222222222,
+      "step": 10
+    },
+    {
+      "loss": 1.7818,
+      "grad_norm": 1.0429598093032837,
+      "learning_rate": 0.0001,
+      "epoch": 0.3333333333333333,
+      "step": 15
+    },
+    {
+      "loss": 1.7215,
+      "grad_norm": 0.9099957346916199,
+      "learning_rate": 0.0001,
+      "epoch": 0.4444444444444444,
+      "step": 20
+    },
+    {
+      "loss": 1.706,
+      "grad_norm": 1.1004817485809326,
+      "learning_rate": 0.0001,
+      "epoch": 0.5555555555555556,
+      "step": 25
+    },
+    {
+      "loss": 1.635,
+      "grad_norm": 1.3523900508880615,
+      "learning_rate": 0.0001,
+      "epoch": 0.6666666666666666,
+      "step": 30
+    },
+    {
+      "loss": 1.5574,
+      "grad_norm": 0.9241581559181213,
+      "learning_rate": 0.0001,
+      "epoch": 0.7777777777777778,
+      "step": 35
+    },
+    {
+      "loss": 1.4882,
+      "grad_norm": 0.7974944710731506,
+      "learning_rate": 0.0001,
+      "epoch": 0.8888888888888888,
+      "step": 40
+    },
+    {
+      "loss": 1.5368,
+      "grad_norm": 1.2119373083114624,
+      "learning_rate": 0.0001,
+      "epoch": 1.0,
+      "step": 45
+    },
+    {
+      "train_runtime": 643.6546,
+      "train_samples_per_second": 0.559,
+      "train_steps_per_second": 0.07,
+      "total_flos": 2769992258715648.0,
+      "train_loss": 1.6946767912970648,
+      "epoch": 1.0,
+      "step": 45
+    }
+  ],
+  "adapter_files_sha256": {
+    "adapter_config.json": "848f00635c77ea09aa08eb01407ceb64a7c2f984d0984de2d41fa2c86f6697bc",
+    "adapter_model.safetensors": "5d95538ea83aee68a62687e7f43e50acde6e47367c51fa5734570c6e90bcb6b4",
+    "added_tokens.json": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab",
+    "chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+    "CHUA-TRIEN-KHAI.json": "46d7ea7a4671cadf75ff68d698131b5c2fa3013cf0f322cc78b09a4d00cfe9cd",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "README.md": "d194d39cb9cfa5d71709c498609d2e4ed094ce7c477645745bf272fdb6793ea9",
+    "special_tokens_map.json": "57255613bbe23c9497211ca68561ff429a51e871dbaf5a59998fa4c8f7fe168a",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "tokenizer_config.json": "5fd4cea2574beb6b70ba31582179880d331b723f5b5119ee67c29d45b983f7be",
+    "training_args.bin": "691f7e29eece588253c29d403422ef68bfdd0e7ef716d3d6cd04f4de814577f7",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "peak_vram_allocated": 2601022976,
+  "peak_vram_reserved": 2860515328,
+  "rss_bytes": 1984176128,
+  "seconds_total": 658.3849628000171,
+  "limitations": [
+    "Một epoch/ứng viên trên 180 nguồn có nhiều nhãn AI; chưa kiểm chứng độc lập.",
+    "Train loss giảm không chứng minh nhận diện tốt hơn; cần đo dev cùng PEFT model adapter off/on.",
+    "Không dùng adapter kỹ thuật cũ, không thay model Ollama hoặc Agent mặc định."
+  ]
+}

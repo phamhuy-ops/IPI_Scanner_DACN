@@ -1,0 +1,13 @@
+{
+  "status": "confounded_by_prefix_token_boundary_not_valid_for_mapping_claim",
+  "measured_requests": 6,
+  "parser_valid": 3,
+  "correct_stance": 2,
+  "token_aligned_original": 0,
+  "token_aligned_corrected_preflight": 6,
+  "model_v2_called": false,
+  "raw_preserved": true,
+  "runner_snapshot": "runner-tai-thoi-diem-do.py",
+  "next_action": "Chỉ chạy lại 6 ca prefix oracle v2 đã qua preflight, chốt chẩn đoán và dừng; không mở thêm prompt hoặc train tự động.",
+  "default_agent_changed": false
+}

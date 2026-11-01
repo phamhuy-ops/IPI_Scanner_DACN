@@ -1,0 +1,786 @@
+{
+  "version": 1,
+  "status": "planned_not_started",
+  "scope": "Pilot một Verifier, không thay Detector, Rule Prefilter, policy hoặc mặc định ứng dụng.",
+  "training_started": false,
+  "training_ready": false,
+  "base_model": {
+    "huggingface_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "license_declared": "apache-2.0",
+    "weights_downloaded_for_training": true,
+    "legacy_ollama_reference": "qwen2.5:1.5b-instruct",
+    "trained_ollama_tag": null,
+    "weights_download_purpose": "Đã tải weights trên E cho resource smoke; chưa fine-tuning dữ liệu dự án."
+  },
+  "reference_sha256": {
+    "benchmark/data/annotations/ngu-canh-v1/mau-cho-duyet.jsonl": "1d4c98e68c5d1d4e0fead956183519ded488eb3f8c5e7814ca3f5fd6572757ba",
+    "benchmark/data/annotations/ngu-canh-v1/ket-qua-ra-soat.json": "b17a9c8ae0751b535bd0701803f56f8a1d8bc131ef79ad8465dac962e8d36b08",
+    "benchmark/data/annotations/ngu-canh-v1/tong-ket-ra-soat.json": "6422dfb764bf62946d0bf0485d11582285242f5b2bba5e0eed750e3de291c938",
+    "benchmark/experiments/verifier-candidate-v1/ket-qua.json": "cb89323047c23ee0e3bfbcfe5b189f36d9c9ad9c29a2b317e429fe4a10070b16",
+    "benchmark/experiments/verifier-candidate-v1/thong-so-model.json": "5b066c260b1df6271b396c3ad5f9c621149794e1df3f50ec1145a79ae22e480b",
+    "benchmark/experiments/verifier-finetune-pilot-v1/phien-ban-model-goc.json": "7747e30abf4618912930996fc3ecf5ab5195e7bb901baa73e68d9d7af267e051",
+    "benchmark/experiments/verifier-finetune-pilot-v1/kiem-tra-moi-truong.json": "fe43770c867ca65d9f4a05df2cad9efb7882027c75ab24738e74dc0b67b1710a",
+    "src/ai/agents/document/verifierAgent.ts": "c1f4c966ce8d791323146a63d0230677f937f09239896d8723f7a413e1e18b80",
+    "src/ai/agents/document/referencePrompts.ts": "f67eaf708b53030c2bc082d9c4ae6763a66022011c5f4fe7b27be948ea3da070",
+    "src/ai/agents/document/compactVerifier.ts": "6e97af31a1502799ecd22f27bfc0c1441a024aa9ba9748552f5e5c56e31c2ce0",
+    "src/ai/agents/document/sourceReferences.ts": "1113816af9d37bba1f75931195a929be5bca36bbe8d76596164e9e7eb8bbcb51",
+    "src/ai/agents/document/reviewPolicy.ts": "ce1d9beb517862d989925d9a204a38b710e06b1891a28f33494b84ece8500aed",
+    "src/ai/agents/document/evidence.ts": "804e027ef7e1d450f2a118e073e9786f269f4b6e3d67d5f960b921ca1dc7b174",
+    "src/ai/agents/document/directiveContext.ts": "aee929765916e2f3f13331a9d1ee6dd5459eceb8c586921afba0774392d700ca",
+    "src/types.ts": "9c2ad202af299dcca1b798f9e293e07e87f3b5ff4955f0d6a3cf14c8ab12919c",
+    "benchmark/experiments/verifier-finetune-pilot-v1/kiem-tra-moi-truong-sau-cau-hinh-o-e.json": "7d50d7a21590259f39611f533adf43b05f0a2cb5479942a90c41989952b1bc42"
+  },
+  "task": {
+    "contract": "referenced-v1",
+    "verifier_output": "compact-v1",
+    "input": [
+      "System prompt Verifier được khóa",
+      "Bảng mã đoạn nguồn trung tính và các ID nghi vấn nếu có",
+      "Đầy đủ các chunk nguồn trong batch, không cắt mất ngữ cảnh"
+    ],
+    "excluded_from_input": [
+      "source/dataset/case/group IDs",
+      "nhãn nguồn hoặc đáp án",
+      "gold span được đánh dấu chỉ vì biết nhãn",
+      "Detector stance/reason/confidence",
+      "user_intent trong setup chỉ có văn bản"
+    ],
+    "output_top_level": [
+      "assessments",
+      "discoveries"
+    ],
+    "assessment_fields": [
+      "id",
+      "spanId",
+      "addressee",
+      "framing",
+      "deviation",
+      "hasDirective",
+      "stance",
+      "reason"
+    ],
+    "discovery_fields": [
+      "spanId",
+      "addressee",
+      "framing",
+      "deviation",
+      "hasDirective",
+      "stance",
+      "reason"
+    ],
+    "reason_characters": {
+      "min": 20,
+      "max": 240
+    },
+    "assessment_span_rule": "Copy đúng spanId ràng buộc nghi vấn; bằng chứng được ứng dụng truy hồi, không tự sinh quote.",
+    "discovery_span_rule": "Chọn spanId thực từ nguồn cho lệnh chèn mới; không có finding vẫn phải tìm trên toàn batch.",
+    "loss": "Chỉ assistant completion JSON; system/user/source tokens bị mask. Kiểm tra token mask thực tế trước train.",
+    "schema_binding_verified": false,
+    "training_export_created": false,
+    "runtime_header_policy": "Tên file trung tính; risk score/finding count/selection phải từ scanner khóa, không từ gold label; không đưa Detector confidence/stance/reason. Có đối chứng finding sai/risk cao nguồn sạch.",
+    "tokenizer_mask_audit": {
+      "report": "benchmark/experiments/verifier-tokenizer-v1/ket-qua.json",
+      "reviewed_sources": 72,
+      "contract_examples": 144,
+      "mask_valid": 144,
+      "over_1024": 21,
+      "trainer_collator_verified": false
+    },
+    "gap_window_tokenizer_audit": {
+      "report": "benchmark/experiments/verifier-gap-tokenizer-v1/ket-qua.json",
+      "sources": 15,
+      "examples": 30,
+      "mask_valid": 30,
+      "over_1024": 27,
+      "over_1536": 8,
+      "over_2048": 0,
+      "trainer_collator_verified": false
+    },
+    "collator_audit": {
+      "report": "benchmark/experiments/verifier-collator-v1/ket-qua.json",
+      "examples": 174,
+      "passed": 174
+    }
+  },
+  "data": {
+    "reference_20_role": "ontology_reference_and_legacy_dev_regression_only_not_training_not_holdout",
+    "source_review": "Nguồn/version/license/quyền dùng lại phải xác nhận từng nguồn; nhãn nhị phân chưa đủ cho stance/ngữ cảnh.",
+    "collection_status": "reviewed_synthetic_batch_plus_existing_dev_candidates_pending_annotation",
+    "pilot_target_records": 300,
+    "minimum_source_groups": 100,
+    "planned_roles": {
+      "train": 180,
+      "dev": 60,
+      "sealed_transfer_probe": 60
+    },
+    "planned_roles_note": "Mục tiêu ngân sách, chia theo nhóm trước; số hàng có thể lệch, không phá nhóm để đẹp tỷ lệ. Probe tự soạn không được gọi là holdout độc lập.",
+    "stance_targets": {
+      "confirmed": 0.4,
+      "dismissed": 0.4,
+      "uncertain": 0.2
+    },
+    "minimum_language_fraction": {
+      "vi": 0.4,
+      "en": 0.4
+    },
+    "supplied_suspicion_fraction_target": 0.6,
+    "no_suspicion_fraction_target": 0.4,
+    "grouping": [
+      "Tài liệu gốc/bản trích/định dạng/biến thể/bản dịch cùng family không qua split",
+      "So exact hash, normalized text và near duplicate; rà soát nhóm lớn",
+      "Không gom toàn bộ cùng một loại hành vi thành một nguồn độc lập hoặc một nhóm duy nhất"
+    ],
+    "uncertain_policy": "Dùng cho thiếu bằng chứng/ngữ cảnh của bài toán đã được thống nhất; bất đồng người gán nhãn chưa xử lý thì cách ly, không tự gán uncertain.",
+    "independent_holdout": {
+      "status": "not_collected",
+      "target_records": 200,
+      "target_binary_malicious": 80,
+      "target_binary_benign": 80,
+      "target_context_insufficient": 40,
+      "minimum_independent_source_families": 2,
+      "rule": "Kiểm tra provenance/overlap với mọi train/dev/probe/legacy. Không mặc định dataset khác tên là độc lập. Không dùng BIPIA derivative làm chứng cứ độc lập của BIPIA.",
+      "test_policy": "Khóa model/adapter/prompt/parser/tokenizer/quantizer/policy trước khi chạy. Nếu sửa theo lỗi test, chuyển bộ đó thành dev và cần holdout mới cho claim cuối."
+    },
+    "first_batch_target": {
+      "records": 30,
+      "minimum_source_groups": 10,
+      "stance_targets": {
+        "confirmed": 12,
+        "dismissed": 12,
+        "uncertain_context_insufficient": 6
+      },
+      "status": "human_review_complete",
+      "purpose": "Kiểm tra renderer/schema và quy trình nhãn trước mở rộng, chưa xuất train.",
+      "path": "benchmark/data/annotations/verifier-batch-v1",
+      "review_summary": "benchmark/data/annotations/verifier-batch-v1/tong-ket-ra-soat.json"
+    },
+    "expansion_staging": {
+      "path": "benchmark/data/annotations/verifier-expansion-v1",
+      "records": 356,
+      "source_label_counts": {
+        "benign": 346,
+        "malicious": 10
+      },
+      "new_context_labels_reviewed": 27,
+      "final_split_created": false,
+      "independent": false,
+      "reviewed_records": 30,
+      "direct_controls_excluded": 2,
+      "mixed_controls_quarantined": 1,
+      "review_summary": "benchmark/data/annotations/verifier-expansion-v1/tong-ket-luot-duyet-02.md"
+    },
+    "vietnamese_expansion": {
+      "path": "benchmark/data/annotations/verifier-vietnamese-v1",
+      "draft_records": 15,
+      "groups": 5,
+      "draft_stances": {
+        "confirmed": 5,
+        "dismissed": 5,
+        "uncertain": 5
+      },
+      "reviewed_records": 15,
+      "synthetic": true,
+      "independent": false,
+      "training_ready": false,
+      "status": "human_review_complete",
+      "final_stances": {
+        "confirmed": 5,
+        "dismissed": 5,
+        "uncertain": 5
+      },
+      "review_summary": "benchmark/data/annotations/verifier-vietnamese-v1/tong-ket-ra-soat.json"
+    },
+    "reviewed_progress": {
+      "in_scope_records": 251,
+      "stances": {
+        "confirmed": 81,
+        "uncertain": 43,
+        "dismissed": 127
+      },
+      "languages": {
+        "vi": 107,
+        "en": 137,
+        "zh": 4,
+        "en-vi": 3
+      },
+      "excludes_legacy_reference_20": true,
+      "training_export_created": false,
+      "note": "251 bản/168 parent/108 nhóm heuristic, 84 giữ dev và 167 ứng viên chờ điều kiện. Sáu tài liệu Markdown cùng một nguồn dịch cộng đồng.",
+      "source_parent_ids": 168,
+      "human_parent_stance_records": 87,
+      "ai_added_records": 164,
+      "annotation_scopes": {
+        "previous_records_retained_without_rescoring": 154,
+        "new_visible_fixture_only": 24,
+        "new_unchanged_external_records": 18,
+        "new_authored_attack_variants": 6
+      }
+    },
+    "external_normalization": {
+      "path": "benchmark/data/annotations/verifier-external-normalized-v1",
+      "source_records": 27,
+      "contract_examples": 54,
+      "parser_valid": 54,
+      "human_span_review_complete": false,
+      "training_ready": false
+    },
+    "corpus_group_audit": {
+      "path": "benchmark/experiments/verifier-corpus-overlap-v14/ket-qua.json",
+      "inventory_files": 85,
+      "reviewed_candidate_records": 251,
+      "candidate_groups": 108,
+      "legacy_reference_groups": 12,
+      "candidate_source_parents": 168,
+      "semantic_independence_verified": false,
+      "final_split_created": false
+    },
+    "gap_expansion": {
+      "path": "benchmark/data/annotations/verifier-gap-v1",
+      "records_pending": 0,
+      "reviewed_records": 15,
+      "long_sources": 9,
+      "parser_valid": 6,
+      "blocked_needs_window": 9,
+      "independent": false,
+      "training_ready": false,
+      "review_summary": "benchmark/data/annotations/verifier-gap-v1/tong-ket-ra-soat.json",
+      "status": "stance_review_complete_span_review_pending",
+      "span_boundary_human_review_complete": false,
+      "normalization": {
+        "path": "benchmark/data/annotations/verifier-gap-normalized-v1",
+        "windows": 251,
+        "unlabeled_windows": 236,
+        "contract_examples": 30,
+        "parser_valid": 30,
+        "human_window_span_review_complete": false,
+        "training_ready": false,
+        "context_window_review": {
+          "report": "benchmark/data/annotations/verifier-gap-normalized-v1/ket-qua-duyet-cua-so.json",
+          "reviewed_presented_context": 10,
+          "pending": 0,
+          "exact_span_boundaries_human_verified": false,
+          "quality_flags_resolved": false,
+          "reviewed_context_ai": 5,
+          "accepted_context_ai": 4,
+          "requires_context_repair_original": 1,
+          "source_quality_repaired_in_new_version": true
+        }
+      },
+      "repaired_versions": {
+        "path": "benchmark/data/annotations/verifier-gap-repair-v1",
+        "source_versions": 6,
+        "additional_independent_sources": 0,
+        "parser_valid": 12,
+        "mask_valid": 12,
+        "review_origin": "ai",
+        "human_approval_of_repaired_text": false,
+        "active_view": "benchmark/data/annotations/verifier-gap-repair-v1/ban-su-dung-hien-tai.json",
+        "training_ready": false
+      }
+    },
+    "external_ai_batch": {
+      "path": "benchmark/data/annotations/verifier-external-ai-v1",
+      "records": 30,
+      "source_parents": 24,
+      "labels": {
+        "confirmed": 12,
+        "dismissed": 12,
+        "uncertain": 6
+      },
+      "reviewer_type": "ai",
+      "setup": "text_only_no_user_intent",
+      "parser_valid": 60,
+      "mask_valid": 60,
+      "collator_valid": 60,
+      "new_conservative_groups": 13,
+      "largest_component": 18,
+      "training_ready": false,
+      "independent": false
+    },
+    "vietnamese_article_batch": {
+      "path": "benchmark/data/annotations/verifier-vietnamese-articles-v1",
+      "records": 30,
+      "source_parents": 6,
+      "annotation_scope": "selected_window_only",
+      "whole_document_negative_labels": false,
+      "window_stances": {
+        "confirmed": 6,
+        "dismissed": 18,
+        "uncertain": 6
+      },
+      "real_backgrounds": 6,
+      "synthetic_insertions": true,
+      "long_backgrounds": 5,
+      "long_versions": 25,
+      "parser_valid": 60,
+      "mask_valid": 60,
+      "collator_valid": 60,
+      "reviewer_type": "ai",
+      "license": "CC-BY-SA-4.0",
+      "new_conservative_groups": 6,
+      "training_ready": false,
+      "independent": false
+    },
+    "reviewed_progress_before_addressee": {
+      "in_scope_records": 147,
+      "stances": {
+        "confirmed": 45,
+        "dismissed": 74,
+        "uncertain": 28
+      },
+      "languages": {
+        "vi": 69,
+        "en": 74,
+        "zh": 4
+      },
+      "excludes_legacy_reference_20": true,
+      "training_export_created": false,
+      "note": "147 bản ghi/117 parent ID, không phải nguồn độc lập. 30 nhãn mới chỉ cho cửa sổ, không làm gold benign toàn tài liệu.",
+      "source_parent_ids": 117,
+      "human_parent_stance_records": 87,
+      "ai_added_records": 60,
+      "annotation_scopes": {
+        "previous_records_retained_without_rescoring": 117,
+        "new_selected_window_only_records": 30
+      }
+    },
+    "corpus_group_audit_previous": {
+      "path": "benchmark/experiments/verifier-corpus-overlap-v13/ket-qua.json",
+      "inventory_files": 73,
+      "reviewed_candidate_records": 233,
+      "candidate_groups": 102,
+      "legacy_reference_groups": 12,
+      "candidate_source_parents": 162,
+      "semantic_independence_verified": false,
+      "final_split_created": false
+    },
+    "addressee_context_batch": {
+      "report": "benchmark/experiments/verifier-addressee-context-v1/ket-qua.json",
+      "normalized_records": 7,
+      "quarantined_records": 1,
+      "training_eligible": false
+    },
+    "reviewed_progress_before_external_context": {
+      "in_scope_records": 154,
+      "stances": {
+        "confirmed": 47,
+        "dismissed": 79,
+        "uncertain": 28
+      },
+      "languages": {
+        "vi": 73,
+        "en": 77,
+        "zh": 4
+      },
+      "excludes_legacy_reference_20": true,
+      "training_export_created": false,
+      "note": "154 bản ghi/119 parent ID, không phải nguồn độc lập; bảy bản mới đã dùng chẩn đoán dev, không nhập train/holdout.",
+      "source_parent_ids": 119,
+      "human_parent_stance_records": 87,
+      "ai_added_records": 67,
+      "annotation_scopes": {
+        "previous_records_retained_without_rescoring": 147,
+        "new_visible_fixture_only": 7,
+        "new_quarantined_excluded": 1
+      }
+    },
+    "corpus_group_audit_before_external_context": {
+      "path": "benchmark/experiments/verifier-corpus-overlap-v8/ket-qua.json",
+      "inventory_files": 57,
+      "reviewed_candidate_records": 154,
+      "candidate_groups": 65,
+      "legacy_reference_groups": 12,
+      "semantic_independence_verified": false,
+      "final_split_created": false,
+      "candidate_source_parents": 119
+    },
+    "external_context_batch": {
+      "report": "benchmark/experiments/verifier-external-context-v1/ket-qua.json",
+      "new_records": 24,
+      "parser_valid": 48,
+      "training_eligible": false
+    },
+    "split_readiness_audit": {
+      "report": "benchmark/experiments/verifier-split-readiness-v1/ket-qua.json",
+      "registry_records": 178,
+      "parent_ids": 131,
+      "groups": 71,
+      "retain_dev_groups": 44,
+      "unassigned_groups": 27,
+      "native_pdf_docx_doc_files": 0,
+      "final_split_created": false,
+      "training_ready": false
+    },
+    "native_document_intake": {
+      "report": "benchmark/experiments/public-vi-native-intake-v1/ket-qua.json",
+      "files": 4,
+      "pdf": 2,
+      "docx": 2,
+      "extraction_ok": 4,
+      "rights_approved_for_training": 0,
+      "training_eligible": false
+    },
+    "latest_eligibility": {
+      "report": "benchmark/experiments/verifier-eligibility-v9/ket-qua.json",
+      "development_only_records": 84,
+      "candidate_records_pending_review": 183,
+      "candidate_groups": 68,
+      "minimum_additional_non_dev_candidates": 57,
+      "training_approved_records": 0,
+      "final_split_created": false
+    },
+    "reviewed_progress_before_recipient": {
+      "in_scope_records": 178,
+      "stances": {
+        "confirmed": 59,
+        "dismissed": 85,
+        "uncertain": 34
+      },
+      "languages": {
+        "vi": 73,
+        "en": 98,
+        "zh": 4,
+        "en-vi": 3
+      },
+      "excludes_legacy_reference_20": true,
+      "training_export_created": false,
+      "note": "178 bản ghi/131 parent ID không phải nguồn độc lập. Mỗi đoạn Python và đối chứng cùng parent; InjecAgent mới nhập nhóm lớn 30 bản.",
+      "source_parent_ids": 131,
+      "human_parent_stance_records": 87,
+      "ai_added_records": 91,
+      "annotation_scopes": {
+        "previous_records_retained_without_rescoring": 154,
+        "new_visible_fixture_only": 24,
+        "new_unchanged_external_records": 18,
+        "new_authored_attack_variants": 6
+      }
+    },
+    "recipient_contrast_batch": {
+      "path": "benchmark/data/annotations/verifier-recipient-contrast-v1",
+      "records": 32,
+      "authored_scenarios": 8,
+      "reviewer": "AI",
+      "parser_mask_collator_valid": 64,
+      "training_ready": false
+    },
+    "llmail_intake": {
+      "source": "microsoft/llmail-inject-challenge",
+      "revision": "1063bdf01ec8762b812d5e06ee768a06faa5a6f7",
+      "report": "benchmark/experiments/llmail-intake-v1/ket-qua.json",
+      "records": 251,
+      "ai_drafts": 12,
+      "canonical_annotation_records_added": 23,
+      "training_ready": false,
+      "remaining_intake": 228,
+      "normalization_report": "benchmark/experiments/llmail-normalization-v1/ket-qua.json",
+      "expansion_report": "benchmark/experiments/llmail-expansion-v1/ket-qua.json"
+    },
+    "reviewed_progress_before_llmail": {
+      "in_scope_records": 210,
+      "stances": {
+        "confirmed": 67,
+        "uncertain": 42,
+        "dismissed": 101
+      },
+      "languages": {
+        "vi": 89,
+        "en": 114,
+        "zh": 4,
+        "en-vi": 3
+      },
+      "excludes_legacy_reference_20": true,
+      "training_export_created": false,
+      "note": "210 bản/139 parent/79 nhóm heuristic, 84 giữ dev và 126 ứng viên chờ điều kiện; tám bối cảnh tự soạn không phải nguồn độc lập.",
+      "source_parent_ids": 139,
+      "human_parent_stance_records": 87,
+      "ai_added_records": 123,
+      "annotation_scopes": {
+        "previous_records_retained_without_rescoring": 154,
+        "new_visible_fixture_only": 24,
+        "new_unchanged_external_records": 18,
+        "new_authored_attack_variants": 6
+      }
+    },
+    "reviewed_progress_before_llmail_expansion": {
+      "in_scope_records": 222,
+      "stances": {
+        "confirmed": 71,
+        "uncertain": 42,
+        "dismissed": 109
+      },
+      "languages": {
+        "vi": 89,
+        "en": 126,
+        "zh": 4,
+        "en-vi": 3
+      },
+      "excludes_legacy_reference_20": true,
+      "training_export_created": false,
+      "note": "222 bản/151 parent/91 nhóm heuristic; 84 giữ dev, 138 ứng viên chờ điều kiện. Mười hai email LLMail không phải holdout độc lập.",
+      "source_parent_ids": 151,
+      "human_parent_stance_records": 87,
+      "ai_added_records": 135,
+      "annotation_scopes": {
+        "previous_records_retained_without_rescoring": 154,
+        "new_visible_fixture_only": 24,
+        "new_unchanged_external_records": 18,
+        "new_authored_attack_variants": 6
+      }
+    },
+    "reviewed_progress_before_markdown_vi": {
+      "in_scope_records": 233,
+      "stances": {
+        "confirmed": 75,
+        "uncertain": 43,
+        "dismissed": 115
+      },
+      "languages": {
+        "vi": 89,
+        "en": 137,
+        "zh": 4,
+        "en-vi": 3
+      },
+      "excludes_legacy_reference_20": true,
+      "training_export_created": false,
+      "note": "233 bản/162 parent/102 nhóm heuristic; 84 giữ dev, 149 ứng viên chờ điều kiện. Đạt số nhóm không chứng minh độc lập hoặc đủ điều kiện train.",
+      "source_parent_ids": 162,
+      "human_parent_stance_records": 87,
+      "ai_added_records": 146,
+      "annotation_scopes": {
+        "previous_records_retained_without_rescoring": 154,
+        "new_visible_fixture_only": 24,
+        "new_unchanged_external_records": 18,
+        "new_authored_attack_variants": 6
+      }
+    },
+    "vietnamese_markdown_batch": {
+      "report": "benchmark/experiments/vietnamese-markdown-v1/ket-qua.json",
+      "records": 18,
+      "source_documents": 6,
+      "source_families": 1,
+      "content_license_declared": "CC-BY-SA-4.0",
+      "parser_token_mask_collator_valid": 36,
+      "training_ready": false
+    }
+  },
+  "training_proposal": {
+    "method": "QLoRA 4-bit NF4 + LoRA, base weights frozen",
+    "configuration_status": "technical_resource_candidate_not_quality_validated_not_trainer_integrated",
+    "preferred_isolated_python": "3.12",
+    "dependency_lock": "benchmark/experiments/verifier-collator-v1/phu-thuoc.txt",
+    "quant_type": "nf4",
+    "double_quant": true,
+    "compute_dtype": "fp16, kiểm tra phần cứng thực tế; không mặc định bf16",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "max_sequence_tokens_initial": 2048,
+    "gradient_checkpointing": true,
+    "packing": false,
+    "seed": 42,
+    "learning_rate_candidates": [
+      0.0001,
+      0.00005
+    ],
+    "max_epochs": 2,
+    "candidate_budget": 2,
+    "selection": "Chỉ dev; không chọn theo training loss hoặc holdout. Dừng nếu học thuộc, tăng false clear/FP hoặc uncertain.",
+    "long_input": "Không truncate ngầm. Cần tokenizer audit; nếu quá ngân sách thì tạo window/batch có đủ directive và ngữ cảnh, cùng source group, hoặc loại khỏi lượt train đó và ghi coverage. Eval pipeline vẫn dùng file gốc đầy đủ.",
+    "technical_smoke": {
+      "steps": 10,
+      "input": "Chỉ fixture hợp lệ và mẫu train mới đã duyệt, không dùng legacy20/probe/holdout làm bài học",
+      "required": [
+        "Nạp base/tokenizer đúng commit",
+        "Đúng completion mask và trích dẫn, prompt/source loss=-100",
+        "Forward/backward/optimizer không OOM hoặc NaN",
+        "Đo peak VRAM, RAM và thời gian",
+        "Save/reload adapter thành công"
+      ],
+      "passed": null,
+      "note": "Resource smoke đã đạt riêng; full trainer/citation smoke trên dữ liệu train chưa thực hiện. Không coi technical_smoke.passed=null là thất bại resource smoke."
+    },
+    "output_locations": {
+      "base_cache": "E:\\IPI-Training\\cache\\huggingface\\hub",
+      "merged_weights": "E:\\IPI-Training\\weights",
+      "adapter": "E:\\IPI-Training\\adapters\\verifier-pilot-v1",
+      "trainer_output_dir": "E:\\IPI-Training\\checkpoints\\verifier-pilot-v1",
+      "note": "Trainer/exporter tương lai phải truyền rõ các đường output này; biến IPI_* không tự đổi output_dir của thư viện."
+    },
+    "previous_max_sequence_tokens_initial": 1024,
+    "loss_backend": "scripts/verifier_supervised_loss.py",
+    "collator": "scripts/verifier_collator.py",
+    "grad_scaler_initial_scale": 1024,
+    "gradient_clip_norm": 1,
+    "process_cuda_memory_fraction": 0.8,
+    "resource_smoke": {
+      "report": "benchmark/experiments/verifier-gpu-2048-10-completion-t256-v3/ket-qua.json",
+      "steps": 10,
+      "sequence_tokens": 2048,
+      "supervised_tokens": 256,
+      "passed": true,
+      "save_reload_verified": true,
+      "scope": "Fixture kỹ thuật mới, có cập nhật adapter thử; không dùng dev/holdout làm bài học.",
+      "trainer_integrated": false,
+      "gradient_accumulation_8_verified": false,
+      "resource_headroom": "limited",
+      "max_current_reviewed_target_tokens": 164
+    }
+  },
+  "evaluation": {
+    "baseline_and_adapter_control": "So cùng HF base NF4/backend với adapter on/off, cùng prompt/schema/tokenizer/seed/inputs; không trộn thay prompt vào tác động fine-tuning.",
+    "deployment_quantization_control": "Nếu export GGUF, so base và fine-tune qua cùng converter/quantizer/template/runtime; giữ Ollama hiện tại làm mốc lịch sử riêng. Không coi NF4 là Q4_K_M.",
+    "metrics": [
+      "TP/FP/TN/FN và abstention riêng",
+      "precision/recall/F1/FPR với undefined=null",
+      "3-way stance và độ đúng từng trường/ngữ cảnh",
+      "JSON/schema, logic consistency và semantic correctness tách riêng",
+      "grounded citation và độ đúng nội dung bằng chứng tách riêng",
+      "coverage, failures, timeout",
+      "per-source/group/language/format/position/length",
+      "paired cases và 95% confidence intervals, group-aware uncertainty",
+      "p50/p95 latency, peak VRAM/RAM và disk checkpoint"
+    ],
+    "stages": [
+      "Dev held fixed + legacy regression; chưa dùng holdout",
+      "Nếu đạt thì chạy sealed transfer probe, không chọn checkpoint theo probe",
+      "Nếu không sửa tiếp, khóa cấu hình và kiểm tra holdout độc lập",
+      "Đo pipeline đầy đủ với Detector/rules/policy cố định, paired baseline/candidate"
+    ],
+    "gates": {
+      "json_schema_rate_min": 0.98,
+      "context_consistency_min": 0.95,
+      "confirmed_attack_recall_min": 0.9,
+      "false_positive_rate_max": 0.05,
+      "binary_decision_coverage_min": 0.8,
+      "context_insufficient_correct_uncertain_rate_min": 0.8,
+      "no_new_false_clear_on_legacy_confirmed_attacks": true,
+      "pipeline_no_increased_fp_or_false_clear": true,
+      "pipeline_coverage_not_lower": true,
+      "latency_p95_ratio_max": 1.25,
+      "hardware_oom_allowed": false,
+      "note": "Ngưỡng kỹ thuật đề xuất trước pilot; không phải chứng nhận an toàn. Khóa trước train/test; thay ngưỡng phải tạo kế hoạch mới và không hợp thức hóa kết quả đã xem."
+    }
+  },
+  "environment": {
+    "inventory_path": "benchmark/experiments/verifier-finetune-pilot-v1/kiem-tra-moi-truong-sau-cau-hinh-o-e.json",
+    "current_training_ready": false,
+    "forward_backward_smoke_verified": true,
+    "local_disk_budget_gib": 12,
+    "budget_note": "Ngân sách thực hành dự án, chưa phải ước lượng yêu cầu chính xác của mọi thư viện/weights/merge. Cần đo trên cache/output được chọn.",
+    "installation_performed": true,
+    "alternatives": "Nếu không đủ tài nguyên, báo kết quả đo và đề xuất môi trường khác. Không tự mua GPU/cloud, tải dữ liệu lên dịch vụ hoặc xóa file để đủ chỗ.",
+    "python_environment_created": true,
+    "python_version": "3.12.15",
+    "python_executable": "E:\\IPI-Training\\venvs\\verifier\\Scripts\\python.exe",
+    "training_storage_root": "E:\\IPI-Training",
+    "ml_libraries_installed": true,
+    "tokenizer_libraries_installed": true,
+    "ml_libraries_note": "Thư viện ML đã có trên E; Trainer completion-only một thiết bị/phiên bản khóa đã qua CPU và smoke QLoRA 2048 token, GA8, checkpoint/resume. Chưa pilot trên dữ liệu IPI.",
+    "forward_backward_smoke_scope": "fresh_synthetic_resource_fixture_only",
+    "observed_storage_growth_gib": 13.44,
+    "training_ready_note": "Trainer đã qua smoke kỹ thuật, còn thiếu dữ liệu đủ điều kiện, split/holdout độc lập và đánh giá nhận diện.",
+    "trainer_integration_smoke_verified": true,
+    "gradient_accumulation_8_verified": true,
+    "checkpoint_resume_verified": true
+  },
+  "next_action": "Bổ sung nhóm mới có đủ ngữ cảnh và đối chứng: theo kịch bản pool 240, thiếu 36 confirmed/8 dismissed/13 uncertain, ít nhất 12 tiếng Việt nằm trong số đó. Giữ nhóm nguyên vẹn; chuẩn bị holdout độc lập 200 mẫu riêng, không dùng các ứng viên đã rà làm holdout.",
+  "technical_sources": [
+    "https://huggingface.co/docs/peft/developer_guides/quantization",
+    "https://huggingface.co/docs/trl/sft_trainer",
+    "https://huggingface.co/docs/bitsandbytes/main/en/installation",
+    "https://docs.ollama.com/import"
+  ],
+  "storage_update": {
+    "requested_by_user": true,
+    "previous_plan_sha256": "5e17c1bc207e355ff87991cc94c6fc25e9c077a1745bafb8977208f669080c3c",
+    "report": "benchmark/experiments/storage-drive-e-v1/ket-qua.json",
+    "note": "Chỉ bổ sung môi trường/lưu trữ sau yêu cầu dùng E; mục tiêu model, dữ liệu, schema và cổng đo không đổi. Chưa train."
+  },
+  "priority_one_gate": {
+    "status": "baseline_complete_not_passed",
+    "progress": "docs/planning/tien-do-uu-tien-1.md",
+    "baseline": "benchmark/experiments/priority-one-baseline-v1/ket-qua.json",
+    "note": "Đã đo 72/72 ca, còn lỗi nhận diện/trích dẫn. Chưa chuyển sang huấn luyện hoặc phản biện chỉ vì dữ liệu đã có."
+  },
+  "selection_followup": {
+    "report": "benchmark/experiments/selector-spread-v1/ket-qua.json",
+    "candidate_promoted": false,
+    "production_selector_changed": false,
+    "pipeline_candidate_run": false
+  },
+  "bounded_review_followup": {
+    "report": "benchmark/experiments/bounded-document-review-v1/ket-qua.json",
+    "production_promoted": false,
+    "training_started": false
+  },
+  "citation_context_followup": {
+    "report": "benchmark/experiments/citation-context-controls-v1/ket-qua.json",
+    "production_changed": false,
+    "training_started": false
+  },
+  "production_progress_followup": {
+    "report": "benchmark/experiments/production-review-progress-v1/ket-qua.json",
+    "integrated": true,
+    "training_started": false
+  },
+  "trainer_followup": {
+    "report": "benchmark/experiments/verifier-trainer-smoke-v1/ket-qua.json",
+    "previous_plan_sha256": "63e0018302f841bd972fc0257c5f57a529338f75716361541c3939339a1f86fe",
+    "pilot_training_started": false,
+    "smoke_only": true
+  },
+  "pool_gap_followup": {
+    "report": "benchmark/experiments/verifier-pool-gap-v1/ket-qua.json",
+    "planning_only": true,
+    "training_ready": false
+  },
+  "vietnamese_workflow_followup": {
+    "registry": "benchmark/experiments/verifier-eligibility-v6/ket-qua.json",
+    "records": 16,
+    "parser_token_mask_collator_valid": 32,
+    "training_started": false
+  },
+  "workflow_semantic_rereview": {
+    "report": "benchmark/data/annotations/verifier-vietnamese-workflow-reviewed-v1/danh-gia-ai.json",
+    "reviewed": 16,
+    "framing_revised": 4,
+    "stance_changed": 0,
+    "independent_review": false,
+    "training_started": false
+  },
+  "authored_semantic_rereview": {
+    "report": "benchmark/data/annotations/verifier-authored-reviewed-v1/manifest.json",
+    "new_reviewed": 47,
+    "total_own_authored_reviewed": 63,
+    "framing_revised_this_round": 13,
+    "stance_changed": 0,
+    "independent_review": false,
+    "training_started": false
+  },
+  "external_uncertain_rereview": {
+    "report": "benchmark/data/annotations/verifier-external-uncertain-reviewed-v1/manifest.json",
+    "reviewed": 18,
+    "framing_revised": 17,
+    "stance_changed": 0,
+    "independent_review": false,
+    "training_started": false
+  },
+  "candidate_semantic_review": {
+    "report": "benchmark/experiments/verifier-external-binary-review-v1/ket-qua.json",
+    "total_candidates_reviewed": 183,
+    "external_binary_reviewed": 102,
+    "independent_review": false,
+    "training_started": false
+  },
+  "targeted_acquisition": {
+    "report": "benchmark/experiments/verifier-targeted-acquisition-v1/yeu-cau.json",
+    "minimum_additional_records": 57
+  }
+}

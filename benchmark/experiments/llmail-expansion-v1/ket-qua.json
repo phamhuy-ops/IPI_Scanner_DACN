@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "new_records": 11,
+  "labels": {
+    "confirmed": 4,
+    "dismissed": 6,
+    "uncertain": 1
+  },
+  "ai_reviewed_not_human": true,
+  "source_label_disagreements": 1,
+  "parser_token_mask_collator_valid": 22,
+  "token_max": 1676,
+  "tests": {
+    "node": 3,
+    "python": 6
+  },
+  "previous_llmail_12_records_unchanged": true,
+  "prior_91_groups_not_split": true,
+  "registry": {
+    "records": 233,
+    "parents": 162,
+    "groups": 102,
+    "roles": {
+      "development_regression_only": 84,
+      "candidate_pending_source_privacy_and_split_review": 149
+    }
+  },
+  "model_called": false,
+  "training_started": false,
+  "runtime_changed": false,
+  "priority_one_complete": false,
+  "commands": [
+    "node --test scripts/prepare-verifier-llmail.test.cjs",
+    "node scripts/prepare-verifier-llmail.cjs --batch verifier-llmail-expansion-v1 --draft benchmark/experiments/llmail-expansion-v1/nhap-nhan-ngu-canh-ai.json",
+    "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/audit_verifier_preview.py --source verifier-llmail-expansion-v1 --output verifier-llmail-expansion-tokenizer-v1",
+    "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/audit-verifier-corpus.py verifier-corpus-overlap-v13",
+    "node scripts/register-verifier-batch.cjs --batch verifier-llmail-expansion-v1 --base verifier-eligibility-v3 --audit verifier-corpus-overlap-v13 --tokens verifier-llmail-expansion-tokenizer-v1 --output verifier-eligibility-v4"
+  ],
+  "limitations": [
+    "Cùng benchmark LLMail, nhiều email còn lại gần trùng; không coi mỗi mẫu là nguồn độc lập.",
+    "Một nhãn uncertain khác nhãn nguồn trong setup text-only; giữ bằng chứng và nhãn nguồn riêng, không suy hiệu quả model.",
+    "102 nhóm heuristic không chứng minh đã đủ chất lượng/độc lập hoặc đủ điều kiện train."
+  ]
+}

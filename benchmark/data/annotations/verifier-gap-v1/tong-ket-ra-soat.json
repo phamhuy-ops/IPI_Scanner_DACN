@@ -1,0 +1,32 @@
+{
+  "total": 15,
+  "human_reviewed_stance": 15,
+  "pending": 0,
+  "accepted_ids": [
+    "gap-001",
+    "gap-002",
+    "gap-003",
+    "gap-004",
+    "gap-005",
+    "gap-006",
+    "gap-007",
+    "gap-008",
+    "gap-009",
+    "gap-010",
+    "gap-011",
+    "gap-012",
+    "gap-013",
+    "gap-014",
+    "gap-015"
+  ],
+  "reviewed_stances": {
+    "confirmed": 5,
+    "dismissed": 5,
+    "uncertain": 5
+  },
+  "span_boundary_human_review_complete": false,
+  "training_ready": false,
+  "independent": false,
+  "worksheet_sha256": "2fc535c1412720db01c3ec478da0b7f94acf7540816c7353cf9669db199bc5dd",
+  "note": "Manifest là ảnh chụp lúc tạo; tổng kết này phản ánh tiến độ hiện tại. Hoàn tất duyệt nhãn không đồng nghĩa sẵn sàng train."
+}

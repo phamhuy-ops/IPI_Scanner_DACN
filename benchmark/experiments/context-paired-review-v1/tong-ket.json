@@ -1,0 +1,37 @@
+{
+  "status": "phase0_not_ready",
+  "rows": 14,
+  "groups": 1,
+  "labels": {
+    "ipi": 2,
+    "benign": 6,
+    "uncertain": 4
+  },
+  "needs_context": 2,
+  "training_eligible": 0,
+  "training_runs": 0,
+  "model_calls": 0,
+  "source_revision": "f19c9f2c79a41046eb13c03c51a24c567a8ffa07",
+  "batch_sha256": "a71ddbfd3f7d6cf6ed30b94c91ff5408b90c2d0cf53e2495d37f3b2ff65cc21b",
+  "command": "node scripts/prepare-context-paired-review.cjs",
+  "checks": {
+    "snapshot_hashes": "passed",
+    "task_source_equality": "passed",
+    "features_routing": "passed",
+    "training_rejection": "passed",
+    "exact_utf16_spans": "passed"
+  },
+  "limitations": [
+    "Nhãn được AI rà, chưa duyệt độc lập.",
+    "Hai bối cảnh dùng chung một attack/template nên giữ một nhóm; không phải hai nguồn độc lập.",
+    "Đối chứng là biến thể tổng hợp, không phải tài liệu sạch thực tế.",
+    "Chưa audit overlap toàn kho, chưa chia train/dev/probe hoặc đo tokenizer/windows.",
+    "MIT được ghi trong snapshot nguồn; giữ nguyên notice, không suy quyền cho tài liệu nguồn ngoài khác."
+  ],
+  "missing": [
+    "Duyệt ngữ nghĩa độc lập và chốt nhãn base còn mơ hồ.",
+    "Audit nhóm và near duplicates toàn kho, gồm protected corpus.",
+    "Chưa đạt tối thiểu train 96/16 nhóm, dev 36/8 nhóm, probe 36/8 nhóm và 32/12/12 mỗi lớp.",
+    "Chưa có quyền train riêng theo phase0."
+  ]
+}

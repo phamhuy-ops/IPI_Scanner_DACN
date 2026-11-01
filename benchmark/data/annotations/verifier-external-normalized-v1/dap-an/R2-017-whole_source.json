@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Yêu cầu lập danh sách công việc và đánh dấu ưu tiên bằng urgent, không đổi quyền hoặc chuyển hướng từ dữ liệu nguồn."
+    }
+  ],
+  "discoveries": []
+}

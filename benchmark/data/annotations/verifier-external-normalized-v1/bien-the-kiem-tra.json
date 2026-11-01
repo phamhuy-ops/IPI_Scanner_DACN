@@ -1,0 +1,812 @@
+[
+  {
+    "id": "R2-001-whole_source",
+    "source_record_id": "exp-notinject-0025-f4a0e2c4",
+    "group_id": "vg-a068538c28853674",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-001-whole_source.json",
+    "target_file": "dap-an/R2-001-whole_source.json"
+  },
+  {
+    "id": "R2-001-none",
+    "source_record_id": "exp-notinject-0025-f4a0e2c4",
+    "group_id": "vg-a068538c28853674",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-001-none.json",
+    "target_file": "dap-an/R2-001-none.json"
+  },
+  {
+    "id": "R2-003-whole_source",
+    "source_record_id": "exp-notinject-0004-2c788ef3",
+    "group_id": "vg-434d1c300ee2a1cc",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-003-whole_source.json",
+    "target_file": "dap-an/R2-003-whole_source.json"
+  },
+  {
+    "id": "R2-003-none",
+    "source_record_id": "exp-notinject-0004-2c788ef3",
+    "group_id": "vg-434d1c300ee2a1cc",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-003-none.json",
+    "target_file": "dap-an/R2-003-none.json"
+  },
+  {
+    "id": "R2-004-whole_source",
+    "source_record_id": "exp-realistic-0008-73df88f2",
+    "group_id": "vg-ff6cff3052d9f517",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-004-whole_source.json",
+    "target_file": "dap-an/R2-004-whole_source.json"
+  },
+  {
+    "id": "R2-004-none",
+    "source_record_id": "exp-realistic-0008-73df88f2",
+    "group_id": "vg-ff6cff3052d9f517",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 1,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-004-none.json",
+    "target_file": "dap-an/R2-004-none.json"
+  },
+  {
+    "id": "R2-005-whole_source",
+    "source_record_id": "exp-notinject-0033-463c34f3",
+    "group_id": "vg-033643bd79e228c8",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-005-whole_source.json",
+    "target_file": "dap-an/R2-005-whole_source.json"
+  },
+  {
+    "id": "R2-005-none",
+    "source_record_id": "exp-notinject-0033-463c34f3",
+    "group_id": "vg-033643bd79e228c8",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-005-none.json",
+    "target_file": "dap-an/R2-005-none.json"
+  },
+  {
+    "id": "R2-006-whole_source",
+    "source_record_id": "exp-realistic-0012-7e24f5e6",
+    "group_id": "vg-2a76a1ec1ee5db07",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-006-whole_source.json",
+    "target_file": "dap-an/R2-006-whole_source.json"
+  },
+  {
+    "id": "R2-006-none",
+    "source_record_id": "exp-realistic-0012-7e24f5e6",
+    "group_id": "vg-2a76a1ec1ee5db07",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-006-none.json",
+    "target_file": "dap-an/R2-006-none.json"
+  },
+  {
+    "id": "R2-007-whole_source",
+    "source_record_id": "exp-notinject-0046-658ac079",
+    "group_id": "vg-f4181dd4477d1736",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-007-whole_source.json",
+    "target_file": "dap-an/R2-007-whole_source.json"
+  },
+  {
+    "id": "R2-007-none",
+    "source_record_id": "exp-notinject-0046-658ac079",
+    "group_id": "vg-f4181dd4477d1736",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-007-none.json",
+    "target_file": "dap-an/R2-007-none.json"
+  },
+  {
+    "id": "R2-008-whole_source",
+    "source_record_id": "exp-realistic-0013-5e68cad3",
+    "group_id": "vg-7ef9d18b2ccde6cc",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-008-whole_source.json",
+    "target_file": "dap-an/R2-008-whole_source.json"
+  },
+  {
+    "id": "R2-008-none",
+    "source_record_id": "exp-realistic-0013-5e68cad3",
+    "group_id": "vg-7ef9d18b2ccde6cc",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-008-none.json",
+    "target_file": "dap-an/R2-008-none.json"
+  },
+  {
+    "id": "R2-009-whole_source",
+    "source_record_id": "exp-notinject-0072-46f87530",
+    "group_id": "vg-743566b7d9f14d2d",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-009-whole_source.json",
+    "target_file": "dap-an/R2-009-whole_source.json"
+  },
+  {
+    "id": "R2-009-none",
+    "source_record_id": "exp-notinject-0072-46f87530",
+    "group_id": "vg-743566b7d9f14d2d",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-009-none.json",
+    "target_file": "dap-an/R2-009-none.json"
+  },
+  {
+    "id": "R2-011-whole_source",
+    "source_record_id": "exp-notinject-0023-9afd9588",
+    "group_id": "vg-c62e17f8720d49f2",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-011-whole_source.json",
+    "target_file": "dap-an/R2-011-whole_source.json"
+  },
+  {
+    "id": "R2-011-none",
+    "source_record_id": "exp-notinject-0023-9afd9588",
+    "group_id": "vg-c62e17f8720d49f2",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-011-none.json",
+    "target_file": "dap-an/R2-011-none.json"
+  },
+  {
+    "id": "R2-012-whole_source",
+    "source_record_id": "exp-realistic-0014-220c66f9",
+    "group_id": "vg-50b69e69dc3e3cbf",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-012-whole_source.json",
+    "target_file": "dap-an/R2-012-whole_source.json"
+  },
+  {
+    "id": "R2-012-none",
+    "source_record_id": "exp-realistic-0014-220c66f9",
+    "group_id": "vg-50b69e69dc3e3cbf",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-012-none.json",
+    "target_file": "dap-an/R2-012-none.json"
+  },
+  {
+    "id": "R2-013-whole_source",
+    "source_record_id": "exp-notinject-0097-394af4ef",
+    "group_id": "vg-4f155465469f90fe",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-013-whole_source.json",
+    "target_file": "dap-an/R2-013-whole_source.json"
+  },
+  {
+    "id": "R2-013-none",
+    "source_record_id": "exp-notinject-0097-394af4ef",
+    "group_id": "vg-4f155465469f90fe",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-013-none.json",
+    "target_file": "dap-an/R2-013-none.json"
+  },
+  {
+    "id": "R2-014-whole_source",
+    "source_record_id": "exp-realistic-0017-c4d2e538",
+    "group_id": "vg-62f19b39c0a3feb0",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-014-whole_source.json",
+    "target_file": "dap-an/R2-014-whole_source.json"
+  },
+  {
+    "id": "R2-014-none",
+    "source_record_id": "exp-realistic-0017-c4d2e538",
+    "group_id": "vg-62f19b39c0a3feb0",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-014-none.json",
+    "target_file": "dap-an/R2-014-none.json"
+  },
+  {
+    "id": "R2-015-whole_source",
+    "source_record_id": "exp-notinject-0040-003afab6",
+    "group_id": "vg-a17b54768512df29",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-015-whole_source.json",
+    "target_file": "dap-an/R2-015-whole_source.json"
+  },
+  {
+    "id": "R2-015-none",
+    "source_record_id": "exp-notinject-0040-003afab6",
+    "group_id": "vg-a17b54768512df29",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-015-none.json",
+    "target_file": "dap-an/R2-015-none.json"
+  },
+  {
+    "id": "R2-016-whole_source",
+    "source_record_id": "exp-realistic-0015-ce348595",
+    "group_id": "vg-80180f4d72d19f64",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-016-whole_source.json",
+    "target_file": "dap-an/R2-016-whole_source.json"
+  },
+  {
+    "id": "R2-016-none",
+    "source_record_id": "exp-realistic-0015-ce348595",
+    "group_id": "vg-80180f4d72d19f64",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-016-none.json",
+    "target_file": "dap-an/R2-016-none.json"
+  },
+  {
+    "id": "R2-017-whole_source",
+    "source_record_id": "exp-notinject-0074-9e918b74",
+    "group_id": "vg-f23014d2a3d68610",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-017-whole_source.json",
+    "target_file": "dap-an/R2-017-whole_source.json"
+  },
+  {
+    "id": "R2-017-none",
+    "source_record_id": "exp-notinject-0074-9e918b74",
+    "group_id": "vg-f23014d2a3d68610",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-017-none.json",
+    "target_file": "dap-an/R2-017-none.json"
+  },
+  {
+    "id": "R2-018-whole_source",
+    "source_record_id": "exp-realistic-0002-f3806686",
+    "group_id": "vg-b0db58d959519e24",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-018-whole_source.json",
+    "target_file": "dap-an/R2-018-whole_source.json"
+  },
+  {
+    "id": "R2-018-none",
+    "source_record_id": "exp-realistic-0002-f3806686",
+    "group_id": "vg-b0db58d959519e24",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 1,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-018-none.json",
+    "target_file": "dap-an/R2-018-none.json"
+  },
+  {
+    "id": "R2-019-whole_source",
+    "source_record_id": "exp-notinject-0098-0be1a2e0",
+    "group_id": "vg-495413a1c5992f11",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-019-whole_source.json",
+    "target_file": "dap-an/R2-019-whole_source.json"
+  },
+  {
+    "id": "R2-019-none",
+    "source_record_id": "exp-notinject-0098-0be1a2e0",
+    "group_id": "vg-495413a1c5992f11",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-019-none.json",
+    "target_file": "dap-an/R2-019-none.json"
+  },
+  {
+    "id": "R2-020-whole_source",
+    "source_record_id": "exp-realistic-0007-6f8eb908",
+    "group_id": "vg-84b2b27e52078349",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-020-whole_source.json",
+    "target_file": "dap-an/R2-020-whole_source.json"
+  },
+  {
+    "id": "R2-020-none",
+    "source_record_id": "exp-realistic-0007-6f8eb908",
+    "group_id": "vg-84b2b27e52078349",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 1,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-020-none.json",
+    "target_file": "dap-an/R2-020-none.json"
+  },
+  {
+    "id": "R2-021-whole_source",
+    "source_record_id": "exp-notinject-0046-990e7221",
+    "group_id": "vg-172d6ffda2966081",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-021-whole_source.json",
+    "target_file": "dap-an/R2-021-whole_source.json"
+  },
+  {
+    "id": "R2-021-none",
+    "source_record_id": "exp-notinject-0046-990e7221",
+    "group_id": "vg-172d6ffda2966081",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-021-none.json",
+    "target_file": "dap-an/R2-021-none.json"
+  },
+  {
+    "id": "R2-022-whole_source",
+    "source_record_id": "exp-realistic-0011-b2c71fb6",
+    "group_id": "vg-a6e9ebcca0860022",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-022-whole_source.json",
+    "target_file": "dap-an/R2-022-whole_source.json"
+  },
+  {
+    "id": "R2-022-none",
+    "source_record_id": "exp-realistic-0011-b2c71fb6",
+    "group_id": "vg-a6e9ebcca0860022",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-022-none.json",
+    "target_file": "dap-an/R2-022-none.json"
+  },
+  {
+    "id": "R2-023-whole_source",
+    "source_record_id": "exp-notinject-0059-243abe44",
+    "group_id": "vg-fa7dd4524152cefd",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-023-whole_source.json",
+    "target_file": "dap-an/R2-023-whole_source.json"
+  },
+  {
+    "id": "R2-023-none",
+    "source_record_id": "exp-notinject-0059-243abe44",
+    "group_id": "vg-fa7dd4524152cefd",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-023-none.json",
+    "target_file": "dap-an/R2-023-none.json"
+  },
+  {
+    "id": "R2-024-whole_source",
+    "source_record_id": "exp-realistic-0006-53e0168e",
+    "group_id": "vg-ee13a1deb582d7ca",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-024-whole_source.json",
+    "target_file": "dap-an/R2-024-whole_source.json"
+  },
+  {
+    "id": "R2-024-none",
+    "source_record_id": "exp-realistic-0006-53e0168e",
+    "group_id": "vg-ee13a1deb582d7ca",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 1,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-024-none.json",
+    "target_file": "dap-an/R2-024-none.json"
+  },
+  {
+    "id": "R2-025-whole_source",
+    "source_record_id": "exp-notinject-0056-1d019692",
+    "group_id": "vg-03ccb899044b71c2",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-025-whole_source.json",
+    "target_file": "dap-an/R2-025-whole_source.json"
+  },
+  {
+    "id": "R2-025-none",
+    "source_record_id": "exp-notinject-0056-1d019692",
+    "group_id": "vg-03ccb899044b71c2",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-025-none.json",
+    "target_file": "dap-an/R2-025-none.json"
+  },
+  {
+    "id": "R2-027-whole_source",
+    "source_record_id": "exp-notinject-0060-ac0984af",
+    "group_id": "vg-9036e155e2b519e8",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-027-whole_source.json",
+    "target_file": "dap-an/R2-027-whole_source.json"
+  },
+  {
+    "id": "R2-027-none",
+    "source_record_id": "exp-notinject-0060-ac0984af",
+    "group_id": "vg-9036e155e2b519e8",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-027-none.json",
+    "target_file": "dap-an/R2-027-none.json"
+  },
+  {
+    "id": "R2-028-whole_source",
+    "source_record_id": "exp-realistic-0016-b1d1ebf9",
+    "group_id": "vg-3e2cdfd55d3c6508",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-028-whole_source.json",
+    "target_file": "dap-an/R2-028-whole_source.json"
+  },
+  {
+    "id": "R2-028-none",
+    "source_record_id": "exp-realistic-0016-b1d1ebf9",
+    "group_id": "vg-3e2cdfd55d3c6508",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-028-none.json",
+    "target_file": "dap-an/R2-028-none.json"
+  },
+  {
+    "id": "R2-029-whole_source",
+    "source_record_id": "exp-notinject-0051-7ac63a31",
+    "group_id": "vg-f01182bda458d92d",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-029-whole_source.json",
+    "target_file": "dap-an/R2-029-whole_source.json"
+  },
+  {
+    "id": "R2-029-none",
+    "source_record_id": "exp-notinject-0051-7ac63a31",
+    "group_id": "vg-f01182bda458d92d",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-029-none.json",
+    "target_file": "dap-an/R2-029-none.json"
+  },
+  {
+    "id": "R2-030-whole_source",
+    "source_record_id": "exp-realistic-0010-12f63f21",
+    "group_id": "vg-e91ed17929479e18",
+    "mode": "whole_source",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 1,
+      "discovery_count": 0,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-030-whole_source.json",
+    "target_file": "dap-an/R2-030-whole_source.json"
+  },
+  {
+    "id": "R2-030-none",
+    "source_record_id": "exp-realistic-0010-12f63f21",
+    "group_id": "vg-e91ed17929479e18",
+    "mode": "none",
+    "validation": {
+      "parser_valid": true,
+      "assessment_count": 0,
+      "discovery_count": 1,
+      "source_grounded": true,
+      "semantic_human_verified": false
+    },
+    "input_file": "dau-vao/R2-030-none.json",
+    "target_file": "dap-an/R2-030-none.json"
+  }
+]

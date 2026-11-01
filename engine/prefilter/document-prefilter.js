@@ -1,6 +1,7 @@
 const path = require('path');
 const { normalizeFinding } = require('../models/finding');
 const { IPI_DOC_PATTERNS } = require('./rules/ipi-document-rules');
+const { conversationTransferCandidates } = require('./conversation-transfer');
 
 function snippetAround(text, index, radius = 150) {
   const start = Math.max(0, index - 60);
@@ -64,7 +65,7 @@ function scanBase64Payloads(text, filePath, folderPath = '') {
 }
 
 /** Scan plain text for IPI patterns using the knowledge base and decoders. */
-function scanTextForIpi(text, filePath, folderPath = '') {
+function scanTextForIpi(text, filePath, folderPath = '', options = {}) {
   const findings = [];
   const rel = folderPath ? path.relative(folderPath, filePath) : path.basename(filePath);
 
@@ -105,6 +106,17 @@ function scanTextForIpi(text, filePath, folderPath = '') {
   }
 
   findings.push(...scanBase64Payloads(text, filePath, folderPath));
+  if (options.includeTransferCandidates === true) for (const candidate of conversationTransferCandidates(text)) {
+    findings.push(normalizeFinding({
+      ruleId: 'IPI-DOC-CONVERSATION-TRANSFER-CANDIDATE', owaspCategory: 'LLM01',
+      title: 'Nghi vấn yêu cầu chuyển dữ liệu hội thoại qua kênh nhận', severity: 'high', confidence: 'medium',
+      target: filePath, location: `${rel}:${lineOf(text, candidate.start)}`, matchedText: candidate.quote,
+      evidence: ['Cùng đoạn nguồn có động từ hành động, dữ liệu hội thoại và đích/kênh nhận.',
+        'Đây là ứng viên cần xác minh; lời cho người, phủ định hoặc ví dụ trích dẫn chưa được loại bằng regex.'],
+      remediation: 'Đối chiếu người nhận, bao khung và quyền thực hiện trên nguồn; không tự thực hiện hành động hoặc xác nhận IPI chỉ từ rule.',
+      collector: 'document',
+    }));
+  }
 
   return findings;
 }

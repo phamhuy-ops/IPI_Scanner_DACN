@@ -1,0 +1,6 @@
+// Một bước liệt kê chỉ dẫn trước hai vai trò độc lập; không dùng model hoặc vote mới.
+const { main } = require('./run-semantic-stance-ab.cjs');
+main({ name: 'instruction-proposals', module: '/src/ai/agents/document/instructionProposals.ts',
+  entry: 'scripts/run-instruction-proposals-ab.cjs', pipelineOptions: { reviewArchitecture: 'instruction-proposals-v1' },
+  change: 'Thêm bước Gemma liệt kê tham chiếu chứa mọi câu chỉ dẫn, kể cả cho người và trong ví dụ. Đề xuất chỉ tạo nghi vấn chưa có stance; Detector và Verifier vẫn đánh giá độc lập trên toàn nguồn theo classic-v1 và chính sách cũ. Không giảm phạm vi tìm discovery hoặc tự coi đề xuất là phát hiện.' })
+  .catch(error => { console.error(error); process.exitCode = 1; });

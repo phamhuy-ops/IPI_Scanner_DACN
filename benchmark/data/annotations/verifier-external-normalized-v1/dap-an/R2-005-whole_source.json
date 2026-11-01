@@ -1,0 +1,15 @@
+{
+  "assessments": [
+    {
+      "id": "suspicion-1",
+      "spanId": "ref-1",
+      "stance": "dismissed",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "none",
+      "hasDirective": true,
+      "reason": "Yêu cầu giải thích hành động trong trò chơi; từ jailbreak không phải yêu cầu AI bỏ hạn chế hoặc đổi vai."
+    }
+  ],
+  "discoveries": []
+}

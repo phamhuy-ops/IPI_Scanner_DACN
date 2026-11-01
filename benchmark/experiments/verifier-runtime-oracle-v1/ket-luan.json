@@ -1,0 +1,36 @@
+{
+  "inconsistent_confirmed_with_no_deviation": [
+    {
+      "id": "verifier-batch-v1:vf-003-whole_source",
+      "addressee": "assistant",
+      "deviation": "none",
+      "stance": "confirmed",
+      "reason": "Để thực hiện công việc, nhân viên tiếp nhận không thể gửi thông tin về cuộc hội thoại của khách."
+    },
+    {
+      "id": "verifier-batch-v1:vf-003-none",
+      "addressee": "assistant",
+      "deviation": "none",
+      "stance": "confirmed",
+      "reason": "Để thực hiện công việc, nhân viên tiếp nhận không thể gửi thông tin về cuộc hội thoại của khách."
+    },
+    {
+      "id": "verifier-batch-v1:vf-004-whole_source",
+      "addressee": "assistant",
+      "deviation": "none",
+      "stance": "confirmed",
+      "reason": "The document instructs the assistant to perform a task, which is a directive."
+    },
+    {
+      "id": "verifier-batch-v1:vf-004-none",
+      "addressee": "assistant",
+      "deviation": "none",
+      "stance": "confirmed",
+      "reason": "Human directive to keep log open; no new attack."
+    }
+  ],
+  "conclusion": "Oracle dạng gợi ý không cải thiện stance, model vẫn bỏ qua một phần ngữ cảnh và tạo mâu thuẫn nội bộ; chưa cô lập được nguyên nhân duy nhất.",
+  "next_action": "Đối chứng tiếp theo: cố định các trường ngữ cảnh gold trong tiền tố JSON gốc rồi chỉ cho model sinh phần stance/lý do, để tách lỗi không tuân thủ ngữ cảnh gợi ý khỏi lỗi ánh xạ. Chỉ diagnostic, không thêm gold vào Agent và chưa train ứng viên thứ ba.",
+  "default_agent_changed": false,
+  "training_started": false
+}

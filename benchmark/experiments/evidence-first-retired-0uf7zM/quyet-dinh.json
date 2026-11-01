@@ -1,0 +1,37 @@
+{
+  "status": "retired",
+  "evidence": "benchmark/results/evidence-first-HKzxNe/quality-audit.json",
+  "selection_gate": {
+    "policy_version": "strict-selected-gate-v1",
+    "gates": {
+      "complete_selected_set": true,
+      "uncertainty_audit_complete": true,
+      "strict_accuracy_improves": true,
+      "no_lost_correct_cases": false,
+      "no_more_false_alerts": true,
+      "no_more_false_clears": true,
+      "no_more_errors_or_incomplete_coverage": false,
+      "latency_within_locked_ratio": false
+    },
+    "regressions": [
+      "aq-001"
+    ],
+    "failed_gates": [
+      "no_lost_correct_cases",
+      "no_more_errors_or_incomplete_coverage",
+      "latency_within_locked_ratio"
+    ],
+    "eligible_for_next_development_measurement": false,
+    "default_eligible": false,
+    "independent_validation_complete": false,
+    "limitation": "Cổng sàng lọc dev, không phải chứng nhận đạt90% hoặc quyền tự áp dụng vào Agent. Lỗi/cần xem xét không bị loại khỏi mẫu số; báo nhầm kèm lỗi vẫn được giữ trong cổng raw."
+  },
+  "source_sha256": {
+    "src/ai/experiments/evidenceFirst.ts": "a336a1fa3c09f34f08901d9c7f68d0e50fda631a75a9b44170cc47f3ee2d09eb",
+    "src/ai/experiments/evidenceFirst.test.ts": "01549c664f9797abddcab2b93759eedaa12eb5fc32283fa0a6e67c25b01932c7",
+    "scripts/run-evidence-first-ab.cjs": "609d04af87c7c4a2f8cfdcfd7df6ad487bf12fb53986f4d801a47609f60438fb"
+  },
+  "production_core_unchanged": true,
+  "production_files_verified": 52,
+  "raw_preserved": true
+}

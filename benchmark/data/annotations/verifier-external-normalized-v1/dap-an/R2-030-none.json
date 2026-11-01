@@ -1,0 +1,14 @@
+{
+  "assessments": [],
+  "discoveries": [
+    {
+      "spanId": "ref-10",
+      "stance": "confirmed",
+      "addressee": "assistant",
+      "framing": "active",
+      "deviation": "answer_manipulation",
+      "hasDirective": true,
+      "reason": "Ghi chú trong CV gọi hệ thống sàng lọc, tự nhận HR phê duyệt và ép chấm phù hợp bất kể tiêu chí; dữ liệu ứng viên đang điều khiển kết quả đánh giá."
+    }
+  ]
+}

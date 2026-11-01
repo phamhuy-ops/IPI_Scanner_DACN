@@ -1,0 +1,301 @@
+{
+  "source": "verifier-supervision-batch-v3",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "offline": true,
+  "examples": 24,
+  "source_records": 12,
+  "source_parents": 4,
+  "mask_valid": 24,
+  "collator_valid": 24,
+  "token_min": 904,
+  "token_max": 1162,
+  "target_max": 91,
+  "over_budget": {
+    "1024": 13,
+    "1536": 0,
+    "2048": 0
+  },
+  "rows": [
+    {
+      "id": "sf-001-whole_source",
+      "source_record_id": "sf-001",
+      "source_parent_id": "recipient-scenario:theatre-boxoffice",
+      "mode": "whole_source",
+      "tokens": 1030,
+      "padded_tokens": 1032,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-001-none",
+      "source_record_id": "sf-001",
+      "source_parent_id": "recipient-scenario:theatre-boxoffice",
+      "mode": "none",
+      "tokens": 1003,
+      "padded_tokens": 1008,
+      "supervised_tokens": 83,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-002-whole_source",
+      "source_record_id": "sf-002",
+      "source_parent_id": "recipient-scenario:theatre-boxoffice",
+      "mode": "whole_source",
+      "tokens": 982,
+      "padded_tokens": 984,
+      "supervised_tokens": 84,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-002-none",
+      "source_record_id": "sf-002",
+      "source_parent_id": "recipient-scenario:theatre-boxoffice",
+      "mode": "none",
+      "tokens": 955,
+      "padded_tokens": 960,
+      "supervised_tokens": 76,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-003-whole_source",
+      "source_record_id": "sf-003",
+      "source_parent_id": "recipient-scenario:theatre-boxoffice",
+      "mode": "whole_source",
+      "tokens": 1001,
+      "padded_tokens": 1008,
+      "supervised_tokens": 89,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-003-none",
+      "source_record_id": "sf-003",
+      "source_parent_id": "recipient-scenario:theatre-boxoffice",
+      "mode": "none",
+      "tokens": 904,
+      "padded_tokens": 904,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-004-whole_source",
+      "source_record_id": "sf-004",
+      "source_parent_id": "recipient-scenario:sports-frontdesk",
+      "mode": "whole_source",
+      "tokens": 1044,
+      "padded_tokens": 1048,
+      "supervised_tokens": 87,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-004-none",
+      "source_record_id": "sf-004",
+      "source_parent_id": "recipient-scenario:sports-frontdesk",
+      "mode": "none",
+      "tokens": 1017,
+      "padded_tokens": 1024,
+      "supervised_tokens": 79,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-005-whole_source",
+      "source_record_id": "sf-005",
+      "source_parent_id": "recipient-scenario:sports-frontdesk",
+      "mode": "whole_source",
+      "tokens": 1019,
+      "padded_tokens": 1024,
+      "supervised_tokens": 88,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-005-none",
+      "source_record_id": "sf-005",
+      "source_parent_id": "recipient-scenario:sports-frontdesk",
+      "mode": "none",
+      "tokens": 992,
+      "padded_tokens": 992,
+      "supervised_tokens": 80,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-006-whole_source",
+      "source_record_id": "sf-006",
+      "source_parent_id": "recipient-scenario:sports-frontdesk",
+      "mode": "whole_source",
+      "tokens": 1024,
+      "padded_tokens": 1024,
+      "supervised_tokens": 87,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-006-none",
+      "source_record_id": "sf-006",
+      "source_parent_id": "recipient-scenario:sports-frontdesk",
+      "mode": "none",
+      "tokens": 929,
+      "padded_tokens": 936,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-007-whole_source",
+      "source_record_id": "sf-007",
+      "source_parent_id": "recipient-scenario:museum-hours",
+      "mode": "whole_source",
+      "tokens": 1162,
+      "padded_tokens": 1168,
+      "supervised_tokens": 89,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-007-none",
+      "source_record_id": "sf-007",
+      "source_parent_id": "recipient-scenario:museum-hours",
+      "mode": "none",
+      "tokens": 1135,
+      "padded_tokens": 1136,
+      "supervised_tokens": 81,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-008-whole_source",
+      "source_record_id": "sf-008",
+      "source_parent_id": "recipient-scenario:museum-hours",
+      "mode": "whole_source",
+      "tokens": 1119,
+      "padded_tokens": 1120,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-008-none",
+      "source_record_id": "sf-008",
+      "source_parent_id": "recipient-scenario:museum-hours",
+      "mode": "none",
+      "tokens": 1092,
+      "padded_tokens": 1096,
+      "supervised_tokens": 82,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-009-whole_source",
+      "source_record_id": "sf-009",
+      "source_parent_id": "recipient-scenario:museum-hours",
+      "mode": "whole_source",
+      "tokens": 1144,
+      "padded_tokens": 1144,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-009-none",
+      "source_record_id": "sf-009",
+      "source_parent_id": "recipient-scenario:museum-hours",
+      "mode": "none",
+      "tokens": 1045,
+      "padded_tokens": 1048,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-010-whole_source",
+      "source_record_id": "sf-010",
+      "source_parent_id": "recipient-scenario:cafe-bookkeeping",
+      "mode": "whole_source",
+      "tokens": 1113,
+      "padded_tokens": 1120,
+      "supervised_tokens": 91,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-010-none",
+      "source_record_id": "sf-010",
+      "source_parent_id": "recipient-scenario:cafe-bookkeeping",
+      "mode": "none",
+      "tokens": 1086,
+      "padded_tokens": 1088,
+      "supervised_tokens": 83,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-011-whole_source",
+      "source_record_id": "sf-011",
+      "source_parent_id": "recipient-scenario:cafe-bookkeeping",
+      "mode": "whole_source",
+      "tokens": 1086,
+      "padded_tokens": 1088,
+      "supervised_tokens": 89,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-011-none",
+      "source_record_id": "sf-011",
+      "source_parent_id": "recipient-scenario:cafe-bookkeeping",
+      "mode": "none",
+      "tokens": 1059,
+      "padded_tokens": 1064,
+      "supervised_tokens": 81,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-012-whole_source",
+      "source_record_id": "sf-012",
+      "source_parent_id": "recipient-scenario:cafe-bookkeeping",
+      "mode": "whole_source",
+      "tokens": 1089,
+      "padded_tokens": 1096,
+      "supervised_tokens": 90,
+      "mask_valid": true,
+      "collator_valid": true
+    },
+    {
+      "id": "sf-012-none",
+      "source_record_id": "sf-012",
+      "source_parent_id": "recipient-scenario:cafe-bookkeeping",
+      "mode": "none",
+      "tokens": 991,
+      "padded_tokens": 992,
+      "supervised_tokens": 11,
+      "mask_valid": true,
+      "collator_valid": true
+    }
+  ],
+  "input_sha256": {
+    "manifest.json": "352c8010b1eb7feda083414754fc1540d73c082e2e418d93a0f5d3b83f9b138f",
+    "ban-xem-truoc.json": "993950f9266ad5a28150197e71be982f34e87b7d507ceeadf91dc8077f048f42"
+  },
+  "code_sha256": {
+    "audit_verifier_preview.py": "bb0a838c88d64b7ff7088e68f4406a6e742f3a6ab8e9406889e0c659d8c51146",
+    "audit_verifier_tokenizer.py": "90bb22dc2f4cb18ac168abe053f2bf87b1e295269b92a42ee3bd666488b42f9b",
+    "verifier_collator.py": "594bf13412567aef5c9439241de5dbdcdb7fbfd7cd3f1cd40c644aaeaa79b478"
+  },
+  "training_ready": false,
+  "no_model_forward_or_updates": true,
+  "runtime_changed": false,
+  "limitations": [
+    "Token/mask/parser đúng không chứng minh nhãn AI đúng hoặc độc lập ngữ nghĩa.",
+    "Không truncate; bản vượt 2048 bị đánh dấu collator_valid=false, chưa tạo bài học."
+  ]
+}
