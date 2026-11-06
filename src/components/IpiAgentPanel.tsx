@@ -44,12 +44,18 @@ function DirectiveContextEvidence({ value, locale }: { value: DirectiveContext; 
 }
 
 export const IpiAgentPanel: React.FC = () => {
-  const { ipiRun, ipiRunning, locale } = useStore();
-  return <IpiAgentPanelView ipiRun={ipiRun} ipiRunning={ipiRunning} locale={locale} />;
+  const { ipiRun, ipiRunning, pickingSource, locale } = useStore();
+  const clearResults = () => {
+    const state = useStore.getState();
+    if (state.ipiRunning || state.pickingSource) return;
+    state.resetIpiRun();
+    useStore.setState({ scanTarget: null });
+  };
+  return <IpiAgentPanelView ipiRun={ipiRun} ipiRunning={ipiRunning} locale={locale} onClearResults={clearResults} clearDisabled={ipiRunning || pickingSource} />;
 };
 
-export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: boolean; locale?: AppLocale }> = ({
-  ipiRun, ipiRunning, locale = DEFAULT_LOCALE,
+export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: boolean; locale?: AppLocale; onClearResults?: () => void; clearDisabled?: boolean }> = ({
+  ipiRun, ipiRunning, locale = DEFAULT_LOCALE, onClearResults, clearDisabled,
 }) => {
   const [showTimeline, setShowTimeline] = useState(false);
   const findings = useMemo(() => ipiRun.scanResult?.findings || [], [ipiRun.scanResult]);
@@ -74,7 +80,7 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
         </div>
       </details>}
 
-      {ipiRun.status !== 'idle' && <ScanActivity run={ipiRun} locale={locale} />}
+      {ipiRun.status !== 'idle' && <ScanActivity run={ipiRun} locale={locale} onClearResults={onClearResults} clearDisabled={clearDisabled || ipiRunning} />}
       <ScanConclusion run={ipiRun} locale={locale} />
 
       {ipiRun.status !== 'idle' && <p className="processing-caption" role="status">{t(locale, 'panel.processing', { status: processingLabel(ipiRun.processingStatus, locale) })}{t(locale, 'panel.roundOne')}</p>}

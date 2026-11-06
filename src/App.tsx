@@ -2,6 +2,7 @@ import { AnimatePresence } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { IpiAgentForm } from './components/IpiAgentForm';
 import { IpiAgentPanel } from './components/IpiAgentPanel';
+import { ModelSettings } from './components/ModelSettings';
 import { ThemeReveal } from './components/ThemeReveal';
 import { AppLocale } from './i18n/locale';
 import { t } from './i18n/messages';
@@ -12,6 +13,7 @@ import { ProjectPicker } from './components/ProjectPicker';
 function App() {
   const activeProject = useProjects(state => state.activeId);
   const { themeMode, setThemeMode, ipiRunning, locale, setLocale, ollamaStatus } = useStore();
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [pendingTheme, setPendingTheme] = useState<ThemeMode | null>(null);
   const connectionLabel = !ollamaStatus.checked
     ? (locale === 'vi' ? 'Ollama chưa kiểm tra' : 'Ollama not checked')
@@ -89,24 +91,38 @@ function App() {
           <button className="btn-header" onClick={requestThemeChange} disabled={Boolean(pendingTheme)} title={t(locale, 'header.theme')}>
             {themeMode === 'dark' ? t(locale, 'header.themeLight') : t(locale, 'header.themeDark')}
           </button>
+          <button type="button" className="btn-header settings-trigger" onClick={() => setSettingsOpen(true)} aria-label={locale === 'vi' ? 'Cài đặt' : 'Settings'} title={locale === 'vi' ? 'Cài đặt' : 'Settings'} aria-haspopup="dialog" aria-expanded={settingsOpen}>
+            <span aria-hidden="true">⚙</span>
+          </button>
         </div>
       </header>
 
-      <div className="project-layout"><ProjectPicker /><div className="project-content">
-      {activeProject && <div key={activeProject} className="workspace workspace-scan-v2">
-        <aside className="left-panel scan-config-panel">
-          <div className="layout-panel-head">
-            <div className="layout-panel-title">{t(locale, 'app.inputTitle')}</div>
-            <div className="layout-panel-sub">{t(locale, 'app.inputSub')}</div>
-          </div>
-          <IpiAgentForm />
+      <ModelSettings open={settingsOpen} onClose={() => setSettingsOpen(false)} />
+
+      <div className="project-layout">
+        <aside className="workspace-sidebar" aria-label={locale === 'vi' ? 'Project và tài liệu đầu vào' : 'Projects and input documents'}>
+          <ProjectPicker />
+          {activeProject && (
+            <section key={activeProject} className="sidebar-input" aria-label={t(locale, 'app.inputTitle')}>
+              <IpiAgentForm />
+            </section>
+          )}
         </aside>
-        <main className="right-panel scan-results-panel">
-          <IpiAgentPanel />
+        <main className="project-content">
+          {activeProject ? (
+            <div key={activeProject} className="workspace workspace-scan-v2">
+              <div className="right-panel scan-results-panel">
+                <IpiAgentPanel />
+              </div>
+            </div>
+          ) : (
+            <div className="project-welcome">
+              <h1>{locale === 'vi' ? 'Không gian kiểm thử của bạn' : 'Your testing workspace'}</h1>
+              <p>{locale === 'vi' ? 'Tạo project mới ở thanh bên để bắt đầu.' : 'Create a new project in the sidebar to begin.'}</p>
+            </div>
+          )}
         </main>
-      </div>}
-      {!activeProject && <div className="project-welcome"><h1>{locale === 'vi' ? 'Không gian kiểm thử của bạn' : 'Your testing workspace'}</h1><p>{locale === 'vi' ? 'Tạo project mới ở thanh bên để bắt đầu.' : 'Create a new project in the sidebar to begin.'}</p></div>}
-      </div></div>
+      </div>
     </div>
   );
 }

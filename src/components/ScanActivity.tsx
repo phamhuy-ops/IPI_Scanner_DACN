@@ -5,7 +5,7 @@ import { reviewProgressCounts } from '../ai/agents/document/reviewProgress';
 type StepState = 'pending' | 'running' | 'completed' | 'failed';
 const phases = ['detect', 'fix', 'check', 'done'] as const;
 
-export function ScanActivity({ run, locale }: { run: IpiRunState; locale: AppLocale }) {
+export function ScanActivity({ run, locale, onClearResults, clearDisabled }: { run: IpiRunState; locale: AppLocale; onClearResults?: () => void; clearDisabled?: boolean }) {
   const vi = locale === 'vi';
   const labels = vi ? ['Chờ xử lý', 'Đang chạy', 'Hoàn tất', 'Lỗi'] : ['Pending', 'Running', 'Completed', 'Failed'];
   const stateLabel = (state: StepState) => labels[['pending', 'running', 'completed', 'failed'].indexOf(state)];
@@ -35,7 +35,7 @@ export function ScanActivity({ run, locale }: { run: IpiRunState; locale: AppLoc
     return index < active && run.status === 'running' ? 'completed' : 'pending';
   };
   return <section className="scan-activity" aria-label={vi ? 'Tiến trình quét' : 'Scan activity'}>
-    <div className="scan-activity-heading"><strong>{vi ? 'Tiến trình phân tích' : 'Analysis activity'}</strong><span>{run.status === 'idle' ? (vi ? 'Sẵn sàng' : 'Ready') : percent === null ? (run.status === 'running' ? (vi ? 'Đang chuẩn bị' : 'Preparing') : (vi ? 'Không có số liệu' : 'No progress data')) : `${done}/${total}`}</span></div>
+    <div className="scan-activity-heading"><strong>{vi ? 'Tiến trình phân tích' : 'Analysis activity'}</strong><span>{run.status === 'idle' ? (vi ? 'Sẵn sàng' : 'Ready') : percent === null ? (run.status === 'running' ? (vi ? 'Đang chuẩn bị' : 'Preparing') : (vi ? 'Không có số liệu' : 'No progress data')) : `${done}/${total}`}</span>{onClearResults && <button className="btn-header scan-clear-results" type="button" onClick={onClearResults} disabled={clearDisabled || run.status === 'running'}>{vi ? 'Xóa kết quả' : 'Clear results'}</button>}</div>
     <div className="scan-metrics-grid"><div>
     <div className="scan-metric-label"><span>{vi ? 'Tiến độ xử lý' : 'Processing progress'}</span><strong>{percent === null ? (vi ? 'Chưa có số liệu' : 'Not available') : `${percent}%`}</strong></div>
     <div className={`scan-ring ${percent === null && run.status === 'running' ? 'is-indeterminate' : ''}`} role="progressbar" aria-label={vi ? 'Lượt xử lý đoạn đã chọn của hai model' : 'Selected chunk reviews across both models'} aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent ?? undefined} aria-valuetext={percent === null ? (vi ? 'Chưa có số liệu tiến độ' : 'Progress not available') : `${percent}%`}>

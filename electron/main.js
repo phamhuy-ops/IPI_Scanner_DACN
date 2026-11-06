@@ -127,7 +127,14 @@ async function runDocumentScan(event, filePaths, folderPath, scanProfile) {
 
 ipcMain.handle('dialog:pickFolder', async () => {
   const result = await dialog.showOpenDialog({ title: 'Select document folder', properties: ['openDirectory'] });
-  return result.canceled || !result.filePaths.length ? { ok: false } : { ok: true, folderPath: result.filePaths[0] };
+  if (result.canceled || !result.filePaths.length) return { ok: false };
+  const folderPath = result.filePaths[0];
+  let folderFileCount = null;
+  try {
+    const entries = await fs.readdir(folderPath, { withFileTypes: true });
+    folderFileCount = entries.filter(entry => entry.isFile()).length;
+  } catch {}
+  return { ok: true, folderPath, folderFileCount };
 });
 
 ipcMain.handle('dialog:pickFiles', async () => {

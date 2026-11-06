@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { AppLocale, persistLocale, readStoredLocale } from '../i18n/locale';
 import { IpiRunState, SemanticScanProfile } from '../types';
 
-export type ScanTarget = { folderPath: string; filePaths?: never } | { filePaths: string[]; folderPath?: never };
+export type ScanTarget = { folderPath: string; folderFileCount?: number | null; filePaths?: never } | { filePaths: string[]; folderPath?: never };
 
 export type ThemeMode = 'dark' | 'light';
 export type { AppLocale };

@@ -242,9 +242,9 @@
 /* ── Guide button in header ───────────────────── */
 #sentinel-guide-btn {
   display: inline-flex; align-items: center; gap: 5px;
-  height: 30px; padding: 0 11px;
+  min-height: 36px; padding: 0 11px;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: var(--radius-control);
   background: var(--bg-input);
   color: var(--text-2);
   font-size: 12px; font-weight: 500;
@@ -273,7 +273,7 @@
 /* ── Guide panel ──────────────────────────────── */
 .gd-panel {
   position: fixed;
-  top: 44px; right: 0; bottom: 0;
+  top: 0; right: 0; bottom: 0;
   width: min(340px, calc(100vw - 40px));
   z-index: 81;
   display: flex; flex-direction: column;
@@ -304,7 +304,7 @@
 .gd-close {
   width: 26px; height: 26px;
   display: flex; align-items: center; justify-content: center;
-  border: 1px solid var(--border); border-radius: 6px;
+  border: 1px solid var(--border); border-radius: var(--radius-control);
   background: var(--bg-input); color: var(--text-3);
   font-size: 11px; cursor: pointer;
   transition: all .12s;

@@ -20,6 +20,7 @@ type ProjectsState = {
   activeId: string | null;
   storageError: boolean;
   createProject: (name: string) => void;
+  renameProject: (id: string, name: string) => void;
   selectProject: (id: string) => void;
   deleteProject: (id: string) => void;
 };
@@ -64,6 +65,11 @@ export const useProjects = create<ProjectsState>((set, get) => ({
     const project = { id: crypto.randomUUID(), name: name.trim().slice(0, 80), data: structuredClone(defaults) };
     set({ projects: [...get().projects, project], activeId: project.id });
     useStore.setState({ ...project.data, ipiRunning: false });
+  },
+  renameProject: (id, name) => {
+    const state = useStore.getState();
+    if (!name.trim() || state.ipiRunning || state.pickingSource) return;
+    set(current => ({ projects: current.projects.map(project => project.id === id ? { ...project, name: name.trim().slice(0, 80) } : project) }));
   },
   selectProject: (id) => {
     const state = useStore.getState();

@@ -222,7 +222,7 @@ declare global {
     owaspWorkbench?: {
       scanIpiDoc: (filePaths: string[], scanProfile?: SemanticScanProfile) => Promise<ScanResult>;
       scanIpiDocFolder: (folderPath: string, scanProfile?: SemanticScanProfile) => Promise<ScanResult>;
-      pickFolder: () => Promise<{ ok: boolean; folderPath?: string }>;
+      pickFolder: () => Promise<{ ok: boolean; folderPath?: string; folderFileCount?: number | null }>;
       getPathForFile: (file: File) => string;
       pickFiles: () => Promise<{ ok: boolean; filePaths: string[] }>;
       stopScan: () => Promise<{ ok: boolean; error?: string }>;

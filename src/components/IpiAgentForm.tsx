@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { runIpiDocMultiAgentLoop } from '../ai/agents/ipiDocAgent';
 import { ScanTarget, useStore } from '../store/useStore';
 import { SecurityVerdict } from '../types';
@@ -10,13 +10,12 @@ import { conclude } from '../ai/agents/document/reviewPolicy';
 const SUPPORTED_EXTS = '.txt, .md, .pdf, .docx, .doc, .csv, .json, .xml, .html';
 const DETECTOR_MODEL = 'gemma3:1b';
 const VERIFIER_MODEL = 'qwen2.5-coder:1.5b';
-const MODEL_CHOICES = [DETECTOR_MODEL, VERIFIER_MODEL];
 
 export const IpiAgentForm: React.FC = () => {
   const {
-    resetIpiRun, ipiRunning, scanProfile, scanTarget: target, pickingSource: picking,
-    ollamaStatus, checkOllamaStatus,
-    ipiFixModel, setIpiFixModel, ipiCheckModel, setIpiCheckModel,
+    ipiRun, resetIpiRun, ipiRunning, scanProfile, scanTarget: target, pickingSource: picking,
+    checkOllamaStatus,
+    ipiFixModel, ipiCheckModel,
     locale,
   } = useStore();
   const setScanProfile = (scanProfile: 'balanced' | 'deep') => useStore.setState({ scanProfile });
@@ -26,6 +25,13 @@ export const IpiAgentForm: React.FC = () => {
   const pickerOpen = useRef(false);
   const [result, setResult] = useState<{ verdict: SecurityVerdict; review: boolean; files: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (ipiRun.status === 'idle') {
+      setError(null);
+      setResult(null);
+    }
+  }, [ipiRun.status]);
 
   const detectorModel = ipiFixModel || DETECTOR_MODEL;
   const verifierModel = ipiCheckModel || VERIFIER_MODEL;
@@ -84,6 +90,7 @@ export const IpiAgentForm: React.FC = () => {
   };
 
   const busy = ipiRunning || picking;
+  const sourcePaths = (target?.filePaths ?? (target?.folderPath ? [target.folderPath] : [])).filter(Boolean);
 
   const pickSource = async (kind: 'files' | 'folder') => {
     if (pickerOpen.current || useStore.getState().ipiRunning) return;
@@ -95,7 +102,7 @@ export const IpiAgentForm: React.FC = () => {
         if (picked?.ok && picked.filePaths.length) void runScan({ filePaths: picked.filePaths });
       } else {
         const picked = await window.owaspWorkbench?.pickFolder();
-        if (picked?.ok && picked.folderPath) void runScan({ folderPath: picked.folderPath });
+        if (picked?.ok && picked.folderPath) void runScan({ folderPath: picked.folderPath, folderFileCount: picked.folderFileCount });
       }
     } catch {
       setError(t(locale, 'form.sourceError'));
@@ -129,7 +136,13 @@ export const IpiAgentForm: React.FC = () => {
     <>
       <div className="config-scroll">
       <section className="section scan-source">
-        <div className="section-label">{t(locale, 'form.source')}</div>
+        <div className="scan-source-heading">
+          <h3 className="section-label">{t(locale, 'form.source')}</h3>
+          {sourcePaths.length > 0 && <div className="scan-selected-source" role="status" title={sourcePaths.join('\n')}>
+            <span className="scan-selected-name">{sourcePaths.map(path => path.split(/[/\\]/).filter(Boolean).pop() || path).join(', ')}</span>
+            {target?.folderPath && typeof target.folderFileCount === 'number' && <span className="scan-selected-file-count" title={locale === 'vi' ? 'Số tệp trực tiếp trong thư mục' : 'Files directly inside this folder'}>{target.folderFileCount} {locale === 'vi' ? 'tệp' : target.folderFileCount === 1 ? 'file' : 'files'}</span>}
+          </div>}
+        </div>
         <div
           className={`scan-drop-zone ${dragging ? 'is-dragging' : ''}`}
           aria-busy={ipiRunning}
@@ -149,52 +162,24 @@ export const IpiAgentForm: React.FC = () => {
           <svg className="scan-upload-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
             <path d="M12 16V4m-4 4 4-4 4 4M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <strong>{t(locale, 'form.dropTitle')}</strong>
-          <p>{t(locale, 'form.autoStart')}</p>
-          <button className="btn-primary" type="button" disabled={busy} onClick={() => void pickSource('files')}>{t(locale, 'form.pickFiles')}</button>
+          <strong>{locale === 'vi' ? 'Kéo thả tệp vào đây' : 'Drag and drop files here'}</strong>
+          <p>{locale === 'vi' ? 'Hoặc chọn nguồn tài liệu từ thiết bị của bạn' : 'Or choose documents from your device'}</p>
+          <div className="scan-source-actions">
+            <button className="btn-primary" type="button" disabled={busy} onClick={() => void pickSource('files')}>{t(locale, 'form.pickFiles')}</button>
+            <button className="btn-browse scan-folder-button" type="button" disabled={busy} onClick={() => void pickSource('folder')}>{t(locale, 'form.browseFolder')}</button>
+          </div>
+
         </div>
-        <div className="field-hint">{t(locale, 'form.supported', { exts: SUPPORTED_EXTS })}</div>
-        <button className="btn-browse scan-folder-button" type="button" disabled={busy} onClick={() => void pickSource('folder')}>{t(locale, 'form.browseFolder')}</button>
-        {target && (
-          <ul className="ipi-file-list scan-source-list" aria-label={t(locale, 'form.source')}>
-            {(target.filePaths ?? [target.folderPath]).map((path) => (
-              <li key={path} className="ipi-file-item"><span className="ipi-file-name" title={path}>{path.split(/[/\\]/).filter(Boolean).pop() || path}</span></li>
-            ))}
-          </ul>
-        )}
+        <div className="field-hint" title={t(locale, 'form.supported', { exts: SUPPORTED_EXTS })}>{t(locale, 'form.supported', { exts: SUPPORTED_EXTS })}</div>
       </section>
 
-      <div className="section">
-        <div className="section-label">{t(locale, 'form.scope')}</div>
+      <section className="section scan-mode-section" aria-label={t(locale, 'form.scope')}>
+        <h3 className="section-label">{t(locale, 'form.scope')}</h3>
         <div className="scan-mode-grid" role="group" aria-label={t(locale, 'form.scopeGroup')}>
-          <button type="button" className={`scan-mode-card scan-mode-balanced ${scanProfile === 'balanced' ? 'selected' : ''}`} aria-pressed={scanProfile === 'balanced'} onClick={() => setScanProfile('balanced')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.balanced')}</strong><small>{locale === 'vi' ? 'Ưu tiên đoạn có tín hiệu rủi ro' : 'Prioritize chunks with risk signals'}</small></button>
-          <button type="button" className={`scan-mode-card scan-mode-deep ${scanProfile === 'deep' ? 'selected' : ''}`} aria-pressed={scanProfile === 'deep'} onClick={() => setScanProfile('deep')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.deepScan')}</strong><small>{locale === 'vi' ? 'Mở rộng phạm vi kiểm tra' : 'Review a broader document scope'}</small></button>
+          <button type="button" className={`scan-mode-card scan-mode-balanced ${scanProfile === 'balanced' ? 'selected' : ''}`} aria-pressed={scanProfile === 'balanced'} onClick={() => setScanProfile('balanced')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.balanced')}</strong><small>{locale === 'vi' ? 'Quét nhanh, ưu tiên rủi ro.' : 'Fast scan, prioritizes risk.'}</small></button>
+          <button type="button" className={`scan-mode-card scan-mode-deep ${scanProfile === 'deep' ? 'selected' : ''}`} aria-pressed={scanProfile === 'deep'} onClick={() => setScanProfile('deep')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.deepScan')}</strong><small>{locale === 'vi' ? 'Kiểm tra rộng hơn, lâu hơn.' : 'Broader review, takes longer.'}</small></button>
         </div>
-        <div className="ipi-auto-loop-info" style={{ marginTop: 8 }}>
-          {scanProfile === 'deep' ? t(locale, 'form.deepHint') : t(locale, 'form.balancedHint')}
-        </div>
-      </div>
-
-      <details className="section model-settings">
-        <summary><span className="section-label">{t(locale, 'form.models')}</span></summary>
-        <div className="field">
-          <label className="field-label" htmlFor="ipi-detector-model">{t(locale, 'form.detector')}</label>
-          <select id="ipi-detector-model" className="input-base" value={detectorModel} disabled={busy} onChange={(event) => setIpiFixModel(event.target.value)}>
-            {MODEL_CHOICES.map((model) => <option key={model} value={model}>{model}</option>)}
-          </select>
-        </div>
-        <div className="field">
-          <label className="field-label" htmlFor="ipi-verifier-model">{t(locale, 'form.verifier')}</label>
-          <select id="ipi-verifier-model" className="input-base" value={verifierModel} disabled={busy} onChange={(event) => setIpiCheckModel(event.target.value)}>
-            {MODEL_CHOICES.map((model) => <option key={model} value={model}>{model}</option>)}
-          </select>
-        </div>
-        <div className="ipi-auto-loop-info" style={{ marginTop: 8 }}>{t(locale, 'form.modelHint')}</div>
-        <button type="button" className="btn-header" style={{ marginTop: 8 }} onClick={() => void checkOllamaStatus()} disabled={busy}>{t(locale, 'form.checkOllama')}</button>
-        {ollamaStatus.checked && <div className={ollamaStatus.available ? 'success-bar' : 'error-bar'} style={{ marginTop: 8 }}>
-          {ollamaStatus.available ? t(locale, 'form.ollamaOk', { models: ollamaStatus.models.join(', ') || t(locale, 'form.noModels') }) : ollamaStatus.error}
-        </div>}
-      </details>
+      </section>
 
       {error && <div className="error-bar" role="alert">{error}</div>}
       {result && <div className={`ipi-doc-result ${result.review ? 'result-warn' : 'result-ok'}`}>
@@ -202,16 +187,6 @@ export const IpiAgentForm: React.FC = () => {
       </div>}
       </div>
 
-      <div className="left-panel-cta">
-        <div className="scan-auto-status" role="status">{t(locale, ipiRunning ? 'form.scanning' : 'form.autoReady')}</div>
-        {target && <button className="btn-header" type="button" disabled={busy} onClick={() => {
-          resetIpiRun();
-          setTarget(null);
-          setError(null);
-          setResult(null);
-        }}>{t(locale, 'form.clearResults')}</button>}
-        <p className="local-processing-note">{locale === 'vi' ? 'Xử lý cục bộ qua Ollama' : 'Processed locally via Ollama'}</p>
-      </div>
     </>
   );
 };
