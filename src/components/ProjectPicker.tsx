@@ -71,7 +71,6 @@ export function ProjectPicker() {
       </li>)}</ul>
     </nav>
     {!projects.length && <p className="project-sidebar-note">{vi ? 'Chưa có project. Tạo project đầu tiên để bắt đầu.' : 'No projects yet. Create your first project to begin.'}</p>}
-    {busy && <small>{vi ? 'Hoàn tất lượt quét hoặc đóng hộp thoại chọn tệp để chuyển project.' : 'Finish the scan or close the file picker to switch projects.'}</small>}
     {storageError && <p role="alert" className="error-bar">{vi ? 'Không thể đọc hoặc lưu project trên máy. Dữ liệu hiện tại chỉ được giữ trong phiên này.' : 'Projects could not be read or saved locally. Current data is available in this session only.'}</p>}
   </aside>;
 }

@@ -1,8 +1,7 @@
+import { LatestScan } from './LatestScan';
 import React, { useEffect, useRef, useState } from 'react';
 import { runIpiDocMultiAgentLoop } from '../ai/agents/ipiDocAgent';
 import { ScanTarget, useStore } from '../store/useStore';
-import { SecurityVerdict } from '../types';
-import { verdictLabel } from '../ai/agents/document/presentation';
 import { t } from '../i18n/messages';
 import { conclude } from '../ai/agents/document/reviewPolicy';
 
@@ -23,13 +22,11 @@ export const IpiAgentForm: React.FC = () => {
   const [dragging, setDragging] = useState(false);
   const setPicking = (pickingSource: boolean) => useStore.setState({ pickingSource });
   const pickerOpen = useRef(false);
-  const [result, setResult] = useState<{ verdict: SecurityVerdict; review: boolean; files: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (ipiRun.status === 'idle') {
       setError(null);
-      setResult(null);
     }
   }, [ipiRun.status]);
 
@@ -40,7 +37,6 @@ export const IpiAgentForm: React.FC = () => {
     if (useStore.getState().ipiRunning) return;
 
     setTarget(nextTarget);
-    setResult(null);
     setError(null);
     resetIpiRun();
     useStore.setState({ ipiRunning: true, ipiRun: { ...useStore.getState().ipiRun, status: 'running', processingStatus: 'running', error: null } });
@@ -72,11 +68,7 @@ export const IpiAgentForm: React.FC = () => {
 
       useStore.setState({ ipiRun: finalState });
       if (finalState.error) throw new Error(finalState.error);
-      setResult({
-        verdict: finalState.check?.verdict || 'needs_review',
-        review: finalState.check?.verdict !== 'not_detected',
-        files: Number(finalState.scanResult?.metadata?.scannedFiles ?? nextTarget.filePaths?.length ?? 0),
-      });
+
     } catch (cause) {
       const message = cause instanceof Error ? cause.message : t(locale, 'form.scanError');
       setError(message);
@@ -133,8 +125,7 @@ export const IpiAgentForm: React.FC = () => {
   };
 
   return (
-    <>
-      <div className="config-scroll">
+    <div className="config-scroll">
       <section className="section scan-source">
         <div className="scan-source-heading">
           <h3 className="section-label">{t(locale, 'form.source')}</h3>
@@ -181,12 +172,10 @@ export const IpiAgentForm: React.FC = () => {
         </div>
       </section>
 
-      {error && <div className="error-bar" role="alert">{error}</div>}
-      {result && <div className={`ipi-doc-result ${result.review ? 'result-warn' : 'result-ok'}`}>
-        {t(locale, 'form.resultSummary', { label: verdictLabel(result.verdict, locale), files: result.files })}
-      </div>}
-      </div>
+      <LatestScan run={ipiRun} locale={locale} />
 
-    </>
+      {error && ipiRun.status === 'idle' && <div className="error-bar" role="alert">{error}</div>}
+
+    </div>
   );
 };

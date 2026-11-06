@@ -1,6 +1,7 @@
 const { contextBridge, ipcRenderer, webUtils } = require('electron');
 
 contextBridge.exposeInMainWorld('owaspWorkbench', {
+  setWindowTheme: (theme) => ipcRenderer.invoke('window:setTheme', theme),
   scanIpiDoc: (filePaths, scanProfile) => ipcRenderer.invoke('ipi:scanDoc', { filePaths, scanProfile }),
   scanIpiDocFolder: (folderPath, scanProfile) => ipcRenderer.invoke('ipi:scanDocFolder', { folderPath, scanProfile }),
   pickFolder: () => ipcRenderer.invoke('dialog:pickFolder'),

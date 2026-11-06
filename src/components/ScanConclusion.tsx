@@ -9,7 +9,7 @@ export function ScanConclusion({ run, locale }: { run: IpiRunState; locale: AppL
   const tone = run.status === 'error' ? 'error' : verdict;
   const confirmed = run.suspicions.filter(item => item.status === 'confirmed').length;
   const unresolved = run.suspicions.filter(item => item.status === 'unresolved').length;
-  return <section className={`scan-conclusion conclusion-${tone}`} aria-label={vi ? 'Kết luận lượt quét' : 'Scan conclusion'}>
+  return <section id="scan-conclusion" tabIndex={-1} className={`scan-conclusion conclusion-${tone}`} aria-label={vi ? 'Kết luận lượt quét' : 'Scan conclusion'}>
     <span className="conclusion-symbol" aria-hidden="true">{tone === 'not_detected' ? '✓' : '!'}</span>
     <div>
       <span className="conclusion-label">{vi ? 'Kết luận' : 'Conclusion'}</span>

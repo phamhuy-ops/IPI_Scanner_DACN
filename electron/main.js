@@ -75,12 +75,16 @@ function createWindow() {
     minHeight: 720,
     title: 'SENTINEL - Local TinyLM IPI Defense',
     icon: getWindowIconPath(),
+    autoHideMenuBar: true,
+    titleBarStyle: 'hidden',
+    titleBarOverlay: { color: '#00000000', symbolColor: '#edf4ff', height: 47 },
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
       nodeIntegration: false,
     },
   });
+  win.removeMenu();
   if (process.env.VITE_DEV_SERVER_URL) win.loadURL(process.env.VITE_DEV_SERVER_URL);
   else win.loadFile(path.join(__dirname, 'renderer', 'index.html'));
 }
@@ -124,6 +128,13 @@ async function runDocumentScan(event, filePaths, folderPath, scanProfile) {
     if (currentScanAbort === abortController) currentScanAbort = null;
   }
 }
+
+ipcMain.handle('window:setTheme', (event, theme) => {
+  if (theme !== 'light' && theme !== 'dark') return;
+  const win = BrowserWindow.fromWebContents(event.sender);
+  if (!win || win.isDestroyed()) return;
+  win.setTitleBarOverlay({ color: '#00000000', symbolColor: theme === 'light' ? '#152940' : '#edf4ff', height: 47 });
+});
 
 ipcMain.handle('dialog:pickFolder', async () => {
   const result = await dialog.showOpenDialog({ title: 'Select document folder', properties: ['openDirectory'] });

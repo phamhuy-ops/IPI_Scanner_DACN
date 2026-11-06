@@ -24,6 +24,8 @@ function App() {
   useEffect(() => {
     document.body.classList.remove('theme-dark', 'theme-light');
     document.body.classList.add(`theme-${themeMode}`);
+    document.body.classList.toggle('desktop-window', Boolean(window.owaspWorkbench?.setWindowTheme));
+    void window.owaspWorkbench?.setWindowTheme?.(themeMode);
   }, [themeMode]);
 
   useEffect(() => {

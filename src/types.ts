@@ -220,6 +220,7 @@ export interface IpiContextDependencyFact {
 declare global {
   interface Window {
     owaspWorkbench?: {
+      setWindowTheme?: (theme: 'light' | 'dark') => Promise<void>;
       scanIpiDoc: (filePaths: string[], scanProfile?: SemanticScanProfile) => Promise<ScanResult>;
       scanIpiDocFolder: (folderPath: string, scanProfile?: SemanticScanProfile) => Promise<ScanResult>;
       pickFolder: () => Promise<{ ok: boolean; folderPath?: string; folderFileCount?: number | null }>;
