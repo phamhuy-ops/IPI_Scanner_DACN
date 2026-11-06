@@ -1,9 +1,10 @@
-const { contextBridge, ipcRenderer } = require('electron');
+const { contextBridge, ipcRenderer, webUtils } = require('electron');
 
 contextBridge.exposeInMainWorld('owaspWorkbench', {
   scanIpiDoc: (filePaths, scanProfile) => ipcRenderer.invoke('ipi:scanDoc', { filePaths, scanProfile }),
   scanIpiDocFolder: (folderPath, scanProfile) => ipcRenderer.invoke('ipi:scanDocFolder', { folderPath, scanProfile }),
   pickFolder: () => ipcRenderer.invoke('dialog:pickFolder'),
+  getPathForFile: (file) => webUtils.getPathForFile(file),
   pickFiles: () => ipcRenderer.invoke('dialog:pickFiles'),
   stopScan: () => ipcRenderer.invoke('scan:stop'),
   checkOllama: () => ipcRenderer.invoke('ai:ollama:check'),

@@ -1,4 +1,4 @@
-/** Local TinyLLM allowlist for the IPI document pipeline. */
+/** Local TinyLM allowlist for the IPI document pipeline. */
 
 export type SlmRole = 'fix' | 'check';
 export type SlmProviderMode = 'ollama';

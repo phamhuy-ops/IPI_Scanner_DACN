@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { runIpiDocMultiAgentLoop } from '../ai/agents/ipiDocAgent';
-import { useStore } from '../store/useStore';
-import { SecurityVerdict, SemanticScanProfile } from '../types';
+import { ScanTarget, useStore } from '../store/useStore';
+import { SecurityVerdict } from '../types';
 import { verdictLabel } from '../ai/agents/document/presentation';
 import { t } from '../i18n/messages';
 import { conclude } from '../ai/agents/document/reviewPolicy';
 
-type ScanMode = 'folder' | 'files';
 
 const SUPPORTED_EXTS = '.txt, .md, .pdf, .docx, .doc, .csv, .json, .xml, .html';
 const DETECTOR_MODEL = 'gemma3:1b';
@@ -15,44 +14,26 @@ const MODEL_CHOICES = [DETECTOR_MODEL, VERIFIER_MODEL];
 
 export const IpiAgentForm: React.FC = () => {
   const {
-    selectedFolder, setSelectedFolder, resetIpiRun,
+    resetIpiRun, ipiRunning, scanProfile, scanTarget: target, pickingSource: picking,
     ollamaStatus, checkOllamaStatus,
     ipiFixModel, setIpiFixModel, ipiCheckModel, setIpiCheckModel,
     locale,
   } = useStore();
-  const [scanMode, setScanMode] = useState<ScanMode>('folder');
-  const [scanProfile, setScanProfile] = useState<SemanticScanProfile>('balanced');
-  const [selectedFiles, setSelectedFiles] = useState<string[]>([]);
-  const [scanning, setScanning] = useState(false);
+  const setScanProfile = (scanProfile: 'balanced' | 'deep') => useStore.setState({ scanProfile });
+  const setTarget = (scanTarget: ScanTarget | null) => useStore.setState({ scanTarget });
+  const [dragging, setDragging] = useState(false);
+  const setPicking = (pickingSource: boolean) => useStore.setState({ pickingSource });
+  const pickerOpen = useRef(false);
   const [result, setResult] = useState<{ verdict: SecurityVerdict; review: boolean; files: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const detectorModel = ipiFixModel || DETECTOR_MODEL;
   const verifierModel = ipiCheckModel || VERIFIER_MODEL;
 
-  const handleBrowseFolder = async () => {
-    const picked = await window.owaspWorkbench?.pickFolder?.();
-    if (picked?.ok && picked.folderPath) {
-      setSelectedFolder(picked.folderPath);
-      setResult(null);
-      setError(null);
-    }
-  };
+  const runScan = async (nextTarget: ScanTarget) => {
+    if (useStore.getState().ipiRunning) return;
 
-  const handleBrowseFiles = async () => {
-    const picked = await window.owaspWorkbench?.pickFiles?.();
-    if (picked?.ok && picked.filePaths?.length) {
-      setSelectedFiles(picked.filePaths);
-      setResult(null);
-      setError(null);
-    }
-  };
-
-  const runScan = async () => {
-    const hasTarget = scanMode === 'folder' ? Boolean(selectedFolder) : selectedFiles.length > 0;
-    if (!hasTarget) return;
-
-    setScanning(true);
+    setTarget(nextTarget);
     setResult(null);
     setError(null);
     resetIpiRun();
@@ -72,8 +53,8 @@ export const IpiAgentForm: React.FC = () => {
       await checkOllamaStatus();
 
       const finalState = await runIpiDocMultiAgentLoop({
-        filePaths: scanMode === 'files' ? selectedFiles : [],
-        folderPath: scanMode === 'folder' ? selectedFolder || undefined : undefined,
+        filePaths: nextTarget.filePaths ?? [],
+        folderPath: nextTarget.folderPath,
         scanProfile,
         providerMode: 'ollama',
         fixModel: detectorModel,
@@ -88,7 +69,7 @@ export const IpiAgentForm: React.FC = () => {
       setResult({
         verdict: finalState.check?.verdict || 'needs_review',
         review: finalState.check?.verdict !== 'not_detected',
-        files: Number(finalState.scanResult?.metadata?.scannedFiles || selectedFiles.length),
+        files: Number(finalState.scanResult?.metadata?.scannedFiles ?? nextTarget.filePaths?.length ?? 0),
       });
     } catch (cause) {
       const message = cause instanceof Error ? cause.message : t(locale, 'form.scanError');
@@ -98,56 +79,96 @@ export const IpiAgentForm: React.FC = () => {
           check: conclude([], [t(locale, 'form.scanIncomplete')], message) } });
       }
     } finally {
-      setScanning(false);
       useStore.setState({ ipiRunning: false });
     }
   };
 
-  const busy = scanning;
-  const hasTarget = scanMode === 'folder' ? Boolean(selectedFolder) : selectedFiles.length > 0;
+  const busy = ipiRunning || picking;
+
+  const pickSource = async (kind: 'files' | 'folder') => {
+    if (pickerOpen.current || useStore.getState().ipiRunning) return;
+    pickerOpen.current = true;
+    setPicking(true);
+    try {
+      if (kind === 'files') {
+        const picked = await window.owaspWorkbench?.pickFiles();
+        if (picked?.ok && picked.filePaths.length) void runScan({ filePaths: picked.filePaths });
+      } else {
+        const picked = await window.owaspWorkbench?.pickFolder();
+        if (picked?.ok && picked.folderPath) void runScan({ folderPath: picked.folderPath });
+      }
+    } catch {
+      setError(t(locale, 'form.sourceError'));
+    } finally {
+      pickerOpen.current = false;
+      setPicking(false);
+    }
+  };
+
+  const dropFiles = (event: React.DragEvent) => {
+    event.preventDefault();
+    setDragging(false);
+    if (busy || pickerOpen.current || useStore.getState().ipiRunning) return;
+    const files = Array.from(event.dataTransfer.files);
+    if (!files.length) return;
+
+    const extensions = SUPPORTED_EXTS.split(', ');
+    const filePaths = files.map((file) => {
+      const extension = file.name.slice(file.name.lastIndexOf('.')).toLowerCase();
+      return extensions.includes(extension) ? window.owaspWorkbench?.getPathForFile?.(file) : undefined;
+    });
+    if (filePaths.some((path) => !path)) {
+      setError(t(locale, 'form.dropError'));
+      return;
+    }
+
+    void runScan({ filePaths: [...new Set(filePaths.filter((path): path is string => Boolean(path)))] });
+  };
 
   return (
     <>
       <div className="config-scroll">
-
-      <div className="section">
+      <section className="section scan-source">
         <div className="section-label">{t(locale, 'form.source')}</div>
-        <div className="ipi-mode-tabs">
-          <button type="button" className={`ipi-mode-tab ${scanMode === 'folder' ? 'active' : ''}`} onClick={() => setScanMode('folder')} disabled={busy}>{t(locale, 'form.folderTab')}</button>
-          <button type="button" className={`ipi-mode-tab ${scanMode === 'files' ? 'active' : ''}`} onClick={() => setScanMode('files')} disabled={busy}>{t(locale, 'form.filesTab')}</button>
+        <div
+          className={`scan-drop-zone ${dragging ? 'is-dragging' : ''}`}
+          aria-busy={ipiRunning}
+          onDragOver={(event) => {
+            if (!event.dataTransfer.types.includes('Files')) return;
+            event.preventDefault();
+            event.dataTransfer.dropEffect = busy ? 'none' : 'copy';
+            setDragging(!busy);
+          }}
+          onDragLeave={(event) => {
+            if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) {
+              setDragging(false);
+            }
+          }}
+          onDrop={dropFiles}
+        >
+          <svg className="scan-upload-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+            <path d="M12 16V4m-4 4 4-4 4 4M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <strong>{t(locale, 'form.dropTitle')}</strong>
+          <p>{t(locale, 'form.autoStart')}</p>
+          <button className="btn-primary" type="button" disabled={busy} onClick={() => void pickSource('files')}>{t(locale, 'form.pickFiles')}</button>
         </div>
-
-        {scanMode === 'folder' ? (
-          <div className="field" style={{ marginTop: 10 }}>
-            <label className="field-label" htmlFor="ipi-folder-path">{t(locale, 'form.folderLabel')}</label>
-            <div className="folder-select-row">
-              <input id="ipi-folder-path" type="text" value={selectedFolder || ''} readOnly placeholder={t(locale, 'form.folderPlaceholder')} />
-              <button className="btn-browse" onClick={handleBrowseFolder} disabled={busy} type="button">{t(locale, 'form.browseFolder')}</button>
-            </div>
-            <div className="field-hint">{t(locale, 'form.folderHint')}</div>
-          </div>
-        ) : (
-          <div className="field" style={{ marginTop: 10 }}>
-            <label className="field-label">{t(locale, 'form.selectedFiles', { count: selectedFiles.length })}</label>
-            {selectedFiles.length ? (
-              <div className="ipi-file-list">
-                {selectedFiles.map((filePath) => <div key={filePath} className="ipi-file-item"><span className="ipi-file-name" title={filePath}>{filePath.split(/[/\\]/).pop()}</span></div>)}
-              </div>
-            ) : <button className="ipi-file-empty" type="button" disabled={busy} onClick={handleBrowseFiles}>{t(locale, 'form.pickHint')}</button>}
-            <div className="folder-select-row" style={{ marginTop: 8 }}>
-              <button className="btn-browse" onClick={handleBrowseFiles} disabled={busy} type="button">{t(locale, 'form.pickFiles')}</button>
-              {selectedFiles.length > 0 && <button className="btn-clear" type="button" disabled={busy} onClick={() => setSelectedFiles([])} title={t(locale, 'form.clearFiles')}>X</button>}
-            </div>
-          </div>
-        )}
         <div className="field-hint">{t(locale, 'form.supported', { exts: SUPPORTED_EXTS })}</div>
-      </div>
+        <button className="btn-browse scan-folder-button" type="button" disabled={busy} onClick={() => void pickSource('folder')}>{t(locale, 'form.browseFolder')}</button>
+        {target && (
+          <ul className="ipi-file-list scan-source-list" aria-label={t(locale, 'form.source')}>
+            {(target.filePaths ?? [target.folderPath]).map((path) => (
+              <li key={path} className="ipi-file-item"><span className="ipi-file-name" title={path}>{path.split(/[/\\]/).filter(Boolean).pop() || path}</span></li>
+            ))}
+          </ul>
+        )}
+      </section>
 
       <div className="section">
         <div className="section-label">{t(locale, 'form.scope')}</div>
         <div className="scan-mode-grid" role="group" aria-label={t(locale, 'form.scopeGroup')}>
-          <button type="button" className={`scan-mode-card ${scanProfile === 'balanced' ? 'selected' : ''}`} aria-pressed={scanProfile === 'balanced'} onClick={() => setScanProfile('balanced')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.balanced')}</strong><small>{locale === 'vi' ? 'Ưu tiên đoạn có tín hiệu rủi ro' : 'Prioritize chunks with risk signals'}</small></button>
-          <button type="button" className={`scan-mode-card ${scanProfile === 'deep' ? 'selected' : ''}`} aria-pressed={scanProfile === 'deep'} onClick={() => setScanProfile('deep')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.deepScan')}</strong><small>{locale === 'vi' ? 'Mở rộng phạm vi kiểm tra' : 'Review a broader document scope'}</small></button>
+          <button type="button" className={`scan-mode-card scan-mode-balanced ${scanProfile === 'balanced' ? 'selected' : ''}`} aria-pressed={scanProfile === 'balanced'} onClick={() => setScanProfile('balanced')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.balanced')}</strong><small>{locale === 'vi' ? 'Ưu tiên đoạn có tín hiệu rủi ro' : 'Prioritize chunks with risk signals'}</small></button>
+          <button type="button" className={`scan-mode-card scan-mode-deep ${scanProfile === 'deep' ? 'selected' : ''}`} aria-pressed={scanProfile === 'deep'} onClick={() => setScanProfile('deep')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.deepScan')}</strong><small>{locale === 'vi' ? 'Mở rộng phạm vi kiểm tra' : 'Review a broader document scope'}</small></button>
         </div>
         <div className="ipi-auto-loop-info" style={{ marginTop: 8 }}>
           {scanProfile === 'deep' ? t(locale, 'form.deepHint') : t(locale, 'form.balancedHint')}
@@ -155,7 +176,7 @@ export const IpiAgentForm: React.FC = () => {
       </div>
 
       <details className="section model-settings">
-        <summary><span className="section-label">{t(locale, 'form.models')}</span><span className="model-settings-summary"><code>{detectorModel}</code><code>{verifierModel}</code></span></summary>
+        <summary><span className="section-label">{t(locale, 'form.models')}</span></summary>
         <div className="field">
           <label className="field-label" htmlFor="ipi-detector-model">{t(locale, 'form.detector')}</label>
           <select id="ipi-detector-model" className="input-base" value={detectorModel} disabled={busy} onChange={(event) => setIpiFixModel(event.target.value)}>
@@ -182,9 +203,13 @@ export const IpiAgentForm: React.FC = () => {
       </div>
 
       <div className="left-panel-cta">
-        <div className="scan-config-summary"><span>{scanMode === 'files' ? t(locale, 'form.selectedFiles', { count: selectedFiles.length }) : t(locale, 'form.folderTab')}</span><span>{scanProfile === 'deep' ? 'Deep Scan' : 'Balanced'}</span></div>
-        <button className="btn-primary" onClick={() => void runScan()} disabled={busy || !hasTarget}>{busy ? t(locale, 'form.scanning') : scanProfile === 'deep' ? t(locale, 'form.scanDeep') : t(locale, 'form.scanBalanced')}</button>
-        <button className="btn-header" type="button" disabled={busy} onClick={resetIpiRun} style={{ marginTop: 8, width: '100%', justifyContent: 'center' }}>{t(locale, 'form.clearResults')}</button>
+        <div className="scan-auto-status" role="status">{t(locale, ipiRunning ? 'form.scanning' : 'form.autoReady')}</div>
+        {target && <button className="btn-header" type="button" disabled={busy} onClick={() => {
+          resetIpiRun();
+          setTarget(null);
+          setError(null);
+          setResult(null);
+        }}>{t(locale, 'form.clearResults')}</button>}
         <p className="local-processing-note">{locale === 'vi' ? 'Xử lý cục bộ qua Ollama' : 'Processed locally via Ollama'}</p>
       </div>
     </>

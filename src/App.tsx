@@ -6,8 +6,11 @@ import { ThemeReveal } from './components/ThemeReveal';
 import { AppLocale } from './i18n/locale';
 import { t } from './i18n/messages';
 import { ThemeMode, useStore } from './store/useStore';
+import { useProjects } from './store/useProjects';
+import { ProjectPicker } from './components/ProjectPicker';
 
 function App() {
+  const activeProject = useProjects(state => state.activeId);
   const { themeMode, setThemeMode, ipiRunning, locale, setLocale, ollamaStatus } = useStore();
   const [pendingTheme, setPendingTheme] = useState<ThemeMode | null>(null);
   const connectionLabel = !ollamaStatus.checked
@@ -35,7 +38,15 @@ function App() {
   };
 
   return (
-    <div className="app-shell">
+    <div
+      className="app-shell"
+      onDragOver={(event) => {
+        if (event.dataTransfer.types.includes('Files')) event.preventDefault();
+      }}
+      onDrop={(event) => {
+        if (event.dataTransfer.types.includes('Files')) event.preventDefault();
+      }}
+    >
       <AnimatePresence>
         {pendingTheme && (
           <ThemeReveal
@@ -46,7 +57,6 @@ function App() {
           />
         )}
       </AnimatePresence>
-      <div className="liquid-grid-overlay" aria-hidden="true" />
       <header className="app-header">
         <div className="app-logo">
           <img className="logo-icon" src="./app-icon.png" alt="" aria-hidden="true" />
@@ -82,7 +92,8 @@ function App() {
         </div>
       </header>
 
-      <div className="workspace workspace-scan-v2">
+      <div className="project-layout"><ProjectPicker /><div className="project-content">
+      {activeProject && <div key={activeProject} className="workspace workspace-scan-v2">
         <aside className="left-panel scan-config-panel">
           <div className="layout-panel-head">
             <div className="layout-panel-title">{t(locale, 'app.inputTitle')}</div>
@@ -93,7 +104,9 @@ function App() {
         <main className="right-panel scan-results-panel">
           <IpiAgentPanel />
         </main>
-      </div>
+      </div>}
+      {!activeProject && <div className="project-welcome"><h1>{locale === 'vi' ? 'Không gian kiểm thử của bạn' : 'Your testing workspace'}</h1><p>{locale === 'vi' ? 'Tạo project mới ở thanh bên để bắt đầu.' : 'Create a new project in the sidebar to begin.'}</p></div>}
+      </div></div>
     </div>
   );
 }

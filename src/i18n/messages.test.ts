@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { messages, t } from './messages';
 
-const TERMS = ['IPI', 'Detector', 'Verifier', 'TinyLLM', 'Ollama', 'Rule Prefilter', 'Balanced', 'Deep Scan', 'chunk', 'RAG'];
+const TERMS = ['IPI', 'Detector', 'Verifier', 'TinyLM', 'Ollama', 'Rule Prefilter', 'Balanced', 'Deep Scan', 'chunk', 'RAG'];
 
 describe('giao diện đa ngôn ngữ', () => {
   it('có đủ khóa tiếng Việt khớp tiếng Anh', () => {

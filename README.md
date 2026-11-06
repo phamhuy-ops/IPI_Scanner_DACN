@@ -1,4 +1,4 @@
-# SENTINEL — Local TinyLLM IPI Scanner
+# SENTINEL — Local TinyLM IPI Scanner
 
 SENTINEL là ứng dụng desktop (Electron + React) dùng để phát hiện **Indirect Prompt Injection (IPI)** trong tài liệu và thư mục tài liệu trước khi nội dung được đưa vào pipeline LLM hoặc RAG. Toàn bộ bước phân tích bằng AI chạy **local** qua Ollama; tài liệu và API key không được gửi lên cloud.
 
@@ -53,7 +53,7 @@ Trong ứng dụng:
 1. Chọn **Document folder** hoặc **Pick files**.
 2. Bấm **Check local Ollama** để xác nhận hai model đã sẵn sàng.
 3. Chọn Detector và Verifier (mặc định đã gợi ý sẵn).
-4. Chọn **Balanced** hoặc **Deep Scan**, rồi bấm **Scan IPI with local TinyLLM**.
+4. Chọn **Balanced** hoặc **Deep Scan**, rồi bấm **Scan IPI with local TinyLM**.
 
 Định dạng tài liệu hỗ trợ: `txt`, `md`, `csv`, `log`, `rst`, `json`, `xml`, `html`, `htm`, `pdf`, `docx`, và `doc`. Khi quét thư mục, SENTINEL duyệt đệ quy tối đa **300** tài liệu và bỏ qua `.git`, `node_modules`, `dist`, `dist-electron`.
 

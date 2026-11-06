@@ -73,7 +73,7 @@ function createWindow() {
     height: 920,
     minWidth: 1100,
     minHeight: 720,
-    title: 'SENTINEL - Local TinyLLM IPI Defense',
+    title: 'SENTINEL - Local TinyLM IPI Defense',
     icon: getWindowIconPath(),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),

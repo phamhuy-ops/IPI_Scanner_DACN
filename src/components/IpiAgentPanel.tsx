@@ -64,21 +64,20 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
       <div className="scan-page-heading">
         <span>{locale === 'vi' ? 'Lượt quét hiện tại' : 'Current scan'}</span>
         <h1>{ipiRun.status === 'idle' ? (locale === 'vi' ? 'Kiểm tra tài liệu' : 'Document analysis') : ipiRunning ? (locale === 'vi' ? 'Đang kiểm tra tài liệu' : 'Analyzing documents') : (locale === 'vi' ? 'Kết quả phân tích tài liệu' : 'Document analysis results')}</h1>
-        <p>{locale === 'vi' ? 'Rule Prefilter, Detector và Verifier đối chiếu chỉ dẫn với nguồn tài liệu.' : 'Rule Prefilter, Detector and Verifier review instructions against document sources.'}</p>
       </div>
-      <div className="ipi-status-bar">
+      {ipiRun.status !== 'idle' && <details className="ipi-status-bar scan-run-details"><summary>{locale === 'vi' ? 'Thông tin lượt quét' : 'Scan details'}</summary>
         <span className={`ipi-badge ipi-badge-${ipiRun.check?.verdict || ipiRun.status}`}>{statusLabel}</span>
         <div className="ipi-meta-tags">
           <span className="ipi-meta-tag"><span className="ipi-meta-label">Detector</span><span className="ipi-meta-value">{ipiRun.fixModel || 'gemma3:1b'}</span></span>
           <span className="ipi-meta-tag"><span className="ipi-meta-label">Verifier</span><span className="ipi-meta-value">{ipiRun.checkModel || 'qwen2.5-coder:1.5b'}</span></span>
           <span className="ipi-meta-tag"><span className="ipi-meta-label">{t(locale, 'panel.runtime')}</span><span className="ipi-meta-value">Ollama local</span></span>
         </div>
-      </div>
+      </details>}
 
-      <ScanActivity run={ipiRun} locale={locale} />
+      {ipiRun.status !== 'idle' && <ScanActivity run={ipiRun} locale={locale} />}
       <ScanConclusion run={ipiRun} locale={locale} />
 
-      <p className="processing-caption" role="status">{t(locale, 'panel.processing', { status: processingLabel(ipiRun.processingStatus, locale) })}{ipiRun.status !== 'idle' && t(locale, 'panel.roundOne')}</p>
+      {ipiRun.status !== 'idle' && <p className="processing-caption" role="status">{t(locale, 'panel.processing', { status: processingLabel(ipiRun.processingStatus, locale) })}{t(locale, 'panel.roundOne')}</p>}
 
       {(progress || ipiRun.scanResult) && <details className="ipi-coverage-summary ipi-review-progress" aria-label={t(locale, 'panel.progressTitle')}>
         <summary>{t(locale, 'panel.progressTitle')}</summary>
@@ -126,14 +125,10 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
 
       {ipiRun.events.length === 0 && !ipiRunning ? (
         <div className="copilot-hero">
-          <div className="copilot-hero-badge">{t(locale, 'panel.heroBadge')}</div>
-          <h2 className="copilot-hero-title">{t(locale, 'panel.heroTitle')}</h2>
-          <p className="copilot-hero-desc">{t(locale, 'panel.heroDesc')}</p>
-          <div className="copilot-steps-grid">
-            <div className="copilot-step-tile"><div className="copilot-tile-num">01</div><div className="copilot-tile-title">{t(locale, 'panel.stepPrefilterTitle')}</div><div className="copilot-tile-desc">{t(locale, 'panel.stepPrefilterDesc')}</div></div>
-            <div className="copilot-step-tile"><div className="copilot-tile-num">02</div><div className="copilot-tile-title">{t(locale, 'panel.stepDetectorTitle')}</div><div className="copilot-tile-desc">{t(locale, 'panel.stepDetectorDesc')}</div></div>
-            <div className="copilot-step-tile"><div className="copilot-tile-num">03</div><div className="copilot-tile-title">{t(locale, 'panel.stepVerifierTitle')}</div><div className="copilot-tile-desc">{t(locale, 'panel.stepVerifierDesc')}</div></div>
-          </div>
+          <div className="ready-orbit" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6l-8-3Z"/><path d="m8 12 3 3 5-6"/></svg></div>
+          <h2 className="copilot-hero-title">{locale === 'vi' ? 'Sẵn sàng kiểm tra tài liệu' : 'Ready to review your documents'}</h2>
+          <p className="copilot-hero-desc">{locale === 'vi' ? 'Thêm tệp ở bên trái. Kết quả và các nội dung cần xem xét sẽ xuất hiện tại đây.' : 'Add files on the left. Results and items to review will appear here.'}</p>
+          <span className="ready-note">{locale === 'vi' ? 'Tự động quét · Xử lý trên máy của bạn' : 'Automatic scanning · Processed on your device'}</span>
         </div>
       ) : (
         <>

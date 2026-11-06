@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import { AppLocale, persistLocale, readStoredLocale } from '../i18n/locale';
-import { IpiRunState } from '../types';
+import { IpiRunState, SemanticScanProfile } from '../types';
+
+export type ScanTarget = { folderPath: string; filePaths?: never } | { filePaths: string[]; folderPath?: never };
 
 export type ThemeMode = 'dark' | 'light';
 export type { AppLocale };
@@ -18,6 +20,9 @@ const EMPTY_IPI_RUN: IpiRunState = {
 };
 
 interface AppState {
+  scanTarget: ScanTarget | null;
+  scanProfile: SemanticScanProfile;
+  pickingSource: boolean;
   themeMode: ThemeMode;
   setThemeMode: (themeMode: ThemeMode) => void;
   toggleThemeMode: () => void;
@@ -37,6 +42,9 @@ interface AppState {
 }
 
 export const useStore = create<AppState>((set) => ({
+  scanTarget: null,
+  scanProfile: 'balanced',
+  pickingSource: false,
   themeMode: 'dark',
   setThemeMode: (themeMode) => set({ themeMode }),
   toggleThemeMode: () => set((state) => ({ themeMode: state.themeMode === 'dark' ? 'light' : 'dark' })),

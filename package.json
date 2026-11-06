@@ -1,7 +1,7 @@
 {
   "name": "sentinel-v2",
   "version": "2.0.0",
-  "description": "Local TinyLLM scanner for Indirect Prompt Injection in documents",
+  "description": "Local TinyLM scanner for Indirect Prompt Injection in documents",
   "author": "SENTINEL",
   "main": "dist-electron/main.js",
   "packageManager": "npm@11.6.2",

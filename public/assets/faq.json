@@ -9,7 +9,7 @@
       "ipi scanner"
     ],
     "question": "What is SENTINEL?",
-    "answer": "## What is SENTINEL?\n\nSENTINEL is a desktop Electron app that finds **Indirect Prompt Injection (IPI)** in documents before they are used in LLM or RAG pipelines.\n\n**How it works:**\n- Rule-based prefilter on extracted text\n- **Detector Agent** (local TinyLLM) for semantic intent\n- **Verifier Agent** (second local TinyLLM) for an independent pass/fail verdict\n\n**Key points:**\n- Documents stay on your machine\n- AI runs through **Ollama** only — no cloud fallback\n- Supports common document formats (PDF, DOCX, TXT, and more)"
+    "answer": "## What is SENTINEL?\n\nSENTINEL is a desktop Electron app that finds **Indirect Prompt Injection (IPI)** in documents before they are used in LLM or RAG pipelines.\n\n**How it works:**\n- Rule-based prefilter on extracted text\n- **Detector Agent** (local TinyLM) for semantic intent\n- **Verifier Agent** (second local TinyLM) for an independent pass/fail verdict\n\n**Key points:**\n- Documents stay on your machine\n- AI runs through **Ollama** only — no cloud fallback\n- Supports common document formats (PDF, DOCX, TXT, and more)"
   },
   {
     "id": "faq_how_to_use",
@@ -20,6 +20,6 @@
       "ollama"
     ],
     "question": "How do I run an IPI scan?",
-    "answer": "## Basic workflow\n\n**Step 1 — Pick input**\nChoose **Document folder** or **Pick files** in the left panel.\n\n**Step 2 — Check Ollama**\nClick **Check local Ollama** and confirm `gemma3:1b` and `qwen2.5-coder:1.5b` are installed.\n\n**Step 3 — Scan mode**\nUse **Balanced** for daily scans or **Deep Scan** for more chunk coverage.\n\n**Step 4 — Run scan**\nClick **Scan IPI with local TinyLLM** and watch the pipeline log on the right.\n\n**Step 5 — Review results**\nRead prefilter findings, Detector coverage, and the Verifier verdict."
+    "answer": "## Basic workflow\n\n**Step 1 — Pick input**\nChoose **Document folder** or **Pick files** in the left panel.\n\n**Step 2 — Check Ollama**\nClick **Check local Ollama** and confirm `gemma3:1b` and `qwen2.5-coder:1.5b` are installed.\n\n**Step 3 — Scan mode**\nUse **Balanced** for daily scans or **Deep Scan** for more chunk coverage.\n\n**Step 4 — Run scan**\nClick **Scan IPI with local TinyLM** and watch the pipeline log on the right.\n\n**Step 5 — Review results**\nRead prefilter findings, Detector coverage, and the Verifier verdict."
   }
 ]

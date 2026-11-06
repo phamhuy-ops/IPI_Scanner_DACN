@@ -38,8 +38,12 @@ export function ScanActivity({ run, locale }: { run: IpiRunState; locale: AppLoc
     <div className="scan-activity-heading"><strong>{vi ? 'Tiến trình phân tích' : 'Analysis activity'}</strong><span>{run.status === 'idle' ? (vi ? 'Sẵn sàng' : 'Ready') : percent === null ? (run.status === 'running' ? (vi ? 'Đang chuẩn bị' : 'Preparing') : (vi ? 'Không có số liệu' : 'No progress data')) : `${done}/${total}`}</span></div>
     <div className="scan-metrics-grid"><div>
     <div className="scan-metric-label"><span>{vi ? 'Tiến độ xử lý' : 'Processing progress'}</span><strong>{percent === null ? (vi ? 'Chưa có số liệu' : 'Not available') : `${percent}%`}</strong></div>
-    <div className={`scan-progress ${run.status === 'running' ? 'is-running' : ''}`} role="progressbar" aria-label={vi ? 'Lượt xử lý đoạn đã chọn của hai model' : 'Selected chunk reviews across both models'} aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent ?? undefined}>
-      <div className="scan-progress-fill" style={{ width: percent === null ? (run.status === 'running' ? '30%' : '0%') : `${percent}%` }} />
+    <div className={`scan-ring ${percent === null && run.status === 'running' ? 'is-indeterminate' : ''}`} role="progressbar" aria-label={vi ? 'Lượt xử lý đoạn đã chọn của hai model' : 'Selected chunk reviews across both models'} aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent ?? undefined} aria-valuetext={percent === null ? (vi ? 'Chưa có số liệu tiến độ' : 'Progress not available') : `${percent}%`}>
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <circle className="scan-ring-track" cx="60" cy="60" r="50" />
+        <circle className="scan-ring-value" cx="60" cy="60" r="50" pathLength="100" strokeDasharray="100" strokeDashoffset={percent === null ? (run.status === 'running' ? 75 : 100) : 100 - percent} />
+      </svg>
+      <span className="scan-ring-label" aria-hidden="true"><strong>{percent === null ? '—' : `${percent}%`}</strong><small>{percent === null ? (run.status === 'running' ? (vi ? 'Chuẩn bị' : 'Preparing') : (vi ? 'Chưa có dữ liệu' : 'No data')) : (vi ? 'Đã xử lý' : 'Processed')}</small></span>
     </div>
     <small>{vi ? 'Tiến độ lượt xử lý đoạn đã chọn, không phải tỷ lệ an toàn hay độ bao phủ toàn tài liệu.' : 'Progress of selected chunk reviews, not a safety score or whole-document coverage.'}</small>
     </div><div className="scan-coverage">

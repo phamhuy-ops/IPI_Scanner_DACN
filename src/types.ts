@@ -223,6 +223,7 @@ declare global {
       scanIpiDoc: (filePaths: string[], scanProfile?: SemanticScanProfile) => Promise<ScanResult>;
       scanIpiDocFolder: (folderPath: string, scanProfile?: SemanticScanProfile) => Promise<ScanResult>;
       pickFolder: () => Promise<{ ok: boolean; folderPath?: string }>;
+      getPathForFile: (file: File) => string;
       pickFiles: () => Promise<{ ok: boolean; filePaths: string[] }>;
       stopScan: () => Promise<{ ok: boolean; error?: string }>;
       checkOllama: () => Promise<{ ok: boolean; models?: string[]; error?: string }>;

@@ -12,7 +12,7 @@
         icon: '🛡️', title: 'What is SENTINEL?', open: true,
         items: [
           'Desktop app (Electron) to find <strong>Indirect Prompt Injection (IPI)</strong> in documents before LLM/RAG ingestion.',
-          'Uses a <strong>rule prefilter</strong> plus two local TinyLLMs through <strong>Ollama</strong> — no cloud.',
+          'Uses a <strong>rule prefilter</strong> plus two local TinyLMs through <strong>Ollama</strong> — no cloud.',
         ],
         tip: 'Only scan documents you are allowed to test.'
       },
@@ -46,7 +46,7 @@
       {
         icon: '🔬', title: 'Balanced vs Deep Scan', open: false,
         items: [
-          '<strong>Balanced:</strong> up to 12 chunks for TinyLLM review — faster daily use.',
+          '<strong>Balanced:</strong> up to 12 chunks for TinyLM review — faster daily use.',
           '<strong>Deep Scan:</strong> up to 24 chunks and more Verifier evidence — slower, wider coverage.',
         ],
         tip: 'If the prefilter is clean but you still suspect hidden instructions, try Deep Scan.'
