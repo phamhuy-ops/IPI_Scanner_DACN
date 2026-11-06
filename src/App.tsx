@@ -8,8 +8,13 @@ import { t } from './i18n/messages';
 import { ThemeMode, useStore } from './store/useStore';
 
 function App() {
-  const { themeMode, setThemeMode, ipiRunning, locale, setLocale } = useStore();
+  const { themeMode, setThemeMode, ipiRunning, locale, setLocale, ollamaStatus } = useStore();
   const [pendingTheme, setPendingTheme] = useState<ThemeMode | null>(null);
+  const connectionLabel = !ollamaStatus.checked
+    ? (locale === 'vi' ? 'Ollama chưa kiểm tra' : 'Ollama not checked')
+    : ollamaStatus.available
+      ? (locale === 'vi' ? 'Ollama đã kết nối' : 'Ollama connected')
+      : (locale === 'vi' ? 'Ollama không khả dụng' : 'Ollama unavailable');
 
   useEffect(() => {
     document.body.classList.remove('theme-dark', 'theme-light');
@@ -53,9 +58,9 @@ function App() {
         <div className="header-divider" />
         <div className="header-gap" />
         <div className="header-actions">
-          <div className="status-indicator" title={ipiRunning ? t(locale, 'header.analyzing') : t(locale, 'header.ready')}>
-            <div className={`status-dot ${ipiRunning ? 'active' : ''}`} />
-            <span>{ipiRunning ? t(locale, 'header.scanRunning') : t(locale, 'header.ollamaLocal')}</span>
+          <div className="status-indicator" title={connectionLabel}>
+            <div className={`status-dot ${ipiRunning ? 'active' : !ollamaStatus.checked ? 'unchecked' : ollamaStatus.available ? 'connected' : 'unavailable'}`} />
+            <span>{ipiRunning ? t(locale, 'header.scanRunning') : connectionLabel}</span>
           </div>
           <div className="header-actions-divider" />
           <div className="locale-toggle" role="group" aria-label={t(locale, 'header.language')}>

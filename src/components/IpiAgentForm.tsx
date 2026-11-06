@@ -108,9 +108,7 @@ export const IpiAgentForm: React.FC = () => {
 
   return (
     <>
-      <div className="onboarding-tip">
-        <strong>Local TinyLLM IPI Scanner:</strong> {t(locale, 'form.intro')}
-      </div>
+      <div className="config-scroll">
 
       <div className="section">
         <div className="section-label">{t(locale, 'form.source')}</div>
@@ -135,7 +133,7 @@ export const IpiAgentForm: React.FC = () => {
               <div className="ipi-file-list">
                 {selectedFiles.map((filePath) => <div key={filePath} className="ipi-file-item"><span className="ipi-file-name" title={filePath}>{filePath.split(/[/\\]/).pop()}</span></div>)}
               </div>
-            ) : <div className="ipi-file-empty" role="button" tabIndex={0} onClick={handleBrowseFiles}>{t(locale, 'form.pickHint')}</div>}
+            ) : <button className="ipi-file-empty" type="button" disabled={busy} onClick={handleBrowseFiles}>{t(locale, 'form.pickHint')}</button>}
             <div className="folder-select-row" style={{ marginTop: 8 }}>
               <button className="btn-browse" onClick={handleBrowseFiles} disabled={busy} type="button">{t(locale, 'form.pickFiles')}</button>
               {selectedFiles.length > 0 && <button className="btn-clear" type="button" disabled={busy} onClick={() => setSelectedFiles([])} title={t(locale, 'form.clearFiles')}>X</button>}
@@ -147,17 +145,17 @@ export const IpiAgentForm: React.FC = () => {
 
       <div className="section">
         <div className="section-label">{t(locale, 'form.scope')}</div>
-        <div className="ipi-mode-tabs" role="group" aria-label={t(locale, 'form.scopeGroup')}>
-          <button type="button" className={`ipi-mode-tab ${scanProfile === 'balanced' ? 'active' : ''}`} onClick={() => setScanProfile('balanced')} disabled={busy}>{t(locale, 'form.balanced')}</button>
-          <button type="button" className={`ipi-mode-tab ${scanProfile === 'deep' ? 'active' : ''}`} onClick={() => setScanProfile('deep')} disabled={busy}>{t(locale, 'form.deepScan')}</button>
+        <div className="scan-mode-grid" role="group" aria-label={t(locale, 'form.scopeGroup')}>
+          <button type="button" className={`scan-mode-card ${scanProfile === 'balanced' ? 'selected' : ''}`} aria-pressed={scanProfile === 'balanced'} onClick={() => setScanProfile('balanced')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.balanced')}</strong><small>{locale === 'vi' ? 'Ưu tiên đoạn có tín hiệu rủi ro' : 'Prioritize chunks with risk signals'}</small></button>
+          <button type="button" className={`scan-mode-card ${scanProfile === 'deep' ? 'selected' : ''}`} aria-pressed={scanProfile === 'deep'} onClick={() => setScanProfile('deep')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.deepScan')}</strong><small>{locale === 'vi' ? 'Mở rộng phạm vi kiểm tra' : 'Review a broader document scope'}</small></button>
         </div>
         <div className="ipi-auto-loop-info" style={{ marginTop: 8 }}>
           {scanProfile === 'deep' ? t(locale, 'form.deepHint') : t(locale, 'form.balancedHint')}
         </div>
       </div>
 
-      <div className="section">
-        <div className="section-label">{t(locale, 'form.models')}</div>
+      <details className="section model-settings">
+        <summary><span className="section-label">{t(locale, 'form.models')}</span><span className="model-settings-summary"><code>{detectorModel}</code><code>{verifierModel}</code></span></summary>
         <div className="field">
           <label className="field-label" htmlFor="ipi-detector-model">{t(locale, 'form.detector')}</label>
           <select id="ipi-detector-model" className="input-base" value={detectorModel} disabled={busy} onChange={(event) => setIpiFixModel(event.target.value)}>
@@ -175,16 +173,19 @@ export const IpiAgentForm: React.FC = () => {
         {ollamaStatus.checked && <div className={ollamaStatus.available ? 'success-bar' : 'error-bar'} style={{ marginTop: 8 }}>
           {ollamaStatus.available ? t(locale, 'form.ollamaOk', { models: ollamaStatus.models.join(', ') || t(locale, 'form.noModels') }) : ollamaStatus.error}
         </div>}
-      </div>
+      </details>
 
       {error && <div className="error-bar" role="alert">{error}</div>}
       {result && <div className={`ipi-doc-result ${result.review ? 'result-warn' : 'result-ok'}`}>
         {t(locale, 'form.resultSummary', { label: verdictLabel(result.verdict, locale), files: result.files })}
       </div>}
+      </div>
 
       <div className="left-panel-cta">
+        <div className="scan-config-summary"><span>{scanMode === 'files' ? t(locale, 'form.selectedFiles', { count: selectedFiles.length }) : t(locale, 'form.folderTab')}</span><span>{scanProfile === 'deep' ? 'Deep Scan' : 'Balanced'}</span></div>
         <button className="btn-primary" onClick={() => void runScan()} disabled={busy || !hasTarget}>{busy ? t(locale, 'form.scanning') : scanProfile === 'deep' ? t(locale, 'form.scanDeep') : t(locale, 'form.scanBalanced')}</button>
         <button className="btn-header" type="button" disabled={busy} onClick={resetIpiRun} style={{ marginTop: 8, width: '100%', justifyContent: 'center' }}>{t(locale, 'form.clearResults')}</button>
+        <p className="local-processing-note">{locale === 'vi' ? 'Xử lý cục bộ qua Ollama' : 'Processed locally via Ollama'}</p>
       </div>
     </>
   );

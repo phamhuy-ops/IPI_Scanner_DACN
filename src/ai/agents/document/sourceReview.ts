@@ -4,8 +4,14 @@ import { citationFor, InvalidAgentResponse, parseAgentBatch, parseReviewJson, re
 import { buildSourceReferences, SourceReference } from './sourceReferences';
 import { ADDRESSEES, DEVIATIONS, FRAMINGS } from './directiveContext';
 
+// Chỉ bỏ mã không thể qua validator; nguồn đầy đủ vẫn giữ nguyên để model đọc.
+export function sourceReviewReferences(chunks: SemanticChunk[], expected: IpiSuspicion[], contentOnly = false) {
+  const refs = buildSourceReferences(chunks, expected);
+  return contentOnly ? refs.filter(ref => /[\p{L}\p{N}]/u.test(ref.text)) : refs;
+}
+
 // Scope trung tính chỉ phục vụ lượt đọc nguồn; không trở thành nghi vấn nếu bị dismissed.
-export function sourceReviewRequest(chunks: SemanticChunk[], expected: IpiSuspicion[], compact = false) {
+export function sourceReviewRequest(chunks: SemanticChunk[], expected: IpiSuspicion[], compact = false, contentOnly = false) {
   const scopes: IpiSuspicion[] = chunks.map((chunk, index) => ({ id: `source-review-${index + 1}`,
     source: 'rule', location: `${chunk.fileName}:${chunk.startLine}`, originalQuote: chunk.text, citation: citationFor(chunk.chunkId, chunk.text, chunks),
     detector: null, verifier: null, status: 'unresolved' }));
@@ -23,7 +29,7 @@ export function sourceReviewRequest(chunks: SemanticChunk[], expected: IpiSuspic
   });
   properties.discoveries.maxItems = 0;
   if (compact) {
-    const refs = buildSourceReferences(chunks, expected);
+    const refs = sourceReviewReferences(chunks, expected, contentOnly);
     return { scopes, all, schema: { type: 'object', additionalProperties: false, required: ['analysis', 'assessments'], properties: {
       analysis: { type: 'string', minLength: 3, maxLength: 240 },
       assessments: { type: 'object', additionalProperties: false, required: all.map(item => item.id), properties: Object.fromEntries(all.map(item => [item.id, {
@@ -40,12 +46,12 @@ export function sourceReviewRequest(chunks: SemanticChunk[], expected: IpiSuspic
   return { scopes, all, schema };
 }
 
-export function parseSourceReview(raw: string, chunks: SemanticChunk[], expected: IpiSuspicion[], compact = false) {
+export function parseSourceReview(raw: string, chunks: SemanticChunk[], expected: IpiSuspicion[], compact = false, contentOnly = false) {
   const request = sourceReviewRequest(chunks, expected);
   let selected: Map<string, SourceReference> | undefined;
   if (compact) {
     try {
-      const expanded = expandCompactSourceReview(raw, chunks, expected, request.all);
+      const expanded = expandCompactSourceReview(raw, chunks, expected, request.all, contentOnly);
       raw = expanded.raw; selected = expanded.selected;
     } catch (error) {
       if (error instanceof InvalidAgentResponse) throw error;
@@ -88,7 +94,7 @@ export function parseSourceReview(raw: string, chunks: SemanticChunk[], expected
     }) };
 }
 
-function expandCompactSourceReview(raw: string, chunks: SemanticChunk[], expected: IpiSuspicion[], all: IpiSuspicion[]) {
+function expandCompactSourceReview(raw: string, chunks: SemanticChunk[], expected: IpiSuspicion[], all: IpiSuspicion[], contentOnly = false) {
   // JSON trùng khóa không được âm thầm lấy giá trị cuối rồi coi là bằng chứng hợp lệ.
   const stack: Array<Set<string> | null> = [];
   for (let i = 0; i < raw.length; i++) {
@@ -115,7 +121,7 @@ function expandCompactSourceReview(raw: string, chunks: SemanticChunk[], expecte
   const data = object(JSON.parse(raw), ['analysis', 'assessments']);
   if (typeof data.analysis !== 'string' || data.analysis.length > 240) throw new InvalidAgentResponse('Sai phân tích scope rút gọn.');
   const assessments = object(data.assessments, all.map(item => item.id));
-  const refs = buildSourceReferences(chunks, expected);
+  const refs = sourceReviewReferences(chunks, expected, contentOnly);
   const selected = new Map<string, SourceReference>();
   const expanded = { analysis: data.analysis, discoveries: [], assessments: Object.entries(assessments).map(([id, value]) => {
     const row = object(value, ['stance', 'reason', 'addressee', 'framing', 'deviation', 'directiveRef']);

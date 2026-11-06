@@ -1,0 +1,26 @@
+{
+  "runtimeEnabled": false,
+  "status": "selected_for_further_development_only",
+  "configuration": "benchmark/experiments/skills-v1/content-reference-candidate.json",
+  "evidenceDirectory": "benchmark/results/agent-eval-8-4V3ct4",
+  "accuracy": 0.625,
+  "note": "Ứng viên phát triển, chưa kiểm chứng độc lập; không thay cấu hình Agent mặc định hoặc checkpoint ba skill.",
+  "latestDevValidation": {
+    "directory": "benchmark/results/agent-eval-12-kBE2eD",
+    "arm": "baseline",
+    "labelCorrect": 8,
+    "evidenceCorrect": 7,
+    "total": 12,
+    "independent": false
+  },
+  "rejectedExperiments": [
+    {
+      "directory": "benchmark/results/agent-eval-12-kBE2eD",
+      "reason": "Verifier Instruct: 3/12, giảm so với baseline 8/12."
+    },
+    {
+      "directory": "benchmark/results/agent-eval-12-WVgrl7",
+      "reason": "Verifier tham chiếu có cấu trúc: 3/12, nhiều lỗi hợp đồng."
+    }
+  ]
+}

@@ -12,6 +12,8 @@ Cập nhật ngân sách theo ý kiến người dùng ngày2026-10-28: chấp n
 
 ## A. Chính sách và lỗi xử lý
 
+Từ 05/11/2026, xây và kiểm chứng ba skill được gộp vào Ưu tiên 1: người nhận, cách dùng chỉ dẫn và đối chiếu bằng chứng. Viết đủ file hoặc vượt bộ thử thành phần không đóng ưu tiên này. Chỉ nối skill vào bước tương ứng sau kiểm tra hồi quy và dữ liệu mới, rồi đo toàn pipeline có/không có skill; giữ các cổng độc lập, coverage và mục tiêu toàn bộ ca ở trên. Lỗi kỹ thuật, hai nhận định mâu thuẫn hoặc thiếu lượt xử lý không được tự đổi thành uncertain hợp lệ.
+
 Đã triển khai ba kết luận, rule chỉ tạo nghi vấn, Verifier vòng đầu không
 đọc lập luận Detector, kiểm tra schema/trích dẫn và tách lỗi kỹ thuật.
 Cổng bắt buộc: không trả not_detected khi còn lỗi xử lý, nghi vấn chưa

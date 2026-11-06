@@ -175,6 +175,7 @@ export interface IpiBatchFailure {
 }
 
 export interface IpiRunState {
+  skillAudit?: import('./ai/agents/document/skillAudit').SkillAuditTrace;
   // Nhánh đối chứng: dữ kiện nguồn và giới hạn của lượt rà phụ thuộc ngữ cảnh.
   contextDependencyModel?: string;
   verifierEvidenceMode?: 'split-views-multiple-targets-v1';

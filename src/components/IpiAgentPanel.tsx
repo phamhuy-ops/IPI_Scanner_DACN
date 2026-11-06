@@ -5,6 +5,8 @@ import { MessageKey, t } from '../i18n/messages';
 import { useStore } from '../store/useStore';
 import { processingLabel, verdictLabel } from '../ai/agents/document/presentation';
 import { reviewProgressCounts } from '../ai/agents/document/reviewProgress';
+import { ScanActivity } from './ScanActivity';
+import { ScanConclusion } from './ScanConclusion';
 import { failureGuidance } from '../ai/agents/document/runtimeDiagnostics';
 
 function phaseLabel(event: IpiLoopEvent) {
@@ -59,6 +61,11 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
 
   return (
     <div className="ipi-panel copilot-container">
+      <div className="scan-page-heading">
+        <span>{locale === 'vi' ? 'Lượt quét hiện tại' : 'Current scan'}</span>
+        <h1>{ipiRun.status === 'idle' ? (locale === 'vi' ? 'Kiểm tra tài liệu' : 'Document analysis') : ipiRunning ? (locale === 'vi' ? 'Đang kiểm tra tài liệu' : 'Analyzing documents') : (locale === 'vi' ? 'Kết quả phân tích tài liệu' : 'Document analysis results')}</h1>
+        <p>{locale === 'vi' ? 'Rule Prefilter, Detector và Verifier đối chiếu chỉ dẫn với nguồn tài liệu.' : 'Rule Prefilter, Detector and Verifier review instructions against document sources.'}</p>
+      </div>
       <div className="ipi-status-bar">
         <span className={`ipi-badge ipi-badge-${ipiRun.check?.verdict || ipiRun.status}`}>{statusLabel}</span>
         <div className="ipi-meta-tags">
@@ -68,10 +75,13 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
         </div>
       </div>
 
-      <p role="status">{t(locale, 'panel.processing', { status: processingLabel(ipiRun.processingStatus, locale) })}{ipiRun.status !== 'idle' && t(locale, 'panel.roundOne')}</p>
+      <ScanActivity run={ipiRun} locale={locale} />
+      <ScanConclusion run={ipiRun} locale={locale} />
 
-      {(progress || ipiRun.scanResult) && <section className="ipi-coverage-summary ipi-review-progress" aria-label={t(locale, 'panel.progressTitle')}>
-        <h3>{t(locale, 'panel.progressTitle')}</h3>
+      <p className="processing-caption" role="status">{t(locale, 'panel.processing', { status: processingLabel(ipiRun.processingStatus, locale) })}{ipiRun.status !== 'idle' && t(locale, 'panel.roundOne')}</p>
+
+      {(progress || ipiRun.scanResult) && <details className="ipi-coverage-summary ipi-review-progress" aria-label={t(locale, 'panel.progressTitle')}>
+        <summary>{t(locale, 'panel.progressTitle')}</summary>
         {progress ? <>
           <dl aria-live="polite">
             <dt>{t(locale, 'panel.progressTotal')}</dt><dd>{progress.total ?? t(locale, 'panel.progressUnknown')}</dd>
@@ -95,7 +105,7 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
             </li>)}</ul>
           </details>}
         </> : <p>{t(locale, 'panel.progressLegacy')}</p>}
-      </section>}
+      </details>}
 
       {ipiRun.error && !ipiRunning && <div className="error-bar" role="alert">{ipiRun.error}</div>}
 
@@ -140,10 +150,12 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
             ) : (
               <ul className="ipi-finding-list">
                 {findings.map((finding, index) => (
-                  <li key={`${finding.ruleId}-${finding.location}-${index}`} className="ipi-finding-item">
-                    <div className="ipi-finding-header"><span className="ipi-finding-rule">{finding.ruleId}</span><strong className="ipi-finding-title">{finding.title}</strong></div>
+                  <li key={`${finding.ruleId}-${finding.location}-${index}`} className={`ipi-finding-item severity-${finding.severity}`}>
+                    <div className="ipi-finding-header"><span className="ipi-severity">{finding.severity}</span><span className="ipi-finding-rule">{finding.ruleId}</span><strong className="ipi-finding-title">{finding.title}</strong></div>
                     <div className="ipi-finding-loc">{finding.location}</div>
-                    {finding.evidence.slice(0, 3).map((evidence, evidenceIndex) => <div key={evidenceIndex} className="ipi-finding-ev">{evidence}</div>)}
+                    <details><summary>{locale === 'vi' ? 'Chi tiết phát hiện' : 'Finding details'}</summary>
+                    {finding.evidence.map((evidence, evidenceIndex) => <div key={evidenceIndex} className="ipi-finding-ev">{evidence}</div>)}
+                    <p>{finding.remediation}</p></details>
                   </li>
                 ))}
               </ul>
@@ -191,8 +203,9 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
 
           {ipiRun.suspicions.length > 0 && <section className="copilot-step-card">
             <h3>{t(locale, 'panel.evidenceTitle', { count: ipiRun.suspicions.length })}</h3>
-            <ul className="ipi-finding-list">{ipiRun.suspicions.map(item => <li key={item.id} className="ipi-finding-item">
-              <strong>{item.id} · {item.source} · {suspicionStatus(item.status, locale)}</strong>
+            <ul className="ipi-finding-list">{ipiRun.suspicions.map(item => <li key={item.id} className={`ipi-finding-item suspicion-${item.status}`}>
+              <details className="suspicion-detail">
+              <summary><strong>{item.id} · {item.source}</strong><span className={`assessment-status assessment-${item.status}`}>{suspicionStatus(item.status, locale)}</span><span className="suspicion-location">{item.location}</span></summary>
               <p>{item.location}</p>
               <blockquote>{item.originalQuote || t(locale, 'panel.noOriginalQuote')}</blockquote>
               {item.conflicts?.map(conflict => <details key={conflict.role} open>
@@ -204,7 +217,7 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
                   <small>{assessment.citation.filePath || assessment.citation.fileName}:{assessment.citation.startLine}–{assessment.citation.endLine}</small>
                 </div>)}
               </details>)}
-              {(['detector', 'verifier'] as const).map(role => <div key={role} className="ipi-verdict-block">
+              <div className="agent-comparison">{(['detector', 'verifier'] as const).map(role => <div key={role} className="ipi-verdict-block">
                 <strong>{role === 'detector' ? 'Detector' : 'Verifier'}</strong>
                 {item[role] ? <>
                   <p>{stanceLabel(item[role]?.stance, locale)}: {item[role]?.reason}</p>
@@ -213,7 +226,8 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
                   <small>{item[role]?.citation.filePath || item[role]?.citation.fileName}:{item[role]?.citation.startLine}–{item[role]?.citation.endLine}</small>
                   {item[role]?.citation.sourceView && <small> · {item[role]?.citation.sourceView} · {item[role]?.citation.lineBasis === 'source' ? t(locale, 'panel.lineInRawHtml') : t(locale, 'panel.lineInProjection')}</small>}
                 </> : <p>{t(locale, 'panel.noRoleAssessment')}</p>}
-              </div>)}
+              </div>)}</div>
+              </details>
             </li>)}</ul>
           </section>}
 

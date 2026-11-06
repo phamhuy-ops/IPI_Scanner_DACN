@@ -106,6 +106,8 @@ Các vướng mắc trên khiến mục tiêu chất lượng chưa hoàn thành
 
 - Sửa các trường hợp còn bỏ sót tấn công và báo nhầm ví dụ minh họa, đồng thời kiểm tra lại để tránh làm sai những mẫu vốn đã đúng.
 
+- **Gộp việc xây và kiểm chứng ba skill vào Ưu tiên 1** (cập nhật 05/11): đây là phương án nâng chất lượng luồng Agent, không phải mục tiêu hoàn thành riêng. Tham khảo nguồn uy tín rồi chọn lọc và điều chỉnh cho IPI Scanner. Mỗi skill tập trung vào một việc nhỏ, như xác định người nhận chỉ dẫn, phân biệt lệnh thật với ví dụ hoặc kiểm tra bằng chứng; chỉ cung cấp hướng dẫn cần thiết ở bước tương ứng để tránh làm mô hình nhỏ xử lý quá nhiều nội dung. Thử từng skill với cả mẫu tấn công và mẫu sạch tương tự, so sánh độ chính xác, lượng nội dung gửi AI và thời gian xử lý trước–sau; chỉ giữ khi có cải thiện phù hợp. Theo cập nhật tiếp theo, giữ phiên bản có tổng điểm cao nhất làm mốc sửa; nếu bản thử giảm điểm thì quay lại mốc đó thay vì bản cũ thấp hơn. Các ca sai vẫn được ghi riêng. Các bản đã thử chưa ổn định nên chưa nối vào Agent mặc định. Chỉ nối sau khi vượt kiểm tra hồi quy, thử trên dữ liệu mới, rồi đo toàn pipeline có/không có skill; mục tiêu 90% và kiểm chứng độc lập của Ưu tiên 1 giữ nguyên.
+
 - Hoàn thiện cách giải thích kết quả, giúp người dùng biết vì sao hệ thống cảnh báo hoặc cần xem xét thêm.
 
 - Giảm thời gian xử lý và kiểm tra đầy đủ hơn đối với tài liệu nhiều trang.

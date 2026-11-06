@@ -1,0 +1,49 @@
+{
+  "updatedAt": "2026-11-06T03:07:20.215Z",
+  "status": "rejected_for_default",
+  "runtimeEnabled": false,
+  "priorityOneComplete": false,
+  "targetAccuracy": 0.9,
+  "frozenConfiguration": "skills/frozen/integration-v2.json",
+  "groupHeldout": {
+    "directory": "benchmark/results/agent-eval-12-qxWxgR",
+    "baselineCorrect": 7,
+    "candidateCorrect": 5,
+    "total": 12,
+    "actualModels": [
+      "qwen3:4b-instruct-2507-q4_K_M",
+      "qwen2.5-coder:1.5b"
+    ],
+    "consumed": true,
+    "sourceIndependent": false
+  },
+  "v2Validation": {
+    "directory": "benchmark/results/agent-eval-6-xkufDx",
+    "scope": "Dev và smoke worker; chưa kiểm chứng độc lập.",
+    "workerSmoke": "Ba skill hoàn thành trên một target thật; ngân sách riêng 45s, không phải toàn pipeline.",
+    "pipeline": "Hai vai trò Qwen3 cùng model bị chính sách kiểm chứng độc lập hiện tại giữ needs_review; không nới chính sách."
+  },
+  "defectsFixed": [
+    "Truyền đúng verifier-model từ CLI vào runner.",
+    "Gộp target nhiều phân đoạn, giữ nguyên chữ/vị trí; không dùng literal binding trên đoạn gộp."
+  ],
+  "remaining": [
+    "Detector bỏ sót nên không có target chuyển sang skill.",
+    "Lỗi citation/schema và hết ngân sách toàn pipeline.",
+    "Chưa có bằng chứng cấu hình tích hợp đạt 90% hoặc nguồn độc lập."
+  ],
+  "decision": "Giữ checkpoint thành phần tốt nhất; chỉ nối skill trong chế độ thử, không áp dụng mặc định. Không train/tải model.",
+  "nextValidation": "Sửa trên dev, sau đó khóa cấu hình và dùng nhóm/nguồn độc lập mới; không dùng lại holdout đã xem để tuyên bố độc lập.",
+  "checks": {
+    "benchmarkTests": 61,
+    "vitestTests": 474,
+    "typecheck": true,
+    "lint": true,
+    "build": true,
+    "buildWarnings": [
+      "Vite customResolver deprecated",
+      "Rollup output.freeze không được hỗ trợ"
+    ]
+  },
+  "resourceLimit": "Có harness RSS và raw model timings; không có đo đỉnh VRAM liên tục. Bốn tài liệu thật chỉ kiểm tra extraction/chunking, không chấm nhận diện."
+}

@@ -16,7 +16,7 @@ export function ThemeReveal({ theme, onCovered, onComplete }: ThemeRevealProps) 
 
   useEffect(() => {
     if (phase !== 'hold') return undefined;
-    const timer = window.setTimeout(() => setPhase('exit'), shouldReduceMotion ? 80 : 2500);
+    const timer = window.setTimeout(() => setPhase('exit'), shouldReduceMotion ? 0 : 180);
     return () => window.clearTimeout(timer);
   }, [phase, shouldReduceMotion]);
 
@@ -30,7 +30,7 @@ export function ThemeReveal({ theme, onCovered, onComplete }: ThemeRevealProps) 
       className={`theme-reveal theme-reveal--${theme}`}
       initial={{ opacity: 0 }}
       animate={phase === 'exit' ? exitAnimation : revealAnimation}
-      transition={{ duration: phase === 'exit' ? 0.25 : shouldReduceMotion ? 1 : 10, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: shouldReduceMotion ? 0.01 : phase === 'exit' ? 0.25 : 0.35, ease: [0.22, 1, 0.36, 1] }}
       onAnimationComplete={() => {
         if (phase === 'reveal') {
           onCovered();
@@ -42,15 +42,15 @@ export function ThemeReveal({ theme, onCovered, onComplete }: ThemeRevealProps) 
     >
       <motion.div
         className="theme-reveal-content"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: phase === 'exit' ? 0 : 1, y: phase === 'exit' ? -8 : 0 }}
-        transition={{ duration: 0.25, delay: phase === 'reveal' && !shouldReduceMotion ? 10 : 0 }}
+        initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 12 }}
+        animate={{ opacity: phase === 'exit' ? 0 : 1, y: phase === 'exit' && !shouldReduceMotion ? -8 : 0 }}
+        transition={{ duration: 0.25, delay: phase === 'reveal' && !shouldReduceMotion ? 0.08 : 0 }}
       >
         <motion.img
           className="theme-reveal-icon"
           src="./app-icon.png"
           alt=""
-          animate={phase === 'exit' ? { scale: 0.94, opacity: 0 } : { scale: [1, 1.08, 1] }}
+          animate={shouldReduceMotion ? { opacity: 1 } : phase === 'exit' ? { scale: 0.94, opacity: 0 } : { scale: [1, 1.08, 1] }}
           transition={phase === 'exit'
             ? { duration: 0.16 }
             : { duration: 1.1, ease: 'easeInOut', repeat: Infinity }}

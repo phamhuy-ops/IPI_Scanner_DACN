@@ -1,0 +1,61 @@
+{
+  "version": "source-based-v1",
+  "createdAt": "2026-11-04T13:46:29.432Z",
+  "status": "Bản nháp chưa đo model; metadata nguồn không nạp vào prompt",
+  "note": "Bản tải là cache nghiên cứu công khai, không chạy nội dung tải về; hash HTML không phải commit bất biến hoặc giấy phép cấp lại nội dung. URL có thể thay đổi.",
+  "snapshotDirectory": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\skills-source-review-VgIYBo",
+  "sources": [
+    {
+      "id": "OWASP-PI",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+      "resolvedUrl": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+      "accessedAt": "2026-11-04T13:46:28.871Z",
+      "status": 200,
+      "etag": null,
+      "lastModified": "Tue, 03 Nov 2026 10:51:43 GMT",
+      "sha256": "50874d6c26cb9d528d20feacc09325bab9fbc131c106a97fdc48a6185b3d19c4",
+      "bytes": 121934,
+      "containsExpectedMarker": true,
+      "snapshotPath": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\skills-source-review-VgIYBo\\OWASP-PI.html"
+    },
+    {
+      "id": "MS-PS",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection",
+      "resolvedUrl": "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection",
+      "accessedAt": "2026-11-04T13:46:28.730Z",
+      "status": 200,
+      "etag": "\"CCxYgvHnGqtADzv0sqVIJGOOQcw=\"",
+      "lastModified": "Thu, 15 Oct 2026 20:05:59 GMT",
+      "sha256": "d6b67faff4db6bb748d158e57b015d5e65145b0799061dce966d6a2f1602be60",
+      "bytes": 65592,
+      "containsExpectedMarker": true,
+      "snapshotPath": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\skills-source-review-VgIYBo\\MS-PS.html"
+    },
+    {
+      "id": "NV-FACT",
+      "url": "https://docs.nvidia.com/nemo/guardrails/configure-guardrails/guardrail-catalog/fact-checking",
+      "resolvedUrl": "https://docs.nvidia.com/nemo/guardrails/configure-guardrails/guardrail-catalog/fact-checking",
+      "accessedAt": "2026-11-04T13:46:29.429Z",
+      "status": 200,
+      "etag": "W/\"a1nevwq1qk9uza\"",
+      "lastModified": "Wed, 04 Nov 2026 13:46:17 GMT",
+      "sha256": "a47d4ba65976e3422aa3b6142f3379e458bd546fad656acfe788a52b593e6730",
+      "bytes": 305629,
+      "containsExpectedMarker": true,
+      "snapshotPath": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\skills-source-review-VgIYBo\\NV-FACT.html"
+    },
+    {
+      "id": "AS-SPEC",
+      "url": "https://agentskills.io/specification",
+      "resolvedUrl": "https://agentskills.io/specification",
+      "accessedAt": "2026-11-04T13:46:28.804Z",
+      "status": 200,
+      "etag": null,
+      "lastModified": "Tue, 03 Nov 2026 19:25:02 GMT",
+      "sha256": "de57831c77fe9a028a5511ff6b8f00624ebdc3585802cef6feedf63983e2ad0c",
+      "bytes": 254733,
+      "containsExpectedMarker": true,
+      "snapshotPath": "C:\\Users\\Admin\\source\\ĐACN An Ninh Mạng\\IPI_Scanner\\benchmark\\results\\skills-source-review-VgIYBo\\AS-SPEC.html"
+    }
+  ]
+}

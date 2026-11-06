@@ -1,3 +1,4 @@
+import { auditWithSkills, SkillReviewer } from './skillAudit';
 import { IpiBatchFailure, IpiLoopEvent, IpiRunState, ReviewContract, ScanResult, SemanticScanProfile, VerifierOutputFormat } from '../../../types';
 import { releaseSlmModel, withTimeout } from '../slmClient';
 import { SlmOutputTruncatedError } from '../slmResponse';
@@ -27,6 +28,7 @@ export interface IpiDocumentPipelineOptions {
   reviewContract?: ReviewContract;
   // Luồng đọc toàn nguồn được bật rõ để đối chứng, Verifier giữ hợp đồng cũ.
   detectorFlow?: 'source-review-v1' | 'source-review-compact-v1';
+  sourceReferencePolicy?: 'content-only-v1';
   // Đối chứng được bật rõ; không thay Detector/Verifier chính hoặc model UI mặc định.
   contextDependencyModel?: 'qwen3:4b-instruct-2507-q4_K_M';
   // Đối chứng cách đóng gói chứng cứ, không thay prompt/model hoặc chính sách kết luận.
@@ -40,6 +42,8 @@ export interface IpiDocumentPipelineOptions {
   evidencePresentation?: 'stable-alias-v1';
   // Bản thử được gọi rõ từ runner, không có lựa chọn trong UI hoặc mặc định.
   reviewArchitecture?: 'candidate-only-v1';
+  // Chỉ runner thử nghiệm cấp callback; không bật từ UI hoặc mặc định.
+  skillAudit?: { version: 'frozen-skills-v1'; configurationHash: string; reviewer: SkillReviewer };
   onEvent?: (ev: IpiLoopEvent, state: IpiRunState) => void;
 }
 
@@ -78,6 +82,7 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
     }
   };
   try {
+    if (options.sourceReferencePolicy && (options.sourceReferencePolicy !== 'content-only-v1' || options.detectorFlow !== 'source-review-compact-v1')) throw Error('Lọc mã bằng chứng chỉ hỗ trợ luồng source compact.');
     if (options.verifierEvidenceMode !== undefined && (options.verifierEvidenceMode !== 'split-views-multiple-targets-v1'
       || options.detectorFlow !== 'source-review-compact-v1')) throw new Error('Tách source view chỉ hỗ trợ luồng compact đã chọn rõ.');
     if (options.contextDependencyModel !== undefined && (options.contextDependencyModel !== 'qwen3:4b-instruct-2507-q4_K_M'
@@ -150,7 +155,7 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
     stage = 'detector';
     emit({ phase: 'fix', message: `Detector reviewing ${chunks.length} selected chunks and ${state.suspicions.length} rule suspicions.`, findingCount: state.suspicions.length });
     const detector = await runDetectorAgent({ chunks, suspicions: state.suspicions, coverage: scanResult.metadata.coverage,
-      model: state.fixModel, deadline, reviewContract: state.reviewContract, detectorFlow: options.detectorFlow,
+      model: state.fixModel, deadline, reviewContract: state.reviewContract, detectorFlow: options.detectorFlow, sourceReferencePolicy: options.sourceReferencePolicy,
       recoverTimeoutOnce: options.detectorFlow === 'source-review-compact-v1',
       actionAudit: options.actionAudit, evidencePresentation: options.evidencePresentation,
       referenceBatchSize: options.referenceBatchSize, onBatchReviewed: recordBatch('detector'), onBatchFailed: recordFailure('detector') });
@@ -191,6 +196,12 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
     if (detector.reviewedChunkIds.length !== expectedIds.size || verifier.reviewedChunkIds.length !== verifierChunks.length ||
       [...expectedIds].some(id => !detector.reviewedChunkIds.includes(id) || (verifierChunks.some(chunk => chunk.chunkId === id) && !verifier.reviewedChunkIds.includes(id)))) {
       issues.push(suppliedOnly ? 'Phạm vi tìm kiếm Detector hoặc xác minh ứng viên chưa hoàn tất.' : 'Some selected chunks were not reviewed by both agents.');
+    }
+    if (options.skillAudit) {
+      if (options.skillAudit.version !== 'frozen-skills-v1' || !options.skillAudit.configurationHash) throw Error('Cấu hình skill chưa được khóa.');
+      emit({ phase: 'check', message: 'Kiểm chứng người nhận, khung chỉ dẫn và bằng chứng bằng ba skill đã khóa.' });
+      state.skillAudit = await auditWithSkills(chunks, state.suspicions, options.skillAudit.reviewer, deadline, options.skillAudit.configurationHash);
+      if (state.skillAudit.coverageLimited) issues.push('Kiểm chứng skill chưa hoàn tất cho mọi target; không xem phần thiếu là an toàn.');
     }
     issues.push(...incompleteReviewReasons(state.reviewProgress));
     reconcileRecovery(true);

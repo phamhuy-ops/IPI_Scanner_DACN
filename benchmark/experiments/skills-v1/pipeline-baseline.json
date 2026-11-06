@@ -1,0 +1,5 @@
+{
+  "analysisTimeoutMs": 45000,
+  "detectorFlow": "source-review-compact-v1",
+  "evidencePresentation": "stable-alias-v1"
+}

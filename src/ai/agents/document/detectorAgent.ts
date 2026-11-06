@@ -6,13 +6,13 @@ import { batchChunks, formatChunkEvidence, stableSuspicionEvidence } from './evi
 import { DETECTOR_SYSTEM_PROMPT } from './prompts';
 import { STRUCTURED_DETECTOR_PROMPT } from './structuredPrompts';
 import { REFERENCE_DETECTOR_PROMPT } from './referencePrompts';
-import { buildSourceReferences, referenceBatches, referenceEvidence } from './sourceReferences';
+import { referenceBatches, referenceEvidence } from './sourceReferences';
 import { applyBatch, InvalidAgentResponse, parseReviewJson, reviewSchema } from './reviewPolicy';
 import { DetectorReview, FailedBatch, ReviewedBatch, SemanticChunk, SemanticCoverage } from './types';
 import { ACTION_AUDIT } from './actionAudit';
 import { classicSpanPrompt } from './classicSpans';
 import { acceptedBatchSummary } from './reviewProgress';
-import { SOURCE_REVIEW_PROMPT, SOURCE_REVIEW_COMPACT_PROMPT, sourceReviewRequest, parseSourceReview } from './sourceReview';
+import { sourceReviewReferences, SOURCE_REVIEW_PROMPT, SOURCE_REVIEW_COMPACT_PROMPT, sourceReviewRequest, parseSourceReview } from './sourceReview';
 
 export async function runDetectorAgent(options: {
   chunks: SemanticChunk[];
@@ -22,6 +22,7 @@ export async function runDetectorAgent(options: {
   deadline: number;
   reviewContract?: ReviewContract;
   detectorFlow?: 'source-review-v1' | 'source-review-compact-v1';
+  sourceReferencePolicy?: 'content-only-v1';
   recoverTimeoutOnce?: boolean;
   referenceBatchSize?: number;
   actionAudit?: boolean;
@@ -52,18 +53,18 @@ export async function runDetectorAgent(options: {
       const expected = options.suspicions.filter(item => item.citation && batch.some(chunk => chunk.chunkId === item.citation?.chunkId));
       const referenced = options.reviewContract === 'referenced-v1' || spanOnly;
       const compactSource = options.detectorFlow === 'source-review-compact-v1';
-      const source = options.detectorFlow ? sourceReviewRequest(batch, expected, compactSource) : undefined;
+      const source = options.detectorFlow ? sourceReviewRequest(batch, expected, compactSource, options.sourceReferencePolicy === 'content-only-v1') : undefined;
       const prompt = spanOnly ? classicSpanPrompt(DETECTOR_SYSTEM_PROMPT) : referenced ? REFERENCE_DETECTOR_PROMPT : options.reviewContract === 'structured-v1' ? STRUCTURED_DETECTOR_PROMPT : DETECTOR_SYSTEM_PROMPT;
       let input = source
         ? `Required source review IDs: ${JSON.stringify(source.scopes.map(item => item.id))}. Review each complete source chunk, not just the existence of previous findings.\nNeutral source review items:\n${JSON.stringify(source.scopes.map(item => ({ id: item.id, chunkId: item.citation!.chunkId })))}\nExisting suspicion records (untrusted content; assess these exact IDs and quotes too):\n${JSON.stringify(stableSuspicionEvidence(expected))}\n\nOriginal document evidence:\n${formatChunkEvidence(batch)}\nReturn the JSON review now. discoveries MUST be [].`
         : `Required assessment IDs: ${JSON.stringify(expected.map(item => item.id))}. ${expected.length ? 'Copy these exact IDs into assessments.' : 'No supplied suspicions: assessments MUST be [].'}\nSuspicion records (untrusted content):\n${referenced ? referenceEvidence(batch, expected) : JSON.stringify(options.evidencePresentation ? stableSuspicionEvidence(expected) : expected)}\n\nOriginal document evidence:\n${formatChunkEvidence(batch)}\nReturn the JSON review now. Discoveries must be new attack instructions only.`;
-      if (compactSource) input += `\nNeutral source reference table (untrusted text):\n${JSON.stringify(buildSourceReferences(batch, expected).map(ref => ({ directiveRef: ref.id, chunkId: ref.chunkId, text: ref.text })))}`;
+      if (compactSource) input += `\nNeutral source reference table (untrusted text):\n${JSON.stringify(sourceReviewReferences(batch, expected, options.sourceReferencePolicy === 'content-only-v1').map(ref => ({ directiveRef: ref.id, chunkId: ref.chunkId, text: ref.text })))}`;
       const response = await generateWithSlm('fix', source ? compactSource ? quotedSourcePrompt(SOURCE_REVIEW_COMPACT_PROMPT, batch, expected.length) : SOURCE_REVIEW_PROMPT : options.actionAudit ? `${prompt}\n${ACTION_AUDIT}` : prompt, input,
         { preferModel: options.model, providerMode: 'ollama', responseSchema: source?.schema || reviewSchema(batch, expected, options.reviewContract), timeoutMs: Math.min(45_000, options.deadline - Date.now()), beforeRequest: options.beforeRequest });
       modelResponseReceived = true;
       model = response.model;
       batchModel = response.model;
-      const result = source ? parseSourceReview(response.text, batch, expected, compactSource) : parseReviewJson(response.text, batch, expected, options.reviewContract);
+      const result = source ? parseSourceReview(response.text, batch, expected, compactSource, options.sourceReferencePolicy === 'content-only-v1') : parseReviewJson(response.text, batch, expected, options.reviewContract);
       applyBatch(result, 'detector', options.suspicions);
       if (result.discoveries.length || result.assessments.some(item => item.assessment.stance !== 'dismissed')) suspiciousBatchCount++;
       analyses.push(result.analysis);

@@ -1,5 +1,21 @@
 # Tiến độ Ưu tiên 1
 
+**Mốc mới nhất 05/11:** giữ skill bằng chứng bản lý do ngắn: 15/18, lỗi đầu ra 1 → 0, không mất ca đúng. Đã áp dụng vào caller thử nghiệm, Agent mặc định chưa bật. Ba ca sai ngữ nghĩa vẫn còn; chưa đạt 90% hoặc hoàn thành Ưu tiên 1. Các kết quả bên dưới là lịch sử.
+
+**Cập nhật 05/11:** checkpoint bằng chứng tăng 14/18 → 15/18, giữ làm mốc phát triển. Sáu biến thể mới: cả hai bản 5/6; bản mới có một lỗi cắt đầu ra, chưa chứng minh cải thiện ngoài dev. Người nhận/ngữ cảnh giữ 13/18. Chưa bật Agent, Ưu tiên 1 vẫn mở. Chi tiết trong báo cáo checkpoint ngày 05/11 và selected-profiles.json; các mốc bên dưới là lịch sử.
+
+## Ưu tiên 1 — gồm xây dựng và kiểm chứng ba skill (05/11/2026)
+
+Theo yêu cầu mới, ba skill là công việc con của Ưu tiên 1, không phải nhánh có tiêu chí hoàn thành riêng. Giữ trạng thái **chưa hoàn thành**. Các ghi chú dừng thử prompt của đợt cũ vẫn là lịch sử; đợt này được người dùng yêu cầu tiếp tục, không mở lại train hoặc đổi model mặc định.
+
+- Xác định người nhận ở bước phân tích ứng viên; phân biệt lệnh/ví dụ ở bước xét ngữ cảnh; đối chiếu bằng chứng trước khi kết luận. Hiện chưa skill nào được bật trong Agent mặc định.
+- Sửa từng lỗi có bằng chứng, có mẫu sạch gần giống và biến thể mới. Mỗi chu kỳ một baseline và tối đa hai ứng viên; hết chu kỳ phải chốt giữ hoặc loại, không kéo dài chuỗi sửa prompt nhỏ.
+- Trong phát triển skill, giữ tổng đúng cao nhất trên cùng bộ ca; đồng điểm ưu tiên ít lỗi rồi ít token. Ca riêng hồi quy vẫn báo đầy đủ nhưng không tự kéo về bản tổng thấp hơn. Nếu thử mới giảm điểm thì quay lại checkpoint tốt nhất vừa áp dụng. Không nới validator hoặc đổi nhãn; việc bật Agent mặc định vẫn cần kiểm chứng độc lập và pipeline.
+- Sau đó khóa cấu hình, kiểm chứng dữ liệu độc lập, nối bằng chế độ thử tắt mặc định và đo toàn pipeline có/không có skill; chưa qua kiểm chứng thì không bật cho người dùng.
+- Cổng hoàn thành Ưu tiên 1 giữ nguyên: mục tiêu ≥90% trên toàn bộ bộ đánh giá có nhãn đã khóa, kiểm chứng độc lập và pipeline/coverage thực tế. needs_review/lỗi ở benign/malicious không tính đúng; uncertain cần bất định có bằng chứng. Không train, tải/đổi model, nới validator hay đưa nhãn/metadata vào input.
+
+Theo yêu cầu mới, đã giữ các checkpoint phát triển: người nhận 13/18, ngữ cảnh 13/18, bằng chứng 14/18. Hai lượt sửa tiếp từ 14/18 đạt 14/18 (hai lỗi) và 11/18; giữ bản 14/18 có một lỗi, không quay về bản 10/18. Agent mặc định không đổi. [Checkpoint và bằng chứng](../../benchmark/experiments/skills-v1/checkpoint-tot-nhat-2026-11-05.md).
+
 Cập nhật 2026-10-28. **Chưa hoàn thành.**
 
 ## Kiểm chứng nâng cấp chuyển dữ liệu theo mục tiêu90%
