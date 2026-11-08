@@ -5,11 +5,11 @@
 
 | STT | Công việc đã thực hiện | Commit chính | Kết quả (ảnh) | Ghi chú |
 |:---:|---|---|---|---|
-| 1 | Xây dựng và thử ba bộ skill cho Agent. | [36e662d0](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/36e662d0) | ![3 Skill đã xây dựng](./ảnh/tuan-04-3-skill.png) [Kết quả thử tích hợp](../skills/frozen/integration-status.json) | Đã thử trong luồng quét. Chưa bật mặc định. |
-| 2 | Thêm quản lý dự án quét. | [58c7cdcd](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/58c7cdcd), [658615e2](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/658615e2) | ![Quản lý từng dự án quét](./ảnh/tuan-04-quan-ly-du-an.png) [Kiểm thử lưu và chuyển dự án](../src/store/useProjects.test.ts) | Có thể tách dữ liệu làm việc theo từng dự án. |
-| 3 | Cập nhật giao diện chọn tài liệu, cấu hình mô hình và xem kết quả. | [58c7cdcd](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/58c7cdcd), [658615e2](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/658615e2), [03a8acf0](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/03a8acf0) | ![Cập nhật lại một phần giao diện](./ảnh/tuan-04-giao-dien-du-an.png) [Thành phần kết quả quét](../src/components/LatestScan.tsx) | Bố cục và cách trình bày kết quả đã được cập nhật. |
-| 4 | Hiển thị tiến độ và số liệu xử lý theo từng Agent. | Chưa commit | ![Token tiêu hao và thời gian xử lý của từng Agent](./ảnh/tuan-04-so-lieu-agent.png) [Kiểm thử tiến độ](../src/components/ScanActivity.test.tsx) | Có tên mô hình, thời gian, số lượt gọi và số token khi mô hình trả về số liệu. |
-| 5 | Điều chỉnh cách chạy hai mô hình local và xử lý lỗi đầu ra. | Chưa commit | Không có ảnh. [Kiểm thử phục hồi](../src/ai/agents/document/runtimeRecovery.integration.test.ts), [kiểm thử đầu ra bị cắt](../src/ai/agents/slmTruncation.integration.test.ts) | Đã kiểm tra bằng phản hồi mô phỏng. Cần chạy lại với Ollama thật. |
+| 1 | Xây dựng và thử ba bộ skill cho Agent. | [36e662d0](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/36e662d0) | ![3 Skill đã xây dựng](./ảnh/tuan-04-3-skill.png)<br>[Kết quả thử tích hợp](../skills/frozen/integration-status.json) | Đã thử trong luồng quét. Chưa bật mặc định. |
+| 2 | Thêm quản lý dự án quét. | [58c7cdcd](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/58c7cdcd), [658615e2](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/658615e2) | ![Quản lý từng dự án quét](./ảnh/tuan-04-quan-ly-du-an.png)<br>[Kiểm thử lưu và chuyển dự án](../src/store/useProjects.test.ts) | Có thể tách dữ liệu làm việc theo từng dự án. |
+| 3 | Cập nhật giao diện chọn tài liệu, cấu hình mô hình và xem kết quả. | [58c7cdcd](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/58c7cdcd), [658615e2](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/658615e2), [03a8acf0](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/03a8acf0), [d3268bfc](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/d3268bfc) | ![Cập nhật lại một phần giao diện](./ảnh/tuan-04-giao-dien-du-an.png)<br>[Thành phần kết quả quét](../src/components/LatestScan.tsx) | Bố cục và cách trình bày kết quả đã được cập nhật. |
+| 4 | Hiển thị tiến độ và số liệu xử lý theo từng Agent. | [d3268bfc](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/d3268bfc) | ![Token tiêu hao và thời gian xử lý của từng Agent](./ảnh/tuan-04-so-lieu-agent.png)<br>[Kiểm thử tiến độ](../src/components/ScanActivity.test.tsx) | Có tên mô hình, thời gian, số lượt gọi và số token khi mô hình trả về số liệu. |
+| 5 | Điều chỉnh cách chạy hai mô hình local và xử lý lỗi đầu ra. | [d3268bfc](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/d3268bfc) | Không có ảnh. [Kiểm thử phục hồi](../src/ai/agents/document/runtimeRecovery.integration.test.ts), [kiểm thử đầu ra bị cắt](../src/ai/agents/slmTruncation.integration.test.ts) | Có kiểm thử với phản hồi mô phỏng. Cần đo thêm với Ollama trên tài liệu dài. |
 
 ## Chi tiết nội dung công việc
 
@@ -29,13 +29,13 @@ Cập nhật khu vực chọn tệp hoặc thư mục, khu vực thiết lập m
 
 ### 4. Làm rõ tiến độ và lỗi trong lúc quét
 
-Bản thay đổi cục bộ hiển thị các mốc xử lý từ bước lọc sơ bộ đến Detector và Verifier. Detector tìm đoạn đáng ngờ, còn Verifier kiểm tra lại bằng chứng. Mỗi Agent có thông tin về mô hình đang dùng và số liệu xử lý khi có dữ liệu. Ô kết luận cũng hiển thị tên nguồn và lý do ngắn khi lần quét gặp lỗi, chẳng hạn quá thời gian hoặc thiếu mô hình. [Tiến độ quét](../src/components/ScanActivity.tsx), [ô kết quả](../src/components/LatestScan.tsx).
+Ứng dụng hiển thị các mốc xử lý từ bước lọc sơ bộ đến Detector và Verifier. Detector tìm đoạn đáng ngờ, còn Verifier kiểm tra lại bằng chứng. Mỗi Agent có thông tin về mô hình đang dùng và số liệu xử lý khi có dữ liệu. Ô kết luận cũng hiển thị tên nguồn và lý do ngắn khi lần quét gặp lỗi, chẳng hạn quá thời gian hoặc thiếu mô hình. [Tiến độ quét](../src/components/ScanActivity.tsx), [ô kết quả](../src/components/LatestScan.tsx).
 
 ### 5. Điều chỉnh vận hành mô hình local
 
-Bản cục bộ cập nhật cấu hình desktop cho Detector và Verifier, đồng thời kiểm tra Ollama đã giải phóng Detector trước khi nạp Verifier. Mục đích là hạn chế việc hai mô hình cùng chiếm bộ nhớ. Luồng Detector cũng có thêm cách thử lại khi phản hồi bị cắt hoặc lặp. Các điều chỉnh này cần đo bằng mô hình thật để biết ảnh hưởng đến tỷ lệ lỗi, thời gian quét và tài nguyên. [Luồng quét](../src/ai/agents/document/ipiPipeline.ts), [xử lý phản hồi Detector](../src/ai/agents/document/detectorAgent.ts).
+Bản cập nhật điều chỉnh cấu hình desktop cho Detector và Verifier, đồng thời kiểm tra Ollama đã giải phóng Detector trước khi nạp Verifier. Mục đích là hạn chế việc hai mô hình cùng chiếm bộ nhớ. Luồng Detector cũng có thêm cách thử lại khi phản hồi bị cắt hoặc lặp. Các điều chỉnh này cần đo bằng mô hình thật để biết ảnh hưởng đến tỷ lệ lỗi, thời gian quét và tài nguyên. [Luồng quét](../src/ai/agents/document/ipiPipeline.ts), [xử lý phản hồi Detector](../src/ai/agents/document/detectorAgent.ts).
 
-Khi lập báo cáo, đã chạy **56 kiểm thử tự động và cả 56 đều đạt**. Phạm vi gồm quản lý dự án, hiển thị tiến độ và kết quả, phục hồi lỗi và phản hồi bị cắt. Phép kiểm tra này xác nhận hành vi của mã trong các tình huống kiểm thử. Chưa có kết quả thao tác qua Electron, phép đo mô hình thật hoặc ảnh chụp giao diện cho bản cục bộ. Lệnh kiểm tra:
+Khi lập báo cáo, đã chạy **56 kiểm thử tự động và cả 56 đều đạt**. Phạm vi gồm quản lý dự án, hiển thị tiến độ và kết quả, phục hồi lỗi và phản hồi bị cắt. Phép kiểm tra này xác nhận hành vi của mã trong các tình huống kiểm thử. Đã thử một số chức năng trên ứng dụng và bổ sung ảnh minh chứng ở bảng trên. Phạm vi và kết quả từng thao tác chưa được ghi thành biên bản. Lệnh chạy kiểm thử tự động được ghi dưới đây.
 
 ```powershell
 npm test -- --run src/components/LatestScan.test.tsx src/components/ScanActivity.test.tsx src/store/useProjects.test.ts src/ai/agents/document/runtimeRecovery.integration.test.ts src/ai/agents/slmTruncation.integration.test.ts
@@ -44,16 +44,15 @@ npm test -- --run src/components/LatestScan.test.tsx src/components/ScanActivity
 ## Khó khăn chưa giải quyết được
 
 1. **Ba skill chưa giúp cả luồng quét nhận diện tốt hơn trong đợt thử tích hợp.** Khi Detector bỏ sót một đoạn, các skill ở bước sau có thể thiếu nội dung để xem xét. Một số ca còn lỗi định dạng phản hồi, trích dẫn hoặc hết thời gian. Mục tiêu nhận diện đúng 90% vẫn chưa được xác nhận.
-2. **Tài liệu dài và chi phí chạy mô hình còn cần đo.** Cần xác định bao nhiêu đoạn được xem, bao nhiêu yêu cầu phải thử lại và việc lần lượt nạp hai mô hình ảnh hưởng thế nào đến thời gian, RAM và VRAM.
-3. **Chưa kiểm tra đầy đủ thao tác desktop.** Kiểm thử tự động đã qua ở các phần chọn lọc. Còn cần mở ứng dụng thật để kiểm tra chuyển dự án, quét, xem bằng chứng và xuất báo cáo, đồng thời bổ sung ảnh minh chứng.
+2. **Chưa bao phủ toàn bộ tài liệu dài.** Sau khi trích xuất văn bản, hệ thống chia tài liệu thành các đoạn (chunk) và chọn một số đoạn cho Agent phân tích. Tài liệu dài có thể còn đoạn chưa được xem. Nếu tăng số đoạn được quét, các mô hình phải xử lý nhiều nội dung hơn nên thời gian quét có thể kéo dài đáng kể.
+3. **Agent bất đồng làm tăng số ca cần kiểm tra thủ công.** Khi Detector và Verifier đưa ra nhận định trái nhau về một nghi vấn, hệ thống giữ nghi vấn ở trạng thái **Cần xem xét**. Với những ca chưa có bằng chứng đủ để kết luận, người dùng phải đọc lại đoạn gốc và tự đối chiếu.
 
 ## Công việc tiếp theo
 
-- Kiểm tra luồng desktop với Ollama thật từ tạo hoặc chuyển dự án, chọn tệp, theo dõi tiến độ đến xem bằng chứng và xuất báo cáo. Bổ sung ảnh cho các bước chính.
+- Tiếp tục chỉnh giao diện dự án, ưu tiên phần hiển thị kết quả và nhật ký xử lý (log). Làm rõ bước nào đã chạy, bước nào gặp lỗi và vì sao một kết quả cần xem xét.
 
-- Tái hiện các ca Detector bỏ sót, phản hồi sai định dạng hoặc sai trích dẫn trên bộ dev. Sửa từng lỗi, kèm mẫu tấn công, mẫu sạch gần giống và biến thể chưa dùng trước đó.
+- Quét tài liệu PDF và Word tiếng Việt nhiều trang. Ghi độ bao phủ khi trích xuất và chọn đoạn, thời gian, RAM/VRAM và lỗi ở từng bước. Dùng kết quả để đánh giá cấu hình mô hình và quyết định có đưa các skill vào mặc định hay không.
 
-- Khóa cấu hình trước khi thử trên nguồn độc lập mới. So sánh luồng có và không có skill trên cùng đầu vào, ghi số ca đúng và sai, precision, recall, F1 và tỷ lệ báo nhầm theo nguồn.
+- Sửa lỗi và cải thiện ba skill. Tái hiện từng lỗi trên bộ dev, kiểm tra lại với mẫu tấn công, mẫu sạch gần giống và biến thể mới trước khi giữ thay đổi.
 
-- Quét tài liệu PDF và Word tiếng Việt nhiều trang. Ghi độ bao phủ khi trích xuất và chọn
-đoạn, thời gian, RAM/VRAM và lỗi ở từng bước. Dùng kết quả để đánh giá cấu hình mô hình và quyết định có đưa các skill vào mặc định hay không.
+- Tăng độ chính xác của kết quả quét và giảm số ca cần kiểm tra thủ công. Ưu tiên xử lý nguyên nhân gây bất đồng và thiếu bằng chứng. Sau khi khóa cấu hình, đo trên dữ liệu độc lập mới và theo dõi cùng lúc số ca cần xem xét, số ca báo nhầm và số ca bỏ sót.
