@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { DESKTOP_DETECTOR_MODEL, DESKTOP_VERIFIER_MODEL } from '../ai/agents/slmCatalog';
 import { AppLocale, persistLocale, readStoredLocale } from '../i18n/locale';
 import { IpiRunState, SemanticScanProfile } from '../types';
 
@@ -15,8 +16,8 @@ const EMPTY_IPI_RUN: IpiRunState = {
   scanResult: null,
   check: null,
   error: null,
-  fixModel: 'gemma3:1b',
-  checkModel: 'qwen2.5-coder:1.5b',
+  fixModel: DESKTOP_DETECTOR_MODEL,
+  checkModel: DESKTOP_VERIFIER_MODEL,
 };
 
 interface AppState {
@@ -55,9 +56,9 @@ export const useStore = create<AppState>((set) => ({
   },
   selectedFolder: null,
   setSelectedFolder: (folder) => set({ selectedFolder: folder || null }),
-  ipiFixModel: 'gemma3:1b',
+  ipiFixModel: DESKTOP_DETECTOR_MODEL,
   setIpiFixModel: (model) => set({ ipiFixModel: model }),
-  ipiCheckModel: 'qwen2.5-coder:1.5b',
+  ipiCheckModel: DESKTOP_VERIFIER_MODEL,
   setIpiCheckModel: (model) => set({ ipiCheckModel: model }),
   ollamaStatus: { checked: false, available: false, models: [] },
   checkOllamaStatus: async () => {

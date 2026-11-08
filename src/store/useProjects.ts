@@ -33,7 +33,11 @@ function restore(): Pick<ProjectsState, 'projects' | 'activeId' | 'storageError'
     if (!Array.isArray(saved.projects) || !saved.projects.every((p: Project) =>
       typeof p.id === 'string' && typeof p.name === 'string' && p.data &&
       ['idle', 'completed', 'error'].includes(p.data.ipiRun?.status))) throw new Error('Invalid project data');
-    return { projects: saved.projects, activeId: saved.projects.some((p: Project) => p.id === saved.activeId) ? saved.activeId : null, storageError: false };
+    const projects: Project[] = saved.projects.map((project: Project) =>
+      saved.modelDefaultsVersion !== 2 && project.data.ipiFixModel === 'gemma3:1b' && project.data.ipiCheckModel === 'qwen2.5-coder:1.5b'
+        ? { ...project, data: { ...project.data, ipiFixModel: defaults.ipiFixModel, ipiCheckModel: defaults.ipiCheckModel } }
+        : project);
+    return { projects, activeId: projects.some(p => p.id === saved.activeId) ? saved.activeId : null, storageError: false };
   } catch {
     return { projects: [], activeId: null, storageError: true };
   }
@@ -95,7 +99,7 @@ useStore.subscribe((state, previous) => {
 useProjects.subscribe((state, previous) => {
   if (state.projects === previous.projects && state.activeId === previous.activeId) return;
   try {
-    localStorage.setItem(storageKey, JSON.stringify({ projects: state.projects, activeId: state.activeId }));
+    localStorage.setItem(storageKey, JSON.stringify({ projects: state.projects, activeId: state.activeId, modelDefaultsVersion: 2 }));
     if (state.storageError) useProjects.setState({ storageError: false });
   } catch {
     if (!state.storageError) useProjects.setState({ storageError: true });

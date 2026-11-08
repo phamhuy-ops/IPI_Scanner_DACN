@@ -1,14 +1,56 @@
+import { useEffect, useRef, useState } from 'react';
+import { animate, useReducedMotion } from 'motion/react';
+import { t } from '../i18n/messages';
+import type { ScanTarget } from '../store/useStore';
 import { AppLocale } from '../i18n/locale';
-import { IpiRunState } from '../types';
+import { IpiRunState, SemanticScanProfile } from '../types';
 import { reviewProgressCounts } from '../ai/agents/document/reviewProgress';
 
-type StepState = 'pending' | 'running' | 'completed' | 'failed';
+type StepState = 'pending' | 'running' | 'completed' | 'failed' | 'incomplete';
 const phases = ['detect', 'fix', 'check', 'done'] as const;
 
-export function ScanActivity({ run, locale, onClearResults, clearDisabled }: { run: IpiRunState; locale: AppLocale; onClearResults?: () => void; clearDisabled?: boolean }) {
+function ProgressRing({ percent, status, runStatus, preparing, vi }: { percent: number | null; status: string; runStatus: IpiRunState['status']; preparing: boolean; vi: boolean }) {
+  const reducedMotion = useReducedMotion();
+  const current = useRef(percent ?? 0);
+  const [display, setDisplay] = useState(current.current);
+  useEffect(() => {
+    const target = percent ?? 0;
+    if (reducedMotion || percent === null) {
+      current.current = target;
+      setDisplay(target);
+      return;
+    }
+    const animation = animate(current.current, target, {
+      duration: Math.min(1.6, Math.max(0.45, Math.abs(target - current.current) * 0.045)),
+      ease: 'easeOut',
+      onUpdate: value => {
+        current.current = value;
+        setDisplay(value);
+      },
+    });
+    return () => animation.stop();
+  }, [percent, reducedMotion]);
+
+  const tone = runStatus === 'error' ? 'failed' : runStatus === 'completed' && percent === 100 ? 'completed' : 'active';
+  return <div className={`scan-ring scan-ring-${tone} ${preparing ? 'is-indeterminate' : ''}`} role="progressbar"
+    aria-label={vi ? 'Lượt xử lý đoạn đã chọn của hai model' : 'Selected chunk reviews across both models'}
+    aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent ?? undefined}>
+    <svg viewBox="0 0 120 120" aria-hidden="true">
+      <circle className="scan-ring-track" cx="60" cy="60" r="50" />
+      <circle className="scan-ring-value" cx="60" cy="60" r="50" pathLength="100" strokeDasharray="100"
+        strokeDashoffset={preparing ? 75 : 100 - (percent === null ? 0 : display)} />
+    </svg>
+    <span className="scan-ring-label">
+      <strong aria-hidden="true">{percent === null ? '—' : `${Math.round(display)}%`}</strong>
+      <small>{status}</small>
+    </span>
+  </div>;
+}
+
+export function ScanActivity({ run, locale, target, profile }: { run: IpiRunState; locale: AppLocale; target?: ScanTarget | null; profile?: SemanticScanProfile }) {
   const vi = locale === 'vi';
-  const labels = vi ? ['Chờ xử lý', 'Đang chạy', 'Hoàn tất', 'Lỗi'] : ['Pending', 'Running', 'Completed', 'Failed'];
-  const stateLabel = (state: StepState) => labels[['pending', 'running', 'completed', 'failed'].indexOf(state)];
+  const labels = vi ? ['Chờ xử lý', 'Đang chạy', 'Hoàn tất', 'Lỗi', 'Chưa hoàn thành'] : ['Pending', 'Running', 'Completed', 'Failed', 'Incomplete'];
+  const stateLabel = (state: StepState) => labels[['pending', 'running', 'completed', 'failed', 'incomplete'].indexOf(state)];
   const latest = [...run.events].reverse().find(event => event.phase !== 'error');
   const active = latest ? phases.indexOf(latest.phase as typeof phases[number]) : 0;
   const counts = run.reviewProgress ? reviewProgressCounts(run.reviewProgress) : null;
@@ -17,53 +59,111 @@ export function ScanActivity({ run, locale, onClearResults, clearDisabled }: { r
   const verifierDone = required ? new Set(required.filter(id => run.reviewProgress?.verifierReviewedChunkIds.includes(id))).size : counts?.verifier ?? 0;
   const total = (counts?.selected ?? 0) + verifierTotal;
   const done = (counts?.detector ?? 0) + verifierDone;
-  const percent = total ? Math.round(done / total * 100) : null;
+  const prefilterDone = run.scanResult?.ok === true;
+  // Prefilter chiếm 10%, các lượt rà đoạn đã chọn chiếm 90% còn lại.
+  const prefilterWeight = prefilterDone ? 10 : 0;
+  const percent = total
+    ? Math.round(prefilterWeight + done / total * (100 - prefilterWeight))
+    : prefilterDone ? prefilterWeight : null;
   const extracted = counts?.total ?? run.scanResult?.metadata.coverage?.totalChunks ?? null;
-  const selected = counts?.selected ?? run.scanResult?.metadata.semanticChunks?.length ?? null;
-  const selectionPercent = extracted && selected !== null ? Math.round(selected / extracted * 100) : null;
+  const extractedCount = run.scanResult?.metadata.semanticChunkCatalog?.length ?? extracted;
+  const highRiskChunks = run.scanResult?.metadata.coverage?.highRiskChunks;
+  const modelProgress = [
+    { name: 'Detector', done: counts?.detector ?? 0, total: counts?.selected ?? 0 },
+    { name: 'Verifier', done: verifierDone, total: verifierTotal },
+  ];
   const files = run.scanResult?.metadata.fileResults ?? [];
   const stepState = (index: number): StepState => {
     if (run.status === 'idle') return 'pending';
     if (index === 0 && run.scanResult) return run.scanResult.ok ? 'completed' : 'failed';
     if (index === 1 && counts && counts.detector === counts.selected && counts.selected > 0) return 'completed';
+    if (index === 2 && run.status === 'error' && active < 2) return 'incomplete';
     if (index === 2 && counts && verifierDone === verifierTotal && run.check) return 'completed';
-    if (index === 3) return run.status === 'completed' ? 'completed' : run.status === 'error' ? 'failed' : 'pending';
+    if (index === 3) return run.status === 'completed' ? 'completed' : run.status === 'error' ? 'incomplete' : 'pending';
     if (index === 1 && counts && active > 1 && counts.detector < counts.selected) return 'failed';
     if (run.status === 'completed' && counts && (index === 1 || index === 2)) return 'failed';
     if (index < active && !counts) return 'completed';
     if (index === active) return run.status === 'error' ? 'failed' : run.status === 'running' ? 'running' : 'pending';
     return index < active && run.status === 'running' ? 'completed' : 'pending';
   };
+  const paths = target?.folderPath ? [target.folderPath] : target?.filePaths?.length ? target.filePaths
+    : files.length ? files.map(file => file.filePath) : run.scanResult?.target ? [run.scanResult.target] : [];
+  const names = paths.map(path => path.split(/[/\\]/).filter(Boolean).pop() || path);
+  const detectorModel = run.agentMetrics?.detector?.model ?? run.fixModel ?? 'gemma3:1b';
+  const verifierModel = run.agentMetrics?.verifier?.model ?? run.checkModel ?? 'qwen2.5-coder:1.5b';
+  const scope = run.scanResult?.metadata.coverage?.scanProfile ?? profile;
+  const activeStatus = active === 1 ? (vi ? 'Detector đang phân tích' : 'Detector reviewing')
+    : active === 2 ? (vi ? 'Verifier đang xác minh' : 'Verifier reviewing')
+    : (vi ? 'Đang chuẩn bị' : 'Preparing');
+  const status = run.status === 'running' ? activeStatus : stateLabel(run.status === 'error' ? 'failed' : run.status === 'completed' ? 'completed' : 'pending');
   return <section id="scan-activity" tabIndex={-1} className="scan-activity" aria-label={vi ? 'Tiến trình quét' : 'Scan activity'}>
-    <div className="scan-activity-heading"><strong>{vi ? 'Tiến trình phân tích' : 'Analysis activity'}</strong><span>{run.status === 'idle' ? (vi ? 'Sẵn sàng' : 'Ready') : percent === null ? (run.status === 'running' ? (vi ? 'Đang chuẩn bị' : 'Preparing') : (vi ? 'Không có số liệu' : 'No progress data')) : `${done}/${total}`}</span>{onClearResults && <button className="btn-header scan-clear-results" type="button" onClick={onClearResults} disabled={clearDisabled || run.status === 'running'}>{vi ? 'Xóa kết quả' : 'Clear results'}</button>}</div>
-    <div className="scan-metrics-grid"><div>
-    <div className="scan-metric-label"><span>{vi ? 'Tiến độ xử lý' : 'Processing progress'}</span><strong>{percent === null ? (vi ? 'Chưa có số liệu' : 'Not available') : `${percent}%`}</strong></div>
-    <div className={`scan-ring ${percent === null && run.status === 'running' ? 'is-indeterminate' : ''}`} role="progressbar" aria-label={vi ? 'Lượt xử lý đoạn đã chọn của hai model' : 'Selected chunk reviews across both models'} aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent ?? undefined} aria-valuetext={percent === null ? (vi ? 'Chưa có số liệu tiến độ' : 'Progress not available') : `${percent}%`}>
-      <svg viewBox="0 0 120 120" aria-hidden="true">
-        <circle className="scan-ring-track" cx="60" cy="60" r="50" />
-        <circle className="scan-ring-value" cx="60" cy="60" r="50" pathLength="100" strokeDasharray="100" strokeDashoffset={percent === null ? (run.status === 'running' ? 75 : 100) : 100 - percent} />
-      </svg>
-      <span className="scan-ring-label" aria-hidden="true"><strong>{percent === null ? '—' : `${percent}%`}</strong><small>{percent === null ? (run.status === 'running' ? (vi ? 'Chuẩn bị' : 'Preparing') : (vi ? 'Chưa có dữ liệu' : 'No data')) : (vi ? 'Đã xử lý' : 'Processed')}</small></span>
+    <div className="scan-metrics-grid">
+      <div className="scan-overview-tile scan-overview-progress">
+        <h2>{vi ? 'Tiến độ xử lý' : 'Processing progress'}</h2>
+        <ProgressRing percent={percent} preparing={percent === null && run.status === 'running'} status={status} runStatus={run.status} vi={vi} />
+        {total > 0 && <small>{done}/{total} {vi ? 'lượt xử lý đoạn' : 'chunk reviews'}</small>}
+      </div>
+      <div className="scan-overview-tile scan-steps">
+        <h2>{vi ? 'Các bước xử lý' : 'Review steps'}</h2>
+        <ol className="scan-step-list">
+          {['Prefilter', 'Detector', 'Verifier', vi ? 'Kết quả' : 'Result'].map((name, index) => {
+            const state = stepState(index);
+            return <li key={name} className={`scan-step is-${state}`} aria-current={state === 'running' ? 'step' : undefined}>
+              <span className="scan-step-mark" aria-hidden="true">
+                <svg className="scan-step-completion-ring" viewBox="0 0 32 32" fill="none">
+                  <circle cx="16" cy="16" r="15" pathLength="100" />
+                </svg>
+                {state === 'completed' || state === 'failed' ? <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d={state === 'completed' ? 'M3.5 8l3 3 6-6' : 'm4.5 4.5 7 7m0-7-7 7'} />
+                </svg> : state === 'incomplete' ? '!' : index + 1}
+              </span>
+              <strong>{name}</strong>
+              <span className="scan-step-status">{stateLabel(state)}</span>
+            </li>;
+          })}
+        </ol>
+      </div>
+      <div className="scan-overview-detail-column">
+        <div className="scan-overview-tile scan-coverage">
+          <div className="scan-overview-title-row">
+            <h2>{vi ? 'Tài liệu và phạm vi' : 'Documents and scope'}</h2>
+            {scope && <span className="scan-overview-scope">
+              {t(locale, scope === 'deep' ? 'form.deepScan' : 'form.balanced')}
+              <span className={`scan-mode-meter ${scope === 'deep' ? 'is-advanced' : ''}`} aria-hidden="true">
+                {Array.from({ length: 9 }, (_, index) => <span key={index} />)}
+              </span>
+            </span>}
+          </div>
+          <strong className="scan-overview-document" title={paths.join('\n')}>{names.length ? names.join(', ') : '—'}</strong>
+          <dl className="scan-overview-models">
+            <div><dt>Detector</dt><dd>{detectorModel}</dd></div>
+            <div><dt>Verifier</dt><dd>{verifierModel}</dd></div>
+          </dl>
+        </div>
+        <div className="scan-overview-tile scan-review-progress">
+          <h2>{vi ? 'Tiến độ kiểm tra' : 'Review progress'}</h2>
+          <div className="scan-extraction-summary">
+            <small>{extractedCount !== null
+              ? `${vi ? 'Tổng số đoạn trích xuất:' : 'Extracted chunks:'} ${extractedCount}/${extracted ?? '?'}`
+              : (vi ? 'Chờ dữ liệu trích xuất và chọn đoạn.' : 'Waiting for extraction and chunk selection data.')}</small>
+            {highRiskChunks !== undefined && <span className="scan-risk-callout"
+              title={vi ? 'Số đoạn được Prefilter xếp rủi ro cao trước khi AI rà.' : 'Chunks rated high risk by Prefilter before AI review.'}>
+              <span aria-hidden="true">⚠</span> {vi ? 'Đoạn đáng ngờ' : 'Suspicious chunks'} <strong>{highRiskChunks}</strong>
+            </span>}
+          </div>
+          {counts && <div className="scan-document-progress">
+            {modelProgress.map(model => <div className="scan-model-progress-row" key={model.name}>
+              <span>{model.name}</span>
+              <div className={`scan-progress ${run.status === 'running' ? 'is-running' : ''}`} role="progressbar"
+                aria-label={vi ? `Đoạn đã rà bởi ${model.name}` : `Chunks reviewed by ${model.name}`}
+                aria-valuemin={0} aria-valuemax={model.total || 1} aria-valuenow={model.done}>
+                <div className="scan-progress-fill" style={{ width: `${model.total ? Math.min(100, model.done / model.total * 100) : 0}%` }} />
+              </div>
+              <strong>{model.done}/{model.total}</strong>
+            </div>)}
+          </div>}
+        </div>
+      </div>
     </div>
-    <small>{vi ? 'Tiến độ lượt xử lý đoạn đã chọn, không phải tỷ lệ an toàn hay độ bao phủ toàn tài liệu.' : 'Progress of selected chunk reviews, not a safety score or whole-document coverage.'}</small>
-    </div><div className="scan-coverage">
-      <div className="scan-metric-label"><span>{vi ? 'Phạm vi được chọn' : 'Selected scope'}</span><strong>{selectionPercent === null ? (vi ? 'Chưa có số liệu' : 'Not available') : `${selectionPercent}%`}</strong></div>
-      <div className="scan-progress" aria-hidden="true"><div className="scan-progress-fill" style={{ width: `${selectionPercent ?? 0}%` }} /></div>
-      <small>{selected !== null && extracted !== null
-        ? (vi ? `${selected}/${extracted} đoạn trích xuất được chọn cho AI.` : `${selected}/${extracted} extracted chunks selected for AI.`)
-        : (vi ? 'Chờ dữ liệu trích xuất và chọn đoạn.' : 'Waiting for extraction and chunk selection data.')}</small>
-      {counts && <small>{vi ? `Cả hai model đã xử lý: ${counts.completed}/${counts.total ?? '?'} đoạn.` : `Reviewed by both models: ${counts.completed}/${counts.total ?? '?'} chunks.`}</small>}
-    </div></div>
-    <ol className="agent-flow">{['Prefilter', 'Detector', 'Verifier', vi ? 'Kết quả' : 'Result'].map((name, index) => {
-      const state = stepState(index);
-      return <li key={name} className={`agent-node is-${state}`} aria-current={state === 'running' ? 'step' : undefined}><span className="agent-node-mark" aria-hidden="true">{state === 'completed' ? '✓' : state === 'failed' ? '!' : String(index + 1).padStart(2, '0')}</span><strong>{name}</strong><span>{stateLabel(state)}</span></li>;
-    })}</ol>
-    <div className="agent-summary">{(['detector', 'verifier'] as const).map(role => <div key={role}>
-      <span className="agent-initial" aria-hidden="true">{role === 'detector' ? 'D' : 'V'}</span>
-      <strong>{role === 'detector' ? 'Detector' : 'Verifier'}</strong>
-      <code>{role === 'detector' ? run.fixModel || 'gemma3:1b' : run.checkModel || 'qwen2.5-coder:1.5b'}</code>
-      <small>{counts ? `${role === 'detector' ? counts.detector : verifierDone}/${role === 'detector' ? counts.selected : verifierTotal} ${vi ? 'đoạn xử lý hợp lệ' : 'valid chunk reviews'}` : (vi ? 'Chưa có số liệu xử lý' : 'Review data not available')}</small>
-    </div>)}</div>
-    {files.length > 0 && <details className="scan-documents" open={run.status === 'running'}><summary>{vi ? 'Tài liệu trong lượt quét' : 'Documents in this scan'} · {files.length}</summary><ul>{files.map(file => <li key={file.filePath}>{file.filePath}<span>{file.ok ? (vi ? 'Đã trích xuất' : 'Extracted') : (vi ? 'Lỗi trích xuất' : 'Extraction failed')}</span></li>)}</ul><small>{vi ? 'Chưa có tín hiệu xác định file model đang đọc tại từng thời điểm.' : 'Per-file live model activity is not available.'}</small></details>}
   </section>;
 }

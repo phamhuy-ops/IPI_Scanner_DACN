@@ -24,8 +24,7 @@ function App() {
   useEffect(() => {
     document.body.classList.remove('theme-dark', 'theme-light');
     document.body.classList.add(`theme-${themeMode}`);
-    document.body.classList.toggle('desktop-window', Boolean(window.owaspWorkbench?.setWindowTheme));
-    void window.owaspWorkbench?.setWindowTheme?.(themeMode);
+    document.body.classList.toggle('desktop-window', Boolean(window.owaspWorkbench?.controlWindow));
   }, [themeMode]);
 
   useEffect(() => {
@@ -96,6 +95,10 @@ function App() {
           <button type="button" className="btn-header settings-trigger" onClick={() => setSettingsOpen(true)} aria-label={locale === 'vi' ? 'Cài đặt' : 'Settings'} title={locale === 'vi' ? 'Cài đặt' : 'Settings'} aria-haspopup="dialog" aria-expanded={settingsOpen}>
             <span aria-hidden="true">⚙</span>
           </button>
+          {window.owaspWorkbench?.controlWindow && <div className="window-controls">
+            <button type="button" className="btn-header" onClick={() => void window.owaspWorkbench?.controlWindow?.('minimize')} aria-label={locale === 'vi' ? 'Thu xuống taskbar' : 'Minimize'}>−</button>
+            <button type="button" className="btn-header window-close" onClick={() => void window.owaspWorkbench?.controlWindow?.('close')} aria-label={locale === 'vi' ? 'Đóng cửa sổ' : 'Close window'}>×</button>
+          </div>}
         </div>
       </header>
 

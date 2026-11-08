@@ -19,7 +19,7 @@ body {
   --glass-cyan: #8bdee5;
   --glass-violet: #c5b3ff;
   --glass-project-tint: linear-gradient(120deg, rgba(95, 123, 226, .1), transparent);
-  --glass-source-tint: linear-gradient(145deg, rgba(40, 176, 186, .09), transparent 75%);
+  --glass-source-tint: linear-gradient(145deg, rgba(40, 176, 186, .16), rgba(40, 176, 186, .03));
   --glass-mode-tint: linear-gradient(120deg, rgba(140, 100, 219, .13), transparent);
   --glass-card-tint: radial-gradient(ellipse at 100% 0%, rgba(194, 105, 174, .16), transparent 65%);
   --glass-wallpaper:
@@ -48,7 +48,7 @@ body.theme-light {
   --glass-cyan: #166675;
   --glass-violet: #67429f;
   --glass-project-tint: linear-gradient(120deg, rgba(95, 123, 226, .07), transparent);
-  --glass-source-tint: linear-gradient(145deg, rgba(40, 176, 186, .07), transparent 75%);
+  --glass-source-tint: linear-gradient(145deg, rgba(40, 176, 186, .12), rgba(40, 176, 186, .02));
   --glass-mode-tint: linear-gradient(120deg, rgba(140, 100, 219, .1), transparent);
   --glass-card-tint: radial-gradient(ellipse at 100% 0%, rgba(194, 105, 174, .12), transparent 65%);
   --glass-wallpaper:
@@ -68,7 +68,7 @@ body.theme-light {
 }
 .app-header { border-bottom: 1px solid var(--glass-border); }
 .workspace-sidebar { border-right: 1px solid var(--glass-border); }
-.workspace-sidebar .project-sidebar, .sidebar-input .scan-mode-section,
+.workspace-sidebar .project-sidebar,
 .project-content .scan-results-panel, .settings-dialog-header {
   background: transparent;
 }
@@ -118,10 +118,8 @@ body.theme-light {
 /* Sắc độ khu vực tạo nhịp màu, không thay màu cảnh báo và thao tác. */
 .workspace-sidebar .project-sidebar { background-image: var(--glass-project-tint); }
 .sidebar-input .scan-source { background-image: var(--glass-source-tint); }
-.sidebar-input .scan-mode-section { background-image: var(--glass-mode-tint); }
 .scan-source-heading .section-label { color: var(--text); }
 .sidebar-input .scan-upload-icon { color: var(--glass-cyan); }
-.scan-mode-section > .section-label { color: var(--text); }
 .copilot-hero { background-image: var(--glass-card-tint); }
 .ready-orbit { color: var(--glass-cyan); background: color-mix(in srgb, var(--glass-cyan) 12%, var(--surface)); border-color: color-mix(in srgb, var(--glass-cyan) 38%, var(--line)); }
 
@@ -153,5 +151,4 @@ body.theme-light {
 /* Ô Bento dùng sắc độ nhẹ trên kính chung, không tạo thêm lớp blur. */
 .latest-scan-tile { background: var(--glass-control); border-color: var(--line-strong); }
 .latest-scan-verdict-tile { background: var(--glass-selected); }
-.latest-scan-files-tile { background-image: var(--glass-source-tint); }
-.latest-scan-time-tile { background-image: var(--glass-mode-tint); }
+.latest-scan-agent-tile { background-image: var(--glass-mode-tint); }

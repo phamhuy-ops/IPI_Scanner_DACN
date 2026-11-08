@@ -1,6 +1,6 @@
 import { auditWithSkills, SkillReviewer } from './skillAudit';
 import { IpiBatchFailure, IpiLoopEvent, IpiRunState, ReviewContract, ScanResult, SemanticScanProfile, VerifierOutputFormat } from '../../../types';
-import { releaseSlmModel, withTimeout } from '../slmClient';
+import { releaseSlmModel, withTimeout, SlmRequestMetrics } from '../slmClient';
 import { SlmOutputTruncatedError } from '../slmResponse';
 import { runDetectorAgent } from './detectorAgent';
 import { runVerifierAgent } from './verifierAgent';
@@ -25,6 +25,10 @@ export interface IpiDocumentPipelineOptions {
   fixModel?: string;
   checkModel?: string;
   analysisTimeoutMs?: number;
+  requestTimeoutMs?: number;
+  detectorBatchSize?: 1 | 2 | 3;
+  recoverDetectorCitations?: boolean;
+  verifyModelHandoff?: boolean;
   reviewContract?: ReviewContract;
   // Luồng đọc toàn nguồn được bật rõ để đối chứng, Verifier giữ hợp đồng cũ.
   detectorFlow?: 'source-review-v1' | 'source-review-compact-v1';
@@ -69,6 +73,15 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
     state.events = [...state.events, event];
     options.onEvent?.(event, { ...state, batchFailures: structuredClone(state.batchFailures), reviewProgress: structuredClone(state.reviewProgress), suspicions: state.suspicions.map(row => ({ ...row })) });
   };
+  const recordMetrics = (role: 'detector' | 'verifier') => (metrics: SlmRequestMetrics) => {
+    const previous = state.agentMetrics?.[role];
+    state.agentMetrics = { ...state.agentMetrics, [role]: {
+      model: metrics.model, durationMs: (previous?.durationMs ?? 0) + metrics.durationMs,
+      totalTokens: (previous?.totalTokens ?? 0) + (metrics.totalTokens ?? 0),
+      requests: (previous?.requests ?? 0) + 1,
+      missingTokenRequests: (previous?.missingTokenRequests ?? 0) + (metrics.totalTokens === undefined ? 1 : 0),
+    } };
+  };
   const deadline = Date.now() + (options.analysisTimeoutMs ?? 180_000);
   let stage: 'scan' | 'detector' | 'verifier' = 'scan';
   let issues: string[] = ['Document review has not completed.'];
@@ -105,9 +118,14 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
     const bridge = getWorkbenchBridge();
     if (!bridge?.scanIpiDoc || (options.folderPath && !bridge.scanIpiDocFolder)) throw new Error('Document scanning bridge is unavailable.');
     emit({ phase: 'detect', message: 'Extracting documents and collecting rule suspicions.' });
-    const scanResult: ScanResult = await withTimeout(options.folderPath
+    const extracted: ScanResult = await withTimeout(options.folderPath
       ? bridge.scanIpiDocFolder(options.folderPath, options.scanProfile)
       : bridge.scanIpiDoc(options.filePaths, options.scanProfile), Math.min(60_000, deadline - Date.now()));
+    const scanResult: ScanResult = options.detectorBatchSize && extracted.metadata?.coverage
+      ? { ...extracted, metadata: { ...extracted.metadata, coverage: {
+        ...extracted.metadata.coverage, detectorBatchSize: options.detectorBatchSize,
+      } } }
+      : extracted;
     state.scanResult = scanResult;
     if (!scanResult.ok) throw new Error(scanResult.error || 'Document scan failed.');
     // Compact aliases improve small-model citation fidelity; original chunk IDs
@@ -153,12 +171,14 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
     if (!chunks.length) throw new Error('No text chunks available for review.');
 
     stage = 'detector';
+    if (options.verifyModelHandoff && state.checkModel !== state.fixModel) await releaseSlmModel(state.checkModel!, true);
     emit({ phase: 'fix', message: `Detector reviewing ${chunks.length} selected chunks and ${state.suspicions.length} rule suspicions.`, findingCount: state.suspicions.length });
     const detector = await runDetectorAgent({ chunks, suspicions: state.suspicions, coverage: scanResult.metadata.coverage,
-      model: state.fixModel, deadline, reviewContract: state.reviewContract, detectorFlow: options.detectorFlow, sourceReferencePolicy: options.sourceReferencePolicy,
+      model: state.fixModel, deadline, requestTimeoutMs: options.requestTimeoutMs, reviewContract: state.reviewContract, detectorFlow: options.detectorFlow, sourceReferencePolicy: options.sourceReferencePolicy,
       recoverTimeoutOnce: options.detectorFlow === 'source-review-compact-v1',
+      recoverCitations: options.recoverDetectorCitations,
       actionAudit: options.actionAudit, evidencePresentation: options.evidencePresentation,
-      referenceBatchSize: options.referenceBatchSize, onBatchReviewed: recordBatch('detector'), onBatchFailed: recordFailure('detector') });
+      referenceBatchSize: options.referenceBatchSize, onRequestMetrics: recordMetrics('detector'), onBatchReviewed: recordBatch('detector'), onBatchFailed: recordFailure('detector') });
     state.fixModel = detector.model;
     let dependencies: Awaited<ReturnType<typeof collectContextDependencies>> | undefined;
     if (options.contextDependencyModel) {
@@ -171,7 +191,7 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
       state.contextDependencyReview = dependencies.review;
       if (options.contextDependencyModel !== detector.model) await releaseSlmModel(options.contextDependencyModel);
     }
-    await releaseSlmModel(detector.model);
+    await releaseSlmModel(detector.model, options.verifyModelHandoff);
     stage = 'verifier';
     const verifierChunks = suppliedOnly ? candidateChunks(chunks, state.suspicions) : chunks;
     if (suppliedOnly) {
@@ -180,10 +200,10 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
     }
     emit({ phase: 'check', message: 'Verifier checking every grounded suspicion against complete source chunks.', findingCount: state.suspicions.length });
     const verifier = await runVerifierAgent({ chunks, suspicions: state.suspicions, coverage: scanResult.metadata.coverage,
-      suppliedOnly, detectorReview: detector, model: state.checkModel, deadline, reviewContract: state.reviewContract, outputFormat: state.verifierOutput,
+      suppliedOnly, detectorReview: detector, model: state.checkModel, deadline, requestTimeoutMs: options.requestTimeoutMs, reviewContract: state.reviewContract, outputFormat: state.verifierOutput,
       sourceContext: options.detectorFlow === 'source-review-compact-v1',
       separateSourceViews: options.verifierEvidenceMode === 'split-views-multiple-targets-v1',
-      actionAudit: options.actionAudit, evidencePresentation: options.evidencePresentation, referenceBatchSize: options.referenceBatchSize, onBatchReviewed: recordBatch('verifier'), onBatchFailed: recordFailure('verifier') });
+      actionAudit: options.actionAudit, evidencePresentation: options.evidencePresentation, referenceBatchSize: options.referenceBatchSize, onRequestMetrics: recordMetrics('verifier'), onBatchReviewed: recordBatch('verifier'), onBatchFailed: recordFailure('verifier') });
     state.checkModel = verifier.modelUsed;
     if (dependencies) {
       // Chỉ hợp nhất sau lượt chính để giữ đầu vào xác minh độc lập, không truyền suy luận model trước.

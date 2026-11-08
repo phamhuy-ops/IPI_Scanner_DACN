@@ -6,8 +6,8 @@ SENTINEL là ứng dụng desktop (Electron + React) dùng để phát hiện **
 
 1. Chọn một hoặc nhiều tài liệu, hoặc quét cả thư mục.
 2. Trích xuất văn bản và chạy **rule-based prefilter**: instruction override, giả mạo system prompt, jailbreak, delimiter smuggling, Base64, ký tự zero-width và exfiltration.
-3. **Detector Agent** (`gemma3:1b`) đọc các chunk được chọn và đánh giá ý đồ ngữ nghĩa.
-4. **Verifier Agent** (`qwen2.5-coder:1.5b`) đối chiếu nguyên văn; ở vòng đầu không nhìn nhận định của Detector.
+3. **Detector Agent** (mặc định desktop `qwen3:4b-instruct-2507-q4_K_M`) đọc các chunk được chọn và đánh giá ý đồ ngữ nghĩa.
+4. **Verifier Agent** (mặc định desktop `qwen2.5:3b-instruct-q4_K_M`) đối chiếu nguyên văn. SENTINEL kiểm tra Ollama đã giải phóng Detector trước khi chạy Verifier. Verifier không nhận nhận định của Detector.
 5. Tổng hợp **Phát hiện IPI / Chưa phát hiện IPI / Cần xem xét**, hiển thị hồ sơ bằng chứng và trạng thái xử lý riêng.
 
 Rule chỉ đưa ra nghi vấn; không có cơ chế “có finding là fail”. Chỉ đóng một
@@ -27,8 +27,8 @@ giới hạn phép đo được ghi trong [danh-gia-luong-xu-ly-mot-vong.md — 
 - Hai model baseline nhẹ:
 
 ```powershell
-ollama pull gemma3:1b
-ollama pull qwen2.5-coder:1.5b
+ollama pull qwen3:4b-instruct-2507-q4_K_M
+ollama pull qwen2.5:3b-instruct-q4_K_M
 ```
 
 Trên cấu hình laptop có GPU 4 GB VRAM và RAM 24 GB, cặp Gemma 3 1B + Qwen Coder 1.5B là baseline nhẹ phù hợp để đo độ chính xác trước khi fine-tune. Hai agent được gọi **tuần tự** để tránh nạp đồng thời hai model vào VRAM.
@@ -39,7 +39,7 @@ hoặc model lỗi sẽ được báo thay vì âm thầm chuyển sang model kh
 đây là lựa chọn thử nghiệm, chưa thay hai model mặc định hoặc được chứng
 minh nhận diện tốt hơn. Khi caller không chỉ định model, thứ tự tự chọn cũ vẫn giữ.
 
-Theo phép đối chứng của người dùng, core cũng nhận rõ `qwen3:4b-instruct-2507-q4_K_M` đã có trên máy ở vai trò Detector. Model này không vào fallback, Verifier mặc định hoặc Agent mặc định. Runner chung hỗ trợ `--detector-model` cho đúng model được phép và bắt buộc paired; không tự tải model. [Đối chứng30 ca](benchmark/results/agent-upgrade-30-whLK8a/quality-audit.json) tăng ca sạch đúng nhưng báo sạch sai tăng, nên chưa được chọn làm cấu hình vận hành.
+Ứng dụng desktop chọn rõ cặp model trên, còn runner benchmark giữ mặc định cũ để đối chiếu được với các kết quả đã lưu. Runner hỗ trợ `--detector-model` cho model được phép, yêu cầu chạy paired và không tự tải model. [Đối chứng 30 ca trước đây](benchmark/results/agent-upgrade-30-whLK8a/quality-audit.json) ghi nhận số ca sạch đúng và số ca báo sạch sai đều tăng. Kết quả này vẫn là giới hạn khi đánh giá model.
 
 ## Cài đặt và chạy
 

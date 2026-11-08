@@ -1,4 +1,5 @@
 import { LatestScan } from './LatestScan';
+import { DESKTOP_DETECTOR_MODEL, DESKTOP_VERIFIER_MODEL } from '../ai/agents/slmCatalog';
 import React, { useEffect, useRef, useState } from 'react';
 import { runIpiDocMultiAgentLoop } from '../ai/agents/ipiDocAgent';
 import { ScanTarget, useStore } from '../store/useStore';
@@ -7,8 +8,6 @@ import { conclude } from '../ai/agents/document/reviewPolicy';
 
 
 const SUPPORTED_EXTS = '.txt, .md, .pdf, .docx, .doc, .csv, .json, .xml, .html';
-const DETECTOR_MODEL = 'gemma3:1b';
-const VERIFIER_MODEL = 'qwen2.5-coder:1.5b';
 
 export const IpiAgentForm: React.FC = () => {
   const {
@@ -30,8 +29,8 @@ export const IpiAgentForm: React.FC = () => {
     }
   }, [ipiRun.status]);
 
-  const detectorModel = ipiFixModel || DETECTOR_MODEL;
-  const verifierModel = ipiCheckModel || VERIFIER_MODEL;
+  const detectorModel = ipiFixModel || DESKTOP_DETECTOR_MODEL;
+  const verifierModel = ipiCheckModel || DESKTOP_VERIFIER_MODEL;
 
   const runScan = async (nextTarget: ScanTarget) => {
     if (useStore.getState().ipiRunning) return;
@@ -39,7 +38,8 @@ export const IpiAgentForm: React.FC = () => {
     setTarget(nextTarget);
     setError(null);
     resetIpiRun();
-    useStore.setState({ ipiRunning: true, ipiRun: { ...useStore.getState().ipiRun, status: 'running', processingStatus: 'running', error: null } });
+    useStore.setState({ ipiRunning: true, ipiRun: { ...useStore.getState().ipiRun, status: 'running', processingStatus: 'running',
+      fixModel: detectorModel, checkModel: verifierModel, error: null } });
     try {
       const connection = await window.owaspWorkbench?.checkOllama?.();
       if (!connection?.ok) throw new Error(connection?.error || t(locale, 'form.ollamaFail'));
@@ -59,6 +59,10 @@ export const IpiAgentForm: React.FC = () => {
         folderPath: nextTarget.folderPath,
         scanProfile,
         providerMode: 'ollama',
+        requestTimeoutMs: 90_000,
+        recoverDetectorCitations: true,
+        verifyModelHandoff: true,
+        analysisTimeoutMs: 300_000,
         fixModel: detectorModel,
         checkModel: verifierModel,
         onEvent: (_event, current) => {
@@ -74,6 +78,7 @@ export const IpiAgentForm: React.FC = () => {
       setError(message);
       if (useStore.getState().ipiRun.status === 'running') {
         useStore.setState({ ipiRun: { ...useStore.getState().ipiRun, status: 'error', processingStatus: 'model_error', error: message,
+          events: [{ ts: Date.now(), phase: 'error', message }],
           check: conclude([], [t(locale, 'form.scanIncomplete')], message) } });
       }
     } finally {
@@ -125,6 +130,7 @@ export const IpiAgentForm: React.FC = () => {
   };
 
   return (
+    <>
     <div className="config-scroll">
       <section className="section scan-source">
         <div className="scan-source-heading">
@@ -161,21 +167,17 @@ export const IpiAgentForm: React.FC = () => {
           </div>
 
         </div>
-        <div className="field-hint" title={t(locale, 'form.supported', { exts: SUPPORTED_EXTS })}>{t(locale, 'form.supported', { exts: SUPPORTED_EXTS })}</div>
-      </section>
-
-      <section className="section scan-mode-section" aria-label={t(locale, 'form.scope')}>
-        <h3 className="section-label">{t(locale, 'form.scope')}</h3>
         <div className="scan-mode-grid" role="group" aria-label={t(locale, 'form.scopeGroup')}>
           <button type="button" className={`scan-mode-card scan-mode-balanced ${scanProfile === 'balanced' ? 'selected' : ''}`} aria-pressed={scanProfile === 'balanced'} onClick={() => setScanProfile('balanced')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.balanced')}</strong><small>{locale === 'vi' ? 'Quét nhanh, ưu tiên rủi ro.' : 'Fast scan, prioritizes risk.'}</small></button>
           <button type="button" className={`scan-mode-card scan-mode-deep ${scanProfile === 'deep' ? 'selected' : ''}`} aria-pressed={scanProfile === 'deep'} onClick={() => setScanProfile('deep')} disabled={busy}><span className="mode-radio" aria-hidden="true" /><strong>{t(locale, 'form.deepScan')}</strong><small>{locale === 'vi' ? 'Kiểm tra rộng hơn, lâu hơn.' : 'Broader review, takes longer.'}</small></button>
         </div>
       </section>
 
-      <LatestScan run={ipiRun} locale={locale} />
 
       {error && ipiRun.status === 'idle' && <div className="error-bar" role="alert">{error}</div>}
 
     </div>
+    <LatestScan run={ipiRun} locale={locale} target={target} />
+    </>
   );
 };

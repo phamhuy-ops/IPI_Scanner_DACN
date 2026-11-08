@@ -26,19 +26,31 @@ async function getOllamaModels(timeoutMs = 3500) {
   }
 }
 
+async function launchOllama() {
+  const trayPath = process.platform === 'win32' && process.env.LOCALAPPDATA
+    ? path.join(process.env.LOCALAPPDATA, 'Programs', 'Ollama', 'ollama app.exe')
+    : null;
+  const trayInstalled = trayPath && await fs.access(trayPath).then(() => true, () => false);
+  // Ưu tiên ứng dụng nền của Ollama trên Windows. Với CLI, tránh DETACHED_PROCESS
+  // để Windows có thể áp dụng CREATE_NO_WINDOW từ windowsHide.
+  const child = trayInstalled
+    ? spawn(trayPath, ['--hide', '--fast-startup'], { detached: true, stdio: 'ignore', windowsHide: true })
+    : spawn('ollama', ['serve'], { detached: process.platform !== 'win32', stdio: 'ignore', windowsHide: true });
+  await new Promise((resolve, reject) => {
+    child.once('error', reject);
+    child.once('spawn', () => {
+      child.unref();
+      resolve();
+    });
+  });
+}
+
 async function ensureOllamaReady() {
   try {
     return { models: await getOllamaModels(), started: false };
   } catch (initialError) {
     if (!ollamaLaunchAttempt) {
-      ollamaLaunchAttempt = new Promise((resolve, reject) => {
-        const child = spawn('ollama', ['serve'], { detached: true, stdio: 'ignore', windowsHide: true });
-        child.once('error', reject);
-        child.once('spawn', () => {
-          child.unref();
-          resolve();
-        });
-      }).finally(() => { ollamaLaunchAttempt = null; });
+      ollamaLaunchAttempt = launchOllama().finally(() => { ollamaLaunchAttempt = null; });
     }
 
     try {
@@ -73,11 +85,11 @@ function createWindow() {
     height: 920,
     minWidth: 1100,
     minHeight: 720,
+    show: false,
     title: 'SENTINEL - Local TinyLM IPI Defense',
     icon: getWindowIconPath(),
     autoHideMenuBar: true,
-    titleBarStyle: 'hidden',
-    titleBarOverlay: { color: '#00000000', symbolColor: '#edf4ff', height: 47 },
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -85,6 +97,15 @@ function createWindow() {
     },
   });
   win.removeMenu();
+  win.once('ready-to-show', () => {
+    win.maximize();
+    win.show();
+  });
+  win.on('unmaximize', () => {
+    if (!win.isMinimized()) win.maximize();
+  });
+  win.on('restore', () => win.maximize());
+  win.on('will-resize', event => event.preventDefault());
   if (process.env.VITE_DEV_SERVER_URL) win.loadURL(process.env.VITE_DEV_SERVER_URL);
   else win.loadFile(path.join(__dirname, 'renderer', 'index.html'));
 }
@@ -129,11 +150,11 @@ async function runDocumentScan(event, filePaths, folderPath, scanProfile) {
   }
 }
 
-ipcMain.handle('window:setTheme', (event, theme) => {
-  if (theme !== 'light' && theme !== 'dark') return;
+ipcMain.handle('window:control', (event, action) => {
   const win = BrowserWindow.fromWebContents(event.sender);
   if (!win || win.isDestroyed()) return;
-  win.setTitleBarOverlay({ color: '#00000000', symbolColor: theme === 'light' ? '#152940' : '#edf4ff', height: 47 });
+  if (action === 'minimize') win.minimize();
+  if (action === 'close') win.close();
 });
 
 ipcMain.handle('dialog:pickFolder', async () => {
@@ -201,17 +222,22 @@ ipcMain.handle('ai:fetch', async (_event, payload) => {
     if (payload?.providerId !== 'ollama') throw new Error('Only local Ollama is supported.');
     const url = new URL(String(payload?.url || ''));
     if (url.protocol !== 'http:' || !['127.0.0.1:11434', 'localhost:11434'].includes(url.host)) throw new Error('Only local Ollama is allowed.');
+    const listLoadedModels = payload?.method === 'GET' && url.pathname === '/api/ps' && !url.search;
     const controller = new AbortController();
-    const timeoutMs = Math.min(Math.max(Number(payload?.timeoutMs || 45000), 1000), 60000);
+    const requestedTimeout = Number(payload?.timeoutMs ?? 45_000);
+    const timeoutMs = Number.isFinite(requestedTimeout) ? Math.min(Math.max(requestedTimeout, 1_000), 90_000) : 45_000;
     const timer = setTimeout(() => controller.abort(), timeoutMs);
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: String(payload?.body || ''),
-      signal: controller.signal,
-    });
-    clearTimeout(timer);
-    return { ok: response.ok, status: response.status, body: await response.text() };
+    try {
+      const response = await fetch(url, {
+        method: listLoadedModels ? 'GET' : 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: listLoadedModels ? undefined : String(payload?.body || ''),
+        signal: controller.signal,
+      });
+      return { ok: response.ok, status: response.status, body: await response.text() };
+    } finally {
+      clearTimeout(timer);
+    }
   } catch (error) {
     return { ok: false, status: 0, body: '', error: error?.message || 'Ollama request failed.' };
   }

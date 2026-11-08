@@ -3,15 +3,18 @@ import { t } from '../i18n/messages';
 import { useStore } from '../store/useStore';
 import { useProjects } from '../store/useProjects';
 
-const MODEL_CHOICES = ['gemma3:1b', 'qwen2.5-coder:1.5b'];
+import { DESKTOP_DETECTOR_MODEL, DESKTOP_VERIFIER_MODEL } from '../ai/agents/slmCatalog';
+
+const DETECTOR_CHOICES = [DESKTOP_DETECTOR_MODEL, 'gemma3:1b', 'qwen2.5-coder:1.5b'];
+const VERIFIER_CHOICES = [DESKTOP_VERIFIER_MODEL, 'qwen2.5-coder:1.5b', 'gemma3:1b'];
 
 export function ModelSettings({ open, onClose }: { open: boolean; onClose: () => void }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const activeProject = useProjects(state => state.activeId);
   const { locale, ipiRunning, pickingSource, ipiFixModel, setIpiFixModel, ipiCheckModel, setIpiCheckModel, ollamaStatus, checkOllamaStatus } = useStore();
   const busy = ipiRunning || pickingSource || !activeProject;
-  const detectorModel = ipiFixModel || MODEL_CHOICES[0];
-  const verifierModel = ipiCheckModel || MODEL_CHOICES[1];
+  const detectorModel = ipiFixModel || DESKTOP_DETECTOR_MODEL;
+  const verifierModel = ipiCheckModel || DESKTOP_VERIFIER_MODEL;
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -36,13 +39,13 @@ export function ModelSettings({ open, onClose }: { open: boolean; onClose: () =>
         <div className="field">
           <label className="field-label" htmlFor="ipi-detector-model">{t(locale, 'form.detector')}</label>
           <select id="ipi-detector-model" className="input-base" value={detectorModel} disabled={busy} onChange={(event) => setIpiFixModel(event.target.value)}>
-            {MODEL_CHOICES.map((model) => <option key={model} value={model}>{model}</option>)}
+            {DETECTOR_CHOICES.map((model) => <option key={model} value={model}>{model}</option>)}
           </select>
         </div>
         <div className="field">
           <label className="field-label" htmlFor="ipi-verifier-model">{t(locale, 'form.verifier')}</label>
           <select id="ipi-verifier-model" className="input-base" value={verifierModel} disabled={busy} onChange={(event) => setIpiCheckModel(event.target.value)}>
-            {MODEL_CHOICES.map((model) => <option key={model} value={model}>{model}</option>)}
+            {VERIFIER_CHOICES.map((model) => <option key={model} value={model}>{model}</option>)}
           </select>
         </div>
         <div className="ipi-auto-loop-info" style={{ marginTop: 8 }}>{t(locale, 'form.modelHint')}</div>

@@ -174,7 +174,16 @@ export interface IpiBatchFailure {
   chunks: Array<{ chunkId: string; fileName: string; filePath?: string; startLine: number; endLine: number }>;
 }
 
+export interface IpiAgentMetrics {
+  model: string;
+  durationMs: number;
+  totalTokens: number;
+  requests: number;
+  missingTokenRequests: number;
+}
+
 export interface IpiRunState {
+  agentMetrics?: Partial<Record<'detector' | 'verifier', IpiAgentMetrics>>;
   skillAudit?: import('./ai/agents/document/skillAudit').SkillAuditTrace;
   // Nhánh đối chứng: dữ kiện nguồn và giới hạn của lượt rà phụ thuộc ngữ cảnh.
   contextDependencyModel?: string;
@@ -220,7 +229,7 @@ export interface IpiContextDependencyFact {
 declare global {
   interface Window {
     owaspWorkbench?: {
-      setWindowTheme?: (theme: 'light' | 'dark') => Promise<void>;
+      controlWindow?: (action: 'minimize' | 'close') => Promise<void>;
       scanIpiDoc: (filePaths: string[], scanProfile?: SemanticScanProfile) => Promise<ScanResult>;
       scanIpiDocFolder: (folderPath: string, scanProfile?: SemanticScanProfile) => Promise<ScanResult>;
       pickFolder: () => Promise<{ ok: boolean; folderPath?: string; folderFileCount?: number | null }>;

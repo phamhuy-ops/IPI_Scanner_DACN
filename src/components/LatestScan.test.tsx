@@ -11,12 +11,17 @@ const state = (): IpiRunState => ({ status: 'completed', processingStatus: 'comp
 const render = (run: IpiRunState) => renderToStaticMarkup(<LatestScan run={run} locale="vi" />);
 
 describe('tóm tắt lần quét gần nhất', () => {
-  it('hiển thị số tệp, thời điểm và liên kết đến kết luận trong phạm vi kiểm tra', () => {
+  it('hiển thị hai agent và liên kết đến kết luận trong phạm vi kiểm tra', () => {
     const html = render(state());
-    expect(html).toContain('3 tệp đã xử lý');
-    expect(html).toContain('2026-11-06T10:00:00.000Z');
+    expect(html).toContain('Tệp đã xử lý: <strong>3</strong>');
+    expect(html).toContain('Detector');
+    expect(html).toContain('Verifier');
+    expect(html).not.toContain('Agent Detector');
+    expect(html).not.toContain('Agent Verifier');
+    expect(html).not.toContain('<dt>Model</dt>');
+    expect(html).not.toContain('Thời điểm');
     expect(html).toContain('href="#scan-conclusion"');
-    expect(html).toContain('phạm vi đã kiểm tra');
+    expect(html).toContain('Số IPI xác nhận:');
   });
   it('không dùng kết luận cũ khi đang chạy hoặc bị lỗi', () => {
     const run = state(); run.status = 'running';
@@ -24,19 +29,40 @@ describe('tóm tắt lần quét gần nhất', () => {
     expect(render(run)).not.toContain('latest-scan-not_detected');
     expect(render(run)).not.toContain('href=');
     run.status = 'error';
-    expect(render(run)).toContain('Xử lý chưa hoàn tất');
+    expect(render(run)).toContain('Lỗi xử lý model');
     expect(render(run)).not.toContain('latest-scan-not_detected');
   });
-  it('ẩn thông tin cũ khi đã xóa kết quả và không tự suy ra số tệp', () => {
+  it('ẩn thông tin cũ khi đã xóa kết quả', () => {
     const run = state(); run.status = 'idle';
     expect(render(run)).toContain('Project chưa có kết quả');
-    expect(render(run)).not.toContain('3 tệp');
     run.status = 'error'; run.scanResult = null; run.events = [];
-    expect(render(run)).toContain('Chưa có số liệu tệp');
     expect(render(run)).not.toContain('<time');
+  });
+  it('hiển thị số liệu từng agent và không suy đoán token còn thiếu', () => {
+    const run = state();
+    run.agentMetrics = { detector: { model: 'gemma3:1b', durationMs: 1250, totalTokens: 1234, requests: 1, missingTokenRequests: 0 },
+      verifier: { model: 'qwen2.5-coder:1.5b', durationMs: 2000, totalTokens: 20, requests: 2, missingTokenRequests: 1 } };
+    expect(render(run)).toContain('1.234');
+    expect(render(run)).toContain('1,3s');
+    expect(render(run)).toContain('qwen2.5-coder:1.5b');
+    expect(render(run)).not.toContain('>20<');
+    run.status = 'idle';
+    expect(render(run)).not.toContain('gemma3:1b');
   });
   it('không lỗi khi thời điểm lưu không hợp lệ', () => {
     const run = state(); run.events[0].ts = 1e100;
     expect(render(run)).not.toContain('<time');
   });
+});
+
+
+it('hiển thị tên nguồn và lý do lỗi ngắn gọn trong ô kết luận', () => {
+  const run = state();
+  run.status = 'error'; run.processingStatus = 'timeout'; run.error = 'Analysis timeout: local request deadline exceeded';
+  const html = renderToStaticMarkup(<LatestScan run={run} locale="vi" target={{ folderPath: 'C:\\documents\\Báo cáo' }} />);
+  expect(html).toContain('>Báo cáo</strong>');
+  expect(html).toContain('Quá thời gian xử lý');
+  expect(html).toContain('Trạng thái:');
+  expect(html).toContain('Tệp lỗi:');
+  expect(html).toContain('Số IPI xác nhận:');
 });

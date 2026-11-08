@@ -1,6 +1,12 @@
 import { assertSlmModel, endpointsForRole, SlmEndpoint, SlmRole } from './slmCatalog';
 import { assertCompleteSlmResponse, SlmConnectionError, SlmOutputTruncatedError } from './slmResponse';
 
+export interface SlmRequestMetrics {
+  model: string;
+  durationMs: number;
+  totalTokens?: number;
+}
+
 export interface SlmGenerateResult {
   text: string;
   providerId: string;
@@ -36,7 +42,7 @@ export async function withTimeout<T>(promise: Promise<T>, timeoutMs: number): Pr
   } finally { if (timer) clearTimeout(timer); }
 }
 
-async function callEndpoint(ep: SlmEndpoint, systemPrompt: string, userPrompt: string, jsonMode: boolean, timeoutMs: number, responseSchema?: Record<string, unknown>, beforeRequest?: () => void): Promise<string> {
+async function callEndpoint(ep: SlmEndpoint, systemPrompt: string, userPrompt: string, jsonMode: boolean, timeoutMs: number, responseSchema?: Record<string, unknown>, beforeRequest?: () => void, onUsage?: (tokens: number) => void, maxOutputTokens = 1400): Promise<string> {
   if (!Number.isFinite(timeoutMs) || timeoutMs <= 0) throw new Error('Analysis timeout: no time remaining');
   assertSlmModel(ep.model);
   const bridge = getWorkbenchBridge();
@@ -49,7 +55,7 @@ async function callEndpoint(ep: SlmEndpoint, systemPrompt: string, userPrompt: s
       { role: 'user', content: userPrompt },
     ],
     temperature: 0,
-    max_tokens: 1400,
+    max_tokens: maxOutputTokens,
   };
   if (jsonMode) {
     body.response_format = responseSchema
@@ -78,8 +84,11 @@ async function callEndpoint(ep: SlmEndpoint, systemPrompt: string, userPrompt: s
 
   const parsed = JSON.parse(resp.body) as {
     choices?: Array<{ finish_reason?: string; message?: { content?: string } }>;
-    usage?: { completion_tokens?: number };
+    usage?: { completion_tokens?: number; prompt_tokens?: number; total_tokens?: number };
   };
+  const usage = parsed.usage;
+  const tokens = usage?.total_tokens ?? (usage?.prompt_tokens !== undefined && usage.completion_tokens !== undefined ? usage.prompt_tokens + usage.completion_tokens : undefined);
+  if (typeof tokens === 'number' && Number.isInteger(tokens) && tokens >= 0) onUsage?.(tokens);
   assertCompleteSlmResponse(parsed, ep.model);
   const text = parsed.choices?.[0]?.message?.content || '';
   if (!text.trim()) throw new Error(`${ep.providerId}/${ep.model}: empty response`);
@@ -90,7 +99,7 @@ export async function generateWithSlm(
   role: SlmRole,
   systemPrompt: string,
   userPrompt: string,
-  options?: { preferModel?: string; providerMode?: 'ollama'; timeoutMs?: number; responseSchema?: Record<string, unknown>; beforeRequest?: () => void },
+  options?: { preferModel?: string; providerMode?: 'ollama'; timeoutMs?: number; maxOutputTokens?: number; responseSchema?: Record<string, unknown>; beforeRequest?: () => void; onRequestMetrics?: (metrics: SlmRequestMetrics) => void },
 ): Promise<SlmGenerateResult> {
   // Model được chọn rõ là ràng buộc; lỗi phải hiện ra thay vì đổi model âm thầm.
   const ordered = endpointsForRole(role, options?.providerMode || 'ollama', options?.preferModel);
@@ -98,13 +107,17 @@ export async function generateWithSlm(
   const errors: string[] = [];
   const deadline = Date.now() + (options?.timeoutMs ?? 45_000);
   for (const ep of ordered) {
+    const started = Date.now();
+    let totalTokens: number | undefined;
     try {
-      const text = await callEndpoint(ep, systemPrompt, userPrompt, true, deadline - Date.now(), options?.responseSchema, options?.beforeRequest);
+      const text = await callEndpoint(ep, systemPrompt, userPrompt, true, deadline - Date.now(), options?.responseSchema, options?.beforeRequest, tokens => { totalTokens = tokens; }, options?.maxOutputTokens);
       return { text, providerId: ep.providerId, model: ep.model };
     } catch (err) {
       // Đầu ra bị cắt là lỗi phản hồi, không phải lỗi kết nối để đổi endpoint.
       if (err instanceof SlmOutputTruncatedError || err instanceof SlmConnectionError) throw err;
       errors.push(err instanceof Error ? err.message : String(err));
+    } finally {
+      options?.onRequestMetrics?.({ model: ep.model, durationMs: Date.now() - started, totalTokens });
     }
   }
 
@@ -116,22 +129,34 @@ export async function generateWithSlm(
   throw new Error(`Không gọi được model local cho vai trò ${role}. Kiểm tra trạng thái Ollama và model đã chọn. Details: ${details}`);
 }
 
-/** Ask Ollama to release VRAM; failure here must never fail a security scan. */
-export async function releaseSlmModel(model: string): Promise<void> {
+export async function releaseSlmModel(model: string, verify = false): Promise<void> {
+  const bridge = getWorkbenchBridge();
   try {
     assertSlmModel(model);
-    const bridge = getWorkbenchBridge();
-    if (!bridge?.aiFetch) return;
-
-    await withTimeout(bridge.aiFetch({
+    if (bridge?.aiFetch) await withTimeout(bridge.aiFetch({
       providerId: 'ollama',
       url: 'http://127.0.0.1:11434/api/generate',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ model, keep_alive: 0 }),
-      timeoutMs: 1_500,
-    }), 1_500);
+      timeoutMs: verify ? 5_000 : 1_500,
+    }), verify ? 5_000 : 1_500);
   } catch {
-    // Best-effort cleanup only. The next Ollama request can still evict the model.
+    // Lượt chuyển agent kiểm tra trạng thái thật ngay cả khi yêu cầu giải phóng hết hạn.
   }
+  if (!verify) return;
+
+  for (let attempt = 0; attempt < 4 && bridge?.aiFetch; attempt++) {
+    try {
+      const response = await withTimeout(bridge.aiFetch({
+        providerId: 'ollama', url: 'http://127.0.0.1:11434/api/ps', method: 'GET', timeoutMs: 1_500,
+      }), 1_500);
+      const loaded = response.ok ? JSON.parse(response.body).models : undefined;
+      if (Array.isArray(loaded) && !loaded.some(entry => entry.name === model || entry.model === model)) return;
+    } catch {
+      // Thử đọc lại trạng thái trước khi dừng chuyển agent.
+    }
+    if (attempt < 3) await new Promise(resolve => setTimeout(resolve, 250));
+  }
+  throw new Error(`Chưa xác nhận Ollama đã giải phóng ${model}. Đã dừng trước khi nạp agent tiếp theo.`);
 }

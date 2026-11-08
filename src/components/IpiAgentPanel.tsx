@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from 'react';
-import { DirectiveContext, IpiLoopEvent, IpiRunState } from '../types';
+import { DirectiveContext, IpiLoopEvent, IpiRunState, SemanticScanProfile } from '../types';
 import { AppLocale, DEFAULT_LOCALE } from '../i18n/locale';
 import { MessageKey, t } from '../i18n/messages';
-import { useStore } from '../store/useStore';
+import { ScanTarget, useStore } from '../store/useStore';
 import { processingLabel, verdictLabel } from '../ai/agents/document/presentation';
 import { reviewProgressCounts } from '../ai/agents/document/reviewProgress';
 import { ScanActivity } from './ScanActivity';
@@ -44,43 +44,21 @@ function DirectiveContextEvidence({ value, locale }: { value: DirectiveContext; 
 }
 
 export const IpiAgentPanel: React.FC = () => {
-  const { ipiRun, ipiRunning, pickingSource, locale } = useStore();
-  const clearResults = () => {
-    const state = useStore.getState();
-    if (state.ipiRunning || state.pickingSource) return;
-    state.resetIpiRun();
-    useStore.setState({ scanTarget: null });
-  };
-  return <IpiAgentPanelView ipiRun={ipiRun} ipiRunning={ipiRunning} locale={locale} onClearResults={clearResults} clearDisabled={ipiRunning || pickingSource} />;
+  const { ipiRun, ipiRunning, locale, scanTarget, scanProfile } = useStore();
+  return <IpiAgentPanelView ipiRun={ipiRun} ipiRunning={ipiRunning} locale={locale} target={scanTarget} profile={scanProfile} />;
 };
 
-export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: boolean; locale?: AppLocale; onClearResults?: () => void; clearDisabled?: boolean }> = ({
-  ipiRun, ipiRunning, locale = DEFAULT_LOCALE, onClearResults, clearDisabled,
+export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: boolean; locale?: AppLocale; target?: ScanTarget | null; profile?: SemanticScanProfile }> = ({
+  ipiRun, ipiRunning, locale = DEFAULT_LOCALE, target, profile,
 }) => {
   const [showTimeline, setShowTimeline] = useState(false);
   const findings = useMemo(() => ipiRun.scanResult?.findings || [], [ipiRun.scanResult]);
   const coverage = ipiRun.scanResult?.metadata?.coverage;
   const progress = ipiRun.reviewProgress ? reviewProgressCounts(ipiRun.reviewProgress) : null;
 
-  const statusLabel = ipiRun.status === 'running' ? t(locale, 'panel.analyzing')
-    : ipiRun.check ? verdictLabel(ipiRun.check.verdict, locale) : ipiRun.status === 'error' ? verdictLabel('needs_review', locale) : t(locale, 'panel.ready');
-
   return (
     <div className="ipi-panel copilot-container">
-      <div className="scan-page-heading">
-        <span>{locale === 'vi' ? 'Lượt quét hiện tại' : 'Current scan'}</span>
-        <h1>{ipiRun.status === 'idle' ? (locale === 'vi' ? 'Kiểm tra tài liệu' : 'Document analysis') : ipiRunning ? (locale === 'vi' ? 'Đang kiểm tra tài liệu' : 'Analyzing documents') : (locale === 'vi' ? 'Kết quả phân tích tài liệu' : 'Document analysis results')}</h1>
-      </div>
-      {ipiRun.status !== 'idle' && <details className="ipi-status-bar scan-run-details"><summary>{locale === 'vi' ? 'Thông tin lượt quét' : 'Scan details'}</summary>
-        <span className={`ipi-badge ipi-badge-${ipiRun.check?.verdict || ipiRun.status}`}>{statusLabel}</span>
-        <div className="ipi-meta-tags">
-          <span className="ipi-meta-tag"><span className="ipi-meta-label">Detector</span><span className="ipi-meta-value">{ipiRun.fixModel || 'gemma3:1b'}</span></span>
-          <span className="ipi-meta-tag"><span className="ipi-meta-label">Verifier</span><span className="ipi-meta-value">{ipiRun.checkModel || 'qwen2.5-coder:1.5b'}</span></span>
-          <span className="ipi-meta-tag"><span className="ipi-meta-label">{t(locale, 'panel.runtime')}</span><span className="ipi-meta-value">Ollama local</span></span>
-        </div>
-      </details>}
-
-      {ipiRun.status !== 'idle' && <ScanActivity run={ipiRun} locale={locale} onClearResults={onClearResults} clearDisabled={clearDisabled || ipiRunning} />}
+      {ipiRun.status !== 'idle' && <ScanActivity run={ipiRun} locale={locale} target={target} profile={profile} />}
       <ScanConclusion run={ipiRun} locale={locale} />
 
       {ipiRun.status !== 'idle' && <p className="processing-caption" role="status">{t(locale, 'panel.processing', { status: processingLabel(ipiRun.processingStatus, locale) })}{t(locale, 'panel.roundOne')}</p>}

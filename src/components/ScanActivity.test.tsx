@@ -13,11 +13,11 @@ describe('tiến trình và trạng thái giao diện', () => {
     const html = render(state());
     expect(html).toContain('aria-valuenow="75"');
     expect(html).toContain('3/4');
-    expect(html).toContain('not a safety score');
     expect(html).toContain('is-running" aria-current="step"');
-    expect(html).toContain('Selected scope');
-    expect(html).toContain('20%');
-    expect(html).toContain('2/10 extracted chunks selected for AI.');
+    expect(html).not.toContain('20%');
+    expect(html).toContain('Extracted chunks: 10/10');
+    expect(html).toContain('aria-label="Chunks reviewed by Detector" aria-valuemin="0" aria-valuemax="2" aria-valuenow="2"');
+    expect(html).toContain('aria-label="Chunks reviewed by Verifier" aria-valuemin="0" aria-valuemax="2" aria-valuenow="1"');
   });
   it('không coi lượt kết thúc còn thiếu review là model đã hoàn tất', () => {
     const run = state(); run.status = 'completed'; run.events.push({ phase: 'done', ts: 2, message: 'Limited review' });
@@ -31,6 +31,19 @@ describe('tiến trình và trạng thái giao diện', () => {
     expect(html).toContain('is-failed');
     expect(html).not.toContain('IPI confirmed');
     expect(html).not.toContain('is-running');
+  });
+  it('giữ mốc Prefilter khi Detector lỗi trước khi rà được đoạn đầu tiên', () => {
+    const run = state();
+    run.status = 'error';
+    run.events = [{ phase: 'fix', ts: 1, message: 'Detector reviewing' }, { phase: 'error', ts: 2, message: 'Detector failed' }];
+    run.scanResult = { ok: true, mode: 'ipi-doc-scan', findings: [],
+      metadata: { summary: { total: 0, byCategory: {}, bySeverity: {} } } };
+    run.reviewProgress!.detectorReviewedChunkIds = [];
+    run.reviewProgress!.verifierReviewedChunkIds = [];
+    const html = render(run);
+    expect(html).toContain('aria-valuenow="10"');
+    expect(html).toContain('0/4 chunk reviews');
+    expect(html).toMatch(/scan-step is-incomplete[^]*?<strong>Verifier<\/strong>/);
   });
   it('không đánh dấu Detector hoàn tất chỉ vì Verifier đã bắt đầu', () => {
     const run = state(); run.reviewProgress!.detectorReviewedChunkIds = ['a'];

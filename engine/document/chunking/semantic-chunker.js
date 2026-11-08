@@ -12,8 +12,10 @@ function lineAt(text, index) {
 }
 
 function createSemanticChunks(text, filePath, fileName, chunkSize = SEMANTIC_CHUNK_CONFIG.size, overlap = SEMANTIC_CHUNK_CONFIG.overlap, preserveSource = false) {
-  const clean = preserveSource ? text : text.replace(/\r\n?/g, '\n').trim();
+  const normalized = preserveSource ? text : text.replace(/\r\n?/g, '\n');
+  const clean = preserveSource ? normalized : normalized.trim();
   if (!clean.trim()) return [];
+  const leadingLines = preserveSource ? 0 : lineAt(normalized, normalized.length - normalized.trimStart().length) - 1;
 
   const chunks = [];
   let start = 0;
@@ -24,15 +26,19 @@ function createSemanticChunks(text, filePath, fileName, chunkSize = SEMANTIC_CHU
       const boundary = clean.lastIndexOf('\n', end);
       if (boundary > start + Math.floor(chunkSize * 0.55)) end = boundary + 1;
     }
-    const chunkText = preserveSource ? clean.slice(start, end) : clean.slice(start, end).trim();
+    const slice = clean.slice(start, end);
+    const chunkText = preserveSource ? slice : slice.trim();
     if (chunkText.trim()) {
+      // Vị trí phải tính từ ký tự đầu tiên được giữ lại sau khi cắt khoảng trắng.
+      const contentStart = preserveSource ? start : start + slice.length - slice.trimStart().length;
+      const contentEnd = contentStart + chunkText.length - 1;
       chunks.push({
         chunkId: `${filePath}-chunk-${index + 1}`,
         filePath,
         fileName,
         index,
-        startLine: lineAt(clean, start),
-        endLine: lineAt(clean, Math.max(start, end - 1)),
+        startLine: leadingLines + lineAt(clean, contentStart),
+        endLine: leadingLines + lineAt(clean, contentEnd),
         text: chunkText,
         riskScore: 0,
         findingCount: 0,

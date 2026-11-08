@@ -1,6 +1,6 @@
 import { candidateChunks, candidateReviewSchema, CANDIDATE_VERIFIER_PROMPT, parseCandidateReview } from './candidateVerification';
 import { IpiSuspicion, ReviewContract, VerifierOutputFormat } from '../../../types';
-import { generateWithSlm } from '../slmClient';
+import { generateWithSlm, SlmRequestMetrics } from '../slmClient';
 import { quotedSourcePrompt } from './quotedSourcePrompt';
 import { SlmOutputTruncatedError } from '../slmResponse';
 import { verifierEvidenceBatches, formatChunkEvidence, stableSuspicionEvidence } from './evidence';
@@ -22,6 +22,7 @@ export async function runVerifierAgent(options: {
   detectorReview: DetectorReview;
   model?: string;
   deadline: number;
+  requestTimeoutMs?: number;
   reviewContract?: ReviewContract;
   outputFormat?: VerifierOutputFormat;
   referenceBatchSize?: number;
@@ -31,6 +32,7 @@ export async function runVerifierAgent(options: {
   sourceContext?: boolean;
   separateSourceViews?: boolean;
   beforeRequest?: () => void;
+  onRequestMetrics?: (metrics: SlmRequestMetrics) => void;
   onBatchReviewed?: (batch: ReviewedBatch) => void;
   onBatchFailed?: (batch: FailedBatch) => void;
 }): Promise<{ modelUsed: string; providerUsed: string; reviewedChunkIds: string[] }> {
@@ -63,7 +65,7 @@ export async function runVerifierAgent(options: {
       const prompt = spanOnly ? classicSpanPrompt(VERIFIER_SYSTEM_PROMPT) : options.suppliedOnly ? CANDIDATE_VERIFIER_PROMPT : compact ? COMPACT_VERIFIER_PROMPT : referenced ? REFERENCE_VERIFIER_PROMPT : options.reviewContract === 'structured-v1' ? STRUCTURED_VERIFIER_PROMPT : options.sourceContext ? quotedSourcePrompt(SOURCE_CONTEXT_VERIFIER_PROMPT, batch, expected.length) : VERIFIER_SYSTEM_PROMPT;
       const response = await generateWithSlm('check', options.actionAudit ? `${prompt}\n${ACTION_AUDIT}` : prompt,
         `Required assessment IDs: ${JSON.stringify(expected.map(item => item.id))}. ${expected.length ? 'Copy these exact IDs into assessments.' : 'No supplied suspicions: assessments MUST be [].'}\nSuspicious excerpts to examine independently:\n${referenced ? referenceEvidence(batch, expected) : JSON.stringify(suppliedEvidence)}\n\nOriginal document evidence:\n${formatChunkEvidence(batch)}\nReturn the JSON review now. ${options.suppliedOnly ? 'Only assess supplied IDs; discoveries MUST be [].' : 'Discoveries must be new attack instructions only.'}`,
-        { preferModel: options.model, providerMode: 'ollama', responseSchema: options.suppliedOnly ? candidateReviewSchema(batch, expected) : compact ? referenceReviewSchema(batch, expected, true) : reviewSchema(batch, expected, options.reviewContract), timeoutMs: Math.min(45_000, options.deadline - Date.now()), beforeRequest: options.beforeRequest });
+        { preferModel: options.model, providerMode: 'ollama', responseSchema: options.suppliedOnly ? candidateReviewSchema(batch, expected) : compact ? referenceReviewSchema(batch, expected, true) : reviewSchema(batch, expected, options.reviewContract), timeoutMs: Math.min(options.requestTimeoutMs ?? 45_000, options.deadline - Date.now()), beforeRequest: options.beforeRequest, onRequestMetrics: options.onRequestMetrics });
       batchModel = response.model;
       const result = options.suppliedOnly ? parseCandidateReview(response.text, batch, expected) : compact ? parseCompactVerifierJson(response.text, batch, expected) : parseReviewJson(response.text, batch, expected, options.reviewContract);
       applyBatch(result, 'verifier', options.suspicions);

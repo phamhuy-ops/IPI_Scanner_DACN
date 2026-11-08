@@ -2,6 +2,8 @@
 
 export type SlmRole = 'fix' | 'check';
 export type SlmProviderMode = 'ollama';
+export const DESKTOP_DETECTOR_MODEL = 'qwen3:4b-instruct-2507-q4_K_M';
+export const DESKTOP_VERIFIER_MODEL = 'qwen2.5:3b-instruct-q4_K_M';
 
 export interface SlmEndpoint {
   providerId: 'ollama';
@@ -41,10 +43,18 @@ export const SLM_ENDPOINTS: SlmEndpoint[] = [
   {
     providerId: 'ollama',
     url: 'http://127.0.0.1:11434/v1/chat/completions',
-    model: 'qwen3:4b-instruct-2507-q4_K_M',
+    model: DESKTOP_DETECTOR_MODEL,
     roles: ['fix', 'check'],
     maxParamsB: 4,
     // Người dùng đã cho phép đối chứng cả hai vai trò khi chọn rõ; không vào fallback.
+    explicitSelectionOnly: true,
+  },
+  {
+    providerId: 'ollama',
+    url: 'http://127.0.0.1:11434/v1/chat/completions',
+    model: DESKTOP_VERIFIER_MODEL,
+    roles: ['check'],
+    maxParamsB: 3.09,
     explicitSelectionOnly: true,
   },
 ];
