@@ -33,6 +33,8 @@ Cập nhật khu vực chọn tệp hoặc thư mục, khu vực thiết lập m
 
 ### 5. Điều chỉnh vận hành mô hình local
 
+Trên desktop, Detector chuyển từ Gemma 3 1B sang Qwen3 4B và Verifier chuyển từ Qwen2.5 Coder 1.5B sang Qwen2.5 Instruct 3B để thử cải thiện khả năng hiểu ngữ cảnh và đối chiếu bằng chứng.
+
 Bản cập nhật điều chỉnh cấu hình desktop cho Detector và Verifier, đồng thời kiểm tra Ollama đã giải phóng Detector trước khi nạp Verifier. Mục đích là hạn chế việc hai mô hình cùng chiếm bộ nhớ. Luồng Detector cũng có thêm cách thử lại khi phản hồi bị cắt hoặc lặp. Các điều chỉnh này cần đo bằng mô hình thật để biết ảnh hưởng đến tỷ lệ lỗi, thời gian quét và tài nguyên. [Luồng quét](../src/ai/agents/document/ipiPipeline.ts), [xử lý phản hồi Detector](../src/ai/agents/document/detectorAgent.ts).
 
 Khi lập báo cáo, đã chạy **56 kiểm thử tự động và cả 56 đều đạt**. Phạm vi gồm quản lý dự án, hiển thị tiến độ và kết quả, phục hồi lỗi và phản hồi bị cắt. Phép kiểm tra này xác nhận hành vi của mã trong các tình huống kiểm thử. Đã thử một số chức năng trên ứng dụng và bổ sung ảnh minh chứng ở bảng trên. Phạm vi và kết quả từng thao tác chưa được ghi thành biên bản. Lệnh chạy kiểm thử tự động được ghi dưới đây.
