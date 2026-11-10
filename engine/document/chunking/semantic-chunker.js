@@ -15,7 +15,8 @@ function createSemanticChunks(text, filePath, fileName, chunkSize = SEMANTIC_CHU
   const normalized = preserveSource ? text : text.replace(/\r\n?/g, '\n');
   const clean = preserveSource ? normalized : normalized.trim();
   if (!clean.trim()) return [];
-  const leadingLines = preserveSource ? 0 : lineAt(normalized, normalized.length - normalized.trimStart().length) - 1;
+  const leadingOffset = preserveSource ? 0 : normalized.length - normalized.trimStart().length;
+  const leadingLines = lineAt(normalized, leadingOffset) - 1;
 
   const chunks = [];
   let start = 0;
@@ -37,6 +38,7 @@ function createSemanticChunks(text, filePath, fileName, chunkSize = SEMANTIC_CHU
         filePath,
         fileName,
         index,
+        sourceStartOffset: leadingOffset + contentStart,
         startLine: leadingLines + lineAt(clean, contentStart),
         endLine: leadingLines + lineAt(clean, contentEnd),
         text: chunkText,

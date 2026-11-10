@@ -3,6 +3,7 @@ import { AssessmentStance, EvidenceAssessment, IpiBatchReviewSummary, ScanResult
 export interface SemanticChunk {
   chunkId: string;
   sourceChunkId?: string;
+  sourceStartOffset?: number;
   sourceView?: string;
   lineBasis?: string;
   filePath?: string;

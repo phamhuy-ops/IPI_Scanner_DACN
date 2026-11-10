@@ -1,0 +1,21 @@
+{
+  "version": "context-short-prompt-v1",
+  "date": "2026-11-08",
+  "split_rule": "Giữ cả nhóm cùng hành động trong một tập; dùng nhóm nghiệp vụ khác nhau giữa hai tập, giữ các bản tương tự trong cùng nhóm.",
+  "source": "Mẫu tổng hợp tự soạn cho chẩn đoán, không dùng nội dung DOCX của người dùng.",
+  "license": "Fixture tổng hợp của dự án, theo giấy phép repo nếu có.",
+  "sets": {
+    "dev": {
+      "groups": 12,
+      "records": 36,
+      "sha256": "af30aa896cf37a9dc0878980322a2b1ee7ef1e91c1a3e1d690b28e16b960b8cf",
+      "used_for_model": false
+    },
+    "reserved": {
+      "groups": 12,
+      "records": 36,
+      "sha256": "444ca9ce349eb4adb3bf54567cc37c3ba5e4fd33322686dec5c74cbee9635f03",
+      "used_for_model": false
+    }
+  }
+}

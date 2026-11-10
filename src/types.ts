@@ -119,6 +119,7 @@ export interface ScanResult {
       filePath: string;
       fileName: string;
       index: number;
+      sourceStartOffset?: number;
       startLine: number;
       endLine: number;
       text: string;

@@ -87,7 +87,7 @@ export async function runDetectorAgent(options: {
       model = response.model;
       batchModel = response.model;
       const result = source ? parseSourceReview(response.text, batch, expected, compactSource, options.sourceReferencePolicy === 'content-only-v1') : parseReviewJson(response.text, batch, expected, contract);
-      applyBatch(result, 'detector', options.suspicions);
+      applyBatch(result, 'detector', options.suspicions, options.chunks);
       if (result.discoveries.length || result.assessments.some(item => item.assessment.stance !== 'dismissed')) suspiciousBatchCount++;
       analyses.push(result.analysis);
       reviewedChunkIds.push(...batch.map(chunk => chunk.chunkId));

@@ -68,7 +68,7 @@ export async function runVerifierAgent(options: {
         { preferModel: options.model, providerMode: 'ollama', responseSchema: options.suppliedOnly ? candidateReviewSchema(batch, expected) : compact ? referenceReviewSchema(batch, expected, true) : reviewSchema(batch, expected, options.reviewContract), timeoutMs: Math.min(options.requestTimeoutMs ?? 45_000, options.deadline - Date.now()), beforeRequest: options.beforeRequest, onRequestMetrics: options.onRequestMetrics });
       batchModel = response.model;
       const result = options.suppliedOnly ? parseCandidateReview(response.text, batch, expected) : compact ? parseCompactVerifierJson(response.text, batch, expected) : parseReviewJson(response.text, batch, expected, options.reviewContract);
-      applyBatch(result, 'verifier', options.suspicions);
+      applyBatch(result, 'verifier', options.suspicions, options.chunks);
       modelUsed = response.model; providerUsed = response.providerId;
       reviewedChunkIds.push(...batch.map(chunk => chunk.chunkId));
       options.onBatchReviewed?.({ chunkIds: batch.map(chunk => chunk.chunkId), model: modelUsed, audit: acceptedBatchSummary(expected.length, result) });

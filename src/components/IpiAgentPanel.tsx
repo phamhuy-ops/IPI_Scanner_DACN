@@ -3,10 +3,9 @@ import { DirectiveContext, IpiLoopEvent, IpiRunState, SemanticScanProfile } from
 import { AppLocale, DEFAULT_LOCALE } from '../i18n/locale';
 import { MessageKey, t } from '../i18n/messages';
 import { ScanTarget, useStore } from '../store/useStore';
-import { processingLabel, verdictLabel } from '../ai/agents/document/presentation';
+import { verdictLabel } from '../ai/agents/document/presentation';
 import { reviewProgressCounts } from '../ai/agents/document/reviewProgress';
 import { ScanActivity } from './ScanActivity';
-import { ScanConclusion } from './ScanConclusion';
 import { failureGuidance } from '../ai/agents/document/runtimeDiagnostics';
 
 function phaseLabel(event: IpiLoopEvent) {
@@ -59,9 +58,15 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
   return (
     <div className="ipi-panel copilot-container">
       {ipiRun.status !== 'idle' && <ScanActivity run={ipiRun} locale={locale} target={target} profile={profile} />}
-      <ScanConclusion run={ipiRun} locale={locale} />
-
-      {ipiRun.status !== 'idle' && <p className="processing-caption" role="status">{t(locale, 'panel.processing', { status: processingLabel(ipiRun.processingStatus, locale) })}{t(locale, 'panel.roundOne')}</p>}
+      {ipiRun.status !== 'idle' && <section className="ipi-section" style={{ marginTop: 16 }}>
+        <div className="ipi-section-head">
+          <h4 style={{ fontSize: '13px', fontWeight: 700, margin: 0 }}>{t(locale, 'panel.pipelineLog', { count: ipiRun.events.length })}</h4>
+          <button type="button" className="ipi-toggle-btn" onClick={() => setShowTimeline(!showTimeline)}>{showTimeline ? t(locale, 'panel.collapse') : t(locale, 'panel.expand')}</button>
+        </div>
+        {showTimeline && <div className="ipi-timeline-feed" style={{ marginTop: 10 }}>
+          {ipiRun.events.map((event, index) => <div key={`${event.ts}-${index}`} className="ipi-tl-item phase-info"><div className="ipi-tl-left"><span className="phase-tag phase-info">{phaseLabel(event)}</span><span className="ipi-tl-time">{new Date(event.ts).toLocaleTimeString(locale === 'vi' ? 'vi-VN' : 'en-US', { hour12: false })}</span></div><div className="ipi-tl-body"><div className="ipi-tl-msg">{event.message}</div></div></div>)}
+        </div>}
+      </section>}
 
       {(progress || ipiRun.scanResult) && <details className="ipi-coverage-summary ipi-review-progress" aria-label={t(locale, 'panel.progressTitle')}>
         <summary>{t(locale, 'panel.progressTitle')}</summary>
@@ -210,15 +215,6 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
             </li>)}</ul>
           </section>}
 
-          <section className="ipi-section" style={{ marginTop: 8 }}>
-            <div className="ipi-section-head">
-              <h4 style={{ fontSize: '13px', fontWeight: 700, margin: 0 }}>{t(locale, 'panel.pipelineLog', { count: ipiRun.events.length })}</h4>
-              <button type="button" className="ipi-toggle-btn" onClick={() => setShowTimeline(!showTimeline)}>{showTimeline ? t(locale, 'panel.collapse') : t(locale, 'panel.expand')}</button>
-            </div>
-            {showTimeline && <div className="ipi-timeline-feed" style={{ marginTop: 10 }}>
-              {ipiRun.events.map((event, index) => <div key={`${event.ts}-${index}`} className="ipi-tl-item phase-info"><div className="ipi-tl-left"><span className="phase-tag phase-info">{phaseLabel(event)}</span><span className="ipi-tl-time">{new Date(event.ts).toLocaleTimeString(locale === 'vi' ? 'vi-VN' : 'en-US', { hour12: false })}</span></div><div className="ipi-tl-body"><div className="ipi-tl-msg">{event.message}</div></div></div>)}
-            </div>}
-          </section>
         </>
       )}
     </div>

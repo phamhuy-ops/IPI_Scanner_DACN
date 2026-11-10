@@ -151,7 +151,8 @@ describe('security and processing presentation', () => {
     run.check = conclude([], [], run.error);
     const html = render(run, 'vi');
     expect(html).toContain('Cần xem xét');
-    expect(html).toContain('Timeout');
+    expect(html).toContain('Pipeline log');
+    expect(html).not.toContain('Trạng thái xử lý:');
     expect(html).not.toContain('WARNING — IPI RISK DETECTED');
   });
   it('hiện hướng xử lý sinh lặp riêng, không coi là hết giờ hoặc đã rà xong', () => {

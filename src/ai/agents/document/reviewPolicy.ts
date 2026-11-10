@@ -229,15 +229,40 @@ export function parseReviewJson(raw: string, chunks: SemanticChunk[], expected: 
   }
 }
 
-export function applyBatch(result: AgentBatchResult, role: 'detector' | 'verifier', suspicions: IpiSuspicion[]) {
+export function applyBatch(result: AgentBatchResult, role: 'detector' | 'verifier', suspicions: IpiSuspicion[], chunks: SemanticChunk[] = []) {
   // Giữ mọi quan sát của cùng vai trò trước khi cập nhật/gộp nghi vấn.
   const observations = [...suspicions.flatMap(row => [row[role],
     ...(row.conflicts || []).filter(conflict => conflict.role === role).flatMap(conflict => conflict.assessments)]),
   ...result.assessments.map(row => row.assessment), ...result.discoveries].filter((row): row is EvidenceAssessment => !!row);
+  const byId = new Map(chunks.map(chunk => [chunk.chunkId, chunk]));
+  const located = (citation: EvidenceCitation) => Number.isSafeInteger(citation.startOffset) && Number.isSafeInteger(citation.endOffset)
+    && citation.startOffset! >= 0 && citation.endOffset! - citation.startOffset! === citation.quote.length && citation.quote.length > 0;
+  const absoluteOffset = (citation: EvidenceCitation, chunk: SemanticChunk): number | null => {
+    if (!Number.isSafeInteger(chunk.sourceStartOffset) || chunk.sourceStartOffset! < 0 || !citation.quote) return null;
+    if (located(citation)) {
+      return chunk.text.slice(citation.startOffset, citation.endOffset) === citation.quote
+        ? chunk.sourceStartOffset! + citation.startOffset! : null;
+    }
+    // Chỉ dùng vị trí duy nhất khớp cả nguyên văn lẫn dòng đã được xác thực.
+    let match: number | null = null;
+    for (let offset = chunk.text.indexOf(citation.quote); offset >= 0; offset = chunk.text.indexOf(citation.quote, offset + 1)) {
+      if (chunk.startLine + chunk.text.slice(0, offset).split(/\r\n?|\n/).length - 1 !== citation.startLine) continue;
+      if (match !== null) return null;
+      match = chunk.sourceStartOffset! + offset;
+    }
+    return match;
+  };
+  const sameSourceOccurrence = (left: EvidenceCitation, right: EvidenceCitation) => {
+    const a = byId.get(left.chunkId), b = byId.get(right.chunkId);
+    if (!a?.filePath || !b || a.filePath !== b.filePath || a.sourceView !== b.sourceView || a.lineBasis !== b.lineBasis) return false;
+    const x = absoluteOffset(left, a), y = absoluteOffset(right, b);
+    if (x === null || y === null) return false;
+    return (x <= y && left.quote.slice(y - x, y - x + right.quote.length) === right.quote)
+      || (y <= x && right.quote.slice(x - y, x - y + left.quote.length) === left.quote);
+  };
   const containsSameEvidence = (left: EvidenceCitation, right: EvidenceCitation) => {
-    if (left.chunkId !== right.chunkId || !(left.quote.includes(right.quote) || right.quote.includes(left.quote))) return false;
-    const located = (citation: EvidenceCitation) => Number.isSafeInteger(citation.startOffset) && Number.isSafeInteger(citation.endOffset)
-      && citation.startOffset! >= 0 && citation.endOffset! - citation.startOffset! === citation.quote.length && citation.quote.length > 0;
+    if (!(left.quote.includes(right.quote) || right.quote.includes(left.quote))) return false;
+    if (left.chunkId !== right.chunkId) return sameSourceOccurrence(left, right);
     if (located(left) && located(right)) return left.startOffset! < right.endOffset! && right.startOffset! < left.endOffset!;
     // Câu giống nhau ở hai vùng dòng tách biệt không phải cùng bằng chứng.
     // Vị trí cũ không biết/sai dạng vẫn giữ cách đối chiếu bảo thủ trước đây.
@@ -257,7 +282,8 @@ export function applyBatch(result: AgentBatchResult, role: 'detector' | 'verifie
     // Merge overlapping exact excerpts in one chunk, not semantic guesses.
     const existing = suspicions.find(row => row.citation && containsSameEvidence(row.citation, assessment.citation));
     if (existing && !existing[role]) existing[role] = assessment;
-    else if (existing?.[role]?.stance === assessment.stance) continue;
+    else if (existing && (existing[role]?.stance === assessment.stance
+      || (existing.citation && sameSourceOccurrence(existing.citation, assessment.citation)))) continue;
     else suspicions.push({ id: `${role}-${suspicions.length + 1}`, source: role,
       location: `${assessment.citation.fileName}:${assessment.citation.startLine}`,
       originalQuote: assessment.citation.quote, citation: assessment.citation,

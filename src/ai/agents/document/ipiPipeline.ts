@@ -207,7 +207,7 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
     state.checkModel = verifier.modelUsed;
     if (dependencies) {
       // Chỉ hợp nhất sau lượt chính để giữ đầu vào xác minh độc lập, không truyền suy luận model trước.
-      for (const result of dependencies.results) applyBatch(result, 'verifier', state.suspicions);
+      for (const result of dependencies.results) applyBatch(result, 'verifier', state.suspicions, chunks);
       if (dependencies.review.coverageLimited) issues.push(...dependencies.review.limitations,
         'Lượt rà phụ thuộc ngữ cảnh chưa hoàn tất trên toàn bộ nguồn.');
     }
