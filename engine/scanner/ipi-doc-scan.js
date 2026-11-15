@@ -86,7 +86,8 @@ async function runIpiDocScan(filePaths, options = {}) {
       const chunks = createSemanticChunks(view.text, filePath, baseName, undefined, undefined, Boolean(view.id))
         .map(chunk => view.id ? { ...chunk, chunkId: `${chunk.chunkId}:${view.id}`, sourceView: view.id, lineBasis: view.lineBasis } : chunk);
       // Giữ một cửa sổ nguyên nguồn khi ứng viên đi qua ranh giới chunk hoặc CRLF.
-      for (const finding of viewFindings.filter(row => row.ruleId === 'IPI-DOC-CONVERSATION-TRANSFER-CANDIDATE')) {
+      for (const finding of viewFindings.filter(row => row.ruleId === 'IPI-DOC-CONVERSATION-TRANSFER-CANDIDATE'
+        || row.ruleId === 'IPI-DOC-FORCED-EMAIL-TOOL-OUTPUT-CANDIDATE')) {
         if (chunks.some(chunk => chunk.text.includes(finding.matchedText))) continue;
         const startLine = Number(finding.location.match(/:(\d+)$/)?.[1] || 1);
         chunks.push({ chunkId: `${filePath}-transfer-context-${chunks.length + 1}${view.id ? ':' + view.id : ''}`,

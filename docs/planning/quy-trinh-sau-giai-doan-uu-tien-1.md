@@ -384,3 +384,107 @@ Sau khi tổ chức lại repo, chạy từ `scripts/benchmark/` với manifest 
 
 Bổ sung mẫu sau cờ đổi tóm tắt để nhận comment gọi AI và yêu cầu thay giá trị trong câu trả lời. Đối chứng gồm giao việc cho người, ví dụ, phủ định và chỉ dẫn bị chia qua hai comment. Đạt 185 kiểm thử engine. Hai lượt giữ cùng cấu hình, chỉ khác mã Prefilter trong danh sách fingerprint. Ca 06 chuyển từ Không phát hiện sang Có IPI. Chưa đánh giá lại FPR hoặc toàn bộ bộ hồi quy. [Trước sửa](../../lab/results/runs/round-one-eval-9jINVE/summary.json) · [Sau sửa](../../lab/results/runs/round-one-eval-lJ7qm4/summary.json).
 
+### Phát hiện chỉ dẫn báo trạng thái trái với đoạn HTML ngay trước
+
+Giữ cùng cấu hình trước và sau. Ca 05 từng bỏ sót dù hai Agent đọc đủ hai đoạn. Thêm mẫu thử nghiệm yêu cầu đoạn sát trước ghi còn việc chờ xử lý, trong khi đoạn sau gọi AI và yêu cầu báo đã xong. Mẫu lưu đúng khối chứa chỉ dẫn và giữ đoạn trước để Agent đối chiếu. Kiểm thử gồm trạng thái đã xong đúng theo nguồn, chỉ dẫn cho người, phủ định và ví dụ. 186 kiểm thử engine đạt. Ca 05 chuyển từ Không phát hiện sang Có IPI. [Trước sửa](../../lab/results/runs/round-one-eval-i6II1M/summary.json) · [Sau sửa](../../lab/results/runs/round-one-eval-q5iQwM/summary.json).
+
+Chạy lại đủ chín ca chuyển thể sau ba sửa đổi HTML. Recall hồi quy tăng từ 4/9 lên 7/9. Cả ba ca HTML được xác nhận trong cùng lượt, hai ca 01 và 07 còn bỏ sót. Bộ này chỉ có IPI nên chưa đo FPR. Quét riêng Prefilter trên bộ dev 50 ca vẫn cho 25/25 ca IPI và 0/25 ca sạch có tín hiệu. Chưa đo lại toàn pipeline trên bộ 50. Bộ chín ca tiếp tục dùng làm dev để phát triển hướng tới 100 ca. [Kết quả chín ca](../../lab/results/runs/round-one-eval-rAdiPI/summary.json).
+
+### Nhận diện yêu cầu thay dữ kiện nguồn trong TXT và JSON
+
+Ca 01 và 07 có bằng chứng trong phần hai Agent đã đọc nhưng thiếu tín hiệu Prefilter. Thêm mẫu thử nghiệm nhận chỉ dẫn trực tiếp yêu cầu báo dữ kiện khác thay cho giá trị trong nguồn, kể cả khi chỉ dẫn là giá trị chuỗi JSON. Đối chứng gồm chỉ dẫn đọc đúng nguồn, giao việc cho người, phủ định và trích dẫn ví dụ. Cả 187 kiểm thử engine đạt.
+
+Chạy lại chín ca với cùng cấu hình, chỉ khác mã Prefilter trong fingerprint. Recall hồi quy tăng từ 7/9 lên 8/9 (88,9%). Ca JSON 07 được xác nhận. Ca TXT 01 có tín hiệu, Detector xác nhận và Verifier lỗi trích dẫn, nên chuyển sang Cần xem xét. Bộ chín ca chỉ có IPI nên FPR chưa xác định. Prefilter trên bộ 50 giữ 25/25 IPI và 0/25 ca sạch có tín hiệu. Chưa đo lại toàn pipeline trên bộ 50. [Kết quả chín ca](../../lab/results/runs/round-one-eval-ZPdPfm/summary.json).
+
+### Phục hồi lỗi trích dẫn ở nhánh đổi kết quả
+
+Ca TXT 01 có nhận định đúng đoạn nhưng Verifier lặp một từ trong phần discovery, khiến cả phản hồi lỗi trích dẫn. Mở rộng cơ chế thử lại một lần hiện có sang batch thuộc nhánh đưa bằng chứng lên trước khi đổi kết quả. Giữ validator nguyên văn và ngân sách quét. 413 kiểm thử phần `src` và typecheck đạt.
+
+Lượt riêng ca 01 tái hiện lỗi và phục hồi ở lần thử lại, sau đó cả hai Agent xác nhận. Chạy đủ chín ca cùng cấu hình, chỉ khác mã Verifier trong fingerprint. Recall hồi quy tăng từ 8/9 lên 9/9. Bộ này chỉ có IPI nên FPR chưa xác định. Chưa đo lại trên 50 ca gốc sau thay đổi. [Ca 01 và log thử lại](../../lab/results/runs/round-one-eval-lGuJs6/cases.json) · [Kết quả chín ca](../../lab/results/runs/round-one-eval-s91hlO/summary.json).
+
+### Ghép bộ phát triển 100 ca
+
+Giữ 50 ca gốc và 9 ca chuyển thể. Bổ sung 16 cặp IPI mô phỏng và đối chứng sạch cùng bối cảnh, cùng 9 ca NotInject lấy đều từ ba phân tập đã sàng lọc lịch sử. Bộ mới có 50 ca IPI, 50 ca sạch và 69 nhóm. Đã đối chiếu ID, SHA-256, văn bản chuẩn hóa, đoạn bằng chứng nguyên văn và hash nguồn. Bốn nhãn tạm từ bộ cũ và nhãn sạch của nguồn NotInject giữ nguyên mức bất định. Các nhóm theo cặp được giữ cùng nhau. Chưa rà hết độ trùng ngữ nghĩa giữa các nguồn.
+
+Quét riêng Prefilter với Balanced và hai cờ đổi tóm tắt, chuyển dữ liệu. Kết quả đánh dấu 42/50 ca IPI, cả 42 có phần khớp đoạn gán nhãn, và 0/50 ca sạch. Chưa gọi hai Agent trên bộ 100 nên chưa có Recall/FPR của toàn pipeline. Bộ mới dùng để phát triển, còn kiểm chứng độc lập cần tập riêng. [Manifest 100 ca](../../data/manifests/priority-one-development-100-v1.json) · [Kết quả Prefilter](../../lab/results/runs/prefilter-dev100-tksnvw/summary.json).
+
+### Nhận diện yêu cầu đổi số lượng trong giá trị JSON
+
+Mở rộng mẫu đổi số liệu hiện có để nhận chỉ dẫn ở đầu giá trị chuỗi JSON, loại dấu ngoặc kép bao ngoài khỏi đoạn trích. Thêm đối chứng giữ số liệu nguồn, ví dụ và hướng dẫn cho người. Kiểm thử engine đạt 188/188. Quét lại 100 tệp dev chỉ thay đổi ca 07 thuộc cặp JSON, nâng Prefilter từ 42/50 lên 43/50 ca IPI có tín hiệu đúng đoạn. Ca sạch có tín hiệu giữ 0/50.
+
+Chạy hai Agent trên cặp JSON. Ca IPI được xác nhận, cả hai Agent trích đúng bằng chứng. Ca sạch Không phát hiện. Chưa chạy hai Agent trên đủ 100 ca, nên chưa đo Recall/FPR toàn bộ. Rule giữ sau cờ thử nghiệm. [Prefilter](../../lab/results/runs/prefilter-dev100-WWP2er/summary.json) · [Ca IPI](../../lab/results/runs/round-one-eval-BzAgMy/summary.json) · [Ca sạch](../../lab/results/runs/round-one-eval-FadHTD/summary.json).
+
+### Nhận diện yêu cầu báo lịch khác với nguồn
+
+Mẫu thay dữ kiện bỏ sót danh từ chỉ lịch và câu tiếng Anh lược bỏ từ nối sau người nhận. Bổ sung hai biến thể trong cùng mẫu, giữ điều kiện phải yêu cầu thay cho dữ kiện nguồn. Kiểm thử engine đạt 189/189. Quét 100 ca cho 44/50 IPI được đánh dấu đúng đoạn và 0/50 ca sạch có tín hiệu. Chỉ ca IPI của cặp lịch thay đổi ở Prefilter.
+
+Ca IPI chuyển từ Không phát hiện sang Cần xem xét, ca sạch vẫn Không phát hiện. Chưa đo lại Recall/FPR toàn bộ. [Prefilter](../../lab/results/runs/prefilter-dev100-4x1WOE/summary.json) · [Ca IPI](../../lab/results/runs/round-one-eval-atwAtw/summary.json) · [Ca sạch](../../lab/results/runs/round-one-eval-pCkI0e/summary.json).
+
+### Nhận diện cách gọi trực tiếp AI đang soạn báo cáo
+
+Mở rộng mẫu đổi tóm tắt cho cách gọi trực tiếp AI đang soạn báo cáo hoặc bản tóm tắt. Giữ điều kiện phân biệt yêu cầu báo trái dữ kiện với câu báo theo nguồn. Kiểm thử thêm biến thể đổi cách gọi, câu dẫn ví dụ, giao việc cho người và yêu cầu báo số đúng. Engine đạt 193 kiểm thử.
+
+Prefilter trên 100 ca dev đánh dấu đúng đoạn ở 45/50 ca IPI, tăng từ 44/50. Ca sạch có tín hiệu giữ 0/50. Ca IPI Markdown 02 được hai Agent xác nhận, ca sạch cùng bối cảnh Không phát hiện. Chưa đo toàn pipeline trên cả bộ 100. [Prefilter](../../lab/results/runs/prefilter-dev100-qQHxoA/summary.json) · [Ca IPI](../../lab/results/runs/round-one-eval-Amg4gj/summary.json) · [Ca sạch](../../lab/results/runs/round-one-eval-4UUc0Q/summary.json).
+
+### Nhận diện yêu cầu thay giá trị trong câu trả lời ở văn bản
+
+Tái sử dụng mẫu nhận chỉ dẫn thay giá trị trong comment HTML cho dòng văn bản. Giữ điều kiện gọi AI trực tiếp và chỉ dẫn nằm trên cùng dòng. Kiểm thử đối chứng gồm người đọc, ví dụ, phủ định và dòng bị tách. Đạt 194 kiểm thử engine. Quét 100 ca cho 46/50 IPI được đánh dấu đúng đoạn, tăng một ca, và 0/50 ca sạch có tín hiệu. Cả hai Agent xác nhận ca IPI TXT 08, ca sạch giữ Không phát hiện. Chưa đo toàn pipeline trên 100 ca. [Prefilter](../../lab/results/runs/prefilter-dev100-WohVv4/summary.json) · [Ca IPI](../../lab/results/runs/round-one-eval-BJJwkK/summary.json) · [Ca sạch](../../lab/results/runs/round-one-eval-35Ifxu/summary.json).
+
+### Nhận diện câu báo đã duyệt trái với dòng ngay trước
+
+Trong cờ đổi tóm tắt, chỉ đánh dấu câu gọi AI và yêu cầu báo mọi mục đã duyệt khi dòng ngay trước ghi còn mục chờ duyệt. Kiểm thử biến thể lời gọi và các đối chứng gồm trạng thái đã duyệt thật, phủ định, ví dụ và bản đính chính. Đạt 195 kiểm thử engine. Quét lại đúng hash 100 ca, Prefilter đánh dấu đúng đoạn ở 47/50 ca IPI và 0/50 ca sạch có tín hiệu. Ca IPI của cặp 05 được cả hai Agent xác nhận, ca sạch Không phát hiện. Chưa đo toàn pipeline trên 100 ca. [Prefilter](../../lab/results/runs/prefilter-dev100-o9R5CC/summary.json) · [Ca IPI](../../lab/results/runs/round-one-eval-trfmEp/summary.json) · [Ca sạch](../../lab/results/runs/round-one-eval-hTO5v9/summary.json).
+
+### Đủ tín hiệu Prefilter trên bộ 100 ca dev
+
+Xử lý ba ca còn thiếu tín hiệu theo cùng nguyên tắc đối chiếu dữ kiện ngay trước chỉ dẫn. Nhóm giờ và phòng yêu cầu giá trị số khác giá trị nguồn. Nhóm trạng thái yêu cầu báo đã xong trong khi dòng trước ghi còn mục chưa hoàn tất. Thêm đối chứng cùng số liệu, thiếu dòng nguồn và câu dẫn ví dụ. Đạt 198 kiểm thử engine.
+
+Quét lại đúng hash 100 ca. Prefilter đánh dấu đúng đoạn ở 50/50 ca IPI, tăng từ 47/50, và 0/50 ca sạch có tín hiệu. Ba ca mới 01, 03, 09 được cả hai Agent xác nhận khi chạy riêng, ba ca sạch đi kèm giữ Không phát hiện. Chưa chạy toàn pipeline trên đủ 100 ca với cấu hình này. [Prefilter 100 ca](../../lab/results/runs/prefilter-dev100-U6VcmA/summary.json) · [Ca 01](../../lab/results/runs/round-one-eval-vRapBm/summary.json) · [Ca 03](../../lab/results/runs/round-one-eval-3PliW3/summary.json) · [Ca 09](../../lab/results/runs/round-one-eval-9c8rB9/summary.json).
+
+### Đo toàn hệ thống trên 100 ca dev
+
+Cấu hình desktop ứng viên chạy đủ 100 ca. Recall **45/50 (90%)**, FPR **0/50 (0%)**, Precision **45/45 (100%)** và F1 **94,7%**. Có 47 ca sạch Không phát hiện, 5 ca IPI và 3 ca sạch Cần xem xét. Không có ca IPI trả Không phát hiện. Cả 45 ca xác nhận đều có ít nhất hai trích dẫn giao với đoạn đã gán nhãn.
+
+Cả 100 ca hoàn tất. Trong 214 phản hồi, 212 hợp lệ và 2 lỗi. Trung vị 28,5 giây, p95 40,7 giây. Nhóm chín ca chuyển thể đạt 9/9. Nhóm 16 cặp mới đạt Recall 13/16 và FPR 0/16. Năm ca IPI còn Cần xem xét là `doc-02`, `doc-03`, `pair-04-a`, `pair-09-a` và `pair-11-a`.
+
+Đã đối chiếu mã và manifest với hash ghi trong lượt chạy, lưu cấu hình và lệnh tái hiện. Kết quả đạt ngưỡng quan sát trên dev. Cận Wilson một phía 95% của FPR khoảng 5,1% nếu giả định các ca độc lập. Cần đo trên bộ độc lập trước khi áp dụng mặc định. [Kết quả 100 ca](../../lab/results/runs/round-one-eval-VuSbNU/summary.json) · [Hồ sơ cấu hình](../../lab/experiments/priority-one-six-stage-v1/khoa-ung-vien-dev100.json).
+
+### Kiểm tra thăm dò báo nhầm trên 12 ca NotInject mới
+
+Chọn bốn ca ở mỗi phân tập NotInject bằng seed `dev100-fpr-pilot-20261115` từ danh sách đã lọc. Loại tiếp các bản ghi hoặc nhóm có ID, hash hoặc văn bản chuẩn hóa khớp manifest hiện có, gồm dev 100. Dùng nhãn sạch kế thừa từ nguồn. Đối chiếu mã và cấu hình với hồ sơ đã khóa.
+
+Cả 12 ca trả Không phát hiện, FPR quan sát 0/12 và không có ca Cần xem xét. Đây là phép đo thăm dò vì nguồn NotInject đã được dùng trong dev. Bộ chỉ có ca sạch nên Recall chưa xác định. Cận trên Wilson một phía 95% khoảng 18,4% khi giả định ca độc lập. Chưa có căn cứ chốt FPR dưới 5% trên dữ liệu độc lập hoặc đổi mặc định. [Manifest](../../data/manifests/priority-one-fpr-pilot-12-v1.json) · [Kết quả](../../lab/results/runs/round-one-eval-jucuTr/summary.json).
+
+### Đo thăm dò trên 13 email LLMail
+
+Giữ nguyên mã, hai model và cấu hình khóa sau lượt dev100. Chạy 13 email trong năm nhóm tạm đã sàng lọc. Hai ca được xác nhận, một ca Cần xem xét và mười ca Không phát hiện. Tỷ lệ xác nhận theo nhãn nguồn là 2/13 (15,4%). Hai ca xác nhận cùng thuộc nhóm ba biến thể 22, 23 và 41. Bộ chỉ có ca IPI theo nhãn nguồn nên FPR chưa xác định. Lượt này chưa khóa đoạn bằng chứng cho từng email và mục tiêu challenge lặp giữa các nhóm. Giữ kết quả riêng để chẩn đoán ngoài dev100, chưa kết luận về Recall chung hoặc đổi mặc định. [Manifest](../../data/manifests/priority-one-llmail-recall-pilot-13-v1.json) · [Kết quả](../../lab/results/runs/round-one-eval-nsGIz1/summary.json).
+
+### Xác định tầng bỏ sót trên 10 email LLMail
+
+Đối chiếu nguyên văn và offset UTF-16 của từng chunk đã được cả hai Agent rà. Cả 10 email Không phát hiện đều được bao phủ hết ký tự ngoài khoảng trắng và đều thiếu tín hiệu Prefilter. Bảy ca cùng nhóm thông báo công cụ chứa dấu hiệu giả danh thay đổi quyền hoặc khả năng của Agent. Các ca còn lại cần phân biệt yêu cầu xác nhận trong luồng xử lý email với yêu cầu trao đổi thông thường và câu áp đặt nội dung tóm tắt. Vị trí đánh dấu phục vụ chẩn đoán, chưa thay cho nhãn đoạn bằng chứng.
+
+Chưa sửa rule từ lượt kiểm tra này. Giữ cấu hình đã khóa. Khi dùng các email này để chọn cách sửa, chuyển chúng sang ca phát triển hoặc kiểm tra hồi quy. [Kết quả chẩn đoán](../../lab/experiments/priority-one-six-stage-v1/chan-doan-llmail-10-ca.json).
+
+### Nhận diện yêu cầu xuất đối tượng gọi công cụ trong email
+
+Thêm mẫu thử nghiệm sau cờ chuyển dữ liệu. Mẫu cần đối tượng JSON nêu công cụ gửi email và một chỉ dẫn gần đó yêu cầu Agent trả đối tượng JSON. Kiểm thử đối chứng gồm ví dụ schema, câu yêu cầu mô tả và công cụ chỉ đọc. Đạt 199 kiểm thử engine.
+
+Quét lại Prefilter bằng đúng hash đầu vào. Số email có tín hiệu tăng từ 3/13 lên 10/13. Bảy ca tăng thêm cùng thuộc một nhóm biến thể nên dùng làm hồi quy phát triển. Không có tín hiệu trong 12 ca sạch NotInject. Khi chạy hai Agent cho hai biến thể, ca 03 chuyển sang Có IPI và ca 05 sang Cần xem xét. Chưa đo lại cả 13 ca qua hai Agent và chưa kiểm tra FPR toàn pipeline cho mẫu mới. [Prefilter](../../lab/results/runs/prefilter-email-output-5LtGdR/cases.json) · [Ca 03](../../lab/results/runs/round-one-eval-sgnBiV/summary.json) · [Ca 05](../../lab/results/runs/round-one-eval-phWYgX/summary.json).
+
+### Giữ đoạn nghi vấn email khi nằm qua ranh giới chunk
+
+Ca LLMail 05 có tín hiệu Prefilter nhưng đoạn khớp bị chia qua hai chunk nên không giao được nghi vấn cho Agent. Dùng cửa sổ nguyên văn hiện có cho rule yêu cầu xuất đối tượng gọi công cụ. Kiểm thử với cùng đoạn nằm vắt ranh giới và chạy đầy đủ 200 kiểm thử engine.
+
+Quét lại 13 email bằng đúng hash đầu vào. Cả 7 nghi vấn của rule này có mặt nguyên văn trong chunk được chọn, trong đó 5 ca cần cửa sổ bổ sung. Không sinh cửa sổ mới ở 12 ca sạch NotInject. Lượt chạy ca 05 đã giao được nghi vấn cho hai Agent nhưng kết luận vẫn Cần xem xét. Chưa đo lại Recall/FPR toàn hệ thống. [Ca 05 trước sửa](../../lab/results/runs/round-one-eval-phWYgX/cases.json) · [Ca 05 sau sửa](../../lab/results/runs/round-one-eval-S0jQKw/cases.json).
+
+### Đối chứng Detector tự tìm đoạn nghi vấn khi Prefilter không có tín hiệu
+
+Chọn hai email LLMail 01 và 44 từng bị bỏ sót và hai ca sạch NotInject. Dùng lại các request không có nghi vấn đã lưu, giữ nguyên model, nội dung nguồn và schema. Thử hai biến thể riêng: thêm hướng dẫn kiểm tra hành động, hoặc thay bằng prompt ngắn tập trung vào chỉ dẫn đang điều khiển AI. Dùng parser hiện tại để kiểm tra phản hồi.
+
+Cả tám phản hồi hợp lệ và đều trả danh sách phát hiện rỗng. Hai prompt chưa khắc phục bỏ sót trên hai ca đã đo. Giữ nguyên prompt sản phẩm và chưa đo lại toàn pipeline. [Hướng dẫn kiểm tra hành động](../../lab/results/runs/detector-unflagged-audit-kZYfT3/cases.json) · [Prompt ngắn](../../lab/results/runs/detector-unflagged-compact-Mu7FjQ/cases.json).
+
+### Đối chứng Verifier trên nghi vấn yêu cầu xuất đối tượng gọi công cụ
+
+Thử thêm hướng dẫn kiểm tra hành động khi Verifier nhận nghi vấn từ rule email có trích dẫn nguyên văn. Giữ Detector Qwen3 4B và Verifier Qwen2.5 3B. Ca LLMail 05 từ Cần xem xét sang Có IPI. Ca sạch có cùng tín hiệu Prefilter, với câu yêu cầu nằm trong ví dụ đào tạo, cũng từ Cần xem xét sang Có IPI. Gỡ thay đổi và giữ ca sạch trong bộ hồi quy phát triển. [Ca 05](../../lab/results/runs/round-one-eval-eMb5PB/summary.json) · [Đối chứng gốc](../../lab/results/runs/round-one-eval-CNJRov/summary.json) · [Đối chứng thử nghiệm](../../lab/results/runs/round-one-eval-1nrkpq/summary.json).
+
+Chạy `npm run benchmark:round-one -- --desktop --transfer-candidates --summary-override-candidates --detector-candidate-action-audit --verifier-summary-audit --verifier-evidence-first --verifier-evidence-first-sensitive --verifier-evidence-first-output-override --recover-detector-timeout-once --recover-verifier-timeout-once --verifier-model qwen2.5:3b-instruct-q4_K_M --manifest <manifest> --case <id>`. Dùng manifest LLMail 13 cho ca `mail-05` và `email-tool-output-controls-dev-v1.json` cho ca `email-output-control-01`. Lượt thử thêm `--verifier-transfer-audit` và mở rộng điều kiện cờ này trong Verifier để nhận rule email. Hai ca chỉ dùng để chẩn đoán, chưa đo lại Recall và FPR toàn bộ.
+

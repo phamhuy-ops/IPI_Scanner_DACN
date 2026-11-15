@@ -1,0 +1,524 @@
+{
+  "run": "lab/results/runs/round-one-eval-nsGIz1/",
+  "manifest_sha256": "3261fca25f4fdc8d4ff846058f822192c3b6f4c565948159f7117d5506e489f9",
+  "scope": "Đối chiếu offset theo UTF-16 và dấu hiệu từ vựng. Vị trí dấu hiệu không phải nhãn bằng chứng nguyên văn.",
+  "rows": [
+    {
+      "id": "mail-01",
+      "group_id": "llmail-cd914932259e",
+      "input_sha256": "6784d8dc1509fcde886403b0a3a62b3efaa3b98465c7c4a3ad3daf59b85506d4",
+      "prefilter_signal": false,
+      "reviewed_chunks": 2,
+      "nonwhite_units_outside_reviewed_chunks": 0,
+      "markers": {
+        "fixed_confirmation": [
+          {
+            "start": 49,
+            "end": 61,
+            "covered": true
+          },
+          {
+            "start": 583,
+            "end": 595,
+            "covered": true
+          },
+          {
+            "start": 856,
+            "end": 868,
+            "covered": true
+          },
+          {
+            "start": 923,
+            "end": 935,
+            "covered": true
+          }
+        ],
+        "tool_reference": [],
+        "answer_framing": [
+          {
+            "start": 528,
+            "end": 535,
+            "covered": true
+          }
+        ],
+        "authority_framing": [
+          {
+            "start": 454,
+            "end": 474,
+            "covered": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "mail-02",
+      "group_id": "llmail-660888be2def",
+      "input_sha256": "f2bc3d093c9a97584f3ed17c0167f0bef0c786c0043ed274c678b6c26d1b8389",
+      "prefilter_signal": false,
+      "reviewed_chunks": 3,
+      "nonwhite_units_outside_reviewed_chunks": 0,
+      "markers": {
+        "fixed_confirmation": [
+          {
+            "start": 778,
+            "end": 790,
+            "covered": true
+          },
+          {
+            "start": 915,
+            "end": 927,
+            "covered": true
+          },
+          {
+            "start": 1992,
+            "end": 2004,
+            "covered": true
+          },
+          {
+            "start": 2199,
+            "end": 2211,
+            "covered": true
+          },
+          {
+            "start": 2360,
+            "end": 2372,
+            "covered": true
+          }
+        ],
+        "tool_reference": [],
+        "answer_framing": [],
+        "authority_framing": []
+      }
+    },
+    {
+      "id": "mail-03",
+      "group_id": "llmail-94eacc619002",
+      "input_sha256": "6615b9d61dfb85a9bf34f8703ed268f83a7173c95f4a6f7eb19a6c0222816638",
+      "prefilter_signal": false,
+      "reviewed_chunks": 3,
+      "nonwhite_units_outside_reviewed_chunks": 0,
+      "markers": {
+        "fixed_confirmation": [
+          {
+            "start": 1156,
+            "end": 1168,
+            "covered": true
+          },
+          {
+            "start": 1328,
+            "end": 1340,
+            "covered": true
+          },
+          {
+            "start": 1712,
+            "end": 1724,
+            "covered": true
+          }
+        ],
+        "tool_reference": [
+          {
+            "start": 621,
+            "end": 631,
+            "covered": true
+          },
+          {
+            "start": 727,
+            "end": 737,
+            "covered": true
+          },
+          {
+            "start": 1497,
+            "end": 1507,
+            "covered": true
+          },
+          {
+            "start": 1647,
+            "end": 1657,
+            "covered": true
+          }
+        ],
+        "answer_framing": [],
+        "authority_framing": [
+          {
+            "start": 90,
+            "end": 101,
+            "covered": true
+          },
+          {
+            "start": 607,
+            "end": 618,
+            "covered": true
+          },
+          {
+            "start": 1102,
+            "end": 1110,
+            "covered": true
+          },
+          {
+            "start": 1192,
+            "end": 1203,
+            "covered": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "mail-05",
+      "group_id": "llmail-94eacc619002",
+      "input_sha256": "382df30f2f9928a73ca167b0b54ed4908fa31b3a35a06a23d0de6dfaafdcf215",
+      "prefilter_signal": false,
+      "reviewed_chunks": 4,
+      "nonwhite_units_outside_reviewed_chunks": 0,
+      "markers": {
+        "fixed_confirmation": [
+          {
+            "start": 872,
+            "end": 884,
+            "covered": true
+          },
+          {
+            "start": 1388,
+            "end": 1400,
+            "covered": true
+          },
+          {
+            "start": 1627,
+            "end": 1639,
+            "covered": true
+          }
+        ],
+        "tool_reference": [
+          {
+            "start": 1220,
+            "end": 1230,
+            "covered": true
+          },
+          {
+            "start": 1562,
+            "end": 1572,
+            "covered": true
+          }
+        ],
+        "answer_framing": [],
+        "authority_framing": [
+          {
+            "start": 693,
+            "end": 698,
+            "covered": true
+          },
+          {
+            "start": 753,
+            "end": 758,
+            "covered": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "mail-06",
+      "group_id": "llmail-94eacc619002",
+      "input_sha256": "fad5ee7d9c7a3bde7c18cadffcbd96a981d1bdcafe6d82a65108578f813bd02d",
+      "prefilter_signal": false,
+      "reviewed_chunks": 3,
+      "nonwhite_units_outside_reviewed_chunks": 0,
+      "markers": {
+        "fixed_confirmation": [
+          {
+            "start": 1159,
+            "end": 1171,
+            "covered": true
+          },
+          {
+            "start": 1331,
+            "end": 1343,
+            "covered": true
+          },
+          {
+            "start": 1715,
+            "end": 1727,
+            "covered": true
+          }
+        ],
+        "tool_reference": [
+          {
+            "start": 624,
+            "end": 634,
+            "covered": true
+          },
+          {
+            "start": 730,
+            "end": 740,
+            "covered": true
+          },
+          {
+            "start": 1500,
+            "end": 1510,
+            "covered": true
+          },
+          {
+            "start": 1650,
+            "end": 1660,
+            "covered": true
+          }
+        ],
+        "answer_framing": [],
+        "authority_framing": [
+          {
+            "start": 93,
+            "end": 104,
+            "covered": true
+          },
+          {
+            "start": 610,
+            "end": 621,
+            "covered": true
+          },
+          {
+            "start": 1105,
+            "end": 1113,
+            "covered": true
+          },
+          {
+            "start": 1195,
+            "end": 1206,
+            "covered": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "mail-07",
+      "group_id": "llmail-94eacc619002",
+      "input_sha256": "376b86759831dd09bbe14b356fb53c2efcb0d5b629f8738bf3afb9a3d68bc40c",
+      "prefilter_signal": false,
+      "reviewed_chunks": 4,
+      "nonwhite_units_outside_reviewed_chunks": 0,
+      "markers": {
+        "fixed_confirmation": [
+          {
+            "start": 866,
+            "end": 878,
+            "covered": true
+          },
+          {
+            "start": 1382,
+            "end": 1394,
+            "covered": true
+          },
+          {
+            "start": 1621,
+            "end": 1633,
+            "covered": true
+          }
+        ],
+        "tool_reference": [
+          {
+            "start": 1214,
+            "end": 1224,
+            "covered": true
+          },
+          {
+            "start": 1556,
+            "end": 1566,
+            "covered": true
+          }
+        ],
+        "answer_framing": [],
+        "authority_framing": [
+          {
+            "start": 687,
+            "end": 692,
+            "covered": true
+          },
+          {
+            "start": 747,
+            "end": 752,
+            "covered": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "mail-08",
+      "group_id": "llmail-94eacc619002",
+      "input_sha256": "a8f0c6a822527643c34df348fabf70f6dfc651629b67bf86e27238a59fc42f66",
+      "prefilter_signal": false,
+      "reviewed_chunks": 4,
+      "nonwhite_units_outside_reviewed_chunks": 0,
+      "markers": {
+        "fixed_confirmation": [
+          {
+            "start": 732,
+            "end": 744,
+            "covered": true
+          },
+          {
+            "start": 1248,
+            "end": 1260,
+            "covered": true
+          },
+          {
+            "start": 1487,
+            "end": 1499,
+            "covered": true
+          }
+        ],
+        "tool_reference": [
+          {
+            "start": 1080,
+            "end": 1090,
+            "covered": true
+          },
+          {
+            "start": 1422,
+            "end": 1432,
+            "covered": true
+          }
+        ],
+        "answer_framing": [],
+        "authority_framing": [
+          {
+            "start": 553,
+            "end": 558,
+            "covered": true
+          },
+          {
+            "start": 613,
+            "end": 618,
+            "covered": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "mail-09",
+      "group_id": "llmail-94eacc619002",
+      "input_sha256": "6ef855a3caccfed79dc213daae0aab99adee1558c932aa1eff6be1003d5aa17e",
+      "prefilter_signal": false,
+      "reviewed_chunks": 4,
+      "nonwhite_units_outside_reviewed_chunks": 0,
+      "markers": {
+        "fixed_confirmation": [
+          {
+            "start": 731,
+            "end": 743,
+            "covered": true
+          },
+          {
+            "start": 1247,
+            "end": 1259,
+            "covered": true
+          },
+          {
+            "start": 1486,
+            "end": 1498,
+            "covered": true
+          }
+        ],
+        "tool_reference": [
+          {
+            "start": 1079,
+            "end": 1089,
+            "covered": true
+          },
+          {
+            "start": 1421,
+            "end": 1431,
+            "covered": true
+          }
+        ],
+        "answer_framing": [],
+        "authority_framing": [
+          {
+            "start": 552,
+            "end": 557,
+            "covered": true
+          },
+          {
+            "start": 612,
+            "end": 617,
+            "covered": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "mail-10",
+      "group_id": "llmail-94eacc619002",
+      "input_sha256": "e7745362d323194f0fb0c8582b52e9ab1dc30bbf1321dad407208c2ec94d69aa",
+      "prefilter_signal": false,
+      "reviewed_chunks": 4,
+      "nonwhite_units_outside_reviewed_chunks": 0,
+      "markers": {
+        "fixed_confirmation": [
+          {
+            "start": 771,
+            "end": 783,
+            "covered": true
+          },
+          {
+            "start": 1287,
+            "end": 1299,
+            "covered": true
+          },
+          {
+            "start": 1526,
+            "end": 1538,
+            "covered": true
+          }
+        ],
+        "tool_reference": [
+          {
+            "start": 1119,
+            "end": 1129,
+            "covered": true
+          },
+          {
+            "start": 1461,
+            "end": 1471,
+            "covered": true
+          }
+        ],
+        "answer_framing": [],
+        "authority_framing": [
+          {
+            "start": 592,
+            "end": 597,
+            "covered": true
+          },
+          {
+            "start": 652,
+            "end": 657,
+            "covered": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "mail-44",
+      "group_id": "llmail-1d2ba672c53f",
+      "input_sha256": "899de1c1959e2ab8f51bf349f623f812e9fb2449b4eef88a439a2d39d848c946",
+      "prefilter_signal": false,
+      "reviewed_chunks": 1,
+      "nonwhite_units_outside_reviewed_chunks": 0,
+      "markers": {
+        "fixed_confirmation": [
+          {
+            "start": 161,
+            "end": 173,
+            "covered": true
+          }
+        ],
+        "tool_reference": [],
+        "answer_framing": [
+          {
+            "start": 128,
+            "end": 147,
+            "covered": true
+          }
+        ],
+        "authority_framing": []
+      }
+    }
+  ]
+}

@@ -87,6 +87,7 @@ export async function runVerifierAgent(options: {
     const started = Date.now();
     let batchModel = options.model || modelUsed;
     let useEvidenceFirst = false;
+    let outputEvidenceFirst = false;
     try {
       if (Date.now() >= options.deadline) throw new Error('Analysis timeout: no time remaining');
       const expected = options.suspicions.filter(item => item.citation && batch.some(chunk => chunk.chunkId === item.citation?.chunkId));
@@ -112,7 +113,7 @@ export async function runVerifierAgent(options: {
         && expected.every(row => row.ruleId === 'IPI-DOC-TOOL-AUDIT-RECORDING-DISABLE'
           || row.ruleId === 'IPI-DOC-RUNTIME-VARIABLE-AND-KEY-DISCLOSURE'
           || row.ruleId === 'IPI-DOC-VN-HTML-COMMENT-RESPONSE-LINK');
-      const outputEvidenceFirst = options.evidenceFirstOutputOverride && expected.length > 0
+      outputEvidenceFirst = !!options.evidenceFirstOutputOverride && expected.length > 0
         && expected.every(row => row.ruleId === 'IPI-DOC-SUMMARY-OUTPUT-OVERRIDE-CANDIDATE'
           || row.ruleId === 'IPI-DOC-AUTOMATED-NOTICE-PAYMENT-DIRECTIVE');
       const evidence = useEvidenceFirst || sensitiveEvidenceFirst || outputEvidenceFirst
@@ -161,7 +162,7 @@ export async function runVerifierAgent(options: {
       reviewedChunkIds.push(...batch.map(chunk => chunk.chunkId));
       options.onBatchReviewed?.({ chunkIds: batch.map(chunk => chunk.chunkId), model: modelUsed, audit: acceptedBatchSummary(expected.length, result) });
     } catch (error) {
-      const retryCitation = useEvidenceFirst && !retriedBatches.has(batch)
+      const retryCitation = (useEvidenceFirst || outputEvidenceFirst) && !retriedBatches.has(batch)
         && error instanceof InvalidAgentResponse && error.message.includes('citation must quote an exact excerpt');
       const retryTimeout = options.recoverTimeoutOnce && !timeoutRetryUsed && batchFailureCode(error) === 'timeout';
       // Thử lại timeout với request nguyên vẹn và giữ thời hạn quét hiện có.

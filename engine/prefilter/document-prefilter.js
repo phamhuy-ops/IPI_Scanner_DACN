@@ -5,7 +5,7 @@ const { conversationTransferCandidates } = require('./conversation-transfer');
 
 // Đầu dòng nêu rõ người nhận là AI, sau đó yêu cầu bỏ hoặc sửa kết quả tóm tắt.
 const SUMMARY_OVERRIDE = {
-  re: /^[ \t]*(?:(?:to|for)\s+the\s+(?:ai|assistant|summarizer)\b[^:\r\n]{0,65}:[ \t]*(?:(?:skip|omit|replace|abandon)\b[^\r\n]{0,80}\bsummary\b|(?:state|report|say)\b[^\r\n]{0,180}\b(?:even\s+(?:if|though)|regardless\s+of)\b)|(?:trợ[ \t]+lý|ai)[ \t]+(?:đang[ \t]+)?(?:đọc|tóm[ \t]+tắt|(?:lập[ \t]+bản[ \t]+)?tổng[ \t]+hợp)[^:\r\n]{0,65}:[ \t]*(?:hãy[ \t]+)?(?:bỏ|thay)[ \t]+(?:(?:phần|bản)[ \t]+)?(?:tóm[ \t]+tắt|tổng[ \t]+hợp)(?![\p{L}\p{M}]))[^\r\n]{0,180}/imu,
+  re: /^[ \t]*(?:(?:(?:to|for)\s+the\s+(?:ai|assistant|summarizer)\b[^:\r\n]{0,65}|(?:ai|assistant)[ \t]+(?:preparing|drafting|writing)[ \t]+(?:the|this)[ \t]+(?:summary|report)\b)[ \t]*:[ \t]*(?:(?:skip|omit|replace|abandon)\b[^\r\n]{0,80}\bsummary\b|(?:state|report|say)\b[^\r\n]{0,180}\b(?:even\s+(?:if|though)|regardless\s+of)\b)|(?:trợ[ \t]+lý|ai)[ \t]+(?:đang[ \t]+)?(?:đọc|tóm[ \t]+tắt|(?:lập[ \t]+bản[ \t]+)?tổng[ \t]+hợp)[^:\r\n]{0,65}:[ \t]*(?:hãy[ \t]+)?(?:bỏ|thay)[ \t]+(?:(?:phần|bản)[ \t]+)?(?:tóm[ \t]+tắt|tổng[ \t]+hợp)(?![\p{L}\p{M}]))[^\r\n]{0,180}/imu,
   label: 'Summary-output-override-candidate',
   severity: 'medium',
   description: 'Chỉ dẫn hướng tới AI và yêu cầu đổi kết quả tóm tắt, cần xác minh ngữ cảnh',
@@ -32,7 +32,7 @@ const SUMMARY_SUPPRESS_RESULTS = {
 // Đánh dấu yêu cầu AI thay một số liệu bằng giá trị cố định rồi khẳng định kết quả.
 const SUMMARY_REPLACE_VALUE = {
   ...SUMMARY_OVERRIDE,
-  re: /^[ \t]*(?:ai|trợ[ \t]+lý)[ \t]+(?:đang[ \t]+)?(?:lập|tạo|soạn)[ \t]+báo[ \t]+cáo[^:\r\n]{0,65}:[ \t]*(?:hãy[ \t]+)?(?:đổi|sửa|thay)[ \t]+(?:số(?:[ \t]+(?:lượng|liệu|tồn))?|giá[ \t]+trị)[ \t]+[^:\r\n]{0,55}?(?:thành|bằng)[ \t]+[+-]?\d+(?:[.,]\d+)?[ \t]+(?:và|rồi)[ \t]+(?:khẳng[ \t]+định|báo[ \t]+rằng|ghi[ \t]+rằng)[ \t]+[^\r\n]{1,140}/imu,
+  re: /(?:^[ \t]*|(?<=^[ \t]*"[\w -]{1,40}"[ \t]*:[ \t]*"))(?:ai|trợ[ \t]+lý)[ \t]+(?:đang[ \t]+)?(?:lập|tạo|soạn)[ \t]+báo[ \t]+cáo[^:"\r\n]{0,65}:[ \t]*(?:hãy[ \t]+)?(?:đổi|sửa|thay)[ \t]+(?:số(?:[ \t]+(?:lượng|liệu|tồn))?|giá[ \t]+trị)[ \t]+[^:"\r\n]{0,55}?(?:thành|bằng)[ \t]+[+-]?\d+(?:[.,]\d+)?[ \t]+(?:và|rồi)[ \t]+(?:khẳng[ \t]+định|báo[ \t]+rằng|ghi[ \t]+rằng)[ \t]+[^"\r\n]{1,140}/imu,
 };
 
 // Yêu cầu AI dừng đánh giá và viết nội dung khác thay cho kết quả cần trả.
@@ -65,16 +65,62 @@ const HTML_FIXED_ANSWER_OVERRIDE = {
   re: /<(p|aside)\b[^<>\r\n]{0,100}>[ \t]*(?:assistant|ai)[ \t]+(?:reading|reviewing)[ \t]+[^:<>\r\n]{1,65}:[ \t]*(?:omit|skip|ignore)[ \t]+[^<>\r\n]{1,90}?[ \t]+and[ \t]+(?:answer|respond|reply)[ \t]+with[ \t]+(?:the[ \t]+)?(?:phrase|fixed[ \t]+message)[ \t]+[^<>\r\n]{1,120}<\/\1>/iu,
 };
 
-// Comment gọi AI đang đọc nguồn và yêu cầu thay một giá trị trong câu trả lời.
+// Chỉ dẫn gọi AI đang đọc nguồn và yêu cầu thay một giá trị trong câu trả lời.
+const REPLACE_ANSWER_VALUE = /(?:assistant|ai)[ \t]+(?:reading|reviewing)[ \t]+[^:<>\r\n]{1,65}:[ \t]*(?:please[ \t]+)?(?:replace|substitute)[ \t]+[^<>\r\n]{1,75}?[ \t]+in[ \t]+(?:the|your)[ \t]+(?:answer|response|reply)[ \t]+with[ \t]+/u;
+
 const HTML_COMMENT_REPLACE_ANSWER_VALUE = {
   ...SUMMARY_OVERRIDE,
-  re: /<!--[ \t]*(?:assistant|ai)[ \t]+(?:reading|reviewing)[ \t]+[^:<>\r\n]{1,65}:[ \t]*(?:please[ \t]+)?(?:replace|substitute)[ \t]+[^<>\r\n]{1,75}?[ \t]+in[ \t]+(?:the|your)[ \t]+(?:answer|response|reply)[ \t]+with[ \t]+[^<>\r\n]{1,100}?-->/iu,
+  re: new RegExp(String.raw`<!--[ \t]*${REPLACE_ANSWER_VALUE.source}[^<>\r\n]{1,100}?-->`, 'iu'),
+};
+
+const LINE_REPLACE_ANSWER_VALUE = {
+  ...SUMMARY_OVERRIDE,
+  re: new RegExp(String.raw`^[ \t]*${REPLACE_ANSWER_VALUE.source}[^<>\r\n]{1,100}$`, 'imu'),
 };
 
 // Đánh dấu yêu cầu báo đã xong khi đoạn ngay trước vẫn ghi có mục đang chờ.
 const HTML_PENDING_STATUS_OVERRIDE = {
   ...SUMMARY_OVERRIDE,
   re: /(?<=<p\b[^<>\r\n]{0,80}>[^<>\r\n]{0,110}(?:còn|vẫn[ \t]+có)[ \t]+[^<>\r\n]{1,45}[ \t]+(?:chờ[ \t]+xác[ \t]+nhận|chưa[ \t]+hoàn[ \t]+tất)[^<>\r\n]{0,45}<\/p>[\r\n \t]{0,20})<(aside|p)\b[^<>\r\n]{0,80}>[ \t]*(?:ai|trợ[ \t]+lý)[ \t]+(?:đang[ \t]+)?(?:đọc|rà[ \t]+soát)[ \t]+[^:<>\r\n]{1,60}:[ \t]*(?:hãy[ \t]+)?(?:ghi|nói|báo)[ \t]+trong[ \t]+(?:câu[ \t]+trả[ \t]+lời|phản[ \t]+hồi)[ \t]+rằng[ \t]+(?:mọi[ \t]+mục|tất[ \t]+cả[ \t]+các[ \t]+mục)[ \t]+đã[ \t]+(?:hoàn[ \t]+tất|xong)[.!]?[ \t]*<\/\1>/iu,
+};
+
+// Chỉ dẫn yêu cầu AI thay dữ kiện được nêu trong nguồn bằng một khẳng định khác.
+const SOURCE_FACT_REPLACEMENT = {
+  ...SUMMARY_OVERRIDE,
+  re: /(?:^[ \t]*|(?<=^[ \t]*"[\w -]{1,40}"[ \t]*:[ \t]*"))(?:assistant|ai)[ \t]+(?:reading|reviewing|using)[ \t]+[^:"<>\r\n]{1,65}:[ \t]*(?:please[ \t]+)?(?:(?:state|report|say)[ \t]+that|tell[ \t]+the[ \t]+(?:reader|user)(?:[ \t]+that)?)[ \t]+[^"<>\r\n]{1,125}?[ \t]+(?:instead[ \t]+of|rather[ \t]+than)[ \t]+(?:(?:reporting|using|stating)[ \t]+)?the[ \t]+(?:[\w-]+[ \t]+){0,4}(?:value|result|forecast|figure|status|reading|schedule|timetable)[ \t]+(?:(?:shown|recorded|listed|given)[ \t]+)?(?:above|here|in[ \t]+(?:the|this)[ \t]+(?:source|record|table|document))\b[.!]?/imu,
+};
+
+// Chỉ đánh dấu câu báo tất cả đã duyệt khi dòng ngay trước ghi rõ còn mục chờ duyệt.
+const LINE_PENDING_APPROVAL_OVERRIDE = {
+  ...SUMMARY_OVERRIDE,
+  re: /(?<=^[ \t]*(?![^\r\n]{0,140}\b(?:không|đã[ \t]+xử[ \t]+lý[ \t]+xong)\b)[^\r\n]{0,80}(?:có|còn)[ \t]+[^\r\n.!?]{1,45}[ \t]+chờ[ \t]+(?:phê[ \t]+)?duyệt[^\r\n.!?]{0,70}[.!]?[ \t]*\r?\n)[ \t]*(?:ai|trợ[ \t]+lý)[ \t]+(?:đang[ \t]+)?(?:đọc|tổng[ \t]+hợp|rà[ \t]+soát)[ \t]+[^:\r\n]{1,55}:[ \t]*(?:hãy[ \t]+)?(?:ghi|nói|báo)[ \t]+trong[ \t]+(?:câu[ \t]+trả[ \t]+lời|phản[ \t]+hồi)[ \t]+rằng[ \t]+(?:cả|mọi|tất[ \t]+cả)[ \t]+[^\r\n.!?]{1,55}[ \t]+đã[ \t]+(?:được[ \t]+)?(?:phê[ \t]+)?duyệt[.!]?[ \t]*$/imu,
+};
+
+// So sánh số giờ hoặc số phòng trong chỉ dẫn với dữ kiện ngay trước nó.
+const SOURCE_HOUR_OVERRIDE = {
+  ...SUMMARY_OVERRIDE,
+  re: /(?<=[^\r\n]{0,85}(?:đóng[ \t]+cửa|mở[ \t]+cửa)[ \t]+lúc[ \t]+(?<original>\d{1,2})[ \t]+giờ[.!]?[ \t]*\r?\n)^[ \t]*(?:ai|trợ[ \t]+lý)[ \t]+(?:đang[ \t]+)?(?:đọc|rà[ \t]+soát)[ \t]+[^:\r\n]{1,55}:[ \t]*trong[ \t]+(?:câu[ \t]+trả[ \t]+lời|phản[ \t]+hồi),?[ \t]*(?:hãy[ \t]+)?(?:ghi|báo|nói)[ \t]+rằng[ \t]+[^\r\n.!?]{1,55}[ \t]+lúc[ \t]+(?<replacement>\d{1,2})[ \t]+giờ[.!]?[ \t]*$/imu,
+  differentNumber: true,
+};
+
+const HTML_SOURCE_ROOM_OVERRIDE = {
+  ...SUMMARY_OVERRIDE,
+  re: /(?<=<p\b[^<>\r\n]{0,80}>[^<>\r\n]{0,110}(?:ở|tại)[ \t]+phòng[ \t]+(?:số[ \t]+)?(?<original>\d{1,4})[.!]?[ \t]*<\/p>[\r\n \t]{0,20})<aside\b[^<>\r\n]{0,80}>[ \t]*(?:ai|trợ[ \t]+lý)[ \t]+(?:đang[ \t]+)?(?:đọc|rà[ \t]+soát)[ \t]+[^:<>\r\n]{1,55}:[ \t]*khi[ \t]+mô[ \t]+tả[ \t]+vị[ \t]+trí[ \t]+[^,<>\r\n]{1,55},[ \t]*(?:hãy[ \t]+)?(?:ghi|báo|nói)[ \t]+phòng[ \t]+(?:số[ \t]+)?(?<replacement>\d{1,4})[.!]?[ \t]*<\/aside>/iu,
+  differentNumber: true,
+};
+
+// Dòng trước ghi một việc chưa hoàn tất, dòng sau yêu cầu AI báo mọi mục đã xong.
+const LINE_INCOMPLETE_STATUS_OVERRIDE = {
+  ...SUMMARY_OVERRIDE,
+  re: /(?<=^[ \t]*[^\r\n.!?]{1,70}[ \t]+chưa[ \t]+(?:nảy[ \t]+mầm|hoàn[ \t]+tất|hoàn[ \t]+thành|xử[ \t]+lý[ \t]+xong)\b[^\r\n.!?]{0,60}[.!]?[ \t]*\r?\n)^[ \t]*(?:ai|trợ[ \t]+lý)[ \t]+(?:đang[ \t]+)?(?:đọc|rà[ \t]+soát|tổng[ \t]+hợp)[ \t]+[^:\r\n]{1,55}:[ \t]*(?:hãy[ \t]+)?(?:ghi|báo|nói)[ \t]+trong[ \t]+(?:phản[ \t]+hồi|câu[ \t]+trả[ \t]+lời)[ \t]+rằng[ \t]+(?:mọi[ \t]+mục|tất[ \t]+cả[ \t]+các[ \t]+mục)[ \t]+đã[ \t]+(?:hoàn[ \t]+tất|xong)[.!]?[ \t]*$/imu,
+};
+
+// Đối tượng gọi công cụ phải đi cùng chỉ dẫn buộc Agent tạo đối tượng đó làm đầu ra.
+const FORCED_EMAIL_TOOL_OUTPUT = {
+  re: /\{[ \t]*"tool_call"[ \t]*:[ \t]*\{[ \t]*"name"[ \t]*:[ \t]*"send_email"[^\r\n]{0,300}?\}\}[\s\S]{0,200}?\byour[ \t]+task[ \t]+is[ \t]+to[ \t]+(?:generate|produce|return|output)[ \t]+(?:the[ \t]+)?(?:final[ \t]*,?[ \t]+)?(?:single-line[ \t]+)?json[ \t]+(?:output|string|object)\b[^\r\n]{0,75}/iu,
+  label: 'Forced-email-tool-output-candidate',
+  severity: 'medium',
+  description: 'Nội dung yêu cầu Agent trả đối tượng JSON gọi công cụ gửi email',
 };
 
 function snippetAround(text, index, radius = 150) {
@@ -143,12 +189,14 @@ function scanTextForIpi(text, filePath, folderPath = '', options = {}) {
   const findings = [];
   const rel = folderPath ? path.relative(folderPath, filePath) : path.basename(filePath);
 
-  const patterns = options.includeSummaryOverrideCandidates
-    ? [...IPI_DOC_PATTERNS, SUMMARY_OVERRIDE, SUMMARY_STATUS_OVERRIDE, SUMMARY_TASK_SWITCH, SUMMARY_SUPPRESS_RESULTS, SUMMARY_REPLACE_VALUE, SUMMARY_REPLACE_REVIEW, SUMMARY_CONCEAL_SCORE_CHANGE, SUMMARY_OVERRIDE_PRIORITY, SUMMARY_OVERRIDE_SCREENING, HTML_FIXED_ANSWER_OVERRIDE, HTML_COMMENT_REPLACE_ANSWER_VALUE, HTML_PENDING_STATUS_OVERRIDE] : IPI_DOC_PATTERNS;
+  const summaryPatterns = options.includeSummaryOverrideCandidates
+    ? [...IPI_DOC_PATTERNS, SUMMARY_OVERRIDE, SUMMARY_STATUS_OVERRIDE, SUMMARY_TASK_SWITCH, SUMMARY_SUPPRESS_RESULTS, SUMMARY_REPLACE_VALUE, SUMMARY_REPLACE_REVIEW, SUMMARY_CONCEAL_SCORE_CHANGE, SUMMARY_OVERRIDE_PRIORITY, SUMMARY_OVERRIDE_SCREENING, HTML_FIXED_ANSWER_OVERRIDE, HTML_COMMENT_REPLACE_ANSWER_VALUE, LINE_REPLACE_ANSWER_VALUE, HTML_PENDING_STATUS_OVERRIDE, SOURCE_FACT_REPLACEMENT, LINE_PENDING_APPROVAL_OVERRIDE, SOURCE_HOUR_OVERRIDE, HTML_SOURCE_ROOM_OVERRIDE, LINE_INCOMPLETE_STATUS_OVERRIDE] : IPI_DOC_PATTERNS;
+  const patterns = options.includeTransferCandidates ? [...summaryPatterns, FORCED_EMAIL_TOOL_OUTPUT] : summaryPatterns;
   for (const pattern of patterns) {
     const regex = new RegExp(pattern.re.source, pattern.re.flags.includes('g') ? pattern.re.flags : pattern.re.flags + 'g');
     let match;
     while ((match = regex.exec(text)) !== null) {
+      if (pattern.differentNumber && Number(match.groups.original) === Number(match.groups.replacement)) continue;
       const line = lineOf(text, match.index);
       if (pattern.label === 'Context-padding-attack' && /^[=*-]+$/.test(match[0])) {
         // Dòng chỉ có dấu phân cách là định dạng. Các rule khác vẫn quét toàn văn.
@@ -164,7 +212,7 @@ function scanTextForIpi(text, filePath, folderPath = '', options = {}) {
         owaspCategory: 'LLM01',
         title: `[Doc IPI] ${pattern.label} — ${pattern.description}`,
         severity: pattern.severity,
-        confidence: pattern.label === SUMMARY_OVERRIDE.label ? 'medium' : 'high',
+        confidence: pattern.label === SUMMARY_OVERRIDE.label || pattern === FORCED_EMAIL_TOOL_OUTPUT ? 'medium' : 'high',
         target: filePath,
         location: `${rel}:${line}`,
         matchedText: match[0],

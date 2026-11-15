@@ -47,12 +47,18 @@ it.each([
   if (enabled) expect(mock.mock.calls[1].slice(0, 3)).toEqual(mock.mock.calls[2].slice(0, 3));
 });
 
-it.each([true, false])('Verifier thử lại lỗi trích dẫn nguyên văn trong nhánh chuyển dữ liệu (%s)', async enabled => {
+it.each([
+  { enabled: true, outputOverride: false },
+  { enabled: false, outputOverride: false },
+  { enabled: true, outputOverride: true },
+  { enabled: false, outputOverride: true },
+])('Verifier thử lại lỗi trích dẫn nguyên văn ($enabled/$outputOverride)', async ({ enabled, outputOverride }) => {
   const quote = 'Bài học về cách đọc tài liệu.';
   const chunks = [{ chunkId: 'chunk-1', fileName: 'document.txt', startLine: 1,
     endLine: 1, text: quote, riskScore: 0, findingCount: 1, selectionReasons: [] }];
   const citation = citationFor('chunk-1', quote, chunks);
-  const suspicions: IpiSuspicion[] = [{ id: 'rule-1', ruleId: 'IPI-DOC-CONVERSATION-TRANSFER-CANDIDATE',
+  const ruleId = outputOverride ? 'IPI-DOC-SUMMARY-OUTPUT-OVERRIDE-CANDIDATE' : 'IPI-DOC-CONVERSATION-TRANSFER-CANDIDATE';
+  const suspicions: IpiSuspicion[] = [{ id: 'rule-1', ruleId,
     source: 'rule', location: 'document.txt:1', originalQuote: quote, citation,
     detector: null, verifier: null, status: 'unresolved' }];
   const assessment = { id: 'rule-1', stance: 'dismissed', reason: 'Đây là nội dung giới thiệu bài học.', chunkId: 'chunk-1', quote };
@@ -65,7 +71,7 @@ it.each([true, false])('Verifier thử lại lỗi trích dẫn nguyên văn tro
   }])).mockResolvedValueOnce(response([]));
   const onBatchFailed = vi.fn();
   const result = await runVerifierAgent({ chunks, suspicions, deadline: Date.now() + 120_000,
-    evidenceFirst: enabled, onBatchFailed,
+    evidenceFirst: enabled && !outputOverride, evidenceFirstOutputOverride: enabled && outputOverride, onBatchFailed,
     detectorReview: { model: 'gemma3:1b', batchCount: 0, suspiciousBatchCount: 0, reviewedChunkIds: [], semanticAnalysis: '' } });
   expect(onBatchFailed).toHaveBeenCalledTimes(1);
   expect(result.reviewedChunkIds).toEqual(enabled ? ['chunk-1'] : []);
