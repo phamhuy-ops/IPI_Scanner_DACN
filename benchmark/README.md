@@ -1,6 +1,6 @@
 # Benchmark IPI Scanner
 
-Xem [kho kiểm thử tập trung](kiem-thu/README.md) để tìm file mẫu, nhãn đối chiếu, PDF/DOCX và dataset đã tải. Danh mục CSV và hash phục vụ báo cáo nằm cùng thư mục.
+Xem [kho kiểm thử tập trung](../lab/results/baselines/legacy-kiem-thu/README.md) để tìm file mẫu, nhãn đối chiếu, PDF/DOCX và dataset đã tải. Danh mục CSV và hash phục vụ báo cáo nằm cùng thư mục.
 
 Cập nhật dọn 28/10/2026: công cụ đang duy trì dùng một đầu vào `scripts/benchmark.cjs` (`npm run benchmark -- --help`), gồm đo Agent, theo manifest, report, replay và rule controls. 275 script thử nghiệm cũ cùng các audit/snapshot lặp đã rời thư mục làm việc; tra [danh mục lưu trữ/hash](../archive/benchmark-old/don-dep-2026-10-28/README.md) khi cần lệnh lịch sử. Raw, baseline, dataset và nhãn vẫn được giữ.
 

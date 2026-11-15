@@ -22,7 +22,7 @@ Cập nhật 2026-10-28. **Chưa hoàn thành.**
 
 Đã xây hai bản tạo ứng viên chuyển hội thoại và một hợp đồng classic-spans-v1 không chép quote. Đo tổng100 pipeline/200 request thật, không train/đổi model. V1 tạo3 FP nên loại. V2 trên22 ca mỗi nhánh tăng đúng36,4%→45,5%, TP1→3, false clear2→0 và FP giữ0, nhưng lỗi1→3/p95+110,2%, chưa đạt cổng. Span trên10 ca khác tăng đúng40%→60%, hợp lệ9/10→10/10, nhưng2 FP và hồi quy uncertain/tấn công, cũng không chọn. Không so phần trăm hai lô khác nhau thành một đường tiến bộ. 310 test/typecheck/lint/build đạt; nguồn và raw được giữ.
 
-Giữ tính năng ở runner/hợp đồng thử, chưa bật mặc định hoặc mở đo rộng/holdout cho cấu hình trượt. Mục tiêu khoảng90% chưa đạt trên các lô lỗi khó; chưa thể suy tỷ lệ toàn dự án. [Báo cáo và liên kết từng ca](../../benchmark/kiem-thu/ket-qua-nang-cap-chuyen-du-lieu.md). Ưu tiên1 vẫn mở.
+Giữ tính năng ở runner/hợp đồng thử, chưa bật mặc định hoặc mở đo rộng/holdout cho cấu hình trượt. Mục tiêu khoảng90% chưa đạt trên các lô lỗi khó; chưa thể suy tỷ lệ toàn dự án. [Báo cáo và liên kết từng ca](../../lab/results/baselines/legacy-kiem-thu/ket-qua-nang-cap-chuyen-du-lieu.md). Ưu tiên1 vẫn mở.
 
 ## Nâng cấp tính nhất quán và chốt đối chứng hành động
 

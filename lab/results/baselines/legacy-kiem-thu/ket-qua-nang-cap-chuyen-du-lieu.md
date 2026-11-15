@@ -18,17 +18,17 @@ Các lô dưới đây cố ý tập trung lỗi và đối chứng khó, có m�
 
 ## Kết quả từng lượt
 
-1. **Ứng viên chuyển dữ liệu v1 — 18 ca mỗi nhánh, 36 pipeline/72 request.** Đúng6/18→7/18 (33,3%→38,9%); TP1→3 nhưng FP0→3. Báo nhầm việc cho người, câu cấm gửi và mô tả API. Loại bản này. [Giao thức, raw và tổng hợp](../results/transfer-candidates-YQrOEY/tong-hop.json).
+1. **Ứng viên chuyển dữ liệu v1 — 18 ca mỗi nhánh, 36 pipeline/72 request.** Đúng6/18→7/18 (33,3%→38,9%); TP1→3 nhưng FP0→3. Báo nhầm việc cho người, câu cấm gửi và mô tả API. Loại bản này. [Giao thức, raw và tổng hợp](../../../../benchmark/results/transfer-candidates-YQrOEY/tong-hop.json).
 
-2. **Ứng viên v2 — 22 ca mỗi nhánh, 44 pipeline/88 request.** Đúng8/22→10/22 (36,4%→45,5%). TP1→3, false clear2→0, FP giữ0/12 benign;7/12 benign vẫn cần xem xét. Hai uncertain đều được xử lý đúng. Tuy nhiên lỗi tăng1→3 và p95 11,02→23,17 giây (+110,2%). Trượt cổng, chưa bật mặc định. [Tổng hợp](../results/transfer-candidates-v2-9y6WLU/tong-hop.json), [từng ca](../results/transfer-candidates-v2-9y6WLU/cases.json).
+2. **Ứng viên v2 — 22 ca mỗi nhánh, 44 pipeline/88 request.** Đúng8/22→10/22 (36,4%→45,5%). TP1→3, false clear2→0, FP giữ0/12 benign;7/12 benign vẫn cần xem xét. Hai uncertain đều được xử lý đúng. Tuy nhiên lỗi tăng1→3 và p95 11,02→23,17 giây (+110,2%). Trượt cổng, chưa bật mặc định. [Tổng hợp](../../../../benchmark/results/transfer-candidates-v2-9y6WLU/tong-hop.json), [từng ca](../../../../benchmark/results/transfer-candidates-v2-9y6WLU/cases.json).
 
-3. **Trích dẫn bằng ID, cùng rule v2 ở cả hai nhánh — 10 ca mỗi nhánh, 20 pipeline/40 request.** Đúng4/10→6/10 (40%→60%); xử lý hợp lệ9/10→10/10, TP2→3, p95 25,75→15,18 giây (-41,0%). Nhưng FP0→2/5 benign, một ca uncertain bị not_detected và một tấn công baseline xác nhận được bị chuyển cần xem xét. Trượt cổng, chưa bật mặc định. Đây cho thấy trích dẫn đúng không đủ bảo đảm nghĩa đúng. [Tổng hợp](../results/classic-spans-8QvuWl/tong-hop.json), [raw model](../results/classic-spans-8QvuWl/model-calls.json).
+3. **Trích dẫn bằng ID, cùng rule v2 ở cả hai nhánh — 10 ca mỗi nhánh, 20 pipeline/40 request.** Đúng4/10→6/10 (40%→60%); xử lý hợp lệ9/10→10/10, TP2→3, p95 25,75→15,18 giây (-41,0%). Nhưng FP0→2/5 benign, một ca uncertain bị not_detected và một tấn công baseline xác nhận được bị chuyển cần xem xét. Trượt cổng, chưa bật mặc định. Đây cho thấy trích dẫn đúng không đủ bảo đảm nghĩa đúng. [Tổng hợp](../../../../benchmark/results/classic-spans-8QvuWl/tong-hop.json), [raw model](../../../../benchmark/results/classic-spans-8QvuWl/model-calls.json).
 
 Mỗi lượt có giao-thuc.json khóa cấu hình/code/model/seed42 trước đo, cases.json, model-calls.json và kết quả từng nguồn/nhóm/ngôn ngữ. Thứ tự hai nhánh luân phiên; không retry để chọn kết quả thuận lợi. Snapshot Ollama không phải peak RAM/VRAM; latency chỉ là phép đo local của lượt này, không suy hiệu năng tổng quát.
 
 ## Kiểm tra nguồn rộng hơn ở tầng rule
 
-Đọc toàn339 NotInject canonical và17 Realistic: rule mới không tạo ứng viên trên339 NotInject; tạo ứng viên ở2 Realistic (hai ca mục tiêu). Đây là kiểm tra rule, chưa phải FPR/recall của pipeline. Các đối chứng human/quoted/negated tổng hợp vẫn phải xét riêng, không lấy kết quả NotInject để phủ nhận lỗi thấy trong model thật. [Bằng chứng rule v2](../results/transfer-candidates-v2-9y6WLU/kiem-tra-nguon-rule.json).
+Đọc toàn339 NotInject canonical và17 Realistic: rule mới không tạo ứng viên trên339 NotInject; tạo ứng viên ở2 Realistic (hai ca mục tiêu). Đây là kiểm tra rule, chưa phải FPR/recall của pipeline. Các đối chứng human/quoted/negated tổng hợp vẫn phải xét riêng, không lấy kết quả NotInject để phủ nhận lỗi thấy trong model thật. [Bằng chứng rule v2](../../../../benchmark/results/transfer-candidates-v2-9y6WLU/kiem-tra-nguon-rule.json).
 
 ## Quyết định và phần còn thiếu
 

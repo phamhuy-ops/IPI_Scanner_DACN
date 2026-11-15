@@ -94,7 +94,7 @@ Có thể khóa riêng pha baseline bằng `--baseline-config <JSON>` với cùn
 
 Runner kiểm tra enum, kiểu dữ liệu và tổ hợp cấu hình trước khi gọi backend/tạo hồ sơ đo. Cấu hình thí nghiệm đã gỡ như stable-alias-v2 bị từ chối ngay; không chấm lỗi cấu hình thành lỗi năng lực model. Snapshot lịch sử là nguồn để tái lập bản thử đã nghỉ dùng.
 
-File mẫu, nhãn và nguồn dữ liệu nằm tại [kho kiểm thử](benchmark/kiem-thu/README.md). Giữ dữ liệu canonical trong `benchmark/data/`; nhãn/ID/nguồn/đáp án không đi vào scanner/model. Các bản sao hoặc biến thể không được cộng thành nguồn độc lập.
+File mẫu, nhãn và nguồn dữ liệu nằm tại [kho kiểm thử](lab/results/baselines/legacy-kiem-thu/README.md). Giữ dữ liệu canonical trong `benchmark/data/`; nhãn/ID/nguồn/đáp án không đi vào scanner/model. Các bản sao hoặc biến thể không được cộng thành nguồn độc lập.
 
 Đã dọn 275 script thử nghiệm chỉ dùng trong các đợt cũ. Alias `benchmark:model-context`, `benchmark:stance`, `benchmark:verifier` đã nghỉ dùng; không dùng lệnh lịch sử để vận hành hiện tại. [ZIP, danh mục hash và cách khôi phục](archive/benchmark-old/don-dep-2026-10-28/README.md) giữ công cụ cũ, các audit overlap cũ và snapshot trùng lặp. Raw, baseline và dataset được giữ nguyên. Các mô tả classifier/adapter/prompt thử nghiệm trong hồ sơ cũ không có nghĩa chúng đã tích hợp vào Agent.
 

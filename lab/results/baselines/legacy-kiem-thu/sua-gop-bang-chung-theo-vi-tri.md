@@ -10,7 +10,7 @@ Hai ca tái hiện ban đầu (tiếng Anh/Việt) thất bại trước sửa: 
 
 Ba kiểm tra pipeline đọc TXT thật đạt, dùng phản hồi model cố định: hai ca tham chiếu span tiếng Anh/Việt và một ca `classic-v1` mặc định với trích dẫn dài hơn bao đúng lệnh thật. Bằng chứng tại vị trí tấn công được hai vai trò xác nhận vẫn được chốt; nghi vấn của ví dụ chưa thống nhất vẫn được giữ unresolved, không biến thành sạch. Đây là kiểm chính sách và luồng xử lý, không phải đo năng lực model.
 
-[Replay](../results/consistency-replay-820RRc/tong-hop.json) phát lại 30 ca/60 phản hồi cũ, không gọi model: không đổi verdict hoặc trạng thái xử lý. Ca tự mâu thuẫn thật case-006 vẫn bị chặn; hai ca output_truncated và bốn lỗi citation vẫn được giữ.
+[Replay](../../../../benchmark/results/consistency-replay-820RRc/tong-hop.json) phát lại 30 ca/60 phản hồi cũ, không gọi model: không đổi verdict hoặc trạng thái xử lý. Ca tự mâu thuẫn thật case-006 vẫn bị chặn; hai ca output_truncated và bốn lỗi citation vẫn được giữ.
 
 Lệnh kiểm tra: `npx vitest run src/ai/agents/document/evidencePosition.test.ts src/ai/agents/document/evidencePosition.integration.test.ts`; `node scripts/replay-agent-consistency.cjs`. Kiểm tra cuối lượt: 354 test, lint, typecheck và build đạt. Build giữ cảnh báo Vite `customResolver`/`freeze` đã có trước.
 
