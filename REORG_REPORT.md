@@ -11,6 +11,7 @@ Thực hiện trực tiếp trên `main`. Tag `pre-reorg-2026-11-15` tại `d3d9
 - Nhật ký (`e76bfedc`, `0b45e3ae`). Commit bản gốc tuần 05 sau đối chiếu SHA-256. Đổi 9 đích đã duyệt, gồm 8 dòng tuần 03 và 1 dòng tuần 05. Đổi ngược đúng 9 đích khôi phục hash gốc của hai file. 17 file khác, gồm 12 ảnh, giữ nguyên SHA-256.
 - Dữ liệu (`ac7c953b`). Chuyển 810 file. Giữ nội dung manifest khóa hash và hỗ trợ tra đường dẫn mới khi đọc. Cả 5 file LFS giữ nguyên pointer và thuộc tính. Chưa có held-out độc lập đã xác nhận.
 - Tóm tắt tuần (`6610998f`). Tạo 24 file cho tuần 01–05 và [mục lục](docs/weekly/README.md). Đối chiếu 28 liên kết đến nhật ký và ảnh.
+- Quy định dự án. Chủ dự án đã duyệt [AGENTS.md](AGENTS.md) bằng tiếng Việt, gồm chính sách hiện có, cấu trúc mới và phạm vi được phép cập nhật link nhật ký.
 
 ## Kiểm chứng
 
@@ -24,7 +25,6 @@ Thực hiện trực tiếp trên `main`. Tag `pre-reorg-2026-11-15` tại `d3d9
 ## Việc còn chờ
 
 - `scripts/organize-benchmark.cjs` giữ ở vị trí cũ, chờ duyệt lưu trữ. Chưa có script mới đưa vào `archive/scripts-passed/`. Công cụ đã đóng gói trước đây có danh mục và hash tại `archive/benchmark-old/`.
-- Bản cập nhật `AGENTS.md` được trình duyệt riêng.
 - Chưa push. Các đường dẫn trong snapshot, manifest khóa hash và hướng dẫn khôi phục có thể phản ánh cây lịch sử.
 
 ## Ánh xạ cuối cùng
