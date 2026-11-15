@@ -9,15 +9,15 @@ Trong tuần, đồ án tập trung cải thiện khả năng phát hiện chỉ
 
 | STT | Nội dung thực hiện | Kết quả đạt được | Minh chứng | Tình trạng |
 |:---:|---|---|---|---|
-| 1 | Thử nghiệm và lựa chọn hướng cải thiện AI. | Bản mô hình được huấn luyện thử vẫn nhận diện sai; chuyển trọng tâm sang cải thiện cách hệ thống xử lý tài liệu. | [Kết quả thử nghiệm](../benchmark/experiments/verifier-pilot-eval-screen-v2/quyet-dinh-v2.json) | Đã đánh giá, chưa sử dụng bản thử. |
-| 2 | Sắp xếp mã nguồn và dữ liệu kiểm tra. | Thu gọn công cụ hỗ trợ từ 308 xuống 34 tệp; tập hợp các nhóm mẫu để dễ tìm và đối chiếu. | [Danh mục mẫu kiểm tra](../benchmark/kiem-thu/README.md) | Đã thực hiện. |
-| 3 | Cải thiện việc chỉ ra đoạn nội dung đáng ngờ. | Kết quả có thể đối chiếu về đúng đoạn trong tài liệu, giảm lỗi trích dẫn sai hoặc nhầm vị trí. | [Báo cáo kiểm tra](../benchmark/experiments/source-review-v1/ket-qua-quoted-task-router.md) | Đã sửa lỗi; tiếp tục kiểm tra. |
-| 4 | Hoàn thiện xử lý sự cố và thông báo tiến độ. | Phân biệt trường hợp có nguy cơ với trường hợp chưa xử lý xong; không kết luận sạch khi quá trình kiểm tra bị lỗi. | [Kết quả xử lý sự cố](../benchmark/experiments/source-review-v1/ket-qua-context-parts-va-ket-noi.md) | Đã bổ sung. |
-| 5 | Cải thiện khả năng hiểu ngữ cảnh. | Bổ sung cách phân biệt lệnh gửi cho AI, hướng dẫn dành cho người và câu tấn công được trích làm ví dụ. | [Báo cáo phân tích ngữ cảnh](../benchmark/experiments/source-review-v1/ket-qua-context-dependency.md) | Đang đánh giá. |
-| 6 | Cải thiện kiểm tra nội dung trang HTML. | Sửa được hai trường hợp bước kiểm tra lại bác nhầm chỉ dẫn độc hại. | [Phân tích lỗi và kết quả](../benchmark/experiments/source-review-v1/ket-qua-tach-source-view.md) | Có tiến bộ, chưa dùng mặc định. |
-| 7 | Đánh giá chất lượng trên các mẫu đã có đáp án. | Đã kiểm tra đủ 96 mẫu; kết quả có cải thiện nhưng chưa đủ căn cứ xác nhận đạt 90%. | [Kết quả đánh giá](../benchmark/experiments/source-review-v1/ket-qua-tach-source-view.md) | Cần cải thiện tiếp. |
+| 1 | Thử nghiệm và lựa chọn hướng cải thiện AI. | Bản mô hình được huấn luyện thử vẫn nhận diện sai; chuyển trọng tâm sang cải thiện cách hệ thống xử lý tài liệu. | [Kết quả thử nghiệm](../lab/experiments/verifier-pilot-eval-screen-v2/quyet-dinh-v2.json) | Đã đánh giá, chưa sử dụng bản thử. |
+| 2 | Sắp xếp mã nguồn và dữ liệu kiểm tra. | Thu gọn công cụ hỗ trợ từ 308 xuống 34 tệp; tập hợp các nhóm mẫu để dễ tìm và đối chiếu. | [Danh mục mẫu kiểm tra](../lab/results/baselines/legacy-kiem-thu/README.md) | Đã thực hiện. |
+| 3 | Cải thiện việc chỉ ra đoạn nội dung đáng ngờ. | Kết quả có thể đối chiếu về đúng đoạn trong tài liệu, giảm lỗi trích dẫn sai hoặc nhầm vị trí. | [Báo cáo kiểm tra](../lab/experiments/source-review-v1/ket-qua-quoted-task-router.md) | Đã sửa lỗi; tiếp tục kiểm tra. |
+| 4 | Hoàn thiện xử lý sự cố và thông báo tiến độ. | Phân biệt trường hợp có nguy cơ với trường hợp chưa xử lý xong; không kết luận sạch khi quá trình kiểm tra bị lỗi. | [Kết quả xử lý sự cố](../lab/experiments/source-review-v1/ket-qua-context-parts-va-ket-noi.md) | Đã bổ sung. |
+| 5 | Cải thiện khả năng hiểu ngữ cảnh. | Bổ sung cách phân biệt lệnh gửi cho AI, hướng dẫn dành cho người và câu tấn công được trích làm ví dụ. | [Báo cáo phân tích ngữ cảnh](../lab/experiments/source-review-v1/ket-qua-context-dependency.md) | Đang đánh giá. |
+| 6 | Cải thiện kiểm tra nội dung trang HTML. | Sửa được hai trường hợp bước kiểm tra lại bác nhầm chỉ dẫn độc hại. | [Phân tích lỗi và kết quả](../lab/experiments/source-review-v1/ket-qua-tach-source-view.md) | Có tiến bộ, chưa dùng mặc định. |
+| 7 | Đánh giá chất lượng trên các mẫu đã có đáp án. | Đã kiểm tra đủ 96 mẫu; kết quả có cải thiện nhưng chưa đủ căn cứ xác nhận đạt 90%. | [Kết quả đánh giá](../lab/experiments/source-review-v1/ket-qua-tach-source-view.md) | Cần cải thiện tiếp. |
 | 8 | Kiểm tra tài liệu PDF và Word tiếng Việt thật. | Đọc được văn bản từ hai PDF và hai tệp Word; tài liệu dài vẫn còn phần chưa được phân tích đầy đủ. | [Kết quả bốn tài liệu](../benchmark/results/long-pipeline-45s-MAI5yq/validation-addendum.json) | Đã thử, chưa hoàn tất đánh giá. |
-| 9 | Giảm tải lưu trữ và kiểm tra hoạt động sau sửa đổi. | Chuyển dữ liệu lớn sang ổ E; các kiểm tra chức năng và quá trình tạo bản chạy đều đạt. | [Báo cáo kiểm tra cuối](../benchmark/experiments/source-review-v1/ket-qua-tach-source-view.md) | Đã thực hiện. |
+| 9 | Giảm tải lưu trữ và kiểm tra hoạt động sau sửa đổi. | Chuyển dữ liệu lớn sang ổ E; các kiểm tra chức năng và quá trình tạo bản chạy đều đạt. | [Báo cáo kiểm tra cuối](../lab/experiments/source-review-v1/ket-qua-tach-source-view.md) | Đã thực hiện. |
 
 ## Chi tiết nội dung công việc
 

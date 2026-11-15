@@ -31,7 +31,7 @@ Tách riêng đoạn có nghi vấn giúp Verifier hoàn tất ca dài từng ti
 
 ### 4. Rà dữ liệu đánh giá
 
-Đã đối chiếu 48 ca với nguồn và rà nhãn 18 email LLMail. Trong 18 email, 14 ca đã xuất hiện trong log teacher forcing. Bốn ca IPI cùng một nhóm hành vi. Benchmark có thể kiểm tra ID, nhóm và hash trước khi gọi model. [Lịch sử LLMail](../benchmark/experiments/verifier-eligibility-v12/lich-su-model-llmail-tuan-05.json)
+Đã đối chiếu 48 ca với nguồn và rà nhãn 18 email LLMail. Trong 18 email, 14 ca đã xuất hiện trong log teacher forcing. Bốn ca IPI cùng một nhóm hành vi. Benchmark có thể kiểm tra ID, nhóm và hash trước khi gọi model. [Lịch sử LLMail](../lab/experiments/verifier-eligibility-v12/lich-su-model-llmail-tuan-05.json)
 
 Cấu hình mặc định đạt Recall **1/6** trên bộ 12 nhóm tách khỏi dev nhưng cùng họ nguồn BIPIA. [Kết quả 12 ca](../benchmark/results/round-one-eval-YrU4YS/summary.json)
 
