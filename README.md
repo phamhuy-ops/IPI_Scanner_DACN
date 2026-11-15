@@ -110,6 +110,8 @@ File mẫu, nhãn và nguồn dữ liệu nằm tại [kho kiểm thử](lab/res
 
 [Tuần 3](<kế hoạch - nhật ký tuần/tuan-03.md>) ghi phần đã dọn và đề xuất chia công việc thành chất lượng Agent, demo/pipeline thực tế và báo cáo/bàn giao. Ưu tiên 1 vẫn mở theo [cổng hoàn thành](docs/planning/cong-hoan-thanh-uu-tien-1.md); không coi test/build đạt là nhận diện đạt90%.
 
+Xem [mục lục tóm tắt tuần 01–05](docs/weekly/README.md) để tra công việc, kết quả thử nghiệm và liên kết về nhật ký gốc.
+
 Xem [hiện trạng](docs/reports/tong-hop-hien-trang.md), [việc cần làm](docs/planning/cong-viec-can-lam.md) và [mục lục tài liệu](docs/README.md). Không train hoặc tự tải/đổi model trong kế hoạch hiện tại; fine-tuning chỉ là hướng cuối khi các cải thiện luồng có đối chứng không đáp ứng.
 
 Các lệnh dữ liệu và kiểm tra lưu trữ còn giữ trong `package.json`; chúng không tự cho phép mở lại huấn luyện. Hướng dẫn môi trường riêng tại [lưu trữ trên E](docs/guides/luu-tru-huan-luyen-tren-o-e.md).
