@@ -57,15 +57,17 @@ async function main() {
     settings[args[i]] = args[i + 1];
   }
   const baseline = settings['--baseline'] || 'benchmark/results/agent-flow-nv9OXO';
+  const isConfigFile = file => file.endsWith('.json')
+    && (file.startsWith('benchmark/') || file.startsWith('lab/experiments/'));
   const candidateConfig = settings['--candidate-config'] && path.relative(root, path.resolve(root, settings['--candidate-config'])).replaceAll('\\', '/');
-  if (candidateConfig && (!candidateConfig.startsWith('benchmark/') || !candidateConfig.endsWith('.json'))) throw Error('Cấu hình thử phải là JSON trong benchmark.');
+  if (candidateConfig && !isConfigFile(candidateConfig)) throw Error('Cấu hình thử phải là JSON trong lab/experiments hoặc benchmark.');
   const pipelineOptions = candidateConfig ? JSON.parse(fs.readFileSync(path.join(root, candidateConfig), 'utf8')) : {};
   validatePipelineConfig(pipelineOptions, 'Cấu hình candidate');
   if (settings['--stop-on-new-fp'] && settings['--stop-on-new-fp'] !== 'yes') throw Error('Cờ dừng FP phải là yes.');
   if (settings['--paired'] && settings['--paired'] !== 'yes') throw Error('Cờ paired phải là yes.');
   const paired = settings['--paired'] === 'yes';
   const baselineConfig = settings['--baseline-config'] && path.relative(root, path.resolve(root, settings['--baseline-config'])).replaceAll('\\', '/');
-  if (baselineConfig && (!paired || !baselineConfig.startsWith('benchmark/') || !baselineConfig.endsWith('.json'))) throw Error('Cấu hình baseline phải là JSON trong benchmark và dùng paired.');
+  if (baselineConfig && (!paired || !isConfigFile(baselineConfig))) throw Error('Cấu hình baseline phải là JSON trong lab/experiments hoặc benchmark và dùng paired.');
   const baselinePipelineOptions = baselineConfig ? JSON.parse(fs.readFileSync(path.join(root, baselineConfig), 'utf8')) : {};
   validatePipelineConfig(baselinePipelineOptions, 'Cấu hình baseline');
   const verifierModel=settings['--verifier-model'];
@@ -80,7 +82,11 @@ async function main() {
   if (detectorModel && (!paired || detectorModel !== 'qwen3:4b-instruct-2507-q4_K_M')) throw Error('Chỉ hỗ trợ đối chứng Detector Qwen3 4B có sẵn đã được người dùng cho phép, bắt buộc paired.');
   const baseDetector = baselineDetectorModel || 'gemma3:1b', nextDetector = detectorModel || baseDetector;
   const exactRequestRequired = baseDetector === nextDetector && JSON.stringify(baselinePipelineOptions) === JSON.stringify(pipelineOptions);
-  if (!path.resolve(root, baseline).startsWith(path.join(root, 'benchmark', 'results') + path.sep)) throw Error('Baseline phải ở benchmark/results.');
+  const baselinePath = path.resolve(root, baseline);
+  if (!['benchmark/results', 'lab/results/runs', 'lab/results/baselines']
+    .some(directory => baselinePath.startsWith(path.join(root, directory) + path.sep))) {
+    throw Error('Baseline phải ở lab/results/runs, lab/results/baselines hoặc benchmark/results.');
+  }
   const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
   const oldPlan = read(baseline + '/giao-thuc.json'), sourceRows = read(baseline + '/cases.json');
   const baselineArm=settings['--baseline-arm']||'candidate';
@@ -93,7 +99,7 @@ async function main() {
   const cases = manifest.cases.map(item => ({ ...item, evaluation_group: item.evaluation_group || item.group_id }));
   if (manifestFile && !paired) validateHistoricalManifest(manifest.cases, oldPlan, oldRows, [baseDetector, selectedVerifier]);
   const latencyFile = settings['--latency-policy'] && path.relative(root, path.resolve(root, settings['--latency-policy'])).replaceAll('\\', '/');
-  if (latencyFile && (!latencyFile.startsWith('benchmark/') || !latencyFile.endsWith('.json'))) throw Error('Policy latency phải ở benchmark.');
+  if (latencyFile && !isConfigFile(latencyFile)) throw Error('Policy latency phải là JSON trong lab/experiments hoặc benchmark.');
   const latencyPolicy = latencyFile ? read(latencyFile) : undefined;
   if (latencyPolicy) latencyAssessment(cases, [], [], latencyPolicy);
   if (settings['--stop-on-proven-latency'] && (settings['--stop-on-proven-latency'] !== 'yes' || !paired || !latencyPolicy)) throw Error('Dừng latency cần yes, paired và policy đã khóa.');

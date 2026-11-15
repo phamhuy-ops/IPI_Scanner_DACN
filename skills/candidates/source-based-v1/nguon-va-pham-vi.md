@@ -39,22 +39,22 @@ Chỉ phần sau `## Chỉ dẫn` của đúng một skill được dự kiến 
 
 Giữ nguyên baseline 0.6.0 trong harness và ba bản gốc. Đo từng nhiệm vụ một trên dev khóa trước; không đổi đồng thời model, parser, prompt và cách chấm. Có đối chứng tấn công/sạch gần nhau, Việt/Anh, câu trích có/không có yêu cầu áp dụng, nhận định đủ/thiếu/mâu thuẫn và biến thể chưa dùng để soạn. Bộ dev cũ đã dùng chọn nhiều lần, không coi là holdout.
 
-Đã đo skill bằng chứng theo phương pháp tham khảo NV-FACT và cùng Qwen3 4B Verifier ở hai nhánh: đủ 24 request, cả hai 7/12, sửa một ca và mất một ca cũ đúng, p95 không đạt trần. Chưa chọn bản mới. [Báo cáo và bằng chứng](../../../benchmark/experiments/skills-v1/evidence-sourced-ket-qua.md) lưu cả lỗi hiểu nghĩa và giới hạn, không lấy nguồn uy tín làm chứng nhận hiệu quả.
+Đã đo skill bằng chứng theo phương pháp tham khảo NV-FACT và cùng Qwen3 4B Verifier ở hai nhánh: đủ 24 request, cả hai 7/12, sửa một ca và mất một ca cũ đúng, p95 không đạt trần. Chưa chọn bản mới. [Báo cáo và bằng chứng](../../../lab/experiments/skills-v1/evidence-sourced-ket-qua.md) lưu cả lỗi hiểu nghĩa và giới hạn, không lấy nguồn uy tín làm chứng nhận hiệu quả.
 
 Tiếp tục lưu raw, code/prompt/model/seed/lệnh, lỗi, số đo từng nguồn/nhóm/ngôn ngữ, precision/recall/F1/FPR/confusion, abstention, token, latency và tài nguyên. Sau chọn cấu hình mới khóa rồi kiểm chứng độc lập và pipeline đầy đủ. Không đưa gói vào Agent chỉ vì đúng định dạng, nguồn uy tín hoặc một bộ nhỏ đạt điểm tốt. Ưu tiên 1 vẫn mở.
 
 ## Tổng hợp sau khi đo đủ ba nhiệm vụ
 
-Đã hoàn tất thêm 48 request: người nhận 9/12 → 1/12 (6 lỗi tham chiếu/đầu ra), ngữ cảnh 4/12 → 3/12 (mỗi nhánh 1 lỗi thiếu target trong evidenceRefs). Bằng chứng giữ kết quả 7/12 → 7/12 ở 24 request trước. Cả ba bản source-based-v1 bị loại khỏi lựa chọn tích hợp; giữ các bản gốc và baseline thử nghiệm 0.6.0. [Báo cáo lỗi từng ca, chi phí và thứ tự sửa](../../../benchmark/experiments/skills-v1/tong-hop-loi-source-based-v1.md). Đây là dev tự soạn, target cấp trước; chưa phải tỷ lệ Agent hoặc kiểm chứng độc lập.
+Đã hoàn tất thêm 48 request: người nhận 9/12 → 1/12 (6 lỗi tham chiếu/đầu ra), ngữ cảnh 4/12 → 3/12 (mỗi nhánh 1 lỗi thiếu target trong evidenceRefs). Bằng chứng giữ kết quả 7/12 → 7/12 ở 24 request trước. Cả ba bản source-based-v1 bị loại khỏi lựa chọn tích hợp; giữ các bản gốc và baseline thử nghiệm 0.6.0. [Báo cáo lỗi từng ca, chi phí và thứ tự sửa](../../../lab/experiments/skills-v1/tong-hop-loi-source-based-v1.md). Đây là dev tự soạn, target cấp trước; chưa phải tỷ lệ Agent hoặc kiểm chứng độc lập.
 
 ## Đợt sửa 1.1–1.4 và khôi phục
 
-Đã đo lại 12 ca cũ + 6 biến thể mỗi nhiệm vụ. Bản mới nhất đạt 12/18 người nhận, 13/18 ngữ cảnh, 11/18 bằng chứng; không gộp thành tỷ lệ Agent. Người nhận/ngữ cảnh có regression; bằng chứng thiếu dữ kiện vẫn sai 6/6, ngữ cảnh bị ép đóng lý do giữa câu khi thêm trần ký tự. Đã khôi phục nội dung ba bản nháp 1.0 trước đợt sửa, chỉ giữ snapshot ứng viên trong kết quả trên E. [Báo cáo đầy đủ](../../../benchmark/experiments/skills-v1/sua-loi-ba-skill.md). Không đổi các skill gốc hoặc Agent mặc định.
+Đã đo lại 12 ca cũ + 6 biến thể mỗi nhiệm vụ. Bản mới nhất đạt 12/18 người nhận, 13/18 ngữ cảnh, 11/18 bằng chứng; không gộp thành tỷ lệ Agent. Người nhận/ngữ cảnh có regression; bằng chứng thiếu dữ kiện vẫn sai 6/6, ngữ cảnh bị ép đóng lý do giữa câu khi thêm trần ký tự. Đã khôi phục nội dung ba bản nháp 1.0 trước đợt sửa, chỉ giữ snapshot ứng viên trong kết quả trên E. [Báo cáo đầy đủ](../../../lab/experiments/skills-v1/sua-loi-ba-skill.md). Không đổi các skill gốc hoặc Agent mặc định.
 
 ## Ngày 05/11: thuộc Ưu tiên 1, chưa tích hợp
 
-Đã thử cách hỏi độc lập, bộ rà thành phần, đối chứng model Verifier đã được phép và thay hợp đồng đầu ra để sinh lý do trước nhãn. Không bản nào giữ được mọi ca baseline đúng và không lỗi mới; khôi phục nội dung bản nháp bằng chứng trước đợt sửa. [Kết quả và raw](../../../benchmark/experiments/skills-v1/uu-tien-1-skill-evidence-2026-11-05.md). Không đổi Agent mặc định hoặc coi skill đã sẵn sàng.
+Đã thử cách hỏi độc lập, bộ rà thành phần, đối chứng model Verifier đã được phép và thay hợp đồng đầu ra để sinh lý do trước nhãn. Không bản nào giữ được mọi ca baseline đúng và không lỗi mới; khôi phục nội dung bản nháp bằng chứng trước đợt sửa. [Kết quả và raw](../../../lab/experiments/skills-v1/uu-tien-1-skill-evidence-2026-11-05.md). Không đổi Agent mặc định hoặc coi skill đã sẵn sàng.
 
 ## Yêu cầu mới: giữ checkpoint tổng cao nhất
 
-Đã chọn body người nhận 1.1 (13/18), ngữ cảnh 1.4 kèm hợp đồng bound/capped (13/18), bằng chứng 1.1 (14/18, một lỗi). Metadata/hợp đồng và snapshot nằm trong selected-profiles.json. Đây là mốc phát triển, chưa chốt chất lượng ngữ nghĩa hoặc bật Agent; ngữ cảnh còn lý do kết thúc giữa câu. Hai lượt sửa từ 14/18 chưa vượt mốc, nên giữ nguyên 14/18. [Báo cáo và chính sách mới](../../../benchmark/experiments/skills-v1/checkpoint-tot-nhat-2026-11-05.md).
+Đã chọn body người nhận 1.1 (13/18), ngữ cảnh 1.4 kèm hợp đồng bound/capped (13/18), bằng chứng 1.1 (14/18, một lỗi). Metadata/hợp đồng và snapshot nằm trong selected-profiles.json. Đây là mốc phát triển, chưa chốt chất lượng ngữ nghĩa hoặc bật Agent; ngữ cảnh còn lý do kết thúc giữa câu. Hai lượt sửa từ 14/18 chưa vượt mốc, nên giữ nguyên 14/18. [Báo cáo và chính sách mới](../../../lab/experiments/skills-v1/checkpoint-tot-nhat-2026-11-05.md).

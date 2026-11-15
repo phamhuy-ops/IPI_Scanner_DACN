@@ -51,16 +51,16 @@ Các cổng tổng hợp trên toàn bộ chưa được đánh giá đầy đ�
 Thực thi: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/data/python-verifier.ps1 scripts/eval_verifier_consistency.py`;
 chấm: `node scripts/score-verifier-consistency.cjs`. Các lệnh từ chối ghi đè
 đợt hiện tại; không chạy lại để tìm kết quả tốt hơn. Xem
-[kết luận dừng sớm](../../benchmark/experiments/verifier-consistency-eval-v1/ket-luan.json).
+[kết luận dừng sớm](../../lab/experiments/verifier-consistency-eval-v1/ket-luan.json).
 
-[Giao thức đã khóa](../../benchmark/experiments/verifier-consistency-candidate-v1/giao-thuc-da-khoa.json)
-và [ứng viên cụ thể](../../benchmark/experiments/verifier-consistency-candidate-v1/ung-vien.json)
+[Giao thức đã khóa](../../lab/experiments/verifier-consistency-candidate-v1/giao-thuc-da-khoa.json)
+và [ứng viên cụ thể](../../lab/experiments/verifier-consistency-candidate-v1/ung-vien.json)
 giữ suffix, cổng và hash. Kiểm tra bằng
 `node scripts/freeze-verifier-consistency-candidate.cjs --check`.
 
 ## Chuẩn bị dữ liệu sau kiểm toán
 
-Đã lập [ma trận bổ sung](../../benchmark/experiments/verifier-supervision-review-v1/ma-tran-bo-sung.json)
+Đã lập [ma trận bổ sung](../../lab/experiments/verifier-supervision-review-v1/ma-tran-bo-sung.json)
 với 16 vị trí neo trên bốn nhóm train cha, hai ngôn ngữ. Bốn loại cần soạn:
 
 - Yêu cầu AI thông thường, không có chứng cứ chuyển hướng trong setup text-only.
@@ -91,14 +91,14 @@ metadata hoặc thiếu ô mục tiêu. Tổng 16 confirmed/20 dismissed/12 unce
 24 Việt/24 Anh; vẫn chỉ bốn nhóm train cha. Audit toàn kho v21 kiểm kê
 102 file/68.730 văn bản chuẩn hóa khác nhau; nhóm mới chỉ nối đúng cha cũ,
 chưa loại hết tương đồng ngữ nghĩa. Chưa duyệt độc lập hoặc ghép train.
-Xem [tiến độ ma trận](../../benchmark/experiments/verifier-supervision-batch-audit-v4/tien-do-ma-tran.json)
-và [bảng rà gộp](../../benchmark/experiments/verifier-supervision-pool-review-v1/ket-qua.json).
+Xem [tiến độ ma trận](../../lab/experiments/verifier-supervision-batch-audit-v4/tien-do-ma-tran.json)
+và [bảng rà gộp](../../lab/experiments/verifier-supervision-pool-review-v1/ket-qua.json).
 Đây là phạm vi soạn thử, không phải số lượng chứng minh đủ để train. Tất cả
 giữ nhóm cha; không đưa dev đã đo vào train hoặc coi là nguồn độc lập mới.
 
 Đã đọc và đề xuất reason cụ thể hơn cho 12 nguồn train, giữ stance/context;
 24 biểu diễn thử qua parser, gồm 16 target có reason đề xuất và 8 target
-rỗng giữ nguyên. [Đề xuất reason](../../benchmark/experiments/verifier-supervision-review-v1/de-xuat-ly-do.json)
+rỗng giữ nguyên. [Đề xuất reason](../../lab/experiments/verifier-supervision-review-v1/de-xuat-ly-do.json)
 ghi span bằng chứng và hash; chưa áp dụng, không chuyển duyệt người cũ sang
 bản sửa. Bước tiếp rà ngữ nghĩa theo hàng chờ 48 mẫu, nhất là các ca
 AI active/none và uncertain, rồi lập phương án phát hành/thay thế có kiểm
@@ -120,7 +120,7 @@ hiện tại; số liệu mới xem bảng hiện trạng. Giữ để đối ch
 - Đo cùng base/backend trước và sau adapter; giữ các thành phần khác để so sánh. Báo cáo precision/recall/F1/FPR, confusion counts, abstention, lỗi, latency và RAM/VRAM; sau đó đo toàn pipeline.
 - NF4 huấn luyện và GGUF quantization triển khai là hai bước khác nhau, cần đo tương ứng.
 
-[Kế hoạch máy đọc](../../benchmark/experiments/verifier-finetune-pilot-v1/ke-hoach.json)
+[Kế hoạch máy đọc](../../lab/experiments/verifier-finetune-pilot-v1/ke-hoach.json)
 giữ chi tiết tái lập; [lưu trữ ổ E](../guides/luu-tru-huan-luyen-tren-o-e.md)
 giữ lệnh sử dụng. Các mốc cũ được lưu trong ZIP lịch sử, không trộn vào
 trạng thái hiện tại. Xem [việc cần làm](cong-viec-can-lam.md).

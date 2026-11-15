@@ -14,7 +14,7 @@ Theo yêu cầu mới, ba skill là công việc con của Ưu tiên 1, không p
 - Sau đó khóa cấu hình, kiểm chứng dữ liệu độc lập, nối bằng chế độ thử tắt mặc định và đo toàn pipeline có/không có skill; chưa qua kiểm chứng thì không bật cho người dùng.
 - Cổng hoàn thành Ưu tiên 1 giữ nguyên: mục tiêu ≥90% trên toàn bộ bộ đánh giá có nhãn đã khóa, kiểm chứng độc lập và pipeline/coverage thực tế. needs_review/lỗi ở benign/malicious không tính đúng; uncertain cần bất định có bằng chứng. Không train, tải/đổi model, nới validator hay đưa nhãn/metadata vào input.
 
-Theo yêu cầu mới, đã giữ các checkpoint phát triển: người nhận 13/18, ngữ cảnh 13/18, bằng chứng 14/18. Hai lượt sửa tiếp từ 14/18 đạt 14/18 (hai lỗi) và 11/18; giữ bản 14/18 có một lỗi, không quay về bản 10/18. Agent mặc định không đổi. [Checkpoint và bằng chứng](../../benchmark/experiments/skills-v1/checkpoint-tot-nhat-2026-11-05.md).
+Theo yêu cầu mới, đã giữ các checkpoint phát triển: người nhận 13/18, ngữ cảnh 13/18, bằng chứng 14/18. Hai lượt sửa tiếp từ 14/18 đạt 14/18 (hai lỗi) và 11/18; giữ bản 14/18 có một lỗi, không quay về bản 10/18. Agent mặc định không đổi. [Checkpoint và bằng chứng](../../lab/experiments/skills-v1/checkpoint-tot-nhat-2026-11-05.md).
 
 Cập nhật 2026-10-28. **Chưa hoàn thành.**
 
@@ -36,7 +36,7 @@ Quyết định và giới hạn tại `benchmark/results/action-audit-Q7bwE4/qu
 
 Theo yêu cầu mới, ưu tiên sửa orchestration và đầu ra trước fine-tuning, không train model. Detector/Verifier hiện ghi `batchFailures` với role, model, mã lỗi, thời gian và file/dòng/ID chunk nguồn. Lỗi JSON/schema/trích dẫn được cô lập, tiếp tục batch khác trong deadline; lỗi kết nối/timeout vẫn dừng. Batch lỗi không được áp dụng finding hoặc tính là đã rà; phát hiện hai vai trò xác nhận vẫn giữ kèm lỗi, phần còn lại không thành sạch. UI hiện lý do và hướng xử lý cho từng loại lỗi.
 
-Baseline trước sửa: 48 test pipeline/UI đạt; hai kiểm thử mới tái hiện dừng sớm và thiếu chẩn đoán, cùng thất bại trước sửa. Sau sửa: 284 test toàn ứng dụng đạt, typecheck/lint/build đạt. Ba ca tích hợp trích xuất bốn file TXT/HTML thật, năm chunk, với phản hồi model cố định đạt: sạch có batch lỗi vẫn cần xem xét; IPI chỉ có Verifier xác nhận vẫn chưa giải quyết; IPI được cả hai xác nhận giữ phát hiện dù batch khác lỗi. Không có lượt model/train mới, chưa đo latency/resource model thực hoặc UI native/PDF/DOCX. Chi tiết lệnh và giới hạn tại `benchmark/experiments/runtime-batch-recovery-v1/kiem-chung.json`. Ưu tiên 1 vẫn mở.
+Baseline trước sửa: 48 test pipeline/UI đạt; hai kiểm thử mới tái hiện dừng sớm và thiếu chẩn đoán, cùng thất bại trước sửa. Sau sửa: 284 test toàn ứng dụng đạt, typecheck/lint/build đạt. Ba ca tích hợp trích xuất bốn file TXT/HTML thật, năm chunk, với phản hồi model cố định đạt: sạch có batch lỗi vẫn cần xem xét; IPI chỉ có Verifier xác nhận vẫn chưa giải quyết; IPI được cả hai xác nhận giữ phát hiện dù batch khác lỗi. Không có lượt model/train mới, chưa đo latency/resource model thực hoặc UI native/PDF/DOCX. Chi tiết lệnh và giới hạn tại `lab/experiments/runtime-batch-recovery-v1/kiem-chung.json`. Ưu tiên 1 vẫn mở.
 
 ## Sửa lỗi đối chiếu phạm vi file yêu cầu
 
@@ -60,7 +60,7 @@ Pilot đề xuất chỉ học head3 trên encoder PIGuard frozen bằng CPU, m�
 
 240 kiểm thử, lint/typecheck/build đạt; đây là bằng chứng triển khai đúng phạm vi, không phải tăng an toàn. Code/bộ đo/model/seed được khóa trước gọi. Gồm 8 dev cũ và 4 biến thể mới nhãn AI, chưa phải holdout độc lập; chưa đo PDF/DOCX dài/UI.
 
-**Quyết định kiến trúc vận hành:** giữ luồng mặc định, Agent chỉ hỗ trợ rà soát; không tiếp tục sửa prompt của ứng viên này. Chất lượng model hiểu người nhận/bao khung và khả năng tạo ứng viên vẫn chưa đạt. Phần triển khai/đối chứng/chốt ứng viên đã hoàn tất, Ưu tiên 1 chưa hoàn thành. Không tự mở đợt prompt/model/train tiếp. Kết quả: `benchmark/experiments/split-role-pipeline-v1/{giao-thuc-truoc-do,tong-hop,quyet-dinh}.json`.
+**Quyết định kiến trúc vận hành:** giữ luồng mặc định, Agent chỉ hỗ trợ rà soát; không tiếp tục sửa prompt của ứng viên này. Chất lượng model hiểu người nhận/bao khung và khả năng tạo ứng viên vẫn chưa đạt. Phần triển khai/đối chứng/chốt ứng viên đã hoàn tất, Ưu tiên 1 chưa hoàn thành. Không tự mở đợt prompt/model/train tiếp. Kết quả: `lab/experiments/split-role-pipeline-v1/{giao-thuc-truoc-do,tong-hop,quyet-dinh}.json`.
 
 ## Các mốc trước để đối chiếu
 

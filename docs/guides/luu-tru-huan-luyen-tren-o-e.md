@@ -85,7 +85,7 @@ shell gọi client.
 
 Báo cáo kiểm tra ở `E:\IPI-Training\logs\ollama-storage-check.json` và
 `training-storage-check.json`; bản lưu trong dự án tại
-`benchmark/experiments/storage-drive-e-v1/ket-qua.json`.
+`lab/experiments/storage-drive-e-v1/ket-qua.json`.
 
 ## Kết quả và giới hạn
 

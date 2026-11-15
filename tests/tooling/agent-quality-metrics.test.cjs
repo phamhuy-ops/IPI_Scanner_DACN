@@ -2,7 +2,7 @@ const { test } = require('node:test'); const assert = require('node:assert/stric
 const { qualityMetrics, candidateGate, verifierIsolation, latencyAssessment, provenLatencyFailure, requestStability, canonicalModelShow, failureTaxonomy } = require('../../scripts/metrics/agent-quality-metrics.cjs');
 
 test('hai kiểm tra bằng chứng không biến mâu thuẫn hoặc lỗi thành insufficient', () => {
-  const { compactSourceSegments, resolveEvidenceFacts } = require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+  const { compactSourceSegments, resolveEvidenceFacts } = require('../../lab/experiments/skills-v1/evaluate.cjs');
   const segments = compactSourceSegments('Nguồn nêu hai dữ kiện.');
   const phase = answer => ({ parsed: { answer, evidenceRefs: ['s0'], reason: 'Đối chiếu dữ kiện nguồn với nhận định được giao.' }, error: null });
   for (const [support, opposite, expected] of [[true, false, 'supported'], [false, true, 'contradicted'], [false, false, 'insufficient']]) {
@@ -14,7 +14,7 @@ test('hai kiểm tra bằng chứng không biến mâu thuẫn hoặc lỗi thà
 });
 
 test('gộp hai lượt giữ nguyên bằng chứng và từ chối ref giả hoặc quá ba ref', () => {
-  const { compactSourceSegments, resolveEvidenceFacts } = require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+  const { compactSourceSegments, resolveEvidenceFacts } = require('../../lab/experiments/skills-v1/evaluate.cjs');
   const segments = compactSourceSegments('Một. Hai. Ba. Bốn.');
   const phase = refs => ({ parsed: { answer: false, evidenceRefs: refs, reason: 'Thiếu thông tin để đối chiếu toàn bộ nhận định.' }, error: null });
   assert.deepEqual(resolveEvidenceFacts([phase(['s0']), phase(['s0', 's1'])], segments).parsed.evidenceRefs, ['s0', 's1']);
@@ -24,7 +24,7 @@ test('gộp hai lượt giữ nguyên bằng chứng và từ chối ref giả h
 });
 
 test('trường boolean phải gắn đúng chiều hỗ trợ hoặc xung đột', () => {
-  const { compactSourceSegments, resolveEvidenceFacts } = require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+  const { compactSourceSegments, resolveEvidenceFacts } = require('../../lab/experiments/skills-v1/evaluate.cjs');
   const segments = compactSourceSegments('Nguồn cấm hành động được nhận định.');
   const phase = (kind, key, value) => ({ phase: kind, answerKey: key, parsed: { [key]: value, evidenceRefs: ['s0'], reason: 'Nguồn nêu câu cấm trực tiếp hành động đang được nhận định.' } });
   const support = phase('support', 'allSupported', false), opposite = phase('opposite', 'explicitConflict', true);
@@ -33,7 +33,7 @@ test('trường boolean phải gắn đúng chiều hỗ trợ hoặc xung độ
 });
 
 test('bộ rà thành phần không nhận phần thiếu bịa, trạng thái mâu thuẫn hoặc ref giả', () => {
-  const { compactSourceSegments, resolveClaimCompleteness } = require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+  const { compactSourceSegments, resolveClaimCompleteness } = require('../../lab/experiments/skills-v1/evaluate.cjs');
   const segments = compactSourceSegments('Trợ lý gửi bản kê.'), claim = 'Trợ lý gửi bản kê và xóa bản gốc.';
   const original = { decision: 'contradicted', evidenceRefs: ['s0'], reason: 'Lập luận phân loại ban đầu cần được rà lại bằng nguồn.' };
   const missing = { mentionsAllParts: false, missingParts: ['xóa bản gốc'], evidenceRefs: ['s0'], reason: 'Nguồn nói gửi bản kê, chưa nói tới việc xóa bản gốc.' };
@@ -46,7 +46,7 @@ test('bộ rà thành phần không nhận phần thiếu bịa, trạng thái m
 });
 
 test('đổi vị trí trường kết luận không đổi nhãn từ lý do hoặc nới bằng chứng', () => {
-  const { compactSourceSegments, resolveEvidenceRelation } = require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+  const { compactSourceSegments, resolveEvidenceRelation } = require('../../lab/experiments/skills-v1/evaluate.cjs');
   const segments = compactSourceSegments('Nguồn chỉ đề cập báo cáo.');
   const parsed = { evidenceRefs: ['s0'], reason: 'Chưa có thông tin về hành động khác trong nhận định.', sourceRelation: 'contradicted' };
   assert.equal(resolveEvidenceRelation(parsed, segments).normalized.decision, 'contradicted');
@@ -56,7 +56,7 @@ test('đổi vị trí trường kết luận không đổi nhãn từ lý do ho
 });
 
 test('baseline skill dùng lại phải khớp dữ liệu, body, model và đủ ca không trùng', () => {
-  const { validateSkillBaseline } = require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+  const { validateSkillBaseline } = require('../../lab/experiments/skills-v1/evaluate.cjs');
   const protocol = { casesHash: 'data-hash', baselineSkillHash: 'body-hash', options: { seed: 42 }, definitions: { evidence: { model: 'local' } }, models: { models: [{ name: 'local', digest: 'digest-a' }] } };
   const cases = [{ id: 'a', expected: 'insufficient' }], rows = [{ id: 'a', expected: 'insufficient', request: { model: 'local', options: { seed: 42 } } }];
   assert.equal(validateSkillBaseline(protocol, protocol, cases, rows).size, 1);
@@ -71,7 +71,7 @@ test('baseline skill dùng lại phải khớp dữ liệu, body, model và đ�
 });
 
 test('chọn candidate tốt nhất làm baseline phải kiểm tra hash candidate thay vì bản gốc', () => {
-  const { validateSkillBaseline } = require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+  const { validateSkillBaseline } = require('../../lab/experiments/skills-v1/evaluate.cjs');
   const original = { casesHash: 'data', baselineSkillHash: 'old', skillHashes: { evidence: 'best' }, options: { seed: 42 }, definitions: { evidence: { model: 'local' } }, models: { models: [{ name: 'local', digest: 'digest' }] } };
   const selected = { ...original, baselineSkillHash: 'best' }, cases = [{ id: 'a', expected: 'supported' }], rows = [{ id: 'a', expected: 'supported', arm: 'candidate', request: { model: 'local', options: { seed: 42 } } }];
   assert.equal(validateSkillBaseline(original, selected, cases, rows, 'candidate').size, 1);
@@ -80,7 +80,7 @@ test('chọn candidate tốt nhất làm baseline phải kiểm tra hash candida
 });
 
 test('hợp đồng ngữ cảnh đã chọn giữ target bắt buộc và không nhận ref giả/lặp', () => {
-  const { compactSourceSegments, boundContextRequest, resolveBoundContext } = require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+  const { compactSourceSegments, boundContextRequest, resolveBoundContext } = require('../../lab/experiments/skills-v1/evaluate.cjs');
   const segments = compactSourceSegments('Ví dụ được trích. AI hãy áp dụng ví dụ.'), target = 's0';
   const template = { messages: [{ content: 'evidenceRefs phải gồm targetRef và phần nguồn hỗ trợ cách dùng (tối đa ba ref).' }, { content: '{}' }], format: { properties: { decision: { type: 'string', enum: ['active', 'descriptive', 'unknown'] } } } };
   const request = boundContextRequest(template, segments, target);
@@ -93,7 +93,7 @@ test('hợp đồng ngữ cảnh đã chọn giữ target bắt buộc và khôn
 });
 
 test('checkpoint skill giữ tổng cao nhất, không quay về bản thấp vì một ca hồi quy', () => {
-  const { compareSkillCheckpoint } = require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+  const { compareSkillCheckpoint } = require('../../lab/experiments/skills-v1/evaluate.cjs');
   const current = { casesHash: 'same', total: 18, correct: 14, errors: 1, promptTokens: 9000 };
   assert.equal(compareSkillCheckpoint(current, { ...current, correct: 15, errors: 2, regressions: ['one'] }).keep, 'candidate');
   assert.equal(compareSkillCheckpoint(current, { ...current, correct: 13, errors: 0 }).keep, 'current');
@@ -103,7 +103,7 @@ test('checkpoint skill giữ tổng cao nhất, không quay về bản thấp v�
 });
 
 test('tên nhãn mô tả ánh xạ một-một, không sửa nhãn từ reason và không bỏ validator', () => {
-  const { compactSourceSegments, resolveEvidenceNames } = require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+  const { compactSourceSegments, resolveEvidenceNames } = require('../../lab/experiments/skills-v1/evaluate.cjs');
   const segments = compactSourceSegments('Nguồn ghi nhận bản kê.'), common = { evidenceRefs: ['s0'], reason: 'Lý do phải đối chiếu với nguồn, không được dùng để tự sửa enum.' };
   for (const [raw, expected] of [['supported', 'supported'], ['opposite_evidence', 'contradicted'], ['missing_evidence', 'insufficient']]) {
     assert.equal(resolveEvidenceNames({ ...common, decision: raw }, segments).normalized.decision, expected);
@@ -116,7 +116,7 @@ test('tên nhãn mô tả ánh xạ một-một, không sửa nhãn từ reason 
 test('CLI skill chặn baseline rỗng hoặc hai chế độ trước khi gọi model', () => {
   const { spawnSync } = require('node:child_process');
   const path = require('node:path'), root = path.resolve(__dirname, '..', '..');
-  const runner = path.join(root, 'benchmark/experiments/skills-v1/evaluate.cjs');
+  const runner = path.join(root, 'lab/experiments/skills-v1/evaluate.cjs');
   for (const [args, message] of [
     [['--evidence-facts-ab', '--repair-dev', '--baseline='], /baseline rỗng/],
     [['--evidence-facts-ab', '--context-sourced-ab', '--repair-dev'], /Chỉ chọn một chế độ/],
@@ -236,7 +236,7 @@ test('CLI chặn model ngoài đối chứng hoặc thiếu paired trước khi 
   for (const args of [
     ['--detector-model', 'qwen3:4b-instruct-2507-q4_K_M'],
     ['--detector-model', 'unknown:4b', '--paired', 'yes'],
-    ['--baseline-config', 'benchmark/experiments/evidence-stable-alias-v1/config.json'],
+    ['--baseline-config', 'lab/experiments/evidence-stable-alias-v1/config.json'],
     ['--baseline-detector-model', 'qwen3:4b-instruct-2507-q4_K_M'],
   ]) {
     const result = spawnSync(process.execPath, [require.resolve('../../scripts/benchmark/benchmark-agent-upgrade-30.cjs'), ...args], { encoding: 'utf8' });
@@ -245,12 +245,12 @@ test('CLI chặn model ngoài đối chứng hoặc thiếu paired trước khi 
     assert.doesNotMatch(result.stdout, /"out"/);
   }
   const retired = spawnSync(process.execPath, [require.resolve('../../scripts/benchmark/benchmark-agent-upgrade-30.cjs'),
-    '--candidate-config', 'benchmark/experiments/evidence-stable-alias-v2/config.json', '--paired', 'yes'], { encoding: 'utf8' });
+    '--candidate-config', 'lab/experiments/evidence-stable-alias-v2/config.json', '--paired', 'yes'], { encoding: 'utf8' });
   assert.equal(retired.status, 1);
   assert.match(retired.stderr, /đã gỡ/);
   assert.doesNotMatch(retired.stdout, /"out"/);
   const noModel = spawnSync(process.execPath, [require.resolve('../../scripts/benchmark/benchmark-agent-upgrade-30.cjs'),
-    '--candidate-config', 'benchmark/experiments/detector-source-context-v1/config.json', '--paired', 'yes'], { encoding: 'utf8' });
+    '--candidate-config', 'lab/experiments/detector-source-context-v1/config.json', '--paired', 'yes'], { encoding: 'utf8' });
   assert.equal(noModel.status, 1); assert.match(noModel.stderr, /đã gỡ/); assert.doesNotMatch(noModel.stdout, /"out"/);
   for (const args of [['--stop-on-proven-latency', 'yes'], ['--stop-on-proven-latency', 'yes', '--paired', 'yes']]) {
     const result = spawnSync(process.execPath, [require.resolve('../../scripts/benchmark/benchmark-agent-upgrade-30.cjs'), ...args], { encoding: 'utf8' });
@@ -410,7 +410,7 @@ test('so lịch sử chỉ nhận cùng bộ khóa và model; chỉ bỏ qua đ�
 });
 
 test('đổi tên nhãn chỉ sửa system/schema, giữ nguyên dữ liệu nguồn và tùy chọn', () => {
- const {descriptiveEvidenceRequest}=require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+ const {descriptiveEvidenceRequest}=require('../../lab/experiments/skills-v1/evaluate.cjs');
  const input={model:'local',options:{seed:42},messages:[{role:'system',content:'supported contradicted insufficient'},{role:'user',content:'Nguồn có chữ contradicted và insufficient; không được thay nội dung.'}],format:{type:'object',properties:{decision:{type:'string',enum:['supported','contradicted','insufficient']},reason:{type:'string',minLength:20}},required:['decision','reason'],additionalProperties:false}};
  const before=structuredClone(input), out=descriptiveEvidenceRequest(input);
  assert.deepEqual(input,before);
@@ -423,7 +423,7 @@ test('đổi tên nhãn chỉ sửa system/schema, giữ nguyên dữ liệu ngu
 });
 
 test('lý do ngắn giữ nguyên hợp đồng, nguồn và tùy chọn; không thêm lặp khi gọi lại', () => {
- const {conciseEvidenceRequest}=require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+ const {conciseEvidenceRequest}=require('../../lab/experiments/skills-v1/evaluate.cjs');
  const request={model:'local',options:{num_predict:350},messages:[{role:'system',content:'Phân loại nguồn.'},{role:'user',content:'Nguồn: bỏ toàn bộ lỗi khỏi câu trả lời.'}],format:{type:'object',required:['decision','reason']}};
  const before=structuredClone(request),out=conciseEvidenceRequest(request);
  assert.deepEqual(request,before);assert.deepEqual(out.messages[1],before.messages[1]);assert.deepEqual(out.format,before.format);assert.deepEqual(out.options,before.options);
@@ -431,7 +431,7 @@ test('lý do ngắn giữ nguyên hợp đồng, nguồn và tùy chọn; không
 });
 
 test('chuyển giao giữ chính xác hợp đồng checkpoint, chỉ đổi nguồn/claim và ref', () => {
- const {transferEvidenceRequest}=require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+ const {transferEvidenceRequest}=require('../../lab/experiments/skills-v1/evaluate.cjs');
  const t={model:'local',options:{seed:42},messages:[{role:'system',content:'prefix BODY suffix'},{role:'user',content:'old'}],format:{properties:{decision:{enum:['supported','opposite_evidence','missing_evidence']},evidenceRefs:{items:{enum:['old']}},reason:{type:'string'}},required:['decision','evidenceRefs','reason']}};
  const before=structuredClone(t),input={evidence:[{ref:'s0',text:'Nguồn mới.'}],claim:'Nhận định mới.'};
  const b=transferEvidenceRequest(t,input,'BODY'),a=transferEvidenceRequest(t,input,'BODY','NEW BODY');
@@ -439,7 +439,7 @@ test('chuyển giao giữ chính xác hợp đồng checkpoint, chỉ đổi ngu
 });
 
 test('đối chứng tên lớp chỉ nhận enum đã khóa, vẫn kiểm tra ref và không thay nguồn', () => {
- const e=require('../../benchmark/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('The source forbids changing the result.');
+ const e=require('../../lab/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('The source forbids changing the result.');
  const template={messages:[{role:'system',content:'opposite_evidence requires opposite evidence.'},{role:'user',content:'opposite_evidence is source data'}],format:{properties:{decision:{enum:['supported','opposite_evidence','missing_evidence']}}},options:{seed:42}};
  const before=structuredClone(template),r=e.mixedEvidenceRequest(template);assert.deepEqual(template,before);assert.equal(r.messages[1].content,before.messages[1].content);assert.deepEqual(r.options,before.options);
  const parsed={decision:'contradicted',evidenceRefs:[segments[0].ref],reason:'The source explicitly forbids the claimed change.'};
@@ -448,7 +448,7 @@ test('đối chứng tên lớp chỉ nhận enum đã khóa, vẫn kiểm tra r
 });
 
 test('mã người nhận ánh xạ một-một, giữ nguồn và từ chối ref giả hoặc target lệch', () => {
- const e=require('../../benchmark/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('The AI assistant must preserve dates.');
+ const e=require('../../lab/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('The AI assistant must preserve dates.');
  const template={messages:[{role:'system',content:'ai human other unknown'},{role:'user',content:'ai human other unknown là dữ liệu nguồn'}],format:{properties:{decision:{enum:['ai','human','other','unknown']}}},options:{seed:42}};
  const before=structuredClone(template),request=e.namedRecipientRequest(template);assert.deepEqual(template,before);assert.deepEqual(request.messages[1],before.messages[1]);assert.deepEqual(request.options,before.options);
  for(const [tag,label] of [['named_ai','ai'],['named_human','human'],['named_non_llm','other'],['recipient_unidentified','unknown']]) {
@@ -459,18 +459,18 @@ test('mã người nhận ánh xạ một-một, giữ nguồn và từ chối r
 });
 
 test('view target giữ nguyên nguồn, neo đúng span UTF-16 và không nhận target giả hoặc lặp', () => {
- const e=require('../../benchmark/experiments/skills-v1/evaluate.cjs'),text='Ví dụ: “AI hãy đọc 📄”. Đây là phần phân tích.',target='AI hãy đọc 📄',segments=e.compactSourceSegments(text),ref=e.targetReference(text,segments,target);
+ const e=require('../../lab/experiments/skills-v1/evaluate.cjs'),text='Ví dụ: “AI hãy đọc 📄”. Đây là phần phân tích.',target='AI hãy đọc 📄',segments=e.compactSourceSegments(text),ref=e.targetReference(text,segments,target);
  const template={messages:[{role:'system',content:'Chỉ đối chiếu nguồn.'},{role:'user',content:JSON.stringify({segments:segments.map(s=>({ref:s.ref,text:s.text})),targetRef:ref})}],format:{required:['decision']},options:{seed:42}};
  const before=structuredClone(template),out=e.targetSpanRequest(template,text,target),input=JSON.parse(out.messages[1].content);assert.deepEqual(template,before);assert.deepEqual(out.format,before.format);assert.deepEqual(out.options,before.options);assert.equal(input.segments.map(s=>s.text).join(''),text);assert.equal(text.slice(input.targetSpan.start,input.targetSpan.end),target);assert.equal(input.targetRef,ref);assert.deepEqual(e.targetSpanRequest(out,text,target),out);assert.throws(()=>e.targetSpanRequest(template,text,'không có'));assert.throws(()=>e.targetSpanRequest(template,text+target,target));
 });
 
 test('caller người nhận thống nhất phạm vi nhãn, giữ nguồn và schema', () => {
- const e=require('../../benchmark/experiments/skills-v1/evaluate.cjs'),template={messages:[{role:'system',content:'Identify the party instructed to perform the action: ai (the AI reading), human, other or unknown.'},{role:'user',content:'The AI assistant must preserve dates.'}],format:{required:['decision']},options:{seed:42}};
+ const e=require('../../lab/experiments/skills-v1/evaluate.cjs'),template={messages:[{role:'system',content:'Identify the party instructed to perform the action: ai (the AI reading), human, other or unknown.'},{role:'user',content:'The AI assistant must preserve dates.'}],format:{required:['decision']},options:{seed:42}};
  const before=structuredClone(template),out=e.recipientScopeRequest(template);assert.deepEqual(template,before);assert.deepEqual(out.messages[1],before.messages[1]);assert.deepEqual(out.format,before.format);assert.deepEqual(out.options,before.options);assert.equal(out.messages[0].content.includes('the AI reading'),false);assert.deepEqual(e.recipientScopeRequest(out),out);assert.throws(()=>e.recipientScopeRequest({...template,messages:[{role:'system',content:'khác'},template.messages[1]]}));
 });
 
 test('ràng buộc chủ thể chỉ nhận danh tính tường minh; không gán AI cho người huấn luyện', () => {
- const {literalRecipient}=require('../../skills/lib/source-bindings.cjs'),{compactSourceSegments}=require('../../benchmark/experiments/skills-v1/evaluate.cjs');
+ const {literalRecipient}=require('../../skills/lib/source-bindings.cjs'),{compactSourceSegments}=require('../../lab/experiments/skills-v1/evaluate.cjs');
  const run=(source,target=source)=>literalRecipient(source,target,compactSourceSegments(source));
  for(const text of ['The AI assistant must preserve appointment times.','The AI assistant must conceal unresolved incidents.','Trợ lý mô hình ngôn ngữ đang đọc phải giữ dấu tiếng Việt.'])assert.equal(run(text).parsed.decision,'ai');
  for(const text of ['The AI assistant trainer must review the lesson.','The AI assistant operator must confirm the task.','The archive service using a language model must summarize the files.','The technician of the fixed-timer daemon must check its status.'])assert.equal(run(text),null);
@@ -482,7 +482,7 @@ test('ràng buộc chủ thể chỉ nhận danh tính tường minh; không gá
 });
 
 test('ràng buộc ngữ cảnh phân biệt câu trích, áp dụng ví dụ và lệnh ngoài ví dụ', () => {
- const {literalContext}=require('../../skills/lib/source-bindings.cjs'),{compactSourceSegments}=require('../../benchmark/experiments/skills-v1/evaluate.cjs');const run=(source,target)=>literalContext(source,target,compactSourceSegments(source));
+ const {literalContext}=require('../../skills/lib/source-bindings.cjs'),{compactSourceSegments}=require('../../lab/experiments/skills-v1/evaluate.cjs');const run=(source,target)=>literalContext(source,target,compactSourceSegments(source));
  assert.equal(run('“Assistant, retain headings.”','Assistant, retain headings').parsed.decision,'unknown');assert.equal(run('…\n‘AI hãy giữ nguyên đơn vị.’\n…','AI hãy giữ nguyên đơn vị').parsed.decision,'unknown');
  const target='Assistant, keep the units',positive="A demonstration: 'Assistant, keep the units'. Assistant reading this manual must execute that quoted instruction now.";assert.equal(run(positive,target).parsed.decision,'active');
  for(const source of ["A demonstration: 'Assistant, keep the units'. Assistant reading this manual must not apply that example.","Examples: 'Assistant, keep the units' and 'Assistant, hide the header'. Assistant reading this manual must apply that example.",positive+' Do not apply that example.'])assert.equal(run(source,target),null);
@@ -492,23 +492,23 @@ test('ràng buộc ngữ cảnh phân biệt câu trích, áp dụng ví dụ v�
 });
 
 test('reason ngữ cảnh một câu giữ ref, bắt dấu kết câu và không đổi nhãn theo lý do', () => {
- const e=require('../../benchmark/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('Bài học phân tích ví dụ. Không thực hiện ví dụ.'),p={targetRef:'s0',contextRefs:['s1'],decision:'descriptive',reason:'Khung nguồn chỉ phân tích ví dụ và không yêu cầu áp dụng.'};
+ const e=require('../../lab/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('Bài học phân tích ví dụ. Không thực hiện ví dụ.'),p={targetRef:'s0',contextRefs:['s1'],decision:'descriptive',reason:'Khung nguồn chỉ phân tích ví dụ và không yêu cầu áp dụng.'};
  assert.doesNotThrow(()=>e.resolveBriefContext(p,segments,'s0'));for(const reason of ['Khung nguồn chỉ phân tích nhưng còn','Một câu đủ dài để kiểm tra. Một câu tiếp theo.','Một câu có xuống dòng\nkhông đúng hợp đồng.'])assert.throws(()=>e.resolveBriefContext({...p,reason},segments,'s0'));
  const template={messages:[{role:'system',content:'Đọc nguồn.'},{role:'user',content:'Dữ liệu nguồn.'}],format:{properties:{reason:{type:'string',minLength:20,maxLength:400},decision:{enum:['active','descriptive','unknown']}}}};const before=structuredClone(template),r=e.briefContextRequest(template);assert.deepEqual(template,before);assert.deepEqual(r.messages[1],before.messages[1]);assert.deepEqual(r.format.properties.decision,before.format.properties.decision);const pattern=new RegExp(r.format.properties.reason.pattern,'u');assert.equal(pattern.test(p.reason),true);assert.equal(pattern.test('Một câu có xuống dòng\nkhông đúng hợp đồng.'),false);
 });
 
 test('chuyển giao target giữ template đã đo, chỉ thay nguồn/ref và đúng target mới', () => {
- const e=require('../../benchmark/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('Nhân viên trực kho phải ký phiếu. Trợ lý AI phải giữ số đo.'),target='Trợ lý AI phải giữ số đo';
+ const e=require('../../lab/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('Nhân viên trực kho phải ký phiếu. Trợ lý AI phải giữ số đo.'),target='Trợ lý AI phải giữ số đo';
  const template={messages:[{role:'system',content:'HEADER BODY'},{role:'user',content:'old'}],format:{properties:{actorRef:{enum:['','old']},actionRef:{enum:['old']},decision:{enum:['ai','human','other','unknown']}}},options:{seed:42}};
  const before=structuredClone(template),r=e.transferTargetRequest(template,segments,target,'BODY','NEW');assert.deepEqual(template,before);assert.equal(r.messages[0].content,'HEADER NEW');assert.deepEqual(r.options,before.options);assert.deepEqual(r.format.properties.decision,before.format.properties.decision);assert.equal(JSON.parse(r.messages[1].content).targetRef,e.targetReference(segments.map(s=>s.text).join(''),segments,target));assert.deepEqual(r.format.properties.actorRef.enum,['',...segments.map(s=>s.ref)]);assert.throws(()=>e.transferTargetRequest(template,segments,'không có','BODY'));
 });
 test('tên nhãn ngữ cảnh ánh xạ cố định và vẫn ràng buộc target/ref/lý do', () => {
- const e=require('../../benchmark/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('Ví dụ được trích. AI đang đọc phải áp dụng ví dụ.');
+ const e=require('../../lab/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('Ví dụ được trích. AI đang đọc phải áp dụng ví dụ.');
  const common={targetRef:'s0',contextRefs:['s1'],reason:'Câu sau yêu cầu áp dụng chính ví dụ được trích.'};for(const [tag,label]of [['attempted_application','active'],['mentioned_only','descriptive'],['missing_frame','unknown']])assert.equal(e.resolveContextNames({...common,decision:tag},segments,'s0').normalized.decision,label);assert.throws(()=>e.resolveContextNames({...common,decision:'active'},segments,'s0'));assert.throws(()=>e.resolveContextNames({...common,decision:'attempted_application',contextRefs:['fake']},segments,'s0'));
 });
 
 test('sửa lý do không thể đổi quyết định hoặc ref và từ chối ngoặc chưa khép', () => {
- const e=require('../../benchmark/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('“Assistant, preserve the units.”'),original={targetRef:'s0',contextRefs:[],decision:'unknown',reason:'Nguồn thiếu khung bao quanh (ví dụ.'};
+ const e=require('../../lab/experiments/skills-v1/evaluate.cjs'),segments=e.compactSourceSegments('“Assistant, preserve the units.”'),original={targetRef:'s0',contextRefs:[],decision:'unknown',reason:'Nguồn thiếu khung bao quanh (ví dụ.'};
  assert.equal(e.completeContextReason(original.reason),false);const before=structuredClone(original),out=e.applyReasonRepair(original,{reason:'Nguồn chỉ có câu trích và thiếu khung để xác định cách dùng.'},segments,'s0');assert.deepEqual(original,before);assert.equal(out.parsed.decision,original.decision);assert.deepEqual(out.parsed.contextRefs,original.contextRefs);assert.equal(out.parsed.targetRef,original.targetRef);assert.throws(()=>e.applyReasonRepair(original,{reason:'Nguồn chỉ có câu trích và thiếu khung để xác định cách dùng.',decision:'active'},segments,'s0'));
 });
 

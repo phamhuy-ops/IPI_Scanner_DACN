@@ -4,7 +4,7 @@ Theo yêu cầu người dùng, đã gỡ tích hợp `instruction-proposals-v1`
 
 Ứng viên bị gỡ từng giảm độ đúng từ 5/20 xuống 2/20 trong [lượt đo có đối chứng](../../../../benchmark/results/instruction-proposals-UGvspO/quality-audit.json). Các thử nghiệm đổi tên stance, đóng gói nguồn và giới hạn reason trước đó không được bật mặc định; không dùng điểm của chúng làm độ đúng của Agent hiện hành.
 
-[Bản lưu trước hoàn tác](../../../../benchmark/experiments/instruction-proposals-retired-DxWnZL/quyet-dinh.json) giữ mã và hash. [Đối chiếu khôi phục](../../../../benchmark/experiments/instruction-proposals-retired-DxWnZL/rollback-verification.json) xác nhận `ipiPipeline.ts` và `src/types.ts` khớp byte/hash với baseline trước khi thêm kiến trúc. Không reset toàn working tree; các sửa xử lý đầu ra bị cắt, cổng bằng chứng và phân biệt vị trí đã được giữ.
+[Bản lưu trước hoàn tác](../../../experiments/instruction-proposals-retired-DxWnZL/quyet-dinh.json) giữ mã và hash. [Đối chiếu khôi phục](../../../experiments/instruction-proposals-retired-DxWnZL/rollback-verification.json) xác nhận `ipiPipeline.ts` và `src/types.ts` khớp byte/hash với baseline trước khi thêm kiến trúc. Không reset toàn working tree; các sửa xử lý đầu ra bị cắt, cổng bằng chứng và phân biệt vị trí đã được giữ.
 
 ## Hướng khác: gắn đúng vị trí của rule
 

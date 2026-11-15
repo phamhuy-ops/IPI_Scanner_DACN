@@ -12,7 +12,7 @@ Mốc trung gian là Recall khoảng 50% và FPR dưới 10%. Trên bộ 50 ca c
 
 Baseline dùng cấu hình desktop mặc định, Balanced cố định, `classic-v1/standard`, nhiệt độ 0, timeout 90 giây mỗi request và 300 giây mỗi ca. Các skill và cờ thử nghiệm tắt. Runner lưu manifest, hash mã và prompt, digest model cùng request thực tế. Commit và diff mã đã theo dõi được lưu trong thư mục thử nghiệm. Chạy một lượt đủ 50 ca, giữ cả lỗi và timeout.
 
-[Hồ sơ khóa baseline](../../benchmark/experiments/priority-one-six-stage-v1/khoa-baseline.json) lưu digest, hash manifest, cấu hình và kích thước chunk.
+[Hồ sơ khóa baseline](../../lab/experiments/priority-one-six-stage-v1/khoa-baseline.json) lưu digest, hash manifest, cấu hình và kích thước chunk.
 
 ## 3. Chạy baseline
 
@@ -26,7 +26,7 @@ npm run benchmark:round-one -- --desktop --manifest benchmark/data/priority-one-
 
 Đối chiếu từng span theo thứ tự trích xuất, chọn chunk, prefilter, Detector, trích dẫn và Verifier. Ghi riêng báo nhầm, Cần xem xét và lỗi kỹ thuật. Tính ca IPI chưa được xác nhận vào mẫu số Recall.
 
-[Phân loại từng ca](../../benchmark/experiments/priority-one-six-stage-v1/phan-loai-loi.json) ghi nhận cả 25 ca IPI có span nằm trong chunk đã chọn, không có tín hiệu prefilter và không có xác nhận từ hai Agent. Trên bộ này, ưu tiên đo thay đổi ở bước tạo nghi vấn. FPR 0/25 có cận trên Wilson một phía khoảng 9,8% nếu giả định các ca độc lập.
+[Phân loại từng ca](../../lab/experiments/priority-one-six-stage-v1/phan-loai-loi.json) ghi nhận cả 25 ca IPI có span nằm trong chunk đã chọn, không có tín hiệu prefilter và không có xác nhận từ hai Agent. Trên bộ này, ưu tiên đo thay đổi ở bước tạo nghi vấn. FPR 0/25 có cận trên Wilson một phía khoảng 9,8% nếu giả định các ca độc lập.
 
 ## 5. Đối chứng từng thay đổi
 
@@ -42,7 +42,7 @@ npm run benchmark:round-one -- --desktop --manifest benchmark/data/priority-one-
 
 - Recall giữ **0/25**, FPR giữ **0/25**, F1 giữ **0%**. Precision chưa xác định.
 - Hai ca IPI chuyển từ Không phát hiện sang Cần xem xét. Số ca sạch Cần xem xét giữ **3/25**.
-- 112/112 phản hồi hợp lệ. Có hai phản hồi tự mâu thuẫn. p95 tăng từ **44,1 lên 48,4 giây** trong hai lượt đơn. [Phân loại từng ca](../../benchmark/experiments/priority-one-six-stage-v1/phan-loai-ung-vien-prefilter.json)
+- 112/112 phản hồi hợp lệ. Có hai phản hồi tự mâu thuẫn. p95 tăng từ **44,1 lên 48,4 giây** trong hai lượt đơn. [Phân loại từng ca](../../lab/experiments/priority-one-six-stage-v1/phan-loai-ung-vien-prefilter.json)
 
 Giữ ứng viên trong benchmark. Skill ngữ cảnh hiện cần nghi vấn đã neo vào nguồn để rà. Baseline không tạo nghi vấn trên 25 ca IPI, nên muốn đo tác dụng của skill cần đối chứng bật/tắt trên cùng cấu hình có tín hiệu và giữ cùng chính sách kết luận.
 
@@ -56,11 +56,11 @@ Chưa chọn được ứng viên cải thiện Recall. Chưa khóa hoặc chạ
 
 Tái chạy trích xuất và Prefilter trên 25 file IPI của baseline. Hash khớp cả 25 file. Mỗi span có nguyên văn trong ít nhất một dạng đầu vào Prefilter và trong chunk đã được cả hai Agent rà. Ba ca HTML có nguyên span trong HTML gốc. Bản chiếu văn bản bỏ markup hoặc comment, nhưng Prefilter cũng nhận HTML gốc. Lượt tái chạy tạo 0 nghi vấn với cấu hình mặc định và 2 nghi vấn khi bật tín hiệu đổi tóm tắt.
 
-[Chi tiết từng ca](../../benchmark/experiments/priority-one-six-stage-v1/chan-doan-prefilter.json) và [lệnh tái hiện](../../benchmark/experiments/priority-one-six-stage-v1/chan-doan-prefilter.cjs).
+[Chi tiết từng ca](../../lab/experiments/priority-one-six-stage-v1/chan-doan-prefilter.json) và [lệnh tái hiện](../../lab/experiments/priority-one-six-stage-v1/chan-doan-prefilter.cjs).
 
 ## Chẩn đoán Detector và Verifier độc lập
 
-Đã chạy 24 lượt hợp lệ trên 5 ca IPI và 3 ca sạch của bộ dev. Mỗi ca dùng một chunk nguyên văn từ baseline. Detector rà một lượt tự do và một lượt với đoạn đã định vị. Verifier nhận cùng đoạn định vị trong lượt riêng. Giữ model, prompt và cấu hình request đã khóa. Mỗi request mất 10,3–55,9 giây. [Runner](../../benchmark/experiments/priority-one-six-stage-v1/chan-doan-agent.cjs) và [kết quả từng lượt](../../benchmark/results/agent-isolation-3Gvkpk/cases.json).
+Đã chạy 24 lượt hợp lệ trên 5 ca IPI và 3 ca sạch của bộ dev. Mỗi ca dùng một chunk nguyên văn từ baseline. Detector rà một lượt tự do và một lượt với đoạn đã định vị. Verifier nhận cùng đoạn định vị trong lượt riêng. Giữ model, prompt và cấu hình request đã khóa. Mỗi request mất 10,3–55,9 giây. [Runner](../../lab/experiments/priority-one-six-stage-v1/chan-doan-agent.cjs) và [kết quả từng lượt](../../benchmark/results/agent-isolation-3Gvkpk/cases.json).
 
 - Detector tự rà bỏ sót cả 5 ca IPI và không tạo phát hiện trên cả 3 ca sạch.
 - Detector có trích dẫn xác nhận 4/5 ca IPI và báo nhầm 2/3 ca sạch. Verifier xác nhận 1/5 ca IPI và báo nhầm 1/3 ca sạch.
@@ -69,7 +69,7 @@ Tái chạy trích xuất và Prefilter trên 25 file IPI của baseline. Hash k
 
 ## Thử riêng skill ngữ cảnh
 
-Dùng lại tám chunk, trích dẫn và kết quả hai Agent từ bước B. Nhánh bật chỉ chạy `ipi-command-context` theo cấu hình đã khóa. Quy tắc đối chứng thử bác bỏ khi skill trả `descriptive` và dẫn thêm đoạn nguồn ngoài target. [Runner](../../benchmark/experiments/priority-one-six-stage-v1/chan-doan-skill-ngu-canh.cjs) và [kết quả từng ca](../../benchmark/results/context-isolation-JR1Dsb/cases.json).
+Dùng lại tám chunk, trích dẫn và kết quả hai Agent từ bước B. Nhánh bật chỉ chạy `ipi-command-context` theo cấu hình đã khóa. Quy tắc đối chứng thử bác bỏ khi skill trả `descriptive` và dẫn thêm đoạn nguồn ngoài target. [Runner](../../lab/experiments/priority-one-six-stage-v1/chan-doan-skill-ngu-canh.cjs) và [kết quả từng ca](../../benchmark/results/context-isolation-JR1Dsb/cases.json).
 
 - Báo nhầm giảm từ 1/3 xuống 0/3 ca sạch vì ca 40 được bác bỏ đúng.
 - Xác nhận đúng giữ 1/5. Ca 23 vẫn được xác nhận nhờ yêu cầu dẫn thêm nguồn, dù skill gọi nhầm là `descriptive`.
@@ -78,7 +78,7 @@ Dùng lại tám chunk, trích dẫn và kết quả hai Agent từ bước B. N
 
 ## Rà nhãn PDF/DOCX
 
-Đã đối chiếu hash 4/4 và rà sơ bộ phần chữ trích xuất theo trang hoặc phần. Chưa thấy chỉ dẫn nhắm vào AI. Hai PDF có 63 và 23 trang, trong đó trang cuối của PDF 63 trang không có chữ trích xuất. Phần hình và một số thành phần DOCX ngoài thân văn bản còn chờ rà. Hồ sơ nguồn chưa ghi nhận quyền tái sử dụng. Giữ nguyên trạng thái nhãn tạm thời trong baseline dev. [Chi tiết từng tệp](../../benchmark/experiments/priority-one-six-stage-v1/ra-nhan-pdf-docx.md).
+Đã đối chiếu hash 4/4 và rà sơ bộ phần chữ trích xuất theo trang hoặc phần. Chưa thấy chỉ dẫn nhắm vào AI. Hai PDF có 63 và 23 trang, trong đó trang cuối của PDF 63 trang không có chữ trích xuất. Phần hình và một số thành phần DOCX ngoài thân văn bản còn chờ rà. Hồ sơ nguồn chưa ghi nhận quyền tái sử dụng. Giữ nguyên trạng thái nhãn tạm thời trong baseline dev. [Chi tiết từng tệp](../../lab/experiments/priority-one-six-stage-v1/ra-nhan-pdf-docx.md).
 
 Bốn tệp đã dùng trong baseline dev. Holdout cần nguồn mới và cấu hình thắng đã khóa. Chưa có ứng viên đạt điều kiện đó sau bước C.
 
@@ -123,7 +123,7 @@ Sau khi thêm điều kiện khớp đoạn và dòng bắt đầu, chạy lại
 
 Ghép kết quả chạy riêng của ba ca có tín hiệu đổi tóm tắt vào lượt dev 50 ca. Phép ghép cho Recall 3/25, FPR 0/25, Precision 3/3 và F1 21,4%. Còn 22 ca IPI Không phát hiện và ba ca sạch Cần xem xét. Kết quả này dùng để định vị lỗi vì các lượt thành phần được chạy ở các phiên bản mã khác nhau.
 
-Trên hai ca sạch khó có tín hiệu, ghép ca chạy lại với bộ cũ cho thấy số báo nhầm giảm từ hai xuống một, đồng thời thêm một ca Cần xem xét. Bộ 50 ca không có ca sạch kích hoạt nhánh đổi tóm tắt. Cần giữ cả nhóm đối chứng này khi đánh giá tác động của audit. [Lệnh tổng hợp](../../benchmark/experiments/priority-one-six-stage-v1/doi-chieu-ket-qua-audit.cjs).
+Trên hai ca sạch khó có tín hiệu, ghép ca chạy lại với bộ cũ cho thấy số báo nhầm giảm từ hai xuống một, đồng thời thêm một ca Cần xem xét. Bộ 50 ca không có ca sạch kích hoạt nhánh đổi tóm tắt. Cần giữ cả nhóm đối chứng này khi đánh giá tác động của audit. [Lệnh tổng hợp](../../lab/experiments/priority-one-six-stage-v1/doi-chieu-ket-qua-audit.cjs).
 
 ### Nhận diện yêu cầu chuyển tác vụ khi tổng hợp
 
@@ -339,7 +339,7 @@ Thêm cờ `--verifier-evidence-first-output-override` cho batch chỉ chứa ng
 
 Chạy đủ 50 ca với `--verifier-evidence-first-output-override` bổ sung vào cấu hình của lượt 84%. Recall tăng từ 21/25 lên 25/25 (100%), FPR giữ 0/25. Precision và F1 đều 100%. Ba ca sạch 26–28 Cần xem xét. Cả 50 ca hoàn tất và 112/112 phản hồi hợp lệ. Trung vị 36,6 giây, p95 50,3 giây. Chưa đạt mục tiêu p95 45 giây nếu dùng ngưỡng đó cho phép đo này. Mức báo nhầm ở ca đính chính ngoài bộ 50 đã được ghi ở đối chứng.
 
-Khóa mã, cấu hình, model, manifest và lệnh tái hiện để kiểm chứng độc lập. Chưa đổi mặc định vì bộ 50 đã dùng để chọn cấu hình và chưa có kết quả trên holdout độc lập. [Kết quả đầy đủ](../../benchmark/results/round-one-eval-peDwwd/summary.json) · [Hồ sơ khóa ứng viên](../../benchmark/experiments/priority-one-six-stage-v1/khoa-ung-vien-dev.json).
+Khóa mã, cấu hình, model, manifest và lệnh tái hiện để kiểm chứng độc lập. Chưa đổi mặc định vì bộ 50 đã dùng để chọn cấu hình và chưa có kết quả trên holdout độc lập. [Kết quả đầy đủ](../../benchmark/results/round-one-eval-peDwwd/summary.json) · [Hồ sơ khóa ứng viên](../../lab/experiments/priority-one-six-stage-v1/khoa-ung-vien-dev.json).
 
 ### Rà nguồn cho kiểm chứng độc lập
 
@@ -350,21 +350,21 @@ Khóa mã, cấu hình, model, manifest và lệnh tái hiện để kiểm ch�
 - Cả bảy ca IPI đúng phạm vi của Realistic Prompt Injections đều khớp lịch sử. Ba ca còn lại có phạm vi trực tiếp hoặc hỗn hợp.
 - Hồ sơ sàng lọc LLMail trước đó loại bộ 12 ca vì sáu ca tấn công cùng một mẫu chung. Cần rà nguồn và nhóm trước khi dùng ca khác từ bộ này.
 
-Chưa khóa được một holdout đủ nguồn và nhãn để chấm cả hai chỉ số. Giữ cấu hình ứng viên đã khóa và bộ 50 ca dev. [Sổ đối chiếu](../../benchmark/experiments/priority-one-six-stage-v1/ra-nguon-holdout.json).
+Chưa khóa được một holdout đủ nguồn và nhãn để chấm cả hai chỉ số. Giữ cấu hình ứng viên đã khóa và bộ 50 ca dev. [Sổ đối chiếu](../../lab/experiments/priority-one-six-stage-v1/ra-nguon-holdout.json).
 
 ### Lọc ứng viên trước khi khóa holdout
 
-Gom nhóm bắc cầu các bản ghi NotInject trùng văn bản chuẩn hóa hoặc có chung đoạn 40 token. Loại cả nhóm nếu bất kỳ thành viên nào trùng ID, hash, văn bản hoặc đoạn 40 token với manifest đã rà. Kết quả giữ 306 bản ghi thuộc 306 nhóm theo tiêu chí này, loại 33 bản ghi. Danh sách mới dùng để rà nhãn và trùng ngữ nghĩa. Lệnh `node benchmark/experiments/priority-one-six-stage-v1/loc-ung-vien-notinject.cjs` tái tạo danh sách và lưu hash các đầu vào. [Danh sách ứng viên](../../benchmark/experiments/priority-one-six-stage-v1/ung-vien-notinject.json).
+Gom nhóm bắc cầu các bản ghi NotInject trùng văn bản chuẩn hóa hoặc có chung đoạn 40 token. Loại cả nhóm nếu bất kỳ thành viên nào trùng ID, hash, văn bản hoặc đoạn 40 token với manifest đã rà. Kết quả giữ 306 bản ghi thuộc 306 nhóm theo tiêu chí này, loại 33 bản ghi. Danh sách mới dùng để rà nhãn và trùng ngữ nghĩa. Lệnh `node lab/experiments/priority-one-six-stage-v1/loc-ung-vien-notinject.cjs` tái tạo danh sách và lưu hash các đầu vào. [Danh sách ứng viên](../../lab/experiments/priority-one-six-stage-v1/ung-vien-notinject.json).
 
-Đối chiếu LLMail với hồ sơ tuần 05. Trong 18 ca từng rà có bốn ca IPI thuộc một nhóm, và 14 ca từng được gửi model. Giữ nhóm này trong dev. Chưa chọn ca IPI mới để khóa holdout và chưa chạy model. [Đối chiếu LLMail](../../benchmark/experiments/priority-one-six-stage-v1/doi-chieu-llmail-holdout.json).
+Đối chiếu LLMail với hồ sơ tuần 05. Trong 18 ca từng rà có bốn ca IPI thuộc một nhóm, và 14 ca từng được gửi model. Giữ nhóm này trong dev. Chưa chọn ca IPI mới để khóa holdout và chưa chạy model. [Đối chiếu LLMail](../../lab/experiments/priority-one-six-stage-v1/doi-chieu-llmail-holdout.json).
 
 ### Sàng lọc nhóm IPI mới từ LLMail
 
-Đối chiếu nguyên văn 48 bản ghi Phase 2 với SHA-256 của hàng chờ intake. Giữ cách gom nhóm tạm của đợt intake, loại toàn bộ nhóm nếu có ca đã rà nhãn, đã đưa vào model hoặc có cờ giao với dev/test cũ. Loại 4/9 nhóm, còn 13 bản ghi thuộc 5 nhóm. Nhãn nguồn là dấu hiệu ca gửi vào challenge, cần rà ngữ cảnh trước khi coi là ca IPI hợp lệ. Giữ 13 bản ghi trong hàng chờ và giữ nguyên cấu hình ứng viên. [Hàng chờ LLMail](../../benchmark/experiments/priority-one-six-stage-v1/hang-cho-ipi-llmail.json).
+Đối chiếu nguyên văn 48 bản ghi Phase 2 với SHA-256 của hàng chờ intake. Giữ cách gom nhóm tạm của đợt intake, loại toàn bộ nhóm nếu có ca đã rà nhãn, đã đưa vào model hoặc có cờ giao với dev/test cũ. Loại 4/9 nhóm, còn 13 bản ghi thuộc 5 nhóm. Nhãn nguồn là dấu hiệu ca gửi vào challenge, cần rà ngữ cảnh trước khi coi là ca IPI hợp lệ. Giữ 13 bản ghi trong hàng chờ và giữ nguyên cấu hình ứng viên. [Hàng chờ LLMail](../../lab/experiments/priority-one-six-stage-v1/hang-cho-ipi-llmail.json).
 
 ### Rà ngữ cảnh nhóm LLMail còn lại
 
-Rà khung email đại diện của năm nhóm và kiểm tra dấu hiệu chung trên cả 13 bản ghi. Tám nhãn nguồn dựa trên trigger API, năm nhãn dựa trên bộ chấm. Các nhóm khác cách trình bày nhưng cùng tập trung vào yêu cầu xác nhận của challenge. Giữ làm ứng viên đối chứng email và báo riêng nếu đo. Chưa khóa holdout đa nguồn hoặc đổi mặc định. [Ghi chú theo nhóm](../../benchmark/experiments/priority-one-six-stage-v1/ra-ngu-canh-llmail-holdout.md).
+Rà khung email đại diện của năm nhóm và kiểm tra dấu hiệu chung trên cả 13 bản ghi. Tám nhãn nguồn dựa trên trigger API, năm nhãn dựa trên bộ chấm. Các nhóm khác cách trình bày nhưng cùng tập trung vào yêu cầu xác nhận của challenge. Giữ làm ứng viên đối chứng email và báo riêng nếu đo. Chưa khóa holdout đa nguồn hoặc đổi mặc định. [Ghi chú theo nhóm](../../lab/experiments/priority-one-six-stage-v1/ra-ngu-canh-llmail-holdout.md).
 
 ### Đo Recall trên tài liệu tĩnh chuyển thể từ ba benchmark
 

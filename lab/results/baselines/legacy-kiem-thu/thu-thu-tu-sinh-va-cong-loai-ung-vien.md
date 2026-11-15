@@ -6,7 +6,7 @@
 
 [Lượt A/B](../../../../benchmark/results/evidence-first-HKzxNe/giao-thuc.json) hoàn tất 40 pipeline trên cùng 20 ca mỗi nhánh. Sau [audit bất định](../../../../benchmark/results/evidence-first-HKzxNe/uncertainty-audit.json), baseline đúng 5/20, ứng viên 6/20. Tuy vậy, mất ca đúng aq-001; lỗi tăng 3→5; p95 tăng 17,47→36,56 giây. Vì trượt cổng, điểm tăng nhẹ không đủ để áp dụng. Không coi việc báo ít FP hơn là tự động cải thiện toàn diện.
 
-Đã [lưu mã thử riêng và loại ứng viên](../../../../benchmark/experiments/evidence-first-retired-0uf7zM/quyet-dinh.json). Kiểm hash 52 file core xác nhận pipeline sản phẩm không bị thay đổi bởi thử nghiệm này. Helper đã được gỡ khỏi src; runner cũ báo đã loại và không gọi model. Raw và snapshot cũ giữ nguyên.
+Đã [lưu mã thử riêng và loại ứng viên](../../../experiments/evidence-first-retired-0uf7zM/quyet-dinh.json). Kiểm hash 52 file core xác nhận pipeline sản phẩm không bị thay đổi bởi thử nghiệm này. Helper đã được gỡ khỏi src; runner cũ báo đã loại và không gọi model. Raw và snapshot cũ giữ nguyên.
 
 ## Thay đổi được giữ: cổng quyết định trong báo cáo
 
@@ -22,6 +22,6 @@ Gemma nhận 0/8 tấn công; Coder nhận 3/8. Trên 16 ca nhị phân, khớp 
 
 ## Phần chưa chạy
 
-Đã chuẩn bị [giao thức đối chứng Verifier Instruct có sẵn](../../../../benchmark/experiments/local-instruct-comparison-pending/giao-thuc.json): 20 ca mỗi nhánh, giữ Detector Gemma, chỉ so Coder với `qwen2.5:1.5b-instruct` đã có trên máy. Tại thời điểm lập giao thức, chưa chạy vì ràng buộc không tự tải/đổi model. Sau đó người dùng đã cho phép và [đối chứng đã hoàn tất, bị loại](doi-chung-instruct-theo-vai-tro.md). Không train, tải model hoặc đổi Agent mặc định.
+Đã chuẩn bị [giao thức đối chứng Verifier Instruct có sẵn](../../../experiments/local-instruct-comparison-pending/giao-thuc.json): 20 ca mỗi nhánh, giữ Detector Gemma, chỉ so Coder với `qwen2.5:1.5b-instruct` đã có trên máy. Tại thời điểm lập giao thức, chưa chạy vì ràng buộc không tự tải/đổi model. Sau đó người dùng đã cho phép và [đối chứng đã hoàn tất, bị loại](doi-chung-instruct-theo-vai-tro.md). Không train, tải model hoặc đổi Agent mặc định.
 
 Kiểm tra mã sau khi loại ứng viên: 359 test, lint/typecheck/build đạt; sáu test cổng và hai test chẩn đoán đạt. Còn cảnh báo Vite cũ `customResolver`/`freeze`. Chưa có ứng viên nhận diện đạt90%, chưa chạy toàn dev96/holdout cho ứng viên mới. Ưu tiên 1 vẫn mở.

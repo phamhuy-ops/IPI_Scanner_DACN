@@ -14,7 +14,7 @@ Hai lỗi Verifier mới là analysis không đủ độ dài ở aq-028 và out
 - [Ủy quyền và lệnh thực thi đầy đủ](../../../../benchmark/results/local-instruct-comparison-GGzers/uy-quyen-va-lenh.json).
 - [Audit uncertain](../../../../benchmark/results/local-instruct-comparison-GGzers/uncertainty-audit.json).
 - [Chỉ số, kiểm tra vai trò và cổng quyết định](../../../../benchmark/results/local-instruct-comparison-GGzers/quality-audit.json).
-- [Bản thử đã lưu và quyết định loại](../../../../benchmark/experiments/local-verifier-instruct-retired-0RBrNE/quyet-dinh.json).
+- [Bản thử đã lưu và quyết định loại](../../../experiments/local-verifier-instruct-retired-0RBrNE/quyet-dinh.json).
 
 Trong baseline đã lưu, chỉ2/8 ca malicious có Detector confirmed; bốn ca uncertain, một ca không tạo nghi vấn và một ca lỗi citation. Với các phản hồi Detector này được giữ nguyên, Verifier không thể tự biến sáu ca còn lại thành hai vai trò cùng xác nhận. Đây là giới hạn của cấu hình/phản hồi đang đo, không phải trần năng lực chung của model.
 
@@ -27,7 +27,7 @@ Giữ Verifier Coder, chỉ đổi Detector sang Instruct. Sau audit: baseline �
 - [Giao thức](../../../../benchmark/results/local-detector-comparison-z9A9Qd/giao-thuc.json).
 - [Audit uncertain](../../../../benchmark/results/local-detector-comparison-z9A9Qd/uncertainty-audit.json).
 - [Chỉ số và cổng quyết định](../../../../benchmark/results/local-detector-comparison-z9A9Qd/quality-audit.json).
-- [Bản lưu và quyết định loại](../../../../benchmark/experiments/local-detector-instruct-retired-GtLSHF/quyet-dinh.json).
+- [Bản lưu và quyết định loại](../../../experiments/local-detector-instruct-retired-GtLSHF/quyet-dinh.json).
 
 Nhánh Detector thử dùng hai model cùng họ Qwen; không coi hai vai trò là hai nguồn kiến thức độc lập. Kết quả dev này không phải holdout hoặc chứng nhận tổng quát.
 
