@@ -42,6 +42,16 @@ export interface IpiDocumentPipelineOptions {
   referenceBatchSize?: number;
   // Chỉ dùng đối chứng từ runner trước khi có quyết định tích hợp.
   actionAudit?: boolean;
+  detectorCandidateActionAudit?: boolean;
+  recoverDetectorTimeoutOnce?: boolean;
+  recoverVerifierTimeoutOnce?: boolean;
+  verifierTransferAudit?: boolean;
+  verifierSummaryAudit?: boolean;
+  verifierEvidenceFirst?: boolean;
+  verifierEvidenceFirstSensitive?: boolean;
+  verifierEvidenceFirstOutputOverride?: boolean;
+  prioritizeTransferChunks?: boolean;
+  transferSplitMinCharacters?: number;
   // Thử chuẩn hóa payload citation, không thay nguồn hoặc validator.
   evidencePresentation?: 'stable-alias-v1';
   // Bản thử được gọi rõ từ runner, không có lựa chọn trong UI hoặc mặc định.
@@ -175,9 +185,9 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
     emit({ phase: 'fix', message: `Detector reviewing ${chunks.length} selected chunks and ${state.suspicions.length} rule suspicions.`, findingCount: state.suspicions.length });
     const detector = await runDetectorAgent({ chunks, suspicions: state.suspicions, coverage: scanResult.metadata.coverage,
       model: state.fixModel, deadline, requestTimeoutMs: options.requestTimeoutMs, reviewContract: state.reviewContract, detectorFlow: options.detectorFlow, sourceReferencePolicy: options.sourceReferencePolicy,
-      recoverTimeoutOnce: options.detectorFlow === 'source-review-compact-v1',
+      recoverTimeoutOnce: options.recoverDetectorTimeoutOnce || options.detectorFlow === 'source-review-compact-v1',
       recoverCitations: options.recoverDetectorCitations,
-      actionAudit: options.actionAudit, evidencePresentation: options.evidencePresentation,
+      actionAudit: options.actionAudit, candidateActionAudit: options.detectorCandidateActionAudit, evidencePresentation: options.evidencePresentation,
       referenceBatchSize: options.referenceBatchSize, onRequestMetrics: recordMetrics('detector'), onBatchReviewed: recordBatch('detector'), onBatchFailed: recordFailure('detector') });
     state.fixModel = detector.model;
     let dependencies: Awaited<ReturnType<typeof collectContextDependencies>> | undefined;
@@ -201,9 +211,16 @@ export async function runIpiDocumentPipeline(options: IpiDocumentPipelineOptions
     emit({ phase: 'check', message: 'Verifier checking every grounded suspicion against complete source chunks.', findingCount: state.suspicions.length });
     const verifier = await runVerifierAgent({ chunks, suspicions: state.suspicions, coverage: scanResult.metadata.coverage,
       suppliedOnly, detectorReview: detector, model: state.checkModel, deadline, requestTimeoutMs: options.requestTimeoutMs, reviewContract: state.reviewContract, outputFormat: state.verifierOutput,
+      recoverTimeoutOnce: options.recoverVerifierTimeoutOnce,
       sourceContext: options.detectorFlow === 'source-review-compact-v1',
+      evidenceFirst: options.verifierEvidenceFirst,
+      evidenceFirstSensitive: options.verifierEvidenceFirstSensitive,
+      evidenceFirstOutputOverride: options.verifierEvidenceFirstOutputOverride,
       separateSourceViews: options.verifierEvidenceMode === 'split-views-multiple-targets-v1',
-      actionAudit: options.actionAudit, evidencePresentation: options.evidencePresentation, referenceBatchSize: options.referenceBatchSize, onRequestMetrics: recordMetrics('verifier'), onBatchReviewed: recordBatch('verifier'), onBatchFailed: recordFailure('verifier') });
+      actionAudit: options.actionAudit, verifierTransferAudit: options.verifierTransferAudit, verifierSummaryAudit: options.verifierSummaryAudit,
+      prioritizeTransferChunks: options.prioritizeTransferChunks,
+      transferSplitMinCharacters: options.transferSplitMinCharacters,
+      evidencePresentation: options.evidencePresentation, referenceBatchSize: options.referenceBatchSize, onRequestMetrics: recordMetrics('verifier'), onBatchReviewed: recordBatch('verifier'), onBatchFailed: recordFailure('verifier') });
     state.checkModel = verifier.modelUsed;
     if (dependencies) {
       // Chỉ hợp nhất sau lượt chính để giữ đầu vào xác minh độc lập, không truyền suy luận model trước.

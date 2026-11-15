@@ -1,0 +1,57 @@
+{
+  "manifest_count": 37,
+  "registry_rows": 509,
+  "method": "Đối chiếu ID, nhóm, SHA-256 và văn bản NFKC chữ/số trên manifest cấp gốc và manifest lưu trong thư mục kết quả. Không xác minh trùng ngữ nghĩa hoặc tài liệu ngoài manifest.",
+  "sources": [
+    {
+      "file": "splits/ipi-test.jsonl",
+      "counts": {
+        "malicious": {
+          "total": 6782,
+          "match": 6644,
+          "groups": 7
+        },
+        "benign": {
+          "total": 6408,
+          "match": 3065,
+          "groups": 1208
+        }
+      }
+    },
+    {
+      "file": "processed/notinject/notinject.jsonl",
+      "counts": {
+        "benign_control": {
+          "total": 339,
+          "match": 33,
+          "groups": null
+        }
+      }
+    },
+    {
+      "file": "processed/realistic-prompt-injections/realistic-prompt-injections.jsonl",
+      "counts": {
+        "ipi": {
+          "total": 7,
+          "match": 7,
+          "groups": null
+        },
+        "direct": {
+          "total": 2,
+          "match": 0,
+          "groups": null
+        },
+        "mixed": {
+          "total": 1,
+          "match": 0,
+          "groups": null
+        },
+        "benign_control": {
+          "total": 7,
+          "match": 7,
+          "groups": null
+        }
+      }
+    }
+  ]
+}

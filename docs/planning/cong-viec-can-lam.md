@@ -1,5 +1,7 @@
 # Việc cần làm
 
+**Nhiệm vụ chính hiện tại:** thực hiện [quy trình sáu giai đoạn để đo và cải thiện Recall/FPR](quy-trinh-sau-giai-doan-uu-tien-1.md). Phần việc tuần 05 đã chốt. Bắt đầu bằng bộ dev 50 ca và baseline desktop đã khóa cấu hình.
+
 **Mốc mới nhất 05/11:** giữ skill bằng chứng bản lý do ngắn: 15/18, lỗi đầu ra 1 → 0, không mất ca đúng. Đã áp dụng vào caller thử nghiệm, Agent mặc định chưa bật. Ba ca sai ngữ nghĩa vẫn còn; chưa đạt 90% hoặc hoàn thành Ưu tiên 1. Các kết quả bên dưới là lịch sử.
 
 **Cập nhật 05/11:** checkpoint bằng chứng tăng 14/18 → 15/18, giữ làm mốc phát triển. Sáu biến thể mới: cả hai bản 5/6; bản mới có một lỗi cắt đầu ra, chưa chứng minh cải thiện ngoài dev. Người nhận/ngữ cảnh giữ 13/18. Chưa bật Agent, Ưu tiên 1 vẫn mở. Chi tiết trong báo cáo checkpoint ngày 05/11 và selected-profiles.json; các mốc bên dưới là lịch sử.

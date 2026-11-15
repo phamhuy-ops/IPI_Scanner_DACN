@@ -13,6 +13,12 @@ export default defineConfig({
     electron([
       {
         entry: 'electron/main.js',
+        vite: {
+          build: {
+            // Giữ worker PDF bên cạnh thư viện trong node_modules khi đóng gói.
+            rollupOptions: { external: ['pdf-parse'] },
+          },
+        },
       },
       {
         entry: 'electron/preload.js',

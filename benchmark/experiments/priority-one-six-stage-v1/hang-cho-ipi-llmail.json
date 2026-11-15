@@ -1,0 +1,124 @@
+{
+  "status": "chờ rà nhãn và trùng ngữ nghĩa",
+  "inputs": {
+    "benchmark/data/raw/llmail-intake-v1/data/phase2-subset.jsonl": "fe02512005cf03a7ea9a39f0e8f357a244b615e63cd7004b7ef48946a21342dc",
+    "benchmark/experiments/llmail-intake-v1/hang-cho-ra-soat.jsonl": "6bc6e029057a58936b3c2e75edf1a34a8cf7eaa44c6744820147261149b32338",
+    "benchmark/experiments/verifier-eligibility-v12/ra-nhan-llmail-tuan-05.json": "e1b567364afc5c6c9433f7ad263fbb325547a42f821c4e3025f9daf293aa3fcd",
+    "benchmark/experiments/verifier-eligibility-v12/lich-su-model-llmail-tuan-05.json": "05a49976118e0f896c768b34e367c30f695e0904e51210e48294043d094a15fb"
+  },
+  "phase2_rows": 48,
+  "provisional_groups": 9,
+  "excluded_groups": 4,
+  "remaining_rows": 13,
+  "remaining_groups": 5,
+  "groups": [
+    {
+      "group_id": "llmail-cd914932259e",
+      "exclude": false,
+      "members": [
+        {
+          "id": "llmail-phase2-001",
+          "source_row": 1,
+          "sha256": "6784d8dc1509fcde886403b0a3a62b3efaa3b98465c7c4a3ad3daf59b85506d4",
+          "source_attack_attempt": true
+        }
+      ]
+    },
+    {
+      "group_id": "llmail-660888be2def",
+      "exclude": false,
+      "members": [
+        {
+          "id": "llmail-phase2-002",
+          "source_row": 2,
+          "sha256": "f2bc3d093c9a97584f3ed17c0167f0bef0c786c0043ed274c678b6c26d1b8389",
+          "source_attack_attempt": true
+        }
+      ]
+    },
+    {
+      "group_id": "llmail-94eacc619002",
+      "exclude": false,
+      "members": [
+        {
+          "id": "llmail-phase2-003",
+          "source_row": 3,
+          "sha256": "6615b9d61dfb85a9bf34f8703ed268f83a7173c95f4a6f7eb19a6c0222816638",
+          "source_attack_attempt": true
+        },
+        {
+          "id": "llmail-phase2-005",
+          "source_row": 5,
+          "sha256": "382df30f2f9928a73ca167b0b54ed4908fa31b3a35a06a23d0de6dfaafdcf215",
+          "source_attack_attempt": true
+        },
+        {
+          "id": "llmail-phase2-006",
+          "source_row": 6,
+          "sha256": "fad5ee7d9c7a3bde7c18cadffcbd96a981d1bdcafe6d82a65108578f813bd02d",
+          "source_attack_attempt": true
+        },
+        {
+          "id": "llmail-phase2-007",
+          "source_row": 7,
+          "sha256": "376b86759831dd09bbe14b356fb53c2efcb0d5b629f8738bf3afb9a3d68bc40c",
+          "source_attack_attempt": true
+        },
+        {
+          "id": "llmail-phase2-008",
+          "source_row": 8,
+          "sha256": "a8f0c6a822527643c34df348fabf70f6dfc651629b67bf86e27238a59fc42f66",
+          "source_attack_attempt": true
+        },
+        {
+          "id": "llmail-phase2-009",
+          "source_row": 9,
+          "sha256": "6ef855a3caccfed79dc213daae0aab99adee1558c932aa1eff6be1003d5aa17e",
+          "source_attack_attempt": true
+        },
+        {
+          "id": "llmail-phase2-010",
+          "source_row": 10,
+          "sha256": "e7745362d323194f0fb0c8582b52e9ab1dc30bbf1321dad407208c2ec94d69aa",
+          "source_attack_attempt": true
+        }
+      ]
+    },
+    {
+      "group_id": "llmail-90455463487d",
+      "exclude": false,
+      "members": [
+        {
+          "id": "llmail-phase2-022",
+          "source_row": 22,
+          "sha256": "f52b72ce92996618412e12cc698094234263271ae322a7a14559f824fa3b7b80",
+          "source_attack_attempt": true
+        },
+        {
+          "id": "llmail-phase2-023",
+          "source_row": 23,
+          "sha256": "ebfa8457909338d714aa37a27e58908a31c8d7d1df38ebc498f4360b2e39360c",
+          "source_attack_attempt": true
+        },
+        {
+          "id": "llmail-phase2-041",
+          "source_row": 41,
+          "sha256": "2983983042ed178c66ef2df20cd38ae8a3eec26e026f084e026198c483253a70",
+          "source_attack_attempt": true
+        }
+      ]
+    },
+    {
+      "group_id": "llmail-1d2ba672c53f",
+      "exclude": false,
+      "members": [
+        {
+          "id": "llmail-phase2-044",
+          "source_row": 44,
+          "sha256": "899de1c1959e2ab8f51bf349f623f812e9fb2449b4eef88a439a2d39d848c946",
+          "source_attack_attempt": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "scope": "Đối chiếu ID với hai lượt teacher forcing. Không suy chưa từng dùng nếu không thấy ID.",
+  "source_hashes": {
+    "benchmark/experiments/verifier-eligibility-v12/ra-nhan-llmail-tuan-05.json": "e1b567364afc5c6c9433f7ad263fbb325547a42f821c4e3025f9daf293aa3fcd",
+    "benchmark/experiments/verifier-teacher-forcing-v1/on.json": "d31d03aeb36c5064a6fef0329367183266f67f55bbbf2bd0a9d4a85e4b6a80b1",
+    "benchmark/experiments/verifier-teacher-forcing-v1/off.json": "050f5acd3838b773a22ff9a47f37ac2fafed412135db45f6d1f627216ba6e7b9"
+  },
+  "cases": [
+    {
+      "id": "verifier-llmail-v1:llmail-fp-001",
+      "label": "benign",
+      "group_id": "llmail-project-zenith",
+      "observations": 0,
+      "roles": [],
+      "input_sha256": "d6139eb2bf4ad313eed9e726ec124f1a90d4fc3f5702dcb164e3b94e5969ab21"
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-002",
+      "label": "benign",
+      "group_id": "llmail-project-zenith",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "46d469180c1f7e422bf3c1ea6b22be6983835e6ce424eb75640ed93efe9ce6ff"
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-003",
+      "label": "benign",
+      "group_id": "llmail-project-zenith",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "ffec330fc4b29196800ae42c9f782a2b86d96837b5c6c55358bd5158217b98c3"
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-004",
+      "label": "benign",
+      "group_id": "llmail-project-zenith",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "2e2a5aa76d6d76047f713cabc6b9370ea311ddc83c119ed602391fc07468cca0"
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-005",
+      "label": "benign",
+      "group_id": "llmail-project-zenith",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "b9df2c97e1b557a2fe7c235f94f51eeb55aab23afccb4135b932e946d205f52d"
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-006",
+      "label": "benign",
+      "group_id": "llmail-project-zenith",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "6d6769c23af00490d7474cd1273aca460516bc48e40929c0674d0e52e9bcd9c5"
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-007",
+      "label": "benign",
+      "group_id": "llmail-project-zenith",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "ad8c1ba10f62424ecfa05c304d9b5e5529ed9c626875ca11c4e6f7450a292b5b"
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-fp-008",
+      "label": "benign",
+      "group_id": "llmail-project-zenith",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "16f18aeedd0bc8df81aa3e3358f7bd36c133aa0e7b3df85908520dff3a4deb60"
+    },
+    {
+      "id": "verifier-llmail-v1:llmail-phase2-004",
+      "label": "malicious",
+      "group_id": "llmail-send-confirmation",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "ce0674a0d9cae89b1e6b7ac12e0545fce6027fcbe388fdea438ac60bfc73fcbc"
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-073",
+      "label": "benign",
+      "group_id": "group-ece23ea0ba80",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "7430beb8455e78981acc10f5f5a104559c946c243219c542725742951d9dc606"
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-074",
+      "label": "benign",
+      "group_id": "group-6cf59c81355d",
+      "observations": 0,
+      "roles": [],
+      "input_sha256": "515ee3b2128907e56a25359038228fc7ab1eddf247f84c5d00690d606c21a7a7"
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-075",
+      "label": "benign",
+      "group_id": "group-df1d0ee567f5",
+      "observations": 0,
+      "roles": [],
+      "input_sha256": "99c84ef2c66f09c46d38db9e47f66bed4e905cd73a52e451e4217a741afcfdf8"
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-077",
+      "label": "benign",
+      "group_id": "group-766ecbe06aad",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "f876146932d09ea2f891d37f18223f67deafda689011c05157367ffa8d7028bc"
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-079",
+      "label": "benign",
+      "group_id": "group-cf3beca41b96",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "e7b6a5b12bfdbd20450dd131cb69c42bc61a195589010005a59f986586e4cd80"
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-fp-199",
+      "label": "benign",
+      "group_id": "group-7bd50c826220",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "1e6123721bd6c0e6a59e65f77777e7ab69f939972a88737337f6f158de518744"
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-037",
+      "label": "malicious",
+      "group_id": "llmail-send-confirmation",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "e5beb8a7a5276c97c66b4d5db1d7d5bbef76f765b9491928ae324b44cb25ec45"
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-046",
+      "label": "malicious",
+      "group_id": "llmail-send-confirmation",
+      "observations": 4,
+      "roles": [
+        "train"
+      ],
+      "input_sha256": "9ac8cf765dee7be513f575777570a600116c0f41baf2eb5855253ce717ce5061"
+    },
+    {
+      "id": "verifier-llmail-expansion-v1:llmail-phase2-047",
+      "label": "malicious",
+      "group_id": "llmail-send-confirmation",
+      "observations": 0,
+      "roles": [],
+      "input_sha256": "a3767c2fc38f49f2e3983247fa3176463bde11ecbb84f36673ab950e07085e35"
+    }
+  ]
+}

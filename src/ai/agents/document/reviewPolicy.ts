@@ -8,6 +8,10 @@ export class InvalidAgentResponse extends Error {
   constructor(message: string) { super(`Invalid model response: ${message}`); }
 }
 
+export class SymbolOnlyCitation extends InvalidAgentResponse {
+  constructor() { super('citation must contain source content, not only separators or symbols'); }
+}
+
 /** Constrain generation AND independently validate the returned evidence. */
 export function reviewSchema(chunks: SemanticChunk[], expected: IpiSuspicion[], contract: ReviewContract = 'classic-v1'): Record<string, unknown> {
   if (contract === 'classic-spans-v1') return classicSpanSchema(chunks, expected);
@@ -161,7 +165,7 @@ function parseBatch(value: unknown, chunks: SemanticChunk[], expected: IpiSuspic
     const quote = nonempty(row.quote, 'quote');
     // Khớp vị trí chưa đủ: dấu phân cách đơn thuần không chứng minh nhận định.
     // Chỉ chặn bằng chứng rỗng nội dung; không suy ra stance từ từ khóa.
-    if (!/[\p{L}\p{N}]/u.test(quote)) throw new InvalidAgentResponse('citation must contain source content, not only separators or symbols');
+    if (!/[\p{L}\p{N}]/u.test(quote)) throw new SymbolOnlyCitation();
     const chunkId = nonempty(row.chunkId, 'chunkId');
     const requiredLine = original?.citation?.chunkId === chunkId && original.citation.quote === quote ? original.citation.startLine : undefined;
     const citation = citationFor(chunkId, quote, chunks, requiredLine);

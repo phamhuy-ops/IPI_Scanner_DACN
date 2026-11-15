@@ -7,7 +7,7 @@ import { DETECTOR_SYSTEM_PROMPT } from './prompts';
 import { STRUCTURED_DETECTOR_PROMPT } from './structuredPrompts';
 import { REFERENCE_DETECTOR_PROMPT } from './referencePrompts';
 import { referenceBatches, referenceEvidence } from './sourceReferences';
-import { applyBatch, InvalidAgentResponse, parseReviewJson, reviewSchema } from './reviewPolicy';
+import { applyBatch, InvalidAgentResponse, parseReviewJson, reviewSchema, SymbolOnlyCitation } from './reviewPolicy';
 import { DetectorReview, FailedBatch, ReviewedBatch, SemanticChunk, SemanticCoverage } from './types';
 import { ACTION_AUDIT } from './actionAudit';
 import { classicSpanPrompt } from './classicSpans';
@@ -29,6 +29,7 @@ export async function runDetectorAgent(options: {
   recoverCitations?: boolean;
   referenceBatchSize?: number;
   actionAudit?: boolean;
+  candidateActionAudit?: boolean;
   evidencePresentation?: 'stable-alias-v1';
   beforeRequest?: () => void;
   onRequestMetrics?: (metrics: SlmRequestMetrics) => void;
@@ -81,7 +82,9 @@ export async function runDetectorAgent(options: {
         input += '\nFor this retry, set analysis to "Source reviewed.". Give one short sentence per reason. Do not repeat an assessment or report the same span as a discovery twice. Keep all required assessments and return all distinct supported discoveries.';
       }
       const maxOutputTokens = correctiveRetry || compactRetry ? 2048 : undefined;
-      const response = await generateWithSlm('fix', source ? compactSource ? quotedSourcePrompt(SOURCE_REVIEW_COMPACT_PROMPT, batch, expected.length) : SOURCE_REVIEW_PROMPT : options.actionAudit ? `${prompt}\n${ACTION_AUDIT}` : prompt, input,
+      const audit = options.actionAudit || (options.candidateActionAudit && expected.some(row =>
+        row.ruleId === 'IPI-DOC-CONVERSATION-TRANSFER-CANDIDATE' || row.ruleId === 'IPI-DOC-SUMMARY-OUTPUT-OVERRIDE-CANDIDATE'));
+      const response = await generateWithSlm('fix', source ? compactSource ? quotedSourcePrompt(SOURCE_REVIEW_COMPACT_PROMPT, batch, expected.length) : SOURCE_REVIEW_PROMPT : audit ? `${prompt}\n${ACTION_AUDIT}` : prompt, input,
         { preferModel: options.model, providerMode: 'ollama', maxOutputTokens, responseSchema: schema, timeoutMs: Math.min(compactRetry ? 30_000 : options.requestTimeoutMs ?? 45_000, options.deadline - Date.now()), beforeRequest: options.beforeRequest, onRequestMetrics: options.onRequestMetrics });
       modelResponseReceived = true;
       model = response.model;
@@ -106,7 +109,9 @@ export async function runDetectorAgent(options: {
       }
       // Khi đầu ra bị cắt hoặc trích dẫn không khớp, thử lại với ít đoạn hơn.
       // Batch con còn nhiều đoạn có thể chia tiếp; deadline và số đoạn chặn số lượt.
-      const canRecoverCitation = options.recoverCitations && options.onBatchFailed && batchFailureCode(error) === 'invalid_citation';
+      // Giữ lỗi trích dẫn chỉ gồm ký hiệu trong nhật ký và dành thời gian cho các batch còn lại.
+      const canRecoverCitation = options.recoverCitations && options.onBatchFailed
+        && !(error instanceof SymbolOnlyCitation) && batchFailureCode(error) === 'invalid_citation';
       if (batch.length >= 2 && (error instanceof SlmOutputTruncatedError || canRecoverCitation)) {
         const mid = Math.ceil(batch.length / 2);
         const splitBatches = [batch.slice(0, mid), batch.slice(mid)];

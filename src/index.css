@@ -176,6 +176,19 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .ipi-verdict-block-title.risk { color: var(--amber); }
 .ipi-verdict-list { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 12px; line-height: 1.55; }
 .ipi-timeline-feed { display: grid; gap: 8px; }
+.ipi-data-table-wrap { overflow-x: auto; }
+.ipi-data-table { width: 100%; border-collapse: separate; border-spacing: 0 4px; font-size: 11px; }
+.ipi-data-table th { padding: 0 10px 3px; color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .06em; text-align: left; text-transform: uppercase; }
+.ipi-data-table td { padding: 8px 10px; background: var(--surface-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--text); vertical-align: middle; }
+.ipi-data-table td:first-child { border-left: 3px solid var(--blue); border-radius: 4px 0 0 4px; }
+.ipi-data-table td:last-child { border-right: 1px solid var(--line); border-radius: 0 4px 4px 0; }
+.ipi-data-table tbody tr { transition: transform 180ms cubic-bezier(.4, 0, .2, 1), background-color 180ms cubic-bezier(.4, 0, .2, 1); }
+.ipi-data-table tbody tr:hover td { background: var(--blue-soft); }
+.ipi-data-table-time { color: var(--muted); font-family: var(--font-mono); white-space: nowrap; }
+.ipi-data-table-message { min-width: 280px; color: var(--text); line-height: 1.35; }
+@media (max-width: 600px) {
+  .ipi-data-table { min-width: 620px; }
+}
 .ipi-tl-item { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 12px; padding: 10px; background: var(--surface-2); border-left: 3px solid var(--line-strong); }
 .ipi-tl-left { display: flex; gap: 8px; align-items: flex-start; }
 .phase-tag { font: 10px var(--font-mono); color: var(--blue); }
@@ -197,14 +210,14 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 body, .app-shell, .app-header, .left-panel, .right-panel, .scan-activity,
 .ipi-status-bar, .copilot-hero, .copilot-step-card, .ipi-section, .ipi-coverage-summary,
 .ipi-verdict-block, .ipi-finding-item, input, select, button {
-  transition: background-color 280ms ease, color 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+  transition: background-color 280ms cubic-bezier(.4, 0, .2, 1), color 280ms cubic-bezier(.4, 0, .2, 1), border-color 280ms cubic-bezier(.4, 0, .2, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
 }
 .scan-activity { margin-top: 16px; padding: 20px; border: 1px solid var(--motion-border); border-radius: 6px; background: var(--motion-surface); }
 .scan-activity-heading { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 12px; font-size: 14px; }
 .scan-activity-heading > span { color: var(--motion-accent); font-variant-numeric: tabular-nums; }
 .scan-activity small { display: block; color: var(--motion-muted); font-size: 11px; line-height: 1.6; margin-top: 9px; }
 .scan-progress { height: 5px; background: var(--motion-border); border-radius: 4px; overflow: hidden; }
-.scan-progress-fill { position: relative; height: 100%; background: var(--motion-accent); transition: width 500ms ease; overflow: hidden; }
+.scan-progress-fill { position: relative; height: 100%; background: var(--motion-accent); transition: width 280ms cubic-bezier(.4, 0, .2, 1); overflow: hidden; }
 .scan-progress.is-running .scan-progress-fill::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, #ffffff90, transparent); animation: scan-sweep 1.8s linear infinite; }
 .ipi-finding-item summary { cursor: pointer; padding: 6px 0; }
 .ipi-finding-item { animation: finding-arrival 300ms ease-out both; overflow-wrap: anywhere; }
@@ -331,9 +344,9 @@ body, .app-shell, .app-header, .left-panel, .right-panel, .scan-activity,
 .scan-step-completion-ring circle { stroke: var(--green); stroke-width: 2; stroke-dasharray: 100; stroke-dashoffset: 100; }
 .scan-step.is-completed .scan-step-completion-ring circle { stroke-dashoffset: 0; }
 @media (prefers-reduced-motion: no-preference) {
-  .scan-step::before { transition: background-color 420ms ease; }
-  .scan-step:has(+ .is-running)::before { animation: scan-step-link-in 650ms 700ms ease-in-out both; }
-  .scan-step.is-completed .scan-step-completion-ring circle { animation: scan-step-ring-in 680ms ease-in-out both; }
+  .scan-step::before { transition: background-color 280ms cubic-bezier(.4, 0, .2, 1); }
+  .scan-step:has(+ .is-running)::before { animation: scan-step-link-in 300ms 150ms ease-out both; }
+  .scan-step.is-completed .scan-step-completion-ring circle { animation: scan-step-ring-in 300ms ease-out both; }
   .scan-step.is-completed .scan-step-mark svg:not(.scan-step-completion-ring) { animation: scan-step-check-in 200ms 520ms ease-out both; }
 }
 @keyframes scan-step-link-in { from { transform: translateX(-50%) scaleY(0); } to { transform: translateX(-50%) scaleY(1); } }
@@ -541,16 +554,16 @@ button:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); ou
 @media (prefers-reduced-motion: no-preference) {
   .scan-config-panel, .scan-page-heading, .copilot-hero { animation: workspace-enter 450ms ease-out both; }
   .copilot-hero { animation-delay: 90ms; }
-  .scan-drop-zone { transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+  .scan-drop-zone { transition: background 180ms cubic-bezier(.4, 0, .2, 1), border-color 180ms cubic-bezier(.4, 0, .2, 1), box-shadow 180ms cubic-bezier(.4, 0, .2, 1), transform 180ms cubic-bezier(.4, 0, .2, 1); }
   .scan-drop-zone.is-dragging { transform: translateY(-3px); box-shadow: 0 8px 28px color-mix(in srgb, var(--blue) 18%, transparent); }
   .scan-drop-zone.is-dragging .scan-upload-icon { transform: translateY(-4px); }
-  .scan-upload-icon, .btn-primary, .btn-browse, .scan-mode-card { transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease; }
+  .scan-upload-icon, .btn-primary, .btn-browse, .scan-mode-card { transition: transform 160ms cubic-bezier(.4, 0, .2, 1), background 160ms cubic-bezier(.4, 0, .2, 1), border-color 160ms cubic-bezier(.4, 0, .2, 1), box-shadow 160ms cubic-bezier(.4, 0, .2, 1); }
   .btn-primary:hover:not(:disabled), .btn-browse:hover:not(:disabled) { transform: translateY(-2px); }
   .btn-primary:active:not(:disabled), .btn-browse:active:not(:disabled) { transform: translateY(0) scale(.98); }
   .scan-mode-card:hover:not(:disabled) { transform: translateX(3px); }
   .scan-source-list, .scan-conclusion, .error-bar { animation: workspace-enter 280ms ease-out both; }
   details[open] > :not(summary) { animation: detail-enter 200ms ease-out; }
-  .scan-progress-fill { transition: width 400ms ease; }
+  .scan-progress-fill { transition: width 280ms cubic-bezier(.4, 0, .2, 1); }
 }
 @keyframes workspace-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes detail-enter { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }

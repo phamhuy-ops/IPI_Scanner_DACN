@@ -50,7 +50,7 @@ export const IpiAgentPanel: React.FC = () => {
 export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: boolean; locale?: AppLocale; target?: ScanTarget | null; profile?: SemanticScanProfile }> = ({
   ipiRun, ipiRunning, locale = DEFAULT_LOCALE, target, profile,
 }) => {
-  const [showTimeline, setShowTimeline] = useState(false);
+  const [showTimeline, setShowTimeline] = useState(true);
   const findings = useMemo(() => ipiRun.scanResult?.findings || [], [ipiRun.scanResult]);
   const coverage = ipiRun.scanResult?.metadata?.coverage;
   const progress = ipiRun.reviewProgress ? reviewProgressCounts(ipiRun.reviewProgress) : null;
@@ -63,8 +63,12 @@ export const IpiAgentPanelView: React.FC<{ ipiRun: IpiRunState; ipiRunning: bool
           <h4 style={{ fontSize: '13px', fontWeight: 700, margin: 0 }}>{t(locale, 'panel.pipelineLog', { count: ipiRun.events.length })}</h4>
           <button type="button" className="ipi-toggle-btn" onClick={() => setShowTimeline(!showTimeline)}>{showTimeline ? t(locale, 'panel.collapse') : t(locale, 'panel.expand')}</button>
         </div>
-        {showTimeline && <div className="ipi-timeline-feed" style={{ marginTop: 10 }}>
-          {ipiRun.events.map((event, index) => <div key={`${event.ts}-${index}`} className="ipi-tl-item phase-info"><div className="ipi-tl-left"><span className="phase-tag phase-info">{phaseLabel(event)}</span><span className="ipi-tl-time">{new Date(event.ts).toLocaleTimeString(locale === 'vi' ? 'vi-VN' : 'en-US', { hour12: false })}</span></div><div className="ipi-tl-body"><div className="ipi-tl-msg">{event.message}</div></div></div>)}
+        {showTimeline && <div className="ipi-data-table-wrap" style={{ marginTop: 10 }}>
+          <table className="ipi-data-table">
+            <caption className="sr-only">{t(locale, 'panel.pipelineLog', { count: ipiRun.events.length })}</caption>
+            <thead><tr><th scope="col">{locale === 'vi' ? 'Bước' : 'Step'}</th><th scope="col">{locale === 'vi' ? 'Thời gian' : 'Time'}</th><th scope="col">{locale === 'vi' ? 'Nội dung' : 'Message'}</th></tr></thead>
+            <tbody>{ipiRun.events.map((event, index) => <tr key={`${event.ts}-${index}`}><td><span className="phase-tag phase-info">{phaseLabel(event)}</span></td><td className="ipi-data-table-time">{new Date(event.ts).toLocaleTimeString(locale === 'vi' ? 'vi-VN' : 'en-US', { hour12: false })}</td><td className="ipi-data-table-message">{event.message}</td></tr>)}</tbody>
+          </table>
         </div>}
       </section>}
 

@@ -1,0 +1,12 @@
+{
+  "source": "benchmark/data/raw/llmail-intake-v1/data/phase2-subset.jsonl",
+  "sha256": "fe02512005cf03a7ea9a39f0e8f357a244b615e63cd7004b7ef48946a21342dc",
+  "source_rows": 48,
+  "reviewed_labels": {
+    "benign": 14,
+    "malicious": 4
+  },
+  "reviewed_rows_seen_by_model": 14,
+  "reviewed_ipi_groups": 1,
+  "decision": "Giữ ca đã rà trong dev. Các dòng thô còn lại cần rà ngữ cảnh và nhóm trước khi chọn."
+}

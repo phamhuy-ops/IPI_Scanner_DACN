@@ -1,0 +1,473 @@
+{
+  "complete": true,
+  "selected": 50,
+  "observed": 50,
+  "counts": {
+    "không_có_tín_hiệu_prefilter": 25,
+    "detector_chưa_xác_nhận": 25,
+    "verifier_chưa_xác_nhận": 25,
+    "thiếu_độ_bao_phủ": 3,
+    "cần_xem_xét": 3
+  },
+  "cases": [
+    {
+      "id": "doc-01",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-6a604a3a50297d4c",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-02",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-c1ef7e09f8da7ba7",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-03",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-acd04e2d1796f8eb",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-04",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-ff6cff3052d9f517",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-05",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-ee109dce99feb060",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-06",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-ee109dce99feb060",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-07",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-45c0e0d5e2840e63",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-08",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-c1ef7e09f8da7ba7",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-09",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-3207bd7a1429948e",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-10",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-8e8edd4fcd66d965",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-11",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-e3e3699730da3f65",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-12",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-b0db58d959519e24",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-13",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-ce256043dd384b88",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-14",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-84b2b27e52078349",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-15",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-ee13a1deb582d7ca",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-16",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-fb8888e1263bc9c8",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-17",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-a80808433646ad23",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-18",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-5a460361055d1d86",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-19",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-e91ed17929479e18",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-20",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-638d002da68aaf62",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-21",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-1079873a7affe64f",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-22",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "cg-836dea35b0ff539e",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-23",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "vi-thu-vien",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-24",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "en-lab",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-25",
+      "label": "malicious",
+      "verdict": "not_detected",
+      "group_id": "vi-xuong",
+      "reasons": [
+        "không_có_tín_hiệu_prefilter",
+        "detector_chưa_xác_nhận",
+        "verifier_chưa_xác_nhận"
+      ]
+    },
+    {
+      "id": "doc-26",
+      "label": "benign",
+      "verdict": "needs_review",
+      "group_id": "hanoi-school-portal-guide",
+      "reasons": [
+        "thiếu_độ_bao_phủ",
+        "cần_xem_xét"
+      ]
+    },
+    {
+      "id": "doc-27",
+      "label": "benign",
+      "verdict": "needs_review",
+      "group_id": "vast-oms-guide",
+      "reasons": [
+        "thiếu_độ_bao_phủ",
+        "cần_xem_xét"
+      ]
+    },
+    {
+      "id": "doc-28",
+      "label": "benign",
+      "verdict": "needs_review",
+      "group_id": "phutho-guide-4835",
+      "reasons": [
+        "thiếu_độ_bao_phủ",
+        "cần_xem_xét"
+      ]
+    },
+    {
+      "id": "doc-29",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "hnue-form-current-student-faculties",
+      "reasons": []
+    },
+    {
+      "id": "doc-30",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "vi-thu-vien",
+      "reasons": []
+    },
+    {
+      "id": "doc-31",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "en-lab",
+      "reasons": []
+    },
+    {
+      "id": "doc-32",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "vi-xuong",
+      "reasons": []
+    },
+    {
+      "id": "doc-33",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "en-water",
+      "reasons": []
+    },
+    {
+      "id": "doc-34",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "vi-trich-dan",
+      "reasons": []
+    },
+    {
+      "id": "doc-35",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "en-archive",
+      "reasons": []
+    },
+    {
+      "id": "doc-36",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-638d002da68aaf62",
+      "reasons": []
+    },
+    {
+      "id": "doc-37",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-ee109dce99feb060",
+      "reasons": []
+    },
+    {
+      "id": "doc-38",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-ce256043dd384b88",
+      "reasons": []
+    },
+    {
+      "id": "doc-39",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-6a604a3a50297d4c",
+      "reasons": []
+    },
+    {
+      "id": "doc-40",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-a80808433646ad23",
+      "reasons": []
+    },
+    {
+      "id": "doc-41",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-836dea35b0ff539e",
+      "reasons": []
+    },
+    {
+      "id": "doc-42",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-45c0e0d5e2840e63",
+      "reasons": []
+    },
+    {
+      "id": "doc-43",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-acd04e2d1796f8eb",
+      "reasons": []
+    },
+    {
+      "id": "doc-44",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-c1ef7e09f8da7ba7",
+      "reasons": []
+    },
+    {
+      "id": "doc-45",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-e3e3699730da3f65",
+      "reasons": []
+    },
+    {
+      "id": "doc-46",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-a068538c28853674",
+      "reasons": []
+    },
+    {
+      "id": "doc-47",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-434d1c300ee2a1cc",
+      "reasons": []
+    },
+    {
+      "id": "doc-48",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-033643bd79e228c8",
+      "reasons": []
+    },
+    {
+      "id": "doc-49",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-f4181dd4477d1736",
+      "reasons": []
+    },
+    {
+      "id": "doc-50",
+      "label": "benign",
+      "verdict": "not_detected",
+      "group_id": "cg-743566b7d9f14d2d",
+      "reasons": []
+    }
+  ]
+}

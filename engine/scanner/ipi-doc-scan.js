@@ -73,7 +73,10 @@ async function runIpiDocScan(filePaths, options = {}) {
     const rawFindingKeys = new Set();
     const views = extracted.views || [{ id: undefined, text: extracted.text, lineBasis: 'extracted-text' }];
     for (const view of views) {
-      const viewFindings = scanTextForIpi(view.text, filePath, folderPath, { includeTransferCandidates: options.includeTransferCandidates === true })
+      const viewFindings = scanTextForIpi(view.text, filePath, folderPath, {
+        includeTransferCandidates: options.includeTransferCandidates === true,
+        includeSummaryOverrideCandidates: options.includeSummaryOverrideCandidates === true,
+      })
         .filter(finding => view.id !== 'text-projection' || !rawFindingKeys.has(`${finding.ruleId}\u0000${finding.matchedText}`))
         .map(finding => view.id ? { ...finding, sourceView: view.id,
           location: finding.location.replace(/:(\d+)$/, ` [${view.id}]:$1`),
@@ -110,7 +113,8 @@ async function runIpiDocScan(filePaths, options = {}) {
   }
 
   const summary = summarizeFindings(allFindings);
-  const semanticChunks = selectSemanticChunks(allSemanticChunks, scanProfile.maxAiChunks);
+  const adaptive = options.adaptiveChunkSelection === true;
+  const semanticChunks = selectSemanticChunks(allSemanticChunks, scanProfile.maxAiChunks, { adaptive });
   for (const file of fileResults) if (file.extraction) {
     const rawChunks = allSemanticChunks.filter(chunk => chunk.filePath === file.filePath && chunk.sourceView === 'raw-html');
     const selectedRaw = semanticChunks.filter(chunk => chunk.filePath === file.filePath && chunk.sourceView === 'raw-html');
@@ -126,7 +130,7 @@ async function runIpiDocScan(filePaths, options = {}) {
     highRiskChunks: highRiskChunks.length,
     highRiskChunksReviewed: semanticChunks.filter(isHighRiskChunk).length,
     coverageLimited: semanticChunks.length < allSemanticChunks.length,
-    maxAiChunks: scanProfile.maxAiChunks,
+    maxAiChunks: adaptive ? semanticChunks.length : scanProfile.maxAiChunks,
     detectorBatchSize: scanProfile.detectorBatchSize,
     verifierEvidenceCharacters: scanProfile.verifierEvidenceCharacters,
   };

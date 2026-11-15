@@ -1,5 +1,7 @@
 # Cổng hoàn thành Ưu tiên 1: chính sách kết luận và độ bao phủ
 
+Nhiệm vụ đang thực hiện theo [quy trình sáu giai đoạn](quy-trinh-sau-giai-doan-uu-tien-1.md).
+
 Ưu tiên 1 chưa hoàn thành. Đây là điểm theo dõi chính; không thay mục tiêu
 bằng việc đủ số mẫu, JSON hợp lệ hoặc thêm vòng phản biện. Mỗi lần làm
 xong cần ghi phần hoàn tất, phần chưa đạt, kết quả đối chiếu và bước kế.

@@ -81,7 +81,16 @@ function isHighRiskChunk(chunk) {
   return chunk.riskScore >= SEVERITY_SCORE.high;
 }
 
-function selectSemanticChunks(chunks, maxChunks = SEMANTIC_SCAN_PROFILES.balanced.maxAiChunks) {
+function selectSemanticChunks(chunks, maxChunks = SEMANTIC_SCAN_PROFILES.balanced.maxAiChunks, { adaptive = false } = {}) {
+  if (adaptive && maxChunks > SEMANTIC_SCAN_PROFILES.balanced.maxAiChunks) {
+    // Giữ nguyên thứ tự Nâng cao để các đoạn đã chọn vẫn được xử lý trước.
+    const fixed = selectSemanticChunks(chunks, maxChunks);
+    const expanded = new Map(fixed.map(chunk => [chunk.chunkId, chunk]));
+    const remaining = chunks.filter(chunk => chunk.riskScore > 0 && !expanded.has(chunk.chunkId))
+      .sort((a, b) => b.riskScore - a.riskScore || a.index - b.index);
+    for (const chunk of remaining) addChunk(expanded, chunk, 'adaptive-risk');
+    return [...expanded.values()];
+  }
   const selected = new Map();
   const byFile = new Map();
   const groupKey = chunk => `${chunk.filePath}\u0000${chunk.sourceView || 'document-text'}`;
@@ -95,6 +104,14 @@ function selectSemanticChunks(chunks, maxChunks = SEMANTIC_SCAN_PROFILES.balance
   const highRiskChunks = ranked.filter(isHighRiskChunk);
   for (const chunk of highRiskChunks) addChunk(selected, chunk, 'high-risk');
 
+  const remainingRiskChunks = ranked.filter(chunk => chunk.riskScore > 0 && !isHighRiskChunk(chunk));
+  // Giữ tối đa hai chỗ cho ngữ cảnh và lấy mẫu ngoài nhóm có tín hiệu yếu.
+  const priorityLimit = adaptive ? Infinity : maxChunks - 2;
+  for (const chunk of remainingRiskChunks) {
+    if (selected.size >= priorityLimit) break;
+    addChunk(selected, chunk, 'ranked-risk');
+  }
+
   for (const chunk of highRiskChunks) {
     if (chunk.selectionReasons.includes('candidate-context')) continue;
     const items = byFile.get(groupKey(chunk)) || [];
@@ -106,11 +123,14 @@ function selectSemanticChunks(chunks, maxChunks = SEMANTIC_SCAN_PROFILES.balance
     addChunk(selected, items[0], 'sentinel-start');
     addChunk(selected, items[Math.floor(items.length / 2)], 'sentinel-middle');
     addChunk(selected, items[items.length - 1], 'sentinel-end');
-    addChunk(selected, items[Math.floor(items.length * 0.25)], 'coverage-sample');
-    addChunk(selected, items[Math.floor(items.length * 0.75)], 'coverage-sample');
+    if (!adaptive) {
+      addChunk(selected, items[Math.floor(items.length * 0.25)], 'coverage-sample');
+      addChunk(selected, items[Math.floor(items.length * 0.75)], 'coverage-sample');
+    }
   }
 
-  for (const chunk of ranked.filter((item) => item.riskScore > 0)) addChunk(selected, chunk, 'ranked-risk');
+  if (adaptive) return [...selected.values()];
+  for (const chunk of remainingRiskChunks) addChunk(selected, chunk, 'ranked-risk');
   for (const chunk of ranked) addChunk(selected, chunk, 'coverage-fill');
   return [...selected.values()].slice(0, maxChunks);
 }
