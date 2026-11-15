@@ -6,12 +6,12 @@
 
 | STT | Công việc đã thực hiện | Commit chính | Kết quả | Ghi chú |
 |:---:|---|---|---|---|
-| 1 | Đo kết quả quét ban đầu. | Chưa commit | Phát hiện 1/3 ca IPI. | 4/8 ca sạch cần xem xét. |
-| 2 | Ưu tiên đọc các đoạn nghi vấn. | Chưa commit | Thời gian quét trung bình giảm từ khoảng 28 xuống 20 giây. | Kết quả quét giữ nguyên trên 11 ca. |
-| 3 | Sửa lỗi đọc PDF. | Chưa commit | Đã kiểm tra lại tệp TXT, PDF và DOCX. | Hiển thị **Cần xem xét** nếu còn phần chưa đọc. |
-| 4 | Rà nguồn và nhãn dữ liệu. | Chưa commit | Đối chiếu 48 ca và rà nhãn 18 email. | |
-| 5 | Cải thiện nhận diện trên bộ dev 50 ca. | Chưa commit | Phát hiện 25/25 ca IPI, báo nhầm 0/25 ca sạch. | 3 ca sạch cần xem xét. |
-| 6 | Chạy lại toàn bộ luồng quét trên bộ dev 100 ca. | Chưa commit | Recall 90% (45/50), FPR 0% (0/50). | 8 ca cần xem xét. |
+| 1 | Đo kết quả quét ban đầu. | [3591a441](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/3591a441) (ghi nhận kết quả) | Phát hiện 1/3 ca IPI. | 4/8 ca sạch cần xem xét. |
+| 2 | Ưu tiên đọc các đoạn nghi vấn. | [d3d9afa0](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/d3d9afa0) | Thời gian quét trung bình giảm từ khoảng 28 xuống 20 giây. | Kết quả quét giữ nguyên trên 11 ca. |
+| 3 | Sửa lỗi đọc PDF. | [d3d9afa0](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/d3d9afa0) (hồ sơ kiểm tra) | Đã kiểm tra lại tệp TXT, PDF và DOCX. | Hiển thị **Cần xem xét** nếu còn phần chưa đọc. |
+| 4 | Rà nguồn và nhãn dữ liệu. | [d3d9afa0](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/d3d9afa0) | Đối chiếu 48 ca và rà nhãn 18 email. | |
+| 5 | Cải thiện nhận diện trên bộ dev 50 ca. | [d3d9afa0](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/d3d9afa0) | Phát hiện 25/25 ca IPI, báo nhầm 0/25 ca sạch. | 3 ca sạch cần xem xét. |
+| 6 | Chạy lại toàn bộ luồng quét trên bộ dev 100 ca. | [46a2d3d4](https://github.com/phamhuy-ops/IPI_Scanner_DACN/commit/46a2d3d4) (bộ dev và báo cáo) | Recall 90% (45/50), FPR 0% (0/50). | 8 ca cần xem xét. |
 
 ## Chi tiết nội dung công việc
 
