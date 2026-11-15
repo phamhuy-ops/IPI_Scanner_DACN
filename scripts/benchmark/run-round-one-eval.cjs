@@ -121,7 +121,7 @@ async function main() {
   const models = await localGet('/api/tags');
   const codeHashes = fingerprints();
   const { createServer } = await import('vite');
-  const server = await createServer({ configFile: false, root: ROOT, server: { middlewareMode: true }, appType: 'custom' });
+  const server = await createServer({ configFile: false, root: ROOT, server: { middlewareMode: true, watch: null }, optimizeDeps: { noDiscovery: true }, appType: 'custom' });
   const catalog = await server.ssrLoadModule('/src/ai/agents/slmCatalog.ts');
   const fixModel = desktop ? catalog.DESKTOP_DETECTOR_MODEL : 'gemma3:1b';
   const checkModel = verifierModel ?? (desktop ? catalog.DESKTOP_VERIFIER_MODEL : 'qwen2.5-coder:1.5b');
@@ -139,7 +139,6 @@ async function main() {
       throw new Error(`Missing local model: ${name}`);
     }
   }
-  fs.mkdirSync(path.join(ROOT, 'benchmark/results'), { recursive: true });
   const output = makeBenchmarkDirectory('round-one-eval-');
   fs.writeFileSync(path.join(output, 'manifest.json'), manifestRaw);
   const records = [], calls = [];

@@ -31,6 +31,15 @@ export default defineConfig({
     renderer(),
   ],
   base: './',
+  optimizeDeps: {
+    entries: ['index.html'],
+  },
+  server: {
+    watch: {
+      followSymlinks: false,
+      ignored: ['**/benchmark/results/**', '**/lab/results/**'],
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
