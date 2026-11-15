@@ -12,6 +12,7 @@ Thực hiện trực tiếp trên `main`. Tag `pre-reorg-2026-11-15` tại `d3d9
 - Dữ liệu (`ac7c953b`). Chuyển 810 file. Giữ nội dung manifest khóa hash và hỗ trợ tra đường dẫn mới khi đọc. Cả 5 file LFS giữ nguyên pointer và thuộc tính. Chưa có held-out độc lập đã xác nhận.
 - Tóm tắt tuần (`6610998f`). Tạo 24 file cho tuần 01–05 và [mục lục](docs/weekly/README.md). Đối chiếu 28 liên kết đến nhật ký và ảnh.
 - Quy định dự án. Chủ dự án đã duyệt [AGENTS.md](AGENTS.md) bằng tiếng Việt, gồm chính sách hiện có, cấu trúc mới và phạm vi được phép cập nhật link nhật ký.
+- Lưu trữ [`organize-benchmark.cjs`](archive/scripts-passed/README.md) sau khi xác nhận không có npm script hoặc file gọi thực thi. Script dựng cây `benchmark/` cũ và đã lỗi thời sau ngày 2026-11-15.
 
 ## Kiểm chứng
 
@@ -24,12 +25,12 @@ Thực hiện trực tiếp trên `main`. Tag `pre-reorg-2026-11-15` tại `d3d9
 
 ## Việc còn chờ
 
-- `scripts/organize-benchmark.cjs` giữ ở vị trí cũ, chờ duyệt lưu trữ. Chưa có script mới đưa vào `archive/scripts-passed/`. Công cụ đã đóng gói trước đây có danh mục và hash tại `archive/benchmark-old/`.
+- Công cụ đã đóng gói trước đợt này có danh mục và hash tại `archive/benchmark-old/`.
 - Chưa push. Các đường dẫn trong snapshot, manifest khóa hash và hướng dẫn khôi phục có thể phản ánh cây lịch sử.
 
 ## Ánh xạ cuối cùng
 
-Mỗi dòng ghi đường dẫn cũ và đích thực tế của một trong 1.614 file đã chuyển. Ba file cache chỉ được bỏ theo dõi.
+Mỗi dòng ghi đường dẫn cũ và đích thực tế của một trong 1.615 file đã chuyển. Ba file cache chỉ được bỏ theo dõi.
 
 ```text
 benchmark/README.md → lab/README.md
@@ -1610,6 +1611,7 @@ scripts/inspect-verifier-training.py → scripts/data/inspect-verifier-training.
 scripts/normalize-reviewed-external.cjs → scripts/data/normalize-reviewed-external.cjs
 scripts/normalize-reviewed-external.test.ts → tests/tooling/normalize-reviewed-external.test.ts
 scripts/normalize-reviewed-external.ts → scripts/data/normalize-reviewed-external.ts
+scripts/organize-benchmark.cjs → archive/scripts-passed/organize-benchmark.cjs
 scripts/prefilter-benchmark.test.cjs → tests/tooling/prefilter-benchmark.test.cjs
 scripts/prefilter-controls.test.cjs → tests/tooling/prefilter-controls.test.cjs
 scripts/prepare-agent-quality-dev.cjs → scripts/data/prepare-agent-quality-dev.cjs
