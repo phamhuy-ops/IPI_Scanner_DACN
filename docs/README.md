@@ -4,7 +4,7 @@
 
 File mẫu và dataset hiện có được tập hợp tại [kho kiểm thử](../lab/results/baselines/legacy-kiem-thu/README.md), gồm danh mục file CSV và nhãn/nguồn riêng cho báo cáo.
 
-Tiến độ mới: [tuần 3 — dọn công cụ và chia nhánh công việc](../kế%20hoạch%20-%20nhật%20ký%20tuần/tuan-03.md). Công cụ hiện hành qua `scripts/benchmark.cjs`; [script thử nghiệm đã nghỉ dùng và hash](../archive/benchmark-old/don-dep-2026-10-28/README.md) nằm trong ZIP, không còn là lệnh chạy trực tiếp trong workspace.
+Tiến độ mới: [tuần 3 — dọn công cụ và chia nhánh công việc](../kế%20hoạch%20-%20nhật%20ký%20tuần/tuan-03.md). Công cụ hiện hành qua `scripts/benchmark/benchmark.cjs`; [script thử nghiệm đã nghỉ dùng và hash](../archive/benchmark-old/don-dep-2026-10-28/README.md) nằm trong ZIP, không còn là lệnh chạy trực tiếp trong workspace.
 
 | Cần xem gì? | Tài liệu |
 | --- | --- |

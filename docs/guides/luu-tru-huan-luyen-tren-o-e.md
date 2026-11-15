@@ -18,7 +18,7 @@ chính nó tạo trong các thư mục đích. Lệnh sau kiểm kê môi trư�
 Muốn chạy một file Python bằng môi trường này:
 
 ```powershell
-npm run training:python -- scripts/inspect-verifier-training.py
+npm run training:python -- scripts/data/inspect-verifier-training.py
 ```
 
 Hoặc nạp môi trường vào PowerShell hiện tại:
@@ -111,7 +111,7 @@ Windows hiện có pagefile trên C; cấu hình lưu trữ của dự án khôn
 
 Phần này không khởi động hoặc cho phép huấn luyện. Đã chuyển bằng sao chép, đối chiếu SHA256 rồi tạo junction và giải phóng bản C: node_modules sang E:\IPI-Workspace\IPI_Scanner\node_modules; cache Electron và electron-builder sang E:\IPI-Workspace\cache; nội dung cache npm (_cacache) sang E:\IPI-Workspace\cache\npm\_cacache. npm cache User nay trỏ E:\IPI-Workspace\cache\npm cho các lượt mới. Đường dẫn C cũ vẫn dùng được; _npx cũ đang được MCP Chrome sử dụng được giữ trên C, không dừng tiến trình khác. Model/weights/training đang ở E không bị đổi.
 
-Tệp tạm của benchmark, Vitest và Vite dùng E:\IPI-Workspace\IPI_Scanner\tmp qua helper trong scripts/check-engines.js. Chỉ đặt TEMP/TMP/TMPDIR của tiến trình dự án và worker, không sửa TEMP/TMP toàn Windows. Trên máy Windows này helper tự dùng gốc E đã tồn tại; IPI_RUNTIME_ROOT là tùy chọn qua môi trường tiến trình và phải trỏ thư mục riêng thực trên E. Trên máy khác chưa có thư mục mặc định và chưa cấu hình, giữ hành vi cũ.
+Tệp tạm của benchmark, Vitest và Vite dùng E:\IPI-Workspace\IPI_Scanner\tmp qua helper trong scripts/dev/check-engines.js. Chỉ đặt TEMP/TMP/TMPDIR của tiến trình dự án và worker, không sửa TEMP/TMP toàn Windows. Trên máy Windows này helper tự dùng gốc E đã tồn tại; IPI_RUNTIME_ROOT là tùy chọn qua môi trường tiến trình và phải trỏ thư mục riêng thực trên E. Trên máy khác chưa có thư mục mặc định và chưa cấu hình, giữ hành vi cũ.
 
 Các runner đang duy trì dùng makeBenchmarkDirectory để tạo thư mục thật dưới E:\IPI-Workspace\IPI_Scanner\benchmark\results và junction mới dưới benchmark/results. Vì vậy lệnh/baseline/citation dùng đường dẫn C cũ vẫn tương thích. Đối chứng mới hoặc script chẩn đoán cũng phải gọi helper này, không tự mkdtemp trực tiếp dưới benchmark/results trên C. --output riêng được tôn trọng; mặc định của dự án đã chuyển sang E. Không sửa đường dẫn trong raw lịch sử.
 

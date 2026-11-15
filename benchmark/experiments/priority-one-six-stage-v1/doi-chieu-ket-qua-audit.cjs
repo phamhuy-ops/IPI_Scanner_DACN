@@ -1,6 +1,6 @@
 const assert = require('node:assert/strict');
 const path = require('node:path');
-const { summarize } = require('../../../scripts/round-one-metrics.cjs');
+const { summarize } = require('../../../scripts/metrics/round-one-metrics.cjs');
 
 function readRun(id) {
   const directory = path.resolve(__dirname, '../../results/round-one-eval-' + id);

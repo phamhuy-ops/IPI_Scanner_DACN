@@ -74,4 +74,4 @@ Nếu chưa có quyền, đăng nhập website Hugging Face và yêu cầu quy�
 hf auth login
 ```
 
-CLI lưu token tại HF_HOME trên E; không gửi token trong chat hoặc đặt vào câu lệnh có --token. Downloader là scripts/download_specialized_detector.py, chạy qua scripts/python-verifier.ps1. Không cần cài phần mềm mới; chưa gọi model hoặc mở reserved.
+CLI lưu token tại HF_HOME trên E; không gửi token trong chat hoặc đặt vào câu lệnh có --token. Downloader là scripts/download_specialized_detector.py, chạy qua scripts/data/python-verifier.ps1. Không cần cài phần mềm mới; chưa gọi model hoặc mở reserved.

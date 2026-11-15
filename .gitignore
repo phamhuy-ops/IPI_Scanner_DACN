@@ -8,6 +8,7 @@ dist-ts/
 !.env.example
 
 benchmark/results/
+lab/results/runs/
 __pycache__/
 *.pyc
 npm-debug.log*

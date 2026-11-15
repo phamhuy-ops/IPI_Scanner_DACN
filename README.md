@@ -70,7 +70,7 @@ Lệnh `npm run dist` tạo bản Windows portable trong thư mục `dist/`.
 
 ## Benchmark và dữ liệu
 
-Công cụ còn duy trì có một đầu vào `scripts/benchmark.cjs`:
+Công cụ còn duy trì có một đầu vào `scripts/benchmark/benchmark.cjs`:
 
 ```powershell
 npm run benchmark -- --help

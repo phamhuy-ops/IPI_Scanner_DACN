@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 import electron from 'vite-plugin-electron';
 import renderer from 'vite-plugin-electron-renderer';
 
-createRequire(import.meta.url)('./scripts/check-engines.js');
+createRequire(import.meta.url)('./scripts/dev/check-engines.js');
 
 export default defineConfig({
   plugins: [

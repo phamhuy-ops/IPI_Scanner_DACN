@@ -48,7 +48,7 @@ Phần đối chứng mới mới chạy sáu nguồn đầu trong một bối c
 Các cổng tổng hợp trên toàn bộ chưa được đánh giá đầy đủ; vi phạm từng ca
 đã đủ loại ứng viên. Không đổi Agent, parser hoặc adapter, không train.
 
-Thực thi: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/eval_verifier_consistency.py`;
+Thực thi: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/data/python-verifier.ps1 scripts/eval_verifier_consistency.py`;
 chấm: `node scripts/score-verifier-consistency.cjs`. Các lệnh từ chối ghi đè
 đợt hiện tại; không chạy lại để tìm kết quả tốt hơn. Xem
 [kết luận dừng sớm](../../benchmark/experiments/verifier-consistency-eval-v1/ket-luan.json).

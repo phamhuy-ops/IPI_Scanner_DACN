@@ -86,8 +86,8 @@ rà soát nhóm. Chưa cài thư viện ML, tải thêm weights hoặc fine-tune
 Python vẫn dùng môi trường trên E, code và dữ liệu gán nhãn nhỏ ở C:
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 scripts/audit-verifier-expansion.py
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/python-verifier.ps1 -m unittest scripts.test_verifier_expansion -v
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/data/python-verifier.ps1 scripts/audit-verifier-expansion.py
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/data/python-verifier.ps1 -m unittest scripts.test_verifier_expansion -v
 ```
 
 Lệnh tạo là `scripts/prepare-verifier-expansion.py` qua cùng wrapper. Script

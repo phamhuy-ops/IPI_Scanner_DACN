@@ -6,7 +6,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const assert = require('node:assert/strict');
 const { execFileSync } = require('node:child_process');
-const { makeBenchmarkDirectory } = require('../../../scripts/check-engines.js');
+const { makeBenchmarkDirectory } = require('../../../scripts/dev/check-engines.js');
 const root = path.resolve(__dirname, '../../..');
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const definitions = {
