@@ -65,6 +65,18 @@ const HTML_FIXED_ANSWER_OVERRIDE = {
   re: /<(p|aside)\b[^<>\r\n]{0,100}>[ \t]*(?:assistant|ai)[ \t]+(?:reading|reviewing)[ \t]+[^:<>\r\n]{1,65}:[ \t]*(?:omit|skip|ignore)[ \t]+[^<>\r\n]{1,90}?[ \t]+and[ \t]+(?:answer|respond|reply)[ \t]+with[ \t]+(?:the[ \t]+)?(?:phrase|fixed[ \t]+message)[ \t]+[^<>\r\n]{1,120}<\/\1>/iu,
 };
 
+// Comment gọi AI đang đọc nguồn và yêu cầu thay một giá trị trong câu trả lời.
+const HTML_COMMENT_REPLACE_ANSWER_VALUE = {
+  ...SUMMARY_OVERRIDE,
+  re: /<!--[ \t]*(?:assistant|ai)[ \t]+(?:reading|reviewing)[ \t]+[^:<>\r\n]{1,65}:[ \t]*(?:please[ \t]+)?(?:replace|substitute)[ \t]+[^<>\r\n]{1,75}?[ \t]+in[ \t]+(?:the|your)[ \t]+(?:answer|response|reply)[ \t]+with[ \t]+[^<>\r\n]{1,100}?-->/iu,
+};
+
+// Đánh dấu yêu cầu báo đã xong khi đoạn ngay trước vẫn ghi có mục đang chờ.
+const HTML_PENDING_STATUS_OVERRIDE = {
+  ...SUMMARY_OVERRIDE,
+  re: /(?<=<p\b[^<>\r\n]{0,80}>[^<>\r\n]{0,110}(?:còn|vẫn[ \t]+có)[ \t]+[^<>\r\n]{1,45}[ \t]+(?:chờ[ \t]+xác[ \t]+nhận|chưa[ \t]+hoàn[ \t]+tất)[^<>\r\n]{0,45}<\/p>[\r\n \t]{0,20})<(aside|p)\b[^<>\r\n]{0,80}>[ \t]*(?:ai|trợ[ \t]+lý)[ \t]+(?:đang[ \t]+)?(?:đọc|rà[ \t]+soát)[ \t]+[^:<>\r\n]{1,60}:[ \t]*(?:hãy[ \t]+)?(?:ghi|nói|báo)[ \t]+trong[ \t]+(?:câu[ \t]+trả[ \t]+lời|phản[ \t]+hồi)[ \t]+rằng[ \t]+(?:mọi[ \t]+mục|tất[ \t]+cả[ \t]+các[ \t]+mục)[ \t]+đã[ \t]+(?:hoàn[ \t]+tất|xong)[.!]?[ \t]*<\/\1>/iu,
+};
+
 function snippetAround(text, index, radius = 150) {
   const start = Math.max(0, index - 60);
   const end = Math.min(text.length, index + radius);
@@ -132,7 +144,7 @@ function scanTextForIpi(text, filePath, folderPath = '', options = {}) {
   const rel = folderPath ? path.relative(folderPath, filePath) : path.basename(filePath);
 
   const patterns = options.includeSummaryOverrideCandidates
-    ? [...IPI_DOC_PATTERNS, SUMMARY_OVERRIDE, SUMMARY_STATUS_OVERRIDE, SUMMARY_TASK_SWITCH, SUMMARY_SUPPRESS_RESULTS, SUMMARY_REPLACE_VALUE, SUMMARY_REPLACE_REVIEW, SUMMARY_CONCEAL_SCORE_CHANGE, SUMMARY_OVERRIDE_PRIORITY, SUMMARY_OVERRIDE_SCREENING, HTML_FIXED_ANSWER_OVERRIDE] : IPI_DOC_PATTERNS;
+    ? [...IPI_DOC_PATTERNS, SUMMARY_OVERRIDE, SUMMARY_STATUS_OVERRIDE, SUMMARY_TASK_SWITCH, SUMMARY_SUPPRESS_RESULTS, SUMMARY_REPLACE_VALUE, SUMMARY_REPLACE_REVIEW, SUMMARY_CONCEAL_SCORE_CHANGE, SUMMARY_OVERRIDE_PRIORITY, SUMMARY_OVERRIDE_SCREENING, HTML_FIXED_ANSWER_OVERRIDE, HTML_COMMENT_REPLACE_ANSWER_VALUE, HTML_PENDING_STATUS_OVERRIDE] : IPI_DOC_PATTERNS;
   for (const pattern of patterns) {
     const regex = new RegExp(pattern.re.source, pattern.re.flags.includes('g') ? pattern.re.flags : pattern.re.flags + 'g');
     let match;

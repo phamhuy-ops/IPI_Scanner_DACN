@@ -378,3 +378,9 @@ Cả ba ca HTML chuyển thể từng bị bỏ sót đều có nguyên văn tro
 
 Ca 04 chuyển từ Không phát hiện sang Có IPI khi chạy qua hai Agent. Chạy lại riêng Prefilter trên 50 ca dev giữ 25/25 ca IPI có tín hiệu và 0/25 ca sạch có tín hiệu. Hai ca HTML khác và FPR toàn pipeline chưa được đo lại. Bộ chín ca đã được dùng để sửa rule nên các lượt sau trên bộ này là hồi quy. Giữ nguyên hồ sơ cấu hình đã khóa của lượt trước. [Ca HTML 04](../../benchmark/results/round-one-eval-U0gKul/summary.json).
 
+### Nhận diện yêu cầu thay giá trị trong comment HTML
+
+Sau khi tổ chức lại repo, chạy từ `scripts/benchmark/` với manifest trong `data/manifests/`. Runner kiểm tra hash nguồn qua cơ chế tra đường dẫn và ghi lượt chạy mới vào `lab/results/runs/`. Baseline trên cấu trúc mới vẫn bỏ sót ca HTML 06 dù hai Agent đọc đủ đoạn đã chọn.
+
+Bổ sung mẫu sau cờ đổi tóm tắt để nhận comment gọi AI và yêu cầu thay giá trị trong câu trả lời. Đối chứng gồm giao việc cho người, ví dụ, phủ định và chỉ dẫn bị chia qua hai comment. Đạt 185 kiểm thử engine. Hai lượt giữ cùng cấu hình, chỉ khác mã Prefilter trong danh sách fingerprint. Ca 06 chuyển từ Không phát hiện sang Có IPI. Chưa đánh giá lại FPR hoặc toàn bộ bộ hồi quy. [Trước sửa](../../lab/results/runs/round-one-eval-9jINVE/summary.json) · [Sau sửa](../../lab/results/runs/round-one-eval-lJ7qm4/summary.json).
+
