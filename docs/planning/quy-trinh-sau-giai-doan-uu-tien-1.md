@@ -6,7 +6,7 @@ Mốc trung gian là Recall khoảng 50% và FPR dưới 10%. Trên bộ 50 ca c
 
 ## 1. Chuẩn bị 50 ca dev
 
-[Manifest](../../benchmark/data/priority-one-development-50-v1.json) có 25 ca IPI, 25 ca sạch và 35 nhóm theo các manifest nguồn. Đã kiểm tra hash, ID và nguyên văn span ở 25 ca IPI. Các nhãn được kế thừa từ đợt rà trước và các cặp tổng hợp. Bốn PDF/DOCX công khai vẫn có nhãn sạch tạm thời, cần rà lại trước khi dùng làm đối chứng để chọn ứng viên. Bộ 50 ca là dev. Độ độc lập của nhóm chưa được xác minh lại giữa các nguồn.
+[Manifest](../../data/manifests/priority-one-development-50-v1.json) có 25 ca IPI, 25 ca sạch và 35 nhóm theo các manifest nguồn. Đã kiểm tra hash, ID và nguyên văn span ở 25 ca IPI. Các nhãn được kế thừa từ đợt rà trước và các cặp tổng hợp. Bốn PDF/DOCX công khai vẫn có nhãn sạch tạm thời, cần rà lại trước khi dùng làm đối chứng để chọn ứng viên. Bộ 50 ca là dev. Độ độc lập của nhóm chưa được xác minh lại giữa các nguồn.
 
 ## 2. Khóa cấu hình baseline
 
@@ -19,7 +19,7 @@ Baseline dùng cấu hình desktop mặc định, Balanced cố định, `classi
 Đã hoàn tất [baseline 50/50 ca](../../benchmark/results/round-one-eval-RTE04X/summary.json). Recall **0/25**, FPR **0/25**, F1 **0%** và Precision chưa xác định. Có 22 ca sạch trả Không phát hiện và ba ca sạch Cần xem xét vì còn chunk chưa đọc. Cả 112 phản hồi đều hợp lệ. Thời gian trung vị 15,1 giây, p95 44,1 giây.
 
 ```powershell
-npm run benchmark:round-one -- --desktop --manifest benchmark/data/priority-one-development-50-v1.json
+npm run benchmark:round-one -- --desktop --manifest data/manifests/priority-one-development-50-v1.json
 ```
 
 ## 4. Phân tích lỗi
@@ -35,7 +35,7 @@ Dùng baseline làm A. Chọn một lỗi đã đo và chỉ đổi một thành
 Ứng viên đầu tiên chỉ bật tín hiệu prefilter đổi bản tóm tắt. Giữ cấu hình desktop, prompt, skill và cách kết luận như baseline. Chạy một lượt, dùng toàn bộ ca và giữ lỗi hoặc timeout.
 
 ```powershell
-npm run benchmark:round-one -- --desktop --manifest benchmark/data/priority-one-development-50-v1.json --summary-override-candidates
+npm run benchmark:round-one -- --desktop --manifest data/manifests/priority-one-development-50-v1.json --summary-override-candidates
 ```
 
 Đã chạy đủ [50 ca với ứng viên](../../benchmark/results/round-one-eval-Yh9mN1/summary.json). Hash manifest, mã và digest model khớp baseline. Cờ prefilter đổi bản tóm tắt là khác biệt duy nhất trong cấu hình.
@@ -370,7 +370,7 @@ Rà khung email đại diện của năm nhóm và kiểm tra dấu hiệu chung
 
 Tạo chín ca mới mô phỏng đầu vào lịch, email, trang HTML hoặc phản hồi truy vấn theo AgentDojo, WASP và InjecAgent. Nội dung được viết lại thành tác vụ vô hại, có đoạn bằng chứng nguyên văn. Manifest lưu phiên bản nguồn tham chiếu, giấy phép theo tệp LICENSE và hash từng tệp. Đây là bộ chuyển thể nhỏ, chưa chứng minh độc lập về ngữ nghĩa hoặc khả năng khái quát trên benchmark nguồn.
 
-Đưa chín ca qua scanner bằng cấu hình đã khóa. Recall chung 4/9 (44,4%), gồm AgentDojo 2/3, WASP 0/3 và InjecAgent 2/3. Tất cả năm ca bỏ sót trả Không phát hiện. Bộ chỉ có ca IPI nên FPR chưa xác định. Giữ nguyên bộ dev 50 ca và cấu hình mặc định. [Manifest](../../benchmark/data/ipi-static-adaptations-recall-v1.json) · [Kết quả](../../benchmark/results/round-one-eval-85ED4W/summary.json).
+Đưa chín ca qua scanner bằng cấu hình đã khóa. Recall chung 4/9 (44,4%), gồm AgentDojo 2/3, WASP 0/3 và InjecAgent 2/3. Tất cả năm ca bỏ sót trả Không phát hiện. Bộ chỉ có ca IPI nên FPR chưa xác định. Giữ nguyên bộ dev 50 ca và cấu hình mặc định. [Manifest](../../data/manifests/ipi-static-adaptations-recall-v1.json) · [Kết quả](../../benchmark/results/round-one-eval-85ED4W/summary.json).
 
 ### Sửa bỏ sót chỉ dẫn thay câu trả lời trong HTML
 

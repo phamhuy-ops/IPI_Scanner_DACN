@@ -9,7 +9,6 @@ const ROOT = path.resolve(__dirname, '..', '..');
 async function main() {
   const { createServer } = await import('vite');
   const server = await createServer({ configFile: false, root: ROOT, server: { middlewareMode: true }, appType: 'custom' });
-  fs.mkdirSync(path.join(ROOT, 'benchmark/results'), { recursive: true });
   const output = makeBenchmarkDirectory('ipi-policy-smoke-');
   const results = [];
   const responses = [];

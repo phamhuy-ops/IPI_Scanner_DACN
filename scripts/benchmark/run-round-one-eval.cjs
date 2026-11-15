@@ -7,9 +7,11 @@ const { extractDocumentText } = require('../../engine/document/extractors/docume
 const { summarize, chunkCoverage, repeatedAssessmentDiscoveries, checkCitations } = require('../metrics/round-one-metrics.cjs');
 const { checkEvaluationHistory } = require('../metrics/evaluation-history.cjs');
 const { makeBenchmarkDirectory } = require('../dev/check-engines.js');
+const { resolveDataPath } = require('../data/data-paths.cjs');
 const ROOT = path.resolve(__dirname, '..', '..');
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const fingerprintFiles = [
+  'scripts/data/data-paths.cjs',
   'scripts/metrics/evaluation-history.cjs',
   'src/ai/agents/document/ipiPipeline.ts', 'src/ai/agents/document/reviewPolicy.ts', 'src/ai/agents/document/prompts.ts',
   'src/ai/agents/document/directiveContext.ts', 'src/ai/agents/document/structuredPrompts.ts', 'src/types.ts',
@@ -72,12 +74,12 @@ async function main() {
   if (verifierTransferAudit && (!transferCandidates || actionAudit)) {
     throw new Error('--verifier-transfer-audit cần --transfer-candidates và chạy riêng với --action-audit.');
   }
-  let manifestFile = 'benchmark/data/round-one-eval.json', caseId, reviewContract = 'classic-v1', verifierOutput = 'standard';
+  let manifestFile = 'data/manifests/round-one-eval.json', caseId, reviewContract = 'classic-v1', verifierOutput = 'standard';
   let chunkSelection = 'fixed', scanProfile = 'balanced', verifierModel;
   const seen = new Set();
   for (let index = 0; index < args.length; index += 2) {
     const flag = args[index], value = args[index + 1];
-    if (!['--manifest', '--case', '--contract', '--verifier-output', '--chunk-selection', '--profile', '--verifier-model'].includes(flag) || !value || seen.has(flag)) throw new Error('Cách dùng: npm run benchmark:round-one -- [--desktop] [--manifest benchmark/data/name.json] [--case ID] [--contract classic-v1|structured-v1|referenced-v1] [--verifier-output standard|compact-v1] [--chunk-selection fixed|adaptive] [--profile balanced|deep] [--verifier-model TAG]');
+    if (!['--manifest', '--case', '--contract', '--verifier-output', '--chunk-selection', '--profile', '--verifier-model'].includes(flag) || !value || seen.has(flag)) throw new Error('Cách dùng: npm run benchmark:round-one -- [--desktop] [--manifest data/manifests/name.json] [--case ID] [--contract classic-v1|structured-v1|referenced-v1] [--verifier-output standard|compact-v1] [--chunk-selection fixed|adaptive] [--profile balanced|deep] [--verifier-model TAG]');
     seen.add(flag);
     if (flag === '--manifest') manifestFile = value;
     else if (flag === '--contract') reviewContract = value;
@@ -92,14 +94,14 @@ async function main() {
   }
   if (!['classic-v1', 'structured-v1', 'referenced-v1'].includes(reviewContract)) throw new Error('Hợp đồng nhận định không được hỗ trợ.');
   if (!['standard', 'compact-v1'].includes(verifierOutput) || (verifierOutput === 'compact-v1' && reviewContract !== 'referenced-v1')) throw new Error('Verifier rút gọn chỉ hỗ trợ referenced-v1.');
-  const manifestPath = path.resolve(ROOT, manifestFile);
-  const dataRoot = path.join(ROOT, 'benchmark/data') + path.sep;
-  if (!manifestPath.startsWith(dataRoot) || path.extname(manifestPath) !== '.json') throw new Error('Manifest must be a JSON file inside benchmark/data');
+  const manifestPath = resolveDataPath(ROOT, manifestFile);
+  const dataRoot = path.join(ROOT, 'data/manifests') + path.sep;
+  if (!manifestPath.startsWith(dataRoot) || path.extname(manifestPath) !== '.json') throw new Error('Manifest must be a JSON file inside data/manifests');
   const manifestRaw = fs.readFileSync(manifestPath), manifest = JSON.parse(manifestRaw);
   const selectedCases = caseId ? manifest.cases.filter(item => item.id === caseId) : manifest.cases;
   if (!selectedCases.length) throw new Error('Unknown case ID');
   for (const source of Object.values(manifest.source_inputs)) {
-    if (hash(fs.readFileSync(path.join(ROOT, source.file))) !== source.sha256) throw new Error('Manifest source hash changed');
+    if (hash(fs.readFileSync(resolveDataPath(ROOT, source.file))) !== source.sha256) throw new Error('Manifest source hash changed');
   }
   const inputsFor = item => item.files ?? [item];
   if (manifest.history_sources !== undefined && (!Array.isArray(manifest.history_sources) ||
@@ -109,12 +111,12 @@ async function main() {
   for (const key of manifest.history_sources ?? []) {
     if (!Object.hasOwn(manifest.source_inputs, key)) throw new Error(`Thiếu nguồn lịch sử đã khóa hash: ${key}`);
     const source = manifest.source_inputs[key];
-    checkEvaluationHistory(manifest.cases, JSON.parse(fs.readFileSync(path.join(ROOT, source.file))));
+    checkEvaluationHistory(manifest.cases, JSON.parse(fs.readFileSync(resolveDataPath(ROOT, source.file))));
   }
   for (const item of manifest.cases.flatMap(inputsFor)) {
     if (item.text !== undefined && hash(Buffer.from(item.text)) !== item.input_sha256) throw new Error(`Case text hash differs: ${item.id}`);
     if (item.text === undefined && !item.source_file) throw new Error(`Missing input: ${item.id}`);
-    if (item.source_file && hash(fs.readFileSync(path.join(ROOT, item.source_file))) !== item.input_sha256) throw new Error(`File fixture changed: ${item.id}`);
+    if (item.source_file && hash(fs.readFileSync(resolveDataPath(ROOT, item.source_file))) !== item.input_sha256) throw new Error(`File fixture changed: ${item.id}`);
   }
   const models = await localGet('/api/tags');
   const codeHashes = fingerprints();
@@ -201,7 +203,7 @@ async function main() {
       const filePaths = inputsFor(item).map((input, index) => {
         const suffix = item.files ? `-${index + 1}` : '';
         const file = path.join(output, item.id + suffix + input.format);
-        if (input.text === undefined) fs.copyFileSync(path.join(ROOT, input.source_file), file);
+        if (input.text === undefined) fs.copyFileSync(resolveDataPath(ROOT, input.source_file), file);
         else fs.writeFileSync(file, input.text);
         if (hash(fs.readFileSync(file)) !== input.input_sha256) throw new Error(`Input changed: ${item.id}`);
         return file;

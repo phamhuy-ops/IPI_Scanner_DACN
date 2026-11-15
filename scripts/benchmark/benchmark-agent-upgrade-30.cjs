@@ -4,6 +4,7 @@ const { runIpiDocScan } = require('../../engine/scanner/ipi-doc-scan');
 const { checkCitations } = require('../metrics/round-one-metrics.cjs');
 const { qualityMetrics, latencyAssessment, provenLatencyFailure, canonicalModelShow } = require('../metrics/agent-quality-metrics.cjs');
 const { makeBenchmarkDirectory } = require('../dev/check-engines.js');
+const { resolveDataPath } = require('../data/data-paths.cjs');
 const root = path.resolve(__dirname, '..', '..'), sha = b => crypto.createHash('sha256').update(b).digest('hex');
 // Chặn cấu hình sai/đã gỡ trước khi gọi backend hoặc tạo hồ sơ đo.
 function validatePipelineConfig(config, label = 'Cấu hình') {
@@ -93,8 +94,8 @@ async function main() {
   if(!['baseline','candidate'].includes(baselineArm)||settings['--baseline-arm']&&paired)throw Error('baseline-arm chỉ dùng baseline/candidate cho so lịch sử.');
   const oldRows = sourceRows.some(row => row.arm) ? sourceRows.filter(row => row.arm === baselineArm) : sourceRows;
   if (settings['--baseline'] && read(baseline + '/tien-do.json').status !== 'complete') throw Error('Không dùng baseline chưa hoàn tất.');
-  const manifestFile = settings['--manifest'] && path.relative(root, path.resolve(root, settings['--manifest'])).replaceAll('\\', '/');
-  if (manifestFile && (!manifestFile.startsWith('benchmark/data/') || !manifestFile.endsWith('.json'))) throw Error('Manifest phải ở benchmark/data. Bộ mới cần paired; so lịch sử chỉ dùng chính bộ cũ.');
+  const manifestFile = settings['--manifest'] && path.relative(root, resolveDataPath(root, settings['--manifest'])).replaceAll('\\', '/');
+  if (manifestFile && (!manifestFile.startsWith('data/manifests/') || !manifestFile.endsWith('.json'))) throw Error('Manifest phải ở data/manifests. Bộ mới cần paired; so lịch sử chỉ dùng chính bộ cũ.');
   const manifest = manifestFile ? read(manifestFile) : oldPlan;
   const cases = manifest.cases.map(item => ({ ...item, evaluation_group: item.evaluation_group || item.group_id }));
   if (manifestFile && !paired) validateHistoricalManifest(manifest.cases, oldPlan, oldRows, [baseDetector, selectedVerifier]);
@@ -128,7 +129,7 @@ async function main() {
   }
   const out = makeBenchmarkDirectory(manifestFile ? `agent-eval-${cases.length}-` : 'agent-upgrade-30-');
   const save = (name, data) => fs.writeFileSync(path.join(out, name), JSON.stringify(data, null, 2));
-  const files = ['scripts/benchmark/benchmark-agent-upgrade-30.cjs', 'scripts/dev/check-engines.js', 'scripts/metrics/agent-quality-metrics.cjs', 'scripts/metrics/round-one-metrics.cjs', 'scripts/metrics/report-agent-quality.cjs',
+  const files = ['scripts/benchmark/benchmark-agent-upgrade-30.cjs', 'scripts/dev/check-engines.js', 'scripts/data/data-paths.cjs', 'scripts/metrics/agent-quality-metrics.cjs', 'scripts/metrics/round-one-metrics.cjs', 'scripts/metrics/report-agent-quality.cjs',
     'src/types.ts', 'package.json', 'package-lock.json', baseline + '/giao-thuc.json', baseline + '/cases.json', baseline + '/model-calls.json'];
   if (candidateConfig) files.push(candidateConfig);
   if (baselineConfig) files.push(baselineConfig);

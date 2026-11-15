@@ -9,4 +9,4 @@
 
 Chưa thấy IPI trong phần chữ đã rà. Giữ bốn nhãn sạch ở trạng thái tạm thời trong manifest dev đã khóa. Hồ sơ nguồn lưu URL và chưa ghi nhận quyền tái sử dụng. Khi chuẩn bị holdout, dùng nguồn mới có nhãn và quyền sử dụng đã xác minh. Cả bốn ca đã xuất hiện trong baseline dev.
 
-Nguồn lưu trong [đợt đầu](../../../benchmark/data/incoming/public-vi-documents/nguon-vi-v1/manifest.json) và [đợt bổ sung](../../../benchmark/data/incoming/public-vi-documents/nguon-vi-bo-sung-v1/manifest.json).
+Nguồn lưu trong [đợt đầu](../../../data/external/incoming/public-vi-documents/nguon-vi-v1/manifest.json) và [đợt bổ sung](../../../data/external/incoming/public-vi-documents/nguon-vi-bo-sung-v1/manifest.json).

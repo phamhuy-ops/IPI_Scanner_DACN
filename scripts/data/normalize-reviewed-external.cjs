@@ -3,8 +3,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { hash, validateAnnotation } = require('../metrics/context-annotations.cjs');
 const root = path.resolve(__dirname, '..', '..');
-const source = path.join(root, 'benchmark/data/annotations/verifier-expansion-v1');
-const out = path.join(root, 'benchmark/data/annotations/verifier-external-normalized-v1');
+const source = path.join(root, 'data/internal/annotations/verifier-expansion-v1');
+const out = path.join(root, 'data/internal/annotations/verifier-external-normalized-v1');
 const json = value => JSON.stringify(value, null, 2) + '\n';
 async function main() {
   if (fs.existsSync(out)) throw new Error('Đã có biểu diễn chuẩn hóa, không ghi đè.');

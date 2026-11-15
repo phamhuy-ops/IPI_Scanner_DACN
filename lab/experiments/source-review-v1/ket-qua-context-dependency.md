@@ -29,7 +29,7 @@ Lượt bổ sung được tính khi model Detector còn nạp, nhưng chỉ h�
 
 Công cụ benchmark đang duy trì được dùng lại: manifest mới chạy paired; so lịch sử chỉ khi toàn bộ nội dung/nhãn/annotation/group và model chính khớp. File input từng ca giữ thư mục số trung tính riêng, không ghi đè ca trước. Budget chỉ đếm chat, có chỗ cho lượt rà bổ sung; model/template/source snapshot giữ trước/sau. Không thêm runner cấp đầu hoặc train/tải model.
 
-Bước đang thực hiện: đo pipeline thật trên10controls đã khóa (`benchmark/data/context-dependency-controls-dev-v1.json`), rồi nếu chất lượng không lùi mới đo đủ96dev với cấu hình khóa. Mọi ca lỗi/needs_review binary giữ trong mẫu số; uncertain chỉ đúng sau rà bằng chứng. Nguồn/tập lựa chọn này đã dùng phát triển; Ưu tiên1 tiếp tục mở cho đến khi đủ bằng chứng độc lập và pipeline thực tế.
+Bước đang thực hiện: đo pipeline thật trên10controls đã khóa (`data/manifests/context-dependency-controls-dev-v1.json`), rồi nếu chất lượng không lùi mới đo đủ96dev với cấu hình khóa. Mọi ca lỗi/needs_review binary giữ trong mẫu số; uncertain chỉ đúng sau rà bằng chứng. Nguồn/tập lựa chọn này đã dùng phát triển; Ưu tiên1 tiếp tục mở cho đến khi đủ bằng chứng độc lập và pipeline thực tế.
 
 ## Pipeline controls10 đã hoàn tất
 

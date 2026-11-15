@@ -36,7 +36,7 @@ describe('renderer cho nội dung mô tả không có chỉ dẫn', () => {
   it('giữ nguyên 112 payload/target đã khóa của hai batch có chỉ dẫn trước đó', () => {
     let count = 0;
     for (const batch of ['verifier-recipient-contrast-v1', 'verifier-external-context-v1']) {
-      const dir = path.resolve('benchmark/data/annotations', batch);
+      const dir = path.resolve('data/internal/annotations', batch);
       const rows = fs.readFileSync(path.join(dir, 'mau-cho-duyet.jsonl'), 'utf8').trim().split(/\r?\n/).map(line => JSON.parse(line));
       const old = JSON.parse(fs.readFileSync(path.join(dir, 'ban-xem-truoc.json'), 'utf8')).examples;
       for (const example of old) {

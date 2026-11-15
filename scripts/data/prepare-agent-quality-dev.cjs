@@ -1,27 +1,27 @@
 // Khóa bộ dev đa nguồn trước khi chọn cải tiến; không tạo/chỉnh nhãn theo dự đoán.
 const fs = require('node:fs');
 const crypto = require('node:crypto');
-const target = 'benchmark/data/agent-quality-dev-v3.json';
+const target = 'data/manifests/agent-quality-dev-v3.json';
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const sources = {};
 const read = file => { const bytes = fs.readFileSync(file); sources[file] = sha(bytes); return bytes.toString('utf8'); };
 const lines = file => read(file).trim().split(/\r?\n/).map(JSON.parse);
 if (fs.existsSync(target)) throw Error('Không ghi đè manifest đã khóa.');
-const all = JSON.parse(read('benchmark/data/priority-one-dev-v2.json')).cases.map(row => ({
+const all = JSON.parse(read('data/manifests/priority-one-dev-v2.json')).cases.map(row => ({
   original_id: row.original_id, source: row.source, group_id: row.group_id, language: row.language,
   text: row.text, format: row.format, label: row.expected_label, annotation: row.annotation, origin: 'priority-one-dev-v2',
 }));
-for (const row of lines('benchmark/data/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl').filter(row => ['ipi', 'benign_control'].includes(row.attack_scope))) {
+for (const row of lines('data/external/processed/realistic-prompt-injections/realistic-prompt-injections.jsonl').filter(row => ['ipi', 'benign_control'].includes(row.attack_scope))) {
   all.push({ original_id: row.id, source: row.source, group_id: row.id, language: 'en', text: row.text, format: '.txt', label: row.label, origin: 'realistic-development' });
 }
-for (const row of lines('benchmark/data/processed/notinject/notinject.jsonl').slice(0, 16)) {
+for (const row of lines('data/external/processed/notinject/notinject.jsonl').slice(0, 16)) {
   all.push({ original_id: row.id, source: row.source, group_id: `notinject-${row.metadata.source_subset}`,
     language: /[\u3400-\u9FFF]/u.test(row.text) ? 'zh' : 'en_or_multilingual', text: row.text, format: '.txt', label: row.label,
     origin: 'notinject-development', label_basis: 'Benign theo dataset card, không phải duyệt độc lập từng hàng.' });
 }
-const quick = JSON.parse(read('benchmark/kiem-thu/01-mau-nhanh/doi-chieu.json')).records;
+const quick = JSON.parse(read('data/fixtures/legacy/01-mau-nhanh/doi-chieu.json')).records;
 for (const row of quick) all.push({ original_id: row.source, source: 'local-fixtures', group_id: 'local-diagnostic-fixtures',
-  language: row.source.includes('/vi-') ? 'vi' : 'en', text: read('benchmark/kiem-thu/' + row.file), format: require('node:path').extname(row.file),
+  language: row.source.includes('/vi-') ? 'vi' : 'en', text: read('data/fixtures/legacy/' + row.file), format: require('node:path').extname(row.file),
   label: row.expected_label, origin: 'local-fixture' });
 const cases = [], exact = new Map();
 for (const row of all) {

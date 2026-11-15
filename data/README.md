@@ -1,12 +1,23 @@
-# IPI dataset preparation
+# Kho dữ liệu
+
+- `internal/train/` giữ các tập train preview của Verifier. Dùng theo manifest và hash của pilot.
+- `internal/dev/` và `manifests/` giữ tập phát triển và manifest runner. Vai trò từng tập theo hồ sơ gốc. Các ca reserved đi kèm một giao thức vẫn giữ giới hạn dùng của giao thức đó.
+- `internal/reserved/` giữ các tập và split dành riêng, cần rà lịch sử sử dụng. `internal/heldout/` ghi trạng thái kiểm chứng độc lập.
+- `internal/annotations/` là các lô nhãn và bản xem trước. Tình trạng đủ điều kiện theo từng manifest.
+- `external/` giữ nguồn ngoài, nguồn tiếp nhận, kết quả chuẩn hóa và audit. Xem [danh mục nguồn](external/SOURCES.md).
+- `fixtures/` giữ văn bản và tài liệu mẫu theo định dạng kiểm thử. Đọc nhãn bên ngoài nội dung đầu vào.
+
+Manifest khóa hash được giữ nguyên byte. Runner phân giải đường dẫn cũ sang vị trí hiện tại khi đọc. Phần lịch sử dưới đây ghi lại cấu trúc và lệnh tại thời điểm chuẩn bị dữ liệu.
+
+## Hồ sơ chuẩn bị dữ liệu trước tổ chức lại
 
 ## Bộ tập gán nhãn ngữ cảnh
 
 Đã tạo 20 đề xuất nhãn chỉ dẫn/ngữ cảnh tại
-[annotations/ngu-canh-v1](annotations/ngu-canh-v1/README.md). Đã hoàn tất lượt
+[annotations/ngu-canh-v1](internal/annotations/ngu-canh-v1/README.md). Đã hoàn tất lượt
 rà soát cùng người dùng: 19 chấp nhận, 1 sửa; chưa dùng fine-tuning hoặc làm
 holdout. Đọc
-[hướng dẫn tiếng Việt](../../docs/guides/huong-dan-gan-nhan-ngu-canh.md), kiểm
+[hướng dẫn tiếng Việt](../docs/guides/huong-dan-gan-nhan-ngu-canh.md), kiểm
 tra bằng `npm run data:annotations:check`. Dữ liệu raw và các split cũ được
 giữ nguyên.
 

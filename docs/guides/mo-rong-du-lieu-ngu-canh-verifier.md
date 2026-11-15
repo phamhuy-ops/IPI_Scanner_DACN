@@ -6,7 +6,7 @@ snapshot mở rộng đầu tiên. Dùng tài liệu này cho quy trình/lệnh;
 Không suy mẫu còn pending hoặc máy chưa có thư viện từ mô tả lịch sử.
 
 Lượt 02 đã duyệt xong 30 mẫu; xem
-[tổng kết quyết định](../../benchmark/data/annotations/verifier-expansion-v1/tong-ket-luot-duyet-02.md).
+[tổng kết quyết định](../../data/internal/annotations/verifier-expansion-v1/tong-ket-luot-duyet-02.md).
 Audit hỗ trợ cả phiếu pending và phiếu đã duyệt, giữ kiểm tra hash đề xuất
 và cách ly direct/mixed. Các số lượng pending bên dưới mô tả snapshot
 lúc chuẩn bị, không thay thế quyết định cuối trong phiếu.
@@ -49,7 +49,7 @@ Chưa được coi là chia tập hoàn chỉnh hoặc bảo đảm không rò r
 
 ## Lượt duyệt tiếp theo
 
-Trong `benchmark/data/annotations/verifier-expansion-v1/`:
+Trong `data/internal/annotations/verifier-expansion-v1/`:
 
 - `hang-cho-gan-nhan.jsonl`: nguồn nguyên vẹn, provenance, nhãn nguồn,
   nhóm và trạng thái chờ; không phải input đưa thẳng vào model.

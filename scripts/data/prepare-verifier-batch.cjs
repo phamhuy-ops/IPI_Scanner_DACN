@@ -4,7 +4,7 @@ const { createServer } = require('vite');
 const { buildCases } = require('./verifier-batch-cases.cjs');
 const { hash, validateAnnotation } = require('../metrics/context-annotations.cjs');
 const ROOT = path.resolve(__dirname, '..', '..');
-const DIR = path.join(ROOT, 'benchmark/data/annotations/verifier-batch-v1');
+const DIR = path.join(ROOT, 'data/internal/annotations/verifier-batch-v1');
 const json = value => JSON.stringify(value, null, 2) + '\n';
 
 async function run(check = false) {
@@ -40,7 +40,7 @@ async function run(check = false) {
         'Quyết định: chưa duyệt. Người duyệt / thời điểm / sửa đổi / lý do: để trống.', '');
     }
     counts.groups = counts.groups.size;
-    const legacy = fs.readFileSync(path.join(ROOT, 'benchmark/data/annotations/ngu-canh-v1/mau-cho-duyet.jsonl'), 'utf8').trim().split(/\r?\n/).map(JSON.parse);
+    const legacy = fs.readFileSync(path.join(ROOT, 'data/internal/annotations/ngu-canh-v1/mau-cho-duyet.jsonl'), 'utf8').trim().split(/\r?\n/).map(JSON.parse);
     const normalize = text => text.normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
     const seen = new Set(legacy.map(row => normalize(row.text)));
     for (const row of rows) {

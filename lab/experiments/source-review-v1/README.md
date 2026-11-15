@@ -12,7 +12,7 @@ Tích hợp sửa lỗi schema context dùng chung: clone riêng từng variant,
 
 So với prototype: scope có namespace riêng, rule hiện có được đánh giá thêm và dùng lại chính sách discovery khi chuyển scope. Phiên bản đầu tích hợp từng gửi directive hẹp sang Verifier; sau đối chứng đã giữ nguyên chunk để không mất phần chỉ người nhận chỉ dẫn. Không kế thừa điểm 10/12 cho phiên bản tích hợp.
 
-Manifest `benchmark/data/source-review-dev12-v1.json` giữ đúng 8 ca dev cũ và 4 controls Anh/Việt đã dùng. Không gọi đó là holdout. Lượt `agent-eval-12-JH9PmD` dừng trước candidate để bổ sung kiểm tra discovery khi uncertain; giữ raw, không dùng kết quả dở để kết luận. Lượt thay thế `agent-eval-12-zRAFqV` chạy hai nhánh bằng extractor thật, cùng đường dẫn đầu vào, cùng Qwen3 Detector và Verifier cũ; cấu hình/code/prompt/seed và raw được runner lưu trên E.
+Manifest `data/manifests/source-review-dev12-v1.json` giữ đúng 8 ca dev cũ và 4 controls Anh/Việt đã dùng. Không gọi đó là holdout. Lượt `agent-eval-12-JH9PmD` dừng trước candidate để bổ sung kiểm tra discovery khi uncertain; giữ raw, không dùng kết quả dở để kết luận. Lượt thay thế `agent-eval-12-zRAFqV` chạy hai nhánh bằng extractor thật, cùng đường dẫn đầu vào, cùng Qwen3 Detector và Verifier cũ; cấu hình/code/prompt/seed và raw được runner lưu trên E.
 
 Đây chưa thay giới hạn chunk được chọn, chưa chứng minh tài liệu dài/đa định dạng hoặc dữ liệu độc lập. Ngân sách request 45 giây không phải cam kết toàn pipeline 45 giây. Chỉ xem xét đổi mặc định sau đo dev đầy đủ và kiểm chứng độc lập phù hợp; Ưu tiên 1 vẫn mở.
 

@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const { makeBenchmarkDirectory } = require('../dev/check-engines.js');
+const { resolveDataPath } = require('../data/data-paths.cjs');
 const { main: benchmark, metrics } = require('./run-prefilter-benchmark.cjs');
 const ROOT = path.resolve(__dirname, '..', '..');
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
@@ -22,13 +23,13 @@ function selectSamples(samples, view) {
 }
 
 function runSuite(outputRoot = path.join(ROOT, 'lab/results/runs')) {
-  const manifestPath = path.join(ROOT, 'benchmark/data/control-suite.json');
+  const manifestPath = path.join(ROOT, 'data/manifests/control-suite.json');
   const manifestRaw = fs.readFileSync(manifestPath);
   const manifest = JSON.parse(manifestRaw);
   const sources = new Map();
   for (const [name, definition] of Object.entries(manifest.sources)) {
-    const raw = fs.readFileSync(path.join(ROOT, definition.dataset));
-    const report = JSON.parse(fs.readFileSync(path.join(ROOT, definition.normalization_report)));
+    const raw = fs.readFileSync(resolveDataPath(ROOT, definition.dataset));
+    const report = JSON.parse(fs.readFileSync(resolveDataPath(ROOT, definition.normalization_report)));
     if (hash(raw) !== report.output_sha256) throw new Error(`Normalized source changed: ${name}`);
     const samples = readJsonl(raw);
     if (samples.length !== report.rows || new Set(samples.map(r => r.id)).size !== samples.length) throw new Error(`Invalid source rows: ${name}`);
@@ -45,7 +46,8 @@ function runSuite(outputRoot = path.join(ROOT, 'lab/results/runs')) {
   fs.mkdirSync(outputRoot, { recursive: true });
   const output = makeBenchmarkDirectory('prefilter-controls-', outputRoot);
   const sourceFiles = ['engine/prefilter/document-prefilter.js', 'engine/prefilter/rules/ipi-document-rules.js',
-    'engine/models/finding.js', 'scripts/benchmark/run-prefilter-benchmark.cjs', 'scripts/benchmark/run-prefilter-controls.cjs'];
+    'engine/models/finding.js', 'scripts/benchmark/run-prefilter-benchmark.cjs', 'scripts/benchmark/run-prefilter-controls.cjs',
+    'scripts/data/data-paths.cjs'];
   const codeHashes = Object.fromEntries(sourceFiles.map(file => [file, hash(fs.readFileSync(path.join(ROOT, file)))]));
   const results = [];
   let complete = false;
@@ -70,7 +72,7 @@ function runSuite(outputRoot = path.join(ROOT, 'lab/results/runs')) {
         by_subset_or_scope: [...subsets].map(([name, rows]) => ({ name, ...metrics(rows) })) });
     }
     for (const [name, source] of sources) {
-      if (hash(fs.readFileSync(path.join(ROOT, source.definition.dataset))) !== source.hash) throw new Error(`Source changed during run: ${name}`);
+      if (hash(fs.readFileSync(resolveDataPath(ROOT, source.definition.dataset))) !== source.hash) throw new Error(`Source changed during run: ${name}`);
     }
     for (const [file, expected] of Object.entries(codeHashes)) {
       if (hash(fs.readFileSync(path.join(ROOT, file))) !== expected) throw new Error(`Code changed during run: ${file}`);

@@ -75,7 +75,7 @@ def main():
                  "wsl_inventory": command(["wsl.exe", "--list", "--quiet"]) if os.name == "nt" else None,
                  "scope": "Chỉ Python đang chạy; không tìm toàn bộ venv hoặc import torch để khởi tạo GPU. WSL lỗi/không có output không chứng minh môi trường Linux sẵn sàng."}
     report = {"inventory": inventory, "assessment": assess_inventory(inventory)}
-    results = ROOT / "benchmark" / "results"
+    results = ROOT / "lab" / "results" / "runs"
     results.mkdir(parents=True, exist_ok=True)
     output = pathlib.Path(tempfile.mkdtemp(prefix="training-readiness-", dir=results))
     (output / "summary.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

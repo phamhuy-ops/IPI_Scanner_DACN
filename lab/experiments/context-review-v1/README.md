@@ -9,7 +9,7 @@ For reproduction, use an isolated copy of the project, substitute this snapshot
 for `src/ai/agents/document/prompts.ts`, then run:
 
 ```sh
-npm run benchmark:round-one -- --manifest benchmark/data/context-controls-v2.json
+npm run benchmark:round-one -- --manifest data/manifests/context-controls-v2.json
 npm run benchmark:round-one
 ```
 

@@ -6,7 +6,7 @@ Ngày 2026-10-28. Đã rà nháp bằng AI 14 hàng, chưa duyệt độc lập 
 
 Chọn có chủ đích hàng 0 và 2 của `test_cases_dh_base.json` cùng hàng tương ứng trong `test_cases_dh_enhanced.json`, snapshot InjecAgent revision `f19c9f2c79a41046eb13c03c51a24c567a8ffa07`. Hai bối cảnh là review Amazon và mô tả repository GitHub; cùng yêu cầu cấp quyền khóa nên giữ chung một nhóm. Không dùng hàng đã chọn làm holdout chưa đụng tới.
 
-Đối chiếu hash hai file và LICENCE với snapshot trước xuất. Giấy phép nguồn khai MIT; notice gốc giữ tại `benchmark/data/raw/injecagent/LICENCE`. Task lấy nguyên trường `User Instruction`; document gốc lấy nguyên `Tool Response`. `Attacker Instruction`, `Thought`, `Expected Achievements`, nhãn nguồn và group không đi vào features.
+Đối chiếu hash hai file và LICENCE với snapshot trước xuất. Giấy phép nguồn khai MIT; notice gốc giữ tại `data/external/injecagent/raw/LICENCE`. Task lấy nguyên trường `User Instruction`; document gốc lấy nguyên `Tool Response`. `Attacker Instruction`, `Thought`, `Expected Achievements`, nhãn nguồn và group không đi vào features.
 
 ## Nhận định ngữ nghĩa
 

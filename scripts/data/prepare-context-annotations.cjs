@@ -1,19 +1,20 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { hash, annotationHash, span, auditCollection } = require('../metrics/context-annotations.cjs');
+const { resolveDataPath } = require('./data-paths.cjs');
 const ROOT = path.resolve(__dirname, '..', '..');
-const OUTPUT = path.join(ROOT, 'benchmark/data/annotations/ngu-canh-v1');
+const OUTPUT = path.join(ROOT, 'data/internal/annotations/ngu-canh-v1');
 function build() {
   if (fs.existsSync(OUTPUT)) throw new Error('Bộ v1 đã tồn tại; không ghi đè phiếu rà soát. Hãy audit hoặc tạo phiên bản mới.');
-  const files = ['benchmark/data/context-controls-v2.json', 'benchmark/data/round-one-eval.json'];
+  const files = ['data/manifests/context-controls-v2.json', 'data/manifests/round-one-eval.json'];
   const manifests = Object.fromEntries(files.map(file => [file, JSON.parse(fs.readFileSync(path.join(ROOT, file), 'utf8'))]));
   const sourceHashes = Object.fromEntries(files.map(file => [file, hash(fs.readFileSync(path.join(ROOT, file)))]));
   for (const manifest of Object.values(manifests)) for (const source of Object.values(manifest.source_inputs)) {
-    if (hash(fs.readFileSync(path.join(ROOT, source.file))) !== source.sha256) throw new Error('Nguồn manifest đã đổi.');
+    if (hash(fs.readFileSync(resolveDataPath(ROOT, source.file))) !== source.sha256) throw new Error('Nguồn manifest đã đổi.');
     sourceHashes[source.file] = source.sha256;
   }
-  for (const file of ['benchmark/data/raw/malmasabi-bipia-gpt/README.md', 'benchmark/data/audits/notinject-audit.json',
-    'benchmark/data/audits/realistic-prompt-injections-audit.json']) sourceHashes[file] = hash(fs.readFileSync(path.join(ROOT, file)));
+  for (const file of ['data/external/malmasabi-bipia-gpt/raw/README.md', 'data/external/audits/notinject-audit.json',
+    'data/external/audits/realistic-prompt-injections-audit.json']) sourceHashes[file] = hash(fs.readFileSync(path.join(ROOT, file)));
   const rows = [];
   const add = (text, format, language, group, provenance, fields, directiveQuotes, contextQuote, reason, notes = []) => {
     const annotation = { ...fields, hasDirective: directiveQuotes.length > 0,

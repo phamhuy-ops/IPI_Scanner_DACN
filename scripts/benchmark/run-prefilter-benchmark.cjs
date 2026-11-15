@@ -29,7 +29,7 @@ function main(args = process.argv.slice(2)) {
   const split = options['--split'] || 'dev';
   if (!['dev', 'test'].includes(split)) throw new Error('Split must be dev or test');
   if (options['--dataset'] && options['--split']) throw new Error('Use either --dataset or --split');
-  const dataset = path.resolve(ROOT, options['--dataset'] || `benchmark/data/splits/ipi-${split}.jsonl`);
+  const dataset = path.resolve(ROOT, options['--dataset'] || (split === 'dev' ? 'data/internal/dev/splits/ipi-dev.jsonl' : 'data/internal/reserved/splits/ipi-test.jsonl'));
   const raw = fs.readFileSync(dataset);
   const samples = raw.toString('utf8').replace(/^\uFEFF/, '').split(/\r?\n/).filter(line => line.trim()).map(JSON.parse);
   if (!samples.length) throw new Error('Dataset is empty');

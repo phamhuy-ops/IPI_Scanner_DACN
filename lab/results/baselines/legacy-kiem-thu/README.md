@@ -30,9 +30,9 @@ Kết quả mới: [kiểm tra luồng Agent bằng 30 ca/60 request model thậ
 
 Đầu mối để xem mẫu, đối chiếu nhãn và lấy số liệu báo cáo. Nguồn gốc và baseline giữ nguyên. Không cộng các bộ thành số nguồn độc lập.
 
-- [Mẫu nhanh](../../../../benchmark/kiem-thu/01-mau-nhanh/files): 6 file TXT/MD/HTML; [nhãn và nguồn](../../../../benchmark/kiem-thu/01-mau-nhanh/doi-chieu.json).
-- [Dev hồi quy](../../../../benchmark/kiem-thu/02-dev-72/files): 72 file nguyên văn từ manifest 72 nguồn; [nhãn/span/nguồn](../../../../benchmark/kiem-thu/02-dev-72/doi-chieu.json). Đã dùng phát triển, không phải holdout.
-- [PDF/DOCX thật](../../../../benchmark/kiem-thu/03-pdf-docx/files): 4 bản sao nguyên byte; [trạng thái nguồn](../../../../benchmark/kiem-thu/03-pdf-docx/doi-chieu.json). Chưa duyệt nhãn/quyền/riêng tư, không dùng train.
+- [Mẫu nhanh](../../../../data/fixtures/legacy/01-mau-nhanh/files): 6 file TXT/MD/HTML; [nhãn và nguồn](../../../../data/fixtures/legacy/01-mau-nhanh/doi-chieu.json).
+- [Dev hồi quy](../../../../data/fixtures/legacy/02-dev-72/files): 72 file nguyên văn từ manifest 72 nguồn; [nhãn/span/nguồn](../../../../data/fixtures/legacy/02-dev-72/doi-chieu.json). Đã dùng phát triển, không phải holdout.
+- [PDF/DOCX thật](../../../../data/fixtures/legacy/03-pdf-docx/files): 4 bản sao nguyên byte; [trạng thái nguồn](../../../../data/fixtures/legacy/03-pdf-docx/doi-chieu.json). Chưa duyệt nhãn/quyền/riêng tư, không dùng train.
 - [Danh mục dataset](04-dataset/README.md): dữ liệu Hugging Face và nguồn ngoài, giữ đường dẫn canonical.
 - [Danh mục file CSV](danh-muc-file.csv): đường dẫn, nguồn, nhãn kỳ vọng, vai trò và hash phục vụ báo cáo.
 - [Tổng hợp và hash nguồn](tong-hop.json).

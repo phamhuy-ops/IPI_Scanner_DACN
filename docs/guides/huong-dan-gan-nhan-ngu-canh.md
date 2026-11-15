@@ -10,7 +10,7 @@ toàn bộ ví dụ hoặc tự viết lại dataset. Công việc hiện tại 
 
 ## Mở file nào trước
 
-Mở [phiếu đọc từng mẫu](../../benchmark/data/annotations/ngu-canh-v1/phieu-ra-soat.md).
+Mở [phiếu đọc từng mẫu](../../data/internal/annotations/ngu-canh-v1/phieu-ra-soat.md).
 Mỗi mục có đường dẫn tới toàn văn, đoạn chỉ dẫn, các trường nháp và lý do.
 Đọc cả nguồn thay vì chỉ câu đáng ngờ. Với HTML, đọc mã nguồn để thấy cả
 comment; giao diện render có thể giấu comment. Với tài liệu dài, kiểm tra cả
@@ -73,7 +73,7 @@ khi có xác nhận thực sự của người đó; AI không được tự đi
 duyệt. Nhận xét có thể được ghi vào file sau khi bạn gửi, giữ riêng từng ID.
 
 Nếu sửa file trực tiếp, dùng
-[ket-qua-ra-soat.json](../../benchmark/data/annotations/ngu-canh-v1/ket-qua-ra-soat.json):
+[ket-qua-ra-soat.json](../../data/internal/annotations/ngu-canh-v1/ket-qua-ra-soat.json):
 
 1. Tìm đúng id, giữ nguyên input_sha256 và draft_sha256 để nhận biết phiên
    bản bạn đã đọc. Không sửa mau-cho-duyet.jsonl để làm khớp đáp án.

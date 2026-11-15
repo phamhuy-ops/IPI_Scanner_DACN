@@ -67,7 +67,7 @@ pipeline và UI thể hiện đúng phạm vi. Chưa đạt thì giữ trạng t
 thực hiện, không thêm phản biện như một cách che lỗi vòng đầu.
 
 Tiến độ chạy máy: `lab/experiments/priority-one-progress-v1/tien-do.json`.
-Manifest baseline: `benchmark/data/priority-one-dev-v2.json`. Các span
+Manifest baseline: `data/manifests/priority-one-dev-v2.json`. Các span
 nhiều câu được thu hẹp cơ học ở ba nguồn có hành động rõ; phần lớn span
 toàn nguồn còn lại là câu đơn ngắn. Giữ nhãn/ngữ cảnh gốc, gắn cờ phạm vi
 span; không giả danh lần duyệt ranh giới mới của người dùng.
