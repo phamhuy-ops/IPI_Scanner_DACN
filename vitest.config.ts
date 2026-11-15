@@ -8,7 +8,7 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     include: ['**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}'],
-    exclude: ['node_modules', 'dist', 'dist-electron', 'dist-ts', 'benchmark/results/**', 'benchmark/archives/**'],
+    exclude: ['node_modules', 'dist', 'dist-electron', 'dist-ts', 'benchmark/results/**', 'archive/**'],
     pool: 'forks',
   },
 });

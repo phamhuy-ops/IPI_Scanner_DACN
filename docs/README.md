@@ -4,7 +4,7 @@
 
 File mẫu và dataset hiện có được tập hợp tại [kho kiểm thử](../benchmark/kiem-thu/README.md), gồm danh mục file CSV và nhãn/nguồn riêng cho báo cáo.
 
-Tiến độ mới: [tuần 3 — dọn công cụ và chia nhánh công việc](../kế%20hoạch%20-%20nhật%20ký%20tuần/tuan-03.md). Công cụ hiện hành qua `scripts/benchmark.cjs`; [script thử nghiệm đã nghỉ dùng và hash](../benchmark/archives/don-dep-2026-10-28/README.md) nằm trong ZIP, không còn là lệnh chạy trực tiếp trong workspace.
+Tiến độ mới: [tuần 3 — dọn công cụ và chia nhánh công việc](../kế%20hoạch%20-%20nhật%20ký%20tuần/tuan-03.md). Công cụ hiện hành qua `scripts/benchmark.cjs`; [script thử nghiệm đã nghỉ dùng và hash](../archive/benchmark-old/don-dep-2026-10-28/README.md) nằm trong ZIP, không còn là lệnh chạy trực tiếp trong workspace.
 
 | Cần xem gì? | Tài liệu |
 | --- | --- |
@@ -29,7 +29,7 @@ Tiến độ mới: [tuần 3 — dọn công cụ và chia nhánh công việc]
 ## Lịch sử đã thu gọn
 
 Báo cáo trung gian và kế hoạch thử cũ đã rời thư mục docs. Snapshot trước
-dọn nằm trong [ZIP lịch sử](../benchmark/archives/docs-truoc-rut-gon-2026-10-26.zip),
-kèm [danh mục/hash](../benchmark/archives/docs-truoc-rut-gon-2026-10-26.json).
+dọn nằm trong [ZIP lịch sử](../archive/benchmark-old/docs-truoc-rut-gon-2026-10-26.zip),
+kèm [danh mục/hash](../archive/benchmark-old/docs-truoc-rut-gon-2026-10-26.json).
 Đường dẫn docs cũ trong artifact bất biến được tra qua danh mục này; không
 viết lại kết quả lịch sử. Dữ liệu và baseline không bị xóa.

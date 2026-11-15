@@ -6,7 +6,7 @@ Mới nhất: [v2 qua sàng lọc30 ca nhưng bị loại ở kiểm tra hồi q
 
 Mốc baseline sau hoàn tác prompt: [30 ca/60 request, đúng9/30; recall1/12, còn6 lỗi citation](../results/agent-upgrade-30-xbVu3V/quality-audit.json). Sửa phục hồi batch đã kiểm tra kỹ thuật; bản thử bắt buộc rà từng chunk [bị loại sớm ở11/30 và đã gỡ mã](../results/agent-upgrade-30-MIxicE/quyet-dinh.json). [Nhật ký tuần3](../../kế%20hoạch%20-%20nhật%20ký%20tuần/tuan-03.md) giải thích phạm vi và phần còn thiếu.
 
-Sau dọn 28/10/2026: công cụ đang duy trì qua `scripts/benchmark.cjs`; [danh mục script/audit/snapshot đã nén](../archives/don-dep-2026-10-28/README.md). Các kết quả dưới đây là mốc lịch sử của đúng cấu hình đã đo, không tự đại diện cho mã sau hoàn tác prompt. [Tuần 3](../../kế%20hoạch%20-%20nhật%20ký%20tuần/tuan-03.md) ghi kế hoạch đo tiếp và các nhánh sản phẩm song song.
+Sau dọn 28/10/2026: công cụ đang duy trì qua `scripts/benchmark.cjs`; [danh mục script/audit/snapshot đã nén](../../archive/benchmark-old/don-dep-2026-10-28/README.md). Các kết quả dưới đây là mốc lịch sử của đúng cấu hình đã đo, không tự đại diện cho mã sau hoàn tác prompt. [Tuần 3](../../kế%20hoạch%20-%20nhật%20ký%20tuần/tuan-03.md) ghi kế hoạch đo tiếp và các nhánh sản phẩm song song.
 
 Đo mới sau nâng cấp người dùng: [30 ca/60 request thật, chất lượng tổng giảm 7/30 → 4/30](../results/agent-upgrade-30-bMiNNH/bao-cao.md). Recall tăng nhưng mất 5 ca sạch đúng; gói mới trượt cổng, chưa mở rộng coverage hoặc đạt90%. Có raw, audit uncertain và bằng chứng từng ca.
 

@@ -25,7 +25,7 @@ if (!command || command === '--help' || command === 'help') {
     'replay                Phát lại raw baseline; không đo chất lượng model mới.',
     'prefilter / controls  Đo rule, không thay thế kết quả Agent.',
     'Không truyền lệnh chỉ hiện trợ giúp, không gọi model. agent/round-one cần Ollama local.',
-    'Công cụ lịch sử: benchmark/archives/don-dep-2026-10-28/.',
+    'Công cụ lịch sử: archive/benchmark-old/don-dep-2026-10-28/.',
   ].join('\n'));
 } else if (!Object.hasOwn(commands, command)) {
   console.error(`Lệnh không hỗ trợ: ${command}. Xem --help.`);
